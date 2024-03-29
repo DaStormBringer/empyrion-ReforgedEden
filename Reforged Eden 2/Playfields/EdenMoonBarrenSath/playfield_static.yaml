@@ -1,0 +1,617 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+
+It is rare for a celestial body as small as this to have an atmosphere. Nevertheless, somehow this moon was able to hold on to one."
+
+PlanetType: Barren Moon
+PlayfieldType: Moon
+Difficulty: 3
+
+LandClaimZone: Device
+
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.4, 0.6, 0.7" 
+SkyColor: "1, 1, 1" 
+SkyHorizonColor: "0.8, 0.8, 1"
+AtmosphereParams: [2, 1.5]          # [Rayleigh Multiplier, Atmosphere Contrast], default is AtmosphereParams: [1, 1.6]   
+                                     # RayleighMultiplier between 0 and 10 - higher values make SkyColor / SkyHorizonColor more pronounced
+                                     # Atmosphere Contrast between 0 and 3 - lower values wash out SkyColor / SkyHorizonColor 
+
+# Light
+DayLightIntensity: 1.3
+NightLightIntensity: 1.2
+# LightZenithColor: "0.92, 0.95, 1"    # Color picker - Color of light if sun is in zenith, default is almost white "1,0.95,0.92" 
+LightHorizonColor: "0.8, 0.8, 1"       # Color picker - Color of light if sun is on horizon, default is orange "1,0.6,0" 
+# NightLightColor: "0.78, 0.78, 1"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+
+# Fog
+# AtmosphereFog: 0.35
+# FogColor: "0.8, 0, 0.8"
+FogCloudIntensity: 0.8
+# GroundFogIntensity: 0
+# GroundFogHeight: 0
+
+# Clouds and Wind
+CloudsDensity: 0
+CloudsSharpness: 0.35
+CloudsBrightness: 0.7
+CloudsOpacity: 0
+CloudsZenithColor: "0, 0, 0"
+CloudsHorizonColor: "9, 0, 0"
+WindSpeed: 1
+
+SpecialEffectsGlobal:
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 120
+    Delay: 120
+    Lifetime: 30
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: SiliconResource
+      IsScalingCount: True
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 6, 7 ]
+      DepthMinMax: [ 8, 10 ]
+      DroneProb: 0.4
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 5
+        #YVariance: 1
+
+    - Name: CobaltResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 4, 5 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 5
+
+    - Name: AluminiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 25, 35 ]
+      DroneProb: 0.2
+      MaxDroneCount: 1
+
+    - Name: SathiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1 
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 10
+
+    - Name: PromethiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 5
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: AluminiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: SathiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True  
+#          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip    
+          Faction: None      
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Rados POI Compound
+        - GroupName: RadosMainRG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          # IsScalingCount: True 
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnResource: ["SathiumResource:1-2"]
+          SpawnResourceRange: [200,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosBunkerRG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          # IsScalingCount: True 
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOINear: [RadosMainRG]
+          SpawnPOINearRange: [200, 300]
+          SpawnResource: ["SathiumResource:0-1","CobaltResource:0-1","PromethiumResource:1-2"]
+          SpawnResourceRange: [200,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # PentaCorp Station with some nearby trader settlements. Doesn't always show up. Sells Pentaxid.
+        - GroupName: Eden_PolPentaCorp
+          Faction: Trader
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: Music
+              Value: SunnySkies
+            - Key: RegenAfter
+              Value: 720
+            - Key: StationInterface
+              Value: "Warp:2,IfNeutral:1.5,IfHonored:-0.10"
+
+        - GroupName: TraderSettlementRG 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          SpawnPOINear: [Eden_PolPentaCorp]
+          SpawnPOINearRange: [100, 250] 
+          Properties:
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: TraderDefenseB 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [Eden_PolPentaCorp]
+          SpawnPOINearRange: [100,250]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: TraderDefenseA 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINearRange: [100,250]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+       # ======================= POLARIS MINING SETTLEMENT ======================= 
+        # Mining Station
+        - GroupName: PolarisMiningMainRG                      # Main Building
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+          # Biome: [ LargeCrater ]
+          CountMinMax: [ 0, 1 ]
+          SpawnResource: ["SathiumResource:1-2"]
+          SpawnResourceRange: [150,300]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+              # Cobalt Mine
+        - GroupName: Eden_PolMineSathium
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [150, 250]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisMiningAuxRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [150, 250] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisDefenceRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG1
+          Faction: Polaris
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [350, 500]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG2
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          # IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOINear: [RadosMainRG]
+          SpawnPOINearRange: [200, 300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Random Rados POIs
+        - GroupName: RadosAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 3, 4 ]
+          IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnResource: ["CobaltResource:0-1","CobaltResource:0-1"]
+          SpawnResourceRange: [300,400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Random Alien POIs
+        - GroupName: Eden_AlienAuxT2
+          Faction: Alien
+          NoShieldReload: True  
+          Territory: False         
+          CountMinMax: [ 2, 2 ]
+          IsScalingCount: True 
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          # SpawnResource: ["CobaltResource:0-1","CobaltResource:0-1"]
+          # SpawnResourceRange: [300,400]
+          Properties: 
+            - Key: Music
+              Value: EvilWhispering
+            - Key: RegenAfter
+              Value: 720
+
+# Tungsten
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Warlord]
+          NoShieldReload: True
+          CountMinMax: [ 2, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+# Silver
+        - GroupName: Eden_HarvestPalladium
+          Faction: None
+          FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.75
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+# Black crystals in large crater
+        - GroupName: Eden_CrystalsBlack 
+          Faction: Alien
+          NoShieldReload: True
+          Biome: [ LargeCrater ]
+          CountMinMax: [ 8, 12 ]
+          IsScalingCount: True
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["SiliconResource:1-1"]
+          SpawnResourceRange: [100,150]
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 720
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: -4000
+          Radius: 1500
+
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: 4000
+          Radius: 1500
+
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: 2500
+          Radius: 1500
+
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: -1000
+          Radius: 1500
+
+        - DronesMinMax: [ 3, 6 ]
+          CenterX: 1000
+          Radius: 1500
+
+# ==============================================================
+# ==============================================================
+
+SpawnRateZones:
+
+
+SpawnZones:
+   - SpawnAt: [ DroneBaseT1RG, RadosMainRG, RadosBunkerRG ]
+     # BiomesExcluded: [ HighMountains ]
+     Radius: 800
+     RadiusRandom: 300
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.2
+     Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+   - SpawnAt: [ RadosAuxT1RG ]
+     # BiomesExcluded: [ HighMountains ]
+     Radius: 600
+     RadiusRandom: 200
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.2
+     Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+   - SpawnAt: [ Eden_CrystalsBlack ]
+     # BiomesExcluded: [ HighMountains ]
+     Radius: 50
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 1.0
+     Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: false
+     Entities:
+       - Names: [Overseers]
+         Biomes: [Any]
+         Amount: 500
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+
+
+### Creatures - Only imported lifeforms here.
+CreatureSpawning:
+
+    - Biomes: [Any]
+      Entities:
+        - Name: ZiraxRipperDogPatrol
+          Period: Always
+          Amount: 0
+          DelayMinMax: [20, 24]
+
+
+    # - Biomes: [Rifts]              # Pentaxid resource claim
+      # Entities:
+        # - Name: ZiraxMinigunPatrol
+          # Period: Always
+          # Amount: 100
+          # DelayMinMax: [20, 24]
+        # - Name: ZiraxShotgunPatrol
+          # Period: Always
+          # Amount: 100
+          # DelayMinMax: [20, 24]
+        # - Name: ZiraxRipperDogPatrol
+          # Period: Always
+          # Amount: 100
+          # DelayMinMax: [20, 24]

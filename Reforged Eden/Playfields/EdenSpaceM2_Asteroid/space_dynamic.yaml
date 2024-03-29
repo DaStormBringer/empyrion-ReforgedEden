@@ -1,0 +1,737 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+Sovereignty: [c][FF8C00]Drones[-][/c]
+
+
+An active Drone swarm has made this asteroid field their home. Use caution.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-250,-200]
+Music: [DarkSoundscape, DarkSoundscape2, DarkSoundscape3, barren, Blight, lava2]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Drone Infested Asteroid Field
+
+Skybox:
+#Skyboxes are separated by star class.
+# Skyboxes for Class M2 Stars ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # # ---------------------------------------------------------------------
+    - [SunFlareWhite4Space, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareRedSpace, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareRed, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    # - [SunFlareYellow, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    # - [SunFlareYellow2, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsRed, PrefabNebulaBlueOrange]
+
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.25
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.6
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.2
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Aluminium, AsteroidVoxel02Aluminium, AsteroidVoxel03Aluminium]
+      DisplayName: Aluminium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      DisplayName: Platin Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.15
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      # FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      FieldName: [AsteroidField, AsteroidFieldRectangle2, AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      # RandomRotation: True
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroid Fields
+# ======================================================================================================================================================================================================
+#Asteroid Fields----------------------------------------------------------
+    - Type: AsteroidFieldRectangle2
+      Name: [AsteroidFieldRectangle2]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.3
+      InitPower: True
+      Compound:
+        CountMinMax: [20, 28]
+        Probability: 1
+        Name: [Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_BAO_RogueMiner1, Eden_AsteroidSilicon1, Eden_AsteroidSilicon2, Eden_AsteroidSilicon3, Eden_AsteroidCopper1, Eden_AsteroidCopper2, Eden_AsteroidCopper3, Eden_AsteroidMagnesium1, Eden_AsteroidMagnesium2, Eden_AsteroidMagnesium3, Eden_AsteroidNeodymium1, Eden_AsteroidNeodymium2, Eden_AsteroidNeodymium3, Eden_AsteroidGold1, Eden_AsteroidGold2, Eden_AsteroidGold3, CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3, BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]
+        DistanceMinMax: [250, 2000] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [5000, 7000]
+         PosYMax: 500 
+
+    - Type: AsteroidField
+      Name: [AsteroidField]  
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.25
+      InitPower: True
+      Compound:
+        CountMinMax: [16, 24]
+        Probability: 1
+        Name: [Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_BAO_RogueMiner1, Eden_AsteroidZascosium1, Eden_AsteroidZascosium2, Eden_AsteroidZascosium3, Eden_AsteroidSilicon1, Eden_AsteroidSilicon2, Eden_AsteroidSilicon3, Eden_AsteroidCopper1, Eden_AsteroidCopper2, Eden_AsteroidCopper3, Eden_AsteroidMagnesium1, Eden_AsteroidMagnesium2, Eden_AsteroidMagnesium3, Eden_AsteroidNeodymium1, Eden_AsteroidNeodymium2, Eden_AsteroidNeodymium3, Eden_AsteroidPromethium1, Eden_AsteroidPromethium2, Eden_AsteroidPromethium3]
+        DistanceMinMax: [250, 2000] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [8500, 11000]
+         PosYMax: 1000 
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Pirate Outposts
+# ======================================================================================================================================================================================================
+#Rogue Drone Outposts ----------------------------------------------------------
+    - Type: BA_Alien
+      Name: [Eden_BAO_RogueOutpost1]  
+      DisplayName: Drone Assembler
+      Faction: Eden_Drone
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [10, 16]
+        Probability: 1
+        Name: [Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3, BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]
+        DistanceMinMax: [125, 250] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [500, 4000]
+         PosYMax: 1500
+      Properties:
+        - Key: RegenAfter
+          Value: 720   
+
+    - Type: BA_Alien
+      Name: [Eden_BAO_RogueOutpost2]  
+      DisplayName: Drone Nest
+      Faction: Eden_Drone
+      Mode: Survival
+      CountMinMax: [ 0, 2 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [3, 6]
+        Probability: 1
+        Name: [Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3, BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]
+        DistanceMinMax: [225, 500] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [500, 4000]
+         PosYMax: 1500
+      Properties:
+        - Key: RegenAfter
+          Value: 720   
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Graveyard
+# ======================================================================================================================================================================================================
+#Wreckage Compound Definitions----------------------------------------------------------
+    - Type: BA_Alien
+      Name: [CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3, BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Destroyed Ship
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 4, 8 ]     
+      Probability: 0.6
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 4000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720   
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Graveyard
+# ======================================================================================================================================================================================================
+#Rogue Drone Compound Definitions----------------------------------------------------------
+    - Type: BA_Alien
+      Name: [Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2]  
+      DisplayName: Drone
+      Faction: Eden_Drone
+      Mode: Survival
+      CountMinMax: [ 7, 12 ]     
+      Probability: 0.9
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 4000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 2500
+        - Key: HudDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720   
+
+          # Definitions for Drones mining asteroids
+    - Type: BA_Alien
+      Name: [Eden_BAO_RogueMiner1]  
+      DisplayName: Drone Mining
+      Faction: Eden_Drone
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]     
+      Probability: 0.7
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1000
+      Properties:
+        - Key: MapDistance
+          Value: 2500
+        - Key: HudDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720  
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroids
+# Eden_AsteroidIron1, Eden_AsteroidIron2, Eden_AsteroidIron3, Eden_AsteroidSilicon1, Eden_AsteroidSilicon2, Eden_AsteroidSilicon3, Eden_AsteroidCopper1, Eden_AsteroidCopper2, Eden_AsteroidCopper3
+# Eden_AsteroidCobalt1, Eden_AsteroidCobalt2, Eden_AsteroidCobalt3, Eden_AsteroidMagnesium1, Eden_AsteroidMagnesium2, Eden_AsteroidMagnesium3, Eden_AsteroidSathium1, Eden_AsteroidSathium2, Eden_AsteroidSathium3
+# Eden_AsteroidNeodymium1, Eden_AsteroidNeodymium2, Eden_AsteroidNeodymium3, Eden_AsteroidGold1, Eden_AsteroidGold2, Eden_AsteroidGold3, Eden_AsteroidPromethium1, Eden_AsteroidPromethium2, Eden_AsteroidPromethium3
+# Eden_AsteroidErestrum1, Eden_AsteroidErestrum2, Eden_AsteroidErestrum3, Eden_AsteroidZascosium1, Eden_AsteroidZascosium2, Eden_AsteroidZascosium3
+# Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5
+# ======================================================================================================================================================================================================
+    - Type: AsteroidVoxel01Iron
+      Name: [Eden_AsteroidIron1, Eden_AsteroidIron2, Eden_AsteroidIron3]
+      DisplayName: Iron Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.4
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Silicon
+      Name: [Eden_AsteroidSilicon1, Eden_AsteroidSilicon2, Eden_AsteroidSilicon3]
+      DisplayName: Silicon Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Copper
+      Name: [Eden_AsteroidCopper1, Eden_AsteroidCopper2, Eden_AsteroidCopper3]
+      DisplayName: Copper Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Cobalt
+      Name: [Eden_AsteroidCobalt1, Eden_AsteroidCobalt2, Eden_AsteroidCobalt3]
+      DisplayName: Cobalt Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Magnesium
+      Name: [Eden_AsteroidMagnesium1, Eden_AsteroidMagnesium2, Eden_AsteroidMagnesium3]
+      DisplayName: Magnesium Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Sathium
+      Name: [Eden_AsteroidSathium1, Eden_AsteroidSathium2, Eden_AsteroidSathium3]
+      DisplayName: Sathium Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Neodymium
+      Name: [Eden_AsteroidNeodymium1, Eden_AsteroidNeodymium2, Eden_AsteroidNeodymium3]
+      DisplayName: Neodymium Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.7
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Gold
+      Name: [Eden_AsteroidGold1, Eden_AsteroidGold2, Eden_AsteroidGold3]
+      DisplayName: Gold Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Promethium
+      Name: [Eden_AsteroidPromethium1, Eden_AsteroidPromethium2, Eden_AsteroidPromethium3]
+      DisplayName: Promethium Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 1500]
+         PosYMax: 1000
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Erestrum
+      Name: [Eden_AsteroidErestrum1, Eden_AsteroidErestrum2, Eden_AsteroidErestrum3]
+      DisplayName: Erestrum Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 1500]
+         PosYMax: 1000
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Zascosium
+      Name: [Eden_AsteroidZascosium1, Eden_AsteroidZascosium2, Eden_AsteroidZascosium3]
+      DisplayName: Zascosium Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.35
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [500, 1500]
+         PosYMax: 1000
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: AsteroidVoxel01Pentaxid   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 4, 6 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 180  
+          
+
+#Smaller Pentaxid asteroids-----------------------------------------------------
+    - Type: AsteroidVoxel01Pentaxid   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 3, 5 ]    
+      Probability: 1
+      # InitPower: True
+      Compound:
+        CountMinMax: [5, 10]
+        Probability: 0.75
+        Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5, Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_CV_RogueHarvest1, Eden_CV_RogueHarvest2, Eden_CV_RogueScout1, Eden_CV_RogueScout2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+        DistanceMinMax: [100, 150] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 4000]
+         PosYMax: 2500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+        Faction: Eden_Drone
+        Count: [20, 40]
+        Radius: [3000, 10000]
+      SpaceVessels:
+
+# Rogue Drones
+          - Name: [Eden_FreighterRogueT1]  
+            Faction: Eden_Drone
+            Count: [5, 9]
+            FixedMaxSpeed: [5, 15]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [250, 3000]
+                PosYMax: 500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+              AmountMinMax: [1, 1]
+              ExtraMinMax: [0,0]  
+
+          - Name: [Eden_FreighterRogueConvoyT1]  
+            Faction: Eden_Drone
+            Count: [0, 3]
+            FixedMaxSpeed: [5, 15]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [250, 6000]
+                PosYMax: 1500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+              AmountMinMax: [4, 4]
+              ExtraMinMax: [0,0]  
+
+          - Name: [Eden_FreighterRogueConvoyT2]  
+            Faction: Eden_Drone
+            Count: [0, 1]
+            FixedMaxSpeed: [3, 8]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1500, 3000]
+                PosYMax: 1000                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+              AmountMinMax: [24, 36]
+              ExtraMinMax: [0,0]  
+
+          - Name: [Eden_RoguePatrolSpaceT1]   
+            Faction: Eden_Drone
+            Count: [3, 5]
+            FixedMaxSpeed: [20, 80]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [3000, 6000] 
+              Position:
+                PosXZMinMax: [250, 1500]
+                PosYMax: 500      
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+              AmountMinMax: [4, 4]
+              ExtraMinMax: [0,0]      
+
+          - Name: [Eden_RoguePatrolMother]   
+            Faction: Eden_Drone
+            Count: [0, 1]
+            FixedMaxSpeed: [5, 10]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [6000, 12000] 
+              Position:
+                PosXZMinMax: [250, 5000]
+                PosYMax: 5000      
+              DelayBetweenRespawnMinMax: [900, 1200]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [Eden_RogueDroneSwarmerLaser, Eden_RogueDroneSwarmerIon]
+              AmountMinMax: [200, 250]
+              ExtraMinMax: [0,0]      
+
+# Rogue Drone Bases
+          # - Name: [Eden_RogueSpaceT1] 
+            # Count: [0, 2] 
+            # Faction: Alien  
+            # FixedMaxSpeed: [20,20]
+            # Mission: Immobile
+            # MissionDescription:
+              # Name: Immobile
+              # Position:
+                # PosXZMinMax: [250, 2500]
+                # PosYMax: 500
+            # StockDescription:
+              # Name: [SpaceDroneLaser]
+              # AmountMinMax: [24, 32]
+              # ExtraMinMax: [0,0]      
+            # Properties: 
+              # - Key: RegenAfter
+                # Value: 720                         
+
+          # - Name: [Freighter]       
+            # Faction: Polaris
+            # Count: [2, 4]
+            # FixedMaxSpeed: [20, 40]  
+            # Mission: Freighter    
+            # MissionDescription:
+              # Name: Freighter
+              # Position:
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500                
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              # IsRespawnAfterDestruction: True
+            # StockDescription:
+              # Name: [SpaceDroneLaser, SpaceDronePlasma]
+              # AmountMinMax: [3, 5]
+              # ExtraMinMax: [0,0]     
+            # Properties: 
+              # - Key: MapDistance
+                # Value: 6000
+
+              # # Zirax Ore Freighter T3
+          # - Name: [Eden_Freighter_T3]       
+            # Faction: Zirax
+            # Count: [0, 1]
+            # FixedMaxSpeed: [10, 20]  
+            # Mission: Freighter    
+            # MissionDescription:
+              # Name: Freighter
+              # Position:
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500                
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              # IsRespawnAfterDestruction: True
+            # StockDescription:
+              # Name: [SpaceDroneLaser, SpaceDronePlasma]
+              # AmountMinMax: [8, 12]
+              # ExtraMinMax: [0,0]     
+            # Properties: 
+              # - Key: MapDistance
+                # Value: 6000
+
+          # - Name: [OrbitalPatrolVessel]     
+            # Faction: Zirax     
+            # Count: [1, 3]
+            # FixedMaxSpeed: [20, 40]  
+            # Mission: SpacePatrol    
+            # MissionDescription:
+              # Name: RangePatrol
+              # RadiusMinMax: [3000, 6000] 
+              # Position:
+                # PosXZMinMax: [500, 2500]
+                # PosYMax: 1500             
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              # IsRespawnAfterDestruction: True
+            # StockDescription:
+              # Name: [SpaceDroneLaser, SpaceDronePlasma]
+              # AmountMinMax: [3, 5]
+              # ExtraMinMax: [0,0]                            
+                    
+          # - Name: [Eden_RogueSpaceT1] 
+            # Count: [500, 500]
+            # Faction: Alien     
+            # FixedMaxSpeed: [0,0]
+            # Mission: Immobile
+            # MissionDescription:
+              # Name: Immobile
+              # Position:
+                # PosXZMinMax: [250, 5000]
+                # PosYMax: 5000               
+            # StockDescription:
+              # Name: [SpaceDroneLaser]
+              # AmountMinMax: [25, 35]
+              # ExtraMinMax: [0,0]      
+            # Properties: 
+              # - Key: RegenAfter
+                # Value: 720    

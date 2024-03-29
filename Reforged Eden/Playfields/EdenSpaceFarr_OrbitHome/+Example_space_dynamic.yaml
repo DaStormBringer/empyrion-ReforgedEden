@@ -1,0 +1,304 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+# ==============================================================
+# GENERAL INFO:
+# 24h in game = 72min real time
+# ==============================================================
+# Playfield Characteristics
+Gravity: 0                                    # Ignore (do not change)
+AtmosphereEnabled: False                      # Ignore (do not change)
+UseFixed: True                                # Ignore (do not change) - If set uses fixed drones. For space playfields, this is necessary   
+PvPProb: 0
+Radiation: [5,10]                             # Overall radiation level in the space playfield. Range [0, 20] 
+TemperatureDay: [-200,-100]                   # Temperature in space playfield 
+Music: [moonstone, space, DistantWorlds, Migration]    # Background music playing in this playfield. Choose from pre-selection: 
+                                     # alien, alien2, barren, desert, desert2, lava, lava2, moonstone, snow, space, temperate, temperate2, temperate3. 
+                                     # 2473, Adrift, BarrenMoon, DarkSoundscape, DarkSoundscape2, DarkSoundscape3, DistantWorlds, Eden, Encryptor, EnergyMatrix, FirstHours, Helios, Hyperion, JungleDepth, Migration, NebularClouds, Orbiting, Reaver, Resurgence, Sanctuary, StellarGrasp, SunnySkies, Tempest, Transit, Vanguard.      
+ 
+PlayfieldType: Space                           # Type of playfield: Space, Orbit, Station, AsteroidField etc
+PlanetType: Space                              # Sub-type of playfield. Can be customized (and added to loca!). NOTE: THIS line is what PDA check 'PlayfieldTypeEntered' actually checks for (PlafieldType in this config is NOT the one used!)!  
+
+Skybox:
+    - [SunFlareWhiteSpace, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4Space, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3Space, SkyboxStarsBlue, PrefabNebulaBlueGlittery] 
+    - [SunFlareWhiteSpace, SkyboxStarsBlack, PrefabNebulaBlue] 
+    - [SunFlareRedSpace, SkyboxStarsPurple, PrefabNebulaOrange] 
+    - [SunFlareWhite4Space, SkyboxStarsPurple, PrefabNebulaBluePinkPurple] 
+    - [SunFlareWhiteSpace, SkyboxStarsRed, PrefabNebulaRed] 
+    - [SunFlareWhite3Space, SkyboxStarsBlack, PrefabNebulaBlueOrange] 
+    - [SunFlareRedSpace, SkyboxStarsRed, PrefabNebulaBluePinkRed] 
+    - [SunFlareWhiteSpace, SkyboxStarsCyan, PrefabNebulaBlue2] 
+    
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.4    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180        
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing, AsteroidRingPlanet]   #AsteroidRingPlanet = new variant similar to Gas Giant Rings
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]     # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.7
+      BaseField: True  
+      RandomRotation: True        # rotates the asteroid fields randomly
+      
+    - Type: BA_Alien
+      Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7, TSO_Variant8]  #You need to give the Filename; Blueprint-Groups do NOT work.
+      DisplayName: Trading Station   #In orbit the spawn name set in the BP Group dialogue does not work. You need to set a DisplayName; The DisplayName is also used in the PDA for orbit-POI checks!
+      Faction: Main                     #Main stands for the dominant faction owning the playfield/solar system (see GalaxyConfig.ecf for more info); Check Faction.ecf for all available factions
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.3
+      InitPower: True
+      Position:
+         PosXZMinMax: [1000, 2500]
+         PosYMax: 2500 
+      Properties: 
+        - Key: Music
+          Value: NebularClouds    
+        - Key: MapDistance
+          Value: 2500    
+        - Key: AIManExcludeFromPatrol #Used by Space AI Manager, this will exclude this POI from all patrol routes
+          Value: true            
+ 
+# Zirax
+
+    - Type: BA_Alien   
+      Name: [BAO_XenuProduction]  
+      DisplayName: Orbital Production
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]     
+      Probability: 0.5
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface                      #Stationinterface can be used by players while sitting in a vessel and opening their control panel (P). It allows to refill, repair, rearm and stock ammo, pentaxid and o2
+          Value: "Fuel:1.6,O2:1.6,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"  #Set multipliers for the pricing for items (taken from the entry MarketPrice in the ItemsConfig and BlocksConfig); You can set an additional bonus/price cut reflecting the standing the player has with the stations faction
+
+    - Type: BA_Alien   
+      Name: [RBAO_RadosRepairStation, RBAO_XenuSupplyStation]  
+      DisplayName: Resupply Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]     
+      Probability: 0.5
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [RBAO_XenuShipyard,RBAO_GhystShipyard]  
+      DisplayName: Shipyard
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.5
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.6,O2:1.6,Warp:1.6,Ammo:3,Repair:2,Shield:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [BAO_GhystDefence1,BAO_GhystDefence2]  
+      DisplayName: Defence Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]     
+      Probability: 0.5
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+    #    - Key: MapDistance
+     #     Value: 2500     
+
+DroneBaseSetup:
+      - FreeDrones:
+          - Name: [SpaceDroneLaser, SpaceDronePlasma]   #Define the types of drones that will be used to patrol the area; If a list is given, the actual types will be drawn randomly; See EClassConfig.ecf for all available drone types
+            Faction: Main                               #The facion of the drone among : {Main, Zirax, Polaris, Pirates, Kriel, TheLegacy}. Main stands for the dominant faction owning the playfield/solar system (see GalaxyConfig.ecf for more info); Check Faction.ecf for all available factions
+            CanNotBeControlledByMasterAI: True          #Value can be {True, False}. If True the the AI drone can not be use by the space master AI (see DroneOnDuty) to do other task than the one defined here; Default: False
+            POINameAsPositionRef: [BAO_GhystDefence1,BAO_GhystDefence2]  #A list of POI names can be defined here. From all the POIs defined in this list that effectively exist in the playfield, one of them will be drawn randomly and use as a reference position for the patrolling area center. If this reference position don't exist then the AI drone will patrol the whole playfield. 
+            Count: [5, 20]                          #[Min number of drone, Max number of drone] defines the boundaries of the number randomly drawn of drones that will patrol.
+            Radius: [2500, 8000]            #[Min radius, Max radius] define the boundaries the patrol area radius randomly drawn; MANDATORY ENTRY! Also need to be added in case you have not specified patrol center any further!!
+            Properties:
+            #Space AI manager configuration, Drones will by default patrol resource asteroids
+              - Key: AIManPatrolGroups #which POI groups can the drones patrol? Asteroids will be ignored
+                Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              - Key: AIManPatrolFactions #POI's of which factions can be patroled?
+                Value: "Polaris, Zirax, Pirates"
+              - Key: AIManMaxPursuitRange #if drone is patroling or guarding, how far can he go, or react to a threat? (if threat is further from his guard target or patrol rout, it will not react to it)
+                Value: 5000
+              - Key: AIManPatrolRoute #you can specify a precise patrol route, you can use only the precise patrol route or the "POI" generated patrol rout, they cannot be combined
+                Value: "0,0,0;100,100,100"        
+
+##===== Space Vessels =====
+# Space Vessels defined can have three different missions: {SpacePatrol, Immobile, Freighter}
+#◦ SpacePatrol: vessel will patrol an area in space.
+#◦ Immobile: define a not moving AI vessel or structure  (not to be confused with a Base placed as POI in Orbit)
+#◦ Freighter: define a freighter task moving from one point to an other.
+
+        SpaceVessels:
+
+          - Name: [OrbitalPatrolVessel0815]    #List of space vessel names or blueprint group names. Vessels will be randomly drawn from list.
+            CountMinMax: [3, 5]  #[Min number of vessel, Max number of vessel] defines the boundaries of the random number of vessels that will be spawned; Default: 1
+            Probability: 0.6    #Value in the range [0;1] that define the probability to have any AI vessel. 0 means no vessel will be spawned, 1that for sure some AI vessels will be spawned; Default: 1
+            CanNotBeControlledByMasterAI: False #Value can be {True, False}. If True the the AI vessels can not be use by the space master AI to do other tasks than the one define here; Default: False
+            Faction: TheLegacy #The facion of the vessel : {Main, Zirax, Polaris, Pirates, Kriel, TheLegacy}. Main stands for the dominant faction owning the playfield/solar system (see GalaxyConfig.ecf for more info); Check Faction.ecf for all available factions
+            FixedMaxSpeed: [20, 50]  #[Min speed, Max speed] defines the boundaries for the vessel speed; Speed is randomly drawn between this limits; NOT used for mission "immobile" !
+            Mission: SpacePatrol  # Define the mission task of the AI vessel 
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  #[Min time before respawn, Max time before respawn] defines the boundaries of a randomly drawn delay of time in second before the vessel respawns after destruction.
+              DelayBeforeSelfDestructionMinMax: [200, 250]  #[Min time before self destruction, Max time before self destruction] defines the boundaries of a randromly drawn delay of time. It represents the time in second before the vessel will self destroy itself after beeing immobilized; Default time value is 300 second
+              IsRespawnAfterDestruction: True #{True , False} defines if a vessel will respawn after beeing destroyed.
+              RadiusMinMax: [750, 2500]        #[Min radius, Max radius] defines the boundaries the patrol area radius in meter drawn randomly; Default: 1000; MANDATORY ENTRY! Also need to be added in case you have not specified patrol center any further!!
+              POINameAsPositionRef: [TSO_AkuaOrbit, BAO_TOPSpiceDestillery]  # Defines a list of POI names. From all the POIs defined in this list that effectively exist in the playfield, one of them will be drawn randomly and use as a reference position for the patrol area center. If this reference position exist it will override the POSITION define bellow. If this reference position doesn't exist the Position define below will be used instead. If neither this reference position nor the Position below exist then the AI vessel will patrol the whole plafield space. 
+              Position:
+                PosXZMinMax: [int, int]  #[Min X, Z value, Max X, Z value] defines the boundaries for a random draw of a X coordiante and and random draw of a Z coordinate. It will then define the patrol area center position.
+                PosYMax: [int] # Defines the boundaries of a random draw of a Y coordinate between -PosYMax and +PosYMax.
+                PosMultiplier: [int, int]
+              AvoidArea:
+                POIName: [string]  #Name of the POI to avoid. If it doesn't exit this avoidance area will be ignored
+                Radius: [float]   #Radius in meter of the avoidance area.Default: 1000m
+                Duration: [float]  #Delay in second from the start of the game. When the delay is over the vessel will be allowed to go into the avoidance area; Default: Infinite.
+            StockDescription:  #MANDATORY ENTRY! Even this patrol ship or faction does not have any drones to spawn, you need to set the following three options! Set Amount to 0,0 instead.
+              Name: [SpaceDroneLegacyLaser] #Define the types of drones (one or a list) that will be spawned by the vessel IF the vessel is equipeed with a DRONE spawner block! See EClassConfig.ecf for all available drone types
+              AmountMinMax: [3, 5]  #[Min number of drone, Max number of drone] defines the boundaries of a number randomly drawn of drones in the stock.
+              Type: FighterDrone  #The type of the drone. In a AI vessel currently only FighterDrone is available. Default: FighterDrone. Do not use other types!
+            Properties:
+              - Key: SelfDestructionWithNoCore #  If Value = “True” then the ship will go into a self destruction process if the core of the AI vessel is destroyed. Otherwise if the Value = “False” then the AI vessel will remain in the game without AI to control it. By default the Value is “False
+                Value: True  # True, False
+            #Space AI manager configuration, vessels will by default patrol POI's of the same faction
+              - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
+                Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Polaris, Zirax, Pirates"
+              - Key: AIManPatrolRoute #you can specify a precise patrol route, you can use only the precise patrol route or the "POI" generated patrol route, they can not be combined
+                Value: "0,0,0;100,100,100"                      
+              - Key: AIManMaxPursuitRange #if drone is patrolling or guarding, how far can he go, or react to a threat? (if threat is further from his guard target or patrol route, it will not react to it)
+                Value: 5000
+          
+          - Name: [FreighterVessel42] 
+            FixedMaxSpeed: [20, 40]
+            CountMinMax: [3, 5]
+            Probability: 0.6
+          #  CanNotBeControlledByMasterAI: False
+            Faction: Polaris
+            Mission: Freighter
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+              Position:                                 #Freigher mission cannot use POINameAsPositionRef
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              Type: FighterDrone 
+
+          - Name: [BAO_BeaconDistress2, BAO_DerelictMiningShip]
+            CountMinMax: [1,1]
+            Probability: 0.2
+            CanNotBeControlledByMasterAI: False
+            Faction: Polaris
+            Mission: Immobile
+            MissionDescription:
+            Position:
+              PosXZMinMax: [-3000, 8000]
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              Type: FighterDrone
+
+### Does the entries below still apply? ###
+      SpaceVessels:
+          - Name: [Freighter]     
+            Count: [1, 4]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]  
+
+          - Name: [OrbitalPatrolVessel]        
+            Count: [1, 2]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 1500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500      
+              DelayBetweenRespawnMinMax: [300, 600]         
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]      
+            Properties:
+            #Space AI manager configuration, vessels will by default patrol POI's of the same faction
+              - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
+                Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Polaris, Zirax, Pirates"
+              - Key: AIManPatrolRoute #you can specify a precise patrol route, you can use only the precise patrol route or the "POI" generated patrol route, they can not be combined
+                Value: "0,0,0;100,100,100"                      
+              - Key: AIManMaxPursuitRange #if drone is patrolling or guarding, how far can he go, or react to a threat? (if threat is further from his guard target or patrol route, it will not react to it)
+                Value: 5000
+
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, BAO_GhostRiderShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, BAO_PF2, RBAO_RadosRepairStation] 
+            Count: [0, 4]
+            FixedMaxSpeed: [20,20]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]      
+            Properties: 
+              - Key: RegenAfter
+                Value: 720                         

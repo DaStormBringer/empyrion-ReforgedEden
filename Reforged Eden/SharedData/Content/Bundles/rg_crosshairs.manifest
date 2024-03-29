@@ -1,0 +1,91 @@
+ManifestFileVersion: 0
+CRC: 797432770
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e56ff21ef8c1d82db96a8c58c26fce18
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RG_Crosshairs/ShipGeneric.png
+- Assets/RG_Crosshairs/SniperRifle_focus.png
+- Assets/RG_Crosshairs/ShipArtillery.png
+- Assets/RG_Crosshairs/PulseRifle_aiming.png
+- Assets/RG_Crosshairs/LaserPistol_focus.png
+- Assets/RG_Crosshairs/AssaultRifle_focus.png
+- Assets/RG_Crosshairs/ShipRocket_aiming.png
+- Assets/RG_Crosshairs/SniperRifle_aiming.png
+- Assets/RG_Crosshairs/AssaultRifle_aiming.png
+- Assets/RG_Crosshairs/Minigun_focus.png
+- Assets/RG_Crosshairs/LaserRifle.png
+- Assets/RG_Crosshairs/PulseRifle_focus.png
+- Assets/RG_Crosshairs/PlasmaCannon_aiming.png
+- Assets/RG_Crosshairs/SMG_ship.png
+- Assets/RG_Crosshairs/LaserRifle_ship.png
+- Assets/RG_Crosshairs/ShipArtillery_focus.png
+- Assets/RG_Crosshairs/RocketLauncher_ship.png
+- Assets/RG_Crosshairs/Multitool_ship.png
+- Assets/RG_Crosshairs/ShipRocket_ship.png
+- Assets/RG_Crosshairs/Minigun_ship.png
+- Assets/RG_Crosshairs/Pistol_focus.png
+- Assets/RG_Crosshairs/SniperRifle.png
+- Assets/RG_Crosshairs/LaserPistol_aiming.png
+- Assets/RG_Crosshairs/Pistol.png
+- Assets/RG_Crosshairs/Multitool.png
+- Assets/RG_Crosshairs/ShipPlasma.png
+- Assets/RG_Crosshairs/PulseRifle.png
+- Assets/RG_Crosshairs/PulseRifle_ship.png
+- Assets/RG_Crosshairs/SMG.png
+- Assets/RG_Crosshairs/Shotgun_focus.png
+- Assets/RG_Crosshairs/RocketLauncher_aiming.png
+- Assets/RG_Crosshairs/ShipArtillery_ship.png
+- Assets/RG_Crosshairs/Multitool_aiming.png
+- Assets/RG_Crosshairs/SniperRifle_ship.png
+- Assets/RG_Crosshairs/Minigun_aiming.png
+- Assets/RG_Crosshairs/ShipGatling.png
+- Assets/RG_Crosshairs/ShipRocket.png
+- Assets/RG_Crosshairs/ShipGeneric_ship.png
+- Assets/RG_Crosshairs/LaserRifle_aiming.png
+- Assets/RG_Crosshairs/PlasmaCannon_focus.png
+- Assets/RG_Crosshairs/ShipGeneric_aiming.png
+- Assets/RG_Crosshairs/ShipTool_ship.png
+- Assets/RG_Crosshairs/Flamethrower_aiming.png
+- Assets/RG_Crosshairs/Flamethrower_ship.png
+- Assets/RG_Crosshairs/Pistol_aiming.png
+- Assets/RG_Crosshairs/Shotgun.png
+- Assets/RG_Crosshairs/ShipPlasma_aiming.png
+- Assets/RG_Crosshairs/LaserRifle_focus.png
+- Assets/RG_Crosshairs/SMG_focus.png
+- Assets/RG_Crosshairs/RocketLauncher_focus.png
+- Assets/RG_Crosshairs/LaserPistol.png
+- Assets/RG_Crosshairs/ShipPlasma_focus.png
+- Assets/RG_Crosshairs/Shotgun_ship.png
+- Assets/RG_Crosshairs/Multitool_focus.png
+- Assets/RG_Crosshairs/ShipGatling_ship.png
+- Assets/RG_Crosshairs/Minigun.png
+- Assets/RG_Crosshairs/PlasmaCannon.png
+- Assets/RG_Crosshairs/ShipPlasma_ship.png
+- Assets/RG_Crosshairs/ShipGeneric_focus.png
+- Assets/RG_Crosshairs/AssaultRifle_ship.png
+- Assets/RG_Crosshairs/Flamethrower.png
+- Assets/RG_Crosshairs/ShipTool_focus.png
+- Assets/RG_Crosshairs/ShipRocket_focus.png
+- Assets/RG_Crosshairs/ShipGatling_focus.png
+- Assets/RG_Crosshairs/ShipGatling_aiming.png
+- Assets/RG_Crosshairs/Pistol_ship.png
+- Assets/RG_Crosshairs/SMG_aiming.png
+- Assets/RG_Crosshairs/LaserPistol_ship.png
+- Assets/RG_Crosshairs/AssaultRifle.png
+- Assets/RG_Crosshairs/ShipTool_aiming.png
+- Assets/RG_Crosshairs/Flamethrower_focus.png
+- Assets/RG_Crosshairs/RocketLauncher.png
+- Assets/RG_Crosshairs/Shotgun_aiming.png
+- Assets/RG_Crosshairs/ShipTool.png
+- Assets/RG_Crosshairs/ShipArtillery_aiming.png
+Dependencies: []

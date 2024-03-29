@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3086328765
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c79276b18f98bd1fa06c0fa43b65256a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: c79276b18f98bd1fa06c0fa43b65256a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/eden_crosshairs/Spinal Railgun/EdenCrosshairRailgun_aiming.png
+- Assets/eden_crosshairs/Spinal Railgun/EdenCrosshairRailgun.png
+- Assets/eden_crosshairs/Eden_CrosshairDrillIceCV.png
+- Assets/eden_crosshairs/Spinal Railgun/EdenCrosshairRailgunfocused.png
+- Assets/eden_crosshairs/Spinal Railgun/EdenCrosshairRailgun_ship.png
+Dependencies: []

@@ -1,0 +1,16 @@
+[MiningBeam]
+-Mode=Opaque
+-Pos=30.5,145.75,15.5
+-Rot=0,90,0
+-Size=1,1,1.035
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoMiningLaserYellow
+
+[MiningBeam]
+-Mode=Opaque
+-Pos=30.5,145.75,-4.5
+-Rot=0,90,0
+-Size=1,1,1.47
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoMiningLaserYellow
+

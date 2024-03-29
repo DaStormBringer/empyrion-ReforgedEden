@@ -1,0 +1,125 @@
+---
+PlanetSize:
+   SizeRange: [3]
+   SizeProbs: [1]
+PlanetAxis: [15, 25]
+TemperatureMin: [390,435]                         
+TemperatureMax: [490,530]    
+TemperatureNight: [5,10]
+HumidityMin: [0.16, 0.2]                  
+HumidityMax: [0.7, 0.75] 
+Radiation: [10, 16] 
+LandWaterRatio: [0, 0]
+BaseLevel: [0, 0]
+SeaLevel: [50, 50]
+TerrainLevel: [140, 150]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [0.65, 0]
+TemperatureNoiseFac: 0.85
+HumidityHeightFac: [35, 350]
+HumidityNoiseFac: 0.57
+GravityMinMax: [-9, -5]
+AtmosphereDensityMinMax: [1.2, 1.4]
+AtmosphereO2MinMax: [0, 0]
+GroundFogProb: 1
+AtmosphereFogRange: [0.3, 0.4]
+GroundFogIntensityRange: [0, 0]
+GroundFogHeightRange: [0, 0]
+Water: [RockLava03]
+WaterProb: 0
+PvPProb: 0 #Normal
+Music: [Transit]
+BiomeStampTries: 20
+Biomes:
+
+# ==============================================================
+  - Name: Mountains
+    AmbientSound: Mountains
+    IgnoreForcedBiome: true  
+
+    Texture: [6,7,0.2, 4,5,0.5, 0.002] 
+    UndergroundLayers:
+               - [11, -1]
+               - [4, 1]
+               
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 45  
+    Stamps:
+    - Volcano_1, 0.5 
+    - Volcano_2, 0.5 
+    - Volcano_3, 0.5 
+  
+    SelectionCriteria: 
+    - Height > 130
+    Color: [0.3, 0.3, 0.3]
+
+    Decorations:  
+               - [RockResourceMagnesium, 0.0001, Plant]     
+
+# ==============================================================
+  - Name: LowMountains
+    AmbientSound: Mountains
+    Texture: [6,7,0.2, 4,5,0.5, 0.002] 
+    SelectionCriteria: 
+    - Height > 110
+    Color: [0.4, 0.4, 0.4]
+    
+    UndergroundLayers:
+               - [11, -1]
+               - [4, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 45  
+    Stamps:
+    - Mountain_2, 0.5
+    - Mountain_2b, 0.05
+    - Mountain_3, 0.3
+#    - Mountain_3b, 0.05
+    
+    Decorations:  
+               - [RockResourceMagnesium, 0.0001, Plant]       
+
+# ==============================================================
+  - Name: Plains
+    # IgnoreForcedBiome: true  
+
+    AmbientSound: Mountains
+    Texture: [2, 11, 0.2] 
+    SelectionCriteria:
+    - Height < 110
+    Color: [0.8, 0.8, 0]    
+
+    StampProb: 0.3
+    Stamps: 
+               - Cliff_1, 0.4
+               - Cliff_2, 0.4
+               - Cliff_3, 0.6
+               - Valley_1, 0.1
+               - Valley_2, 0.1
+               - Valley_3, 0.07
+               - Pools_01, 0.07
+               - Hollow_01, 0.0
+
+    UndergroundLayers:
+               - [11, -1]
+               - [4, 1]
+    
+    Decorations: 
+               - [RockResourceCobalt, 0.0003, Plant]
+               - [RockResourceIron, 0.0002, Plant]
+               - [RockResourceSilicon, 0.0003, Plant]
+               - [RockResourceZascosium, 0.0001, Plant]
+               - [RockResourceSathium, 0.0001, Plant]
+               - [RockResourceNeodymium, 0.0001, Plant]
+               - [RockResourceMagnesium, 0.0001, Plant]
+               - [RealRock1Dark, 0.01]
+               - [RealRock2Dark, 0.01]
+               - [RealRock3Dark, 0.01]
+               - [RealRock4Dark, 0.01]
+               - [RealRock8Dark, 0.01]
+               - [RealRock10Dark, 0.01]
+               - [GasEmitter2, 0.0015]
+

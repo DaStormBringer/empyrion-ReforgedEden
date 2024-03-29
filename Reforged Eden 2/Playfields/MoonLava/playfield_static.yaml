@@ -1,0 +1,269 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+
+A baby moon, with a not yet solid core, and faint traces of an atmosphere. Maybe it was born out of a stellar disc, or it is the remnant of a spectacular planetary collision."
+
+PlanetType: Lava
+Emissive: True
+PlayfieldType: Moon
+Difficulty: 3
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+
+# Light
+DayLightIntensity: 0.65
+NightLightIntensity: 0.8
+DayShadowStrength: 0.95
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareRed
+
+# Atmosphere and Sky
+AtmosphereColor: "0.88, 0.48, 0.25"
+SkyColor: "0.8, 0.1, 0" 
+SkyHorizonColor: "0.2, 0.005, 0"
+AtmosphereParams: [2, 1.6]     
+
+# Light
+LightZenithColor: "1, 0.95, 0.98"
+LightHorizonColor: "1, 0.6, 0.15"
+NightLightColor: "0.78, 0.78, 1"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Fog
+# AtmosphereFog: 0.00
+FogCloudIntensity: 0.0
+FogColor: "1, 0, 0"
+# GroundFogIntensity: 0.03
+# GroundFogHeight: 125
+
+# Clouds and Wind
+CloudsDensity: 0.0
+CloudsSharpness: 1
+CloudsBrightness: 0.0
+CloudsOpacity: 0.0
+ 
+CloudsZenithColor: "-0.1, -0.2, -0.2"
+CloudsHorizonColor: "1, 0.3, 0.1"
+
+WindSpeed: 0
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      IsScalingCount: True 
+      CountMinMax: [ 3, 5 ] 
+      SizeMinMax: [ 7, 10 ] 
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.3      
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+      
+    - Name: SiliconResource
+      IsScalingCount: True 
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 8, 9 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.4
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+      
+    # - Name: CobaltResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 1, 2 ]
+      # SizeMinMax: [ 4, 5 ]
+      # DepthMinMax: [ 5, 10 ]
+      # DroneProb: 0.7
+      # MaxDroneCount: 1
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+      
+    - Name: MagnesiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 4, 5 ]
+      SizeMinMax: [ 3, 4 ]
+      DepthMinMax: [ 3, 5 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1 
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 3
+
+    - Name: PromethiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      DepthMinMax: [ 0, 1 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+      
+    - Name: PentaxidResource
+      IsScalingCount: True 
+      CountMinMax: [ 4, 5 ]
+      SizeMinMax: [ 2, 3 ]
+      DroneProb: 0.6
+      MaxDroneCount: 2
+      DepthMinMax: [ 0, 5 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.1
+     # - Name: CobaltResource
+       # Threshold: 0.2
+       # Amount: 0.1
+     - Name: MagnesiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PentaxidResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG    #CommandCenter
+          Faction: Zirax  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ]
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip    
+          Faction: None     
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker 
+              Value: Neutral  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: GhystAuxT1RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 3, 4 ]
+          IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnResource: ["PentaxidResource:0-1"]
+          ResourceDistance: 400
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMale
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500

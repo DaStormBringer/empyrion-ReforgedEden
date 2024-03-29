@@ -1,0 +1,470 @@
+PlayfieldType: Space
+AtmosphereO2: 0.100000001
+TemperatureDay: -239
+Radiation: 5.47116995
+PlanetType: Special Encounter
+PlanetSize: 2
+Difficulty: 1
+AtmosphereColor: 0.55, 0.61, 0.65
+SkyColor: 1, 1, 1
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+
+Description: "Difficulty: [c][ff00ff]Ultra++[-][/c]
+
+[c][ffff00][i]Group Special Encounter[/i][-][/c]
+
+
+Originally captured in an Abyssal shipyard by UCH forces, the Xen'uan Carrier eventually broke free from the UCH Research Facility and vanished into the galaxy. Long thought to be lost, the Xenuan Carrier has recently reappeared with several upgrades.
+
+
+Altered by Progenitor tech, the Corrupted Xenuan Carrier has increased firepower over its original version with the addition of homing Augmented Plasma Turrets, Legacy Guardian Spheres, and augmented defense drones.
+
+The defensive capabilities have also been greatly improved with the addition of more powerful dual layer shields and a reinforced Xenosteel hull.
+
+
+UCH Command does not recommend engaging a Corrupt Xenuan Carrier without a substantial fleet.
+
+
+[c][ffffff][i]A group is recommended.[/i][-][/c]"
+
+
+# Description: >-
+  # Difficulty: [c][ff00ff]Ultra++[-][/c]
+
+  # Sovereignty: [c][ffffff]Unclaimed[-][/c]
+
+  # [c][ffff00][i]Group Special Encounter[/i][-][/c]
+
+
+  # Captured in an Abyssal shipyard by UCH forces, the Xen'uan Carrier underwent rigorous testing by Terran researchers. What the researchers uncovered pointed out that the Abyssal, the House of the Zirax empire responsible for much of the engineering of the empire, may be using some of the knowledge left by the Elder Talon to build these ships.
+
+  # The ship was later partially adapted for human use but never deployed to a battle scenario because many of the ship systems still baffled human scientists and defied any attempts of a logical explanation by human researchers and there was a fear the ship would turn against its Human crew.
+
+  # During an attempt to hack into the ship's alien core, the ship suddenly opened fire on the research station before warping away.
+
+  # Years later, rumors persist of a ship that wanders the outer solar system, destroying anything unlucky enough to get in its way. Nobody knows who, or what, is piloting it, only that it leaves death and destruction in its wake.
+
+
+Seed: -2147483648
+TerrainHeightMapMax: -1
+PlayfieldLevel: 24
+PlanetClass: Special Encounter
+UseFixed: true
+UseRandom: false
+Build: 3082
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowBlueprintSV: true
+AllowBlueprintCV: true
+AllowBlueprintHV: true
+AllowBlueprintBA: true
+RestrictToOrigin: 255
+Music: Praxis
+POIs:
+  Fixed:
+  - Type: BA_Admin
+    Prefab: Eden_BeaconAdmin
+    Mode: Survival
+    Name: Beacon
+    InitPower: true
+    Faction: Alien
+    Properties:
+    - Key: Discovery
+      Value: False
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - 8452
+    - 46
+    - 6111
+    SpaceDefenseOverrideDefaults: true
+  - Type: SV_Player
+    Prefab: SV_Destroyed_withWarp
+    Mode: Survival
+    Name: Destroyed Small Vessel
+    Faction: None
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - 7878.771
+    - -1054.03284
+    - 5563.21143
+    Rot:
+    - 284
+    - 2
+    - 153
+  - Type: CV_Alien
+    Prefab: CV_Destroyed1
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: &o0
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - 7504.4043
+    - 940.140625
+    - 5377.78809
+    Rot:
+    - 13
+    - 225
+    - 207
+  - Type: CV_Alien
+    Prefab: CV_DestroyedRear
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 8959.43262
+    - 852.771423
+    - 6321.25586
+    Rot:
+    - 255
+    - 270
+    - 272
+  - Type: CV_Alien
+    Prefab: BA_CrashedCV_2
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 7463.95264
+    - -610.840576
+    - 7025.50928
+    Rot:
+    - 181
+    - 102
+    - 223
+  - Type: CV_Alien
+    Prefab: CV_Destroyed1
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 9231.34668
+    - 369.943665
+    - 6511.04492
+    Rot:
+    - 15
+    - 350
+    - 70
+  - Type: CV_Alien
+    Prefab: CV_DestroyedRear
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 8001.59619
+    - 538.178467
+    - 6916.61328
+    Rot:
+    - 94
+    - 84
+    - 238
+  - Type: CV_Alien
+    Prefab: CV_Destroyed3
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 8527.83887
+    - 467.933136
+    - 6251.07813
+    Rot:
+    - 359
+    - 312
+    - 221
+  - Type: CV_Alien
+    Prefab: BA_CrashedCV_3
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 8042.49707
+    - 1127.47058
+    - 6148.11816
+    Rot:
+    - 105
+    - 304
+    - 126
+  - Type: CV_Alien
+    Prefab: BA_CrashedCV_3
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 7890.06836
+    - -45.9271317
+    - 7003.896
+    Rot:
+    - 143
+    - 64
+    - 143
+  - Type: CV_Alien
+    Prefab: CV_Destroyed2
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - 9276.66113
+    - 410.25177
+    - 5755.73096
+    Rot:
+    - 170
+    - 184
+    - 87
+  - Type: BA_Alien
+    Prefab: BAO_JettisonedCargoPod
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: &o1
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - -1150
+    - 1787
+    - -2614
+  - Type: BA_Alien
+    Prefab: SV_FA005XHunter
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -6566
+    - 537
+    - -8105
+  - Type: BA_Alien
+    Prefab: BAO_CombatWreckage
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -5129
+    - 1888
+    - -945
+  - Type: BA_Alien
+    Prefab: BAO_BurntOutReconVessel
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 3245
+    - 771
+    - 9912
+  - Type: BA_Alien
+    Prefab: BAO_SeveredShip
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -2600
+    - 1195
+    - -906
+  - Type: BA_Alien
+    Prefab: SV_FA005XHunter
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 2020
+    - -1464
+    - 2179
+  - Type: BA_Alien
+    Prefab: CV_LightCarrierWreck
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -5147
+    - 305
+    - 841
+  - Type: BA_Alien
+    Prefab: BAO_JettisonedCargoPod
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -2135
+    - 276
+    - -1662
+  - Type: BA_Alien
+    Prefab: BAO_CombatWreckage
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 6722
+    - 1597
+    - 7974
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: 
+    Pos:
+    - -3012.54419
+    - -681
+    - -5922.8877
+    LevelMod: 
+    DroneOnDuty:
+
+# Legacy Drones guarding the carrier
+# ---------------------------------------------------------------
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 0
+      # - 0
+      # - 0
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 300
+      # - 0
+      # - 0
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 0
+      # - 300
+      # - 0
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 0
+      # - 0
+      # - 300
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 300
+      # - 0
+      # - 300
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 300
+      # - 300
+      # - 300
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - -300
+      # - 0
+      # - 0
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - -300
+      # - 0
+      # - -300
+      # Radius: 1500
+
+    # - Name: Eden_SpaceDroneProgenitor
+      # Faction: Alien
+      # Pos:
+      # - 0
+      # - -300
+      # - 0
+      # Radius: 1500
+
+
+
+
+
+
+    SpaceVessel:
+    - Name: Eden_OPV_XenuanCorrupt
+      Faction: Alien
+      FixedMaxSpeed: 90
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 100
+        - 100
+        - 100
+        Radius: 2500
+      Stock:
+      # - Name: SpaceDroneLegacyLaser
+      - Name: Eden_SpaceDroneProgenitor
+        Amount: 16
+        Extra: 0
+
+      Properties:
+      - Key: MapDistance
+        Value: 25000
+      - Key: HudDistance
+        Value: 25000
+
+
+    DronePlanetBase:
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 

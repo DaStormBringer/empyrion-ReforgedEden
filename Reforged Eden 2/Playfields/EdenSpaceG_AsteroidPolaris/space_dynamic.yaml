@@ -1,0 +1,1346 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+Sovereignty: [c][FFA500]Polaris[-][/c]
+
+
+This asteroid field has a heavy Polaris presence. Numerious outposts and mining colonies float among the rocks.
+
+Scanners can only get a partial scan of resource asteroids. Manual visual identification may be required.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+
+# Habitable Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase] # POI
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Asteroid Field
+PlayfieldLevelOverride: [1,3]
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.2
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      DisplayName: Zascosium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+### POIs
+POIs:
+
+# Asteroid Fields and sector nebula
+    # - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidField, AsteroidFieldRectangle2, Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidField, AsteroidFieldRectangle2]
+      # FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidField, AsteroidFieldRectangle2, Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+      FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidField, AsteroidFieldRectangle2]
+      # FieldName: [Eden_SectorNebulaLDustCircle2]
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      BaseField: True 
+      # RandomRotation: True
+
+    - Name: [Eden_SectorNebulaXLDustDim]
+      FieldName: [Eden_SectorNebulaXLDustDim]
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.25
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+
+    - Name: [Eden_SectorNebulaLDustCircle2]
+      FieldName: [Eden_SectorNebulaLDustCircle2]
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+    - Name: [Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+      FieldName: [Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+    - Name: [Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+      FieldName: [Eden_SectorNebulaLDustCircle, Eden_SectorNebulaLDustCircle2]
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.25
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+
+# Asteroid Map Info
+    - Type: AsteroidVoxel01Iron
+    # - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: EdenAsteroidScaninfo
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 500]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [5, 9]
+        Probability: 1
+        Name: [CompoundAsteroidT1, CompoundAsteroidT1, CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT2, CompoundAsteroidT2, CompoundDustCircle, CompoundAsteroidT1, CompoundAsteroidT1]
+        DistanceMinMax: [1500, 4000]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# Polaris Outposts
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: Polaris Staging Area
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 500]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [3, 5]
+        Probability: 1
+        Name: [CompoundPolarisAsteroidMining, CompoundPolarisAsteroidMining, CompoundPolarisAsteroidMining, CompoundPolarisAsteroidMining2, CompoundPolarisAsteroidMining2]
+        DistanceMinMax: [100, 300]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# Polaris Defenses
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: Polaris Staging Area
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 500]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [4, 8]
+        Probability: 1
+        Name: [CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense, CompoundPolarisDefense]
+        DistanceMinMax: [500, 1000]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# Neutral
+    - Type: AsteroidFieldRectangle2
+      Name: [AsteroidFieldRectangle2]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      # Position:
+         # PosXZMinMax: [50, 100]
+         # PosYMax: 50
+
+    - Type: AsteroidFieldBoxExclude
+      Name: [AsteroidFieldBoxExclude]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [3, 6]
+        Probability: 1
+        Name: [CompoundAsteroidT1, CompoundAsteroidT1, CompoundAsteroidT2, CompoundDustCircle, CompoundAsteroidT1, CompoundAsteroidT2]
+        DistanceMinMax: [1000, 1500]
+        Rotate: false
+      # Position:
+         # PosXZMinMax: [50, 100]
+         # PosYMax: 50
+
+    - Type: Eden_SectorNebulaLDustCircle2
+      Name: [Eden_SectorNebulaLDustCircle2]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 6]
+        Probability: 1
+        Name: [CompoundPolarisMiners, CompoundAsteroidT2, CompoundPolarisMiners, CompoundAsteroidT2, CompoundPolarisMiners, CompoundAsteroidT2]
+        DistanceMinMax: [300, 1000]
+        Rotate: false
+      Position:
+         PosXZMinMax: [3000, 5000]
+         PosYMax: 1500
+
+    - Type: AsteroidFieldBoxExclude
+      Name: [AsteroidFieldBoxExclude]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 2]
+        Probability: 1
+        Name: [CompoundAsteroidT1, CompoundDustCircle]
+        DistanceMinMax: [200, 3000]
+        Rotate: false
+      Position:
+         PosXZMinMax: [2000, 3000]
+         PosYMax: 500
+
+    - Type: AsteroidFieldFewBoxExclude
+      Name: [AsteroidFieldFewBoxExclude]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 2]
+        Probability: 1
+        Name: [CompoundAsteroidT1, CompoundDustCircle]
+        DistanceMinMax: [200, 3000]
+        Rotate: false
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+
+# Dust Cloud Compounds
+    - Type: Eden_SectorNebulaLDustCircle
+      Name: [CompoundDustCircle]
+      DisplayName: Gas Cloud
+      Faction: None
+      # FactionTerritory: [Warlord]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+
+# ================================================================================================================================================================================= Main
+# ================================================================================================================================================================================= Zirax
+
+# ================================================================================================================================================================================= Polaris
+
+# Refinery
+    - Type: BA_Alien
+      GroupName: Eden_TSOPolRefinery
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 3000]
+         PosYMax: 2000
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: PvEArea
+          Value: 500
+        - Key: Music
+          Value: NebularClouds
+        - Key: RegenAfter
+          Value: 720
+
+# Trade Station Polaris Territory
+    - Type: BA_Alien
+      # Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]
+      GroupName: TSOPolarisRG
+      # DisplayName: Trading Station
+      Faction: Polaris
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 2500]
+         PosYMax: 2500
+      Compound:
+        CountMinMax: [0, 3]
+        Probability: 0.5
+        Name: [CompoundTSOPolarisTerritory, CompoundTSOPolarisTerritory, CompoundTSOPolarisTerritory, CompoundTSOPolarisTerritory, CompoundTSOPolarisTerritory, CompoundTSOPolarisTerritory, Eden_BAO_BeaconPolTrade, Eden_BAO_BeaconPolTrade2]
+        DistanceMinMax: [100, 150]
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: PvEArea
+          Value: 500
+        - Key: Music
+          Value: NebularClouds
+        - Key: RegenAfter
+          Value: 720
+        - Key: StationInterface
+          Value: "Fuel:1.5,O2:1.2,Warp:1,Ammo:0.7,Repair:3,Shield:1,IfNeutral:0.2,IfHonored:-0.20"
+        - Key: AIManExcludeFromPatrol
+          Value: true
+
+# Polaris Territory
+    - Type: BA_Alien
+      Name: [CompoundTSOPolarisTerritory]
+      GroupName: Eden_SpaceJunkPolT1
+      Faction: Polaris
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 2500]
+         PosYMax: 1000
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 250
+        - Key: RegenAfter
+          Value: 720
+
+# Trade Beacons
+    - Type: BA_Alien
+      Name: [Eden_BAO_BeaconPolTrade, Eden_BAO_BeaconPolTrade2]
+      DisplayName: Beacon
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.2
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1000
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 250
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      GroupName: Eden_PolSpaceAuxT1
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          Value: Vanguard
+
+    - Type: BA_Alien
+      GroupName: Eden_PolSpaceAuxT1
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          Value: Vanguard
+
+    - Type: BA_Alien
+      Name: [RBAO_PolSupplyStation]
+      DisplayName: Supply Station
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      InitPower: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      Properties: 
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,Repair:3,Shield:8,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+# Conpound Polaris Territitory
+    - Type: BA_Alien
+      Name: [CompoundPolarisAsteroidMining]
+      GroupName: Eden_SpacePolAsteroidT1
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      InitPower: True
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          Value: Vanguard
+
+# Conpound Polaris
+    - Type: BA_Alien
+      Name: [CompoundPolarisAsteroidMining2]
+      GroupName: Eden_PolSpaceAuxT1
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      InitPower: True
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          Value: Vanguard
+
+    - Type: BA_Alien
+      Name: [CompoundPolarisMiners]
+      GroupName: Eden_PolSpaceMiner
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1000
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundPolarisDefense]
+      GroupName: Eden_PolSpaceSentryT1
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.9
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 6000]
+         PosYMax: 3500
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+# Dust Cloud Compounds
+    - Type: Eden_SectorNebulaLDustCircle
+      Name: [CompoundDustCirclePolaris]
+      DisplayName: Gas Cloud
+      Faction: None
+      FactionTerritory: [Polaris]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# ================================================================================================================================================================================= Colonists
+
+# ================================================================================================================================================================================= Pirates
+
+#Smuggler's Outposts----------------------------------------------------------
+    - Type: BA_Alien
+      # Name: [Eden_BAO_SmugOutpost1, Eden_BAO_SmugOutpost1b, Eden_BAO_SmugOutpost1c, Eden_BAO_SmugOutpost2, Eden_BAO_SmugOutpost2b, Eden_BAO_SmugOutpost3, Eden_BAO_SmugOutpost4,  Eden_BAO_SmugOutpost5]
+      GroupName: Eden_SmugglerSpaceAuxT1
+      # DisplayName: Smuggler Outpost
+      Faction: Pirates
+      Mode: Survival
+      CountMinMax: [ 1, 4 ]
+      Probability: 0.45
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [3000, 6000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      GroupName: Eden_SmugglerSpaceAuxT0
+      Faction: Pirates
+      Mode: Survival
+      CountMinMax: [ 1, 6 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [3000, 6000]
+         PosYMax: 3000
+      InitPower: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+# ================================================================================================================================================================================= Alien and None
+
+# Assorted Space Junk
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 3, 6 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 3000]
+         PosYMax: 3000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 1
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 4]
+        Probability: 1
+        Name: [CompoundWreckT1, CompoundWreckT1, CompoundDebrisField, CompoundDebrisField]
+        DistanceMinMax: [35, 75]
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 3000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 1 Compound.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.8
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+# Debris fields
+    - Type: BA_Alien
+      Name: [CompoundDebrisField]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+
+
+# Abandoned Pallet. Typically contains specific ore. 50/50 chance of exploding.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkPalletT1
+      Faction: Eden_Wreck
+      FactionTerritory: [Warlord]
+      Mode: Survival
+      CountMinMax: [ 5, 15 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 500]
+         PosYMax: 500
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Default Space Wrecks.
+    - Type: BA_Alien
+      GroupName: JunkYardSpaceBAO
+      Faction: None
+      FactionTerritory: [Warlord]
+      Mode: Survival
+      CountMinMax: [ 3, 6 ]
+      Probability: 0.65
+      # Rotate: true
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 1000]
+         PosYMax: 1000
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+
+# Asteroids for compounds.
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Cold]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Hot]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+# Polaris Asteroids
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1Polaris]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2Polaris]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3ColdPolaris]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3HotPolaris]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4Polaris]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      FactionTerritory: [Eden_PolarisTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+# Zirax Asteroids
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1Zirax]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      FactionTerritory: [Rados]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2Zirax]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      FactionTerritory: [Rados]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3ColdZirax]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      FactionTerritory: [Rados]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3HotZirax]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      FactionTerritory: [Rados]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4Zirax]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      FactionTerritory: [Rados]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+
+# Pirates Asteroids
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1Pirates]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      FactionTerritory: [Eden_PiratesTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2Pirates]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      FactionTerritory: [Eden_PiratesTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3ColdPirates]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      FactionTerritory: [Eden_PiratesTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3HotPirates]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      FactionTerritory: [Eden_PiratesTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4Pirates]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      FactionTerritory: [Eden_PiratesTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+
+# ================================================================================================================================================================================= Drones
+      - FreeDrones:
+
+# ------------------------------------------------------------------------------------------------- Faction Main
+# Asteroid Patrols
+          - Name: [SpaceDronePolarisLaser]
+            Faction: Polaris
+            CanNotBeControlledByMasterAI: False
+            # POINameAsPositionRef: [BAO_GhystDefence1,BAO_GhystDefence2]
+            Count: [3, 6]
+            Radius: [1000, 10000]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              # - Key: AIManPatrolFactions
+                # Value: "Main"
+              - Key: AIManMaxPursuitRange
+                Value: 7500
+
+# POI patrols
+          - Name: [SpaceDronePolarisLaser]
+            Faction: Polaris
+            CanNotBeControlledByMasterAI: False
+            Count: [2, 4]
+            Radius: [500, 10000]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              - Key: AIManPatrolFactions
+                Value: "Pirates, Colonists"
+              - Key: AIManMaxPursuitRange
+                Value: 5000
+
+# ------------------------------------------------------------------------------------------------- Faction Zirax
+# ------------------------------------------------------------------------------------------------- Faction Polaris
+# ------------------------------------------------------------------------------------------------- Faction Trader
+# ------------------------------------------------------------------------------------------------- Faction Pirates
+# ------------------------------------------------------------------------------------------------- Faction UCH
+
+# ------------------------------------------------------------------------------------------------- Faction Kriel
+# ------------------------------------------------------------------------------------------------- Faction Drone Swarm
+# ------------------------------------------------------------------------------------------------- Faction Ancient Progenitor
+# ------------------------------------------------------------------------------------------------- Faction Tesch
+# ------------------------------------------------------------------------------------------------- Faction Warlord
+# ------------------------------------------------------------------------------------------------- Faction Colonists
+# ------------------------------------------------------------------------------------------------- Faction Civilian
+# ------------------------------------------------------------------------------------------------- Faction TheLegacy
+# ------------------------------------------------------------------------------------------------- Faction Alien
+
+# ================================================================================================================================================================================= Ships
+        SpaceVessels:
+# ================================================================================================================================================================================= Patrol Vessels and Freighters and Bases
+# ------------------------------------------------------------------------------------------------- Faction Main
+
+# ------------------------------------------------------------------------------------------------- Faction Polaris
+# Patrol Vessels
+          - Name: [OPVPolarisRG]
+            Faction: Polaris
+            CountMinMax: [1, 2]
+            Probability: 0.3
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [20, 50]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [2000, 10000]
+              # POINameAsPositionRef: [RBAO_XenuShipyard, RBAO_GhystShipyard]
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              - Key: AIManMaxPursuitRange
+                Value: 5000
+
+# Freighters
+          - Name: [Freighter] 
+            FixedMaxSpeed: [20, 40]
+            Mission: Freighter
+            CountMinMax: [1, 4]
+            Probability: 0.75
+            Faction: Polaris
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [1, 2]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+
+# ------------------------------------------------------------------------------------------------- Faction Colonists
+
+# ------------------------------------------------------------------------------------------------- Faction Civilian
+
+# ------------------------------------------------------------------------------------------------- Faction The Legacy

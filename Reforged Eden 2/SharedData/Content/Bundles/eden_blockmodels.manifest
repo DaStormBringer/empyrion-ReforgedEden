@@ -1,0 +1,1003 @@
+ManifestFileVersion: 0
+CRC: 1439221603
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cbe014845a5cef3df7d1155eca25a881
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 347b6fb878cb612c614381657c2adf2f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: cbe014845a5cef3df7d1155eca25a881
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8396afed7c1a1d5498e6e8b2a5f94443, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dca28f2534ac11c40b56aa33a43ce40d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f9b3dcbe4c5cab840a4a714cb35d0d24, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 169
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOTrader.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLDustDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaOrangeL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomCyan2.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalCyanBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomGreen2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXLTest2.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockOutgoing3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOZirax.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlackThin.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewYellowFog2.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeXLBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewPurpleFog.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetFirefliesBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowDim2.prefab
+- Assets/eden_blockmodels/Elevators/Eden_Elevator1x4x1NoFrame.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyUnstablePurple.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Pirates.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomPurple2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewRedFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaRingLava.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorZiraxEpsilonLogo.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Gray3.prefab
+- Assets/eden_blockmodels/Eden_ModelVoidium 2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceS_Cyan.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPinkDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewBlueFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BlueThick.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXLTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_GreenL2.prefab
+- Assets/eden_blockmodels/Placeables/Eden_ModelAutominerT4.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlueStormBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGray.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewRedStorm.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Pentaxid.prefab
+- Assets/eden_blockmodels/Eden_NoticeBlocks.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/Eden_PFNebulaLightning.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrown4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkRed3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRedDim2.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorL.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Stimulant.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalWhiteBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Orange.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireBlue.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_DecoPlantBlue3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowWhite.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRadiationBlue.prefab
+- Assets/eden_blockmodels/Eden_ModelSpawnerOrganic.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Gray.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockIncoming2.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelRailgunCVold.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowCyan2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_Template.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (7).prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrangeStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick3.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRadiationPurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewMultiFog3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldS_Template.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraGreenBackup.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetLavaSpout.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Spice.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_SteamDiag.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeXLGray.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Sweetener.prefab
+- Assets/eden_blockmodels/Eden_ModelScienceStation.prefab
+- Assets/eden_blockmodels/Posters/Eden_PosterSpanjContest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_GrayTemplate.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test5Rotate.prefab
+- Assets/eden_blockmodels/Eden_WarningLightSilentNew.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Mushrooms.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_DecoMushroomBlue.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Colonists.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidRichT2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaRockField.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_Orange.prefab
+- Assets/eden_blockmodels/WaterGeneratorT2/Eden_WaterGeneratorT2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlueCircle2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrown.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockGuideYelAn.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_TraderTSO.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrown2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_TestSkybox3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkGreen2.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2SpiceGrown.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidRichT3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRedDark.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalCyanBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyCyan1.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureBlue4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaPirateYellow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewYellowStorm.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FirefliesOrange.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeGray.prefab
+- Assets/eden_blockmodels/Eden_ModelEmpty.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Gray.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrangeDim.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlueDark.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomCyanDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_White.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkBrown2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldLegacy.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_ZiraxHQLights.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidMagmacite.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelCVTorpedoRapidNew.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomYellow.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillBase2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreen.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyBlue1.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalXenoL.prefab
+- Assets/eden_blockmodels/Eden_ModelSoundPirate.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOColonists.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterEdenSpanj.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkGreen4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXLTest4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaRedLDim.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOPirates.prefab
+- Assets/eden_blockmodels/Elevators/Eden_Elevator1x3x1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLRustCircle3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewDustFog2.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceCyan.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_WormholeTemplateStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXXXLBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewOrangeFog2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBrown4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomYellow2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLYellow
+  1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlueDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlueStorm.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalEnergizedL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldLegacyThick.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_TrailRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlackPurpleCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BrownThick3.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowPurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorAsteroidFieldThick.prefab
+- Assets/eden_blockmodels/Eden_ModelDialog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlackOrangeCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BrownThin.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurpleDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BlackThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkPurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreenDim2.prefab
+- Assets/eden_blockmodels/Elevators/Eden_ElevatorCVx2.prefab
+- Assets/eden_blockmodels/Elevators/Non Scripted/Eden_Elevator1x3x1Base.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_BlueL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewOrangeFog3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Brown3.prefab
+- Assets/eden_blockmodels/WaterGeneratorT2/Eden_WaterGeneratorT2V3.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomCyan.prefab
+- Assets/eden_blockmodels/Eden_ModelSpawnerGateRed.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireOrangeTrail.prefab
+- Assets/eden_blockmodels/prefaboriginals/Cube.357.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2BerriesGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomBrown2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldS_Black.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldS_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_Template.prefab
+- Assets/eden_blockmodels/Environmental/Eden_CometSector.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_Sienna.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BrownThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewOrangeStorm.prefab
+- Assets/eden_blockmodels/Eden_ModelKeypad.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomCyan.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetFogWhite.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Blue2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaRockFieldL.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Grass.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Black.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldPL_Brown.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_FarrHQLights.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceT2L.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_ColonistsTSO.prefab
+- Assets/eden_blockmodels/Eden_WarningLightAlarmNew.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (4).prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewPurpleStormBright.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_LightningBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrownDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkRed2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaOrangeLTest3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_RedL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBrown3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlueCircle.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2ProteinGrown.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (6).prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (5).prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Berries.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Kriel.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldPL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorStormRedXL.prefab
+- Assets/eden_blockmodels/Environmental/Eden_CometSectorGreen.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_TestSkybox.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_BaseBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaGreenL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaBlueGreenL.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillIdle.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Trader.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_ZiraxHQLightsCircle.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalGreenBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewPurpleFog2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreen3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewGreenFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldPL_Template.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Smoke2Trail.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_TemplateBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_LightningFlashesPrefab.prefab
+- Assets/eden_blockmodels/Eden_ModelButton.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_White.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaRedL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_WhiteThick.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorZiraxXenuLogo.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPinkDim2.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillT2.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIDebrisSparks.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRed3.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIceExplosionBackup.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_PlasmaFlareL2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomPurple2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaNewYellowPreset.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewGreenFog2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_BlueThickOrbit.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkCyan.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Fruit.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidRichT5.prefab
+- Assets/eden_blockmodels/Eden_ModelVoidium.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlueThin.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewYellowStorm2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorAsteroidFieldThin.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaOrangeLTest2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLBlueCircle.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelRailgunCV.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetAuroraMulti.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test5.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireFlareBlue.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOTrader2.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalPurpleBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkPurple2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceBlue3.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalGreenBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaRockFieldLava.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlueCircle3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreenStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIcePL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomCyan.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockOutgoing2.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2GrainGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowDark.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIce.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_Green.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceField.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2MushroomsGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomGreen.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurpleStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaLightningPresetStorm.prefab
+- Assets/eden_blockmodels/Eden_ModelMiningLaserBlue.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterPolaris.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorOff.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomGray2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLDustCircleTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLBlueDim.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterEdenMisc2.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorZiraxRadosLogo.prefab
+- Assets/eden_blockmodels/Hydroponics_Empty.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLDustCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaRockFieldLavaTest2.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyWhite1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewBlueFog2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomYellow2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Red.prefab
+- Assets/eden_blockmodels/Crystals/Eden_PlanetCrystalPurpleGlow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick5.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_SmokeDiag.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkBrownSilent.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalEnergizedL2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_BlueLTest2.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorLOff.prefab
+- Assets/eden_blockmodels/Elevators/Eden_Elevator3x3x2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaPirateYellow2.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_ZiraxTSO.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Vegetables.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BrownThick2.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRed2.prefab
+- Assets/eden_blockmodels/Eden_ModelScanningStation.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaRingRust.prefab
+- Assets/eden_blockmodels/Eden_ModelShieldBubbleSmall.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Black.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_ClearRedold.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Smoke2.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIRockExplosionBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrange2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Brown2.prefab
+- Assets/eden_blockmodels/Eden_ModelMiningLaserYellow2.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterZirax.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Orange.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidMagmacite2.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraGreenTest.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetFirefliesWhite.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_WormholeBlueBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_TestRendering.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelCVTorpedoRapid.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Gray4.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalOrangeBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_White.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceOld2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrangeDim2.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterEdenMining.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLOrangeDim.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2BudsGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLOrangeCircle3.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceBlue4.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorZiraxGhystLogo.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowBlue3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomPurple.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockGuideOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BrownThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaRedXL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomCyan2.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (3).prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyLavaGeode.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelNuggetTungsten.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRed1.prefab
+- Assets/eden_blockmodels/Eden_ModelVoidium 1.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_SmokeTrail.prefab
+- Assets/eden_blockmodels/prefaboriginals/Plane.457 (1).prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2SweetenerGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomPink.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Grain.prefab
+- Assets/eden_blockmodels/Elevators/Eden_Elevator1x2x1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_WhiteThickOrbit.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewMultiFog2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Green.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (1).prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalWhite.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Polaris.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomRed.prefab
+- Assets/eden_blockmodels/Eden_ModelScienceStationold.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Lava.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaFogClosePreset.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewGreenFog3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurple.prefab
+- Assets/eden_blockmodels/Eden_ModelShieldBubble2Small.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_RedL2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewRedFog3.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterUCH.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_Template.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurpleDim.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalRedBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRed2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_GrayThin.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_Cyan.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorLightsTest.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalBlueDarkGlow.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpacePurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_TestRendering3.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRadiationGreen.prefab
+- Assets/eden_blockmodels/Environmental/Eden_WarpGateEffectBlueL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomGreen.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetAuroraBlue.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIDebrisExplosion.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowCyan3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkPurple2Test.prefab
+- Assets/eden_blockmodels/Elevators/Non Scripted/Eden_Elevator1x4x1Base.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick4.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Smoke.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick6.prefab
+- Assets/eden_blockmodels/Eden_ModelNull.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_DarkGray.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewPurpleFog3.prefab
+- Assets/eden_blockmodels/Wind/Eden_Windmill.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXLTest3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_Template.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Gray5.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyLavaGeodeDark.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraGreen.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowCyan.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_LavaOrbit.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLDustCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_CyanThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBrown2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewBlueFog3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkGreen.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetAuroraGreen.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLRedCircle3.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_WormholeBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_GrayThick2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkTemplate.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2HerbalGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewOrangeStormBright.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLGreenDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGray2.prefab
+- Assets/eden_blockmodels/Eden_ModelSpawnerGateRed3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBrownDim.prefab
+- Assets/eden_blockmodels/Eden_ModelECMAntennaGreen.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_PolarisTSO.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetAuroraRed.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Zirax.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2VegetablesGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_GasCloudLODPirate.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewYellowFog3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_TestRendering2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_LightningFlashesL2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlackThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLDustCircle2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Test4.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockGuideBlue.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterEdenMisc3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceS_White.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_PFNebulaLegacyHomeworld.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Herbal.prefab
+- Assets/eden_blockmodels/prefaboriginals/Spotlight.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGrayDim.prefab
+- Assets/eden_blockmodels/Eden_ModelWarningLight.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetPlantGlowBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewPurpleStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIcePL_Template.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidRichT1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrange.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Legacy.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelRailgunCV_Kit.prefab
+- Assets/eden_blockmodels/Environmental/Eden_SectorNebulaRustS.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireOrangeTrailCorn.prefab
+- Assets/eden_blockmodels/Eden_ModelScienceStation2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLBlueDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BrownTemplate.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Smoke2Diag.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLightningL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_White.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalSilverL.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIRockExplosion.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIDebrisExplosionDecals.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Gray2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Orange.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelNuggetSilver.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaSDustSphere.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIcePL_White.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlueTemplate.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Eden_SectorNebulaNewYellow4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewMultiFog1.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_SmokeTrailCorn.prefab
+- Assets/eden_blockmodels/Asteroids/Asteroid Explosions/Eden_PrefabIceExplosion.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomRed2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewRedFog2.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2PentaxidGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceS_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Brown.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkBrown3.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalSilverS.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLGreenCircle3.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidRichT4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowWhite2.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillTemplate.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalBlueBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_BlueThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomYellow.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorL2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Eden_SectorNebulaNewYellow3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLDustCircle3.prefab
+- Assets/eden_blockmodels/Environmental/Eden_AuroraSpaceBlue3B.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOPolaris.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewYellowFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrown3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaRockFieldLavaTest.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Base.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBlue.prefab
+- Assets/eden_blockmodels/Eden_ModelSpawnerGateRed2.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireFlareDiag.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlackTemplate.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlackRedCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreenDark.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalWhiteGlow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Black.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomGreen2.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalOrangeBright.prefab
+- Assets/eden_blockmodels/WaterGeneratorT2/Eden_WaterGeneratorT2V2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaObject1.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyPurple1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_LavaRing.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_BlueLTest.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockRing.prefab
+- Assets/eden_blockmodels/Holiday/Eden_DecoHolidayPropHalloween.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewDustFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellowDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIcePL_Cyan.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomOrange2.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (2).prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlueStorm.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_Steam.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGrayDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRedDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaSDustSphere2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_Template.prefab
+- Assets/eden_blockmodels/Weapons/Eden_ModelRailgunCVNew.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceL.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockIncoming3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewCyanFog3.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_TrailBlue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLYellowDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomPink2.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillBase.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceOld.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaFarrDustRing.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterEdenMisc1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomTemplate.prefab
+- Assets/eden_blockmodels/Eden_ModelWarningLightSilent.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurpleDark.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceT2.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalBlueBright.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockIncoming.prefab
+- Assets/eden_blockmodels/Hydroponics_Full.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceS_Template.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomPink.prefab
+- Assets/eden_blockmodels/Posters/Eden_PosterMultiSpace.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLYellow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_WhiteThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPink.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomPink2.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyGreen1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_TestSkybox2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_BlueThick.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockOutgoing.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Buds.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalPurpleBrightL.prefab
+- Assets/eden_blockmodels/Crystals/Eden_PlanetCrystalWhiteGlow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomRed2.prefab
+- Assets/eden_blockmodels/Eden_TestButton.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomPurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewCyanFog2.prefab
+- Assets/eden_blockmodels/Environmental/Eden_CometSectorDust.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_Green.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2GrassGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomYellow2.prefab
+- Assets/eden_blockmodels/Posters/Eden_PosterMultiSpace2.prefab
+- Assets/eden_blockmodels/prefaboriginals/Cube.359.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldS_Gray.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorAsteroidFieldNormal.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Brown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLCyanDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLRedCircle.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeXLGray2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyXLGreen1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlackGreenCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_TestShader.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyRadiationOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_LavaThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldPL_Gray.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2StimulantGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomBlue.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGenerator.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_PlasmaFlareL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_BlueL2.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockGuideCyanAn.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_BlueThickOrbit.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewMultiFog4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomCyanDim.prefab
+- Assets/eden_blockmodels/Eden_ModelMiningLaserBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOPirates2.prefab
+- Assets/eden_blockmodels/Asteroids/Eden_PrefabRockChunks.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLRedCircle2.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOTrader3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomGray.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaObject2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldS_Brown.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPurple2.prefab
+- Assets/eden_blockmodels/Shuttle Docks/Eden_ShuttleDockPlanet.prefab
+- Assets/eden_blockmodels/WaterGeneratorT2/Eden_WaterGeneratorT2_Base.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalBlueTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomCyan3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaAnomalyRing1.prefab
+- Assets/eden_blockmodels/prefaboriginals/Cube.360.prefab
+- Assets/eden_blockmodels/Eden_WarningLightSilentBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldTest2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Blue.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreenDim.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_CyanThick.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaLightningPreset.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRedStorm.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Empty.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_PlasmaFlareL3.prefab
+- Assets/eden_blockmodels/prefaboriginals/Plane.457.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetAuroraPurple.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLRedDim.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireOrangeDiag.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed4.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Eden_SectorNebulaNewYellow2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlueDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_Template.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_CrystalCopper.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Cyan.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceRing_Template.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_FarrOrbitLights.prefab
+- Assets/eden_blockmodels/Environmental/Asteroids/Eden_AsteroidCloud1.prefab
+- Assets/eden_blockmodels/Holiday/Eden_DecoHolidayHalloween.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaOrangeLTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaNewPresetStorm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceXL_Cyan.prefab
+- Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorL2Off.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomCyan2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_CrystalSilver.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorAsteroidFieldPreset.prefab
+- Assets/eden_blockmodels/Elevators/Eden_ElevatorCVx2New.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomBlue2.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_TraderTSOBackup.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewCyanFog.prefab
+- Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_DroneSwarm.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkPurple3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_DarkGreen3.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL_Template.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomOrange2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewGreenStorm.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_WormholeBlueDead.prefab
+- Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorFarrLogoSpinning.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewOrangeFog.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaM_RandomOrange.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomOrangeDark.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/Eden_PFNebulaRed.prefab
+- Assets/eden_blockmodels/Terrain Deco/Eden_PlanetShootingStars.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewDustFog3.prefab
+- Assets/eden_blockmodels/Eden_ModelVoidiumT2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_LightningFlashesL.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2FruitGrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldIceL2_Cyan.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaTESTRotate.prefab
+- Assets/eden_blockmodels/Eden_ModelVoidium 3.prefab
+- Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Protein.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLBlackCyanCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBrownDim2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomPink2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Ion Storms/Eden_IonStormNew_GreenL.prefab
+- Assets/eden_blockmodels/Eden_ModelSpawnerOrganicSmall.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomRed.prefab
+- Assets/eden_blockmodels/Eden_ModelMiningLaserYellow.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLRedCircle.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_TestErrors.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Eden_SectorNebulaNewYellow1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaXL_RandomRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_GrayThick.prefab
+- Assets/eden_blockmodels/Eden_TestForcefield.prefab
+- Assets/eden_blockmodels/Environmental/Eden_SectorNebulaTest.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldL_DarkTemplate.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlackStormRed.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomGreen2.prefab
+- Assets/eden_blockmodels/Posters/Eden_ModelPosterFarr.prefab
+- Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyPink1.prefab
+- Assets/eden_blockmodels/Wind/Eden_WindmillBaseBackup.prefab
+- Assets/eden_blockmodels/prefaboriginals/Cube.358.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldXL_BlueThick.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalRedBrightL.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldLegacy2.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
+  nebula/Eden_NebulaL_RandomBlue.prefab
+- Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalCopperL.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_FireFlare.prefab
+- Assets/eden_blockmodels/prefaboriginals/light_01 (8).prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/Eden_PFNebulaTemplate.prefab
+Dependencies: []

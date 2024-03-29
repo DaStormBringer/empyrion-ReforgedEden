@@ -1,0 +1,256 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.93.0.2542, Playfield Version: 11.0.0 [2712] (Alpha 11.0.0)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [3, 4, 5]
+   SizeProbs: [0.3, 0.6, 0.1]
+PlanetAxis: [-20, 20]
+PlayfieldLevelOverride: [0, 0]
+TemperatureMin: [-40, -30]
+TemperatureMax: [-20, -10]
+TemperatureNight: [110, 120]
+HumidityMin: [0.1, 0.15]
+HumidityMax: [0.28, 0.35]
+Radiation: [0, 2]
+LandWaterRatio: [0, 0]
+BaseLevel: [72, 72]
+SeaLevel: [-1, -1]
+TerrainLevel: [184, 184]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 195]
+TemperatureGradientRange: [0.75, 0.1]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.59999999999999998
+GravityMinMax: [-7, -3]
+AtmosphereDensityMinMax: [0.15, 0.225]
+GroundFogProb: 1
+AtmosphereFogRange: [0.1, 0.2]
+GroundFogIntensityRange: [0.1, 0.2]
+GroundFogHeightRange: [799, 800]
+Water: [WaterBlue]
+Music: [Adrift]
+PvPProb: 0 #Normal
+HumidityMasks:
+- Global_1a_R, 0.2
+TemperatureMasks:
+- Global_1a_R, 0.2
+BiomeStampTries: 20
+GroundShapes:
+- Mountain_10b_GS, 0.2
+Biomes:
+-  Name: Pole
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [10, 6, 0.02]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Color: [0.6, 0.6, 0.6]
+-  Name: Mountains
+   AmbientSound: Mountains
+   IgnoreForcedBiome: True
+   Texture: [1, 1, 0.5, 2, 7, 0.5, 0.05]
+   UndergroundLayers:
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 170
+   Color: [0.7, 0.7, 0.7]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - Mountain_4a, 0.1
+   - Mountain_4b, 0.1
+   - Volcanic_02, 0.1
+   StampTries: 30
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [RockResourceCopper, 0.0001, Free]
+   - [RockResourceSilicon, 0.0003, Free]
+-  Name: Regolith
+   LevelMod: +4
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [1, 6, 0.5, 6, 6, 1, 0.25]
+   UndergroundLayers:
+   - [12, 2]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 150
+   - Height < 280
+   Color: [0.5, 0.5, 1]
+   Decorations:
+   - [RealRock10Dark, 0.01]
+   - [RealRock1Dark, 0.01]
+   - [RealRock2Dark, 0.01]
+   - [GlowTube01, 0.01]
+   - [CthulhuTree02, 0.01]
+   - [FingerSponge03-01, 0.01]
+   Grass:
+   -  Name: Seaweed05
+      Density: 0.002
+      Preset: GrassPatches4
+   -  Name: GrassType03Red
+      Density: 0.059999999999999998
+      YScale: 3
+      Preset: GrassDense
+-  Name: IcePlainsEdge
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [0, 0, 0.5, 2, 7, 0.8, 0.5]
+   UndergroundLayers:
+   - [0, 1]
+   - [12, 15]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height < 102
+   - Height > 99
+   Color: [0.1, 0.1, 0.3]
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalsPyramidBlue, 5E-05, Free]
+-  Name: IcePlains
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [4, 6, -0.25]
+   UndergroundLayers:
+   - [11, 2]
+   - [10, 2]
+   - [12, 15]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height < 102
+   - Height > 10
+   Color: [0.3, 0.3, 0.3]
+   StampProb: 0.90000000000000002
+   Stamps:
+   - CraterMoon_1
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalsPyramidBlue, 5E-05, Free]
+   - [BallTree, 0.01]
+   - [BallFlower01, 0.01]
+   - [BallFlower02, 0.01]
+   - [BallFlower03, 0.01]
+-  Name: SmallCrater
+   AmbientSound: ArcticLowPlains
+   Texture: [8, 9, 0.5, 3, 3, 0.5, -0.1]
+   UndergroundLayers:
+   - [10, 2]
+   - [12, 15]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 600
+   Color: [0.9, 0.3, 0.3]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - CraterMoon_1
+   - CraterMoon_2, 0.2
+   - CraterMoon_3, 0.3
+   - CraterMoon_4, 0.04
+   - CraterMoon_5, 0.7
+   - CraterMoon_6, 0.04
+   - CraterMoon_7, 0.02
+   - CraterMoon_8, 0.01
+   - CraterMoon_9, 0.004
+   StampTries: 1350
+   Temperature: -10
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalsPyramidBlue, 0.0005, Free]
+   - [RockResourceCopper, 0.0001, Free]
+   - [RockResourceSilicon, 0.0003, Free]
+-  Name: RayCrater
+   AmbientSound: ArcticLowPlains
+   Texture: [8, 9, 0.5, 3, 3, 0.5, 0.15]
+   UndergroundLayers:
+   - [10, 2]
+   - [12, 15]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 600
+   Color: [0.9, 0.8, 0.3]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOther
+   Stamps:
+   - CraterMoon_14, 0.05
+   - CraterMoon_14b, 0.03
+   StampTries: 10
+   Temperature: -20
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalsPyramidBlue, 0.0005, Free]
+   - [RockResourceCopper, 0.0001, Free]
+   - [RockResourceSilicon, 0.0003, Free]
+-  Name: LayeredIce
+   AmbientSound: ArcticLowPlains
+   Texture: [0, 5, 0.9, 6, 6, 1, 0]
+   UndergroundLayers:
+   - [0, 3]
+   - [12, 2]
+   - [10, 1]
+   - [12, 2]
+   - [10, 2]
+   - [11, 2]
+   - [12, 15]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 140
+   Color: [0.4, 0.4, 0.4]
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+-  Name: IceSheet
+   LevelMod: +4
+   AmbientSound: ArcticLowPlains
+   Texture: [0, 6, -0.45]
+   UndergroundLayers:
+   - [12, 20]
+   - [10, 2]
+   - [12, 5]
+   - [15, -1]
+   - [11, 1]
+   SelectionCriteria:
+   - Height > 130
+   Color: [0.5, 0.5, 0.5]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - CraterMoon_15, 0.7
+   StampTries: 2
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+-  Name: Flats
+   AmbientSound: ArcticLowPlains
+   Texture: [11, 11, 0.2]
+   Color: [0, 1, 0]
+   Decorations:
+   - [BallFlower01, 0.01]
+   - [BallFlower02, 0.01]
+   - [BallFlower03, 0.01]
+   - [BallTree, 0.01]
+   - [RealRock10Dark, 0.01]
+   - [RealRock1Dark, 0.01]
+   - [RealRock2Dark, 0.01]
+   Grass:
+   -  Name: Seaweed05
+      Density: 0.02
+      Preset: GrassDense
+   -  Name: GrassType03Red
+      Density: 0.029999999999999999
+      Preset: GrassPatches2a

@@ -1,0 +1,374 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [2,3]
+  SizeProbs: [0.30,0.70]       
+TemperatureMin: [-130, -100]  #  -10                       
+TemperatureMax: [-60,-40]   #  10  
+TemperatureNight: [10,25]
+PlanetAxis: [-45,45]                
+HumidityMin: [0.05, 0.1]   #  0.1                    
+HumidityMax: [0.3, 0.35]   #   0.3                 
+Radiation: [3, 6]             
+LandWaterRatio: [0, 0]                   
+SeaLevel: [0, 0]     
+TerrainLevel: [230, 230]    
+BaseLevel: [180, 180]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [0.52, 0]
+TemperatureNoiseFac: 0.44
+HumidityHeightFac: [0, 350]
+HumidityNoiseFac: 0.86
+
+GravityMinMax: [-4, -6]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+GroundFogProb: 0
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [WaterGreen]
+Music: [BarrenMoon, 2473, Adrift]
+# ==============================================================
+GroundShapes: 
+  - Mountain_10b_GS, 1
+
+HumidityMasks: 
+
+TemperatureMasks: 
+
+BiomeStampTries: 100
+
+Biomes: 
+ 
+  - Name: DeepWater
+    IgnoreForcedBiome: true
+    Texture: [0,11,0.5, 10,10,0.5, 0.20]  
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 20
+    Color: [0, 0, 1]
+    
+    UndergroundLayers:
+               - [0, 2]
+               - [10, -1]
+               - [9, 1]    
+    
+    Decorations: 
+               - [CoralStone01-05, 0.003, Free]
+               - [CoralStone03-06, 0.003, Free]
+               - [FingerSponge03-01, 0.001, Free]
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.001, Free]
+               - [RealRock9Water, 0.001, Free]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               - [SkeletonWhaleFull, 0.0017, Free]
+               # Harvestables:
+               - [CoralBig01, 0.02, Plant]
+               - [CoralBig08, 0.03, Plant]
+               # Rock Resources:
+               - [PromethiumStone, 0.001, Free]
+               - [RockResourceCopper, 0.006, Free]
+               - [RockResourceSilicon, 0.0008, Free]
+               - [RockResourceGold, 0.0003, Free]                   
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.1
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.006
+                 Preset: GrassDense
+
+# ==============================================================                      
+                 
+  - Name: Water
+    IgnoreForcedBiome: true
+    Texture: [0, 10, 0.25]   
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 10
+    Color: [0.2, 0.2, 1]
+    
+    UndergroundLayers:
+               - [0, 4]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+               - [FingerSponge03-01, 0.01, Free]
+               - [OnionFlower, 0.01, BigPlant]     
+               - [RealRock5Water, 0.001, Free]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               - [SkeletonWhaleFull, 0.0003, Free]               
+               # Harvestables:
+               - [CoralBig08, 0.004, Plant]
+               - [Hydrilla2, 0.01, Plant]
+               - [SeaWeed02-04, 0.04, Plant]               
+               # Rock Resources:
+               - [RockResourceCopper, 0.0007, Free]
+               - [RockResourceSilicon, 0.0004, Free]
+               
+    Grass: 
+               - Name: Seaweed02
+                 Density: 0.2
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.01
+                 Preset: GrassDense
+
+# ==============================================================                 
+  - Name: ShallowWater
+    IgnoreForcedBiome: true
+    Texture: [0, 8, 0.20]   
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 3
+    - Temperature > -16
+    Color: [0.4, 0.4, 1]
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]
+               - [FingerSponge03-01, 0.01, BigPlant]               
+               # Harvestables:
+               - [CoralBig08, 0.001, Plant]
+               - [Snakeweed, 0.003, Free]               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0004, Free]
+               - [RockResourceCopper, 0.0002, Free]
+               
+    Grass: 
+               - Name: GrassGreen01a
+                 Density: 0.4
+                 Preset: GrassDense
+               - Name: Plant01
+                 Density: 0.03
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.005
+                 Preset: GrassDense
+                 
+                 
+# ==============================================================                 
+  - Name: Shore
+    IgnoreForcedBiome: true
+    Texture: [11, 8, 0.1]  
+    
+    SelectionCriteria: 
+    - Height < SeaLevel + 3
+    - Temperature > -13
+    Color: [0.6, 0.6, 0]  
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0002, Free]
+               - [RockResourceCopper, 0.0001, Free]
+               
+    Grass: 
+               - Name: GrassGreen01a
+                 Density: 0.4
+                 Preset: GrassDense
+               - Name: Plant01
+                 Density: 0.03
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.02
+                 Preset: GrassDense
+                 
+# ==============================================================
+  - Name: Pole          # same as GlacierSnow biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true
+    Texture: [1, 2 ,0.65]   
+    
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [1, 1, 1] 
+   
+# ==============================================================
+
+  # - Name: Mountains 
+    # # AmbientSound: Mountains
+    # IgnoreForcedBiome: true
+    # Texture: [3, 10, 0.6, 2, 10, 0.2, 0.2]  
+    # SelectionCriteria: 
+    # - Height > 200
+    # Color: [0.6, 0.6, 0.6]
+    
+    # UndergroundLayers:
+               # - [3, 3]
+               # - [10, -1]
+               # - [9, 1]
+    
+    # Decorations:  
+               # - [RealRock1Snow, 0.0001, Free]
+               # - [RealRock3Snow, 0.0001, Free]
+               # - [RealRock6Snow, 0.0001, Free]               
+               # # Rock Resources:
+               # - [CrystalsPyramidBlue, 0.0003, Free]   
+
+ 
+# ==============================================================
+  - Name: IceRift
+    # # AmbientSound: ArcticHighPlains
+    Texture: [3, 4, 0.5]
+    IgnoreForcedBiome: true
+    
+    SelectionCriteria: 
+    - Height > 500   # dummy criteria
+    Color: [0.4, 0.4, 0.4]     
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll  
+    StampTries: 35 
+    Stamps:
+    - RiftLava_1, 0.60
+    - RiftLava_1b, 0.60
+    - RiftLava_2, 0.60
+    - RiftLava_2b, 0.60
+    # - RiftIce_01, 0.20
+
+
+    Decorations:  
+    Grass:  
+
+# ==============================================================
+  - Name: IceRiftShallow
+    # # AmbientSound: ArcticHighPlains
+    Texture: [5, 6, 0.5]
+    IgnoreForcedBiome: true
+    
+    SelectionCriteria: 
+    - Height > 500   # dummy criteria
+    Color: [0.7, 0.4, 0.4]     
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll  
+    StampTries: 20
+    Stamps:
+    - RiftIce_01, 0.20
+
+
+    # Decorations:  
+    Grass:  
+
+# ==============================================================
+  - Name: IceLens
+    IgnoreForcedBiome: true
+    # # AmbientSound: ArcticIntermediatePlains
+    Texture: [4,6,0.5, 8,10,0.6, 0.20] 
+
+    SelectionCriteria:
+    - Height > 500   
+
+    Color: [1, 0.2, 0.5]      
+    
+    UndergroundLayers:
+               - [1, 30]
+               - [10, -1]
+               - [9, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff   
+    StampTries: 60  
+    Stamps:
+    - Cliff_1, 0.4
+    - Cliff_3, 0.4
+    - Volcanic_01a, 0.7
+    - Volcanic_01b, 0.8
+    - Volcanic_01c, 0.9
+    # - RiftLava_2b, 0.5
+    # - RiftLava_2, 0.5    
+
+    Decorations:
+               - [RealRock1Snow, 0.0001, Free]
+               - [RealRock3Snow, 0.0001, Free]
+               - [RealRock6Snow, 0.0001, Free]
+               - [RealRock8Snow, 0.0001, Free]
+               - [RealRock10Snow, 0.0001, Free]               
+               # Rock Resources:
+               - [PromethiumStone, 0.0001, Free]
+
+# ==============================================================
+  - Name: Plains
+    # AmbientSound: ArcticLowPlains
+    Texture: [7,8,0.5, 10,8,0.1, 0.20]   
+
+    SelectionCriteria:
+    - Humidity > 0.32
+    - Height < 190
+    Color: [0.8, 1, 0.5] 
+    
+    UndergroundLayers:
+               - [11, 1]
+               - [10, -1]
+               - [9, 1]
+               
+    Decorations:
+    Grass:
+
+# ==============================================================
+  - Name: Ice
+    # AmbientSound: ArcticLowPlains
+    Texture: [9,10,0.5, 10,8,0.1, 0.20]   
+
+    SelectionCriteria:
+    # - Humidity > 0.2
+    - Humidity < 0.24
+    - Height < 190
+    Color: [0.8, 1, 1] 
+    StampProb: 0.1                  
+    Stamps:                         
+    - PlainsLava_1, 0.15
+    - PlainsLava_1b, 0.03
+    
+    UndergroundLayers:
+               - [11, 1]
+               - [10, -1]
+               - [9, 1]
+               
+    Decorations:
+    Grass:
+
+# ==============================================================
+  - Name: GlacierSnow
+    IgnoreForcedBiome: false
+    Texture: [1, 2 ,0.65]   
+    
+    SelectionCriteria:      
+    - Height > 10   
+    Color: [1, 1, 1] 
+    
+    UndergroundLayers:
+               - [8, 2]
+               - [9, -1]
+               - [10, 1]
+    UndergroundLayersDefault: True      # the above underground layers will be used as default for other biomes if UndergroundLayers is not given
+    
+    StampProb: 0.15
+    Stamps: 
+               # - MountainIce_01, 0.65
+               # - MountainIce_01b, 0.15
+               # - RiftLava_2, 0.1
+
+    Decorations:  
+               # - [ RealRock1Snow, 0.00005, Free]
+               # - [ RealRock3Snow, 0.00005, Free]
+                 

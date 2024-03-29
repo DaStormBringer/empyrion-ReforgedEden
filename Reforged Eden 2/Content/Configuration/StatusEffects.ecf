@@ -1,0 +1,1935 @@
+ /* All statuseffects PER second (realtime) */
+ 
+ /* ==MAIN ENTRY== */
+ /* Duration = duration of the statuseffect in seconds (realtime) until it ends; 0 = has no end, if set. -1 is a single shot of the status effect, usually useful for using a 'setvar' action */
+ /* BuffIf/DebuffIf: Start/remove statuseffect if condition met */
+ /* RequiresAll: false = Any of the status defined under REQUIRES is needed to start the effect */
+ /* Requires: "StatusEffect Name" = The defined Statuseffect needs to be active to trigger the main Status effect */
+ /* condition: varFood < 50 = lower than;  varFood = varTYPE */
+ /* condition: varFood > 50 = higher than */
+ /* Actions: buff(Statuseffect) = adds Statuseffect in brackets if main statuseffect starts; can use multi: "damage(100,2,0,0);debuff(LowFood);buff(NoOxygen)" */
+ /* DebuffActions: buff() or debuff () = same as Actions: ; Triggers when status effect is CURED, not when expired || Note: DebuffActions: setvar( ,<value>) */
+ /* Actions: debuff(Statuseffect) = removes Statuseffect in brackets if main statuseffect starts; can use multi: "buff(effect1);debuff(effect2)" */
+ /* Actions: "damage(30,6,0,0)" = damage(amount,frequency,duration,count); can use multi in "" */
+ /* OnExpired: = After duration of statuseffect ends, the noted statuseffect is started automatically */ 
+ /* Evolves: "EndoParasite,0.6" = Allows to specify an in-game message to notify player of next statuseffect. Message will be displayed after 0.6*duration 
+ /* Mutex = If one of the specified statuseffects is currently active, this one will not be applied. */
+ /* Stack: discard = If statuseffect is triggered and the same statuseffect is still active, the duration of the currently active statuseffect is stopped and restarted */
+ /* Stack: extend = If the statuseffect is triggered and the same statuseffect is still active, the duration of the currently active statuseffect is increased by the statuseffects duration. */
+ /* Evolves: "<name>,<elapsedTimeFac[0..1]>" To display a message for an effect that evolves into the next, set 'name' to the name you want to display as the next stage. Set 'elapsedTimeFac' to the percentage of time elapsed before showing the message as a value between 0 and 1 */
+ 
+ /* ==CHILD ENTRIES== */
+ /* Amount = value added or removed (neg or pos possible) */
+ /* Rate = Stepping (seconds) for effect application. Rate: 2 = effect is executed every 2 seconds. */
+ /* SetValue = Sets a fixed value (only works for speedmodifier) */
+ /* Note: Durations = real time seconds. 24h in game = 72min real time = 4320 real time seconds */
+
+ /*----------------------------------------------------------------------------USEFUL METRICS--------------------------------------------------------------------------------
+
+ Standing Still:
+    + 17.5 Stamina/sec
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+# ========================================================================================================
+# Basic Injuries include anything commonly inflicted by an enemy
+
+# Standard bleeding injury; heals on it's own without treatment taking 240hp
+{ StatusEffect Name: OpenWound
+  Duration: 60
+  Name: OpenWound
+  Type: bleeding
+  Stack: extend
+  CastSound: Buffs/openWound
+  OnDebuffSound: Player_Male/sigh
+  OnExpiredSound: Player_Male/sigh
+  Description: igmOpenWound
+  Icon: TmpEff_Wound
+
+  { Child Modify0
+    Stat: health
+    Amount: -4
+    Rate: 1
+  }
+}
+
+# Standard burn injury; caused by chemical or laser weapons, becomes infected if not treated.
+{ StatusEffect Name: DermalBurn
+  Duration: 180
+  Name: DermalBurn
+  Type: bleeding
+  NextIsWorse: true
+  OnExpired: "InfectedWound"
+  Evolves: "InfectedWound,0.25"
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Player_Male/sigh
+  OnExpiredSound: Player_Male/sigh
+  Description: igmDermalBurn
+  Icon: TmpEff_DermalBurn 
+
+  { Child Modify0
+    Stat: health
+    Amount: -1
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: -200
+    NumberOperationType: Flat
+  }
+}
+
+# Tier 2 injury; Can be inflicted by some wildlife creatures and untreated burns.
+{ StatusEffect Name: InfectedWound
+  Duration: 600
+  Name: InfectedWound
+  Type: bleeding
+  OnExpired: "Sepsis"
+  Evolves: "Sepsis,0.1"
+  NextIsWorse: true
+  CastSound: Buffs/openWound
+  OnDebuffSound: Player_Male/sigh
+  OnExpiredSound: Player_Male/sigh
+  Description: igmInfectedWound
+  Icon: TmpEff_InfectedWound  
+
+  { Child Modify0
+    Stat: health
+    Amount: -2
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: -200
+    NumberOperationType: Flat
+  }
+}
+
+#Final stage affliction. Fatal if untreated.
+{ StatusEffect Name: Sepsis
+  Duration: 0
+  Name: Sepsis
+  Type: disease
+  Actions: buff(Fever)
+  Description: igmSepsis
+  Icon: TmpEff_Sepsis
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Player_Male/sigh
+  OnExpiredSound: Buffs/normalBreathingShort
+
+  { Child Modify0
+    Stat: health
+    Amount: -1
+    Rate: 1
+  }
+    { Child Modify1
+    Stat: health
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+}
+
+# Replaces FractureOpen, FractureClosed and BrokenLeg as a generic broken bone. Will heal on it's own without treatment.
+{ StatusEffect Name: BrokenBone
+  Duration: 1800
+  Name: BrokenBone
+  Type: speedmodifier
+  BuffIf: varFallDamage > 35
+  CastSound: Buffs/BuffBrokenLeg
+  Description: igmBrokenBone
+  Icon: TmpEff_BrokenLeg
+  
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: -100
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -350
+    NumberOperationType: Flat
+  }
+}
+
+# Caused by extreme cold
+{ StatusEffect Name: Frostbite
+  Duration: 600
+  Name: Frostbite
+  CastSound: Buffs/normalBreathingShort
+  OnDebuffSound: Player_Male/sigh
+  Type: bleeding
+  Description: igmFrostbite
+  Icon: TmpEff_Frostbite 
+  OnExpired: "Necrosis"
+  Evolves: "Necrosis,0.25"
+  NextIsWorse: true
+  Mutex: Necrosis
+
+  { Child Modify0
+    Stat: food
+    Amount: -2
+    Rate: 4
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.75
+    Type: speedmodifier
+  }
+}
+
+# Final stage affliction. Fatal if untreated.
+{ StatusEffect Name: Necrosis
+  Duration: 0
+  Name: Necrosis
+  Type: bleeding
+  CastSound: Buffs/normalBreathingShort
+  Description: igmNecrosis
+  Icon: TmpEff_Necrosis  
+
+  { Child Modify0
+    Stat: health
+    Amount: -1
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+  { Child Modify2
+    Stat: health
+    ModifyMaxValue: -250
+    NumberOperationType: Flat
+  }
+  { Child Modify3
+    Stat: stamina
+    ModifyMaxValue: -350
+    NumberOperationType: Flat
+  }
+}
+
+# Common side-effect of various status effects and from getting too hot.
+{ StatusEffect Name: Dehydration
+  Duration: 600
+  Name: Dehydration 
+  Type: staminadown
+  Stack: extend
+  OnExpired: "OrganFailure, Fever"
+  Evolves: "OrganFailure,0.1"
+  NextIsWorse: true
+  Description: igmEffectDehydration
+  Icon: TmpEff_Indigestion
+
+  { Child Modify0
+    Stat: stamina
+    Amount: -14
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: food
+    Amount: -1
+    Rate: 2
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.85
+    Type: speedmodifier
+  }
+}
+
+# Uncommon side-effect of some status effects.
+{ StatusEffect Name: Fever
+  Duration: 90
+  Name: Fever
+  Type: bodytemp
+  OnExpired: "Dehydration"
+  Description: igmFever
+  Icon: TmpEff_FeverAttack 
+  Actions: screen(heat)
+
+  { Child Modify0
+    Stat: stamina
+    Amount: -10
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: 1
+    Rate: 1
+  }
+}
+
+# Don't eat stuff off the grounds, kids.
+{ StatusEffect Name: FoodPoisoning
+  Duration: 480
+  Name: FoodPoisoning 
+  Type: staminadown
+  OnExpired: "Dehydration"
+  Description: igmFoodPoisoning
+  Icon: TmpEff_PoisonFood
+  Actions: "debuff(WellFed)"
+  
+  { Child Modify0
+    Stat: food
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: food
+    Amount: -1
+    Rate: 5
+  }
+}
+
+# Generic Poison effect; replaces Intoxication, PoisonBit1, PoisonBit2.
+{ StatusEffect Name: Poison
+  Duration: 600
+  Name: Poison
+  OnExpired: "OrganFailure"
+  Evolves: "OrganFailure,0.1"
+  NextIsWorse: true
+  CastSound: Player_Male/GRUNTMaleHurt
+  OnDebuffSound: Player_Male/sigh
+  OnExpiredSound: Player_Male/sigh
+  Description: igmPoison
+  Icon: TmpEff_Intoxication
+  Actions: screen(poison_v1)
+
+   { Child Modify0
+    Stat: health
+    Amount: -2
+    Rate: 1
+   }
+  { Child Modify1
+    Stat: stamina
+    Amount: -18
+    Rate: 1
+  }
+}
+
+# Final Stage affliction. Fatal if untreated.
+{ StatusEffect Name: OrganFailure
+  Duration: 0
+  Name: OrganFailure
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Buffs/normalBreathingShort
+  Description: igmOrganFailure
+  DebuffActions: buff(Dehydration)
+  Type: disease
+  Icon: TmpEff_OrganFailure
+  Actions: screen(poison_v2)
+
+  { Child Modify0
+    Stat: health
+    Amount: -6
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -24
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+}
+
+# Generic bonk on the head/electrocuted.
+{ StatusEffect Name: Stunned
+  Duration: 4
+  Name: Stunned
+  Type: speedmodifier
+  Stack: extend
+  Description: igmStunned
+  Icon: TmpEff_Stunned  
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.0
+  }
+}
+
+# ====================================================================================================================================================================================================================
+#                                                                                                        FOOD-RELATED STATUSES   
+# ====================================================================================================================================================================================================================
+
+# New Well Fed effect; Applied by high-quality foods, provides a maximum stat increase.
+{ StatusEffect Name: WellFed 
+  Duration: 450
+  Name: WellFed
+  Type: healthup
+  Stack: discard
+  DebuffIf: "varFood <= 350"
+  Description: igmEffectWellFed
+  Icon: TmpEff_WellFed
+  Mutex: "FoodPoisoning,Resurrected"
+  
+  { Child Modify0
+    Stat: stamina
+    ModifyMaxValue: 100
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: 100
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: food
+    ModifyMaxValue: 100
+    NumberOperationType: Flat
+  }
+}
+
+{  StatusEffect Name: LowFood
+   Duration: 0
+   Name: LowFood
+   CastSound: Player_Male/GROANMaleHurtLong
+   OnDebuffSound: Player_Male/sigh
+   BuffIf: varFood < 50
+   DebuffIf: "varFood > 50"
+   Mutex: NoFood
+   Type: food
+   Description: igmEffectLowFood
+   Icon: TmpEff_LowFood
+  
+   { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.75
+    Type: speedmodifier
+   }  
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: -250
+    NumberOperationType: Flat
+  }
+}
+
+{ StatusEffect Name: NoFood
+  Duration: 0
+  Name: NoFood
+  CastSound: Player_Male/GROANMaleHurtLong
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varFood < 0
+  DebuffIf: "varFood > 0"
+  Actions: debuff(LowFood)
+  Type: food
+  Description: igmEffectNoFood
+  Icon: TmpEff_NoFood
+  
+  { Child Modify0
+    Stat: health
+    Amount: -4
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.3
+    Type: speedmodifier
+  }
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -400
+    NumberOperationType: Flat
+  }
+  { Child Modify3
+    Stat: food
+    ModifyMaxValue: -250
+    NumberOperationType: Flat
+  }
+  { Child Modify4
+    Stat: health
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+}
+
+# Effect given from any alchoholic drink; Positive effect, turns into a Hangover on expiration. Replaces BadTrip.
+{ StatusEffect Name: Drunk
+  Duration: 300
+  Name: Drunk
+  CastSound: UseActions/playerDrinking
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  OnExpired: "Hangover"
+  Type: food
+  Stack: extend
+  Description: igmEffectDrunk
+  Icon: TmpEff_BadTrip
+
+  { Child Modify0
+    Stat: health
+    Amount: 1
+    Rate: 3
+  }
+  { Child Modify1
+    Stat: food
+    Amount: -1
+    Rate: 8
+  }
+}
+
+{ StatusEffect Name: Hangover
+  Duration: 240
+  Name: Hangover
+  OnExpired: "Dehydration"
+  Evolves: "Dehydration,0.33"
+  NextIsWorse: true
+  CastSound: UseActions/VOICEOhNo2
+  Type: staminadown
+  Description: igmHangover
+  Icon: TmpEff_Hangover
+  Actions: screen(underWaterFog)
+
+  { Child Modify0
+    Stat: food
+    Amount: -2
+    Rate: 5
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.85
+    Type: speedmodifier
+  } 
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -100
+    NumberOperationType: Flat
+  }
+}
+# Immunity to Heat-based effects
+{ StatusEffect Name: Brainfreeze
+  Duration: 300
+  Name: Brainfreeze
+  CastSound: UseActions/playerEatingFruit
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: staminaup
+  Stack: discard
+  Actions: "screen(frost)"
+  Description: igmEffectBrainfreeze
+  Mutex: "Overheating,HeatStroke,Hot"
+  Icon: TmpEff_DecBodyTemp
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 5
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: -1
+    Rate: 3
+  }
+}
+# Max health up, slow regeneration
+{ StatusEffect Name: SaladBuff
+  Duration: 300
+  Name: SaladBuff
+  CastSound: UseActions/playerEatingFruit
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: staminaup
+  Stack: discard
+  Description: igmEffectSalad
+  Icon: TmpEff_WellFed
+
+  { Child Modify0
+    Stat: health
+    Amount: 1
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: 200
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: food
+    Amount: -1
+    Rate: 5
+  }
+}
+# Immunity to cold-based effects
+{ StatusEffect Name: BloodyBuzz 
+  Duration: 300
+  Name: BloodyBuzz
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: food
+  Stack: discard
+  OnExpired: "Hangover"
+  Description: igmEffectBloodyBuzz
+  Mutex: "Cold,Freezing,Hypothermia"
+  Icon: TmpEff_DecBodyTemp
+  
+  { Child Modify0
+    Stat: stamina
+    Amount: 4
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: health
+    Amount: 1
+    Rate: 3
+  }
+}
+# Regeneration + Radiation contamination
+{ StatusEffect Name: GreenFairy
+  Duration: 300
+  Name: GreenFairy
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: food
+  Stack: discard
+  OnExpired: "Hangover"
+  Actions: "setvar(varBodyTemp, 25);screen(radiation)"
+  Description: igmEffectGreenFairy
+  Icon: TmpEff_ReduceRadiation
+
+  { Child Modify0
+    Stat: health
+    Amount: 1
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: radiation
+    Amount: 0.1
+    Rate: 10
+  }
+}
+# Max Stamina and Speed Up
+{ StatusEffect Name: HealthyRed
+  Duration: 300
+  Name: HealthyRed
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: food
+  Stack: discard
+  Description: igmEffectHealthyRed
+  Icon: TmpEff_LowFood
+
+  { Child Modify0
+    Stat: stamina
+    ModifyMaxValue: 150
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 1.75
+    Type: speedmodifier
+  }
+}
+# Max Health way up, Max Stamina down, Speed down
+{ StatusEffect Name: BlueFugue
+  Duration: 300
+  Name: BlueFugue
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: food
+  Stack: discard
+  OnExpired: "Hangover"
+  Actions: "screen(frost)"
+  Description: igmEffectBlueFugue
+  Icon: TmpEff_DecBodyTemp
+
+  { Child Modify0
+    Stat: health
+    ModifyMaxValue: 400
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: -250
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+}
+# ====================================================================================================================================================================================================================
+# ====================================================================================================================================================================================================================
+#                                                                                                        COLD-RELATED STATUSES
+# ====================================================================================================================================================================================================================
+
+{ StatusEffect Name: Cold
+  Duration: 0
+  Name: Cold
+  CastSound: Buffs/BuffCold
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyTemp < 15
+  DebuffIf: varBodyTemp > 15
+  Mutex: "Freezing, Hypothermia, BloodyBuzz"
+  Type: bodyTemp  
+  Description: igmEffectCold
+  Icon: TmpEff_Cold
+  
+  { Child Modify0
+    Stat: food
+    Amount: -2
+    Rate: 5
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.8
+    Type: speedmodifier
+  }
+}
+
+{ StatusEffect Name: Freezing
+  Duration: 30
+  Name: Freezing
+  CastSound: Buffs/BuffFreezing
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyTemp < 10
+  DebuffIf: varBodyTemp > 20
+  OnExpired: "Stunned"
+  Mutex: "Fever, Hypothermia, BloodyBuzz"
+  Actions: debuff(Cold);screen(frost)
+  Type: bodyTemp  
+  Description: igmFreezing
+  Icon: TmpEff_Freezing
+
+  { Child Modify0
+    Stat: food
+    Amount: -2
+    Rate: 4
+  }
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: -150
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.65
+    Type: speedmodifier
+  }
+}
+
+{ StatusEffect Name: Hypothermia
+  Duration: 15
+  Name: Hypothermia 
+  Type: bodyTemp
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Buffs/normalBreathingShort
+  BuffIf: varBodyTemp < 5
+  DebuffIf: varBodyTemp > 5
+  OnExpired: "Frostbite"
+  Description: igmEffectHypothermia
+  Icon: TmpEff_BlackoutCold 
+  Mutex: "BloodyBuzz"
+  Actions: debuff(Cold);debuff(Freezing);screen(frost);screen(underWaterFog)
+
+  { Child Modify0          
+    Stat: health
+    Amount: -1
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: -1
+    Rate: 5
+  } 
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -400
+    NumberOperationType: Flat
+  }
+  { Child Modify3
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+}
+
+# ====================================================================================================================================================================================================================
+#                                                                                                        HEAT-RELATED STATUSES   
+# ====================================================================================================================================================================================================================
+
+{ StatusEffect Name: Hot
+  Duration: 0
+  Name: Hot
+  # CastSound: Buffs/BuffHot
+  CastSound: Buffs/normalBreathingShort
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyTemp > 35
+  DebuffIf: varBodyTemp < 35
+  Mutex: "HeatStroke, Overheating, Brainfreeze"
+  Type: bodyTemp
+  Description: igmEffectHot
+  Icon: TmpEff_Hot
+
+  { Child Modify0
+    Stat: stamina
+    Amount: -12
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: HeatStroke
+  Duration: 0
+  Name: HeatStroke
+  CastSound: Buffs/BuffHeatStroke
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyTemp > 45
+  DebuffIf: varBodyTemp < 26
+  Actions: "debuff(Hot);buff(Dehydration)"
+  Type: bodyTemp
+  Description: igmEffectHeatStroke
+  Icon: TmpEff_HeatStroke
+  Mutex: "Overheating, Brainfreeze"
+
+  { Child Modify0
+    Stat: health
+    Amount: -1
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -12
+    Rate: 1
+  } 
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.85
+    Type: speedmodifier
+  }
+}
+
+{ StatusEffect Name: Overheating
+  Duration: 0
+  Name: Overheating 
+  Type: bodyTemp
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Buffs/normalBreathingShort
+  BuffIf: varBodyTemp > 55
+  DebuffIf: varBodyTemp < 55
+  Description: igmOverheating
+  Icon: TmpEff_BlackoutHot
+  Actions: debuff(HeatStroke)
+  Mutex: "Brainfreeze"
+  
+  { Child Modify0
+    Stat: health
+    Amount: -2
+    Rate: 1
+  } 
+  { Child Modify1
+    Stat: stamina
+    Amount: -19
+    Rate: 1
+  } 
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+  { Child Modify3
+    Stat: stamina
+    ModifyMaxValue: -250
+    NumberOperationType: Flat
+  }
+}
+
+# ====================================================================================================================================================================================================================
+#                                                                                                        RADIATION-RELATED STATUSES   
+# ====================================================================================================================================================================================================================
+
+# Radiation Status effects simplified for ease of use and management. Also Radiation Poisoning and Radiation Sickness are just
+# different names for the same condition. Radiation overload doesn't exist.
+# Radiation Immunity Shot now prevents recurrences of Radiation Burn while active.
+
+{ StatusEffect Name: RadiationBurn
+  Duration: 0
+  Name: RadiationBurn
+  CastSound: Player_Male/GROANMaleHurtLong
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyRad > 1
+  Type: radiation  
+  Description: igmRadiationBurn
+  Icon: TmpEff_RadiationBurn
+  Mutex: "RadiationImmunity"
+  
+  { Child Modify0
+    Stat: radiation
+    Amount: 0.1
+    Rate: 12
+  }
+  { Child Modify1
+    Stat: health
+    Amount: -1
+    Rate: 4
+  }
+  { Child Modify2
+    Stat: health
+    ModifyMaxValue: -50
+    NumberOperationType: Flat
+  }
+}
+
+{ StatusEffect Name: RadiationPoisoning
+  Duration: 600
+  Name: RadiationPoisoning
+  CastSound: Player_Male/GROANMaleHurtLong
+  OnDebuffSound: Player_Male/sigh
+  BuffIf: varBodyRad > 5
+  OnExpired: "OrganFailure, RadiationPoisoning"
+  Type: radiation
+  Description: igmEffectRadiationPoisoning
+  Icon: TmpEff_RadiationPoisoning
+  
+  { Child Modify0
+    Stat: radiation
+    Amount: 0.1
+    Rate: 36
+  }
+  { Child Modify1
+    Stat: health
+    Amount: -1
+    Rate: 3
+  }
+  { Child Modify2
+    Stat: health
+    ModifyMaxValue: -150
+    NumberOperationType: Flat
+  }
+}
+
+# ====================================================================================================================================================================================================================
+#                                                                                                        X-RELATED STATUSES   
+# ====================================================================================================================================================================================================================
+
+
+
+
+# ============================ 
+# DIRECT PLAYER STATS EFFECTS  
+# ============================ 
+
+/* Currently player with full health dies after 45sec */
+{ StatusEffect Name: NoOxygen
+  Duration: 0
+  Name: NoOxygen
+  CastSound: Buffs/hyperventilatingShort
+  OnDebuffSound: Buffs/normalBreathingShort
+  BuffIf: varOxygen < 0
+  DebuffIf: "varOxygen > 0"
+  Type: oxygen
+  Description: igmEffectNoOxygen
+  Icon: TmpEff_NoO2
+  
+  { Child Modify0
+    Stat: stamina
+    Amount: -20
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: health
+    Amount: -15
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.5    
+    Type: speedmodifier
+  }  
+}
+
+ # ==================================
+ #  ENVIRONMENTALLY SOURCED EFFECTS 
+ # ==================================
+ 
+{ StatusEffect Name: Fire
+  Stack: discard
+  Duration: 20
+  Name: Fire 
+  Type: fire
+  BuffIf: varBodyTemp > 70
+  Actions: "damage(30,1,0,0);attach(pfx_personalFire, @entity);attach(sfx_fire1, @entity);screen(heat)"
+  Description: igmEffectFire
+  Icon: TmpEff_Fire
+}
+
+# Hard-coded effect; effect changed to reflect what a mosquito DOES.
+{ StatusEffect Name: MosquitoStun
+  Duration: 5
+  Name: MosquitoBite
+  Type: bleeding
+  # Mutex: "BugProtection"
+  Stack: reset
+  Description: igmEffectMosquitoBite
+  Icon: TmpEff_DermalParasite  
+  Actions: screen(underWaterFog)
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+   { Child Modify1
+    Stat: health
+    Amount: -2
+    Rate: 1
+   }
+}
+# Hard-coded effect; Butterflies do NOT heal. More often than not, they're toxic. Especially large ones.
+# Status effect changed to represent real life butterfly of the same appearance (African Giant Swallowtail)
+{ StatusEffect Name: ButterflyHeal
+  Duration: 5
+  Name: ButterflyToxin
+  Stack: reset
+  Description: igmEffectToxicButterfly
+  Icon: TmpEff_Intoxication
+
+  { Child Modify0
+    Stat: health
+    Amount: -1
+    Rate: 2
+  }
+}
+
+ # ============================
+ #  HEALING and CURING EFFECTS 
+ # ============================
+ 
+# Adds 100 health
+{ StatusEffect Name: MedikitBandages
+  Duration: 10.1
+  Name: MedikitBandages
+  Type: healthup
+  Stack: extend
+  Description: igmEffectBandages
+  Icon: TmpEff_MedikitBandages
+
+  { Child Modify0
+    Stat: health
+    Amount: 10
+    Rate: 1
+  }
+}
+# Adds 150 health
+{ StatusEffect Name: MedikitSmallApplied
+  Duration: 15.1
+  Name: MedikitSmallApplied
+  Type: healthup
+  Stack: extend
+  Description: igmEffectApplyMedikitSmall
+  Icon: TmpEff_MedikitSmall
+
+  { Child Modify0
+    Stat: health
+    Amount: 10
+    Rate: 1
+  }
+}
+# Adds 250 health
+{ StatusEffect Name: MedikitLargeApplied
+  Duration: 10.1
+  Name: MedikitLargeApplied
+  Type: healthup
+  Stack: extend
+  Description: igmEffectApplyMedikitLarge
+  Icon: TmpEff_MedikitLarge
+
+  { Child Modify0
+    Stat: health
+    Amount: 25
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: ReduceRadiation
+  Duration: 10
+  Name: ReduceRadiation
+  Type: healthup
+  Stack: discard
+  Description: igmEffectReduceRadiation
+  Icon: TmpEff_ReduceRadiation
+  
+  { Child Modify0
+    Stat: radiation
+    Amount: -0.5
+    Rate: 1
+  }
+}
+{ StatusEffect Name: IncreaseRadiation
+  Duration: 6
+  Name: IncreaseRadiation
+  Type: radiation
+  Stack: discard
+  Description: igmEffectIncreaseRadiation
+  Icon: TmpEff_IncreaseRadiation
+  
+  { Child Modify0
+    Stat: radiation
+    Amount: 0.2
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: RadiationImmunity
+  Duration: 300     
+  Name: Radiation Immunity
+  Actions: "addimmunity(radiation)"
+  Stack: discard
+  Type: radiation
+  Description: seBuffRadImmunity
+  Icon: TmpEff_ReduceRadiation  
+  
+  { Child Immunity0
+    Stat: radiation
+    Type: radiation
+  }  
+}
+
+{ StatusEffect Name: NeutralBodyTemp 
+  Duration: -1
+  Name: NeutralBodyTemp
+  Actions: "setvar(varBodyTemp, 25)"
+}
+
+{ StatusEffect Name: DecreaseBodyTemp
+  Duration: 10
+  Name: DecreaseBodyTemp
+  Type: healthup
+  RequiresAll: false
+  Requires: "Hot,HeatStroke,Overheating"
+  Stack: discard
+  Description: igmEffectDecreaseBodyTemp
+  Icon: TmpEff_DecBodyTemp
+  
+  { Child Modify0
+    Stat: temperature
+    Amount: -5
+    Rate: 2
+  }
+}
+
+{ StatusEffect Name: IncreaseBodyTemp
+  Duration: 10
+  Name: IncreaseBodyTemp
+  Type: healthup
+  RequiresAll: false
+  Requires: "Cold,Freezing,Hypothermia"
+  Stack: discard
+  Description: igmEffectIncreaseBodyTemp
+  Icon: TmpEff_IncBodyTemp
+  
+  { Child Modify0
+    Stat: temperature
+    Amount: 5
+    Rate: 2
+  }
+}
+
+{ StatusEffect Name: MedicStation
+  Duration: 10.1
+  Name: MedicStation 
+  CastSound: UseActions/MedicStationV1
+  Type: healthup
+  Description: igmEffectMedicStation
+  Icon: TmpEff_Health
+
+  { Child Modify0
+    Stat: health
+    Amount: 50
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: MedicStationMobile
+  Duration: 10.1
+  Name: MedicStation
+  CastSound: UseActions/MedicStationV1
+  Type: healthup
+  Description: igmEffectMedicStation
+  Icon: TmpEff_Health
+
+  { Child Modify0
+    Stat: health
+    Amount: 20
+    Rate: 1
+  }
+}
+
+ # ============================
+ #  STAMINA BOOSTS and EFFECTS 
+ # ============================
+
+# Used with certain devices: Bed, Sofa, etc
+{ StatusEffect Name: StaminaRecover
+  Duration: 25
+  Name: StaminaRecover
+  CastSound: UseActions/exhale
+  Type: staminaup
+  Description: igmEffectStaminaRecover
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 25
+    Rate: 1
+  }
+}
+# Coffee Bonus; Adrenaline moved to StimBoosterUp
+{ StatusEffect Name: StaminaBoost
+  Duration: 240
+  Name: StaminaBoost
+  CastSound: UseActions/exhale
+  Type: staminaup
+  Stack: extend
+  Description: igmStaminaBoost
+  Icon: TmpEff_StaminaBoost
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 5
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 1.25    
+    Type: speedmodifier
+  }
+}
+
+{ StatusEffect Name: StimBoosterUp
+  Duration: 180
+  Name: StimBoosterUp
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  Type: staminaup
+  Stack: extend
+  OnExpired: "StimBoosterDown"
+  Mutex: StimBoosterDown
+  Description: igmEffectStimBoostUp
+  Icon: TmpEff_StaminaUp
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 25
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 2   
+    Type: speedmodifier
+  }
+  { Child Modify2
+    Stat: food
+    Amount: -3
+    Rate: 4
+  }  
+}
+
+{ StatusEffect Name: StimBoosterDown
+  Duration: 30
+  Name: StimBoosterDown
+  CastSound: UseActions/exhausted
+  Type: staminadown
+  Stack: extend
+  Description: igmEffectStimBoostDown
+  Icon: TmpEff_StaminaDown
+
+  { Child Modify0
+    Stat: stamina
+    Amount: -25
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.85   
+    Type: speedmodifier
+  }  
+}
+
+# =========================================================================================================================================================================================================================
+
+{ StatusEffect Name: Rested 
+  Duration: 15
+  Name: Rested
+  Type: healthup
+  Stack: discard
+  Description: igmEffectWellFed
+  # Icon: TmpEff_Rested
+  Icon: TmpEff_MedikitSmall
+  Mutex: "FoodPoisoning,Resurrected"  
+  Actions: "setvar(varBodyTemp, 25)"
+  
+  { Child Modify0
+    Stat: health
+    Amount: 5
+    Rate: 1
+  }
+}
+{ StatusEffect Name: Resurrected     #Use for respawning effects // needs more refining (maybe needs to be hardcoded + not trigger other effects + debuff other effects that are active)
+  Duration: 300
+  Name: Resurrected
+  CastSound: UseActions/VOICEOhNo2
+  Type: staminadown
+  Stack: discard
+  # OnExpired: "BadTrip"
+  # Actions: "setvar(varFood,75);setvar(varHealth,75);setvar(varStamina,0);setvar(varBodyTemp,18)"
+  Description: igmEffectAdrenalineCrash
+  Icon: TmpEff_BadTrip
+  
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.5
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+}
+
+# =========================================================== 
+#  NEW REFORGED-SPECIFIC STATUS EFFECTS    
+# ===========================================================
+
+# Adds 50 health
+{ StatusEffect Name: Injector01
+  Duration: 1.1
+  Name: MedicalSupport
+  Type: healthup
+  Stack: extend
+  Description: igmEffectHealing
+  Icon: TmpEff_MedikitSmall
+
+  { Child Modify0
+    Stat: health
+    Amount: 50
+    Rate: 1
+  }
+}
+# Cures status effects
+{ StatusEffect Name: Injector02
+  Duration: 5
+  Name: MedicalTreatment 
+  Actions: "debuff(RadiationBurn);debuff(DermalBurn);debuff(OpenWound);debuff(BrokenBone);debuff(Poison)"
+  CastSound: UseActions/MedicStationV1
+  Type: healthup
+  Description: igmEffectTreatment
+  Icon: TmpEff_Health
+}
+# Status Protection
+{ StatusEffect Name: BurnProtection
+  Duration: 600     
+  Name: Ablative Protection
+  Stack: extend
+  Type: healthup
+  Description: You are protected from Dermal Burns
+  Icon: TmpEff_ReduceRadiation  
+}
+# ===========================================================
+
+
+# ============================================================================================================================================================================
+# ========================================================================================================================== Project Eden Custom Status Effects
+# ============================================================================================================================================================================
+
+# ========================================================================================================================== Short Duration Debuffs
+# Slows and chills the player. Used by Abyssal Zirax.
+
+{ StatusEffect Name: Eden_Cryoshock
+  Duration: 0.3
+  Name: Eden_Cryoshock
+ # CastSound: UseActions/exhale
+  CastSound: Buffs/BuffFreezing
+  # Type: speedmodifier
+  Type: bodyTemp
+  Stack: extend
+  Actions: "screen(frost)"
+  Description: You are being drained of thermal energy.
+  Icon: TmpEff_Freezing
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.5
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: -10
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_Cryoshock2
+  Duration: 12
+  Name: Eden_Cryoshock2
+ # CastSound: UseActions/exhale
+  CastSound: Buffs/BuffFreezing
+  # Type: speedmodifier
+  Type: bodyTemp
+  Stack: discard
+  Actions: "screen(frost)"
+  Description: You are being drained of thermal energy.
+  Icon: TmpEff_BlackoutCold
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.65
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: -10
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_OverseerFlame
+  Duration: 2.75
+  Name: Eden_OverseerFlame
+ # CastSound: UseActions/exhale
+  CastSound: Buffs/BuffHot
+  # Type: speedmodifier
+  Type: fire
+  Stack: extend
+  # Actions: "damage(100,1,0,0);attach(pfx_personalFire, @entity);attach(sfx_fire1, @entity);screen(heat)"
+  Actions: "attach(pfx_personalFire, @entity);attach(sfx_fire1, @entity);screen(heat)"
+  Description: You are on fire.
+  Icon: TmpEff_Fire
+
+  { Child Modify0
+    Stat: health
+    Amount: -10
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: temperature
+    Amount: 2
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_PoisonShort
+  Duration: 10
+  Name: Eden_PoisonShort
+  CastSound: Player_Male/GRUNTMaleHurt
+  # OnDebuffSound: Player_Male/sigh
+  # OnExpiredSound: Player_Male/sigh
+  Actions: "screen(radiation)"
+  Description: You have been poisoned for a short duration.
+  Icon: TmpEff_PoisonBite
+
+  { Child Modify0
+    Stat: health
+    Amount: -10
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_DecrepifyMinor
+  Duration: 1.5
+  Name: Eden_DecrepifyMinor
+ # CastSound: UseActions/exhale
+  Type: speedmodifier
+  Stack: discard
+  Actions: "screen(radiation);screen(heat)"
+  Description: Eden_Decrepifyinfo #NewRequired
+  Icon: TmpEff_Stunned
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.65
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -5
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: health
+    Amount: -5
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_Decrepify
+  Duration: 1.5
+  Name: Eden_Decrepify
+ # CastSound: UseActions/exhale
+  Type: speedmodifier
+  Stack: discard
+  Actions: "screen(radiation);screen(heat)"
+  Description: Eden_Decrepifyinfo
+  Icon: TmpEff_Stunned
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.35
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -10
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: health
+    Amount: -10
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_DecrepifyMajor
+  Duration: 1.5
+  Name: Eden_DecrepifyMajor
+ # CastSound: UseActions/exhale
+  Type: speedmodifier
+  Stack: discard
+  Actions: "screen(radiation);screen(heat)"
+  Description: Eden_Decrepifyinfo
+  Icon: TmpEff_Stunned
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.2
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -25
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: health
+    Amount: -20
+    Rate: 1
+  }
+  { Child Modify3
+    Stat: temperature
+    Amount: 5
+    Rate: 1
+  }
+}
+
+# ========================================================================================================================== Health Regeneration
+# Slow Regeneration
+{ StatusEffect Name: Eden_HealthRegenerationSlow
+  Duration: 900
+  Name: Eden_HealthRegenerationSlow
+  Type: healthup
+  Stack: discard
+  Description: Slowly regenerating health.
+  Icon: TmpEff_MedikitBandages
+
+  { Child Modify0
+    Stat: health
+    Amount: 10
+    Rate: 5
+  }
+}
+
+# Medium Regeneration
+{ StatusEffect Name: Eden_HealthRegenerationMedium
+  Duration: 600
+  Name: Eden_HealthRegenerationMedium
+  Type: healthup
+  Stack: discard
+  Description: Regenerating health.
+  Icon: TmpEff_MedikitBandages
+
+  { Child Modify0
+    Stat: health
+    Amount: 15
+    Rate: 5
+  }
+}
+
+# Fast Regeneration
+{ StatusEffect Name: Eden_HealthRegenerationFast
+  Duration: 120
+  Name: Eden_HealthRegenerationFast
+  Type: healthup
+  Stack: discard
+  Description: Quickly regenerating health.
+  Icon: TmpEff_MedikitBandages
+
+  { Child Modify0
+    Stat: health
+    Amount: 20
+    Rate: 5
+  }
+}
+
+# ========================================================================================================================== Stamina Regeneration
+# Slow Regeneration
+{ StatusEffect Name: Eden_StaminaRegenerationSlow
+  Duration: 900
+  Name: Eden_StaminaRegenerationSlow
+  Type: staminaup
+  Stack: discard
+  Description: Slowly regenerating stamina.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 10
+    Rate: 3
+  }
+}
+
+# Medium Regeneration
+{ StatusEffect Name: Eden_StaminaRegenerationMedium
+  Duration: 600
+  Name: Eden_StaminaRegenerationMedium
+  Type: staminaup
+  Stack: discard
+  Description: Regenerating stamina.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 15
+    Rate: 3
+  }
+}
+
+# Fast Regeneration
+{ StatusEffect Name: Eden_StaminaRegenerationFast
+  Duration: 120
+  Name: Eden_StaminaRegenerationFast
+  Type: staminaup
+  Stack: discard
+  Description: Quickly regenerating stamina.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 20
+    Rate: 3
+  }
+}
+
+# ========================================================================================================================== Radiation Regeneration (Reduction)
+# Slow Regeneration
+{ StatusEffect Name: Eden_RadiationRegenerationSlow
+  Duration: 900
+  Name: Eden_RadiationRegenerationSlow
+  Type: healthup
+  Stack: discard
+  Description: Slowly reducing radiation. Does not cure sickness.
+  Icon: TmpEff_ReduceRadiation
+
+  { Child Modify0
+    Stat: radiation
+    Amount: -0.1
+    Rate: 30
+  }
+}
+
+# Damage Immunity
+{ StatusEffect Name: Eden_RegenerationImmunity
+  Duration: 30
+  Name: Eden_RegenerationImmunity
+  Type: healthup
+  Stack: discard
+  Actions: "screen(radiation)"
+  Description: Protected by a powerful shield. Immune to virtually all forms of damage. Very powerful attacks can still kill you. Movement speed slowed.
+  Icon: TmpEff_MedikitBandages
+
+  { Child Modify0
+    Stat: health
+    Amount: 500
+    Rate: 0.1
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    SetValue: 0.5
+  }
+}
+
+# ========================================================================================================================== Beverages
+{ StatusEffect Name: Eden_WarpCoreMoonshineEffect
+  Duration: 300
+  Name: Eden_WarpCoreMoonshineEffect
+  Type: staminaup
+  Stack: discard
+  Description: Regenerating stamina at the cost of health.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 20
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: health
+    Amount: -3
+    Rate: 1
+  }
+}
+
+{ StatusEffect Name: Eden_Eden_PromethiumSlammersEffect
+  Duration: 300
+  Name: Eden_Eden_PromethiumSlammersEffect
+  Type: radiation
+  Stack: discard
+  Description: Regenerating stamina and health at the cost of body temperature and radiation.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    Amount: 5
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: health
+    Amount: 5
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: radiation
+    Amount: 0.1
+    Rate: 31
+  }
+  { Child Modify3
+    Stat: temperature
+    Amount: 1
+    Rate: 2
+  }
+}
+
+{ StatusEffect Name: Eden_Eden_LiquidAssassinEffect
+  Duration: 300
+  Name: Eden_Eden_LiquidAssassinEffect
+  Type: bodyTemp
+  Stack: discard
+  Description: Lowering body radiation and temperature at the cost of health and stamina.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: health
+    Amount: -3
+    Rate: 2
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -4
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: radiation
+    Amount: -0.1
+    Rate: 20
+  }
+  { Child Modify3
+    Stat: temperature
+    Amount: -1
+    Rate: 2
+  }
+}
+{ StatusEffect Name: Eden_Eden_SpaceVodkaEffect
+  Duration: 300
+  Name: Eden_Eden_SpaceVodkaEffect
+  Type: healthup
+  Stack: discard
+  Description: Regenerating health at the cost of stamina and movement speed.
+  Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: health
+    Amount: 10
+    Rate: 1
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: -10
+    Rate: 1
+  }
+  { Child Modify2
+    Stat: speedmodifier
+    SetValue: 0.5
+  }
+}
+
+
+# Implants
+
+{ StatusEffect Name: Eden_StatusImplant1
+  Duration: 0
+  Name: Eden_StatusImplant1
+  Actions: "debuff(Eden_StatusImplant2);debuff(Eden_StatusImplant3);debuff(Eden_StatusImplant4);debuff(Eden_StatusImplant5);debuff(Eden_StatusImplant6)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant1info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: health
+    ModifyMaxValue: 0.2
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: health
+    Amount: 5
+    Rate: 10
+  }
+}
+
+{ StatusEffect Name: Eden_StatusImplant2
+  Duration: 0
+  Name: Eden_StatusImplant2
+  Actions: "debuff(Eden_StatusImplant1);debuff(Eden_StatusImplant3);debuff(Eden_StatusImplant4);debuff(Eden_StatusImplant5);debuff(Eden_StatusImplant6)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant2info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    ModifyMaxValue: 0.2
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: stamina
+    Amount: 10
+    Rate: 5
+  }
+}
+
+{ StatusEffect Name: Eden_StatusImplant3
+  Duration: 0
+  Name: Eden_StatusImplant3
+  Actions: "debuff(Eden_StatusImplant1);debuff(Eden_StatusImplant2);debuff(Eden_StatusImplant4);debuff(Eden_StatusImplant5);debuff(Eden_StatusImplant6)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant3info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: health
+    ModifyMaxValue: 0.15
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: 0.15
+    NumberOperationType: Factor
+  }
+}
+
+{ StatusEffect Name: Eden_StatusImplant4
+  Duration: 0
+  Name: Eden_StatusImplant4
+  Actions: "debuff(Eden_StatusImplant1);debuff(Eden_StatusImplant2);debuff(Eden_StatusImplant3);debuff(Eden_StatusImplant5);debuff(Eden_StatusImplant6)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant4info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: speedmodifier
+    ModifyMaxValue: 0.15
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: 0.15
+    NumberOperationType: Factor
+  }
+  { Child Modify2
+    Stat: stamina
+    Amount: 5
+    Rate: 5
+  }
+}
+
+{ StatusEffect Name: Eden_StatusImplant5
+  Duration: 0
+  Name: Eden_StatusImplant5
+  Actions: "debuff(Eden_StatusImplant1);debuff(Eden_StatusImplant2);debuff(Eden_StatusImplant3);debuff(Eden_StatusImplant4);debuff(Eden_StatusImplant6)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant5info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: stamina
+    ModifyMaxValue: 0.25
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: speedmodifier
+    ModifyMaxValue: 0.25
+    NumberOperationType: Factor
+  }
+  # { Child Modify1
+    # Stat: health
+    # ModifyMaxValue: 0.25
+    # NumberOperationType: Factor
+  # }
+}
+
+{ StatusEffect Name: Eden_StatusImplant6
+  Duration: 0
+  Name: Eden_StatusImplant6
+  Actions: "debuff(Eden_StatusImplant1);debuff(Eden_StatusImplant2);debuff(Eden_StatusImplant3);debuff(Eden_StatusImplant4);debuff(Eden_StatusImplant5)"
+  # CastSound: UseActions/person_deep_sigh
+  # OnDebuffSound: UseActions/exhale
+  # OnExpiredSound: UseActions/exhale
+  Type: healthup
+  Stack: discard
+  Description: Eden_StatusImplant6info
+  # Icon: TmpEff_StaminaRecover
+
+  { Child Modify0
+    Stat: food
+    ModifyMaxValue: 0.2
+    NumberOperationType: Factor
+  }
+  { Child Modify1
+    Stat: health
+    ModifyMaxValue: 0.2
+    NumberOperationType: Factor
+  }
+  { Child Modify2
+    Stat: stamina
+    ModifyMaxValue: 0.2
+    NumberOperationType: Factor
+  }
+}

@@ -1,0 +1,1010 @@
+---
+# # ============================================================== 
+
+PlanetSize: 
+  SizeRange: [3,4]
+  SizeProbs: [0.7,0.3]
+TemperatureMin: [0,5]             
+TemperatureMax: [35,65]  
+TemperatureNight: [10,15]
+PlanetAxis: [-25,25]                 
+HumidityMin: [0.05, 0.15]                   
+HumidityMax: [0.60, 0.90 ]              
+Radiation: [0, 5]
+LandWaterRatio: [0.02, 0.03]      
+SeaLevel: [23, 25]                                      
+TerrainLevel: [100, 250]                      
+BaseLevel: [20, 20]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [30, 100]
+TemperatureGradientRange: [0.58, 0]
+# TemperatureNoiseFac: 0.75
+TemperatureNoiseFac: 0.65
+HumidityHeightFac: [0, 270]
+# HumidityNoiseFac: 0.9
+HumidityNoiseFac: 0.8
+
+GravityMinMax: [-10, -7]
+AtmosphereDensityMinMax: [0.1, 0.6]
+AtmosphereO2MinMax: [0, 0.03]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0.05, 0.40]
+GroundFogProb: 0.3
+GroundFogIntensityRange: [0.01, 0.04]
+GroundFogHeightRange: [10, 60]
+
+WaterProb: 0.3
+PvPProb: 0 #Normal
+Water: [WaterBrown, WaterRed]
+Music: [DarkSoundscape, DarkSoundscape2, DarkSoundscape3]
+# ==============================================================
+
+GroundShapes: 
+
+HumidityMasks: 
+  - Global_1, 0.125 
+  - Global_1a, 0.125 
+  - Global_2, 0.125 
+  - Global_2a, 0.125 
+  - Global_3, 0.125 
+  - Global_3a, 0.125 
+  - Global_4, 0.125 
+  - Global_4a, 0.125 
+
+TemperatureMasks: 
+  - Global_1, 0.125 
+  - Global_1a, 0.125 
+  - Global_2, 0.125 
+  - Global_2a, 0.125 
+  - Global_3, 0.125 
+  - Global_3a, 0.125 
+  - Global_4, 0.125 
+  - Global_4a, 0.125 
+
+BiomeStampTries: 50
+
+Biomes: 
+  - Name: DeepWater         
+    AmbientSound: BarrenFog 
+    IgnoreForcedBiome: true   
+    Texture: [10, 10, 0.01]   
+    UndergroundLayers:
+               - [10, 3]      
+               - [11, -1]     
+               - [10, 1]    
+    SelectionCriteria:       
+     - Height < SeaLevel - 17  
+    Color: [0, 0, 1]  
+    Decorations:
+               - [CoralStone01-05, 0.003, Free]   
+               - [CoralStone03-06, 0.003, Free]
+               - [FingerSponge03-01, 0.001, Free]
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.001, Free]
+               - [RealRock9Water, 0.001, Free]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               # Harvestables:
+    
+    Grass: 
+               # - Name: Seaweed02
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: Seaweed03
+                 # Density: 0.05
+                 # Preset: GrassDense
+               # - Name: Seaweed05
+                 # Density: 0.05
+                 # Preset: GrassDense
+
+# ==============================================================
+  - Name: Water
+    AmbientSound: BarrenFog 
+    IgnoreForcedBiome: true
+    Texture: [10, 11, 0.2]   
+    UndergroundLayers:
+               - [10, 3]
+               - [12, 2]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel - 7      
+    Color: [0.2, 0.2, 1]
+    Radiation: 3                       
+    Decorations:
+               - [RealRock5Water, 0.001, Free]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               # Harvestables:
+               - [CrystalStraight, 0.002, Free]
+    
+    Grass: 
+               # - Name: Seaweed02
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: Seaweed03
+                 # Density: 0.05
+                 # Preset: GrassDense
+                 
+# ==============================================================
+  - Name: ShallowWater
+    AmbientSound: BarrenFog 
+    IgnoreForcedBiome: true
+    Texture: [10, 10, 0.01]   
+    UndergroundLayers:
+               - [10, 3]
+               - [12, 2]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel  
+    Color: [0.4, 0.4, 1]
+    Radiation: 3                       
+    Decorations: 
+               - [ RockGrey01Large, 0.002, Free]
+               - [ RockGrey02Large, 0.002, Free]  
+    Grass: 
+               # - Name: GrassGreen01
+                 # Density: 0.4
+                 # Preset: GrassDense
+                 
+               
+# ==============================================================
+  - Name: Shore
+    AmbientSound: BarrenFog 
+    IgnoreForcedBiome: true
+    Texture: [10, 10, 0.01]   
+    UndergroundLayers:
+               - [10, 3]
+               - [12, 2]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel + 1 
+    Color: [0.2, 0.2, 0.5]
+    Radiation: 2                       
+    Decorations: 
+               - [ RockGrey01Large, 0.002, Free]
+               - [ RockGrey02Large, 0.002, Free]  
+    Grass: 
+               # - Name: GrassGreen01
+                 # Density: 0.4
+                 # Preset: GrassDense
+                 
+               
+# ==============================================================
+  - Name: Pole
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 11, 0.2]  
+    UndergroundLayers:
+               - [5, 2]
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - +Lat > 0.975       
+    Color: [1, 1, 1]
+              
+# ==============================================================
+  - Name: GlacierSnow
+    AmbientSound: Mountains 
+    IgnoreForcedBiome: true
+    Texture: [5, 11, 0.2]   
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - Temperature < 7    
+    - Height > 240
+    Color: [1, 1, 1]
+    
+    Decorations:  
+               # - [RealRock1Snow, 0.0001, Free]
+               # - [RealRock6Snow, 0.0001, BigPlant]
+               # - [RealRock10Snow, 0.0001, BigPlant]
+                 
+# # ==============================================================
+  - Name: Mountains 
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [6,3,0.7, 11,11,0.5, 0.2]  
+    UndergroundLayers:
+               - [6, 0]
+               - [6, -1]
+               - [10, 1]
+    SelectionCriteria: 
+    - Height > 140
+    Color: [0.5, 0.5, 0.5]
+
+    StampProb: 0.45                
+    Stamps: 
+    # - MountainEroded_01_BM, 0.4
+    # - MountainEroded_01b, 0.2
+    # - CraterLava_2, 0.1         
+    # - CraterLava_3_BM, 0.3 
+
+    Decorations:  
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               # Harvestables:
+               # - [Snakeweed, 0.003]
+               # Rock Resources:
+               - [RockResourceCopper, 0.0002, Free]
+               - [RockResourceSilicon, 0.00025, Free]
+    # Grass:
+               # - Name: GrassBrown06
+                 # Density: 0.5
+                 # Preset: GrassDense
+               # - Name: Plant01Brown
+                 # Density: 0.001
+                 # Preset: GrassDense
+
+# # ==============================================================
+  - Name: LowMountains
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains 
+    Texture: [6,3,0.6, 11,11,0.5, 0.25]  
+    UndergroundLayers:
+               - [6, 0]
+               - [6, -1]
+               - [10, 1]
+    Color: [0.4, 0.4, 0.4]
+    
+    StampForcesBiome: true  
+    StampTries: 30         
+    StampForcesBiomeType: OverlapAll  
+    Stamps: 
+    # - MountainEroded_01_BM, 0.4
+    # - MountainEroded_01b, 0.2
+    - Mountain_9, 0.2     
+    - Mountain_10b, 0.2  
+    - Mountain_11, 0.5   
+    - Mountain_13, 0.5   
+    - Mountain_14, 0.5   
+    - Mountain_15, 0.6  
+    - Mountain_23_R, 0.2
+    - Mountain_14a, 0.3  
+    - Mountain_15a, 0.3   
+    
+    Decorations:  
+               - [AlaskaCedarBare, 0.01]
+               - [RockGrey01Large, 0.0005, Free]
+               - [RockGrey02Large, 0.0005, Free]
+               # Harvestables:
+               # - [Snakeweed, 0.003]
+               # Rock Resources:
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 0.4
+                 # Preset: GrassDense
+               # - Name: Flower02
+                 # Density: 0.001
+                 # Preset: GrassDense
+
+# # ==============================================================
+  - Name: DriedLakeBed
+    # IgnoreForcedBiome: true
+    AmbientSound: BarrenFog 
+    Texture: [1, 10, 0.05]   
+    UndergroundLayers:
+               - [1, 1]
+               - [12, 6]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:
+    - Height < 30
+    - Height > SeaLevel + 1      
+    Color: [0.9, 0.9, 0]  
+    Radiation: 1                       
+    
+    StampProb: 0.3                
+    Stamps: 
+    - DunesSea_01, 0.1      
+    - DunesSea_01b, 0.1      
+    # - Lake_1, 0.4      
+    # - Lake_2, 0.4      
+    # - Lake_3, 0.4      
+    
+    Decorations:
+               - [SkeletonWhaleFull, 0.01]
+               - [SkeletonDragonTorso, 0.002]
+               - [SkeletonMammothHead, 0.001]
+               - [SkeletonMammothTorso, 0.002]
+               - [RockGrey01Large, 0.002]
+               - [RockGrey02Large, 0.002]
+               - [CoralStone03-05, 0.01]
+               - [CoralStone03-06, 0.01]
+               - [FingerSponge03-01, 0.01]
+               - [CrystalStraight, 0.005]
+               # Harvestables:
+               # - [CornDogBush, 0.001, Plant]
+    # Grass: 
+               # - Name: Plant01
+                 # Density: 0
+                 # Preset: GrassDense               
+
+               
+# ==============================================================
+  # - Name: Radiated
+    # Weather: BmFogRadiationGreen         
+    # AmbientSound: BarrenFog 
+    # Texture: [2,9, 0.8, 11,11,1, 0.2]   
+    # UndergroundLayers:
+               # - [0, 2]
+               # - [12, 4]
+               # - [11, -1]
+               # - [10, 1]
+    # Color: [0.6, 0, 0.6]   
+    
+    # Temperature: 30                      
+    # Radiation: 4                       
+    
+    # StampForcesBiome: true                
+    # StampTries: 15    
+    # StampForcesBiomeType: OverlapOff
+    # Stamps: 
+               # - DunesSea_01    
+    
+    # Decorations:
+               # # - [AkuaPlant2, 0.08]
+               # # - [BallFlower01, 0.04]
+               # # - [BallFlower02, 0.02]
+               # # - [BallFlower03, 0.02]
+               # # - [Mushroom02, 0.003]
+               # - [AridRock01, 0.001]
+               # - [AridRock02, 0.01]
+               # - [AridRock03, 0.02]
+               # - [SkeletonDragonTorso, 0.003]
+               # - [SkeletonMammothHead, 0.005]
+               # - [SkeletonMammothTorso, 0.008]
+               # - [RockGrey01Large, 0.001]
+               # - [RockGrey02Large, 0.001]
+               # - [RealRock1Dark, 0.05]
+               # - [RealRock2Dark, 0.001]
+               # - [RealRock3Dark, 0.01]
+               # - [RealRock4Dark, 0.01]
+               # - [RealRock8Dark, 0.01]
+               # # Harvestables:
+               # - [CrystalStraight, 0.001, Free]
+               # # Rock Resources:
+               # - [RockResourceCobalt, 0.001, Free]
+               # - [RockResourceSilicon, 0.001, Free]
+               # - [RockResourcePromethium, 0.0005, Free]
+    # # Grass:
+               # # - Name: GrassBrown04a
+                 # # Density: 1
+                 # # Preset: GrassDense
+               # # - Name: GrassBrown02d
+                 # # Density: 0.25
+                 # # Preset: GrassDense
+               # # - Name: FlowerBlue01
+                 # # Density: 0.008
+                 # # Preset: GrassDense
+               # # - Name: Plant01a
+                 # # Density: 0.05
+                 # # Preset: GrassDense
+                 
+# ==============================================================
+  - Name: PolarSnow
+    AmbientSound: ArcticHighPlains 
+    Texture: [5, 5, 0.2]   
+    UndergroundLayers:
+               - [5, 2]
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - Height < 200 
+    - Temperature < 3
+    Color: [1, 1, 1]
+    Decorations:  
+               # - [BlueSpruceWinter, 0.04]
+               # - [AlaskaCedarBare, 0.016]
+               # - [BushWinter01, 0.01]
+               # - [RealRock1Snow, 0.001, Tree]
+               # - [RealRock3Snow, 0.001, Tree]
+               # - [RealRock6Snow, 0.0008, BigPlant]
+               # - [RealRock8Snow, 0.001, Tree]
+               # - [RealRock10Snow, 0.0005, BigPlant]
+               # # Harvestables:
+               # - [CornDogBushSnow, 0.001, Plant]
+    # Grass:
+               # - Name: GrassGreen06Snow
+                 # Density: 0.05
+                 # Preset: GrassDense
+
+
+# ==============================================================
+  - Name: Tundra
+    AmbientSound: ArcticLowPlains 
+    Texture: [4,4,1, 11,11,1, 0.35]
+    SelectionCriteria:  
+    - Temperature > 0
+    - Temperature < 8
+    - Height < 150
+    Color: [0.4, 0.4, 0.015]     
+
+    StampProb: 0.12             
+    Stamps: 
+    - Pingo_01, 0.9
+               
+    Decorations:  
+               - [SkeletonDragonTorso, 0.001]
+               - [SkeletonMammothHead, 0.001]
+               - [SkeletonMammothTorso, 0.001]
+               # - [HollywoodJuniperDesktop, 0.03, Tree]
+               # - [HollywoodJuniperDesktopBare, 0.02, Tree]
+               # - [BushGreen01, 0.0006, Free]
+               # - [RealRock4, 0.0006, Free]
+               # - [RealRock5, 0.0006, Free]
+               # - [RealRock1, 0.0006, Free]
+               # - [RockGrey01Large, 0.002, Free]
+               # - [RockGrey02Large, 0.002, Free]
+               # # Harvestables:
+               # - [ CornDogBush, 0.002, Free]
+               # # Rock Resources:
+               - [RockResourceIron, 0.0003, Free]
+               - [RockResourceCopper, 0.0003, Free]
+               - [RockResourceSilicon, 0.0003, Free]
+    # Grass:
+               # - Name: GrassBrown06
+                 # Density: 1
+                 # Preset: GrassDense
+               # - Name: Plant01Brown
+                 # Density: 0.05
+                 # Preset: GrassDense
+               # - Name: Plant01 
+                 # Density: 0.05
+                 # Preset: GrassDense
+                 
+# # ==============================================================
+  - Name: ColdPlains
+    AmbientSound: ArcticLowPlains 
+    Texture: [6,6,0.6, 11,11,1, 0.35]  
+    SelectionCriteria:  
+    - Temperature < 12
+    - Height < 100
+    Color: [0, 0.5, 0.2] 
+
+    StampProb: 0.25                
+    Stamps: 
+    # - CraterLava_3_BM, 1      
+    
+    Decorations:  
+               # - [AmericanElm, 0.001, Tree]
+               # - [ElderberryBushGreen, 0.001, BigPlant]
+               # - [BushGreen01, 0.0004, BigPlant]
+               # - [BushGreen02, 0.0004, BigPlant]
+               - [RealRock10, 0.0001, Free]
+               - [RealRock1, 0.0001, Free]
+               - [RealRock3, 0.0001, Free]
+               - [RealRock4, 0.0001, Free]
+               - [RealRock8, 0.0001, Free]
+               # Harvestables:
+               # - [ ElderberryBush, 0.0001, BigPlant]
+               # - [ Snakeweed, 0.001, Plant]
+               # Rock Resources:
+               - [RockResourceIron, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+               
+    # Grass:                                         
+               # - Name: GrassGreen02
+                 # Density: 1.5
+                 # Preset: GrassDense
+               # - Name: GrassGreen03
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: Flower04
+                 # Density: 0.01
+                 # Preset: GrassDense
+                 
+# ==============================================================
+  - Name: DriedSwamp
+    AmbientSound: ArcticLowPlains 
+    Texture: [0,3,0.75, 0,3,0.75, 0.2] 
+    UndergroundLayers:
+               - [0, 0]
+               - [0, 2]
+               - [10, 3]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:
+    - Height < SeaLevel + 3
+    - Height > SeaLevel + 1
+    - Humidity > 0.60
+    - Temperature > 20
+    Color: [0, 0.2, 0]    
+    
+    Decorations:
+               # - [ChineseBanyan, 0.14, Tree]
+               # - [DeadTree02b, 0.0007, Free]
+               # - [PulpitFungus, 0.004, Plant]
+               # - [DeadTree02a, 0.002, Free]
+               # - [BulbShroomYoung, 0.002, Plant]
+               # - [AkuaBush1, 0.04, Bush]
+               # - [OmicronPlant, 0.001, Bush]
+               - [SkeletonWhaleFull, 0.0005, Free]
+               # - [ElderberryBushGreen, 0.0015, Bush]
+               # Harvestables:
+               # - [DimpleDome, 0.0015, Plant]
+               # - [BulbShroom, 0.004, Free]
+               # - [CobraLeavesPlant, 0.001, Plant]
+               # - [CattailWinter, 0.001, Plant]
+               # - [MushroomTallGreen01, 0.002, Free]
+               # - [ClusterShroom, 0.0015, Free]
+               # - [CornDogBush, 0.001, Plant]
+               # Rock Resources:
+               - [RockResourceIron, 0.001, Free]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.0001, Free]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassBrown06
+                 # Density: 1
+                 # Preset: GrassDense
+               # - Name: Reeds01
+                 # Density: 0.3
+                 # Preset: GrassDense
+                 
+# ==============================================================
+  - Name: WaterSwamp
+    AmbientSound: ArcticLowPlains 
+    Texture: [0,3,0.85, 0,3,0.85, 0.2]   
+    UndergroundLayers:
+               - [0, 0]
+               - [0, 2]
+               - [10, 3]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:
+    - Height < SeaLevel + 1
+    - Humidity > 0.63
+    - Temperature > 20
+    Color: [0, 1, 0.2]  
+    
+    Decorations:
+               # - [OmicronPlant, 0.01, Plant]
+               # - [OmicronWaterleaf, 0.01, Plant]
+               # - [AkuaBush1, 0.01, Bush]
+               # Harvestables:
+               # - [DimpleDome, 0.0015, Plant]
+               # - [ClusterShroom, 0.0015, Free]
+               # - [CattailWinter, 0.004, Plant]
+               # - [PixieStalks, 0.004, Free]
+               # - [CornDogBush, 0.001, Plant]
+    # Grass:
+               # - Name: Reeds01
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: GrassGreen01a
+                 # Density: 0.3
+                 # Preset: GrassDense
+# ==============================================================
+
+  - Name: DriedMarsh 
+    AmbientSound: ArcticLowPlains 
+    Texture: [3,6,0.5, 11,11,0.1, 0.35]  
+    UndergroundLayers:
+               - [3, 0]
+               - [3, 2]
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:  
+    - Humidity > 0.55
+    - Temperature > 23
+    - Height < 48
+    Color: [0.55, 0.65, 0.1]
+
+    Decorations:
+               # - [WhiteOak, 0.15, Tree]  # 0.25
+               # - [RiverBirch, 0.02, Tree] # 0.04
+               # - [ElderberryBushGreen, 0.05, BigPlant]
+               # # - [AkuaFern, 0.02, Plant]
+               # - [DeadTree01, 0.005, Free]
+               # - [DeadTree02b, 0.005, Free]
+               - [RealRock3Dark, 0.0004, Free]
+               - [RealRock4Dark, 0.002, Free]
+               - [RealRock8Dark, 0.0004, Free]
+               - [RealRock10Dark, 0.0005, Free]
+               - [SkeletonMammothTorso, 0.001, Free]
+
+               # Harvestables:
+               # - [AlienPlant07, 0.003, Plant]
+               # - [ElderberryBush, 0.01, BigPlant]
+               # - [ClusterShroom, 0.0015, Free]
+               # - [DimpleDome, 0.0015, Plant]
+               # - [Snakeweed, 0.005, Plant]
+               # - [CobraLeavesPlant, 0.005, Plant]
+               # - [MushroomBellBrown01, 0.0001, Plant]
+               # - [ScalyPods, 0.002, Plant]
+               # - [CattailWinter, 0.008, Plant]
+               # Rock Resources:
+               - [RockResourceIron, 0.0005, Free]
+               - [RockResourceSilicon, 0.0003, Free]
+               
+    # Grass:
+               # - Name: GrassBrown02c
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassBrown05
+                 # Density: 0.1
+                 # Preset: GrassDense
+               # - Name: GrassGreen04
+                 # Density: 0.2
+                 # Preset: GrassDense  
+                 
+# ============================================================== 
+  - Name: DriedSavanna
+    AmbientSound: ArcticLowPlains 
+    Temperature: 1
+    Texture: [7,8,0.8, 11,11,1, 0.35]  
+    UndergroundLayers:
+               - [7, 0]
+               - [7, 2]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - Humidity < 0.16
+    - Temperature > 15
+    - Height < 80
+    Color: [0.65, 0.58, 0.05] 
+    StampProb: 0.50                          
+    Stamps: 
+               - Flats_1, 0.6
+               - Valley_1, 0.3
+               - Valley_2, 0.3
+               - Valley_3, 0.3    
+
+    Decorations:  
+               # - [AmericanElm, 0.0002, Free]
+               # - [BushGreen02, 0.0003, Bush]
+               # - [BushGreen01, 0.0002, Bush]
+               # - [ElderberryBushOrange, 0.001, Free]
+               - [DesertRock1, 0.002, Free]
+               - [DesertRock2, 0.002, Free]
+               - [Boulder1, 0.0001, Free]
+               - [Boulder2, 0.0001, Free]
+               - [Boulder3, 0.0001, Free]
+               - [Boulder4, 0.00015, Free]
+               - [Boulder5, 0.00015, Free]
+               # Harvestables:
+               # - [DesertPlant20, 0.003, Plant]
+               # - [Snakeweed, 0.003, Plant]
+               # - [EggPlant, 0.003, Plant]
+               # - [OpuntiaCactus, 0.002, Free]
+               # Rock Resources:
+               - [RockResourceIron, 0.0003, Free]
+               - [RockResourceCopper, 0.0004, Free]
+               - [RockResourceSilicon, 0.0001, Free]
+    # Grass:
+               # - Name: GrassBrown04
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassBrown02c
+                 # Density: 0.9
+                 # Preset: GrassDense
+
+# ============================================================== 
+  - Name: Sand
+    AmbientSound: ArcticLowPlains 
+    # Texture: [7,6,0.5, 11,11,1, 0.4] 
+    Texture: [7, 7, 0.2]   
+    UndergroundLayers:
+               - [7, 0]
+               - [7, 8]
+               - [10, 5]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:  
+    - Humidity < 0.30
+    - Temperature > 20
+    - Height < 130    
+    Color: [1, 0, 0]
+    
+    StampProb: 0.30                          
+    Stamps: 
+               - Flats_1, 0.8
+               - Cliff_1, 0.3
+               - Cliff_2, 0.3
+               - Cliff_3, 0.3
+               - Valley_1, 0.2
+    Color: [1, 0, 0] 
+               
+    Decorations:  
+               # - [AmericanElm, 0.002, Tree]
+               # - [ElderberryBushGreen, 0.001, BigPlant]
+               # - [BushGreen01, 0.0004, BigPlant]
+               # - [BushGreen02, 0.0004, BigPlant]
+               - [SkeletonDragonTorso, 0.001]
+               - [SkeletonMammothHead, 0.001]
+               - [SkeletonMammothTorso, 0.001]
+               - [RealRock10, 0.0001, Free]
+               - [RealRock1, 0.0001, Free]
+               - [RealRock3, 0.0001, Free]
+               - [RealRock4, 0.0001, Free]
+               - [RealRock8, 0.0001, Free]
+               # Harvestables:
+               # - [ ElderberryBush, 0.0001, BigPlant]
+               # - [ Snakeweed, 0.001, Plant]
+               # - [ CornDogBush, 0.001, Plant]
+               # Rock Resources:
+               - [RockResourceIron, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 1.5
+                 # Preset: GrassDense
+               # - Name: GrassGreen03
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: Flower04
+                 # Density: 0.01
+                 # Preset: GrassDense
+                 
+
+# ============================================================== 
+  - Name: DriedSavannaEdge
+    AmbientSound: ArcticLowPlains 
+    Texture: [7,8,0.2, 11,11,1, 0.35] 
+    UndergroundLayers:
+               - [7, 0]
+               - [7, 2]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - Humidity < 0.28
+    - Temperature > 15
+    Color: [0.7, 0.7, 0.06] 
+
+    Decorations:  
+               # - [AmericanElm, 0.0002, Free]
+               # - [BushGreen02, 0.0003, Bush]
+               # - [BushGreen01, 0.0002, Bush]
+               # - [ElderberryBushOrange, 0.001, Free]
+               - [DesertRock1, 0.002, Free]
+               - [DesertRock2, 0.002, Free]
+               - [Boulder1, 0.0001, Free]
+               - [Boulder2, 0.0001, Free]
+               - [Boulder3, 0.0001, Free]
+               - [Boulder4, 0.00015, Free]
+               - [Boulder5, 0.00015, Free]
+               # Harvestables:
+               # - [DesertPlant20, 0.003, Plant]
+               # - [Snakeweed, 0.003, Plant]
+               # - [EggPlant, 0.003, Plant]
+               # - [OpuntiaCactus, 0.002, Free]
+               # Rock Resources:
+               - [RockResourceIron, 0.0003, Free]
+               - [RockResourceCopper, 0.0004, Free]
+               - [RockResourceSilicon, 0.0001, Free]
+    # Grass:
+               # - Name: GrassBrown04
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassBrown02c
+                 # Density: 0.9
+                 # Preset: GrassDense
+
+  - Name: DeadOasis
+    AmbientSound: ArcticLowPlains 
+    Texture: [7, 0, 0.6, 11, 11, 1, 0.35]  
+    UndergroundLayers:
+               - [7, 2]
+               - [7, -1]
+               - [12, 1]
+    SelectionCriteria:
+    - Height < 50
+    - Humidity > 0.40
+    - Humidity < 0.43
+    - Temperature > 20
+    - Temperature < 22
+    Color: [1, 0.7, 0]  
+    
+    Decorations:
+               # - [BigFlower, 0.02, Plant]
+               - [RockGrey01Large, 0.01]
+               - [RockGrey02Large, 0.01]
+               - [RealRock1, 0.001, Free]
+               - [RealRock4, 0.001, Free]
+               - [RealRock5, 0.001, Free]
+               - [RealRock6, 0.001, Free]
+               - [RockResourceGold, 0.005]
+               - [RockResourceSilicon, 0.005]
+               - [RockResourceCopper, 0.005]
+    # Grass:
+               # - Name: GrassBrown04
+                 # Density: 1
+                 # Preset: GrassDense
+               # - Name: GrassBrown06
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: Plant01Brown
+                 # Density: 0.05
+                 # Preset: GrassDense
+               # - Name: Flower02
+                 # Density: 0.15
+                 # Preset: GrassDense                                 
+
+    # ============================================================== 
+  - Name: DeadForest
+    AmbientSound: ArcticLowPlains 
+    Temperature: -1
+    Texture: [3,6,0.5, 9,11,0.1, 0.35]  
+    UndergroundLayers:
+               - [10, 0]
+               - [10, 2]
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:  
+    - Humidity > 0.30
+    - Temperature > 15
+    - Height > 30 
+    - Height < 70 
+    Color: [0, 0.7, 0]
+    
+    StampProb: 0.40
+    Stamps: 
+               - Valley_3, 0.3
+               - Cliff_1, 0.5
+               - Cliff_3, 0.5
+               - Valley_1, 0.5                        
+
+    Decorations:
+               - [AlienDeadTree, 0.2, Tree]
+               - [AntlerTree, 0.05, Tree]
+               # - [RiverBirch, 0.03, Tree]
+               # - [ElderberryBushGreen, 0.03, BigPlant]
+               # - [DeadTree01, 0.001, Free]
+               # - [DeadTree02b, 0.001, Free]
+               - [RealRock3Dark, 0.0004, Free]
+               - [RealRock4Dark, 0.002, Free]
+               - [RealRock8Dark, 0.0004, Free]
+               - [RealRock10Dark, 0.0005, Free]
+               - [SkeletonMammothTorso, 0.001, Free]
+               # Harvestables:
+               # - [AlienPlant07, 0.001, Plant]
+               # - [BigFlower, 0.001, Plant]
+               # - [BrainFungus, 0.001, Plant]
+               # - [ElderberryBush, 0.004, BigPlant]
+               # - [Snakeweed, 0.001, Plant]
+               # - [CobraLeavesPlant, 0.001, Plant]
+               # - [MushroomBellBrown01, 0.001, Plant]
+               # - [ScalyPods, 0.001, Plant]
+               # - [AlienPlantWorm1, 0.001, Plant]
+               # Rock Resources:
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceSilicon, 0.0003, Free]
+
+    # Grass:
+               # - Name: GrassGreen07
+                 # Density: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassGreen08
+                 # Density: 0.95
+                 # Preset: GrassDense
+               # - Name: GrassFern
+                 # Density: 0.02
+                 # Preset: GrassDense
+               # - Name: Plant02
+                 # Density: 0.05
+                 # Preset: GrassDense
+               # - Name: Flower05
+                 # Density: 0.005
+                 # Preset: GrassDense
+                 
+# ==============================================================
+
+  - Name: Graveyard
+    AmbientSound: LavaFog  
+    Texture: [2, 2, 0.2]   
+    SelectionCriteria:   
+    - Height > 600
+    Color: [0.4, 0, 0]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff            # Fills the last empty 'stamp spots' on the map
+    StampTries: 30
+    Stamps:
+    - Nest_01, 0.5
+    - Nest_02, 0.5
+    - CraterMoon_1, 0.5
+    - CraterMoon_2, 0.5
+    - CraterMoon_3, 0.5
+    - CraterMoon_4, 0.5
+    
+    UndergroundLayers:
+               - [2, 3]
+               - [11, 4]
+               - [10, 20]
+               - [9, -1]
+               - [10, 1]
+
+    Decorations:
+               - [SkeletonWhaleFull, 0.6]
+               - [SkeletonWhaleHead, 0.9]
+               - [SkeletonWhalePart, 0.6]
+               - [SkeletonDragonHead, 0.9]
+               - [SkeletonDragonTorso, 0.6]
+               - [SkeletonMammothHead, 0.9]
+               - [SkeletonMammothTorso, 0.6]
+
+               # Harvestables
+               # Rock Resources
+               # - [CrystalStraight, 0.03]
+               - [CrystalsPyramidBlue, 0.08]
+               - [PromethiumStone, 0.05]
+
+    Grass:
+               # - Name: GrassBrown01
+                 # Density: 0.5
+                 # Preset: GrassDense
+               # - Name: GrassType01Red
+                 # Density: 1
+                 # Preset: GrassDense
+                 
+# ============================================================== 
+# CATCH ALL
+# ==============================================================
+  - Name: Wasteland
+    AmbientSound: ArcticLowPlains 
+    Texture: [6,6,0.5, 11,11,1, 0.4] 
+    UndergroundLayersDefault: True          
+    UndergroundLayers:
+               - [6, 0]
+               - [6, 3]
+               - [10, 5]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:  
+       - true
+    Color: [0.8, 0.5, 0]
+    
+    StampProb: 0.15                          
+    Stamps: 
+               - Flats_1, 0.3
+               - Cliff_1, 0.3
+               - Cliff_2, 0.3
+               - Cliff_3, 0.3
+               - Valley_1, 0.2
+               
+    Decorations:  
+               # - [GasEmitter1, 0.0001]
+               # - [GasEmitter2, 0.0001]
+               - [SkeletonDragonTorso, 0.001]
+               - [SkeletonMammothHead, 0.001]
+               - [SkeletonMammothTorso, 0.001]
+               - [DesertRock1, 0.0003, Free]
+               - [DesertRock2, 0.0003, Free]
+               - [DesertRockMedium1, 0.00003, Free]
+               - [DesertRockMedium2, 0.00003, Free]
+               - [DesertRockLarge, 0.00003, Free]
+               # Harvestables:
+               # - [ ElderberryBush, 0.0001, BigPlant]
+               # - [ Snakeweed, 0.001, Plant]
+               # - [ CornDogBush, 0.001, Plant]
+               # Rock Resources:
+               - [RockResourceIron, 0.0001, Free]
+               - [RockResourceCopper, 0.0001, Free]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 1.5
+                 # Preset: GrassDense
+               # - Name: GrassGreen03
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: Flower04
+                 # Density: 0.01
+                 # Preset: GrassDense
+                 

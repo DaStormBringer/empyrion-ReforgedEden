@@ -1,0 +1,9 @@
+[GasCloud]
+-Mode=Opaque
+-Pos=0.4837609,129.4335,0.3782021
+-Rot=0,8.031737,0
+-Size=0.729,0.729,0.729
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DecalGas_YellowDim
+

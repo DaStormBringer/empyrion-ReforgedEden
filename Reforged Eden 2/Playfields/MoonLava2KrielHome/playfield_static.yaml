@@ -1,0 +1,236 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "This infant moon already lost its atmosphere by the relentless push of the stellar wind. Undisturbed, the last open lava seas crystallize in bizarre forms."
+
+PlanetType: Lava
+Emissive: True
+PlayfieldType: Moon
+Difficulty: 3
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: False
+
+# Light
+DayLightIntensity: 0.6
+NightLightIntensity: 0.7
+DayShadowStrength: 0.95
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      IsScalingCount: True
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 8, 13 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.3
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 10
+        #YVariance: 3
+
+    - Name: SiliconResource
+      IsScalingCount: True
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 8, 9 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.4
+      #DistTypeCylinder:
+        #MaxRadius: 10
+        #YVariance: 3
+
+    - Name: CobaltResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 10
+        #YVariance: 3
+
+    - Name: MagnesiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 3, 4 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 10
+        #YVariance: 3
+
+    - Name: PromethiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      DepthMinMax: [ 0, 1 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+    - Name: PentaxidResource
+      IsScalingCount: True
+      CountMinMax: [ 4, 5 ]
+      SizeMinMax: [ 2, 3 ]
+      DroneProb: 0.6
+      MaxDroneCount: 2
+      DepthMinMax: [ 0, 5 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: MagnesiumResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: PentaxidResource
+       Threshold: 0.2
+       Amount: 0.2
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG     #CommandCenter
+          Faction: Kriel 
+          NoShieldReload: True 
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: ProgenitorArtifacts      
+          Faction: None     
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip       
+          Faction: None  
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Kriel
+        - GroupName: KrielMain 
+          Faction: Kriel    
+          NoShieldReload: True
+          CountMinMax: [ 0, 1 ]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: KrielDefenseT1 
+          Faction: Kriel    
+          NoShieldReload: True
+          CountMinMax: [ 10, 20 ]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMale
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500

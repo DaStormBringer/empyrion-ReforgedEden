@@ -1,0 +1,397 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [2,3]
+  SizeProbs: [0.7,0.3]     
+TemperatureMin: [40,50]
+TemperatureMax: [65,85] 
+TemperatureNight: [50,100]
+
+PlanetAxis: [-25,25]                     
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [0, 9]
+SeaLevel: [-1, -1]                                      
+TerrainLevel: [184, 184]                              
+BaseLevel: [72, 72]
+LandWaterRatio: [0, 0]    
+TemperatureHeightRange: [30, 200]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+GravityMinMax: [-7, -5]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+GroundFogProb: 0
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [WaterBlue]
+Music: [BarrenMoon]
+# ==============================================================
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+ # - GroundShape_3, 0.5
+
+
+BiomeStampTries: 20
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole          # same as Craters biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [10,6,0.5, 2,7,0.5, 0.02]   
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.6, 0.6, 0.6]
+
+
+# ==============================================================
+# (HEIGHT CHECKER) -  Absolute minimum biome to check stamp interactions and keep enough ground depth. - Extremely rare, shouldn't show up.
+# ==============================================================
+  - Name: Unknown  
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.2] 
+    
+    SelectionCriteria:
+    - Height < 11
+    Color: [0.0, 1, 0.0]   
+    
+    Radiation: -10
+    Temperature: -50
+    
+    Decorations:  
+               - [GlowTube01, 0.002]
+               - [KavaePlant, 0.002, Plant]
+               # Harvestables:
+               - [ScalyPods, 0.05, Plant]  # Breeding...
+               - [CrystalStraight, 0.008]
+               
+    Grass:
+# ==============================================================
+# BIOMES
+# ==============================================================
+  - Name: Mountains
+    IgnoreForcedBiome: true 
+    Texture: [1,6,0.5, 2,7,0.8, 0.15]   
+ 
+    SelectionCriteria: 
+    - Height > 170
+    Color: [0.7, 0.7, 0.7]
+
+    UndergroundLayers:
+               - [1, 2]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 3  
+    Stamps:
+    - Mountain_4a, 0.1 
+    - Mountain_4b, 0.1
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+    Grass:
+    
+
+# ==============================================================
+  - Name: LargeCrater   
+    IgnoreForcedBiome: true 
+    Texture: [8,9,0.5, 3,7,0.5, 0.001]   
+    
+    SelectionCriteria: 
+       - false                  
+    Color: [0.7, 0.2, 0.2]
+
+    UndergroundLayers:
+               - [9, 8]
+               - [10, 3]
+               - [9, 4]
+               - [10, 3]
+               - [9, 3]
+               - [10, 3]
+               - [9, 2]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 60       
+    Stamps:
+    - CraterMoon_10, 0.05
+    - CraterMoon_11, 0.055
+    - CraterMoon_12, 0.019
+    - CraterMoon_13, 0.008
+
+    
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [RockResourceIron, 0.0003, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: RayCrater 
+    IgnoreForcedBiome: true 
+    Texture: [8,9,0.5, 3,7,0.5, 0.001]   
+
+    SelectionCriteria: 
+       - false                  
+
+    Color: [0.8, 0.2, 0.6]
+
+    UndergroundLayers:
+               - [9, 8]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    
+    StampTries: 30                   
+    Stamps:
+    - CraterMoon_14, 0.025
+    - CraterMoon_14b, 0.007
+    
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: Dunes
+    Texture: [9,6, -0.4]
+
+    UndergroundLayers:
+               - [9, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+    - Temperature > 65
+    - Height < 120
+    Color: [0.8, 0.3, 0.4]
+
+    StampProb: 0.9
+    Stamps: 
+               - DunesSea_01_BM2, 0.7
+               - DunesSea_01_BM2, 0.7
+               - DunesSea_01_BM2, 0.7
+               - Mountain_10_ADD, 1
+               - Mountain_10_ADD, 1
+               - Mountain_10_ADD, 1
+               - Hollow_01_SUB, 0.4
+               - Pools_01, 0.4
+               - Spring_01, 0.6
+    # StampForcesBiomeType: OverlapAll
+    # StampForcesBiome: true
+    # StampTries: 150
+    # Stamps: 
+    # - Mountain_10_ADD, 0.1
+    # - DunesSea_01_BM2, 0.5
+    
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [CrystalStraight, 0.0001, Free]
+               - [CrystalStraight, 0.01, Tree]
+    Grass:    
+
+ # ==============================================================
+  - Name: MareEdge  
+    # IgnoreForcedBiome: true   # Do not use ignoreForced for the Mares. They will overwrite the depressions of the LargeCraters, resulting in some odd look.
+    Texture: [0,0,0.5, 2,7,0.8, 0.5]   
+
+    SelectionCriteria: 
+    - Height < 108
+    - Height > 105
+    Color: [0.1, 0.1, 0.3]
+
+    UndergroundLayers:
+               - [5, 30]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiomeType: OverlapOther     # To prevent overlap with themselves
+    StampProb: 0.8
+    Stamps:
+    - CraterMoon_1, 1   
+
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: Mare     
+    Texture: [4,5,0.5, 2,7,0.5, 0.5]   
+
+    SelectionCriteria: 
+    - Height < 108
+    - Height > 10
+    Color: [0.3, 0.3, 0.3]
+
+    UndergroundLayers:
+               - [5, 30]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+    
+    StampProb: 0.9
+    Stamps:
+    - CraterMoon_1, 1   
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Rock Resources:
+               - [RockResourceCobalt, 0.00025, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: LowMountains  
+    Texture: [1,6,0.5, 7,7,1, 0.25]
+    
+    SelectionCriteria: 
+    - Height > 155
+    Color: [0.5, 0.5, 1]
+
+    UndergroundLayers:
+               - [1, 3]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    Decorations: 
+    Grass: 
+
+ # ==============================================================
+  - Name: LowMountains_1     # Texture transistion biome  
+    Texture: [0,0,0.5, 1,6,0.5, -0.4]
+
+    SelectionCriteria: 
+    - Height > 150
+
+    UndergroundLayers:
+               - [2, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+    
+    Color: [0.4, 0.4, 1]
+    
+    Decorations: 
+    Grass: 
+
+# ==============================================================
+  - Name: RegolithEdge
+    Texture: [0,3, -0.0]
+
+    SelectionCriteria:
+    - Height > 140    
+    Color: [0.4, 0.4, 0.4]  
+
+    UndergroundLayers:
+               - [6, 8]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]    
+    Grass:
+    
+# ==============================================================
+  - Name: Regolith
+    Texture: [6, 0, -0.0]  
+
+    SelectionCriteria:
+    - Height > 130    
+    Color: [0.5, 0.5, 0.5]   
+    
+    UndergroundLayers:
+               - [6, 8]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 2  
+    Stamps: 
+    - CraterMoon_15, 0.7  # Cratered elevation
+    
+
+    Decorations:
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]    
+    Grass:
+    
+ 
+# ==============================================================
+# (Catchall & Terrain base)
+# ==============================================================
+  - Name: Plains
+    Texture: [10,0,0.5, 6,6,0.5, -0.4]
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [9, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+    
+    SelectionCriteria: 
+       - true
+
+    Color: [0.6, 0.6, 0.6]
+
+    StampProb: 0.9
+    Stamps:
+    - IceDunes_01_BM, 1   
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [RockResourceIron, 0.0002, Free]
+    Grass:
+    
+  
+
+    

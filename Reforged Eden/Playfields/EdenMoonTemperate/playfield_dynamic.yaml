@@ -1,0 +1,279 @@
+---
+# # ============================================================== 
+PlanetSize: 
+  SizeRange: [3]               # size classes of planet
+  SizeProbs: [1]   # probability for the different size classes. Range [0, 1] - SizeProbs must sum up to 1
+PlanetAxis: [-15,15]                 # inclination of the planet axis (positive values = longer days on northern hemisphere, negative values = longer days on southern hemisphere). Range [-45, 45]
+ 
+TemperatureMin: [10,14]              # minimal temperature on the planet. Range [-200, 500]              
+TemperatureMax: [21,29]              # maximal temperature on the planet. Range [-200, 500]     
+TemperatureNight: [10,15]            # temperature reducation during night. Range [-200, 500]      
+           
+HumidityMin: [0.10, 0.15]            # minimal humidity on the planet. Range [0, 1]                    
+HumidityMax: [0.28, 0.35 ]           # maximal humidity on the planet. Range [0, 1]         
+            
+Radiation: [0, 0]                    # overall radiation level on the planet. Range [0, 20] 
+
+# Important: BaseLevel < SeaLevel < TerrainLevel
+BaseLevel: [1, 20]                    # height of the base terrain. water level and the "normal" terrain will be placed above. Range [0, 400]
+SeaLevel: [28, 29]                   # on random terrain: the average depth of lakes and oceans, on fixed terrain: the y-position of the water plane. Range [0, 400]                            
+TerrainLevel: [90, 95]             # height of the normal terrain without stamps (the higher the bumpier the terrain). Range [0, 400]          
+TerrainHeightMapMax: 300             # max height of the overall terrain: low values will squeeze the terrain. Range [0, 490] 
+LandWaterRatio: [0.42, 0.47]         # ratio between water and land. 0.2 = 20% water, 80% land. Range [0, 1] 
+
+# Temperature decreases when vertically moving upwards and when moving towards poles
+TemperatureHeightRange: [10, 350]    # first value = up to this height, the temperature does not decrease. second value = lower number implies higher temperature on mountain tops 
+TemperatureNoiseFac: 0.7
+TemperatureGradientRange: [0.25, 0]
+
+# Humidity is maximal at sea level and decreases when vertically moving upwards 
+HumidityHeightFac: [5, 270]         # first value = up to this height, the humidity does not decrease. second value = lower number implies higher humidity on mountain tops 
+HumidityNoiseFac: 0.5
+
+GravityMinMax: [-7, -8]
+AtmosphereDensityMinMax: [1.3, 1.4]
+AtmosphereO2MinMax: [0.22, 0.25]
+AtmoBreathableProb: 1
+
+WaterProb: 1
+PvPProb: 0 #Normal
+Water: [WaterGreen, WaterGreen]        # Choose from pre-selection [WaterGreen, WaterBlue, WaterBrown, WaterRed]
+Music: [temperate3]                    # Background music playing on this playfield - Choose from pre-selection: alien, alien2, barren, desert, desert2, lava, lava2, moonstone, snow, space, temperate, temperate2, temperate3. If nothing is selected default background music is playing
+# ==============================================================
+
+GroundShapes: 
+  - GroundShape_1, 1
+  - GroundShape_2, 0.5
+
+HumidityMasks: 
+  - Global_3 
+  - Global_4 
+
+TemperatureMasks: 
+  - Global_1, 0.15 
+  - Global_1a, 0.15 
+  - Global_2, 0.15 
+
+BiomeStampTries: 75
+
+Biomes: 
+  - Name: Water
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [0, 0, 0.01]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria: 
+    - Height < SeaLevel - 2
+    Color: [1, 0, 0]
+    Decorations:
+               - [CoralStone01-03, 0.1]
+               - [CoralStone01-05, 0.05]
+               - [ModRocksBrown02, 0.03]
+               - [ModRocksBrown03, 0.03]
+               - [Boulder4, 0.04]
+               - [CrystalsPyramidBlue, 0.001]
+               - [RealRock8Water, 0.001]
+               - [SeaWeed02-04, 0.4]
+               - [CobraLeavesPlant, 0.2]
+               - [SkeletonWhalePart, 0.2]
+               - [CrystalStraight, 0.02]
+               - [RealRock9Water, 0.2]
+               - [RealRock1Dark, 0.0005, Free]
+               - [RealRock2Dark, 0.0001, Free]
+               - [RealRock3Dark, 0.0005, Free]
+    
+    Grass: 
+               - Name: FlowerBlue01
+                 Density: 0.8
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.1
+                 Preset: GrassDense
+                 
+# ==============================================================
+  - Name: Highlands
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    PoleBiome: True
+    Texture: [5, 3, 0.2]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:  
+    - Height < 200 
+    - Temperature < 2
+    Color: [1, 1, 1]
+    Decorations:  
+               - [BushWinter01, 0.01]
+               - [AridRock03, 0.001]
+               - [RealRock1Snow, 0.001]
+               - [CornDogBushSnow, 0.001]
+               - [MushroomBellGreen01, 0.005, BigPlant]
+               - [MushroomTallGreen01, 0.005, Plant]
+               - [Pillar1, 0.001, Free]
+               - [ElderberryBushOrange, 0.0005, BigPlant]
+    Grass:
+               - Name: GrassBlue03
+                 Density: 0.4
+                 Preset: GrassDense
+# # ==============================================================
+  - Name: Mountains 
+    AmbientSound: Mountains 
+    IgnoreForcedBiome: true
+    Texture: [11,6,0.5, 3,3,1, 0.2]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria: 
+    - Height > 100
+    Color: [0.6, 0.6, 0.6]
+    StampForcesBiome: true  
+    StampTries: 200        
+    StampForcesBiomeType: OverlapAll
+    Stamps: 
+               - Mountain_10b, 0.3   # Class 4,5
+               - Mountain_21, 0.3    # Class 4,5 
+               - Mountain_9, 0.4     # Class 3,4,5  
+               - Mountain_11, 0.3    # Class 3,4,5  
+               - Mountain_13, 0.5    # Class 3,4,5 
+               - Mountain_14, 0.3    # Class 3,4,5 
+               - Mountain_15, 0.3    # Class 3,4,5 
+               - Volcano_2, 0.2      # Class 3,4,5 
+               - Mountain_14a, 0.5   # Class 2,3
+               - Mountain_15a, 0.5   # Class 2,3  
+    Decorations:  
+               - [RockGrey01Large, 0.05]
+               - [RockGrey02Large, 0.05]
+               - [Snakeweed, 0.003]
+               - [AlienPlantTube1, 0.05]
+               - [AlienPlantReef2, 0.05]
+               - [DesertPlant20, 0.05]  
+               - [AridRock03, 0.001]
+               - [RealRock1Snow, 0.001]
+               - [CornDogBushSnow, 0.001]               
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.1
+                 Preset: GrassDense
+               - Name: GrassBrown04
+                 Density: 0.2
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.1
+                 Preset: GrassDense
+# ==============================================================
+  - Name: Savanna
+    AmbientSound: OpenPlains 
+    Texture: [7,8,0.5, 3,3,1, 0.35]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:  
+    - Humidity > 0.22
+    - Temperature > 25
+    Color: [0.65, 0.58, 0.05] 
+    StampProb: 0.5
+    Stamps: 
+               - Valley_1, 0.8
+               - Valley_2, 0.6
+               - Valley_3, 0.6 
+               - Mountain_11, 0.3    # Class 3,4,5  
+               - Mountain_13, 0.9    # Class 3,4,5 
+               - Mountain_14, 0.3    # Class 3,4,5 
+               - Mountain_15, 0.3    # Class 3,4,5 
+               - Volcano_2, 0.2      # Class 3,4,5 
+               - Mountain_14a, 0.9   # Class 2,3
+               - Mountain_15a, 0.9   # Class 2,3  
+    Decorations:  
+               - [BulbShroom, 0.06]
+               - [BulbShroomYoung, 0.005]
+               - [Hydrilla2, 0.7]
+               - [SeaWeed02-04, 0.7]
+               - [RealRock1Water, 0.05]
+               - [RealRock5Water, 0.06]
+               - [AlienPalmTreeHarvested, 0.09]
+               - [CobraLeavesPlant, 0.1]
+               - [Snakeweed, 0.3]
+               - [MushroomBellBrown01, 0.1]
+    Grass:
+               - Name: GrassBrown02c
+                 Density: 0.3
+                 Preset: GrassDense
+               - Name: Plant01Red
+                 Density: 0.3
+                 Preset: GrassDense
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+  - Name: Grassland
+    AmbientSound: OpenPlains 
+    Texture: [6,11,0.6, 3,3,1, 0.35]  # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    SelectionCriteria:  
+       - true                                     
+    UndergroundLayers:                  # [TexSlotNr, AmountOfLayers]. You can define as many underground layers as you like
+                                        # If AmountOfLayers = 0, topmost texture will be immediately replaced when destroyed. If AmountOfLayers = -1, this texture serves as "fill" texture for a dynamic number of layers.
+               - [12, 0]                 # Slot9 tex will be immediately displayed when topmost texture is destroyed 
+               - [12, 2]                 # Slot9 tex is placed for 2 layers
+               - [13, 3]                # Slot10 tex is placed for 3 layers
+               - [14, -1]               # Slot12 tex is placed to the bottom (except for the bottom 2 layers)
+               - [14, 2]                # Slot15 tex is placed at the bottom 2 layers 
+    UndergroundLayersDefault: True      # the above underground layers will be used as default for other biomes if UndergroundLayers not given
+    Color: [0, 0.6, 0] 
+    StampProb: 1
+    Stamps: 
+               - Flats_1b, 0.6
+               - Erosion_1b, 0.8
+               - Erosion_1, 0.5
+               - Valley_3, 0.2
+    Decorations:  
+               - [ AlienPlantThorn2, 0.01]
+               - [ AlienTreeBlue02, 0.02, Tree]
+               - [ MushroomBellGreen01, 0.005, BigPlant]
+               - [ MushroomTallGreen01, 0.005, Plant]
+               - [ PixieStalks, 0.04]
+               - [ InsanityPepper, 0.05]
+               - [ CobraLeavesPlant, 0.05]
+               - [ Snakeweed, 0.06]
+               - [ CattailWinter, 0.05]
+               - [ DesertPlant20, 0.08]
+               - [ Boulder1, 0.07]
+               - [ CornDogBush, 0.06]
+               - [ ElderberryBush, 0.1]
+               - [ Snakeweed, 0.001]
+    Grass: 
+               - Name: GrassBlue03
+                 Density: 0.3
+                 Preset: GrassDense
+               - Name: Plant01Blue
+                 Density: 0.04
+                 Preset: GrassDense
+# ==============================================================
+# Fixed positioned biomes need to be behind catch all biome!
+# ==============================================================
+  # - Name: StarterBiome
+    # FixedPosition: 0, 385               # x/z position center of stamp
+    # # Texture: [5, 3, 0.2]              # [TexSlotNr top texture, TexSlotNr side texture, Slope Side]. Low value for Slope Side = show side texture earlier
+    # Texture: [6,11,0.6, 3,3,1, 0.35]    # You can mix 2 top textures and 2 side textures: 
+                                        # # [TexSlotNr1,TexSlotNr2,Occurrence TexSlotNr1 top texture, TexSlotNr1,TexSlotNr2,Occurrence TexSlotNr1 side texture, Slope Side]
+    # UndergroundLayers:                  # [TexSlotNr, AmountOfLayers]. You can define as many underground layers as you like
+                                        # # If AmountOfLayers = 0, topmost texture will be immediately replaced when destroyed. If AmountOfLayers = -1, this texture serves as "fill" texture for a dynamic number of layers.
+               # - [9, 0]                 # Slot9 tex will be immediately displayed when topmost texture is destroyed 
+               # - [9, 2]                 # Slot9 tex is placed for 2 layers
+               # - [10, 3]                # Slot10 tex is placed for 3 layers
+               # - [12, -1]               # Slot12 tex is placed to the bottom (except for the bottom 2 layers)
+               # - [15, 2]                # Slot15 tex is placed at the bottom 2 layers 
+    # UndergroundLayersDefault: True      # the above underground layers will be used as default for other biomes if UndergroundLayers not given
+    # Color: [.7, 0.2, 0.2]
+    # Stamps:
+     # # - Starter_1             
+     # - Starter_2             
+    # Temperature: 5        
+    # AmbientSound: OpenPlains
+    # Decorations:
+               # - [Pillar1, 0.001, Free]
+               # - [ElderberryBushOrange, 0.0005, BigPlant]
+               # - [BushGreen01, 0.0004, BigPlant]
+               # - [ClusterShroom, 0.0004, Plant]
+               # - [RealRock4, 0.00008, Free]
+               # - [RealRock8, 0.00006, Free]
+               # # Harvestables:
+               # - [ElderberryBush, 0.0005, BigPlant]
+               # - [Snakeweed, 0.001, Plant]
+               # - [CornDogBush, 0.002, Plant]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 0.3
+                 # Preset: GrassDense
+               # - Name: GrassType01Brown
+                 # Density: 0.5
+                 # Preset: GrassDense

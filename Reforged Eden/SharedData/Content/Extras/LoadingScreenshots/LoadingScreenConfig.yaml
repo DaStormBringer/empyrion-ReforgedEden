@@ -1,0 +1,37 @@
+# Example file for controlling loading image and overlay text display
+# To activate remove "_example" from filename
+# ---------------------------------------------------------------------------------------
+# Note: Specify filenames without extension (.jpg will be added internally)
+# ---------------------------------------------------------------------------------------
+
+# Overlay title
+Title: <b><#0077FF>Reforged Eden 1.11</color></b> <size=65%><#ffffff>(build 84)</color></size>
+
+# Overlay body (typically multi-line text)
+# If commented out, only the title will be displayed
+Body: |
+  <size=135%><#ffffff><b>March 11:</b></color></size>
+  <size=85%>•<indent=3%>Reinforcements on Drone Nursery disabled due to the game bug that continues to respawn them on servers. Updated loot for NEW nurseries. Will not apply to existing POIs.</indent></size>
+  <size=85%>•<indent=3%>Set boarding ramps on Colonist Scrapyard vessel Anvil_CV_ColYardWreck24 to public to prevent people getting trapped on it.</indent></size>
+  <size=85%>•<indent=3%>Updated XCorp Mainframe.</indent></size>
+  
+  <size=85%><#ffffff>Reforged Eden does not require or contain content from the Dark Faction DLC. Owning Dark Faction will have no impact on Reforged Eden.</color></size>
+  
+# To show a certain image at the start of each loading image sequence, specify the respective file name
+# To use the default random image selection, comment out the following line
+# FirstPic: p49
+
+# To show the overlay text with certain images only, specify the respective file names
+# To show the text with every image, comment out the following line
+# ShowWith: [ p02, p03 ]
+
+# Show time for images - if not specified differently below
+# If commented out, the default is 10 seconds
+# Note: This time depends on the speed of the client computer as when loading a game a lot of work is done in parallel
+StandardShowTime: 15
+
+# To set a specific show time for certain images, specify "filename: time" lines
+# If not needed, comment out all lines of the following parameter
+# ShowTimes:
+  # p49: 45
+  # p06: 8

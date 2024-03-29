@@ -1,0 +1,106 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][00ff00]Easy[-][/c]
+
+Sovereignty: [c][ffffff]Unclaimed[-][/c]
+
+
+This sector is listed on your navigational maps as containing a prominent trade station, but the only signal that can be detected is a low powered distress call.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0                            
+UseFixed: True                       
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+Music: [DarkSoundscape, DarkSoundscape2, DarkSoundscape3, desert2] # POI
+PlayfieldLevelOverride: [2,2]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Station
+
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+
+### Resource Asteroid
+Resources:            
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.7               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.7               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180    
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.7         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180                
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180              
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5        
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+### POIs
+POIs:    
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0
+      BaseField: True
+      RandomRotation: True
+
+    - Type: BA_Alien
+      Name: [Eden_BAO_LostStation]
+      DisplayName: Derelict Station
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      # Compound:
+        # CountMinMax: [1, 1]
+        # Probability: 1
+        # Name: [Eden_SVO_Beacon1]
+        # DistanceMinMax: [350, 500] 
+        # Rotate: true
+      Properties:
+        - Key: Discovery
+          Value: False
+        - Key: RegenAfter
+          Value: 720
+        - Key: Music
+          # Value: EvilWhispering
+          Value: Mute

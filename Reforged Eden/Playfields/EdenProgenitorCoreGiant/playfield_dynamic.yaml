@@ -1,0 +1,473 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [3]
+  SizeProbs: [1]
+TemperatureMin: [-273,-273]                         
+TemperatureMax: [-273,-273]      
+TemperatureNight: [0, 0]  
+PlanetAxis: [-5,5]                      
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [100, 100]
+SeaLevel: [-1, -1]                                      
+TerrainLevel: [150, 150]                              
+BaseLevel: [150, 150]
+LandWaterRatio: [0, 0]     
+# TemperatureHeightRange: [0, 195]
+TemperatureHeightRange: [800, 800]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+# GravityMinMax: [-0.05, -0.04]
+GravityMinMax: [1, 1]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0, 0]
+GroundFogProb: 0
+GroundFogIntensityRange: [0, 0]
+GroundFogHeightRange: [0, 0]
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [RockLava03]
+# Music: [Anomalous]
+Music: [EvilWhispering]
+# ==============================================================
+
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+
+
+BiomeStampTries: 20
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole
+    Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [11, 11, 0.02]
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.6, 0.6, 0.6]
+
+# ==============================================================
+  # BIOMES
+# ==============================================================
+# ============================================================== 
+# Spawns crystals
+
+  - Name: Symbols
+    AmbientSound: BarrenFog
+    Texture: [0, 0, 0.2]  
+    Color: [1, 0, 0]  
+    
+    SelectionCriteria:
+    - Height > 600   
+
+    StampForcesBiomeType: OverlapOther
+    StampForcesBiome: true
+    StampTries: 30
+    Stamps: 
+    - MenhirCircle, 0.6
+    - Plantation_01, 0.3
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+
+    Decorations:  
+
+    Grass:  
+               
+# ============================================================== 
+  - Name: Channel_1
+    Texture: [0, 0, 0.5]
+    Color: [0, 1, 0]      
+    SelectionCriteria:
+    - +Long < 0.27
+    - -Long > 0.26
+    - +Lat < 0.5
+    - -Lat < 0.7
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_2
+    Texture: [1, 1, 0.5]
+    Color: [0, 0.8, 0]      
+    SelectionCriteria:
+    - +Long < 0.8
+    - -Long > 0.26
+    - +Lat < 0.5
+    - -Lat > 0.48
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_3
+    Texture: [2, 2, 0.5]
+    Color: [0, 0.6, 0]      
+    SelectionCriteria:
+    - +Long < 0.33
+    - -Long > 0.30
+    - +Lat < 0.8
+    - +Lat > 0.3
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_4
+    Texture: [3, 3, 0.5]
+    Color: [0, 0.4, 0]      
+    SelectionCriteria:
+    - +Long < 0.77
+    # - -Long > 0.25
+    - +Lat < 0.77
+    - +Lat > 0.75
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_5
+    Texture: [4, 4, 0.5]
+    Color: [0, 0.2, 0]      
+    SelectionCriteria:
+    - +Long < 0.55
+    - -Long > 0.05
+    - +Lat < 0.55
+    - +Lat > 0.54
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_6
+    Texture: [5, 5, 0.5]
+    Color: [0, 0.2, 0]      
+    SelectionCriteria:
+    - -Long < 0.13
+    - +Long > 0.12
+    - -Lat < 0.05
+    - +Lat < 0.85
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_7
+    Texture: [6, 6, 0.5]
+    Color: [0, 0.2, 0.2]      
+    SelectionCriteria:
+    - -Long < 0.90
+    - +Long > 0.12
+    - -Lat < 0.05
+    - +Lat < 0.06
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_8
+    Texture: [7, 7, 0.5]
+    Color: [0, 0.2, 0.4]      
+    SelectionCriteria:
+    - -Long < 0.90
+    - +Long > 0
+    - -Lat < 0
+    - +Lat < 0.01
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_9
+    Texture: [8, 8, 0.5]
+    Color: [0, 0.2, 0.6]      
+    SelectionCriteria:
+    - +Long < 0.34
+    - +Long > 0.33
+    - -Lat < 0.65
+    - +Lat < 0.65
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_10
+    Texture: [9, 9, 0.5]
+    Color: [0, 0.2, 0.8]      
+    SelectionCriteria:
+    - +Long < 0.25
+    - +Long > 0.23
+    - -Lat < 0.87
+    - +Lat < 0.75
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_11
+    Texture: [10, 10, 0.5]
+    Color: [0, 0.2, 1.0]      
+    SelectionCriteria:
+    - -Long < 0.79
+    - +Long > 0
+    - +Lat > 0.25
+    - +Lat < 0.27
+    - -Lat > 0.23
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_12
+    Texture: [0, 0, 0.5]
+    Color: [0, 0.4, 1.0]      
+    SelectionCriteria:
+    - +Long < 0.07
+    - -Long > 0.04
+    - +Lat < 0.9
+    - +Lat > 0.2
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_13
+    Texture: [0, 0, 0.5]
+    Color: [0, 0.4, 1.0]      
+    SelectionCriteria:
+    - -Long < 0.45
+    - +Long > 0.43
+    - +Lat < 0.9
+    - +Lat > 0.2
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ============================================================== 
+  - Name: Channel_14
+    Texture: [0, 0, 0.5]
+    Color: [0, 0.6, 1.0]      
+    SelectionCriteria:
+    - -Long < 0.78
+    - +Long > 0.77
+    - +Lat < 0.95
+    - +Lat > 0.1
+    
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+   
+
+    Decorations:
+               # - [RockGrey01Large, 0.005]
+               # - [RockGrey02Large, 0.005]    
+    Grass:
+
+# ==============================================================
+# (CATCHALL) - Shouldn't even show up. 
+# ==============================================================
+  - Name: Metal    
+    Texture: [11, 11, 0.2]   
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+    
+    SelectionCriteria:  
+       - true                                    
+
+    Color: [0.3, 0.3, 0.3]    
+
+    
+    Decorations:  
+
+    Grass:
+
+
+    

@@ -1,0 +1,6 @@
+[c][00ffff][b]Reforged Eden[/b] for [b]Empyrion 1.11[/b][-][/c]
+
+[sup]Press the [c][00ff00]Game mode[-][/c] button to the right to toggle between survival and creative. If you want to play in freedom mode start a survival game and use console command [c][ffffff]cm freedom[-][/c] then restart game.
+
+Select your starting planet and difficulty settings. Playing with mass/volume/CPU enabled is recommended.
+[i][c][ffffff]Please see the Reforged Eden workshop page or the Empyriopedia section of the PDA for more info.[-][/c][/i][/sup]

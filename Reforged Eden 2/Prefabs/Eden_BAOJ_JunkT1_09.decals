@@ -1,0 +1,9 @@
+[Debris]
+-Mode=Opaque
+-Pos=-0.451316,132.5234,0.1393309
+-Rot=71.42892,14.65609,274.4215
+-Size=0.59049,0.59049,0.59049
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DebrisCloud5
+

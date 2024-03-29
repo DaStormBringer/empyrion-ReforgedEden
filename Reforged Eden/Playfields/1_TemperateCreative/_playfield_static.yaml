@@ -1,0 +1,173 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "A temperate planet with lakes, vast plains and mountain ranges. The climate is moderate and it has a breathable atmosphere."
+
+PlanetType: Temperate
+PlayfieldType: Planet
+Difficulty: 2
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.19, 0.26, 0.35" 
+AtmosphereColor: "0.674, 0.824, 1.000"
+SkyColor: "1, 1, 1" 
+SkyHorizonColor: "1, 0.5, 0"
+
+# Light
+DayLightIntensity: 1.4
+NightLightIntensity: 0.55
+NightLightColor: "0.78, 0.78, 1"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareBlue
+OrbitUsesLightColor: false
+
+# Fog
+AtmosphereFog: 0.35
+FogCloudIntensity: 0.8
+GroundFogIntensity: 0
+GroundFogHeight: 0
+
+# Clouds and Wind
+CloudsDensity: 0.3
+CloudsSharpness: 0.35
+CloudsBrightness: 0.7
+CloudsOpacity: 0.7
+CloudsZenithColor: "0.89, 0.92, 1"
+CloudsHorizonColor: "1, 0.3, 0.1"
+WindSpeed: 3
+
+# Special Effects 
+SpecialEffectsLocal:
+  - Name: DandelionsFew
+    Biome: [ Grassland, ColdPlains ]
+    Time: Day
+    MaxHeight: 10
+  - Name: ButterfliesFew
+    Biome: [ Grassland, Oasis ]
+    Time: Day
+    MaxHeight: 15
+  - Name: Pollen
+    Biome: [ Savanna, SavannaEdge ]  
+    Time: Day
+    MaxHeight: 10
+  - Name: Mosquitos
+    Biome: [ Savanna, SavannaEdge, Marsh, Swamp, WaterSwamp, Water ]  
+    Time: Day
+    MaxHeight: 15
+  - Name: ButterfliesBlue
+    Biome: [ Forest, Marsh ]
+    Time: Day
+    MaxHeight: 15
+  - Name: Dragonflies
+    Biome: [ Marsh, Swamp, WaterSwamp, Water, ShallowWater ]
+    Time: Day
+    MaxHeight: 15
+  - Name: FireFliesOrange
+    Biome: [ Forest, DeepForest, Peaks, Marsh, Swamp, WaterSwamp, Oasis ]
+    Time: Night
+    MaxHeight: 15
+  - Name: Moths
+    Biome: [ DeepForest, Savanna, SavannaEdge, Grassland ]
+    Time: Night
+    MaxHeight: 15
+
+SpecialEffectsGlobal:
+# Weather
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: CloudsLight
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: CloudsMedium
+    Type: Weather
+    InitialDelay: 12
+    Delay: 2
+    Lifetime: 1200
+  - Name: Clouds
+    Type: Weather
+    InitialDelay: 24
+    Delay: 5
+    Lifetime: 1000
+# Global Effect
+  - Name: BirdFlocksCrows
+    Biome: [ Any ]
+    Time: Day
+    InitialDelay: 1
+    Delay: 4
+    Lifetime: 600
+    PlyDist: 100
+    SpawnY: 30
+    Struct: True
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+
+### Resource Asteroids
+AsteroidResources:
+
+### POIs
+POIs: 
+    Fixed:
+        - Type: BA_Player
+          Prefab: BA_Outpost-AkuaV2    
+          Mode: Creative             
+          SubMode: Normal             
+          Name: Outpost Akua          
+          Pos: [ 5528.6, 33.3, 3218.5 ] 
+          Rot: [ 0, 60, 0 ]          
+          InitPower: True
+
+        - Type: SV_Player
+          Prefab: SV_Talon
+          Mode: Creative
+          SubMode: Normal
+          Name: Talon MKI
+          Pos: [ 5553.5, 54.3, 3212]
+          Rot: [ 0, 61, 0 ]
+
+    FixedPlayerStart:
+        - Mode: Creative             
+          SubMode: Empty             
+          Armor: ArmorLight
+          Pos: [ 5409.5, 41.2, 3212.4 ]  
+          RotY: 35           
+
+        - Mode: Creative             
+          SubMode: Normal            
+          Armor: ArmorLight
+          Pos: [ 5562.7, 55.3, 3213.5 ]  
+          RotY: 22           
+
+        - Mode: Debug
+          Pos: [ 5409.5, 41.2, 3212.4 ]  
+          RotY: 35     
+
+# ==============================================================
+# ==============================================================
+### Drones
+DroneBaseSetup: 
+    Random:   
+
+# Drones that patrol on whole planet 
+# Type determined by stock of drone base (default drone - type = 0)
+DroneSpawning:    
+    Random:
+
+# ==============================================================
+# ==============================================================
+      
+### Creatures
+CreatureSpawning:

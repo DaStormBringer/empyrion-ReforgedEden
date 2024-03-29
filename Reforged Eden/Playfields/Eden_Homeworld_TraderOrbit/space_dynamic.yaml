@@ -1,0 +1,210 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: TraderHomeworldSector        
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      DisplayName: Zascosium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3     
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      RandomRotation: True
+
+    - Type: BA_Alien   
+      Name: [TSO_Variant9]  
+      DisplayName: Aeon Club
+      Faction: Trader
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Properties: 
+        - Key: Music
+          Value: ExtraktTechno  
+     #   - Key: Discovery
+     #     Value: False
+      #  - Key: PvEArea
+      #    Value: 500
+        - Key: StationInterface
+          Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:1.8,Repair:3,Shield:3,IfNeutral:0.05,IfFriendly:-0.08,IfHonored:-0.16"
+        - Key: RegenAfter
+          Value: 720 
+
+ 
+DroneBaseSetup:                                                # Note: not ALL possible settings are used in that config. Check +ExampleSpace folder > space_dynamic.yaml
+      - FreeDrones:                                             #FreeDrones = only relevant for NPC Factions that have a galactic territory: Zirax, Polaris, Trader, Kriel, Pirates, Legacy. Will not spawn in non-territory!
+          - Name: [SpaceDroneTraderLaser]
+            Faction: Trader                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [10, 16]                       
+            Radius: [2500, 10000]
+            Properties:
+             # - Key: AIManPatrolFactions                                              #Drones shall only partrol RESOURCES; OPV shall patrol POIs  
+             #   Value: "Zirax, Xenu, Ghyst, Epsilon, Abyssal, Serdu, Rados"
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+        SpaceVessels:
+# =========
+# Freighters for galactic TERRITORY
+# Note: they will only spawn for factions that have a galactic territory.
+
+          - Name: [Freighter] 
+            FixedMaxSpeed: [20, 40]
+            Mission: Freighter
+            CountMinMax: [5, 8]
+            Probability: 1
+            Faction: Trader                              
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+              Position:                                  
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+            StockDescription:
+              Name: [SpaceDroneTraderLaser]         # lore: freighters are civilian ships under faction contract, but use drones that are available for civilians and companies, for example from polaris or traders. Freighters do NOT use 'military grade' drones from Kriel or Zirax, even when contracted by the latter!
+              AmountMinMax: [1, 2]
+              Type: FighterDrone 
+
+
+# ========= Patrol Vessels =================
+# Note: definition for EACH faction REQUIRED as each faction has their own design and vessels!!  
+# Note: Do not add VOID, Progenitor, DESC (for now), UCH or GLaD as they are only "story factions"; Do not use ALIEN as this faction is reserved for POI/Wreckages/Dungeons only, not for ships)
+
+          - Name: [OPVTraderRG]     
+            Faction: Trader
+            CountMinMax: [4, 6]   
+            Probability: 1        # Prob = 1 because SpaceOrbit is ALWAYS around a planet AND if the faction owns that territory, there should ALWAYS be at least 1 guarding patrol vessel!
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [20, 50] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [750, 10000]        #[Min radius, Max radius] defines the boundaries the patrol area radius in meter drawn randomly; Default: 1000
+         #     POINameAsPositionRef: [RBAO_XenuShipyard, RBAO_GhystShipyard]
+            StockDescription:
+              Name: [SpaceDroneTraderLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                        # OPV = default behavior is to patrol POIs of the own faction. Drones shall patrol Resources.
+              - Key: SelfDestructionWithNoCore # Military ships = self destruct!
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000

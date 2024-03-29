@@ -1,0 +1,507 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.61.2.1856, Playfield Version: 9.5.0 [2294] (Alpha 9.5.0)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [3, 4, 5]
+   SizeProbs: [0.5, 0.4, 0.1]
+PlanetAxis: [-25, 25]
+TemperatureMin: [-37, -33]
+TemperatureMax: [14, 18]
+TemperatureNight: [25, 25]
+HumidityMin: [0.14, 0.16]
+HumidityMax: [0.40, 0.44]
+Radiation: [2.6, 4.5]
+LandWaterRatio: [0.06, 0.12]
+BaseLevel: [1, 1]
+SeaLevel: [39, 39]
+TerrainLevel: [140, 140]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [0.52, 0]
+TemperatureNoiseFac: 0.44
+HumidityHeightFac: [0, 350]
+HumidityNoiseFac: 0.85999999999999999
+GravityMinMax: [-11, -7]
+AtmosphereDensityMinMax: [1.2, 1.4]
+AtmosphereO2MinMax: [0.1, 0.25]
+AtmoBreathableProb: 0.20000000000000001
+GroundFogProb: 1
+AtmosphereFogRange: [0, 0]
+PvPProb: 0 #Normal
+WaterProb: 1
+GroundFogIntensityRange: [0, 0]
+GroundFogHeightRange: [0, 0]
+Water: [RockLava03]
+Music: [Tempest,Resurgence,Reaver]
+GroundShapes:
+- Mountain_10b_GS, 0.5
+Biomes:
+-  Name: Water
+   AmbientSound: Water
+   IgnoreForcedBiome: True
+   Texture: [0, 10, 0.25]
+   UndergroundLayers:
+   - [0, 4]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < SeaLevel - 10
+   Color: [0.2, 0.2, 1]
+   StampProb: 1
+   Temperature: 500
+-  Name: ShallowWater
+   AmbientSound: SmallLake
+   IgnoreForcedBiome: True
+   Texture: [0, 8, 0.2]
+   UndergroundLayers:
+   - [0, 3]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < SeaLevel - 3
+   - Temperature > -16
+   Color: [0.4, 0.4, 1]
+   StampProb: 1
+   Temperature: 500
+-  Name: Shore
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [11, 8, 0.1]
+   UndergroundLayers:
+   - [0, 3]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < SeaLevel + 3
+   - Temperature > -13
+   Color: [0.6, 0.6, 0]
+   StampProb: 1
+   Temperature: 200
+   Decorations:
+   - [RockGrey01Large, 0.002, Free]
+   - [RockGrey02Large, 0.002, Free]
+   - [RockResourceSilicon, 0.0002, Free]
+   - [RockResourceCopper, 0.0001, Free]
+   - [RealRock4Dark, 0.001, Free]
+   - [RealRock3Dark, 0.001, Free]
+-  Name: Mountains
+   AmbientSound: Mountains
+   Texture: [3, 10, 0.6, 2, 10, 0.2, 0.2]
+   UndergroundLayers:
+   - [3, 3]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height > 200
+   Color: [0.6, 0.6, 0.6]
+   StampProb: 1
+   Decorations:
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+   - [CrystalsPyramidBlue, 0.0003, Free]
+-  Name: LowMountains
+   AmbientSound: ArcticHighPlains
+   Texture: [3, 4, 0.5, 2, 10, 0.5, 0.2]
+   UndergroundLayers:
+   - [3, 4]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height > 500
+   Color: [0.4, 0.4, 0.4]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOwn
+   Stamps:
+   - Mountain_9, 0.15
+   - Mountain_10b, 0.15
+   - Mountain_11, 0.25
+   - Mountain_13, 0.35
+   - Mountain_14, 0.35
+   - Mountain_14a, 0.9
+   - Mountain_15a, 0.9
+   - MountainIce_01, 0.6
+   - MountainIce_01b, 0.3
+   - MountainIce_02, 0.7
+   StampTries: 50
+   Decorations:
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+-  Name: Pole
+   Weather: PoleFog
+   AmbientSound: ArcticIntermediatePlains
+   Texture: [7, 6, 0.5]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Color: [1, 1, 1]
+   StampProb: 1
+-  Name: Taiga
+   AmbientSound: ArcticForest
+   Texture: [1, 5, 0.5, 3, 3, 0.5, 0.1]
+   UndergroundLayers:
+   - [11, 3]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity > 0.2
+   - Temperature > 1
+   Color: [0, 0.4, 0]
+   StampProb: 1
+   Stamps:
+   - Erosion_2, 0.7
+   - Erosion_1, 0.3
+   - Erosion_1b, 0.45
+   StampTries: 1000
+   Decorations:
+   - [DeadTree01, 0.2, Tree]
+   - [DeadTree02b, 0.01, Tree]
+   - [AlaskaCedarBare, 0.1, Tree]
+   - [HollywoodJuniperDesktop, 0.01, Free]
+   - [BaldCypresFall, 0.05, Tree]
+   - [BushWinter01, 0.1, BigPlant]
+   - [BushWinter02, 0.1, BigPlant]
+   - [BushWinter03, 0.05, BigPlant]
+   - [RealRock1Snow, 0.001, Free]
+   - [RealRock3, 0.001, Free]
+   - [RealRock6Snow, 0.001, Free]
+   - [RealRock8, 0.001, Free]
+   - [RealRock10, 0.001, Free]
+   - [CornDogBushSnow, 0.007, Free]
+   - [PixieStalksSnow, 0.007, Free]
+   - [BrainFungusSnow, 0.002, Free]
+   - [Mushroom2, 0.009, Free]
+   - [Snakeweed, 0.003]
+   - [RockResourceIron, 0.001, Free]
+   - [RockResourceSilicon, 0.003, Free]
+   - [RockResourceCopper, 0.0008, Free]
+   - [SkeletonMammothHead, 0.0005, Free]
+   - [GasEmitter2, 0.001, Free]
+   - [GasEmitter1, 0.001, Free]
+   - [AlienPlant18, 0.004, Bush]
+   Grass:
+   -  Name: GrassGreen03bSnow
+      Density: 0.84999999999999998
+      Preset: GrassDense
+   -  Name: GrassGreen06
+      Density: 0.10000000000000001
+      Preset: GrassDense
+-  Name: TaigaEdge
+   AmbientSound: ArcticForest
+   Texture: [5, 1, 0.9, 8, 8, 0.5, 0.2]
+   UndergroundLayers:
+   - [5, 1]
+   - [11, 2]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity > 0.2
+   - Temperature > -0.5
+   Color: [0, 0.55, 0]
+   StampProb: 1
+   Decorations:
+   - [BlueSpruceWinter, 0.09, Tree]
+   - [AlaskaCedarBare, 0.01, Tree]
+   - [BushWinter01, 0.05, BigPlant]
+   - [BushWinter02, 0.05, BigPlant]
+   - [BushWinter03, 0.02, BigPlant]
+   - [RealRock1, 0.0005, Free]
+   - [RealRock2Snow, 0.0005, Free]
+   - [RealRock3, 0.0005, Free]
+   - [RealRock6Snow, 0.0005, Free]
+   - [RealRock8Snow, 0.0005, Free]
+   - [RealRock10Snow, 0.0005, Free]
+   - [PixieStalksSnow, 0.002, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.40000000000000002
+      Preset: GrassDense
+-  Name: GasFieldEdge
+   AmbientSound: LavaFog
+   Texture: [10, 10, 0.5]
+   UndergroundLayers:
+   - [11, 3]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity < 0.15
+   - Humidity > 0.12
+   - Temperature < -35
+   - Temperature > -39
+   Color: [1, 0.7, 0.1]
+   StampProb: 1
+   Temperature: 30
+   Decorations:
+   - [RealRock1Snow, 0.0005, Free]
+   - [RealRock3Snow, 0.0005, Free]
+-  Name: Dunes
+   AmbientSound: ArcticLowPlains
+   Texture: [4, 6, 0.5, 10, 8, 0.1, 0.2]
+   UndergroundLayers:
+   - [11, 1]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity > 0.1
+   - Temperature > -3
+   Color: [0.5, 0.8, 0.9]
+   StampProb: 1
+   Stamps:
+   - RiftLava_1, 0.06
+   - RiftLava_2, 0.03
+   - IceDunes_01, 0.01
+   - IceSprings_01, 0
+   Decorations:
+   - [BushWinter01, 0.0005, BigPlant]
+   - [BushWinter02, 0.0005, BigPlant]
+   - [BushWinter03, 0.0015, BigPlant]
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+   - [RealRock8Snow, 0.0001, Free]
+   - [RealRock10Snow, 0.0001, Free]
+   - [PixieStalksSnow, 0.001, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.050000000000000003
+      Preset: GrassDense
+-  Name: TaigaSnow
+   AmbientSound: ArcticForest
+   Texture: [5, 1, 0.8, 10, 8, 0.5, 0.2]
+   UndergroundLayers:
+   - [5, 5]
+   - [11, 2]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < 80
+   - Humidity > 0.20
+   - Temperature > -9
+   Color: [0, 0.7, 0]
+   StampProb: 0.29999999999999999
+   Stamps:
+   - Pingo_01, 0.55
+   - IceSlabs_01, 0.15
+   Decorations:
+   - [BlueSpruceWinter, 0.25, Tree]
+   - [AlaskaCedarBare, 0.15, Tree]
+   - [BushWinter01, 0.1, BigPlant]
+   - [BushWinter02, 0.1, BigPlant]
+   - [BushWinter03, 0.05, BigPlant]
+   - [RealRock1Snow, 0.001, Free]
+   - [RealRock3Snow, 0.001, Free]
+   - [RealRock6Snow, 0.001, Free]
+   - [RealRock8Snow, 0.001, Free]
+   - [RealRock10Snow, 0.001, Free]
+   - [CornDogBushSnow, 0.007, Free]
+   - [PixieStalksSnow, 0.007, Free]
+   - [BrainFungusSnow, 0.005, Free]
+   - [Snakeweed, 0.003, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.20000000000000001
+      Preset: GrassDense
+-  Name: TaigaSnowEdge
+   AmbientSound: ArcticForest
+   Texture: [4, 6, 0.2, 8, 8, 0.5, 0.2]
+   UndergroundLayers:
+   - [5, 3]
+   - [11, 2]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < 250
+   - Humidity > 0.1
+   - Temperature > -10
+   Color: [0.7, 0.9, 0.7]
+   StampProb: 1
+   Decorations:
+   - [BlueSpruceWinter, 0.08, Tree]
+   - [AlaskaCedarBare, 0.05, Tree]
+   - [BushWinter01, 0.05, BigPlant]
+   - [BushWinter02, 0.05, BigPlant]
+   - [BushWinter03, 0.02, BigPlant]
+   - [RealRock1Snow, 0.0005, Free]
+   - [RealRock2Snow, 0.0005, Free]
+   - [RealRock3Snow, 0.0005, Free]
+   - [RealRock6Snow, 0.0002, Free]
+   - [RealRock8Snow, 0.0002, Free]
+   - [RealRock10Snow, 0.0002, Free]
+   - [PixieStalksSnow, 0.002, Free]
+   - [Snakeweed, 0.003, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.10000000000000001
+      Preset: GrassDense
+-  Name: GlacierSnow
+   AmbientSound: ArcticLowPlains
+   Texture: [7, 6, 0.65, 8, 8, 0.5, 0.01]
+   UndergroundLayers:
+   - [7, 4]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < 100
+   - Temperature < -16
+   Color: [1, 1, 1]
+   StampProb: 0.14999999999999999
+   Stamps:
+   - MountainIce_01, 0.65
+   - MountainIce_01b, 0.15
+   - RiftLava_2, 0.1
+   Decorations:
+   - [RealRock1Snow, 5E-05, Free]
+   - [RealRock3Snow, 5E-05, Free]
+-  Name: Hellmouth
+   AmbientSound: LavaFog
+   Texture: [9, 11, 0.5]
+   UndergroundLayers:
+   - [9, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity < 0.14
+   - Humidity > 0.13
+   - Temperature < -35
+   - Temperature > -38
+   Color: [1, 0.1, 0.1]
+   StampProb: 1
+   Stamps:
+   - Volcanic_03, 0.45
+   - Volcanic_01a, 0.65
+   - Mountain_20, 0.9
+   Temperature: 100
+   Decorations:
+   - [RealRock1Snow, 0.0005, Free]
+   - [RealRock3Snow, 0.0005, Free]
+-  Name: Rocks
+   AmbientSound: ArcticIntermediatePlains
+   Texture: [6, 10, 0.5]
+   UndergroundLayers:
+   - [7, 1]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity < 0.35
+   - Humidity > 0.18
+   - Height > 60
+   - Height < 100
+   - Temperature < -25
+   - Temperature > -30
+   Color: [1, 0.9, 1]
+   StampProb: 1
+   Decorations:
+   - [RealRock1Snow, 0.001, Free]
+   - [RealRock3Snow, 0.001, Free]
+   - [RealRock6Snow, 0.001, Free]
+   - [RealRock8Snow, 0.001, Free]
+   - [RealRock10Snow, 0.001, Free]
+   - [PromethiumStone, 5E-05, Free]
+   - [RockResourceCopper, 0.0001, Free]
+   - [RockResourceSilicon, 0.0005, Free]
+-  Name: IceLens
+   AmbientSound: ArcticIntermediatePlains
+   Texture: [4, 6, 0.5, 8, 10, 0.6, 0.2]
+   UndergroundLayers:
+   - [1, 30]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height > 500
+   Color: [1, 0.2, 0.5]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOff
+   Stamps:
+   - Cliff_1, 0.4
+   - Cliff_3, 0.4
+   - Volcanic_01a, 0.7
+   - Volcanic_01b, 0.8
+   - Volcanic_01c, 0.9
+   - RiftLava_2b, 0.5
+   - RiftLava_2, 0.5
+   StampTries: 60
+   Temperature: -100
+   Decorations:
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+   - [RealRock8Snow, 0.0001, Free]
+   - [RealRock10Snow, 0.0001, Free]
+   - [PromethiumStone, 0.0001, Free]
+-  Name: Plains
+   AmbientSound: ArcticLowPlains
+   Texture: [4, 6, 0.5, 10, 8, 0.1, 0.2]
+   UndergroundLayers:
+   - [11, 1]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Humidity > 0.1
+   - Temperature > -5
+   Color: [0.8, 1, 0.5]
+   StampProb: 1
+   Decorations:
+   - [BushWinter01, 0.01, BigPlant]
+   - [BushWinter02, 0.02, BigPlant]
+   - [BushWinter03, 0.03, BigPlant]
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+   - [RealRock8Snow, 0.0001, Free]
+   - [RealRock10Snow, 0.0001, Free]
+   - [PixieStalksSnow, 0.004, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.040000000000000001
+      Preset: GrassDense
+-  Name: Tundra
+   AmbientSound: ArcticForest
+   Texture: [6, 3, 0.5]
+   SelectionCriteria:
+   - Temperature > -20
+   Color: [0.9, 1, 0.9]
+   StampProb: 1
+   Decorations:
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 5E-05, Free]
+   - [RealRock8Snow, 5E-05, Free]
+   - [RealRock10Snow, 5E-05, Free]
+   Grass:
+   -  Name: GrassGreen06Snow
+      Density: 0.050000000000000003
+      Preset: GrassDense
+-  Name: IceShelf
+   AmbientSound: ArcticIntermediatePlains
+   Texture: [7, 6, 0.65, 8, 8, 0.5, 0.01]
+   UndergroundLayers:
+   - [7, 4]
+   - [10, -1]
+   - [9, 1]
+   SelectionCriteria:
+   - Height < 150
+   - Temperature < -17
+   - Humidity > 0.3
+   Color: [1, 0.8, 0.8]
+   StampProb: 0.40000000000000002
+   Stamps:
+   - IceBergs_01, 0.9
+   - IceSlabs_01, 0.3
+   - RiftLava_2, 0.2
+   Decorations:
+   - [RealRock1Snow, 2E-05, Free]
+   - [RealRock3Snow, 2E-05, Free]
+-  Name: Glacier
+   AmbientSound: ArcticLowPlains
+   Texture: [7, 6, 0.65, 8, 8, 0.5, 0.01]
+   UndergroundLayers:
+   - [10, -1]
+   - [9, 1]
+   Color: [0.9, 0.9, 0.9]
+   StampProb: 1
+   Decorations:
+   - [RealRock1Snow, 5E-05, Free]
+   - [RealRock3Snow, 5E-05, Free]
+   UndergroundLayersDefault: True

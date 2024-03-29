@@ -1,0 +1,203 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ff00ff]Ultra++[-][/c]
+
+[c][ffff00][i]Group Special Encounter[/i][-][/c]
+
+
+A Zirax captain, bitter at suffering defeat at the hands of a certain Terran, stole a prototype Tovera class dreadnought from a Xenu shipyard.
+
+Unknown to him, the warp engines weren't calibrated and his first warp jump sent him into the far reaches of the intergalactic void.
+
+He has since returned, his ship augmented with terrifying alien weapons and technology.
+
+Now he roams the galaxy, seeking revenge on the terran who had beaten him, and anyone else unfortunate enough to cross his path. 
+
+
+UCH Command does not recommend engaging a Corrupt Dreadnought without a substantial fleet.
+
+[c][ffffff][i]A group is recommended.[/i][-][/c]"
+
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+
+# Cold Star
+Radiation: [5,10]
+TemperatureDay: [-250,-200]
+# Music: [moonstone, Migration, Adrift, 2473, Transit, DarkSoundscape, DarkSoundscape2, DarkSoundscape3, alien2] # Alien
+# Music: [moonstone, Adrift, 2473, Transit, Anomalous, Blight, Dusk, Magnitude, alien2, EnergyMatrix] # Orbit
+# Music: [Vanguard, Helios, Anomalous, AlteredPhase, ColdDivide] # POI
+Music: [Praxis]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Corrupted Encounter
+
+    # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 0, 0 ]
+      Probability: 0    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidFieldFewBoxExclude]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0
+      BaseField: True 
+      # RandomRotation: True
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Graveyard
+# ======================================================================================================================================================================================================
+#Graveyard Distress Beacon----------------------------------------------------------
+    - Type: BA_Admin   
+      Name: [Eden_BeaconAdmin]
+      DisplayName: Beacon
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 1
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Compound:
+        CountMinMax: [8, 10]
+        Probability: 1
+        Name: [SV_Destroyed_withWarp, CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3]
+        DistanceMinMax: [400, 1500] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 500]
+         PosYMax: 500 
+      Properties:     
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720   
+
+# Compound Definitions for Graveyards       
+    - Type: SV_Player   
+      Name: [SV_Destroyed_withWarp]
+      DisplayName: Destroyed Small Vessel
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 1 
+      IsCompoundSubDesc: True      
+      InitPower: False
+      Properties:     
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720    
+
+    - Type: CV_Alien   
+      Name: [CV_Destroyed1, CV_Destroyed2, CV_Destroyed3, CV_Destroyed4, CV_Destroyed5, CV_DestroyedFront, CV_DestroyedRear, BA_CrashedCV_2, BA_CrashedCV_3]
+      DisplayName: Destroyed Vessel
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0.65
+      IsCompoundSubDesc: True      
+      InitPower: False
+      Properties:     
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720   
+
+#Default Space Wrecks ------------------------------------------------------------------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 6, 12 ]     
+      Probability: 1
+      # Rotate: true
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 3000]
+         PosYMax: 2000 
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma]
+        Faction: Alien
+        Count: [1, 1]
+        Radius: [750, 1000]
+      SpaceVessels:
+          - Name: [Freighter]       
+            Faction: Polaris
+            Count: [0, 0]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+
+          - Name: [Eden_OPV_ZiraxCorrupt]
+            Faction: Alien
+            Count: [1, 1]
+            FixedMaxSpeed: [15, 20]
+            Mission: SpacePatrol
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [2000, 3500] 
+              Position:
+                PosXZMinMax: [50, 100]
+                PosYMax: 100
+              DelayBetweenRespawnMinMax: [2100, 2400]
+              DelayBeforeSelfDestructionMinMax: [1800, 1800]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser]
+              AmountMinMax: [0, 0]
+              ExtraMinMax: [0,0]
+                    
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            Count: [0, 0]
+            Faction: Zirax     
+            FixedMaxSpeed: [0,0]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]      
+            Properties: 
+              - Key: RegenAfter
+                Value: 720    

@@ -1,0 +1,436 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [2,3]
+  SizeProbs: [0.7,0.3]
+TemperatureMin: [10, 15]
+TemperatureMax: [55,65]
+TemperatureNight: [110,125]
+PlanetAxis: [-25,25]
+HumidityMin: [0.0, 0.05]
+HumidityMax: [0.35, 0.45]
+Radiation: [0, 5]
+LandWaterRatio: [0.00, 0.00]    # Don't change if you want to keep the 'Zeyhines desert' look  (0-36)
+SeaLevel: [-1, -1]              # (see above)
+TerrainLevel: [140, 140]        # (see above)  (77- 200)
+BaseLevel: [50, 50]             # (see above)
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [154, 113]
+TemperatureGradientRange: [0.75, 0.03]
+TemperatureNoiseFac: 0.6
+HumidityHeightFac: [10, 390]
+HumidityNoiseFac: 0.97
+
+GravityMinMax: [-7, -5]
+AtmosphereDensityMinMax: [0.3, 0.6]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+WaterProb: 0
+PvPProb: 0 #Starter
+Water: [WaterGreen]
+Music: [BarrenMoon]
+
+# ==============================================================
+
+GroundShapes:               # Use 'Technical_Height'-biome instead to prevent hostile stamp overlaps
+
+HumidityMasks: 
+
+TemperatureMasks:
+
+BiomeStampTries: 200
+
+Biomes: 
+  - Name: Pole              # similar as Plains biome
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains
+    IgnoreForcedBiome: true
+    # Texture: [6, 5, 0.5, 2, 2, 0.5, -0.35]
+    Texture: [6, 5, -0.7]
+    
+    SelectionCriteria:
+    - +Lat > 0.975
+    Color: [0.8, 0.7, 0.4]  
+
+# ==============================================================
+
+  - Name: Wastes
+    IgnoreForcedBiome: true
+    AmbientSound: DesertLowPlains
+    Texture: [1,1,0.5, 2,9,0.2, -0.1]
+    
+    SelectionCriteria:
+    - Height < 55
+
+    Color: [0.2, 0.3, 0.4]  
+
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+
+    Decorations:  
+               - [RealRock1, 0.002, BigPlant]
+               - [RealRock7, 0.002, BigPlant]
+               - [RockGrey01Large, 0.05, Free]
+               - [RockGrey02Large, 0.005, Free]
+               - [AridRock03, 0.001, Free]
+               - [RealRock8Dark, 0.002, Free]
+               - [RockResourceSilicon, 0.003, Free]
+               - [RockResourcePromethium, 0.003, Free]
+               - [RockResourceMagnesium, 0.0001, Free]
+               
+    Grass:  
+
+# # ============================================================== # (A mountain biome)
+  - Name: SandDrift
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [5, 4, 0.55, 2, 10, 0.5, -0.2]
+    Color: [0.6, 1.0, 0.6]
+    
+    SelectionCriteria: 
+    - Height > 190
+    - Height < 220
+    - Temperature > 15
+    - Temperature < 40
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+
+               # Harvestables:
+               - [Snakeweed, 0.003]
+               - [CornDogBush, 0.003]
+
+               # Rock Resources
+               - [CrystalStraight, 0.00002, Free]
+               - [RockResourceCopper, 0.0015, Free]
+               
+    Grass:
+
+# # ============================================================== # Mountain top biome
+  - Name: Mountains 
+    AmbientSound: Mountains
+    IgnoreForcedBiome: true
+    Texture: [3,3,0.7, 10,10,0.5, 0.2] 
+    SelectionCriteria: 
+    - Height > 270
+    Color: [0.6, 0.6, 0.6]
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+
+    StampProb: 0.9
+    Stamps:
+               - _Valley_1, 0.9
+               - _Valley_2, 0.9
+               - _Valley_3, 0.9
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+
+               # Harvestables:
+               - [Snakeweed, 0.003]
+
+               # Rock Resources
+               - [CrystalStraight, 0.00002, Free]
+    Grass:
+
+# ==============================================================
+
+  - Name: Desert
+    AmbientSound: DesertLowPlains
+    # Texture: [2, 5, -0.43]
+    Texture: [6, 5, -0.7]
+    Color: [1, 0.2, 0.7]  
+    
+    SelectionCriteria:
+    - Height < 130  
+    - Height > 62  
+    - Humidity > 0.3  
+    - Temperature > 32
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+               
+    Temperature: -8
+    
+    Decorations:  
+               - [AridRockBrown01, 0.0005, Free]
+               - [AridRockBrown02, 0.0005, Free]
+               - [AridRockBrown03, 0.0005, Free]
+               - [RockGrey01Large, 0.0005]
+               - [RockGrey02Large, 0.0005]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceCobalt, 0.002, Free]
+
+    Grass:  
+
+# ==============================================================
+
+  - Name: DesertEdge
+    AmbientSound: DesertLowPlains
+    # Texture: [2, 5, -0.65]
+    Texture: [6, 5, -0.7]
+    Color: [0.9, 0.1, 0.6]  
+    
+    SelectionCriteria:
+    - Height < 130  
+    - Height > 60  
+    - Humidity > 0.25  
+    - Temperature > 32
+    
+    Temperature: -4
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+
+    Decorations:  
+               - [RockGrey01Large, 0.001]
+               - [RockGrey02Large, 0.001]
+
+    Grass:  
+
+# ==============================================================
+# BASIC TERRAIN SHAPE : Dunes
+# ============================================================== # Sand dune 'peaks' biome
+
+  - Name: Dunes
+    AmbientSound: ArcticLowPlains
+    Texture: [6, 5, -0.7]
+    Color: [1, 0.8, 0.0] 
+    SelectionCriteria: 
+    - Temperature > 19
+    - Height < 260 
+    
+    StampForcesBiomeType: OverlapOwn
+    StampForcesBiome: true
+    StampTries: 150
+    Stamps: 
+    - Mountain_10_ADD, 0.7
+    - DunesSea_01_BM2, 0.7
+    - IceDunes_01_BM, 0.3
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+
+    Decorations:  
+               - [CrystalStraight, 0.0001, Free]
+
+
+# ============================================================== # Sand dune 'bottom' biome
+  - Name: Sand
+#    AmbientSound: ArcticLowPlains   # (No sound, part is protected from wind, but has no wildlife)
+    Texture: [4, 5, -0.7] 
+    Color: [0.9, 0.5, 0.0]
+
+    SelectionCriteria:
+    - Height > 600
+    
+    StampForcesBiomeType: OverlapOther
+    StampForcesBiome: true
+    StampTries: 300
+    Stamps: 
+    - DunesDesert_01, 0.5            # (These stamps are placed first. Last stamp is at the bottom of this document.)
+
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+    
+    Decorations:  
+               - [RockGrey01Large, 0.0001]    
+               - [RockGrey02Large, 0.0001]
+               - [DesertRock1, 0.00028, Free]
+               - [DesertRock2, 0.00028, Free]
+               - [SkeletonMammothTorso, 0.000007, Free]
+
+               # Harvestable
+               - [CoralBig08, 0.00001, Free]
+               - [RockResourceGold, 0.000008, Free]
+               - [CrystalStraight, 0.0001, Free]
+
+    Grass:
+
+# ==============================================================
+# 'GROUND SHAPE' - BIOME
+# ============================================================== 
+# Technical biome - Pushes up all dunes & mountains a bit.
+  - Name: Technical_Height           # Name doesn't show up in-game. 
+    Texture: [0, 0, 0]   
+
+    Color: [0.3, 0.0, 0.0]  
+    SelectionCriteria:  
+    - Height > 600
+
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther  
+    StampTries: 40
+    Stamps:
+    - GroundShape_4_ADD, 0.9         # Both are 'ADD' stamps with b-yOffset 500 -> No biome
+    - GroundShape_2_ADD, 0.5
+
+    Decorations:  
+
+    Grass:  
+    
+# ==============================================================
+# ============================================================== 
+
+  - Name: Nest
+    AmbientSound: LavaFog  
+    Texture: [0, 0, 0.2]  
+    SelectionCriteria:   
+    - Height > 600
+    Color: [1, 0, 0]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff            # Fills the last empty 'stamp spots' on the map
+    StampTries: 15
+    Stamps:
+    - Nest_01, 0.5
+    - Nest_02, 0.5
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+
+    Decorations:
+               - [FingerSponge03-01, 0.4]
+               - [RockGrey01Large, 0.007]
+               - [ScalyPods, 0.7]
+               - [BulbShroom, 0.05]
+               - [CrystalsPyramidOrange, 0.6]
+               - [PromethiumStone, 0.01]
+               - [RockResourceMagnesium, 0.005]
+
+    Grass:
+
+# ==============================================================
+  - Name: LargeCrater
+    AmbientSound: DesertHighPlains
+    # Texture: [5, 6, 0.5, 2, 2, 0.5, -0.3]
+    Texture: [6, 5, -0.7]
+    
+    SelectionCriteria: 
+    - Height > 260 
+    Color: [0.8, 0.4, 0.4]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 2
+    Stamps:
+ 
+    - CraterMoon_9, 0.8
+    - CraterMoon_12, 0.4
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+    
+    Decorations:  
+               - [DesertRock1, 0.0002, Free]
+               - [DesertRock2, 0.0002, Free]
+               - [Boulder1, 0.01]
+               - [Boulder2, 0.01]
+               - [Boulder3, 0.01]
+               - [Boulder4, 0.015]
+               - [Boulder5, 0.015]
+
+               # Rock Resources
+               - [CrystalStraight, 0.0003, Free]
+               - [CrystalsPyramidBlue, 0.00002, Free]
+               - [RockResourceSilicon, 0.001, Free]
+    Grass:  
+
+               
+# ==============================================================
+  - Name: Wadi
+    AmbientSound: DesertHighPlains
+    Texture: [2, 3, 0.2, 10, 9, 0.5, 0.5]
+    
+    SelectionCriteria: 
+    - Height > 600
+    Color: [0.4, 0.4, 0.6]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll                # (This stamp is placed last and will overwrite all other stamps but not 'ignoreForced'-biomes)
+    StampTries: 3
+    Stamps:
+    - RiftLava_2b_BM, 0.4
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+    
+    Decorations:  
+               - [DesertRock1, 0.002, Free]
+               - [DesertRock2, 0.002, Free]
+               - [Boulder1, 0.01]
+               - [Boulder2, 0.01]
+               - [Boulder3, 0.01]
+               - [Boulder4, 0.015]
+               - [Boulder5, 0.015]
+               
+               # Rock Resources
+               - [RockResourceGold, 0.0008, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:  
+               - Name: GrassBrown06
+                 Density: 0.1
+                 Preset: GrassDense
+
+
+
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+
+  - Name: Plains
+    AmbientSound: DesertLowPlains
+    # Texture: [6, 5, 0.5, 2, 2, 0.5, -0.35]
+    Texture: [6, 5, -0.7]
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [11, 3]
+               - [9, -1]
+               - [10, 1]
+    SelectionCriteria:  
+       - true
+
+    Color: [0.8, 0.7, 0.4]  
+    StampProb: 0.3
+    Stamps: 
+               - Hollow_01_SUB, 0.4
+               - Pools_01, 0.4
+               - Spring_01, 0.6
+               - DunesSea_01_BM2, 0.1
+
+    Decorations:  
+               - [RockResourceSilicon, 0.0005, Free]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceIron, 0.0005, Free]
+
+    Grass:  

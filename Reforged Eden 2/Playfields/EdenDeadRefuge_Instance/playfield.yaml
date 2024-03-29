@@ -1,0 +1,1864 @@
+PlayfieldType: Planet
+Gravity: -8.96771717
+PlanetAxis: 0
+AtmosphereDensity: 0.45
+AtmosphereO2: 0.15
+AtmosphereBreathable: true
+TemperatureDay: -2147483648
+TemperatureNight: 25
+Radiation: 2
+SeaLevel: -1
+TerrainLevel: 149
+BaseLevel: 20
+PlanetType: Instance
+PlanetSize: 4
+Water: WaterRed
+Difficulty: 5
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+AllowHV: False
+AllowSV: False
+AllowCV: False
+AllowBA: False
+
+AllowBlueprintSV: False
+AllowBlueprintCV: False
+AllowBlueprintBA: False
+AllowBlueprintHV: False
+
+
+Instance:
+  Time: 90                        # Minutes until this instance has to be completed and players are kicked
+  MaxPlayers: 4                    # Portal closes after this amount of players entered
+  PortalOpen: 120                   # Seconds the portal is open
+  Cooldown: 300                   # Seconds the portal is closed after it was open (cooldown time)
+  DropInventory: False              # When you do not solve the instance within the given "Time", you will be kicked and your inventory stays behind
+  AllowBlueprints: False            # Allow to spawn blueprints in an instance
+  # RestrictToOrigin: 3              # Only Origin with ID <xyz> can enter portal, see sectors.yaml origin ID
+  LockOnFaction: False              # Only members of the same faction can enter portal
+
+
+
+SpecialEffectsLocal:
+- Name: DustDevil
+  MaxHeight: 5
+  Time: Always
+  Biome:
+  - DriedLakeBed
+  - Sand
+  FollowPlayerY: true
+- Name: WindLines
+  MaxHeight: 5
+  Time: Always
+  Biome:
+  - Sand
+  - LowMountains
+  - Mountains
+  FollowPlayerY: true
+SpecialEffectsGlobal:
+- Name: ThunderAndLightning
+  SpawnY: 300
+  Time: Always
+  InitialDelay: 0
+  Delay: 0
+  PlyDist: 100
+  Struct: Avoid
+  Lifetime: 1200
+
+- Name: ThunderAndLightningRed
+  SpawnY: 300
+  Time: Night
+  InitialDelay: 0
+  Delay: 0
+  PlyDist: 100
+  Struct: Avoid
+  Lifetime: 1200
+
+
+
+
+AtmosphereEnabled: true
+# AtmosphereColor: 0.4, 0.3, 0.1
+AtmosphereColor: 0.6, 0.3, 0.1
+AtmosphereParams:
+- 1
+- 1.60000002
+SkyColor: 0.4, 0.2, 0.1
+SkyHorizonColor: 0.2, 0, 0
+# LightZenithColor: 0.92, 0.75, 0.75
+LightZenithColor: 1.2, 0.75, 0.75
+LightHorizonColor: 1, 0.3, 0
+# NightLightColor: 1, 0.78, 0.78
+NightLightColor: 1, 0.50, 0.50
+CloudsZenithColor: 0.1, 0, 0.1
+CloudsHorizonColor: 0.2, 0, 0.2
+CloudsNightZenithColor: 0.1, 0, 0.1
+CloudsNightHorizonColor: 0.2, 0, 0.2
+CloudsOpacity: 0.100000001
+FogCloudIntensity: 0.800000012
+DayLightIntensity: 1.20000005
+NightLightIntensity: 1.6
+DayShadowStrength: 0.5
+NightShadowStrength: 1
+AtmosphereFog: 0.0526982769
+CloudsDensity: 1
+CloudsSharpness: 1
+CloudsBrightness: 0.300000012
+WindSpeed: 50
+# FogColor: 0.8, 0.8, 0.8
+FogColor: 0.8, 0.5, 0.5
+GroundFogIntensity: 0.0121679055
+GroundFogHeight: 16.4884148
+Description: >-
+  Difficulty: [c][ff0000]Hard[-][/c]
+
+  [c][ff0000][i]This is an instance for the mission The Dead Part 2. It will reset once all players have left or the time limit expires.[/i][-][/c]
+  
+  
+  Follow the PDA mission objectives. POIs are displayed on the map.
+
+Seed: 343158
+TemperatureMinMax:
+- -131
+- -52
+HumidityMinMax:
+- 0.117064647
+- 0.687870264
+TemperatureHeightRange:
+- 30
+- 100
+TemperatureGradientRange:
+- 0.579999983
+- 0
+TemperatureNoiseFac: 0.649999976
+HumidityHeightFac:
+- 0
+- 270
+HumidityNoiseFac: 0.800000012
+TerrainHeightMapMax: 490
+TemperatureMasks:
+- Global_1, 0.125
+- Global_1a, 0.125
+- Global_2, 0.125
+- Global_2a, 0.125
+- Global_3, 0.125
+- Global_3a, 0.125
+- Global_4, 0.125
+- Global_4a, 0.125
+HumidityMasks:
+- Global_1, 0.125
+- Global_1a, 0.125
+- Global_2, 0.125
+- Global_2a, 0.125
+- Global_3, 0.125
+- Global_3a, 0.125
+- Global_4, 0.125
+- Global_4a, 0.125
+BiomeStampTries: 50
+PlayfieldLevel: 2
+BaseAttackCount: 0
+PlanetClass: Instance
+UseFixed: true
+UseRandom: true
+Build: 3047
+IndestructibleTerrain: true
+RestrictToOrigin: 255
+Music: AnAridPlace
+LandClaimZone: Device
+Biome:
+- BiomeClusterData:
+  - Name: DeepWater
+    AmbientSound: BarrenFog
+    Decorations:
+    - - CoralStone01-05
+      - 0.003
+      - Free
+    - - CoralStone03-06
+      - 0.003
+      - Free
+    - - FingerSponge03-01
+      - 0.001
+      - Free
+    - - RealRock1Water
+      - 0.001
+      - Free
+    - - RealRock5Water
+      - 0.001
+      - Free
+    - - RealRock8Water
+      - 0.001
+      - Free
+    - - RealRock9Water
+      - 0.001
+      - Free
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0
+    - 0
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel - 17
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Water
+    Radiation: 3
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RealRock5Water
+      - 0.001
+      - Free
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    - - CrystalStraight
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 11
+    - 0.200000003
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel - 7
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: ShallowWater
+    Radiation: 3
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RockGrey01Large
+      - 0.002
+      - Free
+    - - RockGrey02Large
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Shore
+    Radiation: 2
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RockGrey01Large
+      - 0.002
+      - Free
+    - - RockGrey02Large
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 0.5
+    SelectionCriteria:
+    - Height < SeaLevel + 1
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Pole
+    AmbientSound: ArcticLowPlains
+    Texture:
+    - 5
+    - 11
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - +Lat > 0.975
+    StampProb: 1
+    IgnoreForcedBiome: true
+    Weather: PoleFog
+    UndergroundLayers:
+    - - 5
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: GlacierSnow
+    AmbientSound: Mountains
+    Texture:
+    - 5
+    - 11
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - Temperature < -115
+    - Height > 240
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 0
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Craters
+    Temperature: 100
+    Decorations:
+    - - RockGrey01Large
+      - 0.005
+    - - RockGrey02Large
+      - 0.005
+    - - CrystalStraight
+      - 0.0001
+      - Free
+    Texture:
+    - 2
+    - 5
+    - 0.200000003
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 0.200000003
+    SelectionCriteria:
+    - false
+    StampTries: 600
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - CraterBattle_Geo1a, 0.3
+    - CraterBattle_Geo1b, 0.3
+    - CraterMeteorite_Large, 0.3
+    - CraterBattle_LaserScar, 0.3
+    - CraterBattle_Atomic, 0.3
+    - CraterBattle_Bomb, 0.3
+    - CraterBattle_Bombx3, 0.3
+    - CraterBattle_Bomblets, 0.3
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 9
+      - 8
+    - - 10
+      - 3
+    - - 9
+      - 4
+    - - 10
+      - 3
+    - - 9
+      - 3
+    - - 10
+      - 3
+    - - 9
+      - 2
+    - - 10
+      - 2
+    - - 12
+      - -1
+    - - 11
+      - 1
+  - Name: Mountains
+    Temperature: 100
+    AmbientSound: Mountains
+    Decorations:
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    - - RockResourceSilicon
+      - 0.00025
+      - Free
+    Texture:
+    - 6
+    - 3
+    - 0.699999988
+    - 11
+    - 11
+    - 0.5
+    - 0.200000003
+    Color:
+    - 0.5
+    - 0.5
+    - 0.5
+    SelectionCriteria:
+    - Height > 140
+    StampProb: 0.180000007
+    Stamps:
+    - CraterLava_2, 0.1
+    - CraterLava_3_BM, 0.3
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - -1
+    - - 10
+      - 1
+  - Name: LowMountains
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - AlaskaCedarBare
+      - 0.01
+    - - RockGrey01Large
+      - 0.0005
+      - Free
+    - - RockGrey02Large
+      - 0.0005
+      - Free
+    - - RockResourceCopper
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0005
+      - Free
+    Texture:
+    - 6
+    - 3
+    - 0.600000024
+    - 11
+    - 11
+    - 0.5
+    - 0.25
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 0.400000006
+    StampTries: 150
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - Mountain_10b, 0.5
+    - Mountain_11, 0.3
+    - Mountain_13, 0.7
+    - Mountain_14, 0.3
+    - Mountain_15, 0.3
+    - Mountain_14a, 0.9
+    - Mountain_15a, 0.9
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - -1
+    - - 10
+      - 1
+  - Name: DriedLakeBed
+    Temperature: 100
+    Radiation: 1
+    AmbientSound: BarrenFog
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.01
+    - - SkeletonDragonTorso
+      - 0.002
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.002
+    - - RockGrey01Large
+      - 0.002
+    - - RockGrey02Large
+      - 0.002
+    - - CoralStone03-05
+      - 0.01
+    - - CoralStone03-06
+      - 0.01
+    - - FingerSponge03-01
+      - 0.01
+    - - CrystalStraight
+      - 0.005
+    Texture:
+    - 1
+    - 10
+    - 0.0500000007
+    Color:
+    - 0.899999976
+    - 0.899999976
+    - 0
+    SelectionCriteria:
+    - Height < 30
+    - Height > SeaLevel + 1
+    StampProb: 0.300000012
+    Stamps:
+    - DunesSea_01, 0.1
+    - DunesSea_01b, 0.1
+    UndergroundLayers:
+    - - 1
+      - 1
+    - - 12
+      - 6
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: PolarSnow
+    Temperature: 100
+    AmbientSound: ArcticHighPlains
+    Texture:
+    - 5
+    - 5
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - Height < 200
+    - Temperature < -105
+    StampProb: 1
+    UndergroundLayers:
+    - - 5
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Tundra
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0003
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 4
+    - 4
+    - 1
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 0.0149999997
+    SelectionCriteria:
+    - Temperature > -95
+    - Temperature < -100
+    - Height < 150
+    StampProb: 0.119999997
+    Stamps:
+    - Pingo_01, 0.9
+  - Name: ColdPlains
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0002
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    Texture:
+    - 6
+    - 6
+    - 0.600000024
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0
+    - 0.5
+    - 0.200000003
+    SelectionCriteria:
+    - Temperature < -100
+    - Height < 100
+    StampProb: 0.25
+    Stamps:
+    - CraterLava_3_BM, 1
+  - Name: DriedSwamp
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.0005
+      - Free
+    - - RockResourceIron
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.001
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 0
+    - 3
+    - 0.75
+    - 0
+    - 3
+    - 0.75
+    - 0.200000003
+    Color:
+    - 0
+    - 0.200000003
+    - 0
+    SelectionCriteria:
+    - Height < SeaLevel + 3
+    - Height > SeaLevel + 1
+    - Humidity > 0.60
+    - Temperature > -80
+    StampProb: 1
+    UndergroundLayers:
+    - - 0
+      - 0
+    - - 0
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: WaterSwamp
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Texture:
+    - 0
+    - 3
+    - 0.850000024
+    - 0
+    - 3
+    - 0.850000024
+    - 0.200000003
+    Color:
+    - 0
+    - 1
+    - 0.200000003
+    SelectionCriteria:
+    - Height < SeaLevel + 1
+    - Humidity > 0.63
+    - Temperature > -85
+    StampProb: 1
+    UndergroundLayers:
+    - - 0
+      - 0
+    - - 0
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: DriedMarsh
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RealRock3Dark
+      - 0.0004
+      - Free
+    - - RealRock4Dark
+      - 0.002
+      - Free
+    - - RealRock8Dark
+      - 0.0004
+      - Free
+    - - RealRock10Dark
+      - 0.0005
+      - Free
+    - - SkeletonMammothTorso
+      - 0.001
+      - Free
+    - - RockResourceIron
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 3
+    - 6
+    - 0.5
+    - 11
+    - 11
+    - 0.100000001
+    - 0.349999994
+    Color:
+    - 0.550000012
+    - 0.649999976
+    - 0.100000001
+    SelectionCriteria:
+    - Humidity > 0.55
+    - Temperature > -90
+    - Height < 48
+    StampProb: 1
+    UndergroundLayers:
+    - - 3
+      - 0
+    - - 3
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: DriedSavanna
+    Temperature: 100
+    Temperature: 1
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DesertRock1
+      - 0.002
+      - Free
+    - - DesertRock2
+      - 0.002
+      - Free
+    - - Boulder1
+      - 0.0001
+      - Free
+    - - Boulder2
+      - 0.0001
+      - Free
+    - - Boulder3
+      - 0.0001
+      - Free
+    - - Boulder4
+      - 0.00015
+      - Free
+    - - Boulder5
+      - 0.00015
+      - Free
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0004
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 7
+    - 8
+    - 0.800000012
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.649999976
+    - 0.579999983
+    - 0.0500000007
+    SelectionCriteria:
+    - Humidity < 0.16
+    - Temperature > -85
+    - Height < 80
+    StampProb: 0.5
+    Stamps:
+    - Flats_1, 0.6
+    - Valley_1, 0.3
+    - Valley_2, 0.3
+    - Valley_3, 0.3
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Sand
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0002
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    Texture:
+    - 7
+    - 7
+    - 0.200000003
+    Color:
+    - 1
+    - 0
+    - 0
+    SelectionCriteria:
+    - Humidity < 0.35
+    - Temperature > -95
+    - Height < 110
+    StampProb: 0.300000012
+    Stamps:
+    - Flats_1, 0.8
+    - Cliff_1, 0.3
+    - Cliff_2, 0.3
+    - Cliff_3, 0.3
+    - Valley_1, 0.2
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 8
+    - - 10
+      - 5
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: DriedSavannaEdge
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DesertRock1
+      - 0.002
+      - Free
+    - - DesertRock2
+      - 0.002
+      - Free
+    - - Boulder1
+      - 0.0001
+      - Free
+    - - Boulder2
+      - 0.0001
+      - Free
+    - - Boulder3
+      - 0.0001
+      - Free
+    - - Boulder4
+      - 0.00015
+      - Free
+    - - Boulder5
+      - 0.00015
+      - Free
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0004
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 7
+    - 8
+    - 0.200000003
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.699999988
+    - 0.699999988
+    - 0.0599999987
+    SelectionCriteria:
+    - Humidity < 0.28
+    - Temperature > -97
+    StampProb: 1
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: DeadOasis
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RockGrey01Large
+      - 0.01
+    - - RockGrey02Large
+      - 0.01
+    - - RealRock1
+      - 0.001
+      - Free
+    - - RealRock4
+      - 0.001
+      - Free
+    - - RealRock5
+      - 0.001
+      - Free
+    - - RealRock6
+      - 0.001
+      - Free
+    - - RockResourceGold
+      - 0.005
+    - - RockResourceSilicon
+      - 0.005
+    - - RockResourceCopper
+      - 0.005
+    Texture:
+    - 7
+    - 0
+    - 0.600000024
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 1
+    - 0.699999988
+    - 0
+    SelectionCriteria:
+    - Height < 50
+    - Humidity > 0.40
+    - Humidity < 0.43
+    - Temperature > -65
+    - Temperature < -55
+    StampProb: 1
+    UndergroundLayers:
+    - - 7
+      - 2
+    - - 7
+      - -1
+    - - 12
+      - 1
+  - Name: DeadForest
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DeadTree01
+      - 0.1
+      - Tree
+    - - DeadTree02b
+      - 0.1
+      - Tree
+    - - RealRock3Dark
+      - 0.0004
+      - Free
+    - - RealRock4Dark
+      - 0.002
+      - Free
+    - - RealRock8Dark
+      - 0.0004
+      - Free
+    - - RealRock10Dark
+      - 0.0005
+      - Free
+    - - AridRock01
+      - 0.0002
+      - Free
+    - - SkeletonMammothTorso
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 3
+    - 6
+    - 0.5
+    - 9
+    - 11
+    - 0.100000001
+    - 0.349999994
+    Color:
+    - 0
+    - 0.699999988
+    - 0
+    SelectionCriteria:
+    - Humidity > 0.30
+    - Temperature > -100
+    - Height > 30
+    - Height < 70
+    StampProb: 0.400000006
+    Stamps:
+    - Valley_3, 0.3
+    - Cliff_1, 0.5
+    - Cliff_3, 0.5
+    - Valley_1, 0.5
+    UndergroundLayers:
+    - - 10
+      - 0
+    - - 10
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: Graveyard
+    Temperature: 100
+    AmbientSound: LavaFog
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.6
+    - - SkeletonWhaleHead
+      - 0.9
+    - - SkeletonWhalePart
+      - 0.6
+    - - SkeletonDragonHead
+      - 0.9
+    - - SkeletonDragonTorso
+      - 0.6
+    - - SkeletonMammothHead
+      - 0.9
+    - - SkeletonMammothTorso
+      - 0.6
+    - - CrystalsPyramidBlue
+      - 0.08
+    - - PromethiumStone
+      - 0.05
+    Texture:
+    - 2
+    - 2
+    - 0.200000003
+    Color:
+    - 0.400000006
+    - 0
+    - 0
+    SelectionCriteria:
+    - Height > 600
+    StampTries: 30
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - Nest_01, 0.5
+    - Nest_02, 0.5
+    - CraterMoon_1, 0.5
+    - CraterMoon_2, 0.5
+    - CraterMoon_3, 0.5
+    - CraterMoon_4, 0.5
+    UndergroundLayers:
+    - - 2
+      - 3
+    - - 11
+      - 4
+    - - 10
+      - 20
+    - - 9
+      - -1
+    - - 10
+      - 1
+  - Name: Wasteland
+    Temperature: 100
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - GasEmitter1
+      - 0.0001
+    - - GasEmitter2
+      - 0.0001
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0001
+      - Free
+    - - RockResourceCopper
+      - 0.0001
+      - Free
+    Texture:
+    - 6
+    - 6
+    - 0.5
+    - 11
+    - 11
+    - 1
+    - 0.400000006
+    Color:
+    - 0.800000012
+    - 0.5
+    - 0
+    SelectionCriteria:
+    - true
+    StampProb: 0.150000006
+    Stamps:
+    - Flats_1, 0.3
+    - Cliff_1, 0.3
+    - Cliff_2, 0.3
+    - Cliff_3, 0.3
+    - Valley_1, 0.2
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - 3
+    - - 10
+      - 5
+    - - 11
+      - -1
+    - - 12
+      - 1
+    UndergroundLayersDefault: true
+
+### POIs
+POIs:
+    Random:
+        - GroupName: DroneBaseT1RG  #CommandCenter
+          Faction: Alien  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ]
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+              # Entries into the planet
+        # - GroupName: Eden_ProgenitorEntry
+          # Faction: Alien
+          # NoShieldReload: True  
+          # CountMinMax: [ 1, 1 ]
+          # IsImportant: True
+          # Properties:
+            # - Key: PersonalContainer
+              # Value: "SmallOptronicMatrix:1, LargeOptronicBridge:1, AutoMinerCore:2, GoldIngot:25, PentaxidOre:200, TechnicalArtifact:25"
+            # - Key: Discovery
+              # Value: False
+
+# # Progenitor Artifacts
+        # - GroupName: Eden_ProgenitorArray
+          # Faction: Alien
+          # CountMinMax: [ 10, 15 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+        # - GroupName: ProgenitorArtifacts
+          # Faction: Alien
+          # CountMinMax: [ 6, 8 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+# # Progenitor Symbols on surface
+        # - GroupName: Eden_ProgenitorSymbols
+          # Faction: Alien
+          # CountMinMax: [ 25, 50 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+    Fixed:
+
+# Lab where the player wakes up.
+        - Type: BA_Admin
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeLab
+          Mode: Survival
+          Name: Lab
+          Pos: [ 7592, 88.5, 4414 ]
+          InitPower: True
+          Properties:
+            - Key: Music
+              Value: Voyage
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+# Bridge
+        - Type: BA_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeBridge1
+          Mode: Survival
+          Name: Bridge
+          Pos: [ 7576, 59, 4600 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+# Artillery Station
+        - Type: BA_Admin
+          Faction: Public
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeArtillery
+          Mode: Survival
+          Name: Artillery Station
+          Pos: [ 7583, 70, 4721 ]
+          InitPower: True
+          Properties: 
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+
+# First defensive line
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDef2
+          Mode: Survival
+          Name: Defense
+          Pos: [ 7497, 95.01, 4500 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: BA_Admin
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDefBase
+          Mode: Survival
+          Name: Defense Base
+          Pos: [ 7497, 75, 4500 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+
+
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDef2
+          Mode: Survival
+          Name: Defense
+          Pos: [ 7753, 105.01, 4500 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: BA_Admin
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDefBase
+          Mode: Survival
+          Name: Defense Base
+          Pos: [ 7753, 85, 4500 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDef1
+          Mode: Survival
+          Name: Defense
+          Pos: [ 7698, 106.01, 4565 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: BA_Admin
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDefBase
+          Mode: Survival
+          Name: Defense Base
+          Pos: [ 7698, 86, 4565 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDef1
+          Mode: Survival
+          Name: Defense
+          Pos: [ 7561, 104.01, 4505 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: BA_Admin
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeDefBase
+          Mode: Survival
+          Name: Defense Base
+          Pos: [ 7561, 84, 4505 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+# First defensive line tanks
+        - Type: HV_Player
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeTank1
+          Mode: Survival
+          Name: Tank
+          Pos: [ 7580, 90, 4520 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: HV_Player
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeTank1
+          Mode: Survival
+          Name: Tank
+          Pos: [ 7765, 97, 4619 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeTank1
+          Mode: Survival
+          Name: Tank
+          Pos: [ 7664, 93, 4574 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: CV_Alien
+          Faction: Zirax
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeTank1
+          Mode: Survival
+          Name: Tank
+          Pos: [ 7489, 80, 4556 ]
+          Rot: [ 0, 19, 0 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+# Speeders
+        - Type: HV_Player
+          Faction: Public
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeSpeeder
+          Mode: Survival
+          Name: Speeder
+          Pos: [ 7604, 89, 4436 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+
+        - Type: HV_Player
+          Faction: Public
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeSpeeder
+          Mode: Survival
+          Name: Speeder
+          Pos: [ 7600,89,4436 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+
+        - Type: HV_Player
+          Faction: Public
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeSpeeder
+          Mode: Survival
+          Name: Speeder
+          Pos: [ 7580, 89, 4436 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+
+        - Type: HV_Player
+          Faction: Public
+          NoShieldReload: True
+          Prefab: Eden_HV_RefugeSpeeder
+          Mode: Survival
+          Name: Speeder
+          Pos: [ 7584, 89, 4436 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+
+# First Progenitor attack force
+        - Type: CV_Alien
+          Faction: Alien
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeAttack1
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 7659, 200, 4711 ]
+          Rot: [ 0, 180, 0 ]
+          InitPower: True
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          Properties: 
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: CV_Alien
+          Faction: Alien
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeAttack1
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 7571, 183, 4704 ]
+          Rot: [ 0, 180, 0 ]
+          InitPower: True
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          Properties: 
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            - Key: SI
+              Value: Off
+
+# Alien Spheres to blow up for mission
+        - Type: BA_Alien
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeSphere
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 7450, 150, 4854 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            # - Key: SI
+              # Value: Off
+
+        - Type: BA_Alien
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeSphere
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 7800, 150, 4854 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            # - Key: SI
+              # Value: Off
+
+
+
+# ======================================================================== Part 2
+
+# Outpost near devastation
+        - Type: BA_Admin
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugePost1
+          Mode: Survival
+          Name: Watchpost 7
+          Pos: [ 7525, 49, 3070 ]
+          InitPower: True
+          Properties: 
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+# Second outpost
+        - Type: BA_Alien
+          Faction: Alien
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugePost2
+          Mode: Survival
+          Name: Eastern Outpost
+          Pos: [ 9297, 49, 2842 ]
+          InitPower: True
+          Properties:
+            - Key: Music
+              Value: EvilWhispering
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+
+# ======================================================================== Part 3
+
+
+# Last Progenitor attack force
+        - Type: BA_Alien
+          Faction: Alien
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeAttack2
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 7800, 225, 650 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          Properties: 
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            - Key: SI
+              Value: Off
+
+        - Type: BA_Alien
+          Faction: Alien
+          NoShieldReload: True
+          Prefab: Eden_CV_RefugeAttack2
+          Mode: Survival
+          Name: Alien Attack Force
+          Pos: [ 8500, 225, 650 ]
+          Rot: [ 0, 0, 0 ]
+          InitPower: True
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          Properties: 
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            - Key: SI
+              Value: Off
+
+# Final objective
+        - Type: BA_Admin
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeArk
+          Mode: Survival
+          Name: The Ark
+          Pos: [ 8145, 47, 615 ]
+          InitPower: True
+          Properties: 
+            - Key: Music
+              Value: RiseOfTheTitan
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+
+        # - Type: BA_Alien
+          # Faction: Zirax
+          # NoShieldReload: True
+          # Prefab: BA_PiratesDefense2Desert
+          # Mode: Survival
+          # Name: Defense
+          # Pos: [ 8080, 68, 700 ]
+          # InitPower: True
+          # Properties: 
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: SI
+              # Value: Off
+
+
+        # - Type: CV_Alien
+          # Faction: Alien
+          # NoShieldReload: True
+          # Prefab: OPV_LegacyInfectorG
+          # Mode: Survival
+          # Name: Infector
+          # Pos: [ 8100, 110, 805 ]
+          # InitPower: True
+          # Properties: 
+            # - Key: SI
+              # Value: Off
+
+        # - Type: BA_Alien
+          # Faction: Alien
+          # NoShieldReload: True
+          # Prefab: OPV_LegacyInfectorG
+          # Mode: Survival
+          # Name: Infector2
+          # Pos: [ 8100, 110, 550 ]
+          # InitPower: True
+          # Properties: 
+            # - Key: SI
+              # Value: Off
+
+
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+DroneBaseSetup:
+  Random:
+  - GroupName: DroneBaseSetup
+    Difficulty: 6
+    PresetStyle: 3
+    Stock:
+    - Name: SpaceDroneKrielLaser
+      Amount: 300
+    - Name: DroneBomberAttackBase
+      Amount: Infinite
+      Extra: 1
+    - Name: EnemyDroneV2Plasma
+      Amount: Infinite
+      Extra: 1
+    - Name: DroneTroopsTransport
+      Amount: Infinite
+      Extra: 2
+    - Name: ZiraxMinigun
+      Amount: 500
+      Extra: 3
+    - Name: ZiraxRocket
+      Amount: 500
+      Extra: 3
+    - Name: Crawler
+      Amount: 150
+      Extra: 3
+    - Name: AlienAssassinGrey
+      Amount: 300
+      Extra: 3
+DroneSpawning:
+  Random:
+  - DronesMinMax:
+    - 20
+    - 25
+    CenterX: 7500
+  - DronesMinMax:
+    - 0
+    - 0
+    CenterX: 5000

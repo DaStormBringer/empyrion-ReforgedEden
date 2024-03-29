@@ -1,0 +1,1321 @@
+PlayfieldType: Planet
+Gravity: -8.96771717
+PlanetAxis: 45
+AtmosphereDensity: 0.021
+AtmosphereO2: 0.05
+TemperatureDay: -2147483648
+TemperatureNight: 25
+Radiation: 4
+SeaLevel: -1
+TerrainLevel: 149
+BaseLevel: 20
+PlanetType: Dead
+PlanetSize: 4
+Water: WaterRed
+Difficulty: 5
+SunFlare: EnvironmentalEffects/SunFlareWhite
+SpecialEffectsLocal:
+SpecialEffectsGlobal:
+- Name: Clear
+  SpawnY: 50
+  Time: Always
+  InitialDelay: 0
+  Delay: 0
+  PlyDist: 100
+  Lifetime: 1200
+AtmosphereEnabled: true
+AtmosphereColor: 0, 0.0, 0.1
+AtmosphereParams:
+- 5
+- 3
+SkyColor: 0, 0, 0.05
+SkyHorizonColor: 0.03, 0, 0.05
+LightZenithColor: 0.5, 0.55, 0.95
+LightHorizonColor: 0, 0, 1
+NightLightColor: 0.2, 0.78, 1.4
+CloudsZenithColor: 0.5, 0, 0.6
+CloudsHorizonColor: 0.4, 0, 0.4
+CloudsNightZenithColor: 0.1, 0, 0.1
+CloudsNightHorizonColor: 0.2, 0, 0.2
+CloudsOpacity: 0
+FogCloudIntensity: 0.800000012
+DayLightIntensity: 1.20000005
+NightLightIntensity: 1.5
+DayShadowStrength: 0.5
+NightShadowStrength: 1
+AtmosphereFog: 0.0526982769
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0
+WindSpeed: 0
+FogColor: 0.8, 0.8, 0.8
+GroundFogIntensity: 0
+GroundFogHeight: 0
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+
+There is a repeating signal coming from this planet."
+
+Seed: 343158
+TemperatureMinMax:
+- -131
+- -52
+HumidityMinMax:
+- 0.117064647
+- 0.687870264
+TemperatureHeightRange:
+- 30
+- 100
+TemperatureGradientRange:
+- 0.579999983
+- 0
+TemperatureNoiseFac: 0.649999976
+HumidityHeightFac:
+- 0
+- 270
+HumidityNoiseFac: 0.800000012
+TerrainHeightMapMax: 490
+TemperatureMasks:
+- Global_1, 0.125
+- Global_1a, 0.125
+- Global_2, 0.125
+- Global_2a, 0.125
+- Global_3, 0.125
+- Global_3a, 0.125
+- Global_4, 0.125
+- Global_4a, 0.125
+HumidityMasks:
+- Global_1, 0.125
+- Global_1a, 0.125
+- Global_2, 0.125
+- Global_2a, 0.125
+- Global_3, 0.125
+- Global_3a, 0.125
+- Global_4, 0.125
+- Global_4a, 0.125
+BiomeStampTries: 50
+PlayfieldLevel: 2
+BaseAttackCount: 1
+PlanetClass: Dead
+UseFixed: true
+UseRandom: true
+Build: 3047
+IndestructibleTerrain: true
+RestrictToOrigin: 255
+Music: TidalLock
+LandClaimZone: Device
+Biome:
+- BiomeClusterData:
+  - Name: DeepWater
+    AmbientSound: BarrenFog
+    Decorations:
+    - - CoralStone01-05
+      - 0.003
+      - Free
+    - - CoralStone03-06
+      - 0.003
+      - Free
+    - - FingerSponge03-01
+      - 0.001
+      - Free
+    - - RealRock1Water
+      - 0.001
+      - Free
+    - - RealRock5Water
+      - 0.001
+      - Free
+    - - RealRock8Water
+      - 0.001
+      - Free
+    - - RealRock9Water
+      - 0.001
+      - Free
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0
+    - 0
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel - 17
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Water
+    Radiation: 3
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RealRock5Water
+      - 0.001
+      - Free
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    - - CrystalStraight
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 11
+    - 0.200000003
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel - 7
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: ShallowWater
+    Radiation: 3
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RockGrey01Large
+      - 0.002
+      - Free
+    - - RockGrey02Large
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 1
+    SelectionCriteria:
+    - Height < SeaLevel
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Shore
+    Radiation: 2
+    AmbientSound: BarrenFog
+    Decorations:
+    - - RockGrey01Large
+      - 0.002
+      - Free
+    - - RockGrey02Large
+      - 0.002
+      - Free
+    Texture:
+    - 10
+    - 10
+    - 0.00999999978
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 0.5
+    SelectionCriteria:
+    - Height < SeaLevel + 1
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 10
+      - 3
+    - - 12
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Pole
+    AmbientSound: ArcticLowPlains
+    Texture:
+    - 5
+    - 11
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - +Lat > 0.975
+    StampProb: 1
+    IgnoreForcedBiome: true
+    Weather: PoleFog
+    UndergroundLayers:
+    - - 5
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: GlacierSnow
+    AmbientSound: Mountains
+    Texture:
+    - 5
+    - 11
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - Temperature < -115
+    - Height > 240
+    StampProb: 1
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 0
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Craters
+    Decorations:
+    - - RockGrey01Large
+      - 0.005
+    - - RockGrey02Large
+      - 0.005
+    - - CrystalStraight
+      - 0.0001
+      - Free
+    Texture:
+    - 2
+    - 5
+    - 0.200000003
+    Color:
+    - 0.200000003
+    - 0.200000003
+    - 0.200000003
+    SelectionCriteria:
+    - false
+    StampTries: 600
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - CraterBattle_Geo1a, 0.3
+    - CraterBattle_Geo1b, 0.3
+    - CraterMeteorite_Large, 0.3
+    - CraterBattle_LaserScar, 0.3
+    - CraterBattle_Atomic, 0.3
+    - CraterBattle_Bomb, 0.3
+    - CraterBattle_Bombx3, 0.3
+    - CraterBattle_Bomblets, 0.3
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 9
+      - 8
+    - - 10
+      - 3
+    - - 9
+      - 4
+    - - 10
+      - 3
+    - - 9
+      - 3
+    - - 10
+      - 3
+    - - 9
+      - 2
+    - - 10
+      - 2
+    - - 12
+      - -1
+    - - 11
+      - 1
+  - Name: Mountains
+    AmbientSound: Mountains
+    Decorations:
+    - - RockGrey01Large
+      - 0.001
+      - Free
+    - - RockGrey02Large
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    - - RockResourceSilicon
+      - 0.00025
+      - Free
+    Texture:
+    - 6
+    - 3
+    - 0.699999988
+    - 11
+    - 11
+    - 0.5
+    - 0.200000003
+    Color:
+    - 0.5
+    - 0.5
+    - 0.5
+    SelectionCriteria:
+    - Height > 140
+    StampProb: 0.180000007
+    Stamps:
+    - CraterLava_2, 0.1
+    - CraterLava_3_BM, 0.3
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - -1
+    - - 10
+      - 1
+  - Name: LowMountains
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - AlaskaCedarBare
+      - 0.01
+    - - RockGrey01Large
+      - 0.0005
+      - Free
+    - - RockGrey02Large
+      - 0.0005
+      - Free
+    - - RockResourceCopper
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0005
+      - Free
+    Texture:
+    - 6
+    - 3
+    - 0.600000024
+    - 11
+    - 11
+    - 0.5
+    - 0.25
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 0.400000006
+    StampTries: 150
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - Mountain_10b, 0.5
+    - Mountain_11, 0.3
+    - Mountain_13, 0.7
+    - Mountain_14, 0.3
+    - Mountain_15, 0.3
+    - Mountain_14a, 0.9
+    - Mountain_15a, 0.9
+    IgnoreForcedBiome: true
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - -1
+    - - 10
+      - 1
+  - Name: DriedLakeBed
+    Radiation: 1
+    AmbientSound: BarrenFog
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.01
+    - - SkeletonDragonTorso
+      - 0.002
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.002
+    - - RockGrey01Large
+      - 0.002
+    - - RockGrey02Large
+      - 0.002
+    - - CoralStone03-05
+      - 0.01
+    - - CoralStone03-06
+      - 0.01
+    - - FingerSponge03-01
+      - 0.01
+    - - CrystalStraight
+      - 0.005
+    Texture:
+    - 1
+    - 10
+    - 0.0500000007
+    Color:
+    - 0.899999976
+    - 0.899999976
+    - 0
+    SelectionCriteria:
+    - Height < 30
+    - Height > SeaLevel + 1
+    StampProb: 0.300000012
+    Stamps:
+    - DunesSea_01, 0.1
+    - DunesSea_01b, 0.1
+    UndergroundLayers:
+    - - 1
+      - 1
+    - - 12
+      - 6
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: PolarSnow
+    AmbientSound: ArcticHighPlains
+    Texture:
+    - 5
+    - 5
+    - 0.200000003
+    Color:
+    - 1
+    - 1
+    - 1
+    SelectionCriteria:
+    - Height < 200
+    - Temperature < -105
+    StampProb: 1
+    UndergroundLayers:
+    - - 5
+      - 2
+    - - 10
+      - 4
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Tundra
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0003
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 4
+    - 4
+    - 1
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.400000006
+    - 0.400000006
+    - 0.0149999997
+    SelectionCriteria:
+    - Temperature > -95
+    - Temperature < -100
+    - Height < 150
+    StampProb: 0.119999997
+    Stamps:
+    - Pingo_01, 0.9
+  - Name: ColdPlains
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0002
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    Texture:
+    - 6
+    - 6
+    - 0.600000024
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0
+    - 0.5
+    - 0.200000003
+    SelectionCriteria:
+    - Temperature < -100
+    - Height < 100
+    StampProb: 0.25
+    Stamps:
+    - CraterLava_3_BM, 1
+  - Name: DriedSwamp
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.0005
+      - Free
+    - - RockResourceIron
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.001
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 0
+    - 3
+    - 0.75
+    - 0
+    - 3
+    - 0.75
+    - 0.200000003
+    Color:
+    - 0
+    - 0.200000003
+    - 0
+    SelectionCriteria:
+    - Height < SeaLevel + 3
+    - Height > SeaLevel + 1
+    - Humidity > 0.60
+    - Temperature > -80
+    StampProb: 1
+    UndergroundLayers:
+    - - 0
+      - 0
+    - - 0
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: WaterSwamp
+    AmbientSound: ArcticLowPlains
+    Texture:
+    - 0
+    - 3
+    - 0.850000024
+    - 0
+    - 3
+    - 0.850000024
+    - 0.200000003
+    Color:
+    - 0
+    - 1
+    - 0.200000003
+    SelectionCriteria:
+    - Height < SeaLevel + 1
+    - Humidity > 0.63
+    - Temperature > -85
+    StampProb: 1
+    UndergroundLayers:
+    - - 0
+      - 0
+    - - 0
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: DriedMarsh
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RealRock3Dark
+      - 0.0004
+      - Free
+    - - RealRock4Dark
+      - 0.002
+      - Free
+    - - RealRock8Dark
+      - 0.0004
+      - Free
+    - - RealRock10Dark
+      - 0.0005
+      - Free
+    - - SkeletonMammothTorso
+      - 0.001
+      - Free
+    - - RockResourceIron
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 3
+    - 6
+    - 0.5
+    - 11
+    - 11
+    - 0.100000001
+    - 0.349999994
+    Color:
+    - 0.550000012
+    - 0.649999976
+    - 0.100000001
+    SelectionCriteria:
+    - Humidity > 0.55
+    - Temperature > -90
+    - Height < 48
+    StampProb: 1
+    UndergroundLayers:
+    - - 3
+      - 0
+    - - 3
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: DriedSavanna
+    Temperature: 1
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DesertRock1
+      - 0.002
+      - Free
+    - - DesertRock2
+      - 0.002
+      - Free
+    - - Boulder1
+      - 0.0001
+      - Free
+    - - Boulder2
+      - 0.0001
+      - Free
+    - - Boulder3
+      - 0.0001
+      - Free
+    - - Boulder4
+      - 0.00015
+      - Free
+    - - Boulder5
+      - 0.00015
+      - Free
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0004
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 7
+    - 8
+    - 0.800000012
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.649999976
+    - 0.579999983
+    - 0.0500000007
+    SelectionCriteria:
+    - Humidity < 0.16
+    - Temperature > -85
+    - Height < 80
+    StampProb: 0.5
+    Stamps:
+    - Flats_1, 0.6
+    - Valley_1, 0.3
+    - Valley_2, 0.3
+    - Valley_3, 0.3
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: Sand
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0002
+      - Free
+    - - RockResourceCopper
+      - 0.0002
+      - Free
+    Texture:
+    - 7
+    - 7
+    - 0.200000003
+    Color:
+    - 1
+    - 0
+    - 0
+    SelectionCriteria:
+    - Humidity < 0.35
+    - Temperature > -95
+    - Height < 110
+    StampProb: 0.300000012
+    Stamps:
+    - Flats_1, 0.8
+    - Cliff_1, 0.3
+    - Cliff_2, 0.3
+    - Cliff_3, 0.3
+    - Valley_1, 0.2
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 8
+    - - 10
+      - 5
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: DriedSavannaEdge
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DesertRock1
+      - 0.002
+      - Free
+    - - DesertRock2
+      - 0.002
+      - Free
+    - - Boulder1
+      - 0.0001
+      - Free
+    - - Boulder2
+      - 0.0001
+      - Free
+    - - Boulder3
+      - 0.0001
+      - Free
+    - - Boulder4
+      - 0.00015
+      - Free
+    - - Boulder5
+      - 0.00015
+      - Free
+    - - RockResourceIron
+      - 0.0003
+      - Free
+    - - RockResourceCopper
+      - 0.0004
+      - Free
+    - - RockResourceSilicon
+      - 0.0001
+      - Free
+    Texture:
+    - 7
+    - 8
+    - 0.200000003
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 0.699999988
+    - 0.699999988
+    - 0.0599999987
+    SelectionCriteria:
+    - Humidity < 0.28
+    - Temperature > -97
+    StampProb: 1
+    UndergroundLayers:
+    - - 7
+      - 0
+    - - 7
+      - 2
+    - - 11
+      - -1
+    - - 10
+      - 1
+  - Name: DeadOasis
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - RockGrey01Large
+      - 0.01
+    - - RockGrey02Large
+      - 0.01
+    - - RealRock1
+      - 0.001
+      - Free
+    - - RealRock4
+      - 0.001
+      - Free
+    - - RealRock5
+      - 0.001
+      - Free
+    - - RealRock6
+      - 0.001
+      - Free
+    - - RockResourceGold
+      - 0.005
+    - - RockResourceSilicon
+      - 0.005
+    - - RockResourceCopper
+      - 0.005
+    Texture:
+    - 7
+    - 0
+    - 0.600000024
+    - 11
+    - 11
+    - 1
+    - 0.349999994
+    Color:
+    - 1
+    - 0.699999988
+    - 0
+    SelectionCriteria:
+    - Height < 50
+    - Humidity > 0.40
+    - Humidity < 0.43
+    - Temperature > -65
+    - Temperature < -55
+    StampProb: 1
+    UndergroundLayers:
+    - - 7
+      - 2
+    - - 7
+      - -1
+    - - 12
+      - 1
+  - Name: DeadForest
+    Temperature: -1
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - DeadTree01
+      - 0.1
+      - Tree
+    - - DeadTree02b
+      - 0.1
+      - Tree
+    - - RealRock3Dark
+      - 0.0004
+      - Free
+    - - RealRock4Dark
+      - 0.002
+      - Free
+    - - RealRock8Dark
+      - 0.0004
+      - Free
+    - - RealRock10Dark
+      - 0.0005
+      - Free
+    - - AridRock01
+      - 0.0002
+      - Free
+    - - SkeletonMammothTorso
+      - 0.001
+      - Free
+    - - RockResourceCopper
+      - 0.0005
+      - Free
+    - - RockResourceSilicon
+      - 0.0003
+      - Free
+    Texture:
+    - 3
+    - 6
+    - 0.5
+    - 9
+    - 11
+    - 0.100000001
+    - 0.349999994
+    Color:
+    - 0
+    - 0.699999988
+    - 0
+    SelectionCriteria:
+    - Humidity > 0.30
+    - Temperature > -100
+    - Height > 30
+    - Height < 70
+    StampProb: 0.400000006
+    Stamps:
+    - Valley_3, 0.3
+    - Cliff_1, 0.5
+    - Cliff_3, 0.5
+    - Valley_1, 0.5
+    UndergroundLayers:
+    - - 10
+      - 0
+    - - 10
+      - 2
+    - - 10
+      - 3
+    - - 11
+      - -1
+    - - 12
+      - 1
+  - Name: Graveyard
+    AmbientSound: LavaFog
+    Decorations:
+    - - SkeletonWhaleFull
+      - 0.6
+    - - SkeletonWhaleHead
+      - 0.9
+    - - SkeletonWhalePart
+      - 0.6
+    - - SkeletonDragonHead
+      - 0.9
+    - - SkeletonDragonTorso
+      - 0.6
+    - - SkeletonMammothHead
+      - 0.9
+    - - SkeletonMammothTorso
+      - 0.6
+    - - CrystalsPyramidBlue
+      - 0.08
+    - - PromethiumStone
+      - 0.05
+    Texture:
+    - 2
+    - 2
+    - 0.200000003
+    Color:
+    - 0.400000006
+    - 0
+    - 0
+    SelectionCriteria:
+    - Height > 600
+    StampTries: 30
+    StampProb: 1
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    Stamps:
+    - Nest_01, 0.5
+    - Nest_02, 0.5
+    - CraterMoon_1, 0.5
+    - CraterMoon_2, 0.5
+    - CraterMoon_3, 0.5
+    - CraterMoon_4, 0.5
+    UndergroundLayers:
+    - - 2
+      - 3
+    - - 11
+      - 4
+    - - 10
+      - 20
+    - - 9
+      - -1
+    - - 10
+      - 1
+  - Name: Wasteland
+    AmbientSound: ArcticLowPlains
+    Decorations:
+    - - GasEmitter1
+      - 0.0001
+    - - GasEmitter2
+      - 0.0001
+    - - SkeletonDragonTorso
+      - 0.001
+    - - SkeletonMammothHead
+      - 0.001
+    - - SkeletonMammothTorso
+      - 0.001
+    - - RealRock10
+      - 0.0001
+      - Free
+    - - RealRock1
+      - 0.0001
+      - Free
+    - - RealRock3
+      - 0.0001
+      - Free
+    - - RealRock4
+      - 0.0001
+      - Free
+    - - RealRock8
+      - 0.0001
+      - Free
+    - - RockResourceIron
+      - 0.0001
+      - Free
+    - - RockResourceCopper
+      - 0.0001
+      - Free
+    Texture:
+    - 6
+    - 6
+    - 0.5
+    - 11
+    - 11
+    - 1
+    - 0.400000006
+    Color:
+    - 0.800000012
+    - 0.5
+    - 0
+    SelectionCriteria:
+    - true
+    StampProb: 0.150000006
+    Stamps:
+    - Flats_1, 0.3
+    - Cliff_1, 0.3
+    - Cliff_2, 0.3
+    - Cliff_3, 0.3
+    - Valley_1, 0.2
+    UndergroundLayers:
+    - - 6
+      - 0
+    - - 6
+      - 3
+    - - 10
+      - 5
+    - - 11
+      - -1
+    - - 12
+      - 1
+    UndergroundLayersDefault: true
+
+### POIs
+POIs:
+    Random:
+        # - GroupName: DroneBaseT1RG  #CommandCenter
+          # Faction: Zirax  
+          # NoShieldReload: True
+          # IsCommandCenter: True
+          # DroneBaseSetup: DroneBaseSetup
+          # CountMinMax: [ 0, 1 ]
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+
+              # Entries into the planet
+        # - GroupName: Eden_ProgenitorEntry
+          # Faction: Alien
+          # NoShieldReload: True  
+          # CountMinMax: [ 1, 1 ]
+          # IsImportant: True
+          # Properties:
+            # - Key: PersonalContainer
+              # Value: "SmallOptronicMatrix:1, LargeOptronicBridge:1, AutoMinerCore:2, GoldIngot:25, PentaxidOre:200, TechnicalArtifact:25"
+            # - Key: Discovery
+              # Value: False
+
+# # Progenitor Artifacts
+        # - GroupName: Eden_ProgenitorArray
+          # Faction: Alien
+          # CountMinMax: [ 10, 15 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+        # - GroupName: ProgenitorArtifacts
+          # Faction: Alien
+          # CountMinMax: [ 6, 8 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+# # Progenitor Symbols on surface
+        # - GroupName: Eden_ProgenitorSymbols
+          # Faction: Alien
+          # CountMinMax: [ 25, 50 ]
+          # IsScalingCount: True 
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: HudDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+    Fixed:
+
+# The Ark
+        - Type: BA_Admin
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeArkOld
+          Mode: Survival
+          Name: The Ark
+          Pos: [ 8145, 47, 615 ]
+          InitPower: True
+          Properties: 
+            - Key: Music
+              Value: Voyage
+            - Key: Discovery
+              Value: False
+            - Key: SI
+              Value: Off
+
+# Grave of Korvas
+        - Type: BA_Admin
+          Faction: Admin
+          NoShieldReload: True
+          Prefab: Eden_BA_RefugeGrave
+          Mode: Survival
+          Name: Grave
+          Pos: [ 8326, 70.2, 637 ]
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: SI
+              Value: Off
+
+
+
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+DroneBaseSetup:
+  Random:
+  - GroupName: DroneBaseSetup
+    Difficulty: 6
+    PresetStyle: 3
+    Stock:
+    - Name: DroneSmallFast01Minigun
+      Amount: 300
+    - Name: DroneSmallFast01Rocket
+      Amount: 100
+    - Name: DroneBomberAttackBase
+      Amount: Infinite
+      Extra: 1
+    - Name: EnemyDroneV2Plasma
+      Amount: Infinite
+      Extra: 1
+    - Name: DroneTroopsTransport
+      Amount: Infinite
+      Extra: 2
+    - Name: ZiraxMinigun
+      Amount: 500
+      Extra: 3
+    - Name: ZiraxRocket
+      Amount: 500
+      Extra: 3
+    - Name: Crawler
+      Amount: 150
+      Extra: 3
+    - Name: AlienAssassinGrey
+      Amount: 300
+      Extra: 3
+DroneSpawning:
+  Random:
+  - DronesMinMax:
+    - 0
+    - 0
+    CenterX: -5000
+  - DronesMinMax:
+    - 0
+    - 0
+    CenterX: 5000
+

@@ -1,0 +1,413 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [5]
+  SizeProbs: [1]       
+TemperatureMin: [-100, -70]                        
+TemperatureMax: [13,13]   
+TemperatureNight: [0,0]
+PlanetAxis: [-25,25]                
+HumidityMin: [0.05, 0.1]                   
+HumidityMax: [0.3, 0.35]                
+Radiation: [3, 6]             
+LandWaterRatio: [0, 0.0]                   
+SeaLevel: [0, 0]     
+TerrainLevel: [4, 4]    
+BaseLevel: [2, 2]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [1.0, 0.00]
+TemperatureNoiseFac: 0.16
+HumidityHeightFac: [0, 420]
+HumidityNoiseFac: 1.00
+
+GravityMinMax: [-10, -13]   # Jupiter: -24.79, Saturn: -10.44, Earth -9.807
+AtmosphereDensityMinMax: [3.0, 4.0]
+AtmosphereO2MinMax: [0.00, 0.00]
+AtmoBreathableProb: 0.0
+WaterProb: 0.0
+PvPProb: 0
+Water: [WaterGreen]
+Music: [snow]
+# ==============================================================
+GroundShapes: 
+
+
+HumidityMasks: 
+
+TemperatureMasks: 
+
+
+BiomeStampTries: 0
+
+Biomes: 
+ 
+# ==============================================================                 
+  - Name: Pole
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.2]  
+
+    SelectionCriteria:  
+    - +Lat > 0.975       
+    Color: [0, 0, 0]
+
+
+
+# ==============================================================                 
+  - Name: WaterChecker
+    AmbientSound: SmallLake
+    IgnoreForcedBiome: true
+    Texture: [0, 8, 0.20]   
+    Temperature: 5
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 3
+    - Temperature > -16
+    Color: [1, 0.0, 0]
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+
+    Grass: 
+
+                 
+                 
+
+# # ==============================================================                 
+  # - Name: Band_01
+    # AmbientSound: ArcticLowPlains 
+    # IgnoreForcedBiome: true
+    # Texture: [0, 0, 0.5]  
+
+    
+    # SelectionCriteria: 
+# #    - Height < 3
+    # - Temperature > 7
+    # - Temperature < 15
+    # Color: [0.54, 0.7, 0.79] 
+    
+    # UndergroundLayersDefault: True
+    # UndergroundLayers:
+               # - [0, 3]
+               # - [11, -1]
+               # - [15, 1]
+               
+# ==============================================================                 
+  - Name: Band_01to3
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+#    Texture: [3, 0, 0.5]  
+    Texture: [1, 1, 0.5]   # band 02
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 7
+    - Temperature < 15
+    Color: [0.54, 0.7, 0.79] 
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [0, 3]
+               - [11, -1]
+               - [15, 1]
+
+               
+               
+# ==============================================================                 
+  - Name: Band_01b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [2,2,0.8, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 5
+    - Temperature < 15
+    Color: [0.75, 0.68, 0.78] 
+
+# ==============================================================                 
+  - Name: Band_02a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0, 0, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 4
+
+    Color: [0.95, 0.68, 0.88] 
+
+   
+# ==============================================================                 
+  - Name: Band_02
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [1, 1, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 3
+
+    Color: [0.85, 0.78, 0.88] 
+
+# ==============================================================                 
+  - Name: Band_02b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+#    Texture: [1,0,0.5, 1,1,0.5, 0.5]  
+    Texture: [2, 2, 0.5]  
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 1
+
+    Color: [0.9, 0.78, 0.95] 
+
+    
+# ==============================================================                 
+  - Name: Band_03ablu
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0,6,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -0
+
+    Color: [0.35, 0.68, 0.78] 
+    
+
+# ==============================================================                 
+  - Name: Band_03abluDark
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0,3,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -1
+
+    Color: [0.75, 0.68, 0.38] 
+    
+# ==============================================================                 
+  - Name: Band_03
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [2, 2, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -2
+
+    Color: [1.07, 0.72, 0.74] 
+
+# ==============================================================                 
+  - Name: Band_04
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [3, 3, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -5
+
+    Color: [1, 0.77, 1] 
+    
+    
+# ==============================================================                 
+  - Name: Band_04b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [4,7,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -6.5
+
+    Color: [0.5, 0.77, 1] 
+    
+# ==============================================================                 
+  - Name: Band_05
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -9
+
+    Color: [1, 1, 1] 
+    
+# ==============================================================                 
+  - Name: Band_06
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [6, 6, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -13
+
+    Color: [0.85, 1.0, 0.8] 
+    
+# ==============================================================                 
+  - Name: Band_07
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [7, 7, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -14
+
+    Color: [0.99, 1, 0.85] 
+    
+# ==============================================================                 
+  - Name: Band_08
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [8, 8, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -15
+
+    Color: [0.84, 1.03, 0.54] 
+    
+    
+# ==============================================================                 
+  - Name: Band_08b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [8,9,0.2, 9,9,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -20
+
+    Color: [0.74, 1, 0.44] 
+    
+# ==============================================================                 
+  - Name: Band_09a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9,8,0.5, 9,9,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -22
+
+    Color: [1, 1, 0.55] 
+# ==============================================================                 
+  - Name: Band_09
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9, 9, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -24
+
+    Color: [1, 1, 0.47] 
+    
+# ==============================================================                 
+  - Name: Band_09b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9,2,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -28
+
+    Color: [1, 1, 0.35] 
+# ==============================================================                 
+  - Name: Band_10a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10,9,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -31
+
+    Color: [0.9, 0.9, 0.34] 
+# ==============================================================                 
+  - Name: Band_10
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10, 10, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -35
+
+    Color: [1.22, 1.23, 0.34] 
+    
+# ==============================================================                 
+  - Name: Band_10b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10,11,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -38
+
+    Color: [0.9, 1, 0.34] 
+    
+# ==============================================================                 
+  - Name: Band_11
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -42
+
+    Color: [1, 1, 1] 
+    
+    
+
+    
+# ==============================================================                 
+  - Name: Band_00
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+
+
+    Color: [0.7, 0.7, 0.4] 
+    

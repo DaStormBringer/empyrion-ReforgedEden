@@ -1,0 +1,84 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [2,3]
+  SizeProbs: [0.3,0.7]     
+TemperatureMin: [60,70]
+TemperatureMax: [80,100] 
+TemperatureNight: [160,200]
+
+PlanetAxis: [-25,25]                     
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [0, 9]
+SeaLevel: [-1, -1]                                      
+TerrainLevel: [100, 100]                              
+BaseLevel: [100, 100]
+LandWaterRatio: [0, 0]    
+TemperatureHeightRange: [30, 200]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+GravityMinMax: [-2, -1]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+GroundFogProb: 0
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [WaterBlue]
+Music: [BarrenMoon]
+# ==============================================================
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+ # - GroundShape_3, 0.5
+
+
+BiomeStampTries: 20
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole          # same as Craters biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [0, 1, 0.2] 
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.6, 0.6, 0.6]
+
+
+# ==============================================================
+# (HEIGHT CHECKER) -  Absolute minimum biome to check stamp interactions and keep enough ground depth. - Extremely rare, shouldn't show up.
+# ==============================================================
+  - Name: Unknown  
+    IgnoreForcedBiome: true
+    Texture: [0, 1, 0.2] 
+    
+    SelectionCriteria:
+    # - Height < 11
+    Color: [0.5, 0.5, 0.5]   
+    
+    # Radiation: -10
+    # Temperature: -50
+    
+    Decorations:  
+               # - [GlowTube01, 0.002]
+               # - [KavaePlant, 0.002, Plant]
+               # # Harvestables:
+               # - [ScalyPods, 0.05, Plant]  # Breeding...
+               # - [CrystalStraight, 0.008]
+               
+    Grass:
+
+  
+
+    

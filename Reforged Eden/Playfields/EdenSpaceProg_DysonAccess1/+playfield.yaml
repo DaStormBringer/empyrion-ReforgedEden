@@ -1,0 +1,1445 @@
+PlayfieldType: Space
+WorldName: 
+RealRadius: 0
+ScaledRadius: 0
+Gravity: 0
+PlanetAxis: 0
+PlanetRotAxis: 
+AtmosphereDensity: 0
+AtmosphereO2: 0.100000001
+AtmosphereBreathable: false
+Temperature: 0
+TemperatureDay: -147
+TemperatureNight: 0
+Radiation: 3.72406888
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 0
+DayLength: 0
+PlanetType: Beacon
+PlanetSize: 2
+Moons: 0
+Emissive: false
+Water: 
+PvP: false
+Difficulty: 1
+LegacyBiome: 
+ChunkProviderId: 0
+SunFlare: 
+# Nebula: PrefabNebulaBlueGlittery
+# Stars: SkyboxStarsPurple
+LocalEffect: 
+SpecialEffectsLocal: 
+SpecialEffectsGlobal: 
+AtmosphereEnabled: false
+AtmosphereColor: 0.55, 0.61, 0.65
+AtmosphereParams: 
+OrbitUsesLightColor: false
+SkyColor: 1, 1, 1
+SkyHorizonColor: 
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+AtmosphereFog: 0
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+FogIntensity: 0
+FogStartDistance: 0
+GroundFogIntensity: 0
+GroundFogHeight: 0
+
+
+Description: "Difficulty: [c][ff00ff]Ultra[-][/c]
+
+[c][ffff00]WARNING:[-][/c] Active Progenitor Defenses detected. Use extreme caution.
+
+[c][ffff00]Warp Anomaly:[-][/c] [c][ffffff]This sector can only be warped to from one of the Sphere Observation points.[-][/c]
+
+
+An access leading to the Dyson Sphere below. Mission [c][ff00ff]The Progenitors[-][/c] required to access."
+
+
+Seed: -2147483648
+TemperatureMinMax: 
+HumidityMinMax: 
+LandWaterRatio: 0
+TemperatureHeightRange: 
+TemperatureGradientRange: 
+TemperatureNoiseFac: 0
+HumidityHeightFac: 
+HumidityNoiseFac: 0
+TerrainHeightMapMax: -1
+GroundShapes: 
+TemperatureMasks: 
+HumidityMasks: 
+BiomeStampTries: 0
+PlayfieldLevel: 15
+PdaReferral: 
+BaseAttackCount: 1
+PfServerWeight: 0
+PlanetClass: Space
+UseFixed: true
+UseRandom: false
+Build: 2877
+Instance: 
+IndestructibleTerrain: false
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowMaxCPUTierSV: 0
+AllowMaxCPUTierCV: 0
+AllowMaxCPUTierHV: 0
+AllowMaxCPUTierBA: 0
+RestrictToOrigin: 255
+Music: Diaspora
+LandClaimZone: Default
+IsOrbitPlayfield: false
+RandomPOIs: 
+RandomDroneBase: 
+RandomResources: 
+FixedResources: 
+AsteroidResources: 
+Terrain: 
+MainBiome: 
+SubBiomes: 
+BiomeTextureReplacements: 
+Biome: 
+POIs:
+  Random:
+
+
+  Fixed:
+
+# ------------------------------------------------------------------------------------------------- Access point for Dyson Sphere - top section
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevatorTop
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: Discovery
+      Value: False
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 0
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+# ------------------------------------------------------------------------------------------------- Access point for Dyson Sphere - mid sections
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator3
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -200
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator2
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -400
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -600
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator3
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -800
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -1000
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator2
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -1200
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -1400
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevatorArm
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -1600
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -1800
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator2
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -2000
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevatorArm
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -2200
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -2400
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator3
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -2600
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevator2
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -2800
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+# ------------------------------------------------------------------------------------------------- Access point for Dyson Sphere - bottom section
+  - Type: BA_Admin
+    Prefab: Eden_BAO_ProgElevatorBot
+    Mode: Survival
+    SubMode: 
+    Name: Space Elevator Bottom
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - -3000
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+
+# ------------------------------------------------------------------------------------------------- Progenitor Defense Arrays - Do not use with regeneration or people can get stuck in the Dyson Sphere.
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgDefenseT2_2
+    Mode: Survival
+    SubMode: 
+    Name: Progenitor Defense Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 225
+    - 300
+    - 225
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgDefenseT2_2
+    Mode: Survival
+    SubMode: 
+    Name: Progenitor Defense Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - -225
+    - 300
+    - 225
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgDefenseT2_2
+    Mode: Survival
+    SubMode: 
+    Name: Progenitor Defense Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 225
+    - 300
+    - -225
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgDefenseT2_2
+    Mode: Survival
+    SubMode: 
+    Name: Progenitor Defense Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - -225
+    - 300
+    - -225
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+# ------------------------------------------------------------------------------------------------- Progenitor Rings
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgMain1
+    Mode: Survival
+    SubMode: 
+    Name: Unidentified Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 100
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+  - Type: BA_Admin
+    Prefab: Eden_BA_ProgMain2
+    Mode: Survival
+    SubMode: 
+    Name: Unidentified Array
+    InitPower: true
+    LevelMod: 
+    Faction: Alien
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 400
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: true
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+
+
+  FixedPlayerStart: 
+
+
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: Alien
+    Pos:
+    - -3012.54419
+    - -681
+    - -5922.8877
+    LevelMod: 
+    DroneOnDuty:
+
+# Alien drones inside the elevator
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 0
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -50
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -150
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -250
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -750
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -775
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -900
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -1400
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -1425
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -1450
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -1800
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -1850
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -2500
+      - 0
+      Radius: 500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - -2550
+      - 0
+      Radius: 500
+
+# Alien drones guarding the entrance
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - 500
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - 500
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - 500
+      - -500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - 500
+      - -500
+      Radius: 1500
+
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - 0
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - 0
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - 0
+      - -500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - 0
+      - -500
+      Radius: 1500
+
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - -500
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - -500
+      - 500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 500
+      - -500
+      - -500
+      Radius: 1500
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -500
+      - -500
+      - -500
+      Radius: 1500
+
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 1500
+      - 1000
+      - 1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -1500
+      - 1000
+      - 1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 1500
+      - 1000
+      - -1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -1500
+      - 1000
+      - -1500
+      Radius: 3000
+
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 1500
+      - -500
+      - 1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -1500
+      - -500
+      - 1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 1500
+      - -500
+      - -1500
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - -1500
+      - -500
+      - -1500
+      Radius: 3000
+
+# ---------------------------------------------------------------
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+    - Name: SpaceDroneLegacyLaser
+      Faction: Alien
+      Pos:
+      - 0
+      - 500
+      - 0
+      Radius: 3000
+
+
+
+
+
+
+
+    DroneSpaceFreighter: 
+    DronePlanetVessel: 
+
+
+# ======================================================================== Patrol Vessels
+    SpaceVessel:
+    - Name: Freighter
+      Faction: Alien
+      FixedMaxSpeed: 32
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 554
+        DelayBeforeSelfDestruction: 3600
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - 2352
+          - -6172
+          - -6734
+        - - 7563
+          - -8444
+          - -4498
+        - - 7485
+          - -6229
+          - 1220
+        - - 5495
+          - 2590
+          - 6379
+        - - 113
+          - -9323
+          - 8733
+        - - -5828
+          - 1976
+          - 7131
+        - - -7915
+          - 4087
+          - 1501
+        - - -7005
+          - -7031
+          - -3924
+        - - -3270
+          - -6071
+          - -8635
+      Stock:
+      - Name: SpaceDronePlasma
+        Amount: 4
+        Extra: 0
+        Type: FighterDrone
+# ------------------------------------------------------------------------------------------------- Andromeda > Kriel Defense Ships
+# Ship 1
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 50
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - 500
+        # - 0
+        # - 0
+        # Radius: 3000
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 14
+        # Extra: 1
+      # Properties:
+
+# # Ship 2
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 35
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - -500
+        # - 0
+        # - 0
+        # Radius: 1500
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 11
+        # Extra: 1
+      # Properties:
+
+# # Ship 3
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 35
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - 0
+        # - 0
+        # - 500
+        # Radius: 1250
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 8
+        # Extra: 1
+      # Properties:
+
+# # Ship 4
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 65
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - 0
+        # - 0
+        # - -500
+        # Radius: 1500
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 21
+        # Extra: 1
+      # Properties:
+
+# # Ship 5
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 65
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - 1500
+        # - 500
+        # - 1500
+        # Radius: 2500
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 21
+        # Extra: 1
+      # Properties:
+
+# # Ship 6
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 65
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - -1500
+        # - -500
+        # - -1500
+        # Radius: 3500
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 21
+        # Extra: 1
+      # Properties:
+
+# # Ship 7
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 65
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - -1500
+        # - 500
+        # - -1500
+        # Radius: 5000
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 21
+        # Extra: 1
+      # Properties:
+
+# # Ship 8
+    # - Name: OPVKrielRG
+      # Faction: Kriel
+      # FixedMaxSpeed: 65
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - 1500
+        # - -500
+        # - 1500
+        # Radius: 5000
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneKrielLaser
+        # Amount: 21
+        # Extra: 1
+      # Properties:
+
+
+
+    DronePlanetBase:
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 

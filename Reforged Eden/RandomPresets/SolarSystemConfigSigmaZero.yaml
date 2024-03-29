@@ -1,0 +1,465 @@
+---
+GenerationParams:
+  MapScale: 1.0          # how much the sectors are spread out  
+  # float [0..1] solar systems are more like a cookie than a ball. the lower the value, the flatter the system
+  SolarSystemSqueezeMinMax: [0.005, 0.010] 
+  # float [0..1] probability a warp connection will be one-way
+  OneWayWarpProb: 0
+  UniqueStarterPlanet: true
+  
+  #==== 1st Step of SolarSystem Generation: setting amount and playfield types  for System Content  ===
+
+  PlanetCountProbs:
+     - '0 : 1'           # 1 - GasPlanets: defines the min-max amount of playfields. Each Amount can have an individual probability. Combinations of amounts with and without probabilies is possible. If no individual probability is set, the 'amount number' will get an average of the remaining probability. Example [0:0.1,3]  > 0 has probability 10%. 1,2 and 3 share the other 90% = 1 has 30%, 2 has 30%, 3 has 30%
+     - '0 : 1'                     # 2 - Hot Planets
+     - '0 : 1'                     # 3 - Dry planets
+     - '0 : 1'                     # 4 - Temperate planets
+     - '0 : 1'                               # 5 - Alien planets
+     - '0 : 1'                               # 6 - Snow planets
+     - '0 : 1'                     # 7 - Barren
+  #Organizes the GasPlanets class lables and their [probability] to show up for any of the 'GasPlanets slots' drawn in the 1st Step
+  PlanetLists:           # Lable name depicts, in a descriptive way, the class or global or visual approach of the playfields summarized under this lable; playfields are added in the *Types sections
+    - 'Jupiter:0.45, Saturn: 0.35, Neptun:0.2'                         # 1 GasPlanets
+    - 'Lava:1'                                          # 2 Hot
+    - 'Arid:0.4, Desert:0.6'                            # 3 Dry
+    - 'Temperate:0.5, TemperateSwamp:0.3, Ocean:0.2'    # 4 Temperate
+    - 'Alien:0.2'                                       # 5 Alien
+    - 'Snow:0.5'                                        # 6 Snow
+    - 'Barren:0.5'                                      # 7 Barren
+
+  # PlanetCountProbs:
+     # - '10 : 1'           # TESTING; 1 - GasPlanets: 
+  # PlanetLists:           
+     # - 'Jupiter:1'                         # TESTING; 1 GasPlanets 
+
+  POICountProbs: '1: 1'
+  POIs: 'AsteroidFieldRich: 1'  
+  
+ # for 3D map purposes, limit climate (optional for non-terrain types) to one of Lava, Temperate, Snow, Desert, Alien, or Barren
+  PlanetTypes:      # come up with general categories of planet (playfield) types for distance purposes
+      - Name: Jupiter 
+        Color: [0.22,0.54,0.69,  0.50,0.33,0.25,  0.68,0.56,0.26,  0.45,0.20,0.09,  0.38,0.27,0.40]
+        # Distance: [100, 300]
+        Icon: GasGiant
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '3:0.45, 4:0.35, 5:0.2'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [DefaultMoon, MoonForest, MoonIce, MoonDesert, MoonLava, MoonNascent]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [9,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [JupiterBlue, JupiterBrown, JupiterYellow, JupiterBrown2, JupiterPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+      - Name: Saturn 
+        Color: [0.22,0.54,0.69,  0.33,0.20,0.14,  0.68,0.56,0.26,  0.25,0.53,0.05,  0.38,0.27,0.40]
+        Icon: GasGiantRing
+        # Distance: [100, 300]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '1:0.5, 2:0.3, 3:0.2'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [DefaultMoon, MoonForest, MoonIce, MoonDesert, MoonLava, MoonNascent]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [8,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [SaturnBlue, SaturnBrown, SaturnYellow, SaturnGreen, SaturnPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+      - Name: Neptun 
+        Color: [0.42,0.54,0.31,  0.36,0.30,0.56]
+        Icon: GasGiant
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '1:0.5, 2'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [DefaultMoon, MoonIce, MoonLava, MoonNascent]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [8,10]
+        ForcePlanetType: [NeptuneGreen, NeptunePurple]
+        HasOrbit: false
+        Playfields:
+            - GasGiant
+      - Name: Lava 
+        Color: [0.57, 0.09, 0.05]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem 
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonNascent]   
+        Climate: Lava      # added for description text prior to writing files
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - LavaNascentDeepMine
+      - Name: Desert 
+        Color: [0.50, 0.32, 0.04]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableHot
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonNascent, DefaultMoon]   
+        # OrbitType: [DefaultOrbit, AsteroidField2]      
+        Climate: Desert
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - Desert
+      - Name: Arid 
+        Color: [0.50, 0.47, 0.04]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableHot
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'   
+        MoonType: [MoonNascent, DefaultMoon]   
+        Climate: Arid
+        PlayfieldLevel: [4,8]
+        Playfields:
+            - Arid
+      - Name: TemperateStarter
+        Color: [0.04, 0.8, 0.1]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableTemperate
+        PlayerStart: true
+        # Neighbor 'Name, Probability [0..1]' 
+        # Neighbor: 
+        #  - Snow, 1
+        #  - SpaceTradingStation, 0.3
+        OrbitType: [OrbitStarter]         
+        MoonProb: '1:1'
+        MoonType: [MoonStarter]       
+        #MoonCount: [5,8]
+        Climate: Temperate
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - TemperateStarter
+      - Name: AridStarter
+        Color: [0.50, 0.47, 0.04]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableHot
+        PlayerStart: true
+        OrbitType: [OrbitStarter]         
+        MoonProb: '1:1'
+        MoonType: [MoonStarter]       
+        Climate: Arid
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - AridStarter
+      - Name: TemperateStarter2
+        Color: [0.04, 0.8, 0.1]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableTemperate
+        PlayerStart: true
+        # Neighbor 'Name, Probability [0..1]' 
+        # Neighbor: 
+        #  - Snow, 1
+        #  - SpaceTradingStation, 0.3
+        OrbitType: [OrbitStarter]         
+        MoonProb: '1:1'
+        MoonType: [MoonStarter]       
+        Climate: Temperate
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - TemperateSwampStarter
+      - Name: Temperate
+        Color: [0.04, 0.5, 0.1]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableTemperate
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        # MoonCount: [2,4]
+        MoonType: [MoonLava, MoonIce, DefaultMoon]   
+        Climate: Temperate
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - Temperate
+      - Name: TemperateSwamp
+        Color: [0.04, 0.5, 0.1]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableTemperate
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonLava, MoonNascent, MoonIce, DefaultMoon]   
+        Climate: Temperate
+        PlayfieldLevel: [5,7]
+        Playfields:
+            - TemperateSwamp
+      - Name: Ocean
+        Color: [0.04, 0.5, 0.1]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableTemperate
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonLava, MoonIce, DefaultMoon]   
+        Climate: Temperate
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - Ocean
+      - Name: Alien
+        Color: [0.04, 0.75, 0.74]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'  
+        MoonType: [MoonLava, MoonIce, DefaultMoon]              
+        Climate: Alien
+        PlayfieldLevel: [7,10]
+        Playfields:
+            - Alien
+      - Name: AlienLegacy
+        Color: [0.04, 0.75, 0.74]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        OrbitType: [OrbitLegacy] 
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'  
+        MoonType: [MoonLava, MoonIce, DefaultMoon]              
+        Climate: Alien
+        PlayfieldLevel: [7,10]
+        Playfields:
+            - AlienLegacy
+      - Name: Snow
+        Color: [0.16, 0.18, 0.51]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold 
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonIce, DefaultMoon]       
+        Climate: Snow
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - Snow
+      - Name: SnowStarter
+        Color: [0.16, 0.18, 0.51]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold
+        PlayerStart: true        
+        OrbitType: [OrbitStarter]         
+        MoonProb: '1:1'
+        MoonType: [MoonStarter]           
+        Climate: Snow
+        PlayfieldLevel: [2,3]
+        Playfields:
+            - SnowStarter
+      - Name: Barren 
+        Color: [0.49, 0.49, 0.49]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonIce, DefaultMoon]   
+        Climate: Barren  
+        PlayfieldLevel: [5,10]
+        Playfields:
+            - BarrenMetal, 0.6
+            - Barren, 0.4
+
+  # ======== Moon Types ================
+  MoonTypes:
+      - Name: DefaultMoon          # definition of default name 'DefaultMoon' is mandatory
+        Color: [0,0,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,10]
+        Playfields:
+            - Moon 
+      - Name: MoonStarter
+        Color: [0,0,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - MoonStarter 
+      - Name: MoonForest
+        Color: [0.04, 0.5, 0.1]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - MoonForest 
+      - Name: MoonIce
+        Color: [0.16, 0.18, 0.51]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,10]
+        Playfields:
+            - MoonIce    
+            - MoonIce2
+      - Name: MoonDesert
+        Color: [0.50, 0.32, 0.04]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - MoonDesert 
+      - Name: MoonLava
+        Color: [0.57, 0.09, 0.05]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - MoonLava, 0.5  
+            - MoonLava2, 0.5    
+      - Name: MoonNascent
+        Color: [0.3, 0.06, 0.04]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - MoonNascent 
+
+  # ======== POIs ================
+  POITypes:
+      - Name: SpaceEmpty
+        Color: [0.49, 0.49, 0.49]
+        Icon: SpaceEmpty
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceEmpty
+      - Name: AsteroidFieldFew
+        Color: [0.49, 0.49, 0.49]
+        Icon: AsteroidFieldFew
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidFieldFew
+      - Name: AsteroidField
+        Color: [0.49, 0.49, 0.49]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidField
+      - Name: AsteroidFieldRich                 # GLaD
+        Icon: AsteroidFieldRich
+        Color: [0.49, 0.49, 0.49]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidFieldGLaD
+      - Name: AsteroidFieldPirate
+        Faction: [Pirates, None]s                    
+        Icon: AsteroidFieldAttention
+        Color: [0.49, 0.49, 0.49]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - SpaceAsteroidFieldPirates
+      - Name: AsteroidFieldJunkyard
+        Icon: AsteroidFieldJunkyard
+        Color: [0.49, 0.49, 0.49]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidFieldJunkyard
+      - Name: AsteroidFieldLegacy
+        Icon: AsteroidFieldAttention
+        Color: [0.49, 0.49, 0.49]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidFieldLegacy
+            
+  # ======== Stations ================            
+  StationTypes:
+      - Name: SpaceTradingStation
+        Color: [0.7, 0.5, 0.0]
+        Icon: Station
+        Distance: [200, 300]
+        Placement: 
+            - InnerSystem
+            - HabitableHot
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceAsteroidFieldSigma
+            
+  # ======== OrbitTypes ================
+  OrbitTypes:
+      - Name: DefaultOrbit     # definition of default name 'DefaultOrbit' is mandatory
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceOrbit
+      - Name: OrbitStarter
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - SpaceOrbitStarter 
+      - Name: OrbitLegacy
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - SpaceOrbitLegacy 

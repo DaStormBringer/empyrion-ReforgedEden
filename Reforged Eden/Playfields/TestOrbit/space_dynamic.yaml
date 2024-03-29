@@ -1,0 +1,1950 @@
+# Playfield Characteristics
+Description: "Empty space."
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+# Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase] # POI
+Music: [2473, Adrift, Anomalous, ColdSpace, EnergyMatrix, FirstHours, Magnitude, moonstone, MorningLight, Transit, Voyage]
+
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Orbit
+
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 0, 0 ]
+      Probability: 0
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+
+### POIs
+POIs:
+    # - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      # FieldName: [AsteroidFieldRing] # used if playfield is not an orbit
+      # CountMinMax: [ 1, 1 ]     
+      # Probability: 1
+      # BaseField: True  
+      # RandomRotation: True
+
+    - Name: [Eden_SectorNebulaNewBlueFog, Eden_SectorNebulaNewBlueFog2, Eden_SectorNebulaNewCyanFog, Eden_SectorNebulaNewCyanFog2, Eden_SectorNebulaNewDustFog, Eden_SectorNebulaNewDustFog2, Eden_SectorNebulaNewOrangeFog, Eden_SectorNebulaNewOrangeFog2, Eden_SectorNebulaNewBlueStorm]
+      FieldName: [Eden_SectorNebulaNewBlueFog, Eden_SectorNebulaNewBlueFog2, Eden_SectorNebulaNewCyanFog, Eden_SectorNebulaNewCyanFog2, Eden_SectorNebulaNewDustFog, Eden_SectorNebulaNewDustFog2, Eden_SectorNebulaNewOrangeFog, Eden_SectorNebulaNewOrangeFog2, Eden_SectorNebulaNewBlueStorm] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      # Position:
+         # PosXZMinMax: [50, 100]
+         # PosYMax: 50
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Project Eden POIs
+# ======================================================================================================================================================================================================
+# Project Eden Research Vessel ----------------------------------------------------------
+    # - Type: BA_Admin
+      # GroupName: Eden_UCHResearchShip
+      # # Name: [Eden_BAO_UCHResearchShp]
+      # # DisplayName: UCH Research Vessel
+      # # Faction: UCH
+      # Faction: Admin
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0
+      # InitPower: True
+      # Pos: [0, 0, 0]
+      # Rot: [0, 0, 0]
+      # Properties:
+        # - Key: Discovery
+          # Value: False
+        # - Key: Music
+          # # Value: Reaver
+          # Value: Mute
+        # - Key: RegenAfter
+          # Value: 720
+        # - Key: StationInterface
+          # Value: "Fuel:2,O2:2,Warp:2,IfNeutral:0.2,IfHonored:-0.20"
+
+
+# ================================================================================================================================================================================= Wreckage
+
+# TEST
+    # - Type: BA_Alien
+      # GroupName: Eden_SpaceJunkT1
+      # Faction: Polaris
+      # # FactionTerritory: [Pirates, Warlord, Wastelanders]
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 40, 40 ]
+      # Probability: 1
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Compound:
+        # CountMinMax: [2, 6]
+        # Probability: 1
+        # Name: [CompoundAudioWreck, CompoundWreckT1, CompoundWreckT1, CompoundDebrisField, CompoundDebrisField]
+        # DistanceMinMax: [35, 75]
+        # Rotate: true
+      # Position:
+         # PosXZMinMax: [750, 5000]
+         # PosYMax: 3000
+      # Properties:
+        # - Key: MapDistance
+          # Value: 3000
+        # - Key: HudDistance
+          # Value: 3000
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+# TEST
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Wreck section
+# ======================================================================================================================================================================================================
+
+# ----------------------------------------------- SV and CV
+# SV wrecks in civilized territory
+    - Type: SV_Player
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory, Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# SV wrecks in dangerous territory
+    - Type: SV_Player
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# CV wrecks in civilized territory
+    - Type: CV_Alien
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# CV wrecks in dangerous territory
+    - Type: CV_Alien
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# Assorted ship wreck groups in dangerous territory
+    - Type: CV_Alien
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 7]
+        Probability: 1
+        Name: [CompoundWreckSVWarlord, CompoundWreckSVWarlord, CompoundDebrisFieldLWarlord, CompoundWreckCVWarlord, CompoundAudioWreckWarlord, CompoundWreckCVWarlord, CompoundDebrisFieldLWarlord]
+        DistanceMinMax: [35, 75]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# ----------------------------------------------- BA
+# T1 wrecks in civilized territory
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # FactionTerritory: [Polaris, Colonists, Trader, Pirates, Warlord, Zirax, Wastelanders]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 2, 8 ]
+      Probability: 0.75
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 5000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T1 wrecks in dangerous territory
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 6, 12 ]
+      Probability: 0.75
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 5000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T1 wreck groups in dangerous territory
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 4]
+        Probability: 1
+        Name: [CompoundWreckT1Warlord, CompoundWreckT1Warlord, CompoundDebrisFieldWarlord, CompoundDebrisFieldWarlord]
+        DistanceMinMax: [35, 75]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 5000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T2 wrecks in civilized territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T2 wreck groups in civilized territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.15
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 4]
+        Probability: 1
+        Name: [CompoundWreckT1Civilian, CompoundWreckT1Civilian, CompoundDebrisFieldCivilian, CompoundDebrisFieldCivilian]
+        DistanceMinMax: [35, 75]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T2 wrecks in dangerous territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T2 wreck groups in dangerous territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 11]
+        Probability: 1
+        Name: [CompoundWreckT1Warlord, CompoundWreckT1Warlord, CompoundWreckT2Warlord, CompoundDebrisFieldLWarlord, CompoundWreckT1Warlord, CompoundAudioWreckWarlord, CompoundDebrisFieldWarlord, CompoundWreckCVWarlord, CompoundDebrisFieldWarlord, CompoundGasCloudRedWarlord, CompoundWreckT2Warlord]
+        DistanceMinMax: [75, 135]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Extra T2 wreck groups in Wastelanders territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]
+      Probability: 0.75
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [6, 10]
+        Probability: 1
+        Name: [CompoundWreckT1Wastelanders, CompoundWreckT1Wastelanders, CompoundWreckT2Wastelanders, CompoundDebrisFieldLWastelanders, CompoundWreckT1Wastelanders, CompoundAudioWreckWastelanders, CompoundDebrisFieldWastelanders, CompoundWreckCVWastelanders, CompoundDebrisFieldWastelanders, CompoundGasCloudRedWastelanders, CompoundWreckT2Wastelanders]
+        DistanceMinMax: [75, 135]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T3 wreck groups in dangerous territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT3
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 14]
+        Probability: 1
+        Name: [CompoundWreckT1Warlord, CompoundWreckT1Warlord, CompoundAudioWreckWarlord, CompoundWreckT2Warlord, CompoundWreckT2Warlord, CompoundDebrisFieldLWarlord, CompoundDebrisFieldLWarlord, CompoundWreckCVWarlord, CompoundWreckT2Warlord, CompoundGasCloudRedWarlord, CompoundWreckT2Warlord, CompoundWreckCVWarlord, CompoundDebrisFieldLWarlord, CompoundDebrisFieldLWarlord]
+        DistanceMinMax: [125, 225]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Extra T3 wreck groups in Wastelanders territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT3
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [8, 14]
+        Probability: 1
+        Name: [CompoundWreckT1Wastelanders, CompoundWreckT1Wastelanders, CompoundAudioWreckWastelanders, CompoundWreckT2Wastelanders, CompoundWreckT2Wastelanders, CompoundDebrisFieldLWastelanders, CompoundDebrisFieldLWastelanders, CompoundWreckCVWastelanders, CompoundWreckT2Wastelanders, CompoundGasCloudRedWastelanders, CompoundWreckT2Wastelanders, CompoundWreckCVWastelanders, CompoundDebrisFieldLWastelanders, CompoundDebrisFieldLWastelanders]
+        DistanceMinMax: [125, 175]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# T4 wreck groups in dangerous territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT4
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.05
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 12]
+        Probability: 1
+        Name: [CompoundWreckT1Warlord, CompoundWreckT1Warlord, CompoundAudioWreckWarlord, CompoundWreckT2Warlord, CompoundWreckT2Warlord, CompoundDebrisFieldLWarlord, CompoundDebrisFieldLWarlord, CompoundWreckT2Warlord, CompoundGasCloudRedWarlord, CompoundWreckT2Warlord, CompoundDebrisFieldLWarlord, CompoundDebrisFieldLWarlord]
+        DistanceMinMax: [125, 175]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Extra T4 wreck groups in Wastelanders territory.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT4
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.15
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 12]
+        Probability: 1
+        Name: [CompoundWreckT1Wastelanders, CompoundWreckT1Wastelanders, CompoundAudioWreckWastelanders, CompoundWreckT2Wastelanders, CompoundWreckT2Wastelanders, CompoundDebrisFieldLWastelanders, CompoundDebrisFieldLWastelanders, CompoundWreckT2Wastelanders, CompoundGasCloudRedWastelanders, CompoundWreckT2Wastelanders, CompoundDebrisFieldLWastelanders, CompoundDebrisFieldLWastelanders]
+        DistanceMinMax: [125, 175]
+        Rotate: true
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 9000
+        - Key: HudDistance
+          Value: 9000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+
+# =============================================== Compound definitions for wrecks
+# ----------------------------------------------- CV
+# CV Wreck Compound Civilian
+    - Type: CV_Alien
+      Name: [CompoundWreckCVCivilian]
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# CV Wreck Compound Warlord
+    - Type: CV_Alien
+      Name: [CompoundWreckCVWarlord]
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# CV Wreck Compound Wastelanders
+    - Type: CV_Alien
+      Name: [CompoundWreckCVWastelanders]
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# CV Wreck Compound All
+    - Type: CV_Alien
+      Name: [CompoundWreckCVAll]
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# ----------------------------------------------- SV
+# SV Wreck Compound Civilian
+    - Type: SV_Alien
+      Name: [CompoundWreckSVCivilian]
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# SV Wreck Compound Warlord
+    - Type: SV_Alien
+      Name: [CompoundWreckSVWarlord]
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# SV Wreck Compound Wastelanders
+    - Type: SV_Alien
+      Name: [CompoundWreckSVWastelanders]
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# SV Wreck Compound All
+    - Type: SV_Alien
+      Name: [CompoundWreckSVAll]
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      # FactionTerritory: [All]
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+
+# ----------------------------------------------- BA
+# Wreckage Tier 1 Compound Civilian.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1Civilian]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 1 Compound Warlord.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1Warlord]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 1 Compound Wastelanders.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1Wastelanders]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 1 Compound All.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1All]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 2 Compound Civilian.
+    - Type: BA_Alien
+      Name: [CompoundWreckT2Civilian]
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 2 Compound Warlord.
+    - Type: BA_Alien
+      Name: [CompoundWreckT2Warlord]
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 2 Compound Wastelanders.
+    - Type: BA_Alien
+      Name: [CompoundWreckT2Wastelanders]
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage Tier 2 Compound All.
+    - Type: BA_Alien
+      Name: [CompoundWreckT2All]
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+
+# ----------------------------------------------- Ambient Audio
+# Audio compound Civilian
+    - Type: BA_Alien
+      Name: [CompoundAudioWreckCivilian]
+      GroupName: Eden_SpaceAudioWreck
+      Faction: None
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Audio compound Warlord
+    - Type: BA_Alien
+      Name: [CompoundAudioWreckWarlord]
+      GroupName: Eden_SpaceAudioWreck
+      Faction: None
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Audio compound Wastelanders
+    - Type: BA_Alien
+      Name: [CompoundAudioWreckWastelanders]
+      GroupName: Eden_SpaceAudioWreck
+      Faction: None
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Audio compound All
+    - Type: BA_Alien
+      Name: [CompoundAudioWreckAll]
+      GroupName: Eden_SpaceAudioWreck
+      Faction: None
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# ----------------------------------------------- Debris
+# Debris compound Civilian
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldCivilian]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Debris compound Warlord
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldWarlord]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Debris compound Wastelanders
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldWastelanders]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Debris compound All
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldAll]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+
+# Large Debris compound Civilian
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldLCivilian]
+      GroupName: Eden_DebriFieldLarge
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Large Debris compound Warlord
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldLWarlord]
+      GroupName: Eden_DebriFieldLarge
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Large Debris compound Wastelanders
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldLWastelanders]
+      GroupName: Eden_DebriFieldLarge
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Large Debris compound All
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldLAll]
+      GroupName: Eden_DebriFieldLarge
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+
+# ----------------------------------------------- Gas Clouds
+# Rust cloud Compound for Wastelanders.
+    - Type: Eden_NebulaRustSmall
+      Name: [CompoundRustCloudWastelanders]
+      DisplayName: Gas Cloud
+      Faction: Wastelanders
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 100
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# Gas clouds compound Blue Civilian
+    - Type: BA_Alien
+      Name: [CompoundGasCloudBlueCivilian]
+      GroupName: Eden_GasCloudBlue
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Blue Warlord
+    - Type: BA_Alien
+      Name: [CompoundGasCloudBlueWarlord]
+      GroupName: Eden_GasCloudBlue
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Blue Wastelanders
+    - Type: BA_Alien
+      Name: [CompoundGasCloudBlueWastelanders]
+      GroupName: Eden_GasCloudBlue
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.75
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Blue All
+    - Type: BA_Alien
+      Name: [CompoundGasCloudBlueAll]
+      GroupName: Eden_GasCloudBlue
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas clouds compound Red Civilian
+    - Type: BA_Alien
+      Name: [CompoundGasCloudRedCivilian]
+      GroupName: Eden_GasCloudRed
+      Faction: Eden_Wreck
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Red Warlord
+    - Type: BA_Alien
+      Name: [CompoundGasCloudRedWarlord]
+      GroupName: Eden_GasCloudRed
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Red Wastelanders
+    - Type: BA_Alien
+      Name: [CompoundGasCloudRedWastelanders]
+      GroupName: Eden_GasCloudRed
+      Faction: Eden_Wreck
+      FactionTerritory: [Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.75
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Gas cloud compound Red All
+    - Type: BA_Alien
+      Name: [CompoundGasCloudRedAll]
+      GroupName: Eden_GasCloudRed
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+
+    # - Type: BA_Alien
+      # Name: [CompoundDebrisFieldLarge]
+      # GroupName: Eden_DebriFieldLarge
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+
+
+
+
+
+
+# # Wreckage T3
+    # - Type: BA_Alien
+      # GroupName: Eden_SpaceJunkT3
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders, Epsilon]
+      # Mode: Survival
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Compound:
+        # CountMinMax: [6, 14]
+        # Probability: 1
+        # Name: [CompoundWreckT1, CompoundDebrisFieldLargeWastelanders, CompoundDebrisFieldLargeWastelanders, CompoundDebrisFieldLargeWastelanders, CompoundWreckT1, CompoundWreckT2, CompoundWreckT1, CompoundWreckT1, CompoundDebrisFieldLargeWastelanders, CompoundWreckT2, CompoundWreckT1, CompoundWreckT1, CompoundGasCloudRedRandomWastelanders, CompoundWreckT2]
+        # DistanceMinMax: [135, 400]
+        # Rotate: true
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+      # Properties:
+        # - Key: MapDistance
+          # Value: 9000
+        # - Key: HudDistance
+          # Value: 9000
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Wreckage T3 CV
+    # - Type: CV_Alien
+      # GroupName: Eden_SpaceJunkCVT3
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders, Epsilon]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.15
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Compound:
+        # CountMinMax: [6, 14]
+        # Probability: 1
+        # Name: [CompoundWreckT1, CompoundDebrisFieldLargeWastelanders, CompoundDebrisFieldLargeWastelanders, CompoundDebrisFieldLargeWastelanders, CompoundWreckT1, CompoundWreckT2, CompoundWreckT1, CompoundWreckT1, CompoundDebrisFieldLargeWastelanders, CompoundWreckT2, CompoundWreckT1, CompoundWreckT1, CompoundGasCloudRedRandomWastelanders, CompoundWreckT2, CompoundWreckT1, CompoundWreckT1, CompoundWreckT2, CompoundGasCloudRedRandomWastelanders, CompoundDebrisFieldLargeWastelanders, CompoundWreckT1, CompoundWreckT1, CompoundWreckT2, CompoundWreckT1]
+        # DistanceMinMax: [135, 400]
+        # Rotate: true
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+
+# # Wreckage Tier 1 Compound.
+    # - Type: BA_Alien
+      # Name: [CompoundWreckT1]
+      # GroupName: Eden_SpaceJunkT1
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: MapMarker 
+          # Value: Neutral  
+        # - Key: RegenAfter
+          # Value: 720  
+
+# # Wreckage Tier 2 Compound.
+    # - Type: BA_Alien
+      # Name: [CompoundWreckT2]
+      # GroupName: Eden_SpaceJunkT2
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Junkyard Space Compound.
+    # - Type: BA_Alien
+      # Name: [CompoundJunkYardSpace]
+      # GroupName: JunkYardSpaceBAO
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Wastelanders Territory
+    # - Type: BA_Alien
+      # Name: [CompoundJunkYardSpaceWastelanders]
+      # GroupName: JunkYardSpaceBAO
+      # Faction: None
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+
+# # BA single
+    # - Type: BA_Alien
+      # GroupName: JunkYardSpaceBAO
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+      # Properties:
+        # - Key: MapMarker
+          # Value: Neutral
+        # - Key: RegenAfter
+          # Value: 720
+
+# # CV single
+    # - Type: CV_Alien
+      # GroupName: JunkYardSpaceCV
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+      # Properties:
+        # - Key: MapMarker
+          # Value: Neutral
+
+# # SV single
+    # - Type: SV_Player
+      # GroupName: JunkYardSpaceSV
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 0, 3 ]
+      # Probability: 0.3
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000
+      # Properties:
+        # - Key: MapMarker
+          # Value: Neutral
+
+# # Debris fields
+    # - Type: BA_Alien
+      # Name: [CompoundDebrisField]
+      # GroupName: Eden_DebriField
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundDebrisFieldLarge]
+      # GroupName: Eden_DebriFieldLarge
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Wastelanders
+    # - Type: BA_Alien
+      # Name: [CompoundDebrisFieldWastelanders]
+      # GroupName: Eden_DebriField
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundDebrisFieldLargeWastelanders]
+      # GroupName: Eden_DebriFieldLarge
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.8
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Gas clouds
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudBlue]
+      # GroupName: Eden_GasCloudBlue
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudRed]
+      # GroupName: Eden_GasCloudRed
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudBlueRandom]
+      # GroupName: Eden_GasCloudBlue
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudRedRandom]
+      # GroupName: Eden_GasCloudRed
+      # Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+# # Gas clouds for Wastelanders territory
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudBlueWastelanders]
+      # GroupName: Eden_GasCloudBlue
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudRedWastelanders]
+      # GroupName: Eden_GasCloudRed
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudBlueRandomWastelanders]
+      # GroupName: Eden_GasCloudBlue
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
+
+    # - Type: BA_Alien
+      # Name: [CompoundGasCloudRedRandomWastelanders]
+      # GroupName: Eden_GasCloudRed
+      # Faction: Eden_Wreck
+      # FactionTerritory: [Wastelanders]
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.25
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # IsCompoundSubDesc: True
+      # Position:
+         # PosXZMinMax: [750, 7000]
+         # PosYMax: 5000 
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720

@@ -1,0 +1,480 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+
+Devoid of any natural life, this planet is scorched during the day by its proximity to the sun and freezes at night."   
+
+
+PlanetType: Barren
+PlayfieldType: Planet
+Difficulty: 2
+
+LandClaimZone: Device
+
+
+# Atmosphere and Sky
+AtmosphereEnabled: False
+
+# Light
+DayLightIntensity: 1.6
+NightLightIntensity: 0.7
+
+DayShadowStrength: 0.95
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+    - Name: IronResource
+      IsScalingCount: True
+      CountMinMax: [ 1, 1 ]
+      SizeMinMax: [ 9, 10 ]
+      DepthMinMax: [ 2, 5 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+    - Name: MagnesiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 6, 7 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 32
+        #YVariance: 3
+
+    - Name: SathiumResource
+      # IsScalingCount: True
+      CountMinMax: [ 2, 2 ]
+      SizeMinMax: [ 10, 11 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      DepthMinMax: [ 0, 1 ]
+      #DistTypeCylinder:
+        #MaxRadius: 32
+        #YVariance: 3
+
+    - Name: SathiumResource
+      IsScalingCount: True
+      CountMinMax: [ 5, 6 ]
+      SizeMinMax: [ 5, 6 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      DepthMinMax: [ 2, 5 ]
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+    - Name: GoldResource
+      IsScalingCount: True
+      CountMinMax: [ 5, 6 ]
+      SizeMinMax: [ 2, 3 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      DepthMinMax: [ 1, 2 ]
+      #DistTypeCylinder:
+        #MaxRadius: 2
+        #YVariance: 2
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.1
+       Amount: 0.2
+     - Name: MagnesiumResource
+       Threshold: 0.1
+       Amount: 0.2
+     - Name: SathiumResource
+       Threshold: 0.1
+       Amount: 0.2
+
+### POIs
+POIs:
+    Random:
+# Command Center
+        - GroupName: DroneBaseT1RG
+          IsImportant: True
+          Faction: Zirax  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          SpawnResource: ["GoldResource:0-1"]
+          SpawnResourceRange: [125,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Extra Drone Bases
+        - GroupName: DroneBaseT1RG
+          IsImportant: True
+          Faction: Zirax  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          SpawnResource: ["GoldResource:0-1"]
+          SpawnResourceRange: [125,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: DroneBaseT1RG
+          IsImportant: True
+          Faction: Zirax  
+          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          SpawnResource: ["GoldResource:0-1"]
+          SpawnResourceRange: [125,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: DroneBaseT1RG
+          IsImportant: True
+          Faction: Zirax  
+          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          SpawnResource: ["GoldResource:0-1"]
+          SpawnResourceRange: [125,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Defense for Drone Base
+        - GroupName: XenuDefenceT2RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 6, 8 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [600, 700]
+          SpawnPOIAvoid: [XenuDefenceT2RG]
+          SpawnPOIAvoidDistance: 200
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuDefenceT1RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 12, 14 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [1500, 1600]
+          SpawnPOIAvoid: [XenuDefenceT1RG]
+          SpawnPOIAvoidDistance: 400
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: DroneBaseCommandRG
+          Faction: Zirax
+          FactionTerritory: [Rados]
+          BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 8, 12 ]
+          ReserveCount: 15
+          TroopTransport: True
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 3000
+          Properties: 
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: XenuRadarTurretRocketRG
+          Faction: Zirax
+          FactionTerritory: [Rados]
+          NoShieldReload: True
+          CountMinMax: [ 9, 12 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINearRange: [250, 350]
+          Properties: 
+            - Key: RegenAfter
+              Value: 4320
+
+# Xenu compound
+        - GroupName: XenuBunkerRG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          LevelMod: +3
+          DroneProb: 1.0
+          DronesMinMax: [ 5, 5 ]
+          ReserveCount: 5
+          TroopTransport: True
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 2000
+          SpawnResource: ["SathiumResource:3-4","GoldResource:2-3"]
+          SpawnResourceRange: [125,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuAuxT2RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          LevelMod: +1
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: True
+          SpawnPOINear: [XenuBunkerRG]
+          SpawnPOINearRange: [150, 300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuDefenceT2RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 6, 8 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [XenuBunkerRG]
+          SpawnPOINearRange: [600, 700]
+          SpawnPOIAvoid: [XenuDefenceT2RG]
+          SpawnPOIAvoidDistance: 200
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuDefenceT1RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 12, 14 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [XenuBunkerRG]
+          SpawnPOINearRange: [1500, 1600]
+          SpawnPOIAvoid: [XenuDefenceT1RG]
+          SpawnPOIAvoidDistance: 400
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip    
+          Faction: None      
+          CountMinMax: [ 0, 1 ]
+          # IsScalingCount: True
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuAuxT1RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 3, 4 ]
+          IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [DroneBaseT1RG, XenuBunkerRG]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Silver
+        - GroupName: Eden_HarvestSilver
+          Faction: None
+          FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
+          NoShieldReload: True
+          CountMinMax: [ 1, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.75
+          DronesMinMax: [ 3, 4 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestSilver
+          Faction: None
+          FactionTerritory: [Wastelanders]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneBaseAttackRocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneBaseAttackHeavyRocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              # - Name: RipperDog  # No atmosphere. But Zirax wear at least masks.
+                # Amount: 400
+                # Extra: 3
+
+              - Name: ZiraxRocketPatrol
+                Amount: 100
+                Extra: 3
+
+          # PlanetVesselBase:
+              # Name: PlanetVesselBaseSetup
+              # Position3D: [ 0, 202, 0]  # [ 0, 102, 0]
+              # BaseType: PlanetVesselBase
+              # KeyId: 0
+              # PlanetVessel:
+                # - Name: PVF_XenuOPVGround
+                  # Mission: PlanetPatrol
+                  # FixedMaxSpeed: 16 #25
+                  # RespawnDelay: 12
+
+                  # RangePatrolTask:
+                    # Position3D: [ 10000, 80, 0 ]  # Bigger than planet class 3 (= Will sweep the whole playfield)
+                    # Radius: 5000
+                    # DistToGround: 450
+
+                  # AttackCVCircleAround:
+                    # DistToTarget: 400
+
+          PlanetVesselBase:
+              Name: PlanetVesselBaseSetup
+              Position3D: [ 0, 102, 0]
+              BaseType: PlanetVesselBase
+              KeyId: 0
+              PlanetVessel:
+                - Name: Patrol-S-Hard
+                  Mission: PlanetPatrol
+                  FixedMaxSpeed: 10
+                  RespawnDelay: 12
+                  InitialDelay: 48
+
+                  RangePatrolTask:
+                    Position3D: [ -1000, 80, 0 ]
+                    Radius: 800
+                    DistToGround: 80
+
+                  AttackCVCircleAround:
+                    DistToTarget: 190
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 2000
+    
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 5000
+          Radius: 2000
+          

@@ -1,0 +1,2925 @@
+
+# Tokens are instances of the item 'GenericToken' that will get their purpose in game.
+# F.e. you can define a lock code for a door to be opened by a token that has the id of this lock code. Or you can
+# define a quest or a PDA mission that needs a token to get finished.
+# You don't need to define every token here, but if defined, the name and description will show up correctly.
+# Set RemoveOnUse: true to remove it from the inventory of the player as soon as it was used.
+# === Possible Usage ====
+# 1. Place a Token with a certain key (= Meta ) to a inventory (f.ex. Container in an Alien POI): Open Console > 'give item Token 0001' > This will add a token to your inventory > place it in a container > Save POI (Only works with admin core POI at the moment)
+# 2. Give a Token with a certain Meta to a player via PDA via Reward or InventoryOps: Use 'Token:0001' to give the Red Keycard for example
+# 3. Give a Token in a dialogue: Use a function, f.ex AddItem('KeyCardBlack', 3, 1234)  = Will give the player 3x Keycard Black with the Meta 1234
+# 4. Let a Trader sell/buy tokens: Enter an item to Trader config. Example: 'Item3: "Token:0001, 1, 1-2, 1-1, 1-2" = will buy and sell the Red Keycard from below
+# 5. Use a Token in a loot table. Same as with a Trader. Use 'Token:0001' in your loot table/config 
+# ========== IMPORTANT ===========
+# - Currently only the item 'Token' (Itemsconfig.ecf id: 1305) can have a 4-digit META element. Any OTHER "keycard" named item or other items in general can NOT have meta info attached!
+# - When working with the TokenConfig.ecf, adding custom names for the Token:Meta combination, you can use the console command 'token reload' when you are ingame. You do not need to restart the game when working with this file!
+# =================================
+#
+# DropOnDeath:   > If set to 'False'  this item or block is not dropped on player death. Use for important story items that players shall not lose on death. Default is set to 'True'.
+# =================================
+# Example Token
+{ Token Id: 1, Name: KeyCardRed
+  Description: The red key card will open red doors
+# CustomIcon: AddAnIconNameHere
+}
+
+{ Token Id: 2, Name: KeyCardGreen
+  Description: The green key card will open green doors
+}
+
+{ Token Id: 1234, Name: Golden Key
+  Description: With the golden key you can open all golden doors
+  #RemoveOnUse: true
+}
+
+# ====================================================
+# ======= Original Reforged Mission Tokens ===========
+# ====================================================
+# UCH Keycard (Offworld Grave)
+{ Token Id: 4001, Name: [c][F0F8FF]UCH Keycard[/c]
+  CustomIcon: UCHKeycard
+  Description: A Personal Keycard from the M.S Titan found in the crew quarters. It authorizes access to the Titan's secure systems.
+}
+# Illegal Goods (Unlawful Possession)
+{ Token Id: 4006, Name: [c][FF9900]Illegal Goods[/c]
+  CustomIcon: ContainerMission
+  Description: A container of presumably stolen merchandise that was confiscated by Polaris after it was recovered from a smuggler working for Markos.
+}
+# Demo Charges (Freedom Fighter)
+{ Token Id: 4007, Name: [c][FF0000]Demolition Charge[/c]
+  CustomIcon: DemoCharge
+  Description: An explosive charge typically used for the controlled demolition of buildings and mining operations that require blasting.\n\n[c][FFFFFF]Story Mission Item - Not Functional [-][/c]
+}
+# Weapons Crate (Instigator)
+{ Token Id: 4008, Name: [c][0080FF]Weapons Case[/c]
+  CustomIcon: PlasticItemCrate
+  Description: A plastic container that holds a cache of tightly-packed standard-issue UCH weapons.
+}
+# Ancient Box (Instigator)
+{ Token Id: 4009, Name: [c][C77900]Sealed Crate[/c]
+  CustomIcon: WoodenItemCrate
+  Description: A sealed crate obtained from a sacred Tal'on site. It apparently contains forbidden technology guarded by the Shamanic Order.\n\n[c][FFFFFF]Story Mission Item[-][/c]
+}
+# Decryption Device (Cloak-and-Dagger)
+{ Token Id: 4010, Name: [c][FFFF00]Decryption Device[/c]
+  CustomIcon: Decryptor
+  Description: A sophisticated E-warfare device designed to connect to a ship or station's communications relay and siphon off data sent and received.
+}
+{ Token Id: 4012, Name: [c][FFBB00]Mining Shipment[/c]
+  CustomIcon: LargeHarvestContainer
+  Description: A container of ore emblazoned with Polaris Mining's Logo from one of their many industrial facilities. \n\n[c][ffffff]Can be returned to Polaris using the shipping service of any GIN Console.[-][/c]
+}
+# IDA's core (The Cruel Stars)
+{ Token Id: 4015, Name: [c][F0F8FF]A.I Core[/c]
+  CustomIcon: ReactorCore
+  Description: The core processing module of a high-order UCH Artificial Intelligence. \n\n[c][FFFFFF]Story Mission Item[-][/c]
+}
+# ====================================================
+# ====== Undelivered Cargo (GIN Rewards) =============
+# ====================================================
+{ Token Id: 4002, Name: [c][00FFFF]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo intended for a recipient in the Trade Guild. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+{ Token Id: 4003, Name: [c][FFFF00]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo. There's a recipient on the label but no other markings. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+{ Token Id: 4004, Name: [c][FF0000]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo. The text on the tags indicate this cargo belongs to RADOS. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+{ Token Id: 4005, Name: [c][FFC100]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo intended for a Polaris Habitat. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+{ Token Id: 4011, Name: [c][FFFFFF]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo intended for a Frontier Colony. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+{ Token Id: 4014, Name: [c][FFD359]Undelivered Cargo[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: A sealed container filled with cargo intended for a enclave of the Farr Brotherhood. \n\n[c][ffffff]Take this lost cargo to the Galactic Information Network Terminal on any primary Trade Station for a reward![-][/c]
+}
+# ====================================================
+{ Token Id: 4013, Name: [c][F0F8FF]Naval Commendation[/c]
+  CustomIcon: NavalCommendation
+  Description: A UCH Naval commendation for distinguished acts of heroism against the Enemy. \n\n[c][ffffff]Can be used to increase the player's current Main or Sub-Class Rank by 1 level[-][/c]
+}
+# ====================================================
+# ============== Reforged Galaxy 2 New Tokens ========
+# ====================================================
+# Roboerotic Magazine for Trader Mission
+{ Token Id: 4020, Name: [c][D375FF]Mechababe's Toolbox - Issue 347[/c]
+  CustomIcon: Magazines
+  Description: [c][ffffff]Seems to be a rather risque roboerotic magazine about sexbots. I'm sure there's a market for this...[-][/c]
+}
+# Sexbot Type 1 (Main)
+{ Token Id: 4021, Name: [c][FD73FF]Robogirl Model S32[/c]
+  CustomIcon: DancingHuman3
+  Description: [c][ffffff]Model S32-165 IronTech Robogirl. The craftsmanship is exquisite and i'm sure it'll make some guy somewhere very happy.[-][/c]
+}
+# Sexbot Type 2 (Secondary)
+{ Token Id: 4022, Name: [c][FD73FF]Robogirl Model S24[/c]
+  CustomIcon: DancingHuman2
+  Description: [c][ffffff]Model S24-165 IronTech Robogirl. The craftsmanship is very good and i'm sure it'll make some guy somewhere very happy.[-][/c]
+}
+# Wire (Drug)
+{ Token Id: 4023, Name: [c][FF5555]Wire Shipment[/c]
+  CustomIcon: EnergyPills
+  Description: [c][ffffff]A shipment of the drug known as 'Wire'. A highly addictive hallucinogen with a feeling described as though your veins are on fire. This effect is where it gets it's name.[-][/c]\n\n[c][FF0000]Possession of Wire is in violation of both Trade Federation and Imperial Law.[-][/c]
+}
+# Zyme (Drug)
+{ Token Id: 4024, Name: [c][AAFF00]Zyme Vial[/c]
+  CustomIcon: AntiToxicOintment
+  Description: [c][ffffff]A synthetic drug new to the black market. Zyme use has caused a rash of violent outbreaks among users triggering a zero-tolerance crackdown by law enforcement.[-][/c]\n\n[c][FF0000]Possession of Zyme is in violation of both Trade Federation and Imperial Law.[-][/c]
+}
+# Black Ice (Drug)
+{ Token Id: 4025, Name: [c][8800FF]Black Ice Shipment[/c]
+  CustomIcon: AntiParasitePills
+  Description: [c][ffffff]Black Ice is a highly toxic substance that's found a niche market among the Imperial Military as zirax are unaffected by the toxins in the drug. Under Imperial law any soldier caught with Black Ice is punished severely.[-][/c]\n\n[c][FF0000]Possession of Black Ice is in violation of both Trade Federation (as a poison) and Imperial Law (as an illegal drug).[-][/c]
+}
+# Ripperdog Food
+{ Token Id: 4026, Name: [c][D44A0F]Hound Chow[/c]
+  CustomIcon: TexturedPlantProtein
+  Description: [c][ffffff]Specially formulated food for growing Ripperdogs to ensure your goodboy grows up big and strong!\nNot for terran consumption.[-][/c]
+}
+
+# ====================================================
+# ============== Weapon Upgrade Tokens ===============
+# ====================================================
+# Barrel Upgrades - Common
+{ Token Id: 20, Name: [c][3C00FF]Short Heavy Barrel[/c]
+  CustomIcon: WeaponKitA
+  Description: A high-density alloy barrel compatible with most conventional Pistols that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 21, Name: [c][3C00FF]Medium Heavy Barrel[/c]
+  CustomIcon: WeaponKitA
+  Description: A high-density alloy barrel compatible with most conventional Assault Rifles and Shotguns that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 22, Name: [c][3C00FF]Long Heavy Barrel[/c]
+  CustomIcon: WeaponKitA
+  Description: A high-density alloy barrel compatible with most conventional long-barreled firearms that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 10000, display: true
+}
+# Barrel Upgrades - Rare
+{ Token Id: 23, Name: [c][11D100]Short Ultralight Barrel[/c]
+  CustomIcon: WeaponKitB
+  Description: A lightweight alloy barrel compatible with most conventional Pistols thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 24, Name: [c][11D100]Medium Ultralight Barrel[/c]
+  CustomIcon: WeaponKitB
+  Description: A lightweight alloy barrel compatible with most conventional Assault Rifles and Shotguns thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 25, Name: [c][11D100]Long Ultralight Barrel[/c]
+  CustomIcon: WeaponKitB
+  Description: A lightweight alloy barrel compatible with most conventional Sniper Rifles thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Barrel Upgrades - Ultra
+{ Token Id: 26, Name: [c][FF0000]Short High-Velocity Barrel[/c]
+  CustomIcon: WeaponKitC
+  Description: An exotic alloy barrel compatible with most conventional Pistols that improves damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 27, Name: [c][FF0000]Medium High-Velocity Barrel[/c]
+  CustomIcon: WeaponKitC
+  Description: An exotic alloy barrel compatible with most conventional Assault Rifles and Shotguns that improve damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 28, Name: [c][FF0000]Long High-Velocity Barrel[/c]
+  CustomIcon: WeaponKitC
+  Description: An exotic alloy barrel compatible with most conventional Sniper Rifles that improves damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+# Laser Barrel Upgrades - Rare
+{ Token Id: 29, Name: [c][11D100]Cascade Laser Array[/c]
+  CustomIcon: WeaponKitB
+  Description: A barrel attachment for most laser weapons that produces a coherent laser beam using multiple emitters firing in synchroncity. Increases damage but due to overheating it increases reload time significantly.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Laser Barrel Upgrades - Ultra
+{ Token Id: 30, Name: [c][FF0000]Collimated Laser Array[/c]
+  CustomIcon: WeaponKitC
+  Description: A barrel attachment for most laser weapons that utilizes a Zascosium-doped lens to produce a condensed beam. Increases damage but produces recoil from the rapid expansion of gases in front of the muzzle.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil Up[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 22500, display: true
+}
+# Plasma/Rocket Barrel Upgrades - Rare
+{ Token Id: 31, Name: [c][11D100]Scram Rail[/c]
+  CustomIcon: WeaponKitB
+  Description: A barrel attachment for some heavy weapons that utilizes electromagnetic rails to propel projectiles along the barrel faster improving reload speed by reducing heat build-up at the cost of heavier recoil.\n[c][00FF00]Reload +15%[-][/c]\n[c][FF0000]Recoil +25%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Plasma/Rocket Barrel Upgrades - Ultra
+{ Token Id: 32, Name: [c][FF0000]Hyper Rail[/c]
+  CustomIcon: WeaponKitC
+  Description: A barrel attachment for some heavy weapons that utilizes superconducting rails to propel projectiles along the barrel at supersonic speeds smoothing recoil but stresses the auto-loader.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Rocket Launchers and Plasma Cannons Only[-][/c]
+  MarketPrice: 22500, display: true
+}
+#{ Token Id: 69, Name: [c][FF0000]Finned Heavy Barrel[/c]
+#  CustomIcon: WeaponKitC
+#  Description: A lightweight barrel replacement for plasma and rocket weapons that uses aluminium heat sinks to disperse barrel heat between shots.\n[c][00FF00]Reload +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Rocket Launchers and Plasma Cannons[-][/c]
+#  MarketPrice: 22500, display: true
+#}
+# Crossbow Upgrades
+{ Token Id: 33, Name: [c][3C00FF]Polymer Crossbow Limb[/c]
+  CustomIcon: WeaponKitA
+  Description: An easy-draw synthetic polymer composite crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Reload +30%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 34, Name: [c][3C00FF]Carbon Fiber Crossbow Limb[/c]
+  CustomIcon: WeaponKitA
+  Description: A high-performance carbon fiber crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +15%\nReload +15%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 35, Name: [c][11D100]Alloy Crossbow Limb[/c]
+  CustomIcon: WeaponKitB
+  Description: A high-powered exotic alloy crossbow limb used on some big-game hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +50%[-][/c]\n[c][FF0000]Reload -50%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Grip/Stock Upgrades - Common
+{ Token Id: 36, Name: [c][3C00FF]Polymer Grip[/c]
+  CustomIcon: WeaponKitA
+  Description: A lightweight pistol grip compatible with most conventional firearms that cuts down on the weapon's mass making it easier to aim but slightly harder to control the recoil.\n[c][00FF00]Accuracy +15%[-][/c]\n[c][FF0000]Recoil +15%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 37, Name: [c][3C00FF]Weighted Grip[/c]
+  CustomIcon: WeaponKitA
+  Description: A dense Sathium grip compatible with most smaller conventional firearms that increases mass making it easier to control recoil but makes it heavier.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -15%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 38, Name: [c][3C00FF]Powertool Grip[/c]
+  CustomIcon: WeaponKitA
+  Description: A civilian tool grip typically used on industrial tools that need a constant supply of energy or fuel. Due to its civilian design it's not practical on most weapons though does make it easier to reload.\n[c][00FF00]Reload +25%[-][/c]\n[c][FF0000]Accuracy -20%\nRecoil +20%[-][/c]\n[c][FFBB00]Compatible with most pistols and Tools[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 39, Name: [c][3C00FF]Wooden Stock[/c]
+  CustomIcon: WeaponKitA
+  Description: Heavier than carbon or polymer... certainly classier. While nothing special it IS well balanced.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
+}
+# Grip/Stock Upgrades - Rare
+{ Token Id: 40, Name: [c][11D100]Folding Stock[/c]
+  CustomIcon: WeaponKitB
+  Description: A lightweight alloy stock compatible with most rifles and shotguns that folds along the side of the receiver and barrel. A design flaw results in the stock obscuring the magazine release when folded.\n[c][00FF00]Accuracy +15%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -15%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 41, Name: [c][11D100]Short Stock[/c]
+  CustomIcon: WeaponKitB
+  Description: A shortened stock typically used to improve handling in close quarters.\n[c][00FF00]Accuracy +10%\nRecoil -5%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 42, Name: [c][11D100]Full Stock[/c]
+  CustomIcon: WeaponKitB
+  Description: A full-length rifle stock designed for sniping rather than close quarters. Improves accuracy and damage slightly when using a scope but takes longer to reload.\n[c][00FF00]Damage +10%\nAccuracy +10%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 43, Name: [c][11D100]Tactical Pistol Grip[/c]
+  CustomIcon: WeaponKitB
+  Description: A specialized pistol grip for close quarters combat designed for comfortable use and easy reloading.\n[c][00FF00]Recoil -15%\nReload +15%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 44, Name: [c][11D100]Capacitor Grip[/c]
+  CustomIcon: WeaponKitB
+  Description: A complex pistol grip for energy weapons that provides redundant energy storage.\n[c][00FF00]Damage +10%\nReload +10%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Grip/Stock Upgrades - Ultra
+{ Token Id: 45, Name: [c][FF0000]Sharpshooter's Pistol Grip[/c]
+  CustomIcon: WeaponKitC
+  Description: A mix of lightweight alloys and synthetic polymers. This specialized grip is designed for competition shooting.\n[c][00FF00]Recoil -20%\nAccuracy +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 46, Name: [c][FF0000]Tactical Stock[/c]
+  CustomIcon: WeaponKitC
+  Description: An adjustable polymer stock with pouches for additional ammunition for quicker reloading. Provides minor recoil absorption and improves reload speed.\n[c][00FF00]Recoil -20%\nReload +15%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 47, Name: [c][FF0000]Marksman's Stock[/c]
+  CustomIcon: WeaponKitC
+  Description: A dedicated long-range stock complete with adjustable buttplate and cheek riser. Provides superior performance but is difficult to reload through.\n[c][00FF00]Damage +15%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -30%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 48, Name: [c][FF0000]Recoil-Compensating Stock[/c]
+  CustomIcon: WeaponKitC
+  Description: A complex stock that uses pneumatic buffers to reduce recoil providing a comfortable shooting experience no matter the caliber.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 49, Name: [c][FF0000]Recoil-Compensating Grip[/c]
+  CustomIcon: WeaponKitC
+  Description: A dynamic grip that uses pneumatic buffers to reduce the kick from high-caliber pistols and heavy weapons.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FFBB00]Compatible with most Pistols SMGs and Miniguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 50, Name: [c][FF0000]Superconductor Stock[/c]
+  CustomIcon: WeaponKitC
+  Description: An insulated stock with a heavy superconductor array that supplies power from an energy weapon's power cell to the firing mechanism faster. Increases damage but reduces accuracy due to the added weight.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy -30%[-][/c]\n[c][FFBB00]Compatible with Laser Rifles and some Plasma Weaponry[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 70, Name: [c][FF0000]Shielded Dual Grip[/c]
+  CustomIcon: WeaponKitC
+  Description: A heavy weapons grip with an added blast shield to protect the wielder from explosive and radioactive backblast.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 22500, display: true
+}
+# Frame/Receiver Upgrades - Common
+{ Token Id: 51, Name: [c][3C00FF]Light Pistol Receiver[/c]
+  CustomIcon: WeaponKitA
+  Description: A low-cost polymer frame for small arms with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 52, Name: [c][3C00FF]Light Rifle Receiver[/c]
+  CustomIcon: WeaponKitA
+  Description: A low-cost polymer frame for rifles with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 53, Name: [c][3C00FF]Light Shotgun Receiver[/c]
+  CustomIcon: WeaponKitA
+  Description: A low-cost polymer frame for shotguns with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 10000, display: true
+}
+{ Token Id: 54, Name: [c][3C00FF]Light Cannon Frame[/c]
+  CustomIcon: WeaponKitA
+  Description: A lightweight Aluminium frame for Heavy Weapons with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 10000, display: true
+}
+# Frame/Receiver Upgrades - Rare
+{ Token Id: 55, Name: [c][11D100]Heavy Pistol Receiver[/c]
+  CustomIcon: WeaponKitB
+  Description: A denser receiver made from Sathium alloy that combats the force of recoil from large caliber handguns.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 56, Name: [c][11D100]Heavy Rifle Receiver[/c]
+  CustomIcon: WeaponKitB
+  Description: A denser receiver made from Sathium alloy that combats the force of recoil from automatic fire but the additional weight makes it unwieldy.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 57, Name: [c][11D100]Heavy Shotgun Receiver[/c]
+  CustomIcon: WeaponKitB
+  Description: A denser receiver made from Sathium alloy that combats the impressive force of recoil from shotgun slugs but the additional weight makes it unwieldy.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -10%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 58, Name: [c][11D100]Heavy Cannon Frame[/c]
+  CustomIcon: WeaponKitB
+  Description: A heavy frame made from Sathium alloy that makes automatic fire and high-recoil cannon shots more managable. Due to the extreme weight the weapon must be laid down to be reloaded.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 59, Name: [c][11D100]Heat Sink Frame[/c]
+  CustomIcon: WeaponKitB
+  Description: An experimental energy frame for energy weapons that uses integrated heat sink cooling to prevent overheating from consecutive shots.\n[c][00FF00]Reload +15%[-][/c]\n[c][FF0000]Damage -5%[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+{ Token Id: 60, Name: [c][11D100]Overclocked Energy Frame[/c]
+  CustomIcon: WeaponKitB
+  Description: An experimental energy frame for laser weapons that uses a thermocouple assembly to feed charge into the weapon's accumulators.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 15000, display: true
+}
+# Frame/Receiver Upgrades - Ultra
+{ Token Id: 61, Name: [c][FF0000]Electromagnetic Pistol Receiver[/c]
+  CustomIcon: WeaponKitC
+  Description: Utilizes a magnetic hyper rail on either side of the barrel to achieve secondary acceleration that increases damage at the cost of increased recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 62, Name: [c][FF0000]Calibrated Rifle Receiver[/c]
+  CustomIcon: WeaponKitC
+  Description: A high-end frame for rifles that uses a floating bolt carrier to reduce recoil and drift while providing maximum pressure. Superior performance but sometimes causes the ammo feed to jam with the new configuration.\n[c][00FF00]Damage +10%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -15%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 63, Name: [c][FF0000]Automatic Shotgun Receiver[/c]
+  CustomIcon: WeaponKitC
+  Description: A military-specific shotgun receiver designed specifically for fast reloading in combat situations.\n[c][00FF00]Reload +20%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 64, Name: [c][FF0000]Gyro-Stabilized Frame[/c]
+  CustomIcon: WeaponKitC
+  Description: A prototype heavy weapon frame that attaches to the wielders armor to minimize recoil and assist in aiming.\n[c][00FF00]Accuracy +15%\nRecoil -15%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 65, Name: [c][FF0000]Gamma-Wave Amplifier Frame[/c]
+  CustomIcon: WeaponKitC
+  Description: A prototype energy frame for energy-based weaponry that collimates laser wavelengths into the gamma spectrum.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy DOWN[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
+  MarketPrice: 22500, display: true
+}
+{ Token Id: 66, Name: [c][FF0000]Mk-00 Generator Frame[/c]
+  CustomIcon: WeaponKitC
+  Description: No information exists on this piece of equipment. It appears to be a frame for laser weapons that uses external power cells to supply constant power to a weapon's accumulator.\n[c][00FF00]Reload +125%[-][/c]\n[c][FF0000]Damage -33%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 22500, display: true
+}
+# ======= Ammo Upgrades
+# Ultra Rare
+{ Token Id: 67, Name: [c][FF0000]Gyro-Jet Attachment[/c]
+  CustomIcon: WeaponKitC
+  Description: An aftermarket attachment for Rocket Launchers that autocorrects the projectile for improved penetrative damage.\n[c][00FF00]Impact Damage +10%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
+  MarketPrice: 32500, display: true
+}
+{ Token Id: 68, Name: [c][FF0000]Phonon Maser Converter[/c]
+  CustomIcon: WeaponKitC
+  Description: An experimental attachment for the Plasma Cell Magazine that raises the number of supersonic oscillations to form a quantum heat ray on detonation. Converts a plasma cell's entire explosive damage into pure thermal impact damage.\n[c][00FF00]Impact Damage 100%[-][/c]\n[c][FF0000]Blast Damage 0%[-][/c]\n[c][FFBB00]Compatible with Plasma Cannon Magazines[-][/c]
+  MarketPrice: 32500, display: true
+}
+{ Token Id: 69, Name: [c][FF0000]Proximity Detonator[/c]
+  CustomIcon: WeaponKitC
+  Description: A sensor firmware update for Rockets that causes them to detonate prematurely with increased explosive damage. Increases Blast Damage but sacrifices penetration.\n[c][00FF00]Blast Damage +50%[-][/c]\n[c][FF0000]Impact Damage -75%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
+  MarketPrice: 32500, display: true
+}
+{ Token Id: 71, Name: [c][FF0000]Kinetic Penetrator[/c]
+  CustomIcon: WeaponKitC
+  Description: An ammunition refit for handheld rockets that replaces the fragmentation explosive head with a sathium-steel penetrator for increased kinetic damage. Increases impact damage but significantly reduces blast damage as only the fuel in the rocket will explode.\n[c][00FF00]Impact Damage +50%[-][/c]\n[c][FF0000]Blast Damage -50%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
+  MarketPrice: 32500, display: true
+}
+# ==========================================================
+# ============= Trading Cards (weird, right?) ==============
+# ==========================================================
+# ===== Location Cards
+{ Token Id: 120, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Akua[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Akua is a temperate planet within Imperial Galactic Territory and the most well-known exile planet of the Tal'on. It's also a hyperspace junction point tha attracts many anomalies.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 121, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Omicron[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Omicron is a hot and arid planet within Imperial Galactic Territory and a neighbor to Akua. The planet can be difficult for many oxygen-breathing lifeforms due to high levels of Fluorine in the atmosphere.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 122, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Ningues[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Ningues is a cold and frozen world within Imperial Galactic Territory with a wide orbit. The planet is locked in snow and ice for 12 years before experiencing a brief spring period of only 2 years.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 123, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Tallodar[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Tallodar is an older planet that was settled centuries ago but has since been largely abandoned as industry in the sector moved on leaving ancient and outdated buildings across the arid landscape.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 124, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Oscatune[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Oscatune is a comparatively large moon to a blue gas giant. Much of Oscatune's surface is water with a number of Tal'on vying for space against the resident Epsilon emplacements.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 125, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Uai[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A temperate planet of some note due to it's unusual coloration caused by high quantities of beryllium and aluminium in the rocks.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 126, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Roggery[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A warm and wet world rich in both life and death. Roggery's surface is primarily swampland with brackish water hiding many dangers beneath the surface.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 127, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Pandora[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A world of ancient towering trees and lush rainforest. Pandora's high temperatures and difficult-to-access resources have caused it to go undeveloped for centuries.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 128, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Sienna[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A frozen and barren wasteland stretches from horizon to horizon with great riches beneath the ground if one can only crack through the hard ice that covers the surface.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 129, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Masperon[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Wreathed in toxic fog for most of the year. Masperon is a hostile and exotic world that's not recommended for novice explorers.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 130, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Sharee[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]An dry and hot expanse of sand separates the spaces between canyons on this desert world. Despite the emptiness it possesses some adventurous souls that call it home.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 131, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Purgatory[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A formerly-great city planet of the federation. Purgatory now stand silent. dead and depleted in the wake of the War of Silence.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 132, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Dread[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Once a bustling metropolis now a blasted ruin consumed by radioactive ash and sand. Dread remains a haunted wasteland left in the wake of an ancient war.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 133, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Rogue J-5565[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A planet cast free of it's orbit that drifts shiftlessly across the galaxy. Caught briefly by a star's gravity as it passes through different systems.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 134, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Rogue PX-37[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A drifting rock devoid of all natural life as it crosses the void between stars. No light has reached this planet's surface in thousands of years.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 135, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Haven[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A temperate world bountiful in life and natural resources. It has attracted a number of minor mining companies to stake their claim in the tame forests and plains.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 136, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Maveth[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A barren and lifeless world that once served as the last defense in an ancient and long-forgotten war.[-][/c]
+  MarketPrice: 5000, display: true
+}
+{ Token Id: 137, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Xanthos[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]The Imperial Homeworld that is the seat of the current Empress of the Zirax Empire. Historically it was a great cityplanet but much of the vast metropolis was razed during the War of Silence.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 138, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Altandor[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]The ancestral home of the Arkenian Republic. A large ocean planet once teeming with life. It was toxified during the early space age and has since been abandoned for over a millenium.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 139, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Corribus[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]The current center of the Trade Federation. Corribus is a temperate ocean planet chosen as the federation's new home due to the similarity to the ancestral home Altandor.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 140, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Amphythos[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A warm tropical ocean planet. Home to Tal'on exiles spread across raft towns and island villages covering the surface.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 141, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Haginaa[/c][/b]
+  CustomIcon: TradingCard01
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Once the frontier of the Tallax Assembly. Haginaa was the first planet ever lost to The Legacy and still remains under their control. The active elements still resisting all attempts to cleanse them from the galaxy.[-][/c]
+  MarketPrice: 5000, display: true
+}
+# ===== Structure Cards
+{ Token Id: 150, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Rados Missile Base[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Rados Missile Base is a large-scale operation constructed by the Zirax's House of Rados to provide long-range coverage of imperial territory with anti-starship missiles. Indestructible.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 151, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Imperial Drone Base[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]Drone Bases act as the control center of a planet's surveillance and protection system. From them unmanned drones can be dispatched to hotspots all over the planet.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 152, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Sunat-Class Corvette[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Sunat-Class Corvette is the workhorse of the Imperial Navy. Possessing the typical hammerhead shape of most zirax vessels it transports troops and supplies across the galaxy.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 153, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Kiuvera-Class Cutter[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The smallest of the Imperial Navy's main line of warships. The Kiuvera is lightly armed and armored and comes in a variety of configurations for each zirax house.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 154, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Periat-Class Frigate[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A medium-sized Frigate of the Imperial Navy. The Periat is an armored warship capable of long-ranged bombardment with both plasma and missiles and heavier armor than the Sunat.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 155, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Imerat-Class Destroyer[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The empire's fast-response warship. The Imerat is the largest vessel that the empire can field at a moment's notice. It possesses superior firepower and shields with an internal combat bridge for added protection.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 156, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Malrak-Class Carrier[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The latest carrier in the Imperial Navy built to replace the aging Kamirat-Class Battlecarriers. They can both launch fighters and offer long-ranged fire support with heavy Artillery.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 157, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Kamirat-Class Battlecarrier[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]An older and experimental design for a carrier that is presently being replaced by the newer Merkatz-Class Carrier.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 158, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Tovera-Class Dreadnought[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The most feared vessel in the Imperial Fleet. The Tovera is a Battleship with the most formidible armaments and weapons of any vessel in space. Where this ship goes only wreckage will be left in it's wake.[-][/c]
+  MarketPrice: 5000, display: true
+}
+{ Token Id: 159, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Kellen-Class Corvette[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]Polaris' Security Division's anti-pirate warship. The Kellen-Class is primarily used as a guard ship to protect planetary orbits from Pirates and Bandits.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 160, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Hyozen-Class Frigate[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A frigate-class security ship of PolSec. The Hyozen is armed primarily with long-ranged missiles and light lasers which are used to escort merchant vessels from pirates during transit.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 161, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Skenya-Class Destroyer[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Skenya-Class is the largest officially-recognized warship employed by Polaris Security. It's primary role is the protection of Superfreighters and important stations during their construction phase.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 162, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Tursas-Class Battleship[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]Polaris has not confirmed the existence of the Tursas-class. The existence of a privately-owned battleship is a violation of the Trade Protection agreement with the Zirax Empire.[-][/c]
+  MarketPrice: 5000, display: true
+}
+{ Token Id: 163, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Ilmarinen-Class Superfreighter[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Ilmarinen-Class is the largest freighter in the galaxy. Measured in the kilotons (empty) the Ilmarinen-Class are used for transporting of bulk goods between the core worlds of the empire and federation.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 164, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Infector[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Infector is the most common of Legacy Bioship. Officially classed as a Corvette the Infector possesses compact Positron weapons that tear through shields and hull alike with offense and defense rivaling an Imperial Destroyer.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 165, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Decimator[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A rarer variant of Legacy Bioship classed as a Frigate. The Decimator is evolved solely for combat boasting a significant increase in firepower over the Infector that not even an imperial battlegroup can withstand it's full armaments.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 166, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Devastator[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A rare variant of Legacy Bioship similar to the Decimator but evolved with a more balanced design. Fast and Durable the Devastator has more forward-focused offense that its contemporaries.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 167, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Eradicator[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A highly-evolved form of Legacy Bioship. It boasts the highest offense and defense of any other legacy vessel. Surpassing the Tovera-Class Dreadnought by leaps and bounds despite only being classed as a Destroyer.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 168, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Cataclysm[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]A lost remnant from the War of Silence. The Cataclysm hasn't been seen since the war and only one has ever been recorded. It possesses gravity weapons capable of destroying entire planets but little more is known about it.[-][/c]
+  MarketPrice: 5000, display: true
+}
+{ Token Id: 169, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Sector Command[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The Imperial Fortress and stronghold of any system. The Sector Command is the largest and most heavily armed structure in the Empire that doubles as a Drone Base and Command center for entire sectors.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 170, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]The Epilogue[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]Officially listed as Dreadnought class. The Epilogue is the only recognized battleship of the Trade Federation. There is only one and acts as the mobile datacenter for the entire Galactic Economy.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 171, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FFDD00]Orbital Command[/c][/b]
+  CustomIcon: TradingCard02
+  Description: A collectible Structure trading card from the Empyrion Collection.\n[c][FFFFFF]The spaceborne counterpart to the Sector Command. It's less fortified and is used primarily as a military spaceport and fortress in key orbits across the empire.[-][/c]
+  MarketPrice: 400, display: true
+}
+# ===== Entity Cards
+{ Token Id: 180, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Tal'on Hunter[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]The Tal'on may be a shell of their previous greatness but make no mistake. Their crossbows are excellent and their bolts are sharp.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 181, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Combat Android[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]A marvel of modern robotics. The L0-K1 Combat Android is a low-cost alternative to security among a large number of corporate entities across the empire.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 182, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Combat Mechanoid[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]The Zirax Empire's counterpart to the Trade Federation's more civilian L0-K1. Combat Mechanoids weapons are integrated into their arms with a focus on offensive combat.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 183, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Zirax Trooper[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]The flesh and blood soldiers of the Empire. While over 80% of the soldiers may be clones they are all 100% zirax and loyal to the empire.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 184, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Zirax Assault Trooper[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Specialized soldiers from the House of Xenu. Assault Troopers are typically deployed in siege combat to capture enemy fortifications and facilities.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 185, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Zirax Elite Trooper[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Officers in the Zirax Military. They all wear a signature blue suit with a full helmet utilizing the latest in armor and weapons. No elite is a cloned trooper.[-][/c]
+  MarketPrice: 1200, display: true
+}
+{ Token Id: 186, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Assault Mechanoid[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Few in numbers but large in both size and firepower. Assault Mechs are piloted mechs with armor and firepower rivaling most combat drones but have a weakness where their legs connect to the torso.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 187, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Guardian Mechanoid[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Made in the same production line as the Assault Mechanoid it has comparable armor and firepower. Unlike the Assault Mech the Guardian is automated but suffers from poor mobility.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 188, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Leafcutter Insect[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]A pain in both the leg and butt. Leafcutters are commonly found on temperate planets where their vertical mouths are used to eat tree bark and bushes.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 189, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Erebus Spider[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]With 8 legs and fangs this unusually large spider is named after the god of darkness as it skulks from shadow to shadow on it's hunt for prey.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 190, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Androraptor[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]With retractable claws and an uncomfortable number of sharp teeth you'd better be armed if you run into this Clever girl.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 191, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Telluropod[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]The disturbing hybrid between alligator and jellyfish. The Telluropod is a common ambush predator found along the shores of lakes and swamps across the galaxy.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 192, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Argos[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]A real life Centaur... if centaurs were insects. Argos are an offshoot of the Kriel worker class that have gone feral over thousands of years of separation from the central Hive.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 193, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Ignidon[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]With tough scales and a belly full of flammable gas the Ignidon is like a furnace with legs with an equally hot temperament to match.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 194, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Ripperdog[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]A zirax's best friend and companion. Ripperdogs come in all shapes and sizes but are most common in the zirax military as working dogs used to bring down enemy troops.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 195, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Gigas[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]These big boys can be found in a variety of different colorations and environments. They all like to collect shiny rocks though.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 196, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Nyxiss Scorpion[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]With four legs and a barbed tail these guys are the least fun thing you can find in a hole. They like dark and damp places like abandoned buildings.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 197, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Abomination[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]The most common remnants of the Legacy's blight on the galaxy. Most abominations were once citizens of the Empire who suffered the worst fate imaginable.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 198, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Overseer[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]An evolved form of abomination. The overseer towers over other creatures and possesses lighting speed and a toxic radioactive glow. If you hear your radiation meter crackling there's one not far away.[-][/c]
+  MarketPrice: 400, display: true
+}
+{ Token Id: 199, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Parasaur[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Fast on their feet and fearful of predators the Parasaur is a common sight on temperate planets. A good source of meat for a hungry hunter though.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 200, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Moularidon[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]As big as they are Moularidon will run from anything it perceives as a threat unless properly tamed as the Tal'on have done. You'll find them pulling plows and carts in many Tal'on villages.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 201, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Thymosaurus[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Despite a fearsome appearance their eyesight is so poor they can't identify prey unless it hits them first. Once enraged there's not much that can stop one though.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 202, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Wraithworm[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]While the males are rarely seen the Wraithworm Queens are common in forests and burrows across the galaxy where they're a major pest to spaceports everywhere.[-][/c]
+  MarketPrice: 100, display: true
+}
+{ Token Id: 203, Name: [c][0088FF]Trading Card[/c][-][b] - [c][FF5555]Sandworm[/c][/b]
+  CustomIcon: TradingCard03
+  Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Common in deserts Sandworms travel in small packs where they filter their food from the shifting sands with their teeth. Watch out though. Those teeth are harder than steel and can puncture most light armors.[-][/c]
+  MarketPrice: 100, display: true
+}
+
+
+
+# ======================================================================================================================================================================
+# =================================================================================================================================Project Eden Custom Tokens:
+# ======================================================================================================================================================================
+
+# Admin Control Chip required to access admin settings
+{ Token Id: 6000, Name: [c][ffff00]Project Eden Admin Access Card[-][/c]
+  CustomIcon: Eden_GuideAdmin2
+  DropOnDeath: false
+  Description: "[c][ffff00]Admin item[-][/c] \n\n[c][ffffff]This key card allows access to the scenario admin controls in Project Eden. \n\nThe admin controls are located in the briefing rooms of most Project Eden Research Vessels outside the starting systems or you can access it in the tutorial tab of the PDA."
+}
+
+
+
+# ================================================================================================================================ Test Tokens
+
+# Test
+# { Token Id: 5000, Name: [c][FFFFFF]Contracted Cargo[-][/c]
+  # Description: [c][ffffff]Mission Item.[-][/c] \n\nDeliver this cargo to the TOP Manager on board the Polaris Trading Station in orbit around Haven Akua Tallodar Omicron Roggery or Ningues in the Alpha or Beta star systems.
+# }
+
+# { Token Id: 5001, Name: [c][FF00FF]Virus Sample 127-Beta[-][/c]
+  # Description: [c][ff00ff]Mission Item.[-][/c] \n\nA virus sample discovered by Polaris miners in the Deep Core Mining Facility on Helion IV. \nDeliver to the UCHN Artemis in orbit of Helion IV in the Helion system. \n\n[c][A9A9A9][i]Maybe you should not handle this with your bare hands?[/i][-][/c]
+# }
+
+# { Token Id: 5002, Name: [c][00FF00]Green Voucher[-][/c]
+  # Description: [c][FFFFFF]50000 Credits[-][/c] \n\nCash in at any Trader Guild Bank.
+# }
+
+# ================================================================================================================================ The Infected mission tokens
+# Lost Colony logs
+{ Token Id: 6001, Name: [c][ff00ff]Logs from the Lost Colony[-][/c]
+  DropOnDeath: false
+  Description: "Chapter 1:[c][00ff00]The Infected[-][/c].\nA collection of logs from the Lost Colony on Sienna in the Delta system."
+}
+
+# UCH Colony Ship logs
+{ Token Id: 6002, Name: [c][ff00ff]Logs from UCHN New Horizons[-][/c]
+  DropOnDeath: false
+  Description: "Chapter 1:[c][00ff00]The Infected[-][/c].\nA collection of logs from the colony ship UCHN New Horizons in the Delta system."
+}
+
+# Derelict Station/Lost Station logs
+{ Token Id: 6003, Name: [c][ff00ff]Logs from the Derelict Station[-][/c]
+  DropOnDeath: false
+  Description: "Chapter 1:[c][00ff00]The Infected[-][/c].\nA collection of communications logs from a derelict trade station in the Delta system."
+}
+
+{ Token Id: 6004, Name: [c][ffff00]Project Eden Admin Patrol Vessel Token[-][/c]
+  CustomIcon: Eden_GuideOPV
+  DropOnDeath: false
+  Description: [c][ffff00]Admin item[-][/c] \n\n[c][ffffff]This token allows spawning of patrol vessels using the Project Eden Admin Access card. You will need 1 token for each patrol vessel you want to spawn.[-][/c]
+}
+
+# ================================================================================================================================ Deep Core Mining Keys
+
+# Deep Core Facility Access Key
+{ Token Id: 6005, Name: [c][FF00FF]Deep Core Facility Access Key[-][/c]
+  DropOnDeath: false
+  Description: [c][FF00FF]Mission Item.[-][/c] This key card grants access to the lower levels of the Deep Core Mining Facility on Ice Giant class planets.
+}
+
+# Derelict Station/Lost Station logs
+{ Token Id: 6006, Name: "[c][FF0000]salvage or retrieve blocks mode with a multitool[-][/c]"
+  DropOnDeath: false
+  Description: "Dummy token for in-game description of the locked Salvage found in wrecks."
+}
+
+# ================================================================================================================================ Tutorial Tokens:
+
+# --------------------------------------------------------- Solar System Surveys:
+
+# Alpha System Survey Report
+{ Token Id: 6012, Name: [c][ffffff]Alpha System Survey Report[-][/c]
+  CustomIcon: Eden_GuideSurveyAlpha
+  DropOnDeath: false
+  Description: A report detailing the planets and sectors of the Alpha system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Speak with the Lead Researcher on board any UCH Research Vessel while all 4 survey reports are in your personal inventory.[-][/c][/i]
+}
+
+# Beta System Survey Report
+{ Token Id: 6013, Name: [c][ffffff]Beta System Survey Report[-][/c]
+  CustomIcon: Eden_GuideSurveyBeta
+  DropOnDeath: false
+  Description: A report detailing the planets and sectors of the Beta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Speak with the Lead Researcher on board any UCH Research Vessel while all 4 survey reports are in your personal inventory.[-][/c][/i]
+}
+
+# Delta System Survey Report
+{ Token Id: 6014, Name: [c][ffffff]Delta System Survey Report[-][/c]
+  CustomIcon: Eden_GuideSurveyDelta
+  DropOnDeath: false
+  Description: A report detailing the planets and sectors of the Delta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Speak with the Lead Researcher on board any UCH Research Vessel while all 4 survey reports are in your personal inventory.[-][/c][/i]
+}
+
+# Epsilon System Survey Report
+{ Token Id: 6015, Name: [c][ffffff]Epsilon System Survey Report[-][/c]
+  CustomIcon: Eden_GuideSurveyEpsilon
+  DropOnDeath: false
+  Description: A report detailing the planets and sectors of the Epsilon system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Speak with the Lead Researcher on board any UCH Research Vessel while all 4 survey reports are in your personal inventory.[-][/c][/i]
+}
+
+
+# ================================================================================================================================ Rogue starter tokens
+
+{ Token Id: 6016, Name: [c][ff0000]Red Key Card[-][/c]
+  CustomIcon: KeyCardRed
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: "A security card used to access doors in the crashed prison transport on the rogue planet."
+}
+
+{ Token Id: 6017, Name: [c][ffff00]Yellow Key Card[-][/c]
+  CustomIcon: KeyCardYellow
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: "A security card used to access doors in the crashed prison transport on the rogue planet."
+}
+
+{ Token Id: 6018, Name: [c][00ffff]Blue Key Card[-][/c]
+  CustomIcon: KeyCardBlue
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: "A security card used to access doors in the crashed prison transport on the rogue planet."
+}
+
+
+
+# ================================================================================================================================ Trading seperators
+# old color [CC99FF]
+# Encrypted Data Chip
+{ Token Id: 6101, Name: "[c][FFD700]Buys:[-][/c]"
+  CustomIcon: GoldCoins
+  Description: "Trades in this category are primarily sold to the trader, though some items may also be purchasable."
+}
+
+# Flawed Data Chip
+{ Token Id: 6102, Name: "[c][00FF00]Sells:[-][/c]"
+  CustomIcon: MoneyCard
+  Description: "Trades in this category are primarily bought from the trader, though some items may also be sellable."
+}
+
+{ Token Id: 6103, Name: "[c][00FFFF]Buy & sell[-][/c]"
+  CustomIcon: GoldIngot
+  Description: "Trades in this category are bought and sold from the trader."
+}
+
+# Progenitor Translation Matrix
+{ Token Id: 6104, Name: [c][ff8000]Progenitor Translation Matrix[/c]
+  CustomIcon: Eden_ProgenitorTranslationMatrix
+  DropOnDeath: false
+  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix grants access to Progenitor computer terminals. \n\nRequired to access the core system controls on Progenitor Cores and other Progenitor computer systems.
+}
+
+# ================================================================================================================================ Object 82 Keys.
+
+# Progenitor Key I - Object 1
+{ Token Id: 6105, Name: [c][FF00FF]Progenitor Key I[/c]
+  CustomIcon: ProgenitorKeyI
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: [c][FF0000]Consumed on use.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 1. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]Once we were one. Once we had harmony...[-][/c][/i]
+}
+
+# Progenitor Key II - Object 13
+{ Token Id: 6106, Name: [c][FF00FF]Progenitor Key II[/c]
+  CustomIcon: ProgenitorKeyII
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: [c][FF0000]Consumed on use.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 13. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...Not content with one mortal life we sought more...[-][/c][/i]
+}
+
+# Progenitor Key III - Object 42
+{ Token Id: 6107, Name: [c][FF00FF]Progenitor Key III[/c]
+  CustomIcon: ProgenitorKeyIII
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: [c][FF0000]Consumed on use.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 42. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...We ascended to dreams and fell to nightmare...[-][/c][/i]
+}
+
+# Progenitor Key IV - Object 276
+{ Token Id: 6108, Name: [c][FF00FF]Progenitor Key IV[/c]
+  CustomIcon: ProgenitorKeyIV
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: [c][FF0000]Consumed on use.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems.  You must also have personally activated the Subspace Link at Object 276.\n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...Now we see our children following in our footsteps. Now we see you following in theirs.[-][/c][/i]
+}
+
+
+# ================================================================================================================================ Talon Relics
+
+# Relic of the Sun
+{ Token Id: 6109, Name: [c][FFFF33]Relic of the Sun[/c]
+  CustomIcon: Eden_RelicoftheSun
+  DropOnDeath: false
+  Description: [c][FF00FF]Mission Item.[-][/c] \nGive to the Talon at the Temple of the Sun on Desert Oasis class planets. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
+}
+
+# Relic of the Moon
+{ Token Id: 6110, Name: [c][F0F8FF]Relic of the Moon[/c]
+  CustomIcon: Eden_RelicoftheMoon
+  DropOnDeath: false
+  Description: [c][FF00FF]Mission Item.[-][/c] \nGive to the Talon at the Temple of the Moon on Desert Oasis class planets. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
+}
+
+# Shard of the Sun
+{ Token Id: 6111, Name: [c][FFFF33]Shard of the Sun[/c]
+  CustomIcon: Eden_RelicoftheSun
+  DropOnDeath: false
+  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
+}
+
+# Shard of the Moon
+{ Token Id: 6112, Name: [c][F0F8FF]Shard of the Moon[/c]
+  CustomIcon: Eden_RelicoftheMoon
+  DropOnDeath: false
+  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
+}
+
+# Corrupted Shard of the Stars
+{ Token Id: 6113, Name: [c][FF0000]Corrupted Shard of the Stars[/c]
+  CustomIcon: Eden_RelicoftheStarsCorrupt
+  DropOnDeath: false
+  Description: A fragment from an ancient Talon relic. \nA strange red energy radiates from the power cell within the shard. \n\nPerhaps there is a way to restore the shard to its former glory by cleansing the corrupted energy contained within. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
+}
+
+# Shard of the Stars
+{ Token Id: 6114, Name: [c][FFFFFF]Shard of the Stars[/c]
+  CustomIcon: Eden_RelicoftheStars
+  DropOnDeath: false
+  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
+}
+
+# Depleted Progenitor Translation Matrix
+{ Token Id: 6115, Name: [c][ff8000]Depleted Progenitor Translation Matrix[/c]
+  CustomIcon: Eden_ProgenitorTranslationMatrix2
+  DropOnDeath: false
+  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix has been depleted and will no longer access the computer systems on Progenitor Cores.\n\nStill functions as a Progenitor Translation Matrix for all other purposes and can still access non-core Progenitor computer systems.
+}
+
+# Overgrown Flower Sample found in Desert Oasis caves
+{ Token Id: 6116, Name: Overgrown Flower Sample
+  CustomIcon: Eden_FlowerOrange
+  Description: "A sample from an alien flower. Talon on Desert Oasis planets may be interested in this."
+}
+
+# Underground Insects found in Jungle caves
+{ Token Id: 6117, Name: Underground Insects
+  CustomIcon: Eden_FireflyOrange
+  Description: "A sample of underground insects. Talon Breweries on jungle planets may be interested in this."
+}
+
+# Underground Insects found in Jungle caves
+{ Token Id: 6118, Name: XCorp Computer Virus
+  CustomIcon: Eden_GuideVirusGreen
+  Description: "A data card containing a malicious virus meant to disrupt the computer systems of an XCorp Lab or XCorp Mainframe on some crystalline moons.\nGiven to you by a former employee of XCorp currently hiding out on the moon."
+}
+
+# Underground Insects found in Jungle caves
+{ Token Id: 6119, Name: Strange Bioluminescent Sample
+  CustomIcon: Eden_SporesPurple
+  Description: "A sample from a strange alien organism found in an ice cave on ice class planets. Perhaps there could be a use for it somewhere within the cave."
+}
+
+# Underground Insects found in Jungle caves
+{ Token Id: 6120, Name: Syndicate Container Key
+  Description: "A one-use key card for opening secured Syndicate containers. Can also sell to certain traders."
+  MarketPrice: 50000, display: true
+}
+
+# Info on mine for Combat Site Eden_CombatT2_3
+{ Token Id: 6121, Name: Mine Manufacturer Info
+  CustomIcon: Tablet
+  Description: "Make and model: LRIWDM-4000 Long-Range Interdictor Warp Distruption Mine\nSerial number: 2jf95-jg9fj-934uj-jf93m-f0sjd-as893\nManufacturing date: 04F-12b\nLine manager: Korvax.\nRange: 0.2ly.\n\nFind someone on a Polaris Distribution Center who might know about this."
+  MarketPrice: 50000, display: true
+}
+
+# Music sample from Syndicate Casino to Pirates Distribution Center (Freeport).
+{ Token Id: 6122, Name: Music Sample
+  CustomIcon: Eden_GuideMusic
+  Description: "A collection of sample music tracks produced by an aspiring DJ at a Syndicate Casino.\nmarked for delivery to Underground Music Network at a Pirate Freeport in The Badlands."
+  MarketPrice: 25000, display: true
+}
+
+# Narrow Band scan report for exploration missions.
+{ Token Id: 6123, Name: Scanned Coordinates
+  CustomIcon: Eden_GuideTextBlue
+  Description: "Coordinates for an anomaly.\nUsed for a exploration site."
+  MarketPrice: 25, display: true
+}
+
+# For hidden secret on UCH Research Vessels
+{ Token Id: 6124, Name: Maintenance Access Card 12-A
+  CustomIcon: KeyCardBlue
+  Description: "An access card for a maintenance hatch somewhere on board a UCH Research Vessel.\nConsumed on use."
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+  RemoveOnUse: true
+}
+
+{ Token Id: 6125, Name: Maintenance Access Card 12-B
+  CustomIcon: KeyCardBlue
+  Description: "An access card for a maintenance hatch somewhere on board a UCH Research Vessel.\nConsumed on use."
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+  RemoveOnUse: true
+}
+
+{ Token Id: 6126, Name: Maintenance Access Card 12-C
+  CustomIcon: KeyCardBlue
+  Description: "An access card for a maintenance hatch somewhere on board a UCH Research Vessel.\nConsumed on use."
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+  RemoveOnUse: true
+}
+
+{ Token Id: 6127, Name: "Gerald's Partially Corrupted Log"
+  CustomIcon: KeyCardRed
+  Description: "A partially corrupted log. Perhaps by finding more pieces of the log you can reconstruct it."
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+}
+
+{ Token Id: 6128, Name: "Gerald's Keycard"
+  CustomIcon: KeyCardRed
+  Description: "A key, to something, on a UCH Research Vessel.\nRemoved on use."
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+  RemoveOnUse: true
+}
+
+{ Token Id: 6129, Name: "Gerald's Last Log"
+  CustomIcon: KeyCardRed
+  Description: "A tale of betrayal and adventure.[sup]\n\n[c][00ffff]Log 47:[-][/c] Today I arrived on a UCH Research Vessel. I snuck in via the rear hangar and made my way to engineering. As it was the middle of the night ship time, there were few personel on duty and I was able to sneak into a maintenance shaft. This will be home for now while I plot my revenge.\n\n[c][00ffff]Log 53:[-][/c] I had to leave the last research vessel as the terran scum were getting suspicious. I found a new place to hide in another maintenance section. I will have my revenge on my former captain!\n\n[c][00ffff]Log 59:[-][/c] Yet again I had to move, but this time I found a nice spacious room next to the air filtration system. Good news is it's nice and cool here, though the fans are a little noisy. Now I can work in peace on plotting my revenge!"
+  MarketPrice: 25, display: true
+  DropOnDeath: false
+}
+
+# ================================================================================================================================ Tokens for message deliveries
+
+{ Token Id: 6150, Name: Message for Trade Federation Orbital Habitat
+  CustomIcon: Eden_GuideTextBlue
+  Description: "An encrypted message intended for delivery to someone at a Trade Federation Orbital Habitat.\nMust be in your personal inventory."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6151, Name: Message for Polaris Orbital Habitat
+  CustomIcon: Eden_GuideTextOrange
+  Description: "An encrypted message intended for delivery to someone at a Polaris Orbital Habitat.\nMust be in your personal inventory."
+  MarketPrice: 35000, display: true
+}
+
+{ Token Id: 6152, Name: Message for Colonists Orbital Habitat
+  CustomIcon: Eden_GuideTextBlueLight
+  Description: "An encrypted message intended for delivery to someone at a Free Colonists Habitat.\nMust be in your personal inventory."
+  MarketPrice: 25000, display: true
+}
+
+# ================================================================================================================================ Licenses and Rewards
+
+# Polaris Refinery License
+{ Token Id: 6201, Name: [c][00FFFF]Polaris Refinery License[/c]
+  CustomIcon: Eden_PolarisRefinery
+  Description: This license allows use of the furnaces on board [c][FFA500]Polaris orbital refineries.[/c][-] \n\n[c][FFFFFF][i]Place ores in the furnace input cargo container in the upper hangar. \nPick up refined ingots from the bottom hangar.[/i]
+  # Description: Eden_PolarisRefineryLicenseinfo
+  MarketPrice: 500000, display: true
+}
+
+# Colonists Refinery License
+{ Token Id: 6202, Name: Colonists Salvage License
+  CustomIcon: Eden_ScrapyardLicense
+  Description: This license grants the user access to remove a single core lock on a Salvaged Wreck in Colonists Scrapyards and allowing you to freely loot and salvage it without penalty. One use only.
+  # Description: Eden_PolarisRefineryLicenseinfo
+  MarketPrice: 50000, display: true
+  RemoveOnUse: true
+}
+
+# Colonists Refinery License
+{ Token Id: 6203, Name: Stolen Polaris Supply Cache Access Card
+  Description: "Opens the door of a Polaris supply cache, allowing you to break into it without reputation penalty. Single use only."
+  # Description: Eden_PolarisRefineryLicenseinfo
+  MarketPrice: 50000, display: true
+  RemoveOnUse: true
+}
+
+# Summons UCH Research Vessel
+{ Token Id: 6204, Name: UCH Research Beacon
+  CustomIcon: Eden_UCHBeacon
+  Description: "Signals a UCH Research Vessel to warp in nearby. Use by placing in your personal inventory then activate the Warp in UCH Research Vessel mission in the PDA under Science and Research.\nCan only be used in standard habitable, cold, and hot planetary orbits and only once per sector.\nWarning: make sure there are no obstacles within 2000 meters before activating."
+  DropOnDeath: false
+}
+
+
+# Exploration Data
+# { Token Id: 6202, Name: Exploration Data
+  # # CustomIcon: Eden_RelicoftheMoon
+  # Description: This token is not currently used but may have a use in a future update. Hold on to it!
+  # MarketPrice: 100000, display: true
+# }
+
+
+# ================================================================================================================================ Keycards
+
+# Syndicate Access Card
+{ Token Id: 6301, Name: [c][8FFF8F]Syndicate Security Access Card[/c]
+  CustomIcon: Eden_SyndicateCard
+  Description: This key card allows access to sensitive areas of Syndicate facilities.
+}
+
+{ Token Id: 6302, Name: [c][8FFF8F]Suspicious Package[/c]
+  Description: A small package to be delivered to Room 4 in the Syndicate Casino. \n\n[i][c][A9A9A9]It's ticking...[-][/c][/i]
+}
+
+
+{ Token Id: 6303, Name: Smuggler Key Card
+  CustomIcon: KeyCardYellow
+  RemoveOnUse: true
+  Description: Unlocks a Reinforced Smuggler Stash. \n\n[c][FF0000]Consumed on use.[-][/c]
+  MarketPrice: 25000, display: true
+}
+
+{ Token Id: 6304, Name: [c][A9A9A9]Flying for Dummies[-][/c]
+  CustomIcon: Tablet
+  Description: [c][A9A9A9]A collection of flying lessons for novice pilots. \nWritten by Captain Pang.[-][/c]
+  MarketPrice: 25, display: true
+}
+
+{ Token Id: 6305, Name: [c][A9A9A9]Advanced Dogfighting Techniques[-][/c]
+  CustomIcon: Tablet
+  Description: [c][A9A9A9]A collection of flying lessons for advanced pilots and signed by the author. \nWritten by Captain Pang.[-][/c]
+  MarketPrice: 25, display: true
+}
+
+{ Token Id: 6306, Name: Bathroom Key Card
+  CustomIcon: KeyCardBlue
+  Description: [c][ffff00]Single use.[-][/c]\nA bathroom key card found in a suspicious cargo container at a Polaris Distribution Center.
+  RemoveOnUse: true
+}
+
+{ Token Id: 6307, Name: [c][A9A9A9]Slightly used toilet paper[-][/c]
+  CustomIcon: Tablet
+  Description: [c][A9A9A9]Eww.[-][/c]
+  MarketPrice: 5, display: true
+}
+
+{ Token Id: 6308, Name: Lovingly Handwritten Note
+  CustomIcon: Tablet
+  Description: "A handwritten note from a loving spouse intended for delivery to one of the prisoners on a Trade Federation security headquarters. Though you cannot translate the alien language you know that it was written with the most love and care.\nFind someone you can convince to pass the note to the prisoner, or you can report it to security on board the station."
+}
+
+{ Token Id: 6309, Name: Secure Supply Cache Access Card
+  CustomIcon: KeyCardBlue
+  Description: "A one time use keycard used for opening a secure supply cache without reputation loss."
+  RemoveOnUse: true
+}
+
+{ Token Id: 6310, Name: "The Explorer's Pocket Guide to Star Classes"
+  CustomIcon: KeyCardBlue
+  Description: "A draft version of a pocket guide to the basic star classes in Andromeda."
+}
+
+# ================================================================================================================================ Schematics
+# Encrypted Schematic
+{ Token Id: 6400, Name: "[c][FFFFFF]Encrypted Schematic[-][/c]"
+  CustomIcon: Eden_RecipeRandom2
+  DropOnDeath: false
+  Description: "An encrypted schematic.\nDecode it to obtain a random schematic by using a schematic computer on board a UCH Research Vessel or your science station."
+  MarketPrice: 50000, display: true
+}
+
+# Sentinel Flak Turret
+{ Token Id: 6401, Name: "Schematic - [c][FFFFFF]Sentinel Flak Turret[-][/c]"
+  CustomIcon: Eden_TurretFlakClose_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]50 Unlock Points[-][/c]\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Small Vulcan Turret
+{ Token Id: 6402, Name: "Schematic - [c][FFFFFF]Small Vulcan Turret[-][/c]"
+  CustomIcon: Eden_TurretVulcanSmall_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]75 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Nanite Injectors
+{ Token Id: 6403, Name: "Schematic - [c][FFFFFF]Nanite Injectors[-][/c]"
+  CustomIcon: Eden_RegenKit_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][FF00FF]Alien Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Advanced Nanite Injectors
+{ Token Id: 6404, Name: "Schematic - [c][FFFFFF]Advanced Nanite Injectors[-][/c]"
+  CustomIcon: Eden_RegenKit_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][FF00FF]Alien Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Appleseed Brews
+{ Token Id: 6405, Name: "Schematic - [c][FFFFFF]Appleseed Brews[-][/c]"
+  CustomIcon: Eden_WarpCoreMoonshine_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Advanced Bandages
+{ Token Id: 6406, Name: "Schematic - [c][FFFFFF]Advanced Bandages[-][/c]"
+  CustomIcon: Eden_BandagesT2_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][FF00FF]Alien Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Heavy Railgun Turret
+{ Token Id: 6407, Name: "Schematic - [c][FFFFFF]Heavy Railgun Turret[-][/c]"
+  CustomIcon: Eden_TurretRailgunHeavy_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n[c][FFFF00]Requires Light Railgun Turret unlocked.[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Incendiary Minigun
+{ Token Id: 6408, Name: "Schematic - [c][FFFFFF]Incendiary Minigun[-][/c]"
+  CustomIcon: Eden_MinigunIncendiary_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][FF00FF]Alien Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Syndicate Heavy Blaster
+{ Token Id: 6409, Name: "Schematic - [c][FFFFFF]Heavy Blaster Cannon[-][/c]"
+  CustomIcon: Eden_BlasterCV_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][FFFF00]Pirate Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# Rapid Fire CV Torpedo Launcher
+{ Token Id: 6410, Name: "Schematic - [c][FFFFFF]MX-4 Rapid Torpedo Launcher[-][/c]"
+  CustomIcon: Eden_CVTorpedoRapid_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]75 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 100000, display: true
+}
+
+# Rapid Light Railgun
+{ Token Id: 6411, Name: "Schematic - [c][FFFFFF]LX-2 Prototype Light Railgun[-][/c]"
+  CustomIcon: Eden_RailgunCVSpinal_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 200000, display: true
+}
+
+# Automated Industrial Mining Rig
+{ Token Id: 6412, Name: "Schematic - [c][FFFFFF]Automated Industrial Mining Rig[-][/c]"
+  CustomIcon: Eden_AutoMiningDeviceT4_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 300000, display: true
+}
+
+# Large Vulcan Turret
+{ Token Id: 6413, Name: "Schematic - [c][FFFFFF]Large Vulcan Turret[-][/c]"
+  CustomIcon: Eden_TurretVulcanSmall_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]75 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 100000, display: true
+}
+
+# Automated Industrial Mining Rig
+{ Token Id: 6414, Name: "Schematic - [c][FFFFFF]Ice Mining Drills[-][/c]"
+  CustomIcon: Eden_DrillIceTurretCV_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 100000, display: true
+}
+
+# Automated Industrial Mining Rig
+{ Token Id: 6415, Name: "Schematic - [c][FFFFFF]Rich Asteroid Mining Drills[-][/c]"
+  CustomIcon: Eden_DrillTurretAutoCV_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 300000, display: true
+}
+
+# Advanced Wind Turbine
+{ Token Id: 6416, Name: "Schematic - [c][FFFFFF]Advanced Wind Turbine[-][/c]"
+  CustomIcon: Eden_WindTurbineActiveT2_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 200000, display: true
+}
+
+# Industrial Water Extractor
+{ Token Id: 6417, Name: "Schematic - [c][FFFFFF]Industrial Water Extractor[-][/c]"
+  CustomIcon: Eden_WaterGeneratorT2_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]Civilian Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\nLevel required: [c][00FFFF]15 to craft, 20 to activate[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 50000, display: true
+}
+
+# ================================================================================================================================ Mission Tokens
+
+# ----------------------------------------------------------------------------------------- Frontier mission
+# Communications Log
+{ Token Id: 6501, Name: [c][FFFFFF]Communications Log[/c]
+  Description: A log of intercepted Zirax communications. Someone on Arid Mesa class planets may be interested in this.
+}
+
+# Teleporter Key
+{ Token Id: 6502, Name: [c][FFFFFF]Teleporter Access Key[/c]
+  RemoveOnUse: true
+  Description: [c][FF0000]Consumed on use.[-][/c] Allows activation of the teleporter in the Destroyed Village on Arid Mesa class planets.
+}
+
+
+# ----------------------------------------------------------------------------------------- Random UCH Captain missions
+# UCH Token of Service
+{ Token Id: 6503, Name: [c][FFFFFF]UCH Token of Service[/c]
+  Description: A token earned from completing missions for UCH Captains. \n\n[c][FFFFFF]A set of 10 can be turned in to a UCH Captain outside the starting solar systems for a reward of your choice.[i][/i][/c]
+}
+
+# ----------------------------------------------------------------------------------------- Upgrade tokens
+# Exploration Data
+{ Token Id: 6504, Name: Exploration Data
+  CustomIcon: KeyCardBlue
+  Description: This item currently has no use. It may get a use later on. Can be sold to UCH Quartermasters on UCH Research Vessels.
+  MarketPrice: 10000, display: true
+}
+
+# int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;
+# int Eden_G_BanditRewardT1 = 20000; int Eden_G_BanditRewardT2 = 40000; int Eden_G_BanditRewardT3 = 80000; int Eden_G_BountyRewardT1 = 100000; int Eden_G_BountyRewardT2 = 250000; int Eden_G_BountyRewardT3 = 500000;
+# int Eden_G_BanditRepT1 = 50; int Eden_G_BanditRepT2 = 75; int Eden_G_BanditRepT3 = 100; int Eden_G_BountyRepT1 = 100; int Eden_G_BountyRepT2 = 175; int Eden_G_BountyRepT3 = 250;
+# int Eden_Global_DataPad = 50;
+
+
+
+
+# Reward from bandits. T1
+{ Token Id: 6505, Name: Bandit Insignia
+  CustomIcon: Eden_InsigniaBanditT1
+  Description: An insignia from a member of a bandit gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 20000, display: true
+}
+
+# Reward from raiders. T2
+{ Token Id: 6506, Name: Raider Insignia
+  CustomIcon: Eden_InsigniaBanditT2
+  Description: An insignia from a member of a raider gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 40000, display: true
+}
+
+# Reward from reavers. T3
+{ Token Id: 6507, Name: Reaver Insignia
+  CustomIcon: Eden_InsigniaBanditT3
+  Description: An insignia from a member of a reaver gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 80000, display: true
+}
+
+# Bounty reward T1.
+{ Token Id: 6508, Name: Bandit Officer's Insignia
+  CustomIcon: Eden_InsigniaBountyT1
+  Description: An insignia from an officer of a bandit gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 100000, display: true
+}
+
+# Bounty reward T2.
+{ Token Id: 6509, Name: Raider Officer's Insignia
+  CustomIcon: Eden_InsigniaBountyT2
+  Description: An insignia from an officer of a raider gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 250000, display: true
+}
+
+# Bounty reward T3.
+{ Token Id: 6510, Name: Reaver Officer's Insignia
+  CustomIcon: Eden_InsigniaBountyT3
+  Description: An insignia from an officer of a reaver gang. \nTake to a bounty office in a trade station sector of a major faction.
+  MarketPrice: 500000, display: true
+}
+
+# ----------------------------------------------------------------------------------------- Mining Site Loot
+
+# Mining Reward Tier 1
+{ Token Id: 6511, Name: Mining Reward Box Tier 1
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Reward Tier 2
+{ Token Id: 6512, Name: Mining Reward Box Tier 2
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Reward Tier 3
+{ Token Id: 6513, Name: Mining Reward Box Tier 3
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Reward Tier 4
+{ Token Id: 6514, Name: Mining Reward Box Tier 4
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Reward Tier 5
+{ Token Id: 6515, Name: Mining Reward Box Tier 5
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Reward Tier 6
+{ Token Id: 6516, Name: Mining Reward Box Tier 6
+  CustomIcon: AlienContainerRare
+  Description: "A crate containing an assortment of ores or other supplies.\nOpen using a science station."
+  MarketPrice: 50000, display: true
+}
+
+# Mining Contract Reward
+{ Token Id: 6517, Name: Mining Contract Reward Tier 1
+  CustomIcon: AlienContainerRare
+  Description: "Turn in at a distribution center in the trade station sector of a faction."
+  MarketPrice: 50000, display: true
+}
+
+# ----------------------------------------------------------------------------------------- Combat Site Loot
+
+# Combat Reward Tier 1
+{ Token Id: 6521, Name: Combat Reward Cache Tier 1
+  CustomIcon: Eden_CacheCombatT1
+  # Description: "A sealed crate that may contain stolen supplies, military equipment, or other items.\nOpen using a science station on board your ship or base."
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 50000, display: true
+}
+
+# Combat Reward Tier 2
+{ Token Id: 6522, Name: Combat Reward Cache Tier 2
+  CustomIcon: Eden_CacheCombatT2
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 100000, display: true
+}
+
+# Combat Reward Tier 3
+{ Token Id: 6523, Name: Combat Reward Cache Tier 3
+  CustomIcon: Eden_CacheCombatT3
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 150000, display: true
+}
+
+# Combat Reward Tier 4
+{ Token Id: 6524, Name: Combat Reward Cache Tier 4
+  CustomIcon: Eden_CacheCombatT4
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 200000, display: true
+}
+
+# Combat Reward Tier 5
+{ Token Id: 6525, Name: Combat Reward Cache Tier 5
+  CustomIcon: Eden_CacheCombatT5
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 250000, display: true
+}
+
+# Combat Reward Tier 6
+{ Token Id: 6526, Name: Combat Reward Cache Tier 6
+  CustomIcon: Eden_CacheCombatT6
+  Description: Eden_CacheCombatinfo
+  MarketPrice: 300000, display: true
+}
+
+# ----------------------------------------------------------------------------------------- Exploration reports
+
+# Subspace Anomalies
+{ Token Id: 6550, Name: "Class 1 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 5000, display: true
+}
+
+{ Token Id: 6551, Name: "Class 2 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT2
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6552, Name: "Class 3 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT3
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6553, Name: "Class 4 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT4
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 30000, display: true
+}
+
+{ Token Id: 6554, Name: "Class 5 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT5
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 40000, display: true
+}
+
+{ Token Id: 6555, Name: "Class 6 Anomaly Report"
+  CustomIcon: Eden_DataExplorationT6
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 50000, display: true
+}
+
+# Expedition starts
+{ Token Id: 6556, Name: "Tier 1 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT1
+  # Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6557, Name: "Tier 2 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT2
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6558, Name: "Tier 3 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT3
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  MarketPrice: 50000, display: true
+}
+
+# Expedition reports
+{ Token Id: 6559, Name: "Tier 1 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "Reward for completing an expedition. UCH Research Vessels may pay well for this."
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6560, Name: "Tier 2 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "Reward for completing an expedition. UCH Research Vessels may pay well for this."
+  MarketPrice: 200000, display: true
+}
+
+{ Token Id: 6561, Name: "Tier 3 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "Reward for completing an expedition. UCH Research Vessels may pay well for this."
+  MarketPrice: 300000, display: true
+}
+
+{ Token Id: 6562, Name: "Tier 4 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "Reward for completing an expedition. UCH Research Vessels may pay well for this."
+  MarketPrice: 400000, display: true
+}
+
+
+
+
+# ================================================================================================================================ Bounty tokens
+
+# -------------------------------------------------------------------------- Wanted by Colonists
+# Savanth Greenzald's Insignia
+{ Token Id: 6601, Name: [c][FFFFFF]Insignia of Savanth Greenzald[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5]Savanth has been a thorn in the side of the Free Colonists for a number of years. Responsible for a number of bandit attacks on shipping lanes, he has now stepped up his attacks to include stations and civilian outposts.\nThe Free Colonists will pay for proof of his demise, although it is often not long until he returns in a freshly cloned body.\nHe sometimes runs his operations out of Bandit outposts.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Marko Inero's Insignia - Pirate Battlestation
+{ Token Id: 6602, Name: [c][FFFFFF]Insignia of Marko Inero[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaPirates
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][FFFF00]Pirates[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5]Suspected of being a terrorist leader in the pirate gang known as the Bloodhunters, Marko made a name for himself for his extreme tactics.\nHe is wanted for his involvement in the asteroid bombardment of Intrazia Prime.\nLast seen running a Pirate Battlestation.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Small Tony's Insignia - Large Wrecks
+{ Token Id: 6603, Name: [c][FFFFFF]Insignia of Small Tony[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5]Small Tony runs a local bandit gang and has frequently been spotted hiding out in derelict space stations.\nThought to have been killed more often than any other bandit, he keeps coming back for more thanks to his clone chamber which no one has been able to find.\nThe Free Colonists would pay well for anyone who can add one more death to his name.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Greeza Zeerzhi's Insignia
+{ Token Id: 6604, Name: [c][FFFFFF]Insignia of Greeza Zeerzhi[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# The Steel Hammer's Insignia
+{ Token Id: 6605, Name: [c][FFFFFF]Insignia of The Steel Hammer[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Captain Pang's Insignia - Polaris Freighter Attacks
+{ Token Id: 6606, Name: [c][FFFFFF]Insignia of Captain Pang[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5]No one knows why the captain left his life of service in the Xenu navy. All our sources know is that his records were scrubbed clean from the Zirax central database after he left.\nHe has been spotted leading fighter squadrons in attacks on Polaris freighters.[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# Yerzhu the Smuggler's Insignia
+{ Token Id: 6607, Name: [c][FFFFFF]Insignia of Yerzhu the Smuggler[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# Warlord Khrang's Insignia
+{ Token Id: 6608, Name: [c][FFFFFF]Insignia of Warlord Khrang[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaZirax
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][FF0000]Zirax Empire[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# 
+{ Token Id: 6609, Name: [c][FFFFFF]Insignia of Kreenah Pitoli[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# 
+{ Token Id: 6610, Name: [c][FFFFFF]Insignia of Painbringer Xerxas[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][4CA5FF]Free Colonists[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Colonists territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# -------------------------------------------------------------------------- Wanted by Zirax
+# 
+{ Token Id: 6611, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5]Savanth has been a thorn in the side of the Free Colonists for a number of years. Responsible for a number of bandit attacks on shipping lanes, he has now stepped up his attacks to include stations and civilian outposts.\nThe Free Colonists will pay for proof of his demise, although it is often not long until he returns in a freshly cloned body.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6612, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6613, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6614, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# 
+{ Token Id: 6615, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# 
+{ Token Id: 6616, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6617, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6618, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6619, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6620, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FF0000]Zirax Empire[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Zirax territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# -------------------------------------------------------------------------- Wanted by Polaris
+# Groktan Klous - Raider Headquarters
+{ Token Id: 6621, Name: [c][FFFFFF]Insignia of Groktan Klous[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Raiders[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5]Groktan has frequently been spotted running the day to day operations of Raider headquarters.\nHis reputation for mistreating subordinates is well known among raiders and he is often turned in to the authorities by his own men only to have him come back in a new clone body and get revenge on those who betrayed him.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Smuggler Gorn - Smuggler Outpost
+{ Token Id: 6622, Name: [c][FFFFFF]Insignia of Smuggler Gorn[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5]Gorn is wanted by Polaris for a long list of crimes including selling defective solar panels to Polaris outposts, selling self sealing stem bolts that didn't self seal, and stepping on an endangered worm.\nHe has last been spotted hiding out in a Smuggler outpost.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Korne the Outcast
+{ Token Id: 6623, Name: [c][FFFFFF]Insignia of Korne the Outcast[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5]Known for attacking civilian miners in low class mining sites and then demanding a ransom from the miner.\nHe will flee his ship if disabled, but Polaris will pay well for proof of destruction of his ship.\nTaking his ship will help keep resources flowing throughout the sector.\nBe warned, there have been reports he got his hands on a Heavy Beam Laser Turret and has mounted it to the top of his attack ship.[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# Director Crennek
+{ Token Id: 6624, Name: [c][FFFFFF]Insignia of Director Crennek[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaZirax
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][FF0000]X-Corp (Zirax Empire)[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5]Director Crennek has been leading the XCorp's research efforts into new weapon technology for the Zirax Empire. We cannot allow them to get the upper hand. Our intelligence reports the director can sometimes be found at XCorp Mainframes, found on some types of crystalline moons.\nStall their research efforts by taking him out, at least until they can grow a new clone.\n\nBe warned, the director will abandon the facility if you take out the core or generators.[-][/c]"
+  MarketPrice: 200000, display: true
+}
+
+# 
+{ Token Id: 6625, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# 
+{ Token Id: 6626, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6627, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6628, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6629, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6630, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Polaris territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# -------------------------------------------------------------------------- Wanted by Trader
+# Bandit Lookout
+{ Token Id: 6631, Name: [c][FFFFFF]Insignia of Faeru Leksha[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5]Faeru stole a priceless family heirloom from a wealthy member of the Trading Guild board of trustees. After having a high price put on their head they went into hiding working for a bandit gang running a lookout outpost.\nTo this day no one has found the family heirloom that he stole.[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# Pirate Drug Farm
+{ Token Id: 6632, Name: [c][FFFFFF]Insignia of Xor[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaPirates
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][FFFF00]Pirates[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5]Xor is a drug dealer who specializes in dangerous and illegal drugs.\nFor the stability of the entire sector, the Trading Guild will pay well for proof of his demise.\nXor has access to a clone chamber and will soon return but every death sets back his drug operations.[-][/c]"
+  # Description: Eden_Token6632info
+  MarketPrice: 50000, display: true
+}
+
+# Class 3 SV Mining Sites
+{ Token Id: 6633, Name: [c][FFFFFF]Insignia of The Trapper[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5]There are few as ruthless as The Trapper. It is said he lays in wait inside class 3 mining sites with anomalies preventing capital vessels from warping to them.\nNo one knows how he is able to bring his own capital ships into those sectors, but he must be stopped.\nThe Trading Guild will pay well for the removal of his ship.[-][/c]"
+  MarketPrice: 500000, display: true
+}
+
+# 
+{ Token Id: 6634, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Sansa Kuvera
+{ Token Id: 6635, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Raiders[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Captain Xorchek - Patrolling hot orbits.
+{ Token Id: 6636, Name: [c][FFFFFF]Insignia of Captain Xorchek[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaZirax
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][FF0000]Zirax Empire[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5]Wanted by the Trade Guild for violations of the Zirax-Guild treaty. Xorchek has been attacking trading vessels around planetary orbits in hot systems. Stop this renegade Zirax before he starts another war.[-][/c]"
+  MarketPrice: 200000, display: true
+}
+
+# The Three Angels
+{ Token Id: 6637, Name: [c][FFFFFF]Insignia[-][/c] of The Three Angels (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6638, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6639, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6640, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Trader territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+# -------------------------------------------------------------------------- Wanted by Pirates
+# 
+{ Token Id: 6641, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6642, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6643, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 50000, display: true
+}
+
+# 
+{ Token Id: 6644, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# 
+{ Token Id: 6645, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# 
+{ Token Id: 6646, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6647, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6648, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6649, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6650, Name: [c][FFFFFF]Insignia[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nBring to a Bounty Hunter Office in trading station sectors in Pirates territory for a reward.\n\n[c][D5D5D5].[-][/c]"
+  MarketPrice: 150000, display: true
+}
+
+#
+{ Token Id: 6651, Name: [c][FFFFFF]Insignia of Xenu Captain[-][/c] (Bounty)
+  CustomIcon: Eden_InsigniaBandits
+  Description: "[c][FFFFFF][b]Wanted by:[-][/c][/b] [c][0025FF]UCH[-][/c]\n[c][FFFFFF][b][b]Member of:[/b][-][/c] [c][BF0000]Warlord[-][/c]\nBring to a UCH Quartermaster at UCH Research Vessels for a reward.\n\n[c][D5D5D5]Certain Zirax officers take it upon themselves to go rogue and hunt down UCH vessels even against the orders of Zirax command. UCH will pay well for taking such officers out.[-][/c]"
+  MarketPrice: 200000, display: true
+}
+
+
+# ================================================================================================================================ Bulk Trading Tokens
+
+# Free Colonists
+{ Token Id: 6700, Name: Small Sealed Package [c][4CA5FF](Colonists)[-][/c]
+  CustomIcon: CargoContainerSV
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colonists[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Neutral\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 2500\n[c][FFFFFF][b]Payment:[-][/c][/b] 7% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  MarketPrice: 2500, display: true
+}
+
+{ Token Id: 6701, Name: Medium Sealed Package [c][4CA5FF](Colonists)[-][/c]
+  CustomIcon: ScifiContainer1Small
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colonists[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 20000\n[c][FFFFFF][b]Payment:[-][/c][/b] 11% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6702, Name: Large Sealed Package [c][4CA5FF](Colonists)[-][/c]
+  CustomIcon: ContainerMS02Large
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colonists[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Honored\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 100000\n[c][FFFFFF][b]Payment:[-][/c][/b] 15% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Polaris
+{ Token Id: 6703, Name: Small Sealed Package [c][E59933](Polaris)[-][/c]
+  CustomIcon: CargoContainerSV
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Neutral\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 2500\n[c][FFFFFF][b]Payment:[-][/c][/b] 7% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  MarketPrice: 2500, display: true
+}
+
+{ Token Id: 6704, Name: Medium Sealed Package [c][E59933](Polaris)[-][/c]
+  CustomIcon: ScifiContainer1Small
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 20000\n[c][FFFFFF][b]Payment:[-][/c][/b] 11% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6705, Name: Large Sealed Package [c][E59933](Polaris)[-][/c]
+  CustomIcon: ContainerMS02Large
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Honored\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 100000\n[c][FFFFFF][b]Payment:[-][/c][/b] 15% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Zirax
+{ Token Id: 6706, Name: Small Sealed Package [c][FF0000](Zirax)[-][/c]
+  CustomIcon: CargoContainerSV
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Neutral\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 2500\n[c][FFFFFF][b]Payment:[-][/c][/b] 10% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  MarketPrice: 3000, display: true
+}
+
+{ Token Id: 6707, Name: Medium Sealed Package [c][FF0000](Zirax)[-][/c]
+  CustomIcon: ScifiContainer1Small
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 20000\n[c][FFFFFF][b]Payment:[-][/c][/b] 15% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6708, Name: Large Sealed Package [c][FF0000](Zirax)[-][/c]
+  CustomIcon: ContainerMS02Large
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Honored\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 100000\n[c][FFFFFF][b]Payment:[-][/c][/b] 20% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Pirates
+{ Token Id: 6709, Name: Small Sealed Package [c][FFFF00](Pirates)[-][/c]
+  CustomIcon: CargoContainerSV
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Neutral\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 2500\n[c][FFFFFF][b]Payment:[-][/c][/b] 10% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  MarketPrice: 2500, display: true
+}
+
+{ Token Id: 6710, Name: Medium Sealed Package [c][FFFF00](Pirates)[-][/c]
+  CustomIcon: ScifiContainer1Small
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 20000\n[c][FFFFFF][b]Payment:[-][/c][/b] 15% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6711, Name: Large Sealed Package [c][FFFF00](Pirates)[-][/c]
+  CustomIcon: ContainerMS02Large
+  Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Honored\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 100000\n[c][FFFFFF][b]Payment:[-][/c][/b] 20% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+# Trade Beacons for finding trade stations and factories.
+# FactoryPolarisRG1
+{ Token Id: 6712, Name: "Trading Frequency: P3: Planetside Production"
+  CustomIcon: Eden_GuidePlanetsideProduction
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  # Description: "A data pad containing the communication frequency of a specific trading station or factory. Can be used to help locate the factory.\n\n[c][00FFFF]Requirements:[-][/c]\n[sup][c][FFFFFF]-Must be friendly with Trade Federation.\n-Must be in personal inventory.\n-If you have changed playfields or restarted the game move any item into or out of your inventory to update the PDA.\n-Activate the tracking mission under PDA > Trading.\n-Place the required scanning probe in your personal toolbar.\n-As long as the mission is currently active you will get a notification on your HUD if you enter a playfield that contains the factory you are tracking.\n-Does not pinpoint the exact location, only whether or not it exists in your current planet, moon, or sector to save time having to fully explore the area.\n-The trading frequency is reusable and can be activated again in the PDA.[/sup][-][/c]"
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6713, Name: "Trading Frequency: Waste Treatment Plant"
+  CustomIcon: Eden_GuideWasteTreatment
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6714, Name: "Trading Frequency: Solaris-AMP Factory"
+  CustomIcon: Eden_GuideSolarisAmp
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6715, Name: "Trading Frequency: Thermal Interactions Ltd"
+  CustomIcon: Eden_GuideThermalInteractions
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6716, Name: "Trading Frequency: Vitalife Pharmaceuticals"
+  CustomIcon: Eden_GuideVitalife
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+# FactoryPolarisRG2
+{ Token Id: 6717, Name: "Trading Frequency: Arriake Technology"
+  CustomIcon: Eden_GuideArriake
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6718, Name: "Trading Frequency: Gold Standard Warehouse"
+  CustomIcon: Eden_GuideGoldStandard
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6719, Name: "Trading Frequency: Chemmix Industrial"
+  CustomIcon: Eden_GuideChemmix
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6720, Name: "Trading Frequency: InterWeapon Munitions"
+  CustomIcon: Eden_GuideInterWeapon
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6721, Name: "Trading Frequency: Pentaxid Refinery"
+  CustomIcon: Eden_GuidePentaxidRefinery
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+# FactoryPolarisRG3
+{ Token Id: 6722, Name: "Trading Frequency: Chromium-Sierra Sciences"
+  CustomIcon: Eden_ChromiumSierra
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6723, Name: "Trading Frequency: Hostile Apparatus Robotics"
+  CustomIcon: Eden_GuideHostileApparatus
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6724, Name: "Trading Frequency: Commercial Starport"
+  CustomIcon: Eden_GuideStarport
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6725, Name: "Trading Frequency: Non-Linear Productions"
+  CustomIcon: Eden_GuideNonLinear
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6726, Name: "Trading Frequency: Fusion Powerplant"
+  CustomIcon: Eden_GuideFusionPowerplant
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6727, Name: "Trading Frequency: TOP Brewery"
+  CustomIcon: Eden_GuideTOPBrewery
+  # Description: "A data pad containing the communications frequency of a specific trading station or factory.\nPlace in your personal inventory then activate the frequency in the PDA under Trading."
+  Description: Eden_TradingFrequencyinfo
+  MarketPrice: 100000, display: true
+}
+
+
+
+# -------------------------------------------------------------------------- New Factory Traders for bulk trades
+
+# Eden_TokenCargo8k - Eden_TokenCargo320k
+# 6712 320k Advanced Component Shipment
+# 6713 160k Basic Component Shipment
+# 6714 64k Crop Shipment
+# 6715 160k Farming Equipment Shipment
+# 6716 64k Fertilizer Shipment
+# 6717 160k Food Shipment
+# 6718 160k Fuel Shipment
+# 6719 32k Hydrogen Shipment
+# 6720 320k Hydroponics Shipment
+# 6721 320k Industrial Shipment
+# 6722 160k Ingot Shipment
+# 6723 8k Jewelry Shipment
+# 6724 64k Leather Shipment
+# 6725 160k Liquor shipment
+# 6726 160k Livestock Feed Shipment
+# 6727 64k Meat Shipment
+# 6728 320k Mining Equipment Shipment
+# 6729 320k Optronics Shipment
+# 6730 160k Ore Shipment
+# 6731 32k Oxygen Shipment
+# 6732 320k Precious Metal Shipment
+# 6733 320k Robotics Shipment
+# 6734 32k Toxic Waste Shipment
+# 6735 16k Water Shipment
+# 6736 40k Military Shipment
+# 6737 40k Worker Shipment
+# 6738 80k Officer Shipment
+# 6739 160k VIP Shipment
+
+# Eden_TokenCargo320k
+# { Token Id: 6712, Name: [c][FFFFFF]Advanced Component Shipment[-][/c]
+  # CustomIcon: Eden_AdvancedComponentShipment
+  # Description: "A shipment of advanced components from a Traders Guild Advanced Orbital Factory in Tranquility. Sell to Polaris Orbital Robotics Factories and Optronic Orbital Factories in The Forge. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6713, Name: [c][FFFFFF]Basic Component Shipment[-][/c]
+  # CustomIcon: Eden_BasicComponentShipment
+  # Description: "A shipment of basic components from a Colonists Basic Orbital Factory in Prosperity. Sell to Traders Guild Advanced Orbital Factories in Tranquility. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo80k
+# { Token Id: 6714, Name: [c][FFFFFF]Crop Shipment[-][/c]
+  # CustomIcon: Eden_CropShipment
+  # Description: "A shipment of various crops from a Colonists Orbital Hydroponics Farm in Prosperity. Sell to Polaris Orbital Breweries in The Forge or Traders Guild Orbital Food Factories in Tranquility. [c][A9A9A9]Requires 80,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 250000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6715, Name: [c][FFFFFF]Farming Equipment Shipment[-][/c]
+  # CustomIcon: Eden_FarmingEquipmentShipment
+  # Description: "A shipment of specialized farming equipment from a Colonists Basic Orbital Factory in Prosperity. Sell to Polaris Orbital Livestock Farms in The Forge. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo80k
+# { Token Id: 6716, Name: [c][FFFFFF]Fertilizer Shipment[-][/c]
+  # CustomIcon: Eden_FertilizerShipment
+  # Description: "A shipment of specialized fertilizer from a Traders Guild Orbital Waste Facility in Tranquility. Sell to Colonists Orbital Hydroponics Farms in Prosperity. [c][A9A9A9]Requires 80,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 250000, display: true
+# }
+
+# # Eden_TokenCargo160k:6717
+# { Token Id: 6717, Name: [c][FFFFFF]Food Shipment[-][/c]
+  # CustomIcon: Eden_FoodShipment
+  # Description: "A shipment of food products from a Traders Guild Orbital Food Factory in Tranquility. Sell to Colonists Orbital Habitats in Prosperity or Polaris Orbital Habitats in The Forge. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6718, Name: [c][FFFFFF]Fuel Shipment[-][/c]
+  # CustomIcon: Eden_FuelShipment
+  # Description: "A shipment of industrial fuel from a Colonists Orbital Fuel Refinery in Prosperity or a Traders Guild Orbital Waste Facility in Tranquility. Sell to various Polaris orbital factories in The Forge. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo40k
+# { Token Id: 6719, Name: [c][FFFFFF]Hydrogen Shipment[-][/c]
+  # CustomIcon: Eden_HydrogenShipment
+  # Description: "A shipment of hydrogen gas from a Traders Guild Orbital Hydrogen Harvester around a gas giant in Tranquility. Sell to Colonists Orbital Fuel Refineries in Tranquility. [c][A9A9A9]Requires 40,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6720, Name: [c][FFFFFF]Hydroponics Shipment[-][/c]
+  # CustomIcon: Eden_HydroponicsShipment
+  # Description: "A shipment of advanced hydroponic farming equipment from a Traders Guild Advanced Orbital Factory in Tranquility. Sell to Colonists Orbital Hydroponic Farms in Prosperity. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6721, Name: [c][FFFFFF]Industrial Shipment[-][/c]
+  # CustomIcon: Eden_IndustrialShipment
+  # Description: "A shipment of industrial equipment from a Colonists Basic Orbital Factory in Prosperity. Sell to various Polaris orbital factories in The Forge. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6722, Name: [c][FFFFFF]Ingot Shipment[-][/c]
+  # CustomIcon: Eden_IngotShipment
+  # Description: "A shipment of various ingots from a Polaris Orbital Refinery in The Forge or neutral space. Sell to Coloists Basic Orbital Factories in Prosperity. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 250000, display: true # less due to being in neutral territory
+# }
+
+# # Eden_TokenCargo8k:6723
+# { Token Id: 6723, Name: [c][FFFFFF]Jewelry Shipment[-][/c]
+  # CustomIcon: Eden_JewelryShipment
+  # Description: "A sealed shipment of high value jewelry from a Traders Guild Orbital Jewelry Factory. Sell to Colonists Orbital Habitats in Prosperity. [c][A9A9A9]Requires 8,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo80k
+# { Token Id: 6724, Name: [c][FFFFFF]Leather Shipment[-][/c]
+  # CustomIcon: Eden_LeatherShipment
+  # Description: "A shipment of high quality leather from a Polaris Orbital Livestock Farm in The Forge. Sell to Traders Guild Orbital Jewelry Factories in Tranquility. [c][A9A9A9]Requires 80,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 250000, display: true
+# }
+
+# # Eden_TokenCargo160k:6725
+# { Token Id: 6725, Name: [c][FFFFFF]Liquor Shipment[-][/c]
+  # CustomIcon: Eden_LiquorShipment
+  # Description: "A shipment of various liquors from a Polaris Orbital Brewery in The Forge. Sell to Colonists Orbital Habitats in Prosperity or Traders Guild Orbital Habitats and Orbital Hotels in Tranquility. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6726, Name: [c][FFFFFF]Livestock Feed Shipment[-][/c]
+  # CustomIcon: Eden_LivestockFeedShipment
+  # Description: "A shipment of mundane livestock feed from a Colonists Orbital Hydroponics Farm in Prosperity. Sell to Polaris Orbital Livestock Farms in The Forge. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 500000, display: true
+# }
+
+# # Eden_TokenCargo80k
+# { Token Id: 6727, Name: [c][FFFFFF]Meat Shipment[-][/c]
+  # CustomIcon: Eden_MeatShipment
+  # Description: "A shipment of frozen meats from a Polaris Orbital Livestock Farm in The Forge. Sell to Traders Guild Orbital Food Factories in Tranquility. [c][A9A9A9]Requires 80,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 250000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6728, Name: [c][FFFFFF]Mining Equipment Shipment[-][/c]
+  # CustomIcon: Eden_MiningEquipmentShipment
+  # Description: "A shipment of advanced mining equipment from a Traders Guild Advanced Orbital Factory. Sell to Colonists Mining Foremen in Prosperity. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6729, Name: [c][FFFFFF]Optronics Shipment[-][/c]
+  # CustomIcon: Eden_OptronicsShipment
+  # Description: "A shipment of highly advanced optronics from a Polaris Optronics Factory in The Forge. Sell to Colonists Basic Orbital Factories in Prosperity or Traders Guild Advanced Orbital Factories in Tranquility. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo160k
+# { Token Id: 6730, Name: [c][FFFFFF]Ore Shipment[-][/c]
+  # CustomIcon: Eden_OreShipment
+  # Description: "A shipment of ores from a Colonists Mining Foreman in Prosperity. Sell to Polaris Orbital Refineries in The Forge or neutral space and Orbital Alloy Smelteries in The Forge. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true # less due to being in neutral territory
+# }
+
+# # Eden_TokenCargo40k
+# { Token Id: 6731, Name: [c][FFFFFF]Oxygen Shipment[-][/c]
+  # CustomIcon: Eden_OxygenShipment
+  # Description: "A shipment of oxygen from a Colonists Orbital Oxygen Harvester around a gas giant in Prosperity. Sell to Polaris Orbital Habitats and Orbital Livestock Farms in The Forge or to Traders Guild Orbital Habitats and Orbital Hotels in Tranquility. [c][A9A9A9]Requires 40,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6732, Name: [c][FFFFFF]Precious Metal Shipment[-][/c]
+  # CustomIcon: Eden_PreciousMetalShipment
+  # Description: "A shipment of rare metals from a Polaris Orbital Alloy Smeltery in The Forge. Sell to Colonists Basic Orbital Factories in Prosperity or Traders Guild Advanced Orbital Factories and Orbital Jewelry Factories in Tranquility. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo320k
+# { Token Id: 6733, Name: [c][FFFFFF]Robotics Shipment[-][/c]
+  # CustomIcon: Eden_RoboticsShipment
+  # Description: "A shipment of highly advanced robotics from a Polaris Orbital Robotics Factory in The Forge. Sell to Traders Guild Advanced Orbital Factories and Orbital Jewelry Factories in Tranquility. [c][A9A9A9]Requires 320,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 1000000, display: true
+# }
+
+# # Eden_TokenCargo40k
+# { Token Id: 6734, Name: [c][FFFFFF]Toxic Waste Shipment[-][/c]
+  # CustomIcon: Eden_ToxicWasteShipment
+  # Description: "A shipment of toxic waste from various Polaris orbital factories in The Forge. Sell to Colonists Orbital Fuel Refineries in Prosperity or Traders Guild Orbital Waste Facilities in Tranquility. [c][A9A9A9]Requires 40,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo20k
+# { Token Id: 6735, Name: [c][FFFFFF]Water Shipment[-][/c]
+  # CustomIcon: Eden_WaterShipment
+  # Description: "A shipment of water from a Polaris Orbital Water Harvester around a gas giant. Sell to Colonists Orbital Hydroponics Farms and Orbital Fuel Refineries in Prosperity or Traders Guild Orbital Food Factories and Orbital Hotels in Tranquility. [c][A9A9A9]Requires 20,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo40k
+# { Token Id: 6736, Name: [c][FFFFFF]Military Shipment[-][/c]
+  # CustomIcon: Eden_MilitaryShipment
+  # Description: "A shipment of military equipment. Sell to faction bounty offices in faction territory. [c][A9A9A9]Requires 40,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 100000, display: true
+# }
+
+# # Eden_TokenCargo40k:6737
+# { Token Id: 6737, Name: [c][FFFFFF]Worker Shipment[-][/c]
+  # CustomIcon: Eden_WorkerShipment
+  # Description: "A self contained transport pod with all the basic essentials and supplies to keep a small crew of workers alive in your cargo hold. Sell to various orbital factories. [c][A9A9A9]Requires 40,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 10000, display: true
+# }
+
+# # Eden_TokenCargo80k:6738
+# { Token Id: 6738, Name: [c][FFFFFF]Officer Shipment[-][/c]
+  # CustomIcon: Eden_OfficerShipment
+  # Description: "A spacious transport pod with all the basic essentials and supplies to keep a small crew of officers alive in your cargo hold. Sell to various orbital factories. [c][A9A9A9]Requires 80,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 20000, display: true
+# }
+
+# # Eden_TokenCargo160k:6739
+# { Token Id: 6739, Name: [c][FFFFFF]VIP Shipment[-][/c]
+  # CustomIcon: Eden_VIPShipment
+  # Description: "A self contained transport pod with a full suite of luxury amenities for transporting the most important VIPs. Sell to various orbital factories. [c][A9A9A9]Requires 160,000 cargo space. Use logistics toolbar to trade.[-][/c]"
+  # MarketPrice: 40000, display: true
+# }
+
+
+
+
+# Fulfilled Mining Contract Tier 1
+{ Token Id: 6801, Name: "Fulfilled Mining Contract Tier 1"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Fulfilled Mining Contract Tier 2
+{ Token Id: 6802, Name: "Fulfilled Mining Contract Tier 2"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Fulfilled Mining Contract Tier 3
+{ Token Id: 6803, Name: "Fulfilled Mining Contract Tier 3"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Fulfilled Mining Contract Tier 4
+{ Token Id: 6804, Name: "Fulfilled Mining Contract Tier 4"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Fulfilled Mining Contract Tier 1
+{ Token Id: 6805, Name: "Fulfilled Mining Contract Tier 5"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Fulfilled Mining Contract Tier 1
+{ Token Id: 6806, Name: "Fulfilled Mining Contract Tier 6"
+  CustomIcon: KeyCardRed
+  Description: "Used to start a mining mission."
+  MarketPrice: 25000, display: true
+}
+
+# Colonists Mining Contract: Iron
+{ Token Id: 6811, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Iron"
+  CustomIcon: Eden_GuideOreBlue1
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+# Colonists Mining Contract: Copper, Silicon
+{ Token Id: 6812, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Copper, Silicon"
+  CustomIcon: Eden_GuideOreBlue2
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+# Colonists Mining Contract: Promethium, Titanium, Magnesium
+{ Token Id: 6813, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Promethium, Titanium, Magnesium"
+  CustomIcon: Eden_GuideOreBlue3
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+# Polaris Mining Contract: Iron, Cobalt, Neodymium
+{ Token Id: 6821, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Iron, Cobalt, Neodymium"
+  CustomIcon: Eden_GuideOreOrange1
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+# Polaris Mining Contract: Sathium, Gold, Erestrum
+{ Token Id: 6822, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Sathium, Gold, Erestrum"
+  CustomIcon: Eden_GuideOreOrange2
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+# Polaris Mining Contract: Pentaxid, Zascosium, Aluminium
+{ Token Id: 6823, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Pentaxid, Zascosium, Aluminium"
+  CustomIcon: Eden_GuideOreOrange3
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  MarketPrice: 500, display: true
+}
+
+{ Token Id: 6824, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Rich Ice"
+  CustomIcon: Eden_GuideOreOrange3
+  DropOnDeath: false
+  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission.\n\nDetails: Mine rich ice asteroids within the galactic region of Solitude. Specialized ice mining drills will be required."
+  MarketPrice: 500, display: true
+}
+
+# # -------------------------------------------------------------------------- Wanted by Colonists
+# # Savanth Greenzald's Insignia
+# { Token Id: 6601, Name: Eden_TokenBountyColonists1
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo1
+  # MarketPrice: 25000, display: true
+# }
+
+# # Marko Inero's Insignia
+# { Token Id: 6602, Name: Eden_TokenBountyColonists2
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo2
+  # MarketPrice: 25000, display: true
+# }
+
+# # Small Tony's Insignia
+# { Token Id: 6603, Name: Eden_TokenBountyColonists3
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo3
+  # MarketPrice: 25000, display: true
+# }
+
+# # Greeza Zeerzhi's Insignia
+# { Token Id: 6604, Name: Eden_TokenBountyColonists4
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo4
+  # MarketPrice: 50000, display: true
+# }
+
+# # The Steel Hammer's Insignia
+# { Token Id: 6605, Name: Eden_TokenBountyColonists5
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo5
+  # MarketPrice: 50000, display: true
+# }
+
+# # Captain Pang's Insignia
+# { Token Id: 6606, Name: Eden_TokenBountyColonists6
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo6
+  # MarketPrice: 75000, display: true
+# }
+
+# # Yerzhu the Smuggler's Insignia
+# { Token Id: 6607, Name: Eden_TokenBountyColonists7
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo7
+  # MarketPrice: 75000, display: true
+# }
+
+# # Yerzhu the Smuggler's Insignia
+# { Token Id: 6608, Name: Eden_TokenBountyColonists8
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo8
+  # MarketPrice: 75000, display: true
+# }
+
+# # Yerzhu the Smuggler's Insignia
+# { Token Id: 6609, Name: Eden_TokenBountyColonists9
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo9
+  # MarketPrice: 75000, display: true
+# }
+
+# # Yerzhu the Smuggler's Insignia
+# { Token Id: 6610, Name: Eden_TokenBountyColonists10
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyColonistsinfo10
+  # MarketPrice: 75000, display: true
+# }
+
+# # -------------------------------------------------------------------------- Wanted by Zirax
+# # 
+# { Token Id: 6611, Name: Eden_TokenBountyZirax1
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo1
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6612, Name: Eden_TokenBountyZirax2
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo2
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6613, Name: Eden_TokenBountyZirax3
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo3
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6614, Name: Eden_TokenBountyZirax4
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo4
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6615, Name: Eden_TokenBountyZirax5
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo5
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6616, Name: Eden_TokenBountyZirax6
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo6
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6617, Name: Eden_TokenBountyZirax7
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo7
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6618, Name: Eden_TokenBountyZirax8
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo8
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6619, Name: Eden_TokenBountyZirax9
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo9
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6620, Name: Eden_TokenBountyZirax10
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyZiraxinfo10
+  # MarketPrice: 75000, display: true
+# }
+
+# # -------------------------------------------------------------------------- Wanted by Polaris
+# # 
+# { Token Id: 6621, Name: Eden_TokenBountyPolaris1
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo1
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6622, Name: Eden_TokenBountyPolaris2
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo2
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6623, Name: Eden_TokenBountyPolaris3
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo3
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6624, Name: Eden_TokenBountyPolaris4
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo4
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6625, Name: Eden_TokenBountyPolaris5
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo5
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6626, Name: Eden_TokenBountyPolaris6
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo6
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6627, Name: Eden_TokenBountyPolaris7
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo7
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6628, Name: Eden_TokenBountyPolaris8
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo8
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6629, Name: Eden_TokenBountyPolaris9
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo9
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6630, Name: Eden_TokenBountyPolaris10
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPolarisinfo10
+  # MarketPrice: 75000, display: true
+# }
+
+# # -------------------------------------------------------------------------- Wanted by Trader
+# # 
+# { Token Id: 6631, Name: Eden_TokenBountyTrader1
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo1
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6632, Name: Eden_TokenBountyTrader2
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo2
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6633, Name: Eden_TokenBountyTrader3
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo3
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6634, Name: Eden_TokenBountyTrader4
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo4
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6635, Name: Eden_TokenBountyTrader5
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo5
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6636, Name: Eden_TokenBountyTrader6
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo6
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6637, Name: Eden_TokenBountyTrader7
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo7
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6638, Name: Eden_TokenBountyTrader8
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo8
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6639, Name: Eden_TokenBountyTrader9
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo9
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6640, Name: Eden_TokenBountyTrader10
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyTraderinfo10
+  # MarketPrice: 75000, display: true
+# }
+
+# # -------------------------------------------------------------------------- Wanted by Pirates
+# # 
+# { Token Id: 6641, Name: Eden_TokenBountyPirates1
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo1
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6642, Name: Eden_TokenBountyPirates2
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo2
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6643, Name: Eden_TokenBountyPirates3
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo3
+  # MarketPrice: 25000, display: true
+# }
+
+# # 
+# { Token Id: 6644, Name: Eden_TokenBountyPirates4
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo4
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6645, Name: Eden_TokenBountyPirates5
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo5
+  # MarketPrice: 50000, display: true
+# }
+
+# # 
+# { Token Id: 6646, Name: Eden_TokenBountyPirates6
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo6
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6647, Name: Eden_TokenBountyPirates7
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo7
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6648, Name: Eden_TokenBountyPirates8
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo8
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6649, Name: Eden_TokenBountyPirates9
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo9
+  # MarketPrice: 75000, display: true
+# }
+
+# #
+# { Token Id: 6650, Name: Eden_TokenBountyPirates10
+  # CustomIcon: KeyCardRed
+  # Description: Eden_TokenBountyPiratesinfo10
+  # MarketPrice: 75000, display: true
+# }
+
+
+# ================================================================================================================================ Flavor and Easter Egg Tokens
+# Eternal Slayer Memento
+{ Token Id: 666, Name: [c][A9A9A9]Slayer's Mix[/c]
+  Description: [c][ffffff]A collection of old music tracks.[-][/c]\n\n[i][c][A9A9A9]Rip and tear...[-][/c][/i]
+}
+
+
+
+
+# ================================================================================================================================ Project Eden Scenario Info Tokens
+{ Token Id: 6997, Name: [c][00FFFF]Reforged Eden 2 Creative Guide[/c]
+  CustomIcon: Eden_Guide4
+  DropOnDeath: false
+  # Description: "[c][00ffff]>>> Empyriopedia <<<[-][/c][sup]\n\n[c][FFFF00]Tooltips:[-][/c] Tooltips provide useful information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view important details.\n[c][FFFF00]PDA:[-][/c] Your PDA contains information on missions and an Empyriopedia section with important information.\n\nComplete the [c][00FFFF]Make Contact with Terran Forces[-][/c] mission under the Project Eden Story section to unlock additional missions and Empyriopedia entries. The Empyriopedia is filled in as you progress.\n\nAccess the PDA with [c][FFFF00]F1[-][/c].\n\n[c][FFFF00]Planets and Sectors: [-][/c]Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][FFFF00]Galaxy: [-][/c]Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.[/sup]"
+  # Description: "[c][00ffff]   >>> Read the PDA First <<<[-][/c][sup]\nAccess the PDA with [c][ffff00]F1[-][/c].\n\n[c][00ffff]Missions:[-][/c] Missions are managed under the Solo Missions PDA tab. Start completing the Reforged Galaxy or Project Eden story missions to unlock additional missions.\n\n[c][00ffff]Empyriopedia:[-][/c] Contains a comprehensive encyclopedia of the scenario in the PDA and can answer many of your questions. Additional entries are unlocked as you progress through the scenario.\n\n[c][00ffff]Journey Book:[-][/c] Shows a log of previous mission dialog in the PDA.\n\n[c][00ffff]Tooltips:[-][/c] Tooltips provide important information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view details.\n\n[c][00ffff]Planets and Sectors:[-][/c] Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][00ffff]Galaxy:[-][/c] Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.\n\n[c][00ffff]Mass and Volume:[-][/c] Enabled by default. Use the logistics system to move items too big to fit in your inventory.\n\n[c][00ffff]CPU:[-][/c] Enabled by default. Add CPU Extenders to increase the max CPU of your ship or base.[/sup]"
+  Description: "[c][00ffff]>>> Save blueprints often <<<[-][/c]\n\n[sup][c][00ffff]Missions:[-][/c] Missions and the PDA is disabled in creative mode.\n[c][00ffff]Mass and Volume:[-][/c] Disabled in creative mode. Use a [c][00ff00]survival game[-][/c] for testing the effects of mass and volume. Ship mass still counts while in creative.\n[c][00ffff]CPU:[-][/c] Disabled in creative mode. Add CPU Extenders to increase the max CPU of your ship or base so it will still function in survival. Check the CPU tab of the control panel to view current CPU specs.\n[c][ff5000]Restricted items:[-][/c] Some items in the Item Menu are intended for internal scenario development only and are not meant for use by players.\n\n[c][00ffff]Keyboard shortcuts:[-][/c] (default)\n[c][00ff00][G][-][/c] God Mode, [c][00ff00][H][-][/c] Item Menu\n\n[c][00ffff]Useful Console Commands:[-][/c]\n[c][00ff00]help[-][/c] Prints a list of all console commands. Use [c][ffffff]help command[-][/c] for help specific to that command.\n[c][00ff00]sector 'Name of Star/Planet'[-][/c] Teleports you to that star system, space sector, or orbit of that planet.\n[c][00ff00]tt 'Name of Planet'[-][/c] Teleports you to the surface of the planet or moon.\n[c][ffffff]sector 'Haven'[-][/c] will teleport you to the orbit of Haven.\n[c][ffffff]tt 'Alpha IV'[-][/c] will teleport you to the surface of Alpha IV.\n[c][00ff00]sd debug[-][/c] Allows you to double click any star in the galaxy map to view that star system. Useful for finding a specific planet type to build on.[/sup]"
+  # Description: Eden_Supportinfo
+}
+
+{ Token Id: 6998, Name: [c][FFA500]Reforged Eden 2 Support Guide[-][/c]
+  CustomIcon: Eden_Guide18
+  DropOnDeath: false
+  Description: "[c][00ffff]   >>> Read the PDA First <<<[-][/c][sup]\nAccess the PDA with [c][ffff00]F1[-][/c].\n\n[c][FFA500]This is a custom scenario created by players and the game developers cannot assist with problems encountered while playing it.[-][/c]\n\n[c][FFFF00]PLEASE REPRODUCE ANY GAME ISSUE IN A DEFAULT, UNMODIFIED SAVE GAME BEFORE REPORTING ANY ISSUE TO THE GAME DEVELOPERS.[-][/c]\n[c][FFFF00]DO NOT USE THE CHANGEMODE OR CM COMMAND IN A SURVIVAL GAME.\nUSE CONSOLE COMMANDS ONLY IF YOU UNDERSTAND WHAT THEY DO.[-][/c]\n\nPlease always fully exit Empyrion all the way back to Windows desktop when switching saves or servers.\n\nThere are certain risks in playing a custom scenario and it may be more demanding on your PC hardware.\n[c][00FFFF]SAVE YOUR BLUEPRINTS OFTEN.[-][/c]\n\nYou can find support and report issues on the Reforged Eden 2 Workshop page.\n\nIf playing on a server speak with your server admin.\nFor any updates on the scenario please see the workshop page.[/sup]"
+}
+
+{ Token Id: 6999, Name: [c][00FFFF]Reforged Eden 2 Gameplay Guide[/c]
+  CustomIcon: Eden_Guide4
+  DropOnDeath: false
+  # Description: "[c][00ffff]>>> Empyriopedia <<<[-][/c][sup]\n\n[c][FFFF00]Tooltips:[-][/c] Tooltips provide useful information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view important details.\n[c][FFFF00]PDA:[-][/c] Your PDA contains information on missions and an Empyriopedia section with important information.\n\nComplete the [c][00FFFF]Make Contact with Terran Forces[-][/c] mission under the Project Eden Story section to unlock additional missions and Empyriopedia entries. The Empyriopedia is filled in as you progress.\n\nAccess the PDA with [c][FFFF00]F1[-][/c].\n\n[c][FFFF00]Planets and Sectors: [-][/c]Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][FFFF00]Galaxy: [-][/c]Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.[/sup]"
+  # Description: "[c][00ffff]   >>> Read the PDA First <<<[-][/c][sup]\nAccess the PDA with [c][ffff00]F1[-][/c].\n\n[c][00ffff]Missions:[-][/c] Missions are managed under the Solo Missions PDA tab. Start completing the Reforged Galaxy or Project Eden story missions to unlock additional missions.\n\n[c][00ffff]Empyriopedia:[-][/c] Contains a comprehensive encyclopedia of the scenario in the PDA and can answer many of your questions. Additional entries are unlocked as you progress through the scenario.\n\n[c][00ffff]Journey Book:[-][/c] Shows a log of previous mission dialog in the PDA.\n\n[c][00ffff]Tooltips:[-][/c] Tooltips provide important information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view details.\n\n[c][00ffff]Planets and Sectors:[-][/c] Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][00ffff]Galaxy:[-][/c] Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.\n\n[c][00ffff]Mass and Volume:[-][/c] Enabled by default. Use the logistics system to move items too big to fit in your inventory.\n\n[c][00ffff]CPU:[-][/c] Enabled by default. Add CPU Extenders to increase the max CPU of your ship or base.[/sup]"
+  Description: "[c][00ffff]   >>> Read the PDA First <<<[-][/c][sup]\nAccess the PDA with [c][ffff00]F1[-][/c].\n\n[c][00ffff]Missions:[-][/c] Missions are managed under the Solo Missions PDA tab. Start completing the Reforged Galaxy or Project Eden story missions to unlock additional missions.\n\n[c][00ffff]Empyriopedia:[-][/c] Contains a comprehensive encyclopedia of the scenario in the PDA and can answer many of your questions. Additional entries are unlocked as you progress through the scenario.\n\n[c][00ffff]Journey Book:[-][/c] Shows a log of previous mission dialog in the PDA.\n\n[c][00ffff]Mass and Volume:[-][/c] Enabled by default. Use the logistics system [c][ffff00](F4)[-][/c] to move items too big to fit in your inventory.\n\n[c][00ffff]CPU:[-][/c] Enabled by default. Add CPU Extenders to increase the max CPU of your ship or base.[/sup]"
+  # Description: Eden_Supportinfo
+}

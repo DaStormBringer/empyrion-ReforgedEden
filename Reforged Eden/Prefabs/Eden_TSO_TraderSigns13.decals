@@ -1,0 +1,91 @@
+[Advertisement]
+-Mode=Opaque
+-Pos=38,134,-28
+-Rot=0,180,0
+-Size=4,4,4
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignRandomFalling
+
+[Advertisement]
+-Mode=Opaque
+-Pos=38,134,28
+-Rot=0,0,0
+-Size=4,4,4
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignRandomCorp4
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=19,136,-28
+# -Rot=0,180,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignBountyRandomFixed
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=19,134,28
+# -Rot=0,0,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignRandomCorp2
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=0,134,-28
+# -Rot=0,180,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignBertrams
+
+[Advertisement]
+-Mode=Opaque
+-Pos=0,134,28
+-Rot=0,0,0
+-Size=4,4,4
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignInterWeap
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-19,134,-28
+# -Rot=0,180,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignRandomCorp3
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-19,134,28
+# -Rot=0,0,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignGalaxyEnd
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-38,134,-28
+# -Rot=0,180,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignRandomCorp3
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-38,134,28
+# -Rot=0,0,0
+# -Size=4,4,4
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignGalaxyEnd
+
+

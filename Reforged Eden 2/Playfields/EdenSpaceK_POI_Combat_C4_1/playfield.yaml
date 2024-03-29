@@ -1,0 +1,394 @@
+PlayfieldType: Space
+WorldName: 
+RealRadius: 0
+ScaledRadius: 0
+Gravity: 0
+PlanetAxis: 0
+PlanetRotAxis: 
+AtmosphereDensity: 0
+AtmosphereO2: 0.100000001
+AtmosphereBreathable: false
+Temperature: 0
+TemperatureDay: -123
+TemperatureNight: 0
+Radiation: 13.6690836
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 0
+DayLength: 0
+PlanetType: Combat Site Class 4
+PlanetSize: 2
+Moons: 0
+Emissive: false
+Water: 
+PvP: false
+Difficulty: 1
+LegacyBiome: 
+ChunkProviderId: 0
+SunFlare: 
+Nebula: 
+Stars: 
+LocalEffect: 
+SpecialEffectsLocal: 
+SpecialEffectsGlobal: 
+AtmosphereEnabled: false
+AtmosphereColor: 0.55, 0.61, 0.65
+AtmosphereParams: 
+OrbitUsesLightColor: false
+SkyColor: 1, 1, 1
+SkyHorizonColor: 
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+AtmosphereFog: 0
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+FogIntensity: 0
+FogStartDistance: 0
+GroundFogIntensity: 0
+GroundFogHeight: 0
+
+
+Description: "Type: [c][ff0000]Combat Site[-][/c] - [c][FFA500]Class 4[-][/c]
+
+Factions: [c][ff0000]Zirax[-][/c]
+
+
+Sensors pick up high levels of radio signals.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+
+Seed: -2147483648
+TemperatureMinMax: 
+HumidityMinMax: 
+LandWaterRatio: 0
+TemperatureHeightRange: 
+TemperatureGradientRange: 
+TemperatureNoiseFac: 0
+HumidityHeightFac: 
+HumidityNoiseFac: 0
+TerrainHeightMapMax: -1
+GroundShapes: 
+TemperatureMasks: 
+HumidityMasks: 
+BiomeStampTries: 0
+PlayfieldLevel: 1
+PdaReferral: 
+BaseAttackCount: 1
+PfServerWeight: 0
+PlanetClass: Combat Site
+UseFixed: true
+UseRandom: false
+Build: 2933
+Instance: 
+IndestructibleTerrain: false
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowBlueprintSV: true
+AllowBlueprintCV: true
+AllowBlueprintHV: true
+AllowBlueprintBA: true
+AllowMaxCPUTierSV: 0
+AllowMaxCPUTierCV: 0
+AllowMaxCPUTierHV: 0
+AllowMaxCPUTierBA: 0
+RestrictToOrigin: 255
+Music: AlteredPhase
+LandClaimZone: Default
+IsOrbitPlayfield: false
+RandomPOIs: 
+RandomDroneBase: 
+RandomResources: 
+FixedResources: 
+AsteroidResources: 
+Terrain: 
+MainBiome: 
+SubBiomes: 
+BiomeTextureReplacements: 
+Biome: 
+POIs:
+  Random: 
+  Fixed:
+  - Type: AsteroidFieldFewBoxExclude
+    Prefab: 
+    Mode: 
+    SubMode: 
+    Name: Asteroid Field
+    InitPower: false
+    LevelMod: 
+    Faction: 
+    Properties: 
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 0
+    - 0
+    Rot:
+    - 160
+    - -58
+    - 120
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: false
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+    SpaceDefensePriceMinMax: 
+  FixedPlayerStart: 
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: 
+    Pos:
+    - -3012.54419
+    - -681
+    - -5922.8877
+    LevelMod: 
+    DroneOnDuty:
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -2084.2124
+      - 2003
+      - -2611.19507
+      Radius: 1845
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 1044.33521
+      - 2086
+      - -1746.59363
+      Radius: 2011
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -1675.13806
+      - -814
+      - 2557.17847
+      Radius: 2334
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -1302.0509
+      - -2384
+      - 1486.3512
+      Radius: 2887
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -1131.44739
+      - -1945
+      - -1068.15869
+      Radius: 1642
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 1204.83252
+      - 1593
+      - -5185.88037
+      Radius: 1528
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 3711.02856
+      - 441
+      - -2594.42725
+      Radius: 2295
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 251.122162
+      - 2381
+      - -232.167313
+      Radius: 2551
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -2294.33398
+      - -1737
+      - -3190.75732
+      Radius: 2571
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 2913.29883
+      - -1886
+      - -4853.82422
+      Radius: 2310
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 3594.0498
+      - 1343
+      - 2706.25293
+      Radius: 2289
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 289.345184
+      - -1514
+      - 1691.43005
+      Radius: 2970
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 2946.21265
+      - 984
+      - -2537.00122
+      Radius: 2797
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 3351.58179
+      - 760
+      - -2509.55542
+      Radius: 1838
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -2885.94336
+      - -26
+      - 4881.75879
+      Radius: 2371
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 129.535034
+      - 435
+      - -10.985281
+      Radius: 2393
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -333.914368
+      - -665
+      - -7070.11914
+      Radius: 2394
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 2262.84863
+      - -811
+      - -1543.25537
+      Radius: 1983
+    DroneSpaceFreighter: 
+    DronePlanetVessel: 
+
+
+# ======================================================================== Patrol Vessels
+    SpaceVessel:
+
+# ------------------------------------------------------------------------ Xenu Shipyard
+    - Name: RBAO_XenuShipyard
+      Faction: Zirax
+      FixedMaxSpeed: 20
+      Mission: Immobile
+      RangePatrol: 
+      Immobile:
+        Position3D:
+        - 0
+        - 0
+        - 0
+      Freighter: 
+      Stock:
+      - Name: SpaceDroneLaser
+        Amount: 20
+        Extra: 1
+      Properties:
+      - Key: Discovery
+        Value: False
+      - Key: RegenAfter
+        Value: 720
+# ------------------------------------------------------------------------ Ship 1
+    - Name: Eden_OPV_ZiraxT4
+      Faction: Zirax
+      FixedMaxSpeed: 10
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 0
+        - 250
+        - 0
+        Radius: 750
+        DistToGround: 0
+        RangePatrolAvoidArea: 
+        IsAllowToReturnToBaseWhenOver: false
+      Immobile: 
+      Freighter: 
+      Stock:
+      - Name: SpaceDroneLaser
+        Amount: 14
+        Extra: 1
+      Properties:
+
+# ------------------------------------------------------------------------ Ship 2
+    - Name: OPVZiraxRG
+      Faction: Zirax
+      FixedMaxSpeed: 35
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 250
+        - 0
+        - 0
+        Radius: 750
+        DistToGround: 0
+        RangePatrolAvoidArea: 
+        IsAllowToReturnToBaseWhenOver: false
+      Immobile: 
+      Freighter: 
+      Stock:
+      - Name: SpaceDroneLaser
+        Amount: 14
+        Extra: 1
+      Properties:
+
+# ------------------------------------------------------------------------ Ship 3
+    - Name: OPVZiraxRG
+      Faction: Zirax
+      FixedMaxSpeed: 35
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -250
+        - 0
+        - 0
+        Radius: 750
+        DistToGround: 0
+        RangePatrolAvoidArea: 
+        IsAllowToReturnToBaseWhenOver: false
+      Immobile: 
+      Freighter: 
+      Stock:
+      - Name: SpaceDroneLaser
+        Amount: 14
+        Extra: 1
+      Properties:
+
+
+
+    DronePlanetBase:
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 

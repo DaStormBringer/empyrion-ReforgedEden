@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 4158443878
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2a53dca911e165737ce40da0fa73d5e5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 79c56fac73cf17a3a7a70f4506e5cd15
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/eden_itemmodels/Eden_ModelShotgunDouble.prefab
+Dependencies: []

@@ -1,0 +1,188 @@
+ManifestFileVersion: 0
+CRC: 1195728642
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 13379e921ff7cc3739dae26cd09635ee
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 67a24dc0400771ef8836b2c9f82711f9
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: f9b3dcbe4c5cab840a4a714cb35d0d24, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BlockModels/NewConstructor/Textures/AdvAttachments_low_Attachments_Emission.png
+- Assets/_Reforged_BlockModels/ShieldCapacitorLargeRG.prefab
+- Assets/BlockModels/NewBlocks/FullConnectorGreen2x3Inside.prefab
+- Assets/_Reforged_BlockModels/ShieldCapacitorRG.prefab
+- Assets/SuitPropsExt/hv2/HelmetMaterial.mat
+- Assets/SuitPropsExt/hv2/HelmetV2_low_Base Mat_MetallicSmoothness.png
+- Assets/BlockModels/NewBlocks/FullStructuralRamp3.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Base Parts_MetallicSmoothness.png
+- Assets/BlockModels/NewBlocks/FullConnector1x3Inside.prefab
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatProps_MetallicSmoothness.png
+- Assets/BlockModels/SmallConstructor/smallconstructor-merged.fbx
+- Assets/BlockModels/Shaders/EmpShader-Example_Block_Colored-transparent.shader
+- Assets/BlockModels/SVFoodProcessor/Textures/SVFoodProcessor_low_UVMaterial_Emission.png
+- Assets/BlockModels/NewConstructor/Textures/NewAdvConstructor_low_Base Parts_Normal.png
+- Assets/BlockModels/NewBlocks/fbx/StructuralRampAndConnectors.fbx
+- Assets/_Reforged_BlockModels/SVFoodProcessorRG.prefab
+- Assets/_Imported/TextureVariants/Gray/StructuralRampAndConnectors_low_Plating_MetallicSmoothness.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Robo Arms_MetallicSmoothness.png
+- Assets/BlockModels/NewConstructor/Textures/NewAdvConstructor_low_Base Parts_MetallicSmoothness.png
+- Assets/_Reforged_BlockModels/ShieldChargerMediumRG.prefab
+- Assets/_Reforged_BlockModels/AdvConstructorRG.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Consoles_WhiteMask.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Props_MetallicSmoothness.png
+- Assets/BlockModels/ArmorLocker/ArmorLockerExport.fbx
+- Assets/BlockModels/NewBlocks/FullConnectorGreen3x2Inside.prefab
+- Assets/BlockModels/NewConstructor/AdvAttachments_low.fbx
+- Assets/BlockModels/Deconstructor/NewDeconstructor.prefab
+- Assets/BlockModels/SVFoodProcessor/SVFoodProcessorModel.fbx
+- Assets/BlockModels/NewConstructor/Textures/NewAdvConstructor_low_Consoles_Emission.png
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FusionReactorSV.prefab
+- Assets/BlockModels/SmallConstructor/Textures/smallconstructor_low_Texture_MetallicSmoothness.png
+- Assets/BlockModels/SVFoodProcessor/Textures/SVFoodProcessor_low_UVMaterial_AlbedoTransparency.png
+- Assets/BlockModels/ArmorLocker/Materials/ArmorLockerTextured.mat
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Consoles_AlbedoTransparency.png
+- Assets/BlockModels/NewBlocks/FullConnectorYellow3x1.prefab
+- Assets/BlockModels/ArmorLocker/Textures/ArmorLocker_low_Base Mat_Emission.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatBase_WhiteMask.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Base Parts_Normal.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Base Parts_AlbedoTransparency.png
+- Assets/_Reforged_BlockModels/SmallConstructorRG.prefab
+- Assets/_Reforged_BlockModels/ArmorLockerRG.prefab
+- Assets/BlockModels/NewBlocks/textures/StructuralRampAndConnectors-V3_Plating_AlbedoTransparency.png
+- Assets/BlockModels/NewConstructor/LC_NewConstructor.fbx
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorLargeT2.prefab
+- Assets/BlockModels/NewConstructor/Textures/AdvAttachments_low_Attachments_Normal.png
+- Assets/BlockModels/Deconstructor/Materials/MatProps.mat
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT1.prefab
+- Assets/BlockModels/NewConstructor/Materials/Consoles.mat
+- Assets/BlockModels/NewBlocks/textures/StructuralRampAndConnectors-V3_Plating_Normal.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatProps_Emission.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatProps_Normal.png
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerLargeT3.prefab
+- Assets/BlockModels/NewConstructor/Materials/Base Parts Glasses Adv.mat
+- Assets/_Imported/TextureVariants/Gray/StructuralRampAndConnectors_low_Plating_Normal.png
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerLargeT2.prefab
+- Assets/BlockModels/SVFoodProcessor/Textures/white.png
+- Assets/_Imported/TextureVariants/Gray/StructuralRampAndConnectors_low_Plating_Emission.png
+- Assets/BlockModels/NewBlocks/FullConnectorYellow3x2.prefab
+- Assets/BlockModels/NewConstructor/Materials/Base Parts.mat
+- Assets/BlockModels/NewConstructor/Materials/Base Parts Glasses.mat
+- Assets/SuitPropsExt/hv2/HelmetV2_low_Base Mat_Emission.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatBase_MetallicSmoothness.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Consoles_Normal.png
+- Assets/_Reforged_BlockModels/TorpedoProjectileRG.prefab
+- Assets/BlockModels/SVFoodProcessor/Textures/SVFoodProcessor_low_UVMaterial_MetallicSmoothness.png
+- Assets/_Reforged_BlockModels/BombProjectileRG.prefab
+- Assets/BlockModels/NewBlocks/FullConnectorGreen3x3Inside.prefab
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatBase_AlbedoTransparency.png
+- Assets/SuitPropsExt/hv2/HelmetV2_low_Base Mat_Normal.png
+- Assets/_Reforged_BlockModels/LargeConstructorRG.prefab
+- Assets/BlockModels/SVFoodProcessor/Materials/SV Food Proc Mat.mat
+- Assets/SuitPropsExt/hv2/HelmetV2_low.fbx
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatBase_Normal.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Robo Arms_Normal.png
+- Assets/BlockModels/SmallConstructor/Textures/smallconstructor_low_Texture_Emission.png
+- Assets/BlockModels/NewBlocks/textures/StructuralRampAndConnectors-V3_Plating_MetallicSmoothness.png
+- Assets/BlockModels/ArmorLocker/Textures/ArmorLocker_low_Base Mat_Normal.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatProps_WhiteMask.png
+- Assets/BlockModels/NewConstructor/Materials/Attachments.mat
+- Assets/BlockModels/NewConstructor/Materials/Robo Arms.mat
+- Assets/_Reforged_BlockModels/TorpedoLauncherRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/WeaponLockerRG2.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewAdvConstructor_low_Base Parts_AlbedoTransparency.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatProps_AlbedoTransparency.png
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerSmallT1.prefab
+- Assets/BlockModels/SmallConstructor/Materials/Transparent.mat
+- Assets/BlockModels/NewConstructor/Materials/Consoles Adv.mat
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Props_Normal.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Props_Emission.png
+- Assets/_Imported/TextureVariants/Gray/StructuralRampAndConnectors_low_Plating_AlbedoTransparency.png
+- Assets/BlockModels/Shaders/EmpShader-Example_Block_Colored-Reforged.shader
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FusionReactorSmall.prefab
+- Assets/BlockModels/NewBlocks/HalfConnectorGreen3x3Inside.prefab
+- Assets/BlockModels/Deconstructor/Materials/Glass.mat
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorLargeT3.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Base Parts_Emission.png
+- Assets/SuitPropsExt/hv2/HelmetV2_low_Base Mat_AlbedoTransparency.png
+- Assets/BlockModels/NewConstructor/Textures/AdvAttachments_low_Attachments_MetallicSmoothness.png
+- Assets/BlockModels/Deconstructor/Materials/MatBase.mat
+- Assets/BlockModels/NewBlocks/materials/BlockCleanMaterial.mat
+- Assets/BlockModels/NewConstructor/Textures/AdvAttachments_low_Attachments_AlbedoTransparency.png
+- Assets/BlockModels/Shaders/EmpShader-Example_Block_Colored.shader
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Props_AlbedoTransparency.png
+- Assets/BlockModels/Deconstructor/Textures/Deconstructor_low_MatBase_Emission.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Consoles_Emission.png
+- Assets/BlockModels/NewBlocks/HalfStructuralRamp.prefab
+- Assets/_Reforged_BlockModels/FusionReactorRG.prefab
+- Assets/BlockModels/SmallConstructor/Textures/smallconstructor_low_Texture_AlbedoTransparency.png
+- Assets/BlockModels/NewBlocks/textures/white.png
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/PentaxidTankCVT1RG.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Base Parts_WhiteMask.png
+- Assets/BlockModels/ArmorLocker/Textures/ArmorLocker_low_Base Mat_AlbedoTransparency.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Consoles_MetallicSmoothness.png
+- Assets/BlockModels/NewBlocks/textures/StructuralRampAndConnectors-V3_Plating_Emission.png
+- Assets/BlockModels/NewConstructor/Materials/Props.mat
+- Assets/_Reforged_BlockModels/ShieldChargerRG.prefab
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Robo Arms_AlbedoTransparency.png
+- Assets/BlockModels/NewConstructor/Textures/NewConstructor_low_Robo Arms_Emission.png
+- Assets/BlockModels/NewBlocks/HalfConnectorBlue3x3Outside.prefab
+- Assets/BlockModels/NewBlocks/FullConnectorYellow3x2Right.prefab
+- Assets/BlockModels/SmallConstructor/Textures/smallconstructor_low_Texture_Normal.png
+- Assets/BlockModels/NewBlocks/FullConnectorBlue3x3Outside.prefab
+- Assets/BlockModels/Deconstructor/DeconstructorMerged.fbx
+- Assets/_Reforged_BlockModels/BombLauncherRG.prefab
+- Assets/BlockModels/SVFoodProcessor/Textures/SVFoodProcessor_low_UVMaterial_Normal.png
+- Assets/BlockModels/SmallConstructor/Textures/smallconstructor_low_Texture_WhiteMask.png
+- Assets/_Reforged_BlockModels/ShieldCapacitorMediumRG.prefab
+- Assets/_Reforged_BlockModels/RadioisotopeGeneratorRG.prefab
+- Assets/BlockModels/ArmorLocker/Textures/ArmorLocker_low_Base Mat_WhiteMask.png
+- Assets/BlockModels/SmallConstructor/Materials/Material.mat
+Dependencies: []

@@ -1,0 +1,499 @@
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+
+A harsh world covered in ice, that has somehow against odds developed its own life.
+
+
+[c][808080][i]Originally created by Ravis.[/i][-][/c]"
+
+PlanetType: Glacial Ice
+PlayfieldType: Planet
+AtmosphereEnabled: True
+Difficulty: 4
+LandClaimZone: Device
+SpecialEffectsLocal:
+-  Name: Dragonflies
+   Biome: [Any]
+   Time: Always
+   MaxHeight: 255
+-  Name: FireFliesRed
+   Biome: [Any]
+   Time: Always
+   MaxHeight: 255
+-  Name: SnowMedium
+   Biome: [Any]
+   Time: Always
+   MaxHeight: 255
+SpecialEffectsGlobal:
+-  Name: CloudsDark
+   Type: Weather
+   Lifetime: 600
+-  Name: Hail
+   Type: Weather
+   Lifetime: 600
+AtmosphereColor: 0.25,0.41,0.88
+SkyColor: 0.39,0.58,0.93
+SkyHorizonColor: 0, 0.1, 0
+AtmosphereParams: [1, 2]
+LightZenithColor: 0.39,0.58,0.93
+LightHorizonColor: 0.25,0.41,0.88
+DayLightIntensity: 0.59999999999999998
+NightLightIntensity: 0.40000000000000002
+NightLightColor: 0.78, 0.78, 1
+SunFlare: EnvironmentalEffects/SunFlareWhite3
+AtmosphereFog: 0.20000000000000001
+FogCloudIntensity: 0.20000000000000001
+GroundFogIntensity: 0.20000000000000001
+GroundFogHeight: 800
+CloudsDensity: 1
+CloudsSharpness: 0.69999999999999996
+CloudsBrightness: 0.69999999999999996
+CloudsOpacity: 0.10000000000000001
+CloudsZenithColor: 0.1, 0.1, 0.1
+CloudsHorizonColor: 0.25,0.41,0.88
+CloudsNightZenithColor: 0.39,0.58,0.93
+CloudsNightHorizonColor: 0.39,0.58,0.93
+WindSpeed: 20
+BaseAttackCount: 1
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+RandomResources:
+-  Name: CobaltResource
+   Biome: [Mountains, Regolith]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 4]
+   DepthMinMax: [4, 9]
+   DroneProb: 0.69999999999999996
+   MaxDroneCount: 1
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+-  Name: TitanResource
+   Biome: [LayeredIce, IceSheet, CrustedIce]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [7, 8]
+   DepthMinMax: [4, 9]
+   DroneProb: 0.69999999999999996
+   MaxDroneCount: 1
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+-  Name: MagnesiumResource
+   Biome: [Mountains, Regolith]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [1, 2]
+   SizeMinMax: [2, 3]
+   DepthMinMax: [5, 10]
+   DroneProb: 0.69999999999999996
+   MaxDroneCount: 1
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+-  Name: CobaltResource
+   Biome: [LayeredIce, IceSheet, CrustedIce]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [3, 3]
+   SizeMinMax: [8, 9]
+   DepthMinMax: [45, 55]
+   DroneProb: 0.20000000000000001
+   MaxDroneCount: 1
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+-  Name: PromethiumResource
+   Biome: [SmallCrater, Rifts, Regolith]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 4]
+   SizeMinMax: [3, 6]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.69999999999999996
+   MaxDroneCount: 1
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+-  Name: PentaxidResource
+   Biome: [SmallCrater]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [4, 5]
+   SizeMinMax: [2, 3]
+   DepthMinMax: [0, 5]
+   DroneProb: 0.59999999999999998
+   MaxDroneCount: 2
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+      
+AsteroidResources:
+-  Name: SiliconResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: CobaltResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: TitanResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: MagnesiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: IronResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: PromethiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: PentaxidResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+POIs:
+   Random:
+   # -  GroupName: DroneBaseT1RG
+      # Faction: Zirax
+      # DroneBaseSetup: DroneBaseSetup
+      # CountMinMax: [0, 1]
+      # DroneProb: 1
+      # DronesMinMax: [4, 5]
+      # ReserveCount: 5
+      # NoShieldReload: True
+      # Properties:
+      # -  Key: RegenAfter
+         # Value: 720
+
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
+          CountMinMax: [ 0, 1 ]
+          IsImportant: True
+          DroneProb: 1.0
+          DronesMinMax: [ 8, 8 ] 
+          ReserveCount: 30
+          SpawnResource: ["TitanResource:2-3","PromethiumResource:1-1"]
+          SpawnResourceRange: [125,250]
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720 
+
+              # Auxiliary POIs for Drone Base
+        - GroupName: RadosAuxT2SnowRG
+          Faction: Zirax
+          NoShieldReload: True
+          # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
+          CountMinMax: [ 1, 2 ]
+          # IsImportant: True
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 12
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [250, 400]
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenseT3Snow 
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          # IsImportant: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [RadosDefenseT3Snow] 
+          SpawnPOIAvoidDistance: 200 
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [150, 300]
+          # SpawnResource: ["PromethiumResource:1-1"]
+          # SpawnResourceRange: [250,500]
+          Properties: 
+          # Abyssal have stealth tech
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenseT2Snow
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [RadosDefenseT2Snow] 
+          SpawnPOIAvoidDistance: 300 
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [400, 600]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+              # Only spawn if the Dronebase spawns.
+        - GroupName: RadosAuxT2SnowRG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 3, 4 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 12
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [2000, 8000]
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+              # Only spawn if the Dronebase spawns.
+        - GroupName: RadosAuxT1SnowRG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 4, 6 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 12
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [6000, 20000]
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+              # Only spawn if the Dronebase spawns.
+        - GroupName: RadosMiscSnow
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 12
+          SpawnPOINear: [RadosAuxT1SnowRG]
+          SpawnPOINearRange: [400, 1200]
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+
+              # Only spawns if the Dronebase does NOT spawn (or on a large planet)
+        - GroupName: Eden_ZiraxMain
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 7
+          SpawnPOIAvoid: [DroneBaseT1RG] 
+          SpawnPOIAvoidDistance: 25000
+          TroopTransport: True
+          SpawnResource: ["TitanResource:2-3","PromethiumResource:1-1"]
+          SpawnResourceRange: [125,250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ZiraxDefenseT3
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 4, 6 ]
+          DroneProb: 0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINearRange: [250, 400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+              # Only spawns if the Abyssal Dronebase does NOT spawn (or on a large planet)
+        - GroupName: Eden_ZiraxAuxT2
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 0, 6 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 7
+          SpawnPOIAvoid: [DroneBaseT1RG] 
+          SpawnPOIAvoidDistance: 25000
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+              # Auxillary structures to make a group
+        - GroupName: Eden_ZiraxAuxT2
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 0, 3 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 7
+          SpawnPOINear: [Eden_ZiraxAuxT2]
+          SpawnPOINearRange: [250, 500]
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+
+              # Only spawns if the Dronebase AND the Zirax Main does NOT spawn (or on a large planet)
+        - GroupName: RadosMissileBaseSnowRG
+          Faction: Zirax
+          NoShieldReload: True
+          # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 7
+          SpawnPOIAvoid: [DroneBaseT1RG, Eden_ZiraxMain] 
+          SpawnPOIAvoidDistance: 25000
+          TroopTransport: True
+          SpawnResource: ["CobaltResource:2-3","PentaxidResource:1-2"]
+          SpawnResourceRange: [125,250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Pirate Outposts
+
+        - GroupName: PiratesMainRG 
+          Faction: Pirates
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          SpawnResource: ["TitanResource:0-1","PromethiumResource:0-1"]
+          SpawnResourceRange: [125,250]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: PiratesAuxSnowRG 
+          Faction: Pirates
+          NoShieldReload: True
+          CountMinMax: [ 0, 5 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720 
+
+
+   FixedPlayerStart:
+   -  Mode: Debug
+      Pos: [-596, 104, -1063]
+      RotY: 125
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      PlayerArmor: ['']
+   -  Mode: Survival
+      Spawn: EscapePod
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorMedium
+      PlayerArmor: ['']
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseSetup
+      Stock:
+      -  Name: DroneSmallFast01Rocket
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallFast01Minigun
+         Amount: 200
+         Extra: 0
+      -  Name: DroneLargeSlow01Minigun
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallSlow01Cannon
+         Amount: 200
+         Extra: 0
+      -  Name: DroneSmallAttackBase
+         Amount: 300
+         Extra: 1
+      -  Name: DroneTroopsTransport
+         Amount: Infinite
+         Extra: 2
+      -  Name: ZiraxMinigun
+         Amount: 500
+         Extra: 3
+      -  Name: RipperDog
+         Amount: 400
+         Extra: 3
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [5, 10]
+      CenterX: -2500
+      Radius: 1500
+   -  DronesMinMax: [5, 10]
+      CenterX: 2500
+      Radius: 1500
+CreatureSpawning:
+-  Biomes: [Any]
+   Entities:
+   -  Name: SlimesWhite
+      Period: Always
+      Amount: 20
+   -  Name: AlienAssassinGreys
+      Period: Night
+      Amount: 20
+-  Biomes: [IceSheet]
+   Entities:
+   -  Name: GolemsIce
+      Period: Always
+      Amount: 8
+-  Biomes: [Flats]
+   Entities:
+   -  Name: LizardMuleHerd
+      Period: Always
+      Amount: 30
+   -  Name: CaveWormsWhite
+      Period: Always
+      Amount: 101
+-  Biomes: [Regolith]
+   Entities:
+   -  Name: CaveWormsWhite
+      Period: Always
+      Amount: 40

@@ -1,0 +1,249 @@
+# Playfield Characteristics
+Description: "Type: [c][ff0000]Combat Site[-][/c] - [c][FFA500]Class 4[-][/c]
+
+Factions: [c][ff0000]Zirax[-][/c]
+
+
+Sensors pick up high levels of radio signals.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+
+# Hot Star
+Radiation: [10,15]
+TemperatureDay: [-175,-75]
+# Music: [space, DistantWorlds, EnergyMatrix, Helios, Orbiting, AlteredPhase, Fragments, Ghost, Obelisk] # Orbit
+Music: [Sanctuary, Vanguard, Helios, Encryptor, AlteredPhase, Fragments] # POI
+
+PlayfieldType: Space  
+PlanetType: Combat Site
+
+Skybox:
+#Skyboxes are separated by star class.
+# Skyboxes for Class K Stars ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # # ---------------------------------------------------------------------
+    - [SunFlareWhite4Space, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareRedSpace, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareRed, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    # - [SunFlareYellow, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    # - [SunFlareYellow2, SkyboxStarsRed, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsRed, PrefabNebulaBlueOrange]
+
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    # - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      # DisplayName: Iron Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+ 
+    # - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      # DisplayName: Copper Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.6 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      # DisplayName: Magnesium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.5 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      # DisplayName: Cobalt Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180            
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      # DisplayName: Titan Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.2
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.2 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+
+    # - Name: [ AsteroidVoxel01Ice, AsteroidVoxel02Ice, AsteroidVoxel03Ice]
+      # DisplayName: Ice Asteroid
+      # CountMinMax: [ 2, 4 ]
+      # Probability: 0.3 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+
+### POIs
+POIs:
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroid Fields
+# ======================================================================================================================================================================================================
+#Main Field ----------------------------------------------------------
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.5
+      BaseField: True  
+      RandomRotation: True
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Distress Calls
+# ======================================================================================================================================================================================================
+
+    # - Type: BA_Player   
+      # Name: [BAO_Ramparts]
+      # DisplayName: Outpost Akua Orbit  
+      # Mode: Survival
+      # # SubMode: Normal      
+      # CountMinMax: [ 1, 1 ]        
+      # Pos: [ 65, -100, -150 ]    
+      # Rot: [ 0, 75, 0 ]      
+      # Probability: 1
+      # InitPower: True
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 720
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma]
+        Count: [12, 24]
+        Radius: [1500, 3000]
+      SpaceVessels:
+          - Name: [Freighter]  
+            Faction: Polaris     
+            Count: [0, 0]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]  
+
+          - Name: [Eden_OPV_ZiraxT4]
+            Faction: Zirax
+            Count: [3, 3]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [2500, 5000] 
+              Position:
+                PosXZMinMax: [50, 250]
+                PosYMax: 500
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [12, 18]
+              ExtraMinMax: [0,0]      
+
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            Count: [5, 5] 
+            Faction: Zirax  
+            FixedMaxSpeed: [20,20]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [50, 100]
+                PosYMax: 50
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]      
+            Properties:
+              - Key: Discovery
+                Value: False
+              - Key: RegenAfter
+                Value: 720

@@ -1,0 +1,345 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+
+Legacy infected space.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+# Alien Music
+Music: [alien, alien2, barren, Blight, Cypher, Diaspora, WhatWalksBelow]
+ 
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Orbit
+PlayfieldLevelOverride: [1,3]
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.0
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.0
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.0
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.0
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.0
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.1
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.2
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.3  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Aluminium, AsteroidVoxel02Aluminium, AsteroidVoxel03Aluminium]
+      DisplayName: Aluminium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.2 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      DisplayName: Platin Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.2  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+  
+    - Name: [ AsteroidVoxel01Ice, AsteroidVoxel02Ice, AsteroidVoxel03Ice]
+      DisplayName: Ice Asteroid
+      CountMinMax: [ 0, 2 ]
+      Probability: 0.5 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180               
+           
+### POIs
+POIs:
+    - Name: [AsteroidRingPlanet]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      BaseField: True  
+      RandomRotation: True
+
+    - Type: Eden_SectorAudio_Legacy
+      Name: [Eden_SectorAudio_Legacy]
+      DisplayName: Ambience
+      Faction: None
+      FactionTerritory: [TheLegacy]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+    - Type: BA_Alien   
+      Name: [RBAO_LegacyMatterConverter]  
+      DisplayName: Matter Converter
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.5
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Encryptor  
+     #   - Key: MapDistance
+     #     Value: 2500     
+
+    - Type: BA_Alien   
+      Name: [BAO_SecretArtefactSite]  
+      DisplayName: Artifact Site
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.8
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Encryptor  
+      #  - Key: MapDistance
+     #     Value: 2500     
+ 
+ # None ( not affected by territory-poi rule, only by probability)
+ 
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 8 ]     
+      Probability: 0.2 
+      # Rotate: true
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+     #   - Key: MapDistance
+      #    Value: 2500     
+ 
+#Smaller unguarded Pentaxid asteroids-----------------------------------------------------
+    - Type: AsteroidVoxel01Pentaxid
+      Name: [Eden_Asteroid_PentT1_1, Eden_Asteroid_PentT1_2, Eden_Asteroid_PentT1_3, Eden_Asteroid_PentT1_4]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 6, 8 ]
+      Probability: 1
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 180  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneLegacyLaser]
+        Faction: TheLegacy
+        Count: [2, 5]
+        Radius: [300, 800]
+      SpaceVessels:
+          - Name: [OPVLegacyRG]       
+            Faction: Alien
+            Count: [1, 2]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Legacy
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+ 
+          - Name: [OPVLegacyRG]     
+            Faction: Alien     
+            Count: [1, 2]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 6000] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500             
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True              
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+
+# The Legacy
+          - Name: [OPVLegacyRG]       
+            Faction: TheLegacy
+            Count: [1, 4]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Legacy
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+ 
+          - Name: [OPVLegacyRG]     
+            Faction: TheLegacy     
+            Count: [3, 5]
+            FixedMaxSpeed: [80, 90]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 6000] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500             
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True              
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+
+          - Name: [BAO_BeaconQuarantine] 
+            Count: [1, 1]
+            Faction: TheLegacy     
+            FixedMaxSpeed: [0,0]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]      
+            Properties: 
+              - Key: RegenAfter
+                Value: 720    

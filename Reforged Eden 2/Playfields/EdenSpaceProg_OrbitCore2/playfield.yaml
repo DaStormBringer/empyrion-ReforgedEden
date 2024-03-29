@@ -1,0 +1,366 @@
+PlayfieldType: Space
+WorldName: 
+RealRadius: 0
+ScaledRadius: 0
+Gravity: 0
+PlanetAxis: 0
+PlanetRotAxis: 
+AtmosphereDensity: 0
+AtmosphereO2: 0.100000001
+AtmosphereBreathable: false
+Temperature: 0
+TemperatureDay: -270
+TemperatureNight: 0
+Radiation: 200
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 0
+DayLength: 0
+PlanetType: Orbit
+PlanetSize: 2
+Moons: 0
+Emissive: false
+Water: 
+PvP: false
+Difficulty: 1
+LegacyBiome: 
+ChunkProviderId: 0
+SunFlare: 
+Nebula: 
+Stars: 
+LocalEffect: 
+SpecialEffectsLocal: 
+SpecialEffectsGlobal: 
+AtmosphereEnabled: false
+AtmosphereColor: 0.55, 0.61, 0.65
+AtmosphereParams: 
+OrbitUsesLightColor: false
+SkyColor: 1, 1, 1
+SkyHorizonColor: 
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+AtmosphereFog: 0
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+FogIntensity: 0
+FogStartDistance: 0
+GroundFogIntensity: 0
+GroundFogHeight: 0
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+Sovereignty: [c][ffffff]Unclaimed[-][/c]
+
+
+Space around a Progenitor Core.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Seed: -2147483648
+TemperatureMinMax: 
+HumidityMinMax: 
+LandWaterRatio: 0
+TemperatureHeightRange: 
+TemperatureGradientRange: 
+TemperatureNoiseFac: 0
+HumidityHeightFac: 
+HumidityNoiseFac: 0
+TerrainHeightMapMax: -1
+GroundShapes: 
+TemperatureMasks: 
+HumidityMasks: 
+BiomeStampTries: 0
+PlayfieldLevel: 0
+PdaReferral: 
+BaseAttackCount: 1
+PfServerWeight: 0
+PlanetClass: Orbit
+UseFixed: true
+UseRandom: false
+Build: 2923
+Instance: 
+IndestructibleTerrain: false
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowBlueprintSV: true
+AllowBlueprintCV: true
+AllowBlueprintHV: true
+AllowBlueprintBA: true
+AllowMaxCPUTierSV: 0
+AllowMaxCPUTierCV: 0
+AllowMaxCPUTierHV: 0
+AllowMaxCPUTierBA: 0
+RestrictToOrigin: 255
+Music: EvilWhispering
+LandClaimZone: Default
+IsOrbitPlayfield: false
+RandomPOIs: 
+RandomDroneBase: 
+RandomResources: 
+FixedResources: 
+AsteroidResources: 
+Terrain: 
+MainBiome: 
+SubBiomes: 
+BiomeTextureReplacements: 
+Biome: 
+POIs:
+  Random:
+  Fixed:
+
+# Asteroid Rings
+  - Type: AsteroidFieldRing
+    Prefab: 
+    Mode: 
+    SubMode: 
+    Name: Asteroid Field
+    InitPower: false
+    LevelMod: 
+    Faction: 
+    Properties: 
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 1
+    - 0
+    - 0
+    Rot:
+    - 0
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: false
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+    SpaceDefensePriceMinMax:
+
+  - Type: AsteroidFieldRing
+    Prefab: 
+    Mode: 
+    SubMode: 
+    Name: Asteroid Field
+    InitPower: false
+    LevelMod: 
+    Faction: 
+    Properties: 
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 1
+    - 0
+    Rot:
+    - 15
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: false
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+    SpaceDefensePriceMinMax:
+
+  - Type: AsteroidFieldRing
+    Prefab: 
+    Mode: 
+    SubMode: 
+    Name: Asteroid Field
+    InitPower: false
+    LevelMod: 
+    Faction: 
+    Properties: 
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 0
+    - 1
+    Rot:
+    - -15
+    - 0
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: false
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+    SpaceDefensePriceMinMax:
+
+
+  FixedPlayerStart: 
+  
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: 
+    Pos:
+    - 11863.832
+    - 899.514099
+    - 4346.67529
+    LevelMod: 
+    DroneOnDuty:
+
+    DroneSpaceFreighter: 
+    DronePlanetVessel: 
+    SpaceVessel:
+  
+# DroneBaseSetup:
+  # Random: 
+  # Fixed:
+  # - Name: MainDroneBase
+    # Faction: 
+    # Pos:
+    # - 8620.08398
+    # - 3460.39868
+    # - -4766.82617
+    # LevelMod: 
+    # DroneOnDuty:
+    # - Name: SpaceDronePlasma
+      # Faction: 
+      # Pos:
+      # - 9391.08496
+      # - 2559.8501
+      # - 1281.32593
+      # Radius: 512
+    # - Name: SpaceDronePlasma
+      # Faction: 
+      # Pos:
+      # - 8823.16113
+      # - -1624.68396
+      # - 4621.78271
+      # Radius: 739
+    # DroneSpaceFreighter: 
+    # DronePlanetVessel: 
+    # SpaceVessel:
+    # - Name: Freighter
+      # Faction: Polaris
+      # FixedMaxSpeed: 33
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 505
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - 3295
+          # - 5580
+          # - -559
+        # - - 2015
+          # - -6184
+          # - -5430
+        # - - -3267
+          # - -3973
+          # - -3944
+        # - - -4299
+          # - -354
+          # - 730
+        # - - -1303
+          # - 1777
+          # - 3511
+        # - - 2429
+          # - 1636
+          # - 2932
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 4
+        # Extra: 1
+      # Properties: 
+    # - Name: OrbitalPatrolVessel
+      # Faction: Zirax
+      # FixedMaxSpeed: 38
+      # Mission: SpacePatrol
+      # RangePatrol:
+        # Position3D:
+        # - -5111.56543
+        # - 4127.06494
+        # - 378.345978
+        # Radius: 1273
+        # DistToGround: 0
+        # RangePatrolAvoidArea: 
+        # IsAllowToReturnToBaseWhenOver: false
+      # Immobile: 
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 4
+        # Extra: 1
+      # Properties: 
+    # - Name: RBAO_GhystShipyard
+      # Faction: Zirax
+      # FixedMaxSpeed: 20
+      # Mission: Immobile
+      # RangePatrol: 
+      # Immobile:
+        # Position3D:
+        # - -5339.26709
+        # - 2955.18091
+        # - -1731.53052
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDronePlasma
+        # Amount: 19
+        # Extra: 1
+      # Properties: &o28
+      # - Key: RegenAfter
+        # Value: 720
+    # - Name: BAO_CrusaldOrbital
+      # Faction: Zirax
+      # FixedMaxSpeed: 20
+      # Mission: Immobile
+      # RangePatrol: 
+      # Immobile:
+        # Position3D:
+        # - 1587.21265
+        # - -4262.89893
+        # - 4630.0332
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDronePlasma
+        # Amount: 22
+        # Extra: 1
+      # Properties: *o28
+    # - Name: RBAO_XenuSupplyStation
+      # Faction: Zirax
+      # FixedMaxSpeed: 20
+      # Mission: Immobile
+      # RangePatrol: 
+      # Immobile:
+        # Position3D:
+        # - -745.997009
+        # - -4024.41187
+        # - 4322.11865
+      # Freighter: 
+      # Stock:
+      # - Name: SpaceDronePlasma
+        # Amount: 16
+        # Extra: 1
+      # Properties: *o28
+    # DronePlanetBase: 
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 

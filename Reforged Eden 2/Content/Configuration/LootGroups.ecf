@@ -1,0 +1,1368 @@
+## Line format: Item_x: name , data: count[-range], xdata: probability (x incrementing, if using a count-range use double quotes)
+
+{ +LootGroup Name: empty
+}
+
+## New Escape Pod settings: Difficulty Levels 
+{ +LootGroup Name: EscapePodEasy
+  Count: all
+  Item_0: EmergencyRations, param1: 1
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param: 1
+  #Item_4: OreScanner, param:1
+}
+
+{ +LootGroup Name: EscapePodMedium
+  Count: all
+  Item_0: EmergencyRations, param1: 1
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param: 1
+  #Item_4: OreScanner, param:1
+}
+
+{ +LootGroup Name: EscapePodHard
+  Count: all
+  Item_0: EmergencyRations, param1: 1
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param: 1
+  #Item_4: OreScanner, param:1
+}
+
+## Escape pod - New Start 
+{ +LootGroup Name: StartingEquipment_NewStart
+  # Count: all  
+  # Item_0: Drill, param1: 1
+  # Item_1: Chainsaw, param1: 1
+  # Item_2: BioFuel, param1: 2
+  # Item_3: ConstructorSurvival, param1: 1
+  # Item_4: OxygenGeneratorSmall, param1: 1
+}
+# ====================================================================
+# Used by Mechanical enemies
+{ +LootGroup Name: BasicComponents
+  Count: "1,2"
+  Item_0: SteelPlate, param1: "1,8", param2: 0.3
+  Item_1: GlassPlate, param1: "1,2", param2: 0.3
+  Item_2: OpticalFiber, param1: "1,4", param2: 0.3
+  Item_3: MechanicalComponents, param1: "1,4", param2: 0.3
+  Item_4: Electronics, param1: "1,4", param2: 0.2
+  Item_5: PlasticMaterial, param1: "1,8", param2: 0.2
+  Item_6: MetalPieces, param1: "1,8", param2: 0.1
+  Item_7: Nanotubes, param1: "1,4", param2: 0.1
+}
+# Used by Drones
+{ +LootGroup Name: CompositeComponents
+  Count: "1,2"
+  Item_0: EnergyMatrix, param1: "1,5", param2: 0.4
+  Item_1: Motor, param1: "1,2", param2: 0.2
+  Item_2: TitanPlates, param1: "1,8", param2: 0.2
+  Item_3: Computer, param1: "1,2", param2: 0.1
+  Item_4: CobaltAlloy, param1: "1,5", param2: 0.1
+  Item_5: AluminiumCoil, param1: "1,2", param2: 0.04
+}
+
+# Used by Large Drones
+{ +LootGroup Name: AdvancedComponents
+  Count: "1"
+  Item_0: FluxCoil, param1: "1,2", param2: 0.2
+  Item_1: Oscillator, param1: "1,3", param2: 0.2
+  Item_2: SteelPlateArmored, param1: "1,6", param2: 0.2
+  Item_3: EnergyMatrix, param1: "1,2", param2: 0.2
+  Item_4: ErestrumGel, param1: "1,3", param2: 0.1
+  Item_5: CapacitorComponent, param1: "1,2", param2: 0.1
+  Item_6: PlatinOunce, param1: "1,2", param2: 0.05
+}
+# ====================================================================
+{ +LootGroup Name: Sprouts
+  Count: "1,2"
+  Item_0: DurianRoot, param1: 1, param2: 0.2
+  Item_1: TomatoStage1, param1: 1, param2: 0.2
+  Item_2: WheatStage1, param1: 1, param2: 0.2
+  Item_3: CornStage1, param1: 1, param2: 0.2
+  Item_4: PumpkinStage1, param1: 1, param2: 0.2
+  Item_5: PearthingStage1, param1: 1, param2: 0.2
+  Item_6: InsanityPepperStage1, param1: 1, param2: 0.2
+  Item_7: DesertPlant20Stage1, param1: 1, param2: 0.2
+}
+
+## NEW LOOT GROUPS 
+# ====================================================================
+{ +LootGroup Name: OresBasic
+  Count: "1,2"
+  Item_0: IronOre, param1: "5,12", param2: 0.5
+  Item_1: CopperOre, param1: "5,15", param2: 0.6
+  Item_2: SiliconOre, param1: "5,20", param2: 0.7
+  Item_3: PlasticMaterial, param1: "10,40", param2: 0.9
+  Item_4: PromethiumOre, param1: "3,5", param2: 0.4
+}
+
+{ +LootGroup Name: OresImproved
+  Count: "1,2"
+  Item_0: CobaltOre, param1: "5,10", param2: 0.6
+  Item_1: TitanOre, param1: "5,10", param2: 0.6
+  Item_2: MagnesiumOre, param1: "5,10", param2: 0.5
+  Item_3: AluminiumOre, param1: "5,8", param2: 0.4
+  Item_4: NeodymiumOre, param1: "5,8", param2: 0.4
+}
+
+{ +LootGroup Name: OresAdvanced
+  Count: "1"
+  Item_0: SathiumOre, param1: "5,8", param2: 0.4
+  Item_1: ErestrumOre, param1: "3,8", param2: 0.4
+  Item_2: ZascosiumOre, param1: "3,5", param2: 0.2
+  Item_3: GoldOre, param1: "2,4", param2: 0.4
+  Item_4: PlatinOre, param1: "1,4", param2: 0.4
+}
+# ====================================================================
+{ +LootGroup Name: IngotsBasic
+  Count: "1,2"
+  Item_0: IronIngot, param1: "5,20", param2: 0.4
+  Item_1: CopperIngot, param1: "5,15", param2: 0.3
+  Item_2: SiliconIngot, param1: "5,15", param2: 0.3
+  Item_3: PromethiumPellets, param1: "5,15", param2: 0.3
+}
+
+{ +LootGroup Name: IngotsRare
+  Count: "1,2"
+  Item_0: CobaltIngot, param1: "5,15", param2: 0.6
+  Item_1: TitanRods, param1: "5,18", param2: 0.6
+  Item_2: MagnesiumPowder, param1: "5,15", param2: 0.5
+  Item_3: AluminiumPowder, param1: "5,12", param2: 0.4
+  Item_4: NeodymiumIngot, param1: "5,12", param2: 0.4
+}
+
+{ +LootGroup Name: IngotsAdvanced
+  Count: "1"
+  Item_0: SathiumIngot, param1: "3,12", param2: 0.5
+  Item_1: ErestrumIngot, param1: "3,10", param2: 0.4
+  Item_2: ZascosiumIngot, param1: "3,10", param2: 0.3
+  Item_3: GoldIngot, param1: "2,5", param2: 0.2
+  Item_4: PlatinBar, param1: "1,5", param2: 0.1
+}
+# ====================================================================
+{ +LootGroup Name: ComponentsBasic
+  Count: "1,2"
+  Item_0: SteelPlate, param1: "5,15", param2: 0.3
+  Item_1: Electronics, param1: "2,5", param2: 0.2
+  Item_2: OpticalFiber, param1: "2,5", param2: 0.3
+  Item_3: EnergyMatrix, param1: "2,5", param2: 0.3
+  Item_4: GlassPlate, param1: "5,10", param2: 0.3
+  Item_5: MechanicalComponents, param1: "5,10", param2: 0.4
+  Item_6: Motor, param1: "2,5", param2: 0.2
+  Item_7: Nanotubes, param1: "5,10", param2: 0.2
+  Item_8: Computer, param1: "1,2", param2: 0.1
+}
+
+# Used by Drones
+{ +LootGroup Name: ComponentsImproved
+  Count: "1,2"
+  Item_0: EnergyMatrix, param1: "1,5", param2: 0.4
+  Item_1: Motor, param1: "1,2", param2: 0.2
+  Item_2: TitanPlates, param1: "1,8", param2: 0.2
+  Item_3: Computer, param1: "1,2", param2: 0.1
+  Item_4: CobaltAlloy, param1: "1,5", param2: 0.1
+  Item_5: AluminiumCoil, param1: "1,2", param2: 0.04
+}
+
+# Used by Large Drones
+{ +LootGroup Name: ComponentsAdvanced
+  Count: "1"
+  Item_0: FluxCoil, param1: "1,2", param2: 0.2
+  Item_1: Oscillator, param1: "1,3", param2: 0.2
+  Item_2: SteelPlateArmored, param1: "1,6", param2: 0.2
+  Item_3: EnergyMatrix, param1: "1,2", param2: 0.2
+  Item_4: ErestrumGel, param1: "1,3", param2: 0.1
+  Item_5: CapacitorComponent, param1: "1,2", param2: 0.1
+  Item_6: PlatinOunce, param1: "1,2", param2: 0.05
+}
+# ====================================================================
+{ +LootGroup Name: CraftingMaterial
+  Count: "1,3"
+  Item_0: Cement, param1: "10,20", param2: 0.3
+  Item_1: WoodPlanks, param1: "10,20", param2: 0.3
+  Item_2: PlasticMaterial, param1: "5,40", param2: 0.3
+  Item_3: GlassPlate, param1: "5,10", param2: 0.3
+  Item_4: WaterBottle, param1: "5,10", param2: 0.3
+  Item_5: RockDust, param1: "5,30", param2: 0.3
+  Item_6: PromethiumPellets, param1: "5,20", param2: 0.3
+  Item_7: HydrogenBottle, param1: "1,5", param2: 0.3
+  Item_8: MagnesiumPowder, param1: "5,10", param2: 0.3
+  Item_9: AluminiumPowder, param1: "5,10", param2: 0.3
+}
+
+{ +LootGroup Name: EnergyItems
+  Count: "1,2"
+  Item_0: EnergyCell, param1: "3,7", param2: 0.3
+  Item_1: EnergyCellLarge, param1: "1,4", param2: 0.3
+  Item_2: FusionCell, param1: "1,2", param2: 0.3
+  Item_3: BioFuel, param1: "1,4", param2: 0.3
+}
+
+{ +LootGroup Name: BuildingBlocks
+  Count: "1,2"
+  Item_0: HullSmallBlocks, param1: "10,15", param2: 0.1
+  Item_1: HullArmoredSmallBlocks, param1: "5,10", param2: 0.05
+  Item_2: HullLargeBlocks, param1: "10,15", param2: 0.07
+  Item_3: HullArmoredLargeBlocks, param1: "5,10", param2: 0.05
+  Item_4: HullCombatLargeBlocks, param1: "5,10", param2: 0.03
+  Item_5: ConcreteBlocks, param1: "10,15", param2: 0.2
+  Item_6: WoodBlocks, param1: "10,15", param2: 0.3
+  Item_7: TrussSmallBlocks, param1: "10,15", param2: 0.2
+  Item_8: TrussLargeBlocks, param1: "10,15", param2: 0.2
+  Item_9: StairsBlocks, param1: "5,10", param2: 0.3
+  Item_10: WindowSmallBlocks, param1: "5,10", param2: 0.04
+  Item_11: WindowLargeBlocks, param1: "5,10", param2: 0.05
+  Item_12: WindowArmoredSmallBlocks, param1: "5,10", param2: 0.03
+  Item_13: WindowArmoredLargeBlocks, param1: "5,10", param2: 0.02
+  Item_14: WalkwayLargeBlocks, param1: "5,10", param2: 0.3
+  Item_15: DecoBlocks, param1: "5,10", param2: 0.3
+  Item_16: ConsoleBlocks, param1: "5,10", param2: 0.3
+  Item_17: IndoorPlants, param1: "2,5", param2: 0.5
+  Item_18: GrowingPot, param1: "2,5", param2: 0.5
+}
+
+{ +LootGroup Name: Tools
+  Count: "1,2"
+  Item_0: Flashlight, param1: 1, param2: 0.1
+  Item_1: Chainsaw, param1: 1, param2: 0.1
+  Item_2: BioFuel, param1: "2,5", param2: 0.1
+  Item_3: MultiTool, param1: 1, param2: 0.1
+  Item_4: MultiCharge, param1: "1,5", param2: 0.1
+  Item_5: DrillT2, param1: 1, param2: 0.02
+  Item_6: DrillCharge, param1: "1,5", param2: 0.1
+  Item_7: MultiToolT2, param1: 1, param2: 0.02
+  Item_8: Drill, param1: 1, param2: 0.1
+}
+# ====================================================================
+{ +LootGroup Name: WeaponsBasic
+  Count: "1,2"
+  Item_0: Pistol, param1: 1, param2: 0.3
+  Item_1: Shotgun, param1: 1, param2: 0.3
+  Item_2: AssaultRifle, param1: 1, param2: 0.3
+  Item_3: Sniper, param1: 1, param2: 0.3
+  Item_4: SubmachineGunT1, param1: 1, param2: 0.3
+}
+# Used only for Troop Transport
+{ +LootGroup Name: WeaponsRare
+  Count: "1"
+  Item_0: PistolT2, param1: 1, param2: 0.1
+  Item_1: Shotgun2, param1: 1, param2: 0.1
+  Item_2: AssaultRifleT2, param1: 1, param2: 0.1
+  Item_3: Sniper2, param1: 1, param2: 0.1
+  Item_4: LaserPistol, param1: 1, param2: 0.05
+  Item_5: LaserRifle, param1: 1, param2: 0.03
+  Item_6: RocketLauncher, param1: 1, param2: 0.065
+  Item_7: FlameThrower, param1: 1, param2: 0.075
+  Item_8: SubmachineGunT2, param1: 1, param2: 0.1
+}
+# Not used
+{ +LootGroup Name: WeaponsVeryRare
+  Count: "1"
+  Item_0: Minigun, param1: 1
+  Item_1: LaserPistolT2, param1: 1
+  Item_2: LaserRifle, param1: 1
+  Item_3: ScifiCannon, param1: 1
+  Item_4: RocketLauncherT2, param1: 1
+}
+
+{ +LootGroup Name: WeaponsEpic
+  Count: 1
+  Item_0: AssaultRifleEpic, param1: 1, param2: 0.5
+  Item_1: Sniper2Epic, param1: 1, param2: 0.5
+  Item_2: MinigunEpic, param1: 1, param2: 0.5
+  Item_3: Shotgun2Epic, param1: 1, param2: 0.5
+  Item_4: LaserRifleEpic, param1: 1, param2: 0.5
+  Item_5: PistolEpic, param1: 1, param2: 0.5
+  Item_6: ScifiCannonEpic, param1: 1, param2: 0.5
+  Item_7: RocketLauncherEpic, param1: 1, param2: 0.5
+  Item_8: SubmachineGunT3, param1: 1, param2: 0.5
+  Item_9: DrillEpic, param1: 1, param2: 0.5
+  Item_10: ArmorHeavyEpic, param1: 1, param2: 0.5
+  Item_11: ArmorMediumEpic, param1: 1, param2: 0.5
+  Item_12: ArmorLightEpic, param1: 1, param2: 0.5
+}
+
+{ +LootGroup Name: WeaponsEnemy
+  Count: "1"
+  Item_0: HeavyPistol, param1: 1, param2: 0.015
+  Item_1: AssaultRiflePolaris, param1: 1, param2: 0.1
+  Item_2: ShotgunPolaris, param1: 1, param2: 0.1
+  Item_3: ZiraxShotgunPlayer, param1: 1, param2: 0.1
+  Item_4: ZiraxAssaultRiflePlayer, param1: 1, param2: 0.1
+  Item_5: RocketLauncherZirax, param1: 1, param2: 0.1
+  Item_6: ZiraxLaserRifle, param1: 1, param2: 0.1
+  Item_7: LaserRiflePolaris, param1: 1, param2: 0.1
+}
+# ====================================================================
+# T1 Weapon Upgrade components
+{ +LootGroup Name: WeaponsBasicKit
+  Count: "1"
+  Item_0: PistolKit, param1: 1, param2: 0.3
+  Item_1: RifleKit, param1: 1, param2: 0.3
+  Item_2: ShotgunKit, param1: 1, param2: 0.2
+  Item_3: HeavyWeaponKit, param1: 1, param2: 0.1
+  Item_4: LaserKit, param1: 1, param2: 0.1
+  Item_5: SniperKit, param1: 1, param2: 0.1
+}
+# T2 Weapon Upgrade components
+{ +LootGroup Name: WeaponsRareKit
+  Count: "1"
+  Item_0: HeavyWeaponKit, param1: 1, param2: 0.01
+  Item_1: LaserKit, param1: 1, param2: 0.01
+  Item_2: SniperKit, param1: 1, param2: 0.1
+}
+# T3 Weapon Upgrade Components
+{ +LootGroup Name: WeaponsAdvancedKit
+  Count: "1"
+  Item_0: HeavyWeaponKit, param1: 1, param2: 0.01
+  Item_1: LaserKit, param1: 1, param2: 0.01
+  Item_2: SniperKit, param1: 1, param2: 0.1
+}
+# ====================================================================
+
+{ +LootGroup Name: Seeds
+  Count: "2,3"
+  Item_0: DurianRoot, param1: "2,5", param2: 0.3
+  Item_1: CornStage1, param1: "2,5", param2: 0.3
+  Item_2: PumpkinStage1, param1: "2,5", param2: 0.3
+  Item_3: TomatoStage1, param1: "2,5", param2: 0.3
+  Item_4: WheatStage1, param1: "2,5", param2: 0.3
+  Item_5: PearthingStage1, param1: "2,5", param2: 0.3
+  Item_6: InsanityPepperStage1, param1: "2,5", param2: 0.3
+  Item_7: AlienPlantTube2Stage1, param1: "2,5", param2: 0.3
+  Item_8: DesertPlant20Stage1, param1: "2,5", param2: 0.3
+  Item_9: ElderberryStage1, param1: "2,5", param2: 0.3
+  Item_10: AlienPalmTreeStage1, param1: "2,5", param2: 0.3
+  Item_11: AlienplantWormStage1, param1: "2,5", param2: 0.3
+  Item_12: BulbShroomYoungStage1, param1: "2,5", param2: 0.3
+}
+# ====================================================================
+{ +LootGroup Name: MedicalItems
+  Count: "1"
+  Item_0: Medikit04, param1: "1", param2: 0.1
+  Item_1: AntibioticOintment, param1: "1", param2: 0.8
+  Item_2: AntibioticPills, param1: "1", param2: 0.2
+  Item_3: AntiToxicPills, param1: "1", param2: 0.2
+  Item_4: AntiRadiationOintment, param1: "1", param2: 0.6
+  Item_5: StomachPills, param1: "1", param2: 0.8
+  Item_6: RadiationPills, param1: "1", param2: 0.2
+  Item_7: AntibioticInjection, param1: "1", param2: 0.1
+  Item_8: AntiToxicInjection, param1: "1", param2: 0.1
+}
+
+{ +LootGroup Name: Medikits
+  Count: "1,2"
+  Item_0: Medikit01, param1: "1", param2: 0.6
+  Item_1: Medikit02, param1: "1", param2: 0.4
+  Item_2: Medikit03, param1: "1", param2: 0.2
+  Item_3: Medikit04, param1: "1,2", param2: 0.8
+}
+# ====================================================================
+# Not used
+{ +LootGroup Name: FoodItems
+  Count: "1"
+  Item_0: CannedVegetables, param1: "2,4", param2: 0.3
+  Item_1: CannedMeat, param1: "2,4", param2: 0.3
+  Item_3: EmergencyRations, param1: "1,2", param2: 0.1
+}
+
+{ +LootGroup Name: TroopersFood
+  Count: 1
+  Item_0: Fruit, param1: "1", param2: 0.6
+  Item_1: WaterBottle, param1: "1", param2: 0.5
+  Item_2: PowerBar, param1: "1", param2: 0.5
+  Item_3: HotBeverage, param1: "1", param2: 0.4
+  Item_4: Berries, param1: "1", param2: 0.3
+  Item_5: FruitJuice, param1: "1", param2: 0.3
+  Item_6: VegetableJuice, param1: "1", param2: 0.3
+  Item_7: Bread, param1: "1", param2: 0.2
+  Item_8: Sandwich, param1: "1", param2: 0.2
+  Item_9: SpaceOrange, param1: "1", param2: 0.1
+  Item_10: Milk, param1: "1", param2: 0.1
+  Item_11: PumpkinCookie, param1: "1", param2: 0.05
+}
+
+{ +LootGroup Name: Biological01
+  Count: "2,3"
+  Item_0: Spice, param1: "1,3", param2: 0.7
+  Item_1: AlienThorn, param1: "1,3", param2: 0.7
+  Item_2: Varonroot, param1: "1,3", param2: 0.7
+  Item_3: HerbalLeaves, param1: "1,3", param2: 0.7
+  Item_4: PlantProtein, param1: "1,3", param2: 0.7
+  Item_5: PhoenixFernFonds, param1: "1,3", param2: 0.7
+  Item_6: MushroomBrown, param1: "1,3", param2: 0.7
+  Item_7: MushroomSpiky, param1: "1,3", param2: 0.7
+  Item_8: NaturalSweetener, param1: "1,3", param2: 0.7
+}
+# ====================================================================
+{ +LootGroup Name: SuitBooster
+  Count: "1"
+  Item_0: ArmorBoost, param1: 1, param2: 0.1
+  Item_1: JetpackBoost, param1: 1, param2: 0.1
+  Item_2: MultiBoost, param1: 1, param2: 0.1
+  Item_3: OxygenBoost, param1: 1, param2: 0.1
+  Item_4: InsulationBoost, param1: 1, param2: 0.1
+  Item_5: MobilityBoost, param1: 1, param2: 0.1
+  Item_6: RadiationBoost, param1: 1, param2: 0.1
+  Item_7: CoolingBoost, param1: 1, param2: 0.1
+  Item_8: TransportationBoost, param1: 1, param2: 0.05
+}
+
+{ +LootGroup Name: SuitBoosterT2
+  Count: "1"
+  Item_0: ArmorBoostEpic, param1: 1, param2: 0.1
+  Item_1: JetpackBoostEpic, param1: 1, param2: 0.1
+  Item_2: MultiBoostEpic, param1: 1, param2: 0.1
+  Item_3: InsulationBoostEpic, param1: 1, param2: 0.1
+  Item_4: CoolingBoostEpic, param1: 1, param2: 0.1
+  Item_5: MobilityBoostEpic, param1: 1, param2: 0.1
+  Item_6: RadiationBoostEpic, param1: 1, param2: 0.1
+}
+# ====================================================================
+{ +LootGroup Name: MissingCargo
+  Count: "1"
+  Item_0: Token, param1: "meta=4002", param2: 0.5
+  Item_1: Token, param1: "meta=4003", param2: 0.5
+  Item_2: Token, param1: "meta=4004", param2: 0.5
+  Item_3: Token, param1: "meta=4005", param2: 0.5
+  Item_4: Token, param1: "meta=4011", param2: 0.5
+}
+
+{ +LootGroup Name: Posters
+  Count: "1"
+  Item_0: PosterARest, param1: 1, param2: 0.1
+  Item_1: PosterBiker, param1: 1, param2: 0.1
+  Item_2: PosterBoyband, param1: 1, param2: 0.1
+  Item_3: PosterDontHide, param1: 1, param2: 0.1
+  Item_4: PosterForeignWorld, param1: 1, param2: 0.1
+  Item_5: PosterJump, param1: 1, param2: 0.1
+  Item_6: PosterNewWorld, param1: 1, param2: 0.1
+  Item_7: PosterSoleDesert, param1: 1, param2: 0.1
+  Item_8: PosterStranger, param1: 1, param2: 0.1
+  Item_9: PosterSurvivor, param1: 1, param2: 0.1
+  Item_10: PosterTakingABreak, param1: 1, param2: 0.1
+  Item_11: PosterTalon, param1: 1, param2: 0.1
+  Item_12: PosterTrader, param1: 1, param2: 0.1
+  Item_13: PosterZiraxAlienWorld, param1: 1, param2: 0.1
+}
+# ====================================================================
+{ +LootGroup Name: Keycards
+  Count: "1"
+  Item_0: KeyCardCommon, param1: 1, param2: 0.75
+  Item_1: KeyCardScience, param1: 1, param2: 0.3
+  Item_2: KeyCardExploration, param1: 1, param2: 0.3
+  Item_3: KeyCardSecurity, param1: 1, param2: 0.2
+  Item_4: KeyCardMilitary, param1: 1, param2: 0.1
+}
+
+{ +LootGroup Name: Hacking
+  Count: "1"
+  Item_0: FireStickGreen, param1: 1, param2: 0.5
+  Item_1: FireStickBlue, param1: 1, param2: 0.25
+  Item_2: FireStickRed, param1: 1, param2: 0.25
+}
+# ==================================================================
+# Small Ship Devices  
+{ +LootGroup Name: DevicesSV
+  Count: "1"
+  Item_0: GeneratorSVSmall, param1: 1, param2: 0.3
+  Item_1: FuelTankSVSmall, param1: 1, param2: 0.3
+  Item_2: OxygenTankSV, param1: 1, param2: 0.25
+  Item_3: RCSBlockSV, param1: 1, param2: 0.1
+  Item_4: ThrusterSVDirectional, param1: 1, param2: 0.1
+  Item_5: ThrusterSVRoundBlocks, param1: 1, param2: 0.1
+  Item_6: Core, param1: 1, param2: 0.1
+  Item_7: FuelTankSV, param1: 1, param2: 0.1
+  Item_8: GeneratorSV, param1: 1, param2: 0.1
+  Item_9: ThrusterJetRound1x3x1, param1: 1, param2: 0.075
+}
+# ==================================================================
+# ==================== Weapon Upgrade Tokens =======================
+# ==================================================================
+# Common Upgrades
+{ +LootGroup Name: WeaponUpgradesCommon
+  Count: "1"
+  Item_0: Token, param1: "meta=20", param2: 0.1
+  Item_1: Token, param1: "meta=21", param2: 0.1
+  Item_2: Token, param1: "meta=22", param2: 0.1
+  Item_3: Token, param1: "meta=36", param2: 0.1
+  Item_4: Token, param1: "meta=37", param2: 0.1
+  Item_5: Token, param1: "meta=38", param2: 0.1
+  Item_6: Token, param1: "meta=39", param2: 0.1
+  Item_7: Token, param1: "meta=51", param2: 0.1
+  Item_8: Token, param1: "meta=52", param2: 0.1
+  Item_9: Token, param1: "meta=53", param2: 0.1
+  Item_10: Token, param1: "meta=54", param2: 0.1
+  Item_11: Token, param1: "meta=33", param2: 0.05
+  Item_12: Token, param1: "meta=34", param2: 0.05
+}
+# Rare Upgrades
+{ +LootGroup Name: WeaponUpgradesRare
+  Count: "1"
+  Item_0: Token, param1: "meta=23", param2: 0.1
+  Item_1: Token, param1: "meta=24", param2: 0.1
+  Item_2: Token, param1: "meta=25", param2: 0.1
+  Item_3: Token, param1: "meta=29", param2: 0.1
+  Item_4: Token, param1: "meta=31", param2: 0.1
+  Item_5: Token, param1: "meta=40", param2: 0.1
+  Item_6: Token, param1: "meta=41", param2: 0.1
+  Item_7: Token, param1: "meta=42", param2: 0.1
+  Item_8: Token, param1: "meta=43", param2: 0.1
+  Item_9: Token, param1: "meta=44", param2: 0.1
+  Item_10: Token, param1: "meta=55", param2: 0.1
+  Item_11: Token, param1: "meta=56", param2: 0.1
+  Item_12: Token, param1: "meta=57", param2: 0.1
+  Item_13: Token, param1: "meta=58", param2: 0.1
+  Item_14: Token, param1: "meta=59", param2: 0.1
+  Item_15: Token, param1: "meta=60", param2: 0.1
+  Item_16: Token, param1: "meta=35", param2: 0.05
+}
+# Ultra Upgrades
+{ +LootGroup Name: WeaponUpgradesUltra
+  Count: "1"
+  Item_0: Token, param1: "meta=26", param2: 0.1
+  Item_1: Token, param1: "meta=27", param2: 0.1
+  Item_2: Token, param1: "meta=28", param2: 0.1
+  Item_3: Token, param1: "meta=30", param2: 0.1
+  Item_4: Token, param1: "meta=32", param2: 0.1
+  Item_5: Token, param1: "meta=45", param2: 0.1
+  Item_6: Token, param1: "meta=46", param2: 0.1
+  Item_7: Token, param1: "meta=47", param2: 0.1
+  Item_8: Token, param1: "meta=48", param2: 0.1
+  Item_9: Token, param1: "meta=49", param2: 0.1
+  Item_10: Token, param1: "meta=50", param2: 0.1
+  Item_11: Token, param1: "meta=61", param2: 0.1
+  Item_12: Token, param1: "meta=62", param2: 0.1
+  Item_13: Token, param1: "meta=63", param2: 0.1
+  Item_14: Token, param1: "meta=64", param2: 0.1
+  Item_15: Token, param1: "meta=65", param2: 0.1
+  Item_16: Token, param1: "meta=66", param2: 0.1
+  Item_17: Token, param1: "meta=67", param2: 0.1
+  Item_18: Token, param1: "meta=68", param2: 0.1
+  Item_19: Token, param1: "meta=69", param2: 0.1
+  Item_20: Token, param1: "meta=70", param2: 0.1
+  Item_21: Token, param1: "meta=71", param2: 0.1
+}
+# ==================================================================
+# ==================== Trading Card Tokens =======================
+# ==================================================================
+# Common
+{ +LootGroup Name: TradingCardCommon
+  Count: "1"
+  Item_0: Token, param1: "meta=120", param2: 0.05
+  Item_1: Token, param1: "meta=121", param2: 0.05
+  Item_2: Token, param1: "meta=122", param2: 0.05
+  Item_3: Token, param1: "meta=123", param2: 0.05
+  Item_4: Token, param1: "meta=124", param2: 0.05
+  Item_5: Token, param1: "meta=125", param2: 0.05
+  Item_6: Token, param1: "meta=126", param2: 0.05
+  Item_7: Token, param1: "meta=127", param2: 0.05
+  Item_8: Token, param1: "meta=128", param2: 0.05
+  Item_9: Token, param1: "meta=130", param2: 0.05
+  Item_10: Token, param1: "meta=131", param2: 0.05
+  Item_11: Token, param1: "meta=135", param2: 0.05
+  Item_12: Token, param1: "meta=139", param2: 0.05
+  Item_13: Token, param1: "meta=150", param2: 0.05
+  Item_14: Token, param1: "meta=151", param2: 0.05
+  Item_15: Token, param1: "meta=152", param2: 0.05
+  Item_16: Token, param1: "meta=153", param2: 0.05
+  Item_17: Token, param1: "meta=157", param2: 0.05
+  Item_18: Token, param1: "meta=159", param2: 0.05
+  Item_19: Token, param1: "meta=160", param2: 0.05
+  Item_20: Token, param1: "meta=163", param2: 0.05
+  Item_21: Token, param1: "meta=164", param2: 0.05
+  Item_22: Token, param1: "meta=180", param2: 0.05
+  Item_23: Token, param1: "meta=181", param2: 0.05
+  Item_24: Token, param1: "meta=182", param2: 0.05
+  Item_25: Token, param1: "meta=183", param2: 0.05
+  Item_26: Token, param1: "meta=188", param2: 0.05
+  Item_27: Token, param1: "meta=189", param2: 0.05
+  Item_28: Token, param1: "meta=190", param2: 0.05
+  Item_29: Token, param1: "meta=191", param2: 0.05
+  Item_30: Token, param1: "meta=192", param2: 0.05
+  Item_31: Token, param1: "meta=193", param2: 0.05
+  Item_32: Token, param1: "meta=195", param2: 0.05
+  Item_33: Token, param1: "meta=196", param2: 0.05
+  Item_34: Token, param1: "meta=197", param2: 0.05
+  Item_35: Token, param1: "meta=199", param2: 0.05
+  Item_36: Token, param1: "meta=200", param2: 0.05
+  Item_37: Token, param1: "meta=201", param2: 0.05
+  Item_38: Token, param1: "meta=202", param2: 0.05
+  Item_39: Token, param1: "meta=203", param2: 0.05
+}
+# Rare
+{ +LootGroup Name: TradingCardRare
+  Count: "1"
+  Item_0: Token, param1: "meta=129", param2: 0.05
+  Item_1: Token, param1: "meta=132", param2: 0.05
+  Item_2: Token, param1: "meta=133", param2: 0.05
+  Item_3: Token, param1: "meta=138", param2: 0.05
+  Item_4: Token, param1: "meta=140", param2: 0.05
+  Item_5: Token, param1: "meta=154", param2: 0.05
+  Item_6: Token, param1: "meta=156", param2: 0.05
+  Item_7: Token, param1: "meta=161", param2: 0.05
+  Item_8: Token, param1: "meta=165", param2: 0.05
+  Item_9: Token, param1: "meta=166", param2: 0.05
+  Item_10: Token, param1: "meta=171", param2: 0.05
+  Item_11: Token, param1: "meta=184", param2: 0.05
+  Item_12: Token, param1: "meta=186", param2: 0.05
+  Item_13: Token, param1: "meta=187", param2: 0.05
+  Item_14: Token, param1: "meta=194", param2: 0.05
+  Item_15: Token, param1: "meta=198", param2: 0.05
+}
+# Ultra Rare
+{ +LootGroup Name: TradingCardUltraRare
+  Count: "1"
+  Item_0: Token, param1: "meta=134", param2: 0.10
+  Item_1: Token, param1: "meta=137", param2: 0.10
+  Item_2: Token, param1: "meta=155", param2: 0.10
+  Item_3: Token, param1: "meta=167", param2: 0.10
+  Item_4: Token, param1: "meta=169", param2: 0.10
+  Item_5: Token, param1: "meta=170", param2: 0.10
+  Item_6: Token, param1: "meta=185", param2: 0.10
+}
+# Secret Rare
+{ +LootGroup Name: TradingCardSecretRare
+  Count: "1"
+  Item_0: Token, param1: "meta=136", param2: 0.05
+  Item_1: Token, param1: "meta=141", param2: 0.05
+  Item_2: Token, param1: "meta=158", param2: 0.05
+  Item_3: Token, param1: "meta=162", param2: 0.05
+  Item_4: Token, param1: "meta=168", param2: 0.05
+}
+
+
+# ============================================================================================================================================================================
+# ========================================================================================================================== Project Eden Custom Loot Groups
+# ============================================================================================================================================================================
+
+
+/*
+# Add to:
+
+# AlienContainer: Very Rare - red_NEW
+{ +Container Id: 40
+    Group_0: Eden_VeryRare, param1: 0.2
+    Group_0: Eden_VeryRareAmmo, param1: 0.1
+    Group_0: Eden_VeryRareSpecial, param1: 0.2
+
+# AlienContainer: Ultra Rare - purple
+{ +Container Id: 41
+    Group_0: Eden_UltraRare, param1: 0.2
+    Group_0: Eden_UltraRareSpecial, param1: 0.3
+
+
+#
+*/
+
+# UCH Research Vessel rewards
+
+{ +LootGroup Name: Eden_UCHRewardExploreT1
+  Count: "1,2"
+  Item_0: Eden_UnlockPoint, param1: "1,1", param2: 0.2
+  Item_1: PentaxidCrystal, param1: "35,70", param2: 0.4
+  Item_2: Eden_ProbeSystemT2, param1: "2,4", param2: 0.3
+  Item_3: Eden_ProbeSystemT3, param1: "1,2", param2: 0.3
+}
+
+{ +LootGroup Name: Eden_UCHRewardExploreT2
+  Count: "1,2"
+  Item_0: Eden_UnlockPoint, param1: "1,1", param2: 0.2
+  Item_1: Eden_WarpUpgrade, param1: "1,1", param2: 0.05
+  Item_2: PentaxidCrystal, param1: "45,85", param2: 0.4
+  Item_3: Eden_ProbeSystemT3, param1: "2,4", param2: 0.3
+  Item_4: Eden_ProbeSystemT4, param1: "1,2", param2: 0.3
+}
+
+{ +LootGroup Name: Eden_UCHRewardOreT1
+  Count: "1,2"
+  Item_0: IronOre, param1: "100,200", param2: 0.4
+  Item_1: CobaltOre, param1: "100,200", param2: 0.4
+  Item_2: CopperOre, param1: "100,200", param2: 0.3
+  Item_3: SiliconOre, param1: "100,200", param2: 0.3
+  Item_4: NeodymiumOre, param1: "50,100", param2: 0.2
+  Item_5: TitanOre, param1: "75,150", param2: 0.2
+  Item_6: MagnesiumOre, param1: "75,150", param2: 0.1
+  Item_7: Eden_TungstenOre, param1: "75,150", param2: 0.1
+}
+
+{ +LootGroup Name: Eden_UCHRewardOreT2
+  Count: "1,2"
+  Item_0: TitanOre, param1: "100,200", param2: 0.3
+  Item_1: NeodymiumOre, param1: "75,150", param2: 0.3
+  Item_2: SathiumOre, param1: "50,100", param2: 0.2
+  Item_3: ErestrumOre, param1: "75,150", param2: 0.2
+  Item_4: ZascosiumOre, param1: "50,100", param2: 0.1
+  Item_5: GoldOre, param1: "25,50", param2: 0.1
+}
+
+{ +LootGroup Name: Eden_UCHRewardMedicalT1
+  Count: "1,2"
+  Item_0: Bandages, param1: "3,6", param2: 0.5
+  Item_1: Medikit04, param1: "1,2", param2: 0.3
+  Item_3: Eden_RegenKit, param1: "1,2", param2: 0.2
+  Item_4: Eden_StaminaRegenKit, param1: "1,2", param2: 0.2
+  Item_5: Eden_RadiationRegenKit, param1: "1,2", param2: 0.2
+}
+
+{ +LootGroup Name: Eden_UCHRewardMedicalT2
+  Count: "1,2"
+  Item_0: Bandages, param1: "4,8", param2: 0.5
+  Item_1: Medikit04, param1: "1,3", param2: 0.3
+  Item_3: Eden_RegenKit, param1: "1,2", param2: 0.2
+  Item_4: Eden_StaminaRegenKit, param1: "1,2", param2: 0.2
+  Item_5: Eden_RadiationRegenKit, param1: "1,2", param2: 0.2
+  Item_6: Medikit02, param1: "1,2", param2: 0.2
+  Item_7: Medikit01, param1: "1,2", param2: 0.2
+}
+
+{ +LootGroup Name: Eden_UCHRewardSalvageT1
+  Count: 1
+  Item_0: Eden_Salvage1, param1: "1,1", param2: 0.2
+  Item_1: Eden_Salvage2, param1: "1,1", param2: 0.2
+  Item_2: Eden_Salvage3, param1: "1,1", param2: 0.2
+  Item_3: Eden_Salvage4, param1: "1,1", param2: 0.2
+  Item_4: Eden_Salvage5, param1: "1,1", param2: 0.2
+}
+
+{ +LootGroup Name: Eden_UCHRewardSalvageT2
+  Count: 1
+  Item_0: Eden_Salvage1, param1: "1,2", param2: 0.2
+  Item_1: Eden_Salvage2, param1: "1,2", param2: 0.2
+  Item_2: Eden_Salvage3, param1: "1,2", param2: 0.2
+  Item_3: Eden_Salvage4, param1: "1,2", param2: 0.2
+  Item_4: Eden_Salvage5, param1: "1,2", param2: 0.2
+}
+
+{ +LootGroup Name: Eden_UCHRewardSupplyT1
+  Count: "1,2"
+  Item_0: PentaxidCrystal, param1: "25,50", param2: 0.5
+  Item_1: EnergyCell, param1: "15,30", param2: 0.5
+  Item_2: MoneyCard, param1: "2500,5000", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_UCHRewardSupplyT2
+  Count: "1,2"
+  Item_0: PentaxidCrystal, param1: "35,75", param2: 0.5
+  Item_1: EnergyCellLarge, param1: "10,25", param2: 0.5
+  Item_2: MoneyCard, param1: "3500,7500", param2: 0.5
+}
+
+
+# Exploration Reports
+{ +LootGroup Name: Eden_ExplorationSiteReportsGeneric
+  Count: "1,1"
+  Item_0: ReportScienceRawData, param1: "1,1", param2: 0.15
+  Item_1: ReportCommunicationData, param1: "1,1", param2: 0.15
+  Item_2: ReportAnomalousData, param1: "1,1", param2: 0.15
+  Item_3: ReportExplorationRawData, param1: "1,1", param2: 0.15
+  Item_4: ReportAstronomicalData, param1: "1,1", param2: 0.15
+  Item_5: ReportSpaceWeather, param1: "1,1", param2: 0.15
+  Item_6: ReportNavigationData, param1: "1,1", param2: 0.15
+  Item_7: ReportSpaceAnomality, param1: "1,1", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT1
+  Count: "1,1"
+  Item_0: ReportScienceRawData, param1: "1,1", param2: 0.15
+  Item_1: ReportCommunicationData, param1: "1,1", param2: 0.15
+  Item_2: ReportAnomalousData, param1: "1,1", param2: 0.15
+  Item_3: ReportExplorationRawData, param1: "1,1", param2: 0.15
+  Item_4: ReportAstronomicalData, param1: "1,1", param2: 0.15
+  Item_5: ReportSpaceWeather, param1: "1,1", param2: 0.15
+  Item_6: ReportNavigationData, param1: "1,1", param2: 0.15
+  Item_7: ReportSpaceAnomality, param1: "1,1", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT2
+  Count: "3,3"
+  Item_0: Eden_SurveyExploreT2, param1: "1,1", param2: 0.25
+  Item_1: Eden_SurveyExploreT1, param1: "1,1", param2: 0.5
+  Item_2: Eden_SurveyExploreT1, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT3
+  Count: "3,3"
+  Item_0: Eden_SurveyExploreT2, param1: "1,1", param2: 0.25
+  Item_1: Eden_SurveyExploreT1, param1: "1,1", param2: 0.5
+  Item_2: Eden_SurveyExploreT2, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT4
+  Count: "3,3"
+  Item_0: Eden_SurveyExploreT3, param1: "1,1", param2: 0.25
+  Item_1: Eden_SurveyExploreT1, param1: "1,1", param2: 0.5
+  Item_2: Eden_SurveyExploreT2, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT5
+  Count: "3,3"
+  Item_0: Eden_SurveyExploreT2, param1: "1,1", param2: 0.25
+  Item_1: Eden_SurveyExploreT1, param1: "1,1", param2: 0.5
+  Item_2: Eden_SurveyExploreT3, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_ExplorationSiteReportsT6
+  Count: "3,3"
+  Item_0: Eden_SurveyExploreT3, param1: "1,1", param2: 0.25
+  Item_1: Eden_SurveyExploreT1, param1: "1,1", param2: 0.5
+  Item_2: Eden_SurveyExploreT3, param1: "1,1", param2: 1
+}
+
+
+
+# ========================================================================================================================== Combat Site loot groups
+
+
+
+# ========================================================================================================================== Mining Site loot groups
+
+{ +LootGroup Name: Eden_MiningSiteT1
+  Count: "1,1"
+  Item_0: Eden_WarpUpgrade, param1: 1, param2: 0.25
+  Item_1: Eden_UnlockPoint, param1: 1, param2: 0.5
+  Item_2: Eden_PosterEdenMining, param1: 1, param2: 0.25
+  Item_3: Eden_PosterPolaris, param1: 1, param2: 0.25
+}
+
+# ========================================================================================================================== Loot Groups to add to Very Rare alien containers
+{ +LootGroup Name: Eden_VeryRare
+  Count: "1,2"
+  Item_0: Eden_ShotgunGauss, param1: 1, param2: 0.15
+  Item_1: Eden_ShotgunDouble, param1: 1, param2: 0.15
+  Item_2: Eden_ScoutRifle, param1: 1, param2: 0.15
+  Item_3: Eden_Uzi, param1: 1, param2: 0.15
+  Item_4: Eden_RegenKit, param1: "2,3", param2: 0.3
+  Item_5: Eden_StaminaRegenKit, param1: "2,3", param2: 0.3
+  Item_6: Eden_RadiationRegenKit, param1: "1,2", param2: 0.3
+  Item_7: Eden_MagmaciteIngot, param1: "5,10", param2: 0.35
+  Item_8: Eden_PlasmaCoil, param1: "1,3", param2: 0.25
+  Item_9: Eden_PalladiumIngot, param1: "5,10", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_VeryRareAmmo
+  Count: "1,1"
+  Item_0: Eden_ModularPulseLaserSVIR_Ammo, param1: "50,150", param2: 1
+}
+
+{ +LootGroup Name: Eden_VeryRareSpecial
+  Count: "1,1"
+  Item_0: Eden_FactoryBuilder, param1: "1,2", param2: 0.3
+  Item_1: Eden_UnlockPoint, param1: 1, param2: 0.6
+}
+
+# ========================================================================================================================== Loot Groups to add to Ultra Rare alien containers
+{ +LootGroup Name: Eden_UltraRare
+  Count: "2,3"
+  Item_0: Eden_RegenKitT2, param1: "2,3", param2: 0.25
+  Item_1: Eden_StaminaRegenKitT2, param1: "2,3", param2: 0.25
+  Item_2: Eden_ImmunityShield, param1: "1,2", param2: 0.1
+  Item_3: Eden_EmergencyLifeSupport, param1: "1,2", param2: 0.1
+  Item_4: Eden_LightRailgunRifle, param1: 1, param2: 0.1
+  Item_5: Eden_IonRifle, param1: 1, param2: 0.1
+  Item_6: Eden_RifleLightning, param1: 1, param2: 0.1
+  Item_7: Eden_PlasmaRifleXCorp, param1: 1, param2: 0.1
+  Item_8: Eden_MinigunIncendiary, param1: 1, param2: 0.05
+}
+
+{ +LootGroup Name: Eden_UltraRareSpecial
+  Count: "1,2"
+  Item_0: Eden_WarpUpgrade, param1: "1,2", param2: 0.35
+  Item_1: Eden_DarkMatterSmall, param1: "1,2", param2: 0.05
+  Item_2: Eden_FactoryBuilder, param1: "1,2", param2: 0.1
+  Item_3: Eden_FactoryBuilderT2, param1: "1,2", param2: 0.3
+  Item_4: Eden_Implant1, param1: 1, param2: 0.05
+  Item_5: Eden_Implant2, param1: 1, param2: 0.05
+  Item_6: Eden_Implant3, param1: 1, param2: 0.05
+  Item_7: Eden_Implant4, param1: 1, param2: 0.05
+  Item_8: Eden_Implant5, param1: 1, param2: 0.05
+  Item_9: Eden_Implant6, param1: 1, param2: 0.05
+  Item_10: Eden_UnlockPoint, param1: "1,3", param2: 0.5
+}
+
+# ========================================================================================================================== Abyssal Loot Groups
+{ +LootGroup Name: Eden_WeaponsAbyssalRare
+  Count: 1
+  Item_0: Eden_Cryotorch, param1: 1, param2: 0.25
+  Item_1: Eden_LaserRifleEntropic, param1: 1, param2: 0.25
+  Item_2: Eden_PlasmaRifleEntropic, param1: 1, param2: 0.25
+}
+
+
+{ +LootGroup Name: Eden_WeaponsAbyssalEpic
+  Count: 1
+  Item_0: Eden_Cryotorch, param1: 1, param2: 0.5
+  Item_1: Eden_LaserRifleEntropic, param1: 1, param2: 0.5
+  Item_2: Eden_PlasmaRifleEntropic, param1: 1, param2: 0.5
+}
+
+# ========================================================================================================================== Rare Loot
+{ +LootGroup Name: Eden_RareMedical
+  Count: "2,3"
+  Item_0: Eden_RegenKit, param1: "1,3", param2: 0.3
+  Item_1: Eden_StaminaRegenKit, param1: "1,3", param2: 0.3
+  Item_2: Eden_RadiationRegenKit, param1: "1,2", param2: 0.3
+  Item_3: Eden_RegenKitT2, param1: "1,2", param2: 0.15
+  Item_4: Eden_StaminaRegenKitT2, param1: "1,2", param2: 0.15
+  Item_5: Eden_WarpCoreMoonshine, param1: "1,3", param2: 0.1
+  Item_6: Eden_PromethiumSlammers, param1: "1,3", param2: 0.1
+  Item_7: Eden_LiquidAssassin, param1: "1,3", param2: 0.1
+  Item_8: Eden_SpaceVodka, param1: "1,3", param2: 0.1
+  Item_9: Eden_ImmunityShield, param1: "1,2", param2: 0.1
+  Item_10: Eden_EmergencyLifeSupport, param1: "1,2", param2: 0.1
+}
+
+{ +LootGroup Name: Eden_RareWeapon
+  Count: 1
+  Item_0: Eden_ShotgunGauss, param1: 1, param2: 0.25
+  Item_1: Eden_ShotgunDouble, param1: 1, param2: 0.25
+  Item_2: Eden_ScoutRifle, param1: 1, param2: 0.25
+  Item_3: Eden_Uzi, param1: 1, param2: 0.25
+  Item_4: Eden_LightRailgunRifle, param1: 1, param2: 0.15
+  Item_5: Eden_IonRifle, param1: 1, param2: 0.15
+  Item_6: Eden_MinigunIncendiary, param1: 1, param2: 0.15
+}
+
+
+# ========================================================================================================================== Rare recipes
+# { +LootGroup Name: Eden_RecipesMedical
+  # Count: 1
+  # Item_0: Eden_RegenKitRecipe, param1: "15,50", param2: 0.25
+  # Item_1: Eden_StaminaRegenKitRecipe, param1: "15,50", param2: 0.25
+  # Item_2: Eden_RadiationRegenKitRecipe, param1: "15,50", param2: 0.25
+  # Item_3: Eden_AppleseedBrewsRecipe, param1: "15,50", param2: 0.15
+  # Item_4: Eden_BandagesT2Recipe, param1: "15,50", param2: 0.15
+# }
+
+# { +LootGroup Name: Eden_RecipesWeapon
+  # Count: 1
+  # Item_0: Eden_TurretVulcanSmall_Recipe, param1: "6,12", param2: 0.35
+  # Item_1: Eden_TurretRailgunHeavyRecipe, param1: "6,12", param2: 0.35
+  # Item_2: Eden_TurretFlakClose_Recipe, param1: "6,12", param2: 0.35
+# }
+
+
+{ +LootGroup Name: Eden_RecipesMedical
+  Count: 1
+  Item_0: Token, param1: "meta=6400", param2: 1
+  # Item_0: Token, param1: "meta=6403", param2: 0.25
+  # Item_1: Token, param1: "meta=6404", param2: 0.25
+  # Item_2: Token, param1: "meta=6405", param2: 0.25
+  # Item_3: Token, param1: "meta=6406", param2: 0.25
+}
+
+{ +LootGroup Name: Eden_RecipesWeapon
+  Count: 1
+  Item_0: Token, param1: "meta=6400", param2: 1
+  # Item_0: Token, param1: "meta=6402", param2: 0.15
+  # Item_1: Token, param1: "meta=6407", param2: 0.15
+  # Item_2: Token, param1: "meta=6409", param2: 0.15
+  # Item_3: Token, param1: "meta=6413", param2: 0.15
+  # Item_4: Token, param1: "meta=6414", param2: 0.15
+  # Item_5: Token, param1: "meta=6415", param2: 0.15
+}
+
+# All schematics and recipes
+{ +LootGroup Name: Eden_RecipesAll
+  Count: 1
+  Item_0: Token, param1: "meta=6400", param2: 1
+  # Item_0: Token, param1: "meta=6401", param2: 0.1
+  # Item_1: Token, param1: "meta=6402", param2: 0.1
+  # Item_2: Token, param1: "meta=6403", param2: 0.1
+  # Item_3: Token, param1: "meta=6404", param2: 0.1
+  # Item_4: Token, param1: "meta=6405", param2: 0.1
+  # Item_5: Token, param1: "meta=6406", param2: 0.1
+  # Item_6: Token, param1: "meta=6407", param2: 0.1
+  # Item_7: Token, param1: "meta=6408", param2: 0.1
+  # Item_8: Token, param1: "meta=6409", param2: 0.1
+  # Item_9: Token, param1: "meta=6410", param2: 0.1
+  # Item_10: Token, param1: "meta=6411", param2: 0.1
+  # Item_11: Token, param1: "meta=6412", param2: 0.1
+  # Item_12: Token, param1: "meta=6413", param2: 0.1
+  # Item_13: Token, param1: "meta=6414", param2: 0.1
+  # Item_14: Token, param1: "meta=6415", param2: 0.1
+  # Item_15: Token, param1: "meta=6416", param2: 0.1
+}
+
+# ========================================================================================================================== Bulk Loot
+# Common Ore
+{ +LootGroup Name: Eden_OresCommon
+  Count: "1,2"
+  Item_0: IronOre, param1: "250,500", param2: 0.8
+  Item_1: CopperOre, param1: "200,400", param2: 0.7
+  Item_2: SiliconOre, param1: "200,400", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_OresCommonL
+  Count: "1,2"
+  Item_0: IronOre, param1: "750,1250", param2: 0.8
+  Item_1: CopperOre, param1: "600,1000", param2: 0.7
+  Item_2: SiliconOre, param1: "600,1000", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_OresCommonXL
+  Count: "1,2"
+  Item_0: IronOre, param1: "2000,3000", param2: 0.7
+  Item_1: CopperOre, param1: "1500,2500", param2: 0.5
+  Item_2: SiliconOre, param1: "1500,2500", param2: 0.5
+}
+
+# Uncommon Ore
+{ +LootGroup Name: Eden_OresUncommon
+  Count: "1,2"
+  Item_0: CobaltOre, param1: "250,500", param2: 0.5
+  Item_1: MagnesiumOre, param1: "200,400", param2: 0.7
+  Item_2: TitanOre, param1: "250,500", param2: 0.5
+  Item_3: NeodymiumOre, param1: "200,400", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresUncommonL
+  Count: "1,2"
+  Item_0: CobaltOre, param1: "600,1000", param2: 0.5
+  Item_1: MagnesiumOre, param1: "600,1000", param2: 0.7
+  Item_2: TitanOre, param1: "750,1250", param2: 0.5
+  Item_3: NeodymiumOre, param1: "600,1000", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresUncommonXL
+  Count: "1,2"
+  Item_0: CobaltOre, param1: "1500,2500", param2: 0.5
+  Item_1: MagnesiumOre, param1: "1500,2500", param2: 0.5
+  Item_2: TitanOre, param1: "1500,3000", param2: 0.5
+  Item_3: NeodymiumOre, param1: "1500,2500", param2: 0.5
+}
+
+# Rare Ore
+{ +LootGroup Name: Eden_OresRare
+  Count: "1,2"
+  Item_0: SathiumOre, param1: "250,500", param2: 0.8
+  Item_1: AluminiumOre, param1: "200,400", param2: 0.7
+  Item_2: PromethiumOre, param1: "100,200", param2: 0.5
+  Item_3: PentaxidOre, param1: "100,200", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresRareL
+  Count: "1,2"
+  Item_0: SathiumOre, param1: "600,1200", param2: 0.8
+  Item_1: AluminiumOre, param1: "400,800", param2: 0.7
+  Item_2: PromethiumOre, param1: "350,700", param2: 0.5
+  Item_3: PentaxidOre, param1: "150,300", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresRareXL
+  Count: "1,2"
+  Item_0: SathiumOre, param1: "2000,3000", param2: 0.8
+  Item_1: AluminiumOre, param1: "1500,2500", param2: 0.7
+  Item_2: PromethiumOre, param1: "1500,2500", param2: 0.5
+  Item_3: PentaxidOre, param1: "250,400", param2: 0.4
+}
+
+# Exotic Ore
+{ +LootGroup Name: Eden_OresExotic
+  Count: "1,2"
+  Item_0: ErestrumOre, param1: "250,500", param2: 0.8
+  Item_1: ZascosiumOre, param1: "200,400", param2: 0.7
+  Item_2: GoldOre, param1: "100,200", param2: 0.5
+  Item_3: PlatinOre, param1: "100,200", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresExoticL
+  Count: "1,2"
+  Item_0: ErestrumOre, param1: "750,1250", param2: 0.8
+  Item_1: ZascosiumOre, param1: "500,1000", param2: 0.7
+  Item_2: GoldOre, param1: "150,300", param2: 0.5
+  Item_3: PlatinOre, param1: "250,500", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_OresExoticXL
+  Count: "1,2"
+  Item_0: ErestrumOre, param1: "1500,2000", param2: 0.8
+  Item_1: ZascosiumOre, param1: "1000,1500", param2: 0.7
+  Item_2: GoldOre, param1: "250,500", param2: 0.5
+  Item_3: PlatinOre, param1: "500,750", param2: 0.4
+}
+
+{ +LootGroup Name: Eden_IngotsBulkAll
+  Count: "1,1"
+  Item_0: IronIngot, param1: "150,300", param2: 1
+  Item_1: CopperIngot, param1: "150,300", param2: 0.9
+  Item_2: SiliconIngot, param1: "150,300", param2: 0.9
+  Item_3: CobaltIngot, param1: "150,300", param2: 0.8
+  Item_4: TitanRods, param1: "150,300", param2: 0.8
+  Item_5: NeodymiumIngot, param1: "150,300", param2: 0.6
+  Item_6: SathiumIngot, param1: "150,300", param2: 0.5
+  Item_7: Eden_TungstenIngot, param1: "50,100", param2: 0.1
+  Item_8: ErestrumIngot, param1: "150,300", param2: 0.1
+  Item_9: ZascosiumIngot, param1: "150,300", param2: 0.1
+  Item_10: GoldIngot, param1: "10,25", param2: 0.05
+}
+
+{ +LootGroup Name: Eden_IngotsBulkAllXL
+  Count: "1,1"
+  Item_0: IronIngot, param1: "500,1000", param2: 1
+  Item_1: CopperIngot, param1: "500,1000", param2: 0.9
+  Item_2: SiliconIngot, param1: "500,1000", param2: 0.9
+  Item_3: CobaltIngot, param1: "500,1000", param2: 0.8
+  Item_4: TitanRods, param1: "500,1000", param2: 0.8
+  Item_5: NeodymiumIngot, param1: "500,1000", param2: 0.6
+  Item_6: SathiumIngot, param1: "500,1000", param2: 0.5
+  Item_7: Eden_TungstenIngot, param1: "500,1000", param2: 0.1
+  Item_8: ErestrumIngot, param1: "500,1000", param2: 0.1
+  Item_9: ZascosiumIngot, param1: "500,1000", param2: 0.1
+  Item_10: GoldIngot, param1: "25,50", param2: 0.05
+}
+
+# Random Salvage
+{ +LootGroup Name: Eden_Salvage
+  Count: 1
+  Item_0: Eden_Salvage1, param1: "1,2", param2: 0.2
+  Item_1: Eden_Salvage2, param1: "1,2", param2: 0.2
+  Item_2: Eden_Salvage3, param1: "1,2", param2: 0.2
+  Item_3: Eden_Salvage4, param1: "1,2", param2: 0.2
+  Item_4: Eden_Salvage5, param1: "1,2", param2: 0.2
+}
+
+# Unique Salvage Loot
+{ +LootGroup Name: Eden_SalvageUniqueT0
+  Count: 1
+  Item_0: Eden_WarpUpgrade, param1: "1,1", param2: 0.01
+  Item_1: Eden_UnlockPoint, param1: "1,1", param2: 0.05
+  Item_2: MoneyCard, param1: "1000,3000", param2: 0.15
+  Item_3: Eden_Salvage1, param1: "1,1", param2: 0.01
+  Item_4: Eden_Salvage2, param1: "1,1", param2: 0.01
+  Item_5: Eden_Salvage3, param1: "1,1", param2: 0.01
+  Item_6: Eden_Salvage4, param1: "1,1", param2: 0.01
+  Item_7: Eden_Salvage5, param1: "1,1", param2: 0.01
+  Item_8: Eden_RepairKitLifeSupport, param1: "1,1", param2: 0.02
+  Item_9: Eden_RepairKitPropulsion, param1: "1,1", param2: 0.02
+  Item_10: Eden_RepairKitWarp, param1: "1,1", param2: 0.02
+  Item_11: Eden_RepairKitSensors, param1: "1,1", param2: 0.02
+  Item_12: Eden_RepairKitWeapons, param1: "1,1", param2: 0.02
+  Item_13: Eden_ProbeSystemT1, param1: "1,2", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_SalvageUniqueT1
+  Count: 1
+  Item_0: Eden_WarpUpgrade, param1: "1,1", param2: 0.02
+  Item_1: Eden_UnlockPoint, param1: "1,1", param2: 0.1
+  Item_2: MoneyCard, param1: "1000,3000", param2: 0.25
+  Item_3: Eden_Salvage1, param1: "1,1", param2: 0.01
+  Item_4: Eden_Salvage2, param1: "1,1", param2: 0.01
+  Item_5: Eden_Salvage3, param1: "1,1", param2: 0.01
+  Item_6: Eden_Salvage4, param1: "1,1", param2: 0.01
+  Item_7: Eden_Salvage5, param1: "1,1", param2: 0.01
+  Item_8: Eden_RepairKitLifeSupport, param1: "1,1", param2: 0.02
+  Item_9: Eden_RepairKitPropulsion, param1: "1,1", param2: 0.02
+  Item_10: Eden_RepairKitWarp, param1: "1,1", param2: 0.02
+  Item_11: Eden_RepairKitSensors, param1: "1,1", param2: 0.02
+  Item_12: Eden_RepairKitWeapons, param1: "1,1", param2: 0.02
+  Item_13: Eden_ProbeSystemT2, param1: "1,2", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_SalvageUniqueT2
+  Count: "1,2"
+  Item_0: Eden_WarpUpgrade, param1: "1,1", param2: 0.05
+  Item_1: Eden_UnlockPoint, param1: "1,1", param2: 0.2
+  Item_2: MoneyCard, param1: "2000,6000", param2: 0.25
+  Item_3: Eden_Salvage1, param1: "1,1", param2: 0.01
+  Item_4: Eden_Salvage2, param1: "1,1", param2: 0.01
+  Item_5: Eden_Salvage3, param1: "1,1", param2: 0.01
+  Item_6: Eden_Salvage4, param1: "1,1", param2: 0.01
+  Item_7: Eden_Salvage5, param1: "1,1", param2: 0.01
+  Item_8: Eden_ProbeSystemT3, param1: "1,2", param2: 0.15
+}
+
+{ +LootGroup Name: Eden_SalvageUniqueT3
+  Count: "1,2"
+  Item_0: Eden_WarpUpgrade, param1: "1,1", param2: 0.15
+  Item_1: Eden_UnlockPoint, param1: "1,2", param2: 0.25
+  Item_2: MoneyCard, param1: "3000,15000", param2: 0.20
+  Item_3: Eden_Salvage1, param1: "1,2", param2: 0.05
+  Item_4: Eden_Salvage2, param1: "1,2", param2: 0.05
+  Item_5: Eden_Salvage3, param1: "1,2", param2: 0.05
+  Item_6: Eden_Salvage4, param1: "1,2", param2: 0.05
+  Item_7: Eden_Salvage5, param1: "1,2", param2: 0.05
+  Item_8: Eden_ProbeSystemT4, param1: "1,2", param2: 0.05
+}
+
+# Low chance of dropping from rare damaged salvage blocks in wrecks.
+{ +LootGroup Name: Eden_SalvageT1
+  Count: "1,2"
+  Item_0: SmallUpgradeKit, param1: "1,4", param2: 0.5
+  Item_1: SmallOptronicBridge, param1: "1,5", param2: 0.7
+  Item_2: SmallOptronicMatrix, param1: "1,6", param2: 0.5
+}
+
+# Low chance of dropping from rare damaged salvage blocks in wrecks.
+# { +LootGroup Name: Eden_SalvageT1
+  # Count: "1,2"
+  # Item_0: RTG, param1: "1,1", param2: 0.001
+  # Item_1: ReactorCore, param1: "1,1", param2: 0.001
+  # Item_2: SmallUpgradeKit, param1: "1,4", param2: 0.5
+  # Item_3: LargeUpgradeKit, param1: "1,4", param2: 0.5
+  # Item_4: AdvancedUpgradeKit, param1: "1,5", param2: 0.5
+  # Item_5: SmallOptronicBridge, param1: "1,5", param2: 0.7
+  # Item_6: SmallOptronicMatrix, param1: "1,6", param2: 0.5
+  # Item_7: LargeOptronicBridge, param1: "1,7", param2: 0.5
+  # Item_8: LargeOptronicMatrix, param1: "1,7", param2: 0.3
+# }
+
+{ +LootGroup Name: Eden_EquipmentMiningT1
+  Count: "1,1"
+  Item_0: DrillAttachmentLargeCV, param1: "1,1", param2: 0.2
+  Item_1: DrillAttachmentLarge, param1: "1,1", param2: 0.2
+  Item_2: DrillAttachment, param1: "1,1", param2: 0.2
+  Item_3: MiningEquipment, param1: "1,3", param2: 0.2
+  Item_4: Robotics, param1: "1,2", param2: 0.2
+  Item_5: DrillT2, param1: "1,1", param2: 0.3
+  Item_6: MultiToolT2, param1: "1,1", param2: 0.5
+  Item_7: Drill, param1: "1,1", param2: 0.7
+  Item_8: MultiCharge, param1: "10,50", param2: 1
+  Item_9: DrillCharge, param1: "10,50", param2: 1
+}
+
+{ +LootGroup Name: Eden_EquipmentMiningT2
+  Count: "1,1"
+  Item_0: DrillAttachmentCV, param1: "1,1", param2: 0.05
+  Item_1: MultitoolSV, param1: "1,1", param2: 0.05
+  Item_2: TurretMSToolBlocks, param1: "1,1", param2: 0.2
+  Item_3: TurretGVToolBlocks, param1: "1,1", param2: 0.3
+  Item_4: AutoMinerCore, param1: "1,2", param2: 0.5
+  Item_5: DrillAttachmentSVT2, param1: "1,1", param2: 0.5
+  Item_6: DrillAttachmentT2, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_EquipmentMiningT3
+  Count: "1,1"
+  Item_0: DrillEpic, param1: "1,1", param2: 0.001
+  Item_1: Eden_AutoMiningDeviceT4, param1: "1,1", param2: 0.05
+  Item_2: Eden_DrillTurretAutoCV, param1: "1,1", param2: 0.1
+  Item_3: Eden_DrillRichCV, param1: "1,1", param2: 0.2
+  Item_4: Eden_DrillIceTurretCV, param1: "1,1", param2: 0.5
+  Item_5: Eden_DrillIceCV, param1: "1,1", param2: 1
+}
+
+{ +LootGroup Name: Eden_TradeGoodsTech
+  Count: "1,2"
+  Item_0: ReactorCore, param1: "1,1", param2: 0.001
+  Item_1: Robotics, param1: "1,2", param2: 0.1
+  Item_2: Optronics, param1: "1,2", param2: 0.15
+  Item_3: MiningEquipment, param1: "1,3", param2: 0.3
+  Item_4: ScienceEquipment, param1: "1,3", param2: 0.4
+  Item_5: ThrusterComponents, param1: "1,4", param2: 0.4
+  Item_6: RadiationShielding, param1: "1,4", param2: 0.5
+  Item_7: PrefabHousing, param1: "1,5", param2: 0.6
+  Item_8: SpareParts, param1: "1,5", param2: 0.6
+  Item_9: Superconductor, param1: "1,5", param2: 0.7
+  Item_10: HeatExchanger, param1: "1,5", param2: 0.7
+  Item_11: SolarCell, param1: "1,6", param2: 0.7
+  Item_12: CommunicationEquipment, param1: "1,7", param2: 0.8
+  Item_13: Eden_Polymer, param1: "1,7", param2: 0.8
+  Item_14: Tablet, param1: "1,25", param2: 1
+  Item_15: Filters, param1: "1,25", param2: 1
+  Item_16: Graphite, param1: "1,25", param2: 1
+}
+
+# Mining Contracts
+{ +LootGroup Name: Eden_MiningContracts
+  Count: "1"
+  Item_0: Token, param1: "meta=6811", param2: 0.25
+  Item_1: Token, param1: "meta=6812", param2: 0.25
+  Item_2: Token, param1: "meta=6813", param2: 0.25
+  Item_3: Token, param1: "meta=6821", param2: 0.25
+  Item_4: Token, param1: "meta=6822", param2: 0.25
+  Item_5: Token, param1: "meta=6823", param2: 0.25
+  Item_6: Token, param1: "meta=6824", param2: 0.25
+}
+
+# Missing Cargo
+{ +LootGroup Name: Eden_MissingCargo
+  Count: "1"
+  Item_0: Token, param1: "meta=4002", param2: 0.25
+  Item_1: Token, param1: "meta=4003", param2: 0.25
+  Item_2: Token, param1: "meta=4004", param2: 0.25
+  Item_3: Token, param1: "meta=4005", param2: 0.25
+  Item_4: Token, param1: "meta=4011", param2: 0.25
+}
+
+# Bulk Ammunition Hand T1
+{ +LootGroup Name: Eden_AmmoPlayerBulkT1
+  Count: "1,2"
+  Item_0: IronOre, param1: "250,500", param2: 0.8
+  Item_1: CopperOre, param1: "200,400", param2: 0.7
+  Item_2: SiliconOre, param1: "200,400", param2: 0.5
+}
+
+# Bulk Ammunition Hand T2
+{ +LootGroup Name: Eden_AmmoPlayerBulkT2
+  Count: "1,2"
+  Item_0: IronOre, param1: "500,1000", param2: 0.8
+  Item_1: CopperOre, param1: "200,400", param2: 0.7
+  Item_2: SiliconOre, param1: "200,400", param2: 0.5
+}
+
+# Bulk Ammunition Small T1 # Fix for RE2
+{ +LootGroup Name: Eden_AmmoSmallBulkT1 # Fix for RE2
+  Count: "1,2"
+  Item_0: 12.7x99mmBullet, param1: "500,1000", param2: 0.8
+  # Item_1: 120mmShell, param1: "50,100", param2: 0.8
+  # Item_2: FastRocket, param1: "150,300", param2: 0.8
+  # Item_3: FastRocketGV, param1: "150,300", param2: 0.8
+  # Item_4: FastRocketHoming, param1: "150,300", param2: 0.8
+  # Item_5: PlasmaCannonChargeSS, param1: "150,300", param2: 0.8
+  # Item_6: PulseLaserChargeSS, param1: "150,300", param2: 0.8
+  # Item_7: RailgunBullet, param1: "150,300", param2: 0.8
+  # Item_8: SVBomb, param1: "10,20", param2: 0.8
+  # Item_9: TurretGVPlasmaCharge, param1: "150,300", param2: 0.8
+}
+# Bulk Ammunition Small T2 # Fix for RE2
+{ +LootGroup Name: Eden_AmmoSmallBulkT2 # Fix for RE2
+  Count: "1,2"
+  Item_0: 12.7x99mmBullet, param1: "50,100", param2: 0.8
+}
+
+# Bulk Ammunition Large T1
+{ +LootGroup Name: Eden_AmmoLargeBulkT1 # Fix for RE2
+  Count: "1,2"
+  Item_0: 30mmBullet, param1: "500,1000", param2: 0.8
+  # Item_1: Eden_TurretMissileLightT2_Ammo, param1: "150,300", param2: 0.8
+  # Item_2: Eden_TurretMissileLight_Ammo, param1: "150,300", param2: 0.8
+  # Item_3: Eden_TurretRailgun_Ammo, param1: "150,300", param2: 0.8
+  # Item_4: Eden_TurretVulcanCV_Ammo, param1: "500,1000", param2: 0.8
+  # Item_5: FastRocketBA, param1: "150,300", param2: 0.8
+  # Item_6: FastRocketMS, param1: "150,300", param2: 0.8
+  # Item_7: FlakRocket, param1: "150,300", param2: 0.8
+  # Item_8: FlakRocketMS, param1: "150,300", param2: 0.8
+  # Item_9: LargeRocket, param1: "150,300", param2: 0.8
+  # Item_10: LargeRocketMS, param1: "150,300", param2: 0.8
+  # Item_11: LightRocketCV, param1: "150,300", param2: 0.8
+  # Item_12: PulseLaserChargeBA, param1: "500,1000", param2: 0.8
+  # Item_13: PulseLaserChargeMS, param1: "500,1000", param2: 0.8
+  # Item_14: PulseLaserChargeMSWeapon, param1: "500,1000", param2: 0.8
+  # Item_15: TurretBAPlasmaCharge, param1: "150,300", param2: 0.8
+  # Item_16: TurretMSPlasmaCharge, param1: "150,300", param2: 0.8
+}
+
+# Bulk Ammunition Large T2
+{ +LootGroup Name: Eden_AmmoLargeBulkT2 # Fix for RE2
+  Count: "1,2"
+  Item_0: 30mmBullet, param1: "500,1000", param2: 0.8
+  # Item_1: 40mmBullet, param1: "500,1000", param2: 0.8
+  # Item_2: ArtilleryShellBAT2, param1: "50,100", param2: 0.8
+  # Item_3: ArtilleryShellCVT2, param1: "50,100", param2: 0.8
+  # Item_4: Eden_BlasterCVT2_Ammo, param1: "150,300", param2: 0.8
+  # Item_5: Eden_TurretMissileCruiseCV_Ammo, param1: "150,300", param2: 0.8
+  # Item_6: Eden_TurretMissileCruiseEMPCV_Ammo, param1: "150,300", param2: 0.8
+  # Item_7: Eden_TurretRailgunHeavy_Ammo, param1: "150,300", param2: 0.8
+  # Item_8: FlakRocketBAT2, param1: "150,300", param2: 0.8
+  # Item_9: FlakRocketMST2, param1: "150,300", param2: 0.8
+  # Item_10: HeavyRocketBA, param1: "150,300", param2: 0.8
+  # Item_11: HeavyRocketMS, param1: "150,300", param2: 0.8
+  # Item_12: PulseLaserChargeBAT2, param1: "500,1000", param2: 0.8
+  # Item_13: PulseLaserChargeMST2, param1: "500,1000", param2: 0.8
+  # Item_14: TurretBAPlasmaChargeT2, param1: "500,1000", param2: 0.8
+  # Item_15: TurretMSPlasmaChargeT2, param1: "500,1000", param2: 0.8
+}

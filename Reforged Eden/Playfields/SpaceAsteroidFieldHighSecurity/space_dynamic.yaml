@@ -1,0 +1,148 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: AsteroidFieldHighSecurity            
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+  
+    # - Name: [ AsteroidVoxel01Ice, AsteroidVoxel02Ice, AsteroidVoxel03Ice]
+      # DisplayName: Ice Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.5 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180
+
+    - Name: [ AsteroidVoxel01Aluminium, AsteroidVoxel02Aluminium, AsteroidVoxel03Aluminium]
+      DisplayName: Aluminium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.6 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      # DisplayName: Platin Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.5  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180             
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      Pos: [0, 0, 0]
+      BaseField: True 
+    #  RandomRotation: True
+
+# Zirax - Ghyst
+
+    - Type: BA_Alien
+      Name: [BAO_Ghyst_OrbitalPrison]  
+      DisplayName: Prison
+      Faction: Ghyst
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Pos: [-70, 40, 430] # Allows fixed positioning in a dynamic environment. Note, that CountMinMax should make sense. Most of the time useful with [1, 1].
+    #  Rot: [12, 34, 56] # Allows fixed rotation in a dynamic environment.
+  #    Position:
+  #       PosXZMinMax: [0, 100]
+  #       PosYMax: 100
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+    #    - Key: Discovery
+    #      Value: False
+    #    - Key: StationInterface
+     #     Value: "Fuel:1.6,O2:1.6,Repair:8,Shield:8,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [RBAO_GhystShipyard]  
+      DisplayName: Shipyard
+      Faction: Ghyst
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+        RadialInfo: [0, 0, 0,   0,   6000, 8000,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.6,O2:1.6,Warp:1.6,Ammo:3,Repair:2,Shield:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [BAO_GhystDefence1,BAO_GhystDefence2]  
+      DisplayName: Defence Station
+      Faction: Ghyst
+      Mode: Survival
+      CountMinMax: [ 10, 16 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+        RadialInfo: [0, 0, 0,   0,   9000, 10000,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+    #    - Key: MapDistance
+     #     Value: 2500     
+ 
+DroneBaseSetup:

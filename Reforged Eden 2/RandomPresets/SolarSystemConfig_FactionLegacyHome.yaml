@@ -1,0 +1,88 @@
+---
+GenerationParams:
+  MapScale: 1.0          # how much the sectors are spread out  
+  # float [0..1] solar systems are more like a cookie than a ball. the lower the value, the flatter the system
+  SolarSystemSqueezeMinMax: [0.005, 0.1]
+  # float [0..1] probability a warp connection will be one-way
+  OneWayWarpProb: 0
+  UniqueStarterPlanet: false
+  
+
+
+  PlanetCountProbs:
+# ======================================================================================================================================================== Planets
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Gas Giants
+     - '0 : 0.7,   1 : 0.2,  2 : 0.1,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                              # 1 - Gas Planets
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                              # 2 - Outer Gas Planets
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Stars
+     - '0 : 0.5,   1 : 0.10,  2 : 0.20,  3 : 0.20,  4 : 0.00,  5 : 0.00,  6 : 0.0,  7 : 0.0,  8 : 0.0'                         # 1 - Companion Stars
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Rocky Planets
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                              # 1 - Faction Home Planet
+
+# ======================================================================================================================================================== Sector POIs
+     - '0 : 0.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.5,  5 : 0.5,  6 : 0.0,  7 : 0.0,  8 : 0.0'                              # 1 - Sector POIs
+
+
+
+
+  PlanetLists:           # Lable name depicts, in a descriptive way, the class or global or visual approach of the playfields summarized under this lable; playfields are added in the *Types sections
+# ======================================================================================================================================================== Planets
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Gas Giants
+    - 'Jupiter:0.45, Saturn: 0.35, Neptune:0.2'                                                                   # 1 Gas
+    - 'JupiterOuter:0.45, SaturnOuter:0.35, NeptuneOuter:0.2'                                                     # 2 Gas Outer
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Stars
+    - 'SunB:0.20, SunA:0.20, SunG:0.00, SunF:0.00, SunM:0.00, SunD:0.00, SunN2:0.30, SunA4V:0.30'                 # 1 Companion Stars
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Rocky Planets
+    - 'LegacyHome:1.0'                                                                         # 1 - Faction Home Planet
+
+# ======================================================================================================================================================== Sector POIs
+    - 'AsteroidFieldLegacyHome:1'                                                                                      # 1 - Sector POIs
+
+
+# ======================================================================================================================================================== POIs
+  POICountProbs: '0 : 1.00,  1 : 0.00,  2 : 0.00,  3 : 0.00,  4 : 0.00,  5 : 0.00,  6 : 0.00,  7 : 0.00,  8: 0.00'
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- POI counts
+  POIs: 'SpaceEmpty: 1.00, POICombatT1: 0.00, POIExploreT1: 0.00, POIMiningT1: 0.00'
+# --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  # ======== POIs ================
+  POITypes:
+
+  # ======== Stations ================            
+  StationTypes:
+      # - Name: SpaceTradingStation
+        # Color: [0.7, 0.5, 0.0]
+        # Icon: Station
+        # Distance: [200, 300]
+        # Placement: 
+          # - InnerSystem
+        # HasOrbit: false
+        # HasTerrain: false
+        # PlayfieldLevel: [2,10]
+        # Playfields:
+            # - SpaceTradingStation
+            
+  # ======== OrbitTypes ================
+  OrbitTypes:
+      - Name: DefaultOrbit     # definition of default name 'DefaultOrbit' is mandatory
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceOrbit
+
+  WarpTargetOrbitTypes:
+# -------------------------------------------------------------------------- Sun Playfield
+      - Name: WarpTarget
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,4]
+        Playfields:
+            - EdenSpaceWarpTargetLegacy

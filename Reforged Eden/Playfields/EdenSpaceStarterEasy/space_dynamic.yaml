@@ -1,0 +1,402 @@
+# Playfield Characteristics
+Description: "Difficulty [c][00ff00]Easy[-][/c]
+
+
+The orbit around a default starting planet. Contains the story mission POIs needed to progress the default missions.
+
+[c][ffffff][i]Mission POIs can sometimes have an invulnerable core, making the entire structure indestructable except for specific blocks or devices (turrets, some grates, etc).[/i][-][/c]
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+
+
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0 #Starter
+UseFixed: True                       
+Radiation: [2,4]                    
+TemperatureDay: [-130,-100]       
+Music: [moonstone, Orbiting, space, Transit]
+ 
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Orbit 
+
+### Resource Asteroid
+Resources:            
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180    
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180                
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180              
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1        
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.2          # randomized (i.e. may or may not be present)       
+      Properties:     
+        - Key: RegenAfter
+          Value: 180       
+           
+### POIs
+POIs:    
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet, AsteroidRingPlanet, AsteroidFieldRing, AsteroidFieldRingOld]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.7
+      BaseField: True  
+      RandomRotation: True
+
+# Story POI
+
+    - Type: BA_Alien
+      Name: [TSO_AkuaOrbit]                                    # Story: TOTALLY OVERPOWERED
+      DisplayName: Orbital Trading Station
+      Faction: Colonists                                        # To avoid mission does not work/player is attacked
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      InitPower: True
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+        - Key: PvEArea
+          Value: 500
+        - Key: Discovery
+          Value: False
+        - Key: StationInterface
+          Value: "Fuel:1.1,O2:1.1,Warp:1.1,Ammo:1,Repair:2,Shield:2,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+        - Key: RegenAfter
+          Value: 720 
+
+    - Type: BA_Alien   
+      Name: [BAO_TOPSpiceDestillery]                                    # Story: TOTALLY OVERPOWERED  
+      DisplayName: TOP Destillery
+      Faction: Colonists                                        # To avoid mission does not work/player is attacked
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      InitPower: True
+    #  Pos: [ 65, -2000, -6800 ]    
+    #  Rot: [ 0, 75, 0 ]      
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard   
+
+    - Type: BA_Alien   
+      Name: [BA_EleonsInferno]                                    # Story: TOTALLY OVERPOWERED  
+      DisplayName: INFERNO Club
+      Faction: Colonists                                        # To avoid mission does not work/player is attacked
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      InitPower: True
+     # Pos: [ 65, -2000, -6800 ]    
+     # Rot: [ 0, 75, 0 ]      
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: ExtraktTechno
+        - Key: StationInterface
+          Value: "Fuel:1.5,O2:1.2,Warp:1,Ammo:0.7,Repair:3,Shield:1,IfNeutral:0.2,IfHonored:-0.20"   
+
+    - Type: BA_Alien   
+      Name: [BAO_PirateBaseStory]                                      # Story: TOTALLY OVERPOWERED  
+      DisplayName: Hidden Station
+      Faction: Pirates                                                 # Story allows both to fight and talk.
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+    #  Pos: [ -14400, 1653, -256 ]    
+    #  Rot: [ 0, 75, 0 ]      
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: DarkSoundscape3  
+        - Key: StationInterface
+          Value: "All,IfNeutral:0.05,IfFriendly:-0.05,IfHonored:-0.10"
+
+# Debris field
+
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 8 ]     
+      Probability: 0.1 
+      # Rotate: true
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+      #  - Key: MapDistance
+       #   Value: 2500     
+  
+
+# Faction fillers
+
+# Polaris
+
+    - Type: BA_Alien   
+      Name: [RBAO_PolarisAlloySynthesis]  
+      DisplayName: Alloy Synthesis Factory
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 0, 1 ]     
+      Probability: 1
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+          
+
+# Zirax
+
+    - Type: BA_Alien   
+      Name: [RBAO_RadosRepairStation]  
+      DisplayName: Resupply Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.8
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [RBAO_XenuShipyard,RBAO_GhystShipyard]  
+      DisplayName: Shipyard
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.9
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.6,O2:1.6,Warp:1.6,Ammo:3,Repair:2,Shield:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [BAO_GhystDefence1,BAO_GhystDefence2]  
+      DisplayName: Defence Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]     
+      Probability: 0.8
+      InitPower: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+     # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+    #    - Key: MapDistance
+     #     Value: 2500     
+
+# CREATIVE MODE
+
+    - Type: BA_Player   
+      Name: [BAO_Ramparts]
+      DisplayName: Outpost Akua Orbit  
+      Mode: Creative            
+      SubMode: Normal      
+      CountMinMax: [ 1, 1 ]        
+      Pos: [ 65, -2000, -6800 ]    
+      Rot: [ 0, 75, 0 ]      
+      Probability: 1
+      InitPower: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Player   
+      Name: [BA_EmptyPlane]
+      DisplayName: Platform  
+      Mode: Creative            
+      SubMode: Empty      
+      CountMinMax: [ 1, 1 ]      
+      Pos: [ 65, -2000, -6800 ]    
+      Rot: [ 0, 75, 0 ]      
+      Probability: 1
+      InitPower: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: SV_Player   
+      Name: [SV_Viper]
+      DisplayName: Fighter MKII  
+      Mode: Creative            
+      SubMode: Normal      
+      CountMinMax: [ 1, 1 ]      
+      Pos: [ 56.6, -1961.3, -6805.5 ]    
+      Rot: [ 0, -115, 0 ]      
+      Probability: 1
+      InitPower: True
+
+    - Type: SV_Player   
+      Name: [SV_Viper]
+      DisplayName: Fighter MKII  
+      Mode: Creative            
+      SubMode: Empty      
+      CountMinMax: [ 1, 1 ]      
+      Pos: [ 69, -1997, -6799 ]    
+      Rot: [ 0, -69, 0 ]      
+      Probability: 1
+      InitPower: True
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [Eden_SpaceDroneLaserEasy]
+        Faction: Main
+        Count: [2, 4]
+        Radius: [300, 800]
+      SpaceVessels:
+          - Name: [Freighter]     # we can define list of Freighters
+            Faction: Polaris    
+            Count: [2, 3]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    # maybe set as fixed in config yaml
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0] 
+
+# Patrol Vessels
+          - Name: [OPVPolarisRG]     
+            Faction: Polaris       
+            Count: [1, 1]
+            FixedMaxSpeed: [20, 50]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 2500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+
+          - Name: [Eden_OPVZiraxEasy]     
+            Faction: Zirax       
+            Count: [1, 1]
+            FixedMaxSpeed: [10, 25]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 2500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+
+FixedPlayerStart:
+    - Mode: Creative             
+      SubMode: Empty             
+      Armor: ArmorMedium
+      Pos: [ 61, -1996, -6805 ]  
+      RotY: 14                 
+
+    - Mode: Creative             
+      SubMode: Normal             
+      Armor: ArmorMedium
+      # Pos: [ 55, -1960, -6815 ] 
+      Pos: [ 89, -1932, -6795 ] 
+      RotY: -90                   
+
+    - Mode: Debug       
+      Pos: [ 65, -1900, -6800 ] 
+      RotY: 160         

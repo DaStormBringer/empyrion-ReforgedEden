@@ -1,0 +1,454 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][00ff00]Easy[-][/c]
+
+
+This copper rich moon has a very thin atmosphere - It is shielded by an unusually large magetic field of the nearby planet, and the moon is dense enough to keep some gases from drifting into space. By this it has accumulated extreme amounts of desert varnish."
+
+PlanetType: Varnished Barren Moon
+PlayfieldType: Moon
+Difficulty: 3
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.30, 0.35, 0.35"
+SkyColor: "0.05, 0.10, 0.00" 
+SkyHorizonColor: "0.4, 0.1, 0"
+AtmosphereParams: [5, 1.6]     
+
+# Light
+DayLightIntensity: 1.6
+NightLightIntensity: 0.7
+DayShadowStrength: 0.95
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+LightZenithColor: "1, 0.92, 0.84"
+LightHorizonColor: "0.5, 0.4, 0.45"
+NightLightColor: "0.78, 0.78, 1"
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+
+# Fog
+# AtmosphereFog: 0.00
+FogColor: "0.9, 0.9, 0.1"
+FogCloudIntensity: 0.0
+# GroundFogIntensity: 0.05
+# GroundFogHeight: 125
+
+# Clouds and Wind
+CloudsDensity: 0.0
+CloudsSharpness: 1
+CloudsBrightness: 0.0
+CloudsOpacity: 0.0
+ 
+CloudsZenithColor: "0.0, -0.1, -0.1"
+CloudsHorizonColor: "1, 0.3, 0.1"
+
+WindSpeed: 0
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: SiliconResource
+      IsScalingCount: True
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 8, 9 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.4
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+
+# Massive deep copper deposit.
+    - Name: CopperResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 2 ]
+      SizeMinMax: [ 11, 12 ]
+      DepthMinMax: [ 65, 80 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 64
+        #YVariance: 10
+
+    - Name: CopperResource
+      IsScalingCount: True
+      CountMinMax: [ 5, 7 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 2, 3 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 5
+
+    - Name: CobaltResource
+      IsScalingCount: True
+      CountMinMax: [ 1, 2 ]
+      SizeMinMax: [ 4, 5 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+
+    - Name: AluminiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 25, 35 ]
+      DroneProb: 0.2
+      MaxDroneCount: 1
+
+    - Name: PromethiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      DepthMinMax: [ 0, 1 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: CopperResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: AluminiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:
+        - GroupName: DroneBaseT1RG     #CommandCenter
+          Faction: Zirax  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # PentaCorp Station with some nearby trader settlements. Doesn't always show up. Sells Pentaxid.
+        - GroupName: Eden_PolPentaCorp
+          Faction: Trader
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: Music
+              Value: SunnySkies
+            - Key: RegenAfter
+              Value: 720
+            - Key: StationInterface
+              Value: "Warp:2,IfNeutral:1.5,IfHonored:-0.10"
+
+        - GroupName: TraderSettlementRG 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          SpawnPOINear: [Eden_PolPentaCorp]
+          SpawnPOINearRange: [100, 250] 
+          Properties:
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: TraderDefenseB 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [Eden_PolPentaCorp]
+          SpawnPOINearRange: [100,250]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: TraderDefenseA 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINearRange: [100,250]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: Eden_PolPentaCorp
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: Music
+              Value: SunnySkies
+            - Key: RegenAfter
+              Value: 720
+            - Key: StationInterface
+              Value: "Warp:2,IfNeutral:1.5,IfHonored:-0.10"
+
+        - GroupName: FactoryPolarisRG3
+          Faction: Polaris
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG1
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+# Trader
+
+        - GroupName: TraderSettlementRG 
+          Faction: Trader    
+          NoShieldReload: True
+          CountMinMax: [ 3, 5 ]
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+# Pirates
+
+        - GroupName: PiratesMainRG 
+          Faction: Pirates    
+          NoShieldReload: True
+          CountMinMax: [ 0, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720         
+
+        - GroupName: PiratesAuxRG 
+          Faction: Pirates    
+          NoShieldReload: True
+          CountMinMax: [ 0, 3 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720 
+
+# Civilians
+
+        - GroupName: CivilSettlementRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          Properties:
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: MineT2PolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT1PolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [200, 600] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineGraphitePolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [500, 1000] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+#other
+        - GroupName: CrashedShipLargeDesert     
+          Faction: None     
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker 
+              Value: Neutral  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: GhystAuxT1RG
+          Faction: Zirax  
+          NoShieldReload: True
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Tungsten
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Warlord]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMale
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500

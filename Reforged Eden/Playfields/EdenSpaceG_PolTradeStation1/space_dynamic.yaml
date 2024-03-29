@@ -1,0 +1,374 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+Sovereignty: [c][FFA500]Polaris[-][/c]
+
+
+Trade stations such as these are commonly used as hubs for commerce or habitation.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+# Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase] # POI
+Music: [ColdDivide]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Station
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4   
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+### POIs
+POIs:
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroid Fields
+# ======================================================================================================================================================================================================
+#Main Field ----------------------------------------------------------
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.3
+      BaseField: True  
+      RandomRotation: True
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Project Eden POIs
+# ======================================================================================================================================================================================================
+#Project Eden Research Vessel ----------------------------------------------------------
+    # - Type: BA_Admin
+      # Name: [Eden_CV_EdenResearch]  
+      # DisplayName: UCH Research Vessel
+      # Faction: Admin
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [6000, 12000]
+         # PosYMax: 8000 
+      # Properties: 
+        # - Key: MapDistance
+          # Value: 25000  
+        # - Key: Music
+          # Value: Reaver  
+        # - Key: RegenAfter
+          # Value: 720  
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Civilian Outposts
+# ======================================================================================================================================================================================================
+#Polaris Trade Station ----------------------------------------------------------
+
+# Polaris
+    - Type: BA_Alien
+      GroupName: TSOPolarisRG
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 2500]
+         PosYMax: 2500
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: PvEArea
+          Value: 500
+        - Key: Music
+          Value: NebularClouds
+        - Key: RegenAfter
+          Value: 720
+        - Key: StationInterface
+          Value: "Fuel:1.5,O2:1.2,Warp:1,Ammo:0.7,Repair:3,Shield:1,IfNeutral:0.2,IfHonored:-0.20"
+        - Key: AIManExcludeFromPatrol
+          Value: true
+
+# Only in Polaris territory
+    - Type: BA_Alien
+      GroupName: BAOPolarisRG
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 6000]
+         PosYMax: 3500
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+#Smuggler's Outposts----------------------------------------------------------
+    - Type: BA_Alien   
+      # Name: [Eden_BAO_SmugOutpost1, Eden_BAO_SmugOutpost1b, Eden_BAO_SmugOutpost1c, Eden_BAO_SmugOutpost2, Eden_BAO_SmugOutpost2b, Eden_BAO_SmugOutpost3, Eden_BAO_SmugOutpost4,  Eden_BAO_SmugOutpost5]
+      GroupName: Eden_SmugglerSpaceAuxT1
+      # DisplayName: Smuggler Outpost
+      Faction: Pirates
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]
+      Probability: 0.65
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      GroupName: Eden_SmugglerSpaceAuxT0
+      Faction: Pirates
+      Mode: Survival
+      CountMinMax: [ 1, 5 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      InitPower: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+# Abandoned Pallet. Typically contains specific ore. 50/50 chance of exploding.
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkPalletT1
+      Faction: Eden_Wreck
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 10 ]
+      Probability: 0.45
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroids
+# ======================================================================================================================================================================================================
+#Asteroids for compounds-----------------------------------------------------
+    - Type: AsteroidVoxel01Pentaxid   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 3, 6 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 180  
+          
+
+#Smaller Pentaxid asteroids-----------------------------------------------------
+    - Type: AsteroidVoxel01Pentaxid   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 4, 8 ]    
+      Probability: 1
+      # InitPower: True
+      Compound:
+        CountMinMax: [1, 4]
+        Probability: 0.6
+        Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+        DistanceMinMax: [35, 75] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 4000]
+         PosYMax: 2500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+
+# ================================================================================================================================================================================= Drones
+      - FreeDrones:
+
+# ------------------------------------------------------------------------------------------------- Faction Main
+# Asteroid Patrols
+          - Name: [SpaceDronePolarisLaser]
+            Faction: Polaris
+            CanNotBeControlledByMasterAI: False
+            # POINameAsPositionRef: [BAO_GhystDefence1,BAO_GhystDefence2]
+            Count: [2, 4]
+            Radius: [1000, 10000]
+            Properties:
+              - Key: AIManMaxPursuitRange
+                Value: 4500
+
+# POI patrols
+          - Name: [SpaceDronePolarisLaser]
+            Faction: Polaris
+            CanNotBeControlledByMasterAI: False
+            Count: [3, 5]
+            Radius: [500, 10000]
+            Properties:
+              - Key: AIManPatrolFactions
+                Value: "Polaris"
+              - Key: AIManMaxPursuitRange
+                Value: 3000
+
+# ================================================================================================================================================================================= Ships
+        SpaceVessels:
+# ================================================================================================================================================================================= Patrol Vessels and Freighters and Bases
+# ------------------------------------------------------------------------------------------------- Faction Main
+
+
+# ------------------------------------------------------------------------------------------------- Faction Polaris
+# Patrol Vessels
+          - Name: [OPVPolarisRG]
+            Faction: Polaris
+            CountMinMax: [1, 2]
+            Probability: 1
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [20, 50]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [2000, 10000]
+              # POINameAsPositionRef: [RBAO_XenuShipyard, RBAO_GhystShipyard]
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              - Key: AIManMaxPursuitRange
+                Value: 5000
+
+# Freighters
+          - Name: [Freighter] 
+            FixedMaxSpeed: [20, 40]
+            Mission: Freighter
+            CountMinMax: [2, 6]
+            Probability: 1
+            Faction: Polaris
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [1, 2]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+
+# ------------------------------------------------------------------------------------------------- Faction Trader
+# Freighters
+          - Name: [Freighter] 
+            FixedMaxSpeed: [10, 30]
+            Mission: Freighter
+            CountMinMax: [1, 3]
+            Probability: 0.5
+            Faction: Trader
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneTraderLaser]
+              AmountMinMax: [1, 2]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+
+# ------------------------------------------------------------------------------------------------- Faction Colonists
+
+# Freighters
+          - Name: [Eden_FreighterColT1]
+            FixedMaxSpeed: [5, 15]
+            Mission: Freighter
+            CountMinMax: [1, 2]
+            Probability: 0.2
+            Faction: Colonists
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [1, 2]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone

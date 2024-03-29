@@ -1,0 +1,560 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c] \n\nThis cold moon is covered in thick layers of sulfur and deep pools of liquid methane.
+
+
+[c][808080][i]Originally created by Techie.[/i][-][/c]"
+
+
+PlanetType: Methane Moon
+PlayfieldType: Moon
+Difficulty: 2
+
+LandClaimZone: Device
+# # ==============================================================
+
+# Special effects around the player                 
+SpecialEffectsLocal:
+  - Name: Grime
+    MaxHeight: 200
+
+SpecialEffectsGlobal:
+# Weather
+    # Biome: [ Any ]     # NEW PARAM.   
+  - Name: CloudsDark
+    Type: Weather
+    InitialDelay: 0
+    Delay: 36
+    Lifetime: 600
+#  - Name: CloudsMedium
+#    Type: Weather
+#    InitialDelay: 0   
+#    Delay: 2          
+#    Lifetime: 1200
+  - Name: Wind
+    Type: Weather
+    InitialDelay: 0   
+    Delay: 12          
+    Lifetime: 600
+  - Name: Hail
+    Type: Weather
+    InitialDelay: 48  
+    Delay: 24         
+    Lifetime: 300 
+  - Name: ColdWave
+    Type: Weather
+    InitialDelay: 48   
+    Delay: 24      
+    
+# Global Effect
+  - Name: MeteorShower       # Name of effect 
+#    Biome: [ Any ]           # Name of biome in which effect will spawn
+    Time: Day                # Choose from pre-selection: Day, Night, Always
+    InitialDelay: 1          # Initial delay, in game hours
+    Delay: 5			     # Delay between effect of the same type, in game hours
+    Lifetime: 60	         # Duration of effect, in realtime seconds
+    PlyDist: 200             # Distance from player at which effect will spawn
+    SpawnY: 100              # Height at which effect will spawn
+    Struct: Avoid            # If set to True, effect will not be spawned above player structures
+
+  - Name: ThunderAndLightningPurple
+#    Biome: [ Any ]
+    Time: Night
+    InitialDelay: 1.5   
+    Delay: 4
+    Lifetime: 300     
+    PlyDist: 100
+    SpawnY: 500
+    Struct: Avoid    
+
+# Atmosphere and Sky
+AtmosphereEnabled: True              # Bool var [true, false]. Atmosphere True or False
+AtmosphereColor: "1, 1, 0"     # Color picker - Color of atmosphere seen in space (has not much impact) default is white "1,1,1"
+#SkyColor: "0.39, 0.39, 0.39"         # Color picker - Color of skybox if sun is in zenith, default is white "1,1,1"
+SkyColor: "0.2, 0.01, 0.0"         # Color picker - Color of skybox if sun is in zenith, default is white "1,1,1"
+#SkyHorizonColor: "1, 0.3, 0"         # Color picker - Color of skybox if sun is on horizon, default is white "1,1,1"
+SkyHorizonColor: "0.5, 0.01, 0"         # Color picker - Color of skybox if sun is on horizon, default is white "1,1,1"
+AtmosphereParams: [1, 1.6]
+
+# Light
+DayLightIntensity: 0.8                # Float [0, 2] - Larger values = brighter, default is 0.6
+NightLightIntensity: 0.75            # Float [0, 2]) - Larger values = brighter, default is 0.6
+LightZenithColor: "1, 0.95, 0.95"    # Color picker - Color of light if sun is in zenith, default is almost white "1,0.95,0.92" 
+LightHorizonColor: "1, 0.4, 0"       # Color picker - Color of light if sun is on horizon, default is orange "1,0.6,0" 
+DayShadowStrength: 0.95              # Ignore (do not change) - Hardcoded to 1
+NightShadowStrength: 0.5             # Ignore (do not change) - Hardcoded to 1
+
+# >> MOVE TO HERE + predefine path + choose range 
+# Sun                              
+SunFlare: EnvironmentalEffects/SunFlareYellow         # Choose from pre-selection: SunFlareBlue, SunFlarePurple, SunFlareRed, SunFlareRedSpace, SunFlareWhite, SunFlareWhite2, SunFlareWhite3, SunFlareWhite3Space, SunFlareWhite4, SunFlareWhite4Space, SunFlareWhiteMoon, SunFlareWhiteSpace, SunFlareYellow, SunFlareYellow2, SunFlareYellow3
+
+# ==============================================================
+# ==============================================================
+
+# Fog
+FogColor: "1, 1, 0"
+AtmosphereFog: 1                  # Float [0, 1] - Distant fog: larger values = stronger
+# AtmosphereFog: [0.5, 0.6]           # ADD TO DYNAMIC PARAMETERS. Float [0, 1] - Distant fog: larger values = stronger
+FogCloudIntensity: 1              # Float [0, 1] - Waft of mist in air: larger values = stronger
+# FogCloudIntensity: [0.8, 1]         # ADD TO DYNAMIC PARAMETERS. Float [0, 1] - Waft of mist in air: larger values = stronger
+FogIntensity: 1                   # CHECK IF NEEDED. Float [0, 1] - Near Fog/Atmospheric Scattering Intensity: larger values = stronger
+FogStartDistance: 300               # CHECK IF NEEDED. Float [0, 800] - Near Fog/Atmospheric Scattering Start Distance, in m
+# GroundFogIntensity: .3               # NEW RANGE. Float [0, 1] - Ground Layer Fog: larger values = stronger
+# GroundFogHeight: 50                  # DEPENDS ON WATER LEVEL. Float [0, 800] - Ground Layer Fog Height
+
+# DEPENDS ON WEATHER
+# Clouds
+CloudsDensity: 1                      # Float [0, 1] - Larger values = more clouds (coverage)
+#CloudsSharpness: 0.8                  # Float [0, 1] - Larger values = less dense clouds
+#CloudsSharpness: 0.5                  # Float [0, 1] - Larger values = less dense clouds
+CloudsSharpness: 0.2                  # Float [0, 1] - Larger values = less dense clouds
+#CloudsBrightness: 0.5                  # Float [0, 1] - Larger values = brighter clouds
+#CloudsBrightness: 0.5                  # Float [0, 1] - Larger values = brighter clouds
+CloudsBrightness: 0.3                  # Float [0, 1] - Larger values = brighter clouds
+#CloudsOpacity: 0.7                     # Float [0, 1] - Larger values = more opaque, default is 0.9
+CloudsOpacity: 1                     # Float [0, 1] - Larger values = more opaque, default is 0.9
+CloudsZenithColor: "1, 0.4, 0"     # Color picker - Color of clouds if sun is in zenith, default is light blue "0.87,0.92,1" 
+#CloudsHorizonColor: "0.5, 0.0, 0"    # Color picker - Color of clouds if sun is on horizon, default is light orange "1,0.76,0.56" 
+CloudsHorizonColor: "1, .6, 0"    # Color picker - Color of clouds if sun is on horizon, default is light orange "1,0.76,0.56" 
+CloudsNightZenithColor: "1, 0.3, 0"
+CloudsNightHorizonColor: "1, 0.3, 0"
+
+
+# DEPENDS ON WEATHER
+# Wind Speed
+WindSpeed: 3                           # Float [0, 20] -  Larger values = faster moving clouds, grass and trees
+
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+    - Name: CopperResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 0, 3 ]
+      DroneProb: 0.2
+      MaxDroneCount: 2
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+    - Name: SathiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 6, 7 ]
+      DepthMinMax: [ 1, 1 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 15
+
+    - Name: NeodymiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DepthMinMax: [ 1, 1 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 15
+
+    - Name: PromethiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 7, 8 ]
+      DepthMinMax: [ 0, 1 ]
+      DroneProb: 0.7
+      MaxDroneCount: 2
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 15
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: CopperResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: SathiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: NeodymiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ] 
+          ReserveCount: 5
+          Properties: 
+            - Key: Music
+              Value: lava2  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PlanetVesselBase
+          Faction: Zirax
+          NoShieldReload: True
+          PlanetVesselBaseSetup: PlanetVesselBaseSetup
+          CountMinMax: [ 1, 1 ] 
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]    
+          ReserveCount: 3
+          Properties: 
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # POI complex with several structures around and ore silos
+        - GroupName: RadosBunkerRG
+          Faction: Zirax
+          NoShieldReload: True
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_RadosSiloNeodymium
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosBunkerRG]
+          SpawnPOINearRange: [75, 300]
+          SpawnResource: ["NeodymiumResource:1-1"]
+          SpawnResourceRange: [125,200]
+
+        - GroupName: Eden_RadosSiloSathium
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosBunkerRG]
+          SpawnPOINearRange: [75, 300]
+          SpawnResource: ["SathiumResource:1-1"]
+          SpawnResourceRange: [125,200]
+
+        - GroupName: RadosAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: True 
+          SpawnPOINear: [RadosBunkerRG]
+          SpawnPOINearRange: [200, 300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenceT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [RadosBunkerRG]
+          SpawnPOINearRange: [300, 400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Random silos
+        - GroupName: Eden_RadosSiloNeodymium
+          Faction: Zirax
+          NoShieldReload: True
+          IsScalingCount: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["NeodymiumResource:1-1"]
+          SpawnResourceRange: [125,200]
+
+        - GroupName: Eden_RadosSiloSathium
+          Faction: Zirax
+          NoShieldReload: True
+          IsScalingCount: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["SathiumResource:1-1"]
+          SpawnResourceRange: [125,200]
+
+        - GroupName: Eden_RadosSiloPromethium
+          Faction: Zirax
+          NoShieldReload: True
+          IsScalingCount: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 2, 5 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["PromethiumResource:1-1"]
+          SpawnResourceRange: [125,200]
+
+# Zirax territory
+        - GroupName: Eden_RadosSiloNeodymium
+          Faction: Zirax
+          FactionTerritory: [Xenu]
+          NoShieldReload: True
+          IsScalingCount: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1
+          DronesMinMax: [ 5, 8 ]
+          ReserveCount: 3
+          TroopTransport: True
+
+          #Random Rados POIs
+        - GroupName: RadosAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          IsScalingCount: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: True 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # Alien Artifacts - Floating
+        - GroupName: ArtifactsFloating
+          Faction: Alien
+          NoShieldReload: True  
+          CountMinMax: [ 0, 1 ]
+          PlaceAt: OnWater
+          Properties: 
+            - Key: Music
+              Value: EvilWhispering
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+
+       # Alien Artifacts - Floating
+        - GroupName: ArtifactsFloating
+          Faction: Alien
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          PlaceAt: OnWater, Terrain
+          SpawnPOINear: [ArtifactsFloating]
+          SpawnPOINearRange: [75, 150]
+          Properties: 
+            - Key: Music
+              Value: EvilWhispering
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+
+# Harvestable Voidium
+        - GroupName: Eden_HarvestVoidiumT2
+          Faction: None
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestVoidiumT2
+          Faction: None
+          FactionTerritory: [Kriel, Eden_DroneHome, TheLegacy, Tesch]
+          CountMinMax: [ 0, 1 ]
+          SpawnPOINear: [Eden_HarvestVoidiumT2]
+          SpawnPOINearRange: [35, 250]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+# Silver
+        - GroupName: Eden_HarvestSilver
+          Faction: None
+          FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.75
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestSilver
+          Faction: None
+          FactionTerritory: [Wastelanders]
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+    FixedPlayerStart:
+        - Mode: Debug                # Creative or Survival
+          Pos: [ 977, 109, 645 ]       # position coordinates
+          RotY: 0                    # rotation angle around Y axis
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 7
+          PresetStyle: 3
+          Stock:
+              - Name: DroneSmallFast01Plasma
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Plasma
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow02Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow02Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+ 
+              - Name: DroneLargeAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: EnemyDroneV2Minigun
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxRocket
+                Amount: 500
+                Extra: 3
+
+              - Name: ZiraxLaser
+                Amount: 500
+                Extra: 3
+
+          PlanetVesselBase:
+              Name: PlanetVesselBaseSetup
+              Position3D: [ 0, 102, 0]
+              BaseType: PlanetVesselBase
+              KeyId: 0                  # Unique Key Id
+              PlanetVessel:
+                - Name: Patrol-M-Hard           # GroupName
+                  Mission: PlanetPatrol
+                  FixedMaxSpeed: 10          # Max speed of a freighter in m/sec
+                  RespawnDelay: 12
+
+                  RangePatrolTask:
+                    Position3D: [ 1500, 80, 0 ]
+                    Radius: 800
+                    DistToGround: 80
+
+                  AttackCVCircleAround:
+                    DistToTarget: 220
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 10, 15 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 10, 15 ]
+          CenterX: 2500
+          Radius: 1500
+# ==============================================================
+# ==============================================================
+
+### Creatures
+CreatureSpawning:
+
+    - Biomes: [SulfuricDesert]
+      Entities:
+        - Name: Overseers
+          Period: Day              
+          Amount: 5
+          DelayMinMax: [10, 20]
+        - Name: GolemsDesert
+          Period: Night
+          Amount: 5
+          DelayMinMax: [10, 20]

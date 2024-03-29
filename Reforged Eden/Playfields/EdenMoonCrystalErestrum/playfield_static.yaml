@@ -1,0 +1,527 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+
+This moon is used by XCorp as a testing ground for new Drone AI and other technologies. The drones on this planet may behave in unpredictable ways.
+
+
+Sometimes a barren moon forms with a highly crystallized crust. These so-called crystalline moons are highly coveted for the natural resources they contain or as places of spiritual significance. Autominers may be required to mine some of the Erestrum on this moon."
+
+PlanetType: Crystalline Moon
+PlayfieldType: Moon
+Difficulty: 3
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.5, 0.65, 1.1" 
+SkyColor: "0, 0.3, 0.7"
+SkyHorizonColor: "0.7, 0.5, 0.2"
+AtmosphereParams: [1, 2]       
+
+# Light
+DayLightIntensity: 1.4
+NightLightIntensity: 0.55
+DayShadowStrength: 0.95
+
+LightZenithColor: "0.8,0.8,1"
+LightHorizonColor: "0.5,0.5,1"
+NightLightColor: "1.4,1.4,2"
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+
+# Fog
+FogColor: "1, 0.8, 0.8"
+FogCloudIntensity: 0.8
+# AtmosphereFog: 0.95
+# GroundFogIntensity: 0.24
+# GroundFogHeight: 45
+
+# Clouds and Wind
+CloudsDensity: 1
+CloudsSharpness: 0
+CloudsBrightness: 3
+CloudsOpacity: 0.01
+
+CloudsZenithColor: "0,0,3" 
+CloudsHorizonColor: "6, 0, 0"
+CloudsNightZenithColor: "2, 0, 2"
+CloudsNightHorizonColor: "0, 0, 2"
+
+WindSpeed: 1
+
+
+# Special Effects
+SpecialEffectsLocal:
+  - Name: FireFliesGreen
+    Biome: [ Grassland ]
+    Time: Always
+    MaxHeight: 15
+  - Name: FireFliesGreen
+    Biome: [ Shore, ShallowWater ]
+    Time: Night
+    MaxHeight: 15
+  - Name: FireFliesGreen
+    Biome: [ Shore, ShallowWater ]
+    Time: Night
+    MaxHeight: 15
+  - Name: FireFliesGreen
+    Biome: [ Shore, ShallowWater ]
+    Time: Night
+    MaxHeight: 15
+
+
+SpecialEffectsGlobal:
+# Weather
+  - Name: CloudsDark
+    Type: Weather
+    InitialDelay: 0
+    Delay: 48
+    Lifetime: 1200
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 36
+    Lifetime: 1200
+
+
+# Global Effects
+  # - Name: ThunderAndLightningWhite
+    # Biome: [ Any ]
+    # Time: Always
+    # InitialDelay: 0.5
+    # Delay: 6
+    # Lifetime: 30
+    # PlyDist: 100
+    # SpawnY: 500
+    # Struct: Avoid
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: SiliconResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DepthMinMax: [ 4, 10 ]
+      DroneProb: 0
+      MaxDroneCount: 2
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+
+    - Name: SathiumResource
+      IsScalingCount: True
+      CountMinMax: [ 1, 2 ]
+      SizeMinMax: [ 4, 6 ]
+      DepthMinMax: [ 15, 20 ]
+      DroneProb: 0
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 25
+
+    - Name: PromethiumResource
+      Biome: [ Crystal ]
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 4, 5 ]
+      DroneProb: 0
+      MaxDroneCount: 5
+      DepthMinMax: [ 10, 15 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+
+    - Name: ErestrumResource
+      Biome: [ HardenedCrystal ]
+      IsScalingCount: True
+      CountMinMax: [ 3, 4 ]
+      IsImportant: True
+      SizeMinMax: [ 6, 8 ]
+      DroneProb: 1
+      MaxDroneCount: 8
+      DepthMinMax: [ 35, 35 ]
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+### Resource Asteroids
+AsteroidResources:
+    - Name: SiliconResource
+      Threshold: 0.2
+      Amount: 0.1
+    - Name: SathiumResource
+      Threshold: 0.2
+      Amount: 0.1
+    - Name: PromethiumResource
+      Threshold: 0.2
+      Amount: 0.1
+    - Name: ErestrumResource
+      Threshold: 0.2
+      Amount: 0.1
+
+### POIs
+POIs:
+    Random:
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True
+#          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 6, 8 ]
+          ReserveCount: 5
+          Properties:
+            - Key: MapDistance
+              Value: 250
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720 
+
+# XCorp POIs
+        - GroupName: Eden_XCorpAuxT2
+          Faction: Zirax
+          NoShieldReload: True
+          BiomesExcluded: [ Mountains, LowMountains ]
+          CountMinMax: [ 1, 2 ]
+          # IsScalingCount: True 
+          DroneProb: 1
+          DronesMinMax: [ 8, 8 ]
+          ReserveCount: 8
+          # NoShieldReload: True
+          TroopTransport: False
+          SpawnResource: ["SathiumResource:0-1"]
+          SpawnResourceRange: [105,125]
+          AuxiliaryPOIs: [RadosDefenceT1RG]
+          Properties:
+            # - Key: MapDistance
+              # Value: 250
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_XCorpAuxT1
+          Faction: Zirax
+          NoShieldReload: True
+          BiomesExcluded: [ Mountains, LowMountains ]
+          CountMinMax: [ 2, 4 ]
+          # IsScalingCount: True 
+          DroneProb: 1
+          DronesMinMax: [ 4, 4 ]
+          ReserveCount: 4
+          # NoShieldReload: True
+          TroopTransport: False
+          SpawnResource: ["SathiumResource:0-1"]
+          SpawnResourceRange: [105,125]
+          AuxiliaryPOIs: [RadosDefenceT1RG]
+          Properties:
+            # - Key: MapDistance
+              # Value: 250
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryZiraxRG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.9
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 4
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenceT1RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 4, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          IsAuxPOI: True
+          SpawnPOINearRange: [300, 375]
+          SpawnPOIAvoid: [RadosDefenceT1RG]
+          SpawnPOIAvoidDistance: 200
+          Properties: 
+            - Key: MapDistance
+              Value: 250
+            - Key: RegenAfter
+              Value: 720
+
+# Random defense outposts
+        - GroupName: RadosDefenceT1RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 8, 12 ]
+          # IsScalingCount: True 
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOIAvoid: [RadosDefenceT1RG]
+          SpawnPOIAvoidDistance: 500
+          Properties:
+            - Key: MapDistance
+              Value: 250
+            - Key: RegenAfter
+              Value: 720
+
+# Rare Enlightened shrine in water.
+        - GroupName: Eden_LightShrineWater
+          Faction: Talon
+          IsImportant: True
+          Territory: False
+          Biome: [ ShallowWater ]
+          CountMinMax: [ 0, 1 ]
+          PlaceAt: OnWater
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Crystal Caves
+        - GroupName: Eden_CavernPurple 
+          Faction: Eden_Wreck
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ Crystal ]
+          CountMinMax: [ 1, 2 ]
+          IsImportant: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+
+# Crystal Caves
+        - GroupName: Eden_CaveXCorp
+          Faction: Eden_Wreck
+          FactionTerritory: [Zirax]
+          NoShieldReload: True
+          Biome: [ Crystal ]
+          CountMinMax: [ 0, 1 ]
+          IsImportant: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_CaveCrystalPurple 
+          Faction: Eden_Wreck
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ Crystal ]
+          CountMinMax: [ 3, 4 ]
+          # IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 720
+
+# Spires
+        - GroupName: Eden_SpireWhite 
+          Faction: Eden_Wreck
+          FactionTerritory: [All]
+          NoShieldReload: True
+          # BiomesExcluded: [ Crystal, Plains ]
+          CountMinMax: [ 30, 36 ]
+          # IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_SpireWhite 
+          Faction: Eden_Wreck
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ ShallowWater, Water, DeepWater ]
+          CountMinMax: [ 13, 16 ]
+          # IsScalingCount: True
+          PlaceAt: UnderWater
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 720
+
+# Glowing Crystals
+        - GroupName: Eden_CrystalsMulti
+          Faction: None
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ Crystal, HardenedCrystal ]
+          CountMinMax: [ 70, 80 ]
+          # IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 720
+
+# Glowing Crystals scaled with planet size
+        - GroupName: Eden_CrystalsMulti
+          Faction: None
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ Crystal, HardenedCrystal ]
+          CountMinMax: [ 20, 25 ]
+          # IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 720
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ 300, 170, 160 ] 
+          RotY: 160
+          Armor: ArmorMedium
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+# ==============================================================
+# ==============================================================
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup  
+          Difficulty: 7
+          PresetStyle: 3
+          Stock:
+              - Name: SpaceDronePlasma
+                Amount: Infinite
+                Extra: 0
+
+              - Name: DroneSmallFast01Plasma
+                Amount: Infinite
+                Extra: 0
+
+              # - Name: EnemyDroneV2Plasma
+                # Amount: 400
+                # Extra: 0
+
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport01
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 250
+                Extra: 3
+
+              - Name: Mechanoid
+                Amount: 250
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 8 ]
+          CenterX: 1000
+          Radius: 3000
+
+        - DronesMinMax: [ 5, 8 ]
+          CenterX: -1000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 2500
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -2500
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 4000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -4000
+          Radius: 3000
+

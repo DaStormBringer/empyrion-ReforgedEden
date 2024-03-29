@@ -1,0 +1,215 @@
+Description: "Difficulty: [c][00FF00][b]Medium[/b][-][/c]
+
+
+This moon was once the center of a terraforming attempt run by the local colony.  The plant likely ceased activity at the same time the planets colony lost contact.  The soon to be habitable moon, now slipping back to its former self.  The moons almost breathable atmosphere now nothing more than an unending cloud of Sulfur.
+
+
+[c][DAA520][i]Tied first place for the November 2019 Custom Planet Challenge.[/i][-][/c]
+
+[c][808080][i]Originally created by Ravis.[/i][-][/c]"
+
+PlanetType: Sulfur Moon
+PlayfieldType: Moon
+AtmosphereEnabled: True
+Difficulty: 4
+LandClaimZone: Device
+AtmosphereColor: 0.55, 0.57, 0.16
+SkyColor: 0.55, 0.57, 0.16
+SkyHorizonColor: 0.3, 0.31, 0.09
+AtmosphereParams: [1, 1.6]
+LightZenithColor: 0.55, 0.57, 0.16
+LightHorizonColor: 0.3, 0.31, 0.09
+OrbitUsesLightColor: True
+DayLightIntensity: 0.8999999999999999
+NightLightIntensity: 0.80000000000000004
+NightLightColor: 0.71, 0.75, 0
+SunFlare: EnvironmentalEffects/SunFlareYellow2
+AtmosphereFog: 0.29999999999999999
+FogCloudIntensity: 0.29999999999999999
+GroundFogIntensity: 0.29999999999999999
+GroundFogHeight: 1100
+CloudsDensity: 0.70000000000000004
+CloudsSharpness: 0.29999999999999999
+CloudsBrightness: 2
+CloudsOpacity: 0.39999999999999999
+CloudsZenithColor: 0.55, 0.57, 0.16
+CloudsHorizonColor: 0.3, 0.31, 0.09
+CloudsNightZenithColor: 0.55, 0.57, 0.16
+CloudsNightHorizonColor: 0.3, 0.31, 0.09
+PvP: False
+BaseAttackCount: 1
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+RandomResources:
+-  Name: IronResource
+   IsScalingCount: False
+   IsImportant: False
+   CountMinMax: [3, 5]
+   SizeMinMax: [4, 6]
+   DepthMinMax: [6, 15]
+   DroneProb: 1
+   MaxDroneCount: 5
+-  Name: MagnesiumResource
+   IsScalingCount: False
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 4]
+   DepthMinMax: [6, 15]
+   DroneProb: 1
+   MaxDroneCount: 5
+-  Name: PromethiumResource
+   IsScalingCount: False
+   IsImportant: False
+   CountMinMax: [1, 2]
+   SizeMinMax: [2, 3]
+   DepthMinMax: [0, 1]
+   DroneProb: 1
+   MaxDroneCount: 5
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: PentaxidResource
+   IsScalingCount: False
+   IsImportant: False
+   CountMinMax: [4, 5]
+   SizeMinMax: [2, 3]
+   DepthMinMax: [0, 5]
+   DroneProb: 1
+   MaxDroneCount: 5
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: GoldResource
+   IsScalingCount: False
+   IsImportant: False
+   CountMinMax: [6, 7]
+   SizeMinMax: [4, 6]
+   DepthMinMax: [6, 15]
+   DroneProb: 1
+   MaxDroneCount: 5
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+AsteroidResources:
+-  Name: IronResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: MagnesiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: PentaxidResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+POIs:
+   Random:
+   -  GroupName: Fallen_Drone_Base2
+      Faction: Zirax
+      DroneBaseSetup: DroneBaseSetup
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [5, 9]
+      ReserveCount: 5
+      NoShieldReload: True
+      SpawnResource: ['GoldResource:1-2']
+      SpawnResourceRange: [150, 400]
+      Properties:
+      -  Key: Music
+         Value: moonstone
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Fallen_Tara_Plant
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 0
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720
+      - Key: Music
+        Value: EvilWhispering        
+   FixedPlayerStart:
+   -  Mode: Debug
+      Pos: [-596, 104, -1063]
+      RotY: 125
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      PlayerArmor: ['']
+   -  Mode: Survival
+      Spawn: EscapePod
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorMedium
+      PlayerArmor: ['']
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseSetup
+      ReserveCount: 30
+      DroneProb: 1
+      Difficulty: 7
+      Stock:
+      -  Name: DroneSmallFast01Rocket
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallFast01Minigun
+         Amount: 200
+         Extra: 0
+      -  Name: DroneLargeSlow01Minigun
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallSlow01Cannon
+         Amount: 200
+         Extra: 0
+      -  Name: DroneSmallAttackBase
+         Amount: 300
+         Extra: 1
+      -  Name: DroneTroopsTransport
+         Amount: Infinite
+         Extra: 2
+      -  Name: ZiraxMale
+         Amount: 500
+         Extra: 3
+      -  Name: RipperDog
+         Amount: 400
+         Extra: 3
+      PlanetVesselBase:
+         Name: PlanetVesselBaseSetup
+         Faction: Zirax
+         Position3D: [0, 102, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+         PlanetVessel:
+         -  Name: Eden_Fallen-PV-Ship
+            Faction: Zirax
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 60
+            RespawnDelay: 12
+            RangePatrolTask:
+               Position3D: [1500, 80, 0]
+               Radius: 800
+               DistToGround: 320
+            AttackCVCircleAround:
+               DistToTarget: 210
+            RangePatrolAvoidArea: []
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [5, 10]
+      CenterX: -2500
+      Radius: 1500
+   -  DronesMinMax: [5, 10]
+      CenterX: 2500
+      Radius: 1500
+CreatureSpawning:
+-  Biomes: [Any]
+   Entities:
+   -  Name: AlienBugs03
+      Period: Always
+      Amount: 299

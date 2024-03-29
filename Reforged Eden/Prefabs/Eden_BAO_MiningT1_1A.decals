@@ -1,0 +1,9 @@
+[DockingLights]
+-Mode=Opaque
+-Pos=0.5,136.01,-18.5
+-Rot=90,300,0
+-Size=0.729,0.729,0.729
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DockHexOrange
+

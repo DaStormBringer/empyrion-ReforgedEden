@@ -1,0 +1,106 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: AsteroidFieldUCHHideout            
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+  
+    - Name: [ AsteroidVoxel01Ice, AsteroidVoxel02Ice, AsteroidVoxel03Ice]
+      DisplayName: Ice Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180
+
+    - Name: [ AsteroidVoxel01Aluminium, AsteroidVoxel02Aluminium, AsteroidVoxel03Aluminium]
+      DisplayName: Aluminium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.6 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      # DisplayName: Platin Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.5  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180             
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      RandomRotation: True
+
+
+    - Type: BA_Alien   
+      Name: [BAO_UCHOutpost1]  
+      DisplayName: UCH Hideout
+      Faction: UCH
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.1,O2:1.1,Warp:1.1,Ammo:1,Repair:2,Shield:2,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+ 
+DroneBaseSetup:

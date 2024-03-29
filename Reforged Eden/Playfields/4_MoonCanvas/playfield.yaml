@@ -1,0 +1,365 @@
+---
+Seed: 11    #2
+PlanetSize: 3
+PlanetAxis: 0
+TemperatureMinMax: [25, 25]
+TemperatureNight: 0
+HumidityMinMax: [0.1, 0.35]
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 30
+LandWaterRatio: 0
+TemperatureHeightRange: [0, 195]
+TemperatureGradientRange: [0.75, 0.1]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+Gravity: -6.0
+Radiation: 0
+AtmosphereDensity: 0.0
+AtmosphereO2: 0.13
+AtmosphereBreathable: True
+PvP: False
+
+Water: WaterBlue
+Music: Adrift
+
+TerrainHeightMapMax: 490
+
+BiomeStampTries: 20
+
+Biome:
+   - BiomeClusterData:
+         - Name: Pole
+           IgnoreForcedBiome: True
+           Weather: PoleFog
+           Texture: [4, 4, 0.02]
+           SelectionCriteria:
+               - "+Lat > 0.975"
+           Color: [0.6, 0.6, 0.6]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+
+         - Name: Peaks
+           IgnoreForcedBiome: True
+           Texture: [5, 5, 0.5, 3, 3, 1, 0.25]
+           UndergroundLayers:
+               - [12, 2]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height > 50"
+               - "Height < 280"
+           Color: [0.5, 0.5, 1]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+         - Name: Gold
+           IgnoreForcedBiome: True
+           Texture: [2, 2, 0.5, 3, 3, 0.8, 0.2]
+           UndergroundLayers:
+               - [0, 1]
+               - [12, 15]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height < 102"
+               - "Height > 31"
+           Color: [0.1, 0.1, 0.3]
+           StampProb: 1
+           Stamps:
+           Decorations:
+               - [CrystalsPyramidBlue, 0.00005, Free]
+           Grass:
+
+         - Name: Plains
+           IgnoreForcedBiome: True
+           Texture: [4, 4, -0.00]
+           UndergroundLayers:
+               - [11, 2]
+               - [10, 2]
+               - [12, 15]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height < 102"
+               - "Height > 10"
+           Color: [0.3, 0.3, 0.3]
+           Decorations:
+           Grass:
+
+         - Name: RayCrater
+           Texture: [8, 9, 0.5, 9, 9, 0.5, 0.15]
+           UndergroundLayers:
+               - [10, 2]
+               - [12, 15]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height > 600"
+           Color: [0.9, 0.8, 0.3]
+           StampProb: 1
+           StampForcesBiome: True
+           StampForcesBiomeType: OverlapOther
+           StampTries: 10
+           Stamps:
+               - CraterMoon_14, 0.05
+               - CraterMoon_14b, 0.03
+           Temperature: -30
+           Decorations:
+               - [CrystalsPyramidBlue, 0.01, Free]
+           Grass:
+
+         - Name: LayeredIce
+           Texture: [0, 5, 0.9, 6, 6, 1, 0]
+           UndergroundLayers:
+               - [0, 3]
+               - [12, 2]
+               - [10, 1]
+               - [12, 2]
+               - [10, 2]
+               - [11, 2]
+               - [12, 15]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height > 140"
+           Color: [0.4, 0.4, 0.4]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+         - Name: IceSheet
+           Texture: [0, 6, -0.45]
+           UndergroundLayers:
+               - [12, 20]
+               - [10, 2]
+               - [12, 5]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height > 130"
+           Color: [0.5, 0.5, 0.5]
+           Decorations:
+           Grass:
+
+         - Name: CrustedIce
+           Texture: [10, 6, -0.5]
+           UndergroundLayersDefault: True
+           UndergroundLayers:
+               - [10, 5]
+               - [12, 2]
+               - [10, 2]
+               - [12, 15]
+               - [15, -1]
+               - [11, 1]
+           SelectionCriteria:
+               - "Height > 90"
+           Color: [0.6, 0.6, 0.6]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+         - Name: Flats
+           Texture: [11, 11, 0.2]
+           Color: [0, 1, 0]
+           StampProb: 1
+           Stamps:
+           Decorations:
+           Grass:
+
+
+
+
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+PlanetType: Snow
+PlayfieldType: Moon
+Difficulty: 1
+
+# Description: "A neutral canvas. Eternal day."
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.7, 0.7, 0.65"
+
+SkyColor: "2.0, 2.0, 2.0" 
+SkyHorizonColor: "1.0, 1.0, 1.0"
+AtmosphereParams: [2, 0]
+
+# Light
+DayLightIntensity: 1.0
+NightLightIntensity: 1.0
+
+
+LightZenithColor: "0.95, 0.93, 0.93"
+
+LightHorizonColor: "0.95, 0.93, 0.93"
+
+NightLightColor: "0.95, 0.93, 0.93"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite2 
+
+# Fog
+AtmosphereFog: 1.0  #1.0
+FogCloudIntensity: 0.0
+FogColor: "1, 1, 1"
+GroundFogIntensity: 0.07
+GroundFogHeight: 0
+
+# Clouds and Wind
+CloudsDensity: 0.0
+CloudsSharpness: 1
+CloudsBrightness: 0.0
+CloudsOpacity: 0.0
+CloudsZenithColor: "0.69, 0.72, 0.8"
+
+CloudsHorizonColor: "1, 0.3, 0.1"
+
+WindSpeed: 0
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+
+
+### Resource Asteroids
+AsteroidResources:
+
+
+### POIs
+POIs:
+    Random:
+
+
+        - GroupName: RadosAuxT1
+          CountMinMax: [ 0, 0 ]
+          IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnResource: ["PentaxidResource:1-2"]
+          ResourceDistance: 400
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+
+    Fixed:
+        - Type: BA_Player
+          Prefab: BA_CordeliaOutpost
+          Faction: Public
+          SubMode: Normal
+          Name: Outpost Cordelia
+          Mode: Creative
+          Pos: [ -2030, 24, 650 ]
+          Rot: [ 0, 90, 0 ]
+          InitPower: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+
+
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -2596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+
+        - Mode: Creative
+          SubMode: Empty
+          Armor: ArmorLight
+          Pos: [ -2030.5, 31.0, 659.6 ]
+          RotY: -20
+          Items: [ 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "#FreshStart: TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000" ]
+
+
+
+        - Mode: Creative
+          SubMode: Normal
+          Armor: ArmorLight
+          Pos: [ -2030.5, 54.0, 659.6 ]
+          RotY: 80
+
+          Items: [ 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000", 
+          "#FreshStart: TextureColorTool, MultiTool, EnergyCellLarge:5000, PentaxidCrystal:5000, OxygenBottleLarge: 5000" ]
+
+
+
+
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: Crawler
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 0, 0 ]
+          CenterX: -2500
+          Radius: 1500
+
+
+Build: 1706

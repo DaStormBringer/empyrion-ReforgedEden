@@ -1,0 +1,1119 @@
+---
+# # ============================================================== 
+
+PlanetSize: 
+  SizeRange: [3]
+  SizeProbs: [1]
+TemperatureMin: [-10,-10]          
+TemperatureMax: [40,40]            
+TemperatureNight: [4, 4]
+PlanetAxis: [10,15]
+HumidityMin: [0.10, 0.15]
+HumidityMax: [0.70, 0.70 ]
+Radiation: [0, 0]
+LandWaterRatio: [1, 1]     # Less surface = harder for POI to spawn; Careful with more landmass, the biome stamps will take much more time.
+SeaLevel: [125, 125]               # Only change if ground fog height is adjusted, too.
+TerrainLevel: [124, 124]           # Careful with change, might have drastic effects on shoreline
+BaseLevel: [30, 30]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [61, 19]
+TemperatureGradientRange: [0.7, 0]
+TemperatureNoiseFac: 0.33
+HumidityHeightFac: [1, 270]
+HumidityNoiseFac: 0.77
+
+GravityMinMax: [-8, -10]
+AtmosphereDensityMinMax: [0.9, 1.3]
+AtmosphereO2MinMax: [0.15, 0.25]
+AtmoBreathableProb: 1
+WaterProb: 1
+PvPProb: 0 #Normal
+Water: [WaterBlue]
+Music: [Tempest]
+
+
+# (Please don't use dynamic fog ranges. Intensity and height of ground fog adjusted to sea level & deco.)
+
+
+# ==============================================================
+
+GroundShapes: 
+  # - GroundShapeOcean_01_LO, 1          # Multiple entries to boost the spawning chances.
+  # - GroundShapeOcean_01_LO, 1
+  # - GroundShapeOcean_01_LO, 1 
+  # - GroundShapeOcean_01_LO, 1 
+  # - RiftContinent_01, 1 
+
+
+HumidityMasks:
+  - Global_2
+  - Global_2a
+  - Global_3
+  - Global_4
+
+
+TemperatureMasks: 
+  - Global_1_R, 0.125
+  - Global_2_R, 0.125 
+
+
+BiomeStampTries: 500  # Very high number, but lots of (cheap) spawn fails, due to large water surface. Used to make islands less 'flat'
+
+Biomes:
+
+
+# # ==============================================================  
+  - Name: Graveyard
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 80
+    - Temperature < 18
+    Color: [0.3, 0.3, 0.4]
+
+    StampProb: 0.8             
+    Stamps: 
+    - IceDunes_01a, 0.9
+    - IceDunes_01b, 0.9
+    - IceDunes_01, 0.9
+               
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [Pillar1, 0.01, Free]
+               - [Pillar2, 0.01, Free]
+               - [Pillar3, 0.01, Free]
+               - [Pillar4, 0.01, Free]
+               - [AridRock01, 0.002, Free]
+               - [AridRock02, 0.002, Free]
+               - [AridRock03, 0.002, Free]
+               - [GasEmitter1, 0.007, Bush]
+               - [GasEmitter2, 0.015, Bush]
+               - [SkeletonWhaleFull, 0.3, Free]
+               - [SkeletonWhaleHead, 0.3, Free]
+               - [SkeletonWhalePart, 0.3, Free]
+               - [CrystalsPyramidBlue, 0.04, Free]
+               - [PromethiumStone, 0.004, Free]
+               - [CrystalsPyramidBlue, 0.10, Tree]
+               - [CrystalsPyramidBlue, 0.02, Plant]
+               - [PromethiumStone, 0.01, BigPlant]
+               - [RockResourcePromethium, 0.30, BigPlant]
+               - [RockResourceCobalt, 0.030, Free]
+               - [RockResourceIron, 0.04, Free]
+
+    Grass: 
+
+# # ==============================================================  
+  - Name: ColdDark
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 65
+    - Temperature < 18
+    Color: [0.2, 0.2, 0.3]
+
+    StampProb: 0.8
+    Stamps: 
+    - IceDunes_01a, 0.9
+    - IceDunes_01b, 0.9
+    - IceDunes_01, 0.9
+               
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [Pillar1, 0.01, Free]
+               - [Pillar2, 0.01, Free]
+               - [Pillar3, 0.01, Free]
+               - [Pillar4, 0.01, Free]
+               - [RockGrey01Large, 0.02, Free]
+               - [RockGrey02Large, 0.05, Free]
+               - [RealRock1Water, 0.005, Free]
+               - [RealRock5Water, 0.005, Free]
+               - [RealRock8Water, 0.01, Free]
+               - [RealRock9Water, 0.005, Free]
+               - [AridRock01, 0.002, Free]
+               - [AridRock02, 0.002, Free]
+               - [AridRock03, 0.002, Free]
+               - [GasEmitter1, 0.007, Bush]
+               - [GasEmitter2, 0.015, Bush]
+               - [FingerSponge03-01, 0.002, Free]
+               - [CoralStone03-06, 0.01, Free]
+               - [SkeletonWhaleFull, 0.03, Free]
+               - [SkeletonWhaleHead, 0.03, Free]
+               - [SkeletonWhalePart, 0.03, Free]
+               - [CrystalsPyramidBlue, 0.01, Free]
+               - [PromethiumStone, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.10, Tree]
+               - [CrystalsPyramidBlue, 0.02, Plant]
+               - [PromethiumStone, 0.01, BigPlant]
+               - [RockResourcePromethium, 0.10, BigPlant]
+               - [RockResourceCobalt, 0.010, Free]
+               - [RockResourceIron, 0.04, Free]
+
+    Grass: 
+
+# # ==============================================================  
+  - Name: BlackSmoker
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [6, 6, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 86
+    - Temperature < 32
+    Color: [0.1, 0.1, 0.1]
+
+    StampProb: 0.3
+    Stamps: 
+    - IceDunes_01a, 0.9
+    - IceDunes_01b, 0.9
+    - IceDunes_01, 0.9
+               
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [GasEmitter1, 0.15, Free]
+               - [GasEmitter2, 0.15, Free]
+               - [RockGrey01Large, 0.005, Free]
+               - [RockGrey02Large, 0.05, Free]
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.007, Free]
+               - [RealRock9Water, 0.003, Free]
+               - [AridRock03, 0.003, Free]
+               - [AlienPlantReef1, 0.3, Tree]
+               - [AlienPlantReef2, 0.2, Plant]
+               - [AlienPlantTube1, 0.05, Plant]
+               - [AlienPlantTube1a, 0.05, Plant]
+               - [AlienPlantTube2, 0.05, Plant]
+               - [FingerSponge03-01, 0.02, Free]
+               - [CoralStone03-06, 0.03, Free]
+               - [CrystalStraight, 0.002, Free]
+               - [PromethiumStone, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.10, Tree]
+               - [CrystalsPyramidBlue, 0.02, Plant]
+               - [PromethiumStone, 0.01, BigPlant]
+               - [RockResourcePromethium, 0.2, BigPlant]
+               - [RockResourceZascosium, 0.001, Free]
+               - [RockResourceCobalt, 0.02, Free]
+               - [RockResourceNeodymium, 0.04, Free]
+
+    Grass: 
+
+# # ==============================================================  
+  - Name: Lava
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 80
+    - Temperature > 35
+    Color: [1, 0, 0]
+
+    StampProb: 0.3
+    Stamps: 
+    - IceDunes_01a, 0.9
+    - IceDunes_01b, 0.9
+    - IceDunes_01, 0.9
+               
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [RockGrey01Large, 0.005, Free]
+               - [RockGrey02Large, 0.05, Free]
+               
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.007, Free]
+               - [RealRock9Water, 0.003, Free]
+               - [AridRock03, 0.003, Free]
+               
+               - [GasEmitter1, 0.007, Bush]
+               - [GasEmitter2, 0.015, Bush]
+               
+               - [BallFlower03, 0.08, BigPlant]
+               - [BallFlower03, 0.1, Tree]
+               - [BallFlower03, 0.0001, Free]
+               - [BallFlower01, 0.18, BigPlant]
+               - [BallFlower01, 0.2, Tree]
+               - [BallFlower01, 0.0002, Free]
+               - [BallFlower02, 0.05, BigPlant]
+
+               - [FingerSponge03-01, 0.02, Free]
+               - [CoralStone03-06, 0.03, Free]
+
+               # Rock Resources
+               - [CrystalStraight, 0.002, Free]
+               - [PromethiumStone, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.10, Tree]
+               - [CrystalsPyramidBlue, 0.02, Plant]
+               - [PromethiumStone, 0.01, BigPlant]
+               - [RockResourcePromethium, 0.10, BigPlant]
+               - [RockResourceCobalt, 0.010, Free]
+               - [RockResourceIron, 0.04, Free]
+
+    Grass: 
+               - Name: GrassBlue02
+                 Density: 0.2
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: GrassBlue02
+                 Density: 0.8
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.005
+                 YScale: 6
+                 Preset: GrassDense
+
+# # ==============================================================  
+  - Name: Abyss
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [3, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 50
+    Color: [0, 0, 0.4]
+
+    StampProb: 0.7
+    Stamps: 
+    - IceDunes_01a, 0.9
+    - IceDunes_01b, 0.9
+    - IceDunes_01, 0.9
+               
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [RockGrey01Large, 0.005, Free]
+               - [RockGrey02Large, 0.05, Free]
+               
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.007, Free]
+               - [RealRock9Water, 0.003, Free]
+               - [AridRock03, 0.003, Free]
+               
+               - [GasEmitter1, 0.007, Bush]
+               - [GasEmitter2, 0.015, Bush]
+               
+               - [BallFlower03, 0.08, BigPlant]
+               - [BallFlower03, 0.1, Tree]
+               - [BallFlower03, 0.0001, Free]
+               - [BallFlower01, 0.18, BigPlant]
+               - [BallFlower01, 0.2, Tree]
+               - [BallFlower01, 0.0002, Free]
+               - [BallFlower02, 0.05, BigPlant]
+
+               - [FingerSponge03-01, 0.02, Free]
+               - [CoralStone03-06, 0.03, Free]
+
+               # Rock Resources
+               - [CrystalStraight, 0.002, Free]
+               - [PromethiumStone, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.10, Tree]
+               - [CrystalsPyramidBlue, 0.02, Plant]
+               - [PromethiumStone, 0.01, BigPlant]
+               - [RockResourcePromethium, 0.10, BigPlant]
+               - [RockResourceCobalt, 0.010, Free]
+               - [RockResourceIron, 0.04, Free]
+
+    Grass: 
+               - Name: GrassBlue02
+                 Density: 0.2
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: GrassBlue02
+                 Density: 0.8
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.005
+                 YScale: 6
+                 Preset: GrassDense
+
+# # ============================================================== 
+
+  - Name: DeepSea
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 37
+
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0, 0, 0.7]
+
+    Decorations:
+
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.001, Free]
+               - [RealRock8Water, 0.05, Tree]
+               - [RealRock9Water, 0.001, Free]
+               - [RealRock9Water, 0.05, Tree]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               
+               - [CoralStone03-06, 0.01, Free]
+               - [CoralStone03-06, 0.3, BigPlant]
+
+
+               - [SkeletonWhaleFull, 0.01, Bush]
+               - [SkeletonMammothTorso, 0.001, Bush]
+               
+               - [BushWinter03, 0.1, Tree]
+               - [AlienTentacleStage1, 0.05, Tree]
+               - [BallFlower03, 0.01, Plant]
+               - [BallFlower01, 0.0025, Plant]
+
+               # Harvestables
+               - [Snakeweed, 0.002, Plant]
+               - [CoralBig01, 0.002, Plant]
+               - [CoralBig01, 0.002, Tree]
+               - [CoralBig08, 0.01, Plant]
+               - [CoralBig08, 0.01, Tree]
+               
+               # Rock Resources
+               - [PromethiumStone, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.001, Free]
+               - [CrystalsPyramidBlue, 0.01, Tree]
+               - [CrystalStraight, 0.005, Free]
+               - [RockResourceSilicon, 0.02, Free]
+               - [RockResourceIron, 0.02, Plant]
+               - [RockResourceNeodymium, 0.006, Free]
+               - [RockResourceNeodymium, 0.06, BigPlant]
+               - [RockResourceMagnesium, 0.02, BigPlant]
+               - [RockResourceMagnesium, 0.2, Tree]
+
+
+    Grass: 
+               - Name: GrassBrown02d
+                 Density: 0.3
+                 Preset: GrassDense
+               - Name: GrassGreen06Snow
+                 Density: 0.9
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 1
+                 Preset: GrassDense
+
+
+# # ============================================================== 
+
+  - Name: Shelf
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [4, 2, -0.1]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 30
+
+    Color: [0, 0, 1]
+    
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [MoundzTree, 0.001, Free]
+               - [RockGrey01Large, 0.02, Free]
+               - [RockGrey02Large, 0.02, Free]
+               - [RockGrey01Large, 0.1, BigPlant]
+               - [RockGrey02Large, 0.1, BigPlant]
+               - [RockGrey01Large, 0.1, Tree]
+               - [RockGrey02Large, 0.1, Tree]
+               
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.001, Free]
+               - [RealRock8Water, 0.001, Tree]
+               - [RealRock9Water, 0.001, Free]
+               
+               - [CoralStone01-05, 0.003, Free]
+               - [CoralStone03-06, 0.003, Free]
+               - [FingerSponge03-01, 0.001, Free]
+               - [BallFlower03, 0.0005, Free]
+
+               # Harvestables:
+               - [CoralBig01, 0.001, Plant]
+               - [CoralBig08, 0.0005, Plant]
+               - [SeaWeed02-04, 0.003, Plant]
+               - [Cactus1, 0.15, Tree]
+
+               # Rock Resources
+               - [CrystalStraight, 0.0015, Free]
+               - [RockResourceIron, 0.002, Free]
+               - [RockResourceIron, 0.04, BigPlant]
+               - [RockResourceSathium, 0.0001, Free]
+               - [RockResourceSathium, 0.002, BigPlant]
+               - [RockResourceMagnesium, 0.003, Free]
+
+    Grass: 
+
+
+# # ============================================================== 
+
+  - Name: KelpForest
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height > SeaLevel - 35
+    - Height < SeaLevel - 20
+    - Temperature > 5
+    - Temperature < 40
+
+    Color: [0.0, 0.45, 0.4]
+
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+    
+    Decorations:
+               - [AkuaPlant2, 0.03, Free]
+               - [CoralStone01-05, 0.03, Free]
+               - [CoralStone01-05, 0.03, BigPlant]
+               - [CoralStone03-06, 0.006, Free]
+               - [FingerSponge03-01, 0.001, Free]
+               - [RockGrey01Large, 0.001, Free]
+               - [RockGrey02Large, 0.001, Free]
+               - [RealRock1Water, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               - [RealRock8Water, 0.01, Free]
+               - [RealRock9Water, 0.01, Free]
+               - [RealRock9Water, 0.01, Tree]
+               - [BallFlower03, 0.05, Tree]
+               - [CoralBig01, 0.01, Plant]
+               - [CoralBig08, 0.02, Plant]
+               - [SeaWeed02-04, 0.4, Plant]
+               - [CrystalStraight, 0.02, Free]
+               - [PromethiumStone, 0.05, Free]
+               - [RockResourceIron, 0.03, Free]
+               - [RockResourceSilicon, 0.05, Free]
+               - [RockResourceNeodymium, 0.01, Bush]
+               - [RockResourceSathium, 0.2, BigPlant]
+               - [RockResourceGold, 0.1, BigPlant]
+
+    Grass: 
+               - Name: Seaweed02
+                 Density: 0.8
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.05
+                 YScale: 1.2
+                 Preset: GrassDense
+               - Name: Seaweed02
+                 Density: 0.04
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Seaweed01
+                 Density: 0.02
+                 YScale: 5.5
+                 Preset: GrassDense
+               - Name: Seaweed02
+                 Density: 0.01
+                 YScale: 7
+                 Preset: GrassDense
+               - Name: Seaweed01
+                 Density: 0.02
+                 YScale: 8
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.02
+                 YScale: 3.5
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.02
+                 YScale: 4
+                 Preset: GrassDense
+
+# ==============================================================
+  - Name: CoralReefs
+    AmbientSound: Islands
+    IgnoreForcedBiome: true
+    Texture: [0, 10, -0.1]
+    
+    SelectionCriteria: 
+    - Height > SeaLevel - 16
+    - Height < SeaLevel - 12
+    - Temperature > 28
+
+
+    Color: [0.4, 0.3, 1]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]
+               - [RockGrey02Large, 0.05, Bush]
+               - [RealRock5Water, 0.01, Plant]
+               - [RealRock5Water, 0.05, BigPlant]
+               - [RealRock1Water, 0.005, Plant]
+               - [RealRock1Water, 0.05, BigPlant]
+               - [RealRock9Water, 0.002, Plant]
+               - [RealRock9Water, 0.01, BigPlant]
+               - [RealRock9Water, 0.005, Bush]
+               - [RealRock1Water, 0.005, Bush]
+               - [RealRock8Water, 0.02, Bush]
+               - [RealRock8Water, 0.01, Free]
+               - [CoralStone01-03, 0.1, Free]
+               - [CoralStone01-05, 0.1, Free]
+               - [CoralStone03-05, 0.1, Free]
+               - [CoralStone03-06, 0.1, Free]
+               - [CoralStone04-03, 0.1, Free]
+               - [CoralStone01-05, 0.2, BigPlant]
+               - [CoralStone01-05, 0.3, Tree]
+               - [FingerSponge03-01, 0.03, Free]
+               - [FingerSponge03-01, 0.2, BigPlant]
+               - [AlienTentacleStage1, 0.005, Free]
+               - [AlienTentacleStage1, 0.005, Bush]
+               - [DimpleDome, 0.05, BigPlant]
+               - [CoralBig01, 0.018, Plant]
+               - [CoralBig01, 0.2, Free]
+               - [CoralBig08, 0.02, Plant]
+               - [SeaWeed02-04, 0.1, Plant]
+               - [SeaWeed02-04, 0.3, Tree]
+               - [Cactus1, 0.06, Tree]
+               - [CrystalStraight, 0.016, Free]
+               - [PromethiumStone, 0.001, Bush]
+               - [RockResourceIron, 0.01, Plant]
+               - [RockResourceIron, 0.005, Bush]
+               - [RockResourceIron, 0.01, Free]
+               - [RockResourceCopper, 0.1, Bush]
+               - [RockResourceSathium, 0.005, Bush]
+               - [RockResourceNeodymium, 0.1, Bush]
+               
+
+    Grass: 
+               - Name: GrassType01Red
+                 Density: 0.05
+                 YScale: 3
+                 Preset: GrassDense
+               - Name: GrassBrown01
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrassDense
+                 
+# ==============================================================
+  - Name: OpenSea
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [4, 2, -0.1]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 13
+    Color: [0.1, 0.25, 1]
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 4]
+               - [11, -1]
+               - [12, 1]
+    
+    Decorations:
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.001, Free]
+               - [RealRock5Water, 0.001, Free]
+               
+               - [FingerSponge03-01, 0.01, Free]
+               - [SkeletonWhaleFull, 0.0006, Free]
+
+               # Harvestables:
+               - [CoralBig08, 0.004, Plant]
+               - [CoralBig08, 0.004, Free]
+               - [SeaWeed02-04, 0.012, Plant]
+               # - [Hydrilla2, 0.01, Plant]
+
+               # Rock Resources
+               - [CrystalStraight, 0.001, Free]
+
+    Grass: 
+               - Name: Seaweed02
+                 Density: 0.8
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.05
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.01
+                 YScale: 1.3
+                 Preset: GrassDense
+               - Name: Seaweed05
+                 Density: 0.01
+                 Preset: GrassDense
+               - Name: Seaweed05
+                 Density: 0.005
+                 YScale: 1.5
+                 Preset: GrassDense
+
+
+# ==============================================================     # For snow climates, will overwrite Gravelbeach, and turn the Pole'continent' completely to ice. Completely barren witout deco.
+  - Name: IceShelf
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2] 
+
+    SelectionCriteria:
+    - Height < SeaLevel + 4
+    - Height > SeaLevel - 2
+    - Temperature < -2
+
+    Color: [0.9, 0.9, 1]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+
+
+
+# ============================================================== ( Thin belt of tropical water plants)
+  - Name: ShallowWaterLilies
+    # Sound: Off              # Biome is too thin for that. (There is a 'two biome sound overlay' -Limit, else there will be cutoffs)
+    IgnoreForcedBiome: true
+    Texture: [2, 10, -0.5]
+
+    SelectionCriteria: 
+    - Height < SeaLevel -4.2
+    - Height > SeaLevel -5.2
+    - Temperature > 20
+    - Temperature < 35
+
+    Color: [1.0, 0.2, 0.5]
+
+    UndergroundLayers:
+               - [7, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]
+               - [RockGrey01Large, 0.025, BigPlant]
+               - [RockGrey02Large, 0.02, BigPlant]
+               - [RockGrey01Large, 0.15, Tree]
+               - [RockGrey02Large, 0.08, Tree]
+
+               - [RealRock1Water, 0.01, Bush]  
+               - [RealRock5Water, 0.01, Bush]
+
+               - [OmicronPlant, 0.02, Free]
+               - [OmicronPlant, 0.2, BigPlant]
+               - [OmicronPlant, 0.2, Tree]
+
+               # Harvestables
+               - [CoralBig01, 0.2, Tree]
+
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.1
+                 YScale: 1.2
+                 Preset: GrassDense
+               - Name: GrassBrown01
+                 Density: 0.4
+                 YScale: 2.5
+                 Preset: GrassDense
+               - Name: GrassBrown01
+                 Density: 0.1
+                 YScale: 3.5
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.03
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Seaweed02
+                 Density: 0.015
+                 YScale: 0.5
+               - Name: Seaweed02
+                 Density: 0.01
+                 YScale: 0.8
+                 Preset: GrassDense
+
+# ==============================================================
+  - Name: Pole
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2] 
+
+    SelectionCriteria:
+    - +Lat > 0.975
+    Color: [0.9, 0.9, 0.9]
+
+
+    UndergroundLayers:
+               - [5, 15]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+               
+# ==============================================================   # Sandy wet glistening shore edges
+  - Name: Surf_1
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [9, 2, 0.0]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1
+    - Height > SeaLevel - 2
+    - Temperature > 25
+
+
+    UndergroundLayers:
+               - [9, 4]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.3, 0.15, 0]
+    Decorations: 
+               - [RockGrey01Large, 0.025, BigPlant]
+               - [RockGrey02Large, 0.02, BigPlant]
+               - [RockGrey01Large, 0.15, Tree]
+               - [RockGrey02Large, 0.08, Tree]
+
+               - [RealRock7, 0.02, Tree]
+               - [RealRock4, 0.01, Tree]
+
+               # Rock Resources
+               - [RockResourceIron, 0.001, Free]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceCobalt, 0.01, Tree]
+               
+               
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.002
+                 Preset: GrassDense
+
+                 
+# ==============================================================   (Colder climate special shore. Has to overwrite 'Surf')
+  - Name: SwampShore
+    IgnoreForcedBiome: true
+    # No sound. Biome too thin.
+    Texture: [10, 11, 0.2]   
+
+
+    SelectionCriteria:
+    - Height < SeaLevel + 0.5
+    - Height > SeaLevel - 0.8
+    - Humidity > 0.63
+    # - Humidity < 0.8
+    - Temperature > 20
+    - Temperature < 25
+
+    Color: [0, 1, 0.4]
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 10]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [ChineseBanyan, 0.015, Bush] # Water-tolerant trees reaching into the waves
+               - [AkuaBush1, 0.04, Bush]
+               
+               - [DeadTree02b, 0.0007, Free]
+               - [DeadTree02a, 0.0007, Free]
+               - [DeadTree01, 0.0007, Free]
+
+               - [OmicronPlant, 0.01, Plant]
+
+               # Harvestables
+               - [DimpleDome, 0.0015, Plant]
+               - [ClusterShroom, 0.0015, Free]
+               - [CattailWinter, 0.005, Plant]
+               - [PixieStalks, 0.005, Free]
+               - [CornDogBush, 0.001, Plant]
+    Grass:
+               - Name: Reeds01
+                 Density: 0.8
+                 YScale: 1.1
+                 Preset: GrassDense
+               - Name: GrassGreen01a
+                 Density: 0.3
+                 YScale: 1.1
+                 Preset: GrassDense
+               - Name: Reeds01
+                 Density: 0.02
+                 YScale: 2
+                 Preset: GrassDense
+
+# ==============================================================   # Dark wet glistening shore edges. Colder climates
+  - Name: Surf
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 11, 0.2]
+
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1
+    - Height > SeaLevel - 2
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.1, 0.1, 0.3]
+
+    Decorations: 
+               - [RockGrey01Large, 0.025, BigPlant]
+               - [RockGrey02Large, 0.02, BigPlant]
+               - [RockGrey01Large, 0.15, Tree]
+               - [RockGrey02Large, 0.08, Tree]
+               - [RealRock7, 0.02, Tree]
+               - [RealRock4, 0.01, Tree]
+
+               # Harvestables
+               - [CoralBig08, 0.0005, Free]
+               
+               # Rock Resources
+               - [RockResourceIron, 0.001, Free]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceCobalt, 0.01, Tree]
+
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.002
+                 Preset: GrassDense
+
+
+# ==============================================================   # To prevent some water POI from spawning in the arctic
+  - Name: ShallowWater_1
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1.5
+    - Temperature < 30
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.15, 0.55, 1]
+
+    Decorations: 
+               - [AridRockBrown01, 0.002, Free]
+               - [AridRockBrown02, 0.002, Free]
+               - [AridRockBrown03, 0.002, Free]
+               - [DesertRockLarge, 0.002, Free]
+               - [DesertRockMedium1, 0.002, Free]
+               - [DesertRockMedium2, 0.002, Free]
+               - [Bush03, 0.01, Free]
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]
+               - [RockResourceGold, 0.001, Free]
+    Grass: 
+               - Name: Seaweed01
+                 Density: 0.001
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Seaweed02
+                 Density: 0.001
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.001
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.001
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 0.4
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 0.8
+                 YScale: 1
+                 Preset: GrassDense
+
+
+# ==============================================================   # Catchall Shallow Water.
+  - Name: ShallowWater
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1.5
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.1, 0.5, 1]
+    Decorations: 
+               - [OmicronWaterleaf, 0.002, Free]
+               - [OmicronWaterleaf, 0.05, Plant]
+               - [Bush03, 0.01, Free]
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]
+               - [RockResourceGold, 0.001, Free]
+    Grass: 
+               - Name: Seaweed01
+                 Density: 0.001
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Seaweed02
+                 Density: 0.001
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.001
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Seaweed04
+                 Density: 0.001
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 0.4
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 0.8
+                 YScale: 1
+                 Preset: GrassDense
+
+# # ==============================================================
+  # - Name: Mountains
+    # IgnoreForcedBiome: true
+    # AmbientSound: OpenPlains 
+    # Texture: [6,3,0.6, 11,11,0.5, 0.25]  
+    # UndergroundLayers:
+               # - [11, 0]
+               # - [11, -1]
+               # - [10, 1]
+    # Color: [0.4, 0.4, 0.4]
+    
+    # StampForcesBiome: true  
+    # StampTries: 500        
+    # StampForcesBiomeType: OverlapOther  
+    # Stamps: 
+    # - Volcano_2, 0.9   # Class 2,3
+    # - Volcano_3, 0.9   # Class 2,3
+    # # - RiftContinent_01, 0.9
+
+    # Decorations:  
+               # - [HollywoodJuniperDesktop, 0.005]
+               # - [HollywoodJuniperDesktopBare, 0.005]
+               # - [RockGrey01Large, 0.0005, Free]
+               # - [RockGrey02Large, 0.0005, Free]
+               # # Harvestables:
+               # - [Snakeweed, 0.003]
+               # # Rock Resources:
+               # - [RockResourceCopper, 0.0003, Free]
+               # - [RockResourceSilicon, 0.0003, Free]
+    # Grass:
+               # - Name: GrassGreen02
+                 # Density: 0.4
+                 # Preset: GrassDense
+               # - Name: Flower02
+                 # Density: 0.001
+                 # Preset: GrassDense
+# ==============================================================   # LAND BIOMES
+
+                 
+# ============================================================== # catch all for all biomes
+# MASTER CATCH ALL
+# ==============================================================
+                 
+
+  - Name: Beach
+    AmbientSound: OpenPlains 
+    Texture: [4, 4, 0.6]
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [12, 14]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:
+       - true
+ 
+    Color: [0.1, 0.55, 0.0] 
+
+
+    Decorations:  
+               - [RealRock10, 0.00015, Free]
+               - [RealRock1, 0.00015, Free]
+               - [RealRock3, 0.00015, Free]
+               - [RealRock4, 0.00015, Free]
+               - [RealRock8, 0.00015, Free]
+
+               # Harvestables:
+               - [ Snakeweed, 0.001, Plant]
+               - [ CornDogBush, 0.001, Plant]
+
+               # Rock Resources:
+               - [RockResourceIron, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+
+    Grass:

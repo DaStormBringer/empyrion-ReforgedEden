@@ -1,0 +1,9 @@
+[GasCloud]
+-Mode=Opaque
+-Pos=0.4800763,129.408,0.3792184
+-Rot=0,8.908062,0
+-Size=1.331,1.331,1.331
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DecalGas_Purple2Dim
+

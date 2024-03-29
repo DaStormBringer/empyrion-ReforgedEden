@@ -1,0 +1,984 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+Description: "Difficulty: [c][ff0000]Hard[-][/c] \n\nVast oceans cover the majority of the planet's surface. A high concentration of greenhouse gases in the atmosphere has kept the planet relatively warm, considering its distance from the sun."
+
+PlanetType: Ocean
+PlayfieldType: Planet
+Difficulty: 4
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.45, 0.6, 0.75"
+
+SkyColor: "0.7, 0.7, 1" 
+SkyHorizonColor: "1.2, 0.2, 0"
+
+# Light
+DayLightIntensity: 1.4
+NightLightIntensity: 0.85
+LightHorizonColor: "1, 0.4, 0"
+NightLightColor: "0.78, 0.78, 1.3"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareBlue
+
+
+# Fog
+# AtmosphereFog: 0.35
+FogCloudIntensity: 0.8
+# GroundFogIntensity: 0
+# GroundFogHeight: 0
+
+
+# Clouds and Wind
+CloudsDensity: 0.3
+CloudsSharpness: 0.35
+CloudsBrightness: 0.7
+CloudsOpacity: 0.7
+CloudsZenithColor: "0.89, 0.92, 1"
+CloudsHorizonColor: "1, 0.3, 0.1"
+
+WindSpeed: 3
+
+# Special Effects 
+SpecialEffectsLocal:
+  - Name: DandelionsFew
+    Biome: [ Grassland, ColdPlains ]
+    Time: Day
+    MaxHeight: 10
+  - Name: ButterfliesFew
+    Biome: [ Grassland, Oasis ]
+    Time: Day
+    MaxHeight: 15
+  - Name: Pollen
+    Biome: [ TropicalForest, SavannaEdge ]  
+    Time: Day
+    MaxHeight: 10
+  - Name: Mosquitos
+    Biome: [ TropicalForest, SavannaEdge, Marsh, Swamp, WaterSwamp, Water ]  
+    Time: Day
+    MaxHeight: 15
+  - Name: ButterfliesBlue
+    Biome: [ Forest, Marsh, DeepForest ]
+    Time: Day
+    MaxHeight: 15
+  - Name: Dragonflies
+    Biome: [ Marsh, Swamp, WaterSwamp, Water, ShallowWater ]
+    Time: Day
+    MaxHeight: 15
+  - Name: FireFliesOrange
+    Biome: [ Forest, DeepForest, Peaks, Marsh, Swamp, WaterSwamp, Oasis ]
+    Time: Night
+    MaxHeight: 15
+  - Name: Moths
+    Biome: [ DeepForest, TropicalForest, SavannaEdge, Grassland ]
+    Time: Night
+    MaxHeight: 15
+
+SpecialEffectsGlobal:
+# Weather
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: CloudsLight
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: CloudsMedium
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: Clouds
+    Type: Weather
+    InitialDelay: 10
+    Delay: 5
+    Lifetime: 1000
+  - Name: Fog
+    Type: Weather
+    InitialDelay: 24
+    Delay: 12
+    Lifetime: 1000
+  - Name: Wind
+    Type: Weather
+    InitialDelay: 24
+    Delay: 12
+    Lifetime: 600
+  # - Name: RainMedium
+    # Type: Weather
+    # InitialDelay: 24
+    # Delay: 12
+    # Lifetime: 600
+  # - Name: RainHeavy
+    # Type: Weather
+    # InitialDelay: 48
+    # Delay: 24
+    # Lifetime: 600
+  - Name: Storm
+    Type: Weather
+    InitialDelay: 24
+    Delay: 24
+    Lifetime: 300
+# Global Effect
+  - Name: BirdFlocksCrows
+    Biome: [ Any ]
+    Time: Day
+    InitialDelay: 1
+    Delay: 4
+    Lifetime: 600
+    PlyDist: 100
+    SpawnY: 30
+    Struct: True
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+    - Name: IronResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 4 ]  
+      SizeMinMax: [ 6, 9 ] 
+      DepthMinMax: [ 4, 8 ] 
+      DroneProb: 0.2 
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 10
+        #YVariance: 7
+
+    - Name: CopperResource
+      IsScalingCount: True 
+      CountMinMax: [ 1, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 5, 10 ] 
+      DroneProb: 0.3
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+    - Name: SiliconResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 5, 8 ]
+      DepthMinMax: [ 5, 10 ] 
+      DroneProb: 0.4
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+    # - Name: CobaltResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 2, 3 ]
+      # SizeMinMax: [ 4, 6 ]
+      # DepthMinMax: [ 5, 10 ] 
+      # DroneProb: 0.7
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+
+    # - Name: MagnesiumResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 2, 3 ]
+      # SizeMinMax: [ 6, 10 ]
+      # DepthMinMax: [ 5, 10 ] 
+      # DroneProb: 0.8
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+
+    # - Name: SathiumResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 3, 5 ]
+      # SizeMinMax: [ 6, 9 ]
+      # DepthMinMax: [ 4, 8 ] 
+      # DroneProb: 0.8
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 10
+        # #YVariance: 7
+
+    # - Name: NeodymiumResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 3, 5 ]
+      # SizeMinMax: [ 5, 7 ]
+      # DepthMinMax: [ 5, 10 ] 
+      # DroneProb: 0.5
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+
+    # - Name: GoldResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 1, 3 ]
+      # SizeMinMax: [ 7, 10 ]
+      # DepthMinMax: [ 0, 5 ] 
+      # DroneProb: 0.9
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+
+    - Name: ErestrumResource
+      IsScalingCount: True 
+      IsImportant: True
+      CountMinMax: [ 3, 4 ]
+      SizeMinMax: [ 6, 9 ]
+      DepthMinMax: [ 5, 20 ] 
+      DroneProb: 0.8
+      MaxDroneCount: 3
+      #DistTypeCylinder:
+        #MaxRadius: 20
+        #YVariance: 20
+
+    # - Name: ZascosiumResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 2, 3 ]
+      # SizeMinMax: [ 3, 5 ]
+      # DepthMinMax: [ 0, 5 ] 
+      # DroneProb: 0.8
+      # MaxDroneCount: 3
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+
+    # - Name: PentaxidResource
+      # IsScalingCount: True 
+      # CountMinMax: [ 2, 4 ]
+      # SizeMinMax: [ 2, 4 ]
+      # DepthMinMax: [ 0, 3 ] 
+      # DroneProb: 0.8
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 5
+
+    - Name: PromethiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 0, 1 ] 
+      DroneProb: 0.8
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+
+# ==================== example resource ======================================
+    # - Name: PentaxidResource
+      # IsScalingCount: True 
+      # Biome: [ Mountains, LowMountains ]
+      # CountMinMax: [ 2, 4 ]
+      # SizeMinMax: [ 2, 4 ]
+      # DepthMinMax: [ 0, 1 ] 
+      # DroneProb: 0.8
+      # MaxDroneCount: 2
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 10
+# ==================== example resource ======================================
+
+### Resource Asteroids =============================================================
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: CopperResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     # - Name: CobaltResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     # - Name: MagnesiumResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     # - Name: SathiumResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     # - Name: NeodymiumResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     # - Name: GoldResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     - Name: ErestrumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     # - Name: ZascosiumResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     # - Name: PentaxidResource
+       # Threshold: 0.2
+       # Amount: 0.1
+
+### POIs
+POIs:
+    Random:   
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties:
+            - Key: Music
+              Value: moonstone 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Trading Station with some settlements
+        # - GroupName: TS_PlanetRG
+          # IsImportant: True
+          # BiomesExcluded: [ Radiated ]
+          # CountMinMax: [ 1, 1 ]
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 1
+          # TroopTransport: False
+          # SpawnPOIAvoid: [DroneBaseT1RG]
+          # POIDistance: 2000
+          # Properties:
+            # - Key: Music
+              # Value: SunnySkies
+
+        # - GroupName: CivilSettlementO2
+          # BiomesExcluded: [ Radiated ]
+          # CountMinMax: [ 2, 4 ]
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # SpawnPOINear: [TS_PlanetRG]
+          # SpawnPOINearRange: [100, 250] 
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: RegenAfter
+              # Value: 720
+ 
+       # ================================
+        # POI complex with several structures around
+        - GroupName: EpsilonBunkerRG
+          Faction: Zirax
+          NoShieldReload: True
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: EpsilonAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [EpsilonMainRG]
+          SpawnPOINearRange: [100, 250]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: EpsilonDefenceT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 4, 5 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [EpsilonMainRG]
+          SpawnPOINearRange: [200, 350]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Defense for drone base
+        - GroupName: EpsilonAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [350, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # POI amount scales with planet size 
+        # Random tribal villages scattered around planet
+        - GroupName: TribalVillageRG
+          Faction: Talon
+          NoShieldReload: True
+          Biome: [ Forest, DeepForest, TropicalForest ]
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 0, 0 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Talon Fishing Boat
+        - GroupName: Eden_TalFishingBoat
+          Faction: Talon
+          PlaceAt: OnWater
+          Biome: [Deepwater, Water, OpenSea]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        # Random civil outposts scattered around planet
+        # - GroupName: CivilSettlementO2
+          # BiomesExcluded: [ Radiated ]
+          # CountMinMax: [ 1, 2 ]
+          # IsScalingCount: True
+          # DroneProb: 0.8
+          # DronesMinMax: [ 1, 3 ]
+          # ReserveCount: 3
+          # TroopTransport: False 
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: RegenAfter
+              # Value: 720
+
+        # Random military outposts scattered around planet
+        - GroupName: EpsilonAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnResource: ["ErestrumResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: EpsilonAuxT2RG
+          Faction: Zirax
+          NoShieldReload: True
+          CountMinMax: [ 5, 7 ]
+          IsScalingCount: True
+          DroneProb: 0.8
+          DronesMinMax: [ 4, 6 ]
+          ReserveCount: 3
+          TroopTransport: True
+          SpawnResource: ["ErestrumResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # Different POIs scattered around planet
+        - GroupName: CrashedShip      # Do not use regeneration with buried POIs
+          Faction: None
+          Biome: [ DeepWater ]
+          CountMinMax: [ 4, 6 ]
+          IsScalingCount: True 
+          PlaceAt: UnderWater
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: AbandonedPOIRG
+          Faction: Alien
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 720
+
+# Black cult POIs
+        - GroupName: Eden_NecroAuxT1
+          Faction: Alien
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 4
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_NecroAuxT1
+          Faction: Alien
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [Eden_NecroAuxT1]
+          SpawnPOINearRange: [100, 250]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_NecroDefenseT1
+          Faction: Alien
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [Eden_NecroAuxT1]
+          SpawnPOINearRange: [200, 350]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # - GroupName: Wreckage
+          # Biome: [ DeepWater, Water ]
+          # CountMinMax: [ 1, 3 ]
+          # IsScalingCount: True 
+          # PlaceAt: UnderWater
+          # DroneProb: 0.5
+          # DronesMinMax: [ 1, 3 ]
+          # ReserveCount: 2
+          # TroopTransport: True
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+
+        - GroupName: Ruins
+          Faction: None
+          Biome: [ DeepWater, Water ]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          PlaceAt: UnderWater
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          TroopTransport: False
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # Alien Artifacts
+        - GroupName: Artifacts
+          Faction: Alien
+          NoShieldReload: True
+          Biome: [ TropicalForest, DeepForest ]
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 0, 0 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [START]
+          SpawnPOIAvoidDistance: 4000
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Music
+              Value: EvilWhispering
+
+# Abandoned Ocean POI
+        - GroupName: Eden_AbandonedWater
+          Faction: Alien
+          NoShieldReload: True
+          Biome: [ DeepWater ]
+          CountMinMax: [ 0, 1 ]
+          PlaceAt: OnWater
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+
+# Ancient Walker mission statue
+        - GroupName: Eden_AncientWalker
+          Faction: Talon
+          NoShieldReload: True
+          Territory: False
+          CountMinMax: [ 0, 1 ]
+          Properties: 
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 720
+
+# Tungsten
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Warlord]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+### Drones
+DroneBaseSetup: 
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 6
+          PresetStyle: 3
+          Stock:
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 300
+                Extra: 0
+
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0  
+    
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: EnemyDroneV2Plasma
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: ZiraxRocket
+                Amount: 500
+                Extra: 3
+
+              - Name: Crawler
+                Amount: 150
+                Extra: 3
+
+              - Name: AlienAssassinGrey
+                Amount: 300
+                Extra: 3
+   
+
+
+# Drones that patrol on whole planet 
+DroneSpawning:    
+    Random:
+        - DronesMinMax: [ 3, 4 ]
+          CenterX: -5000
+
+        - DronesMinMax: [ 3, 4 ]
+          CenterX: 5000
+
+        - DronesMinMax: [ 3, 4 ]
+          CenterX: 0
+
+        - DronesMinMax: [ 3, 4 ]
+          CenterX: 2500
+
+        - DronesMinMax: [ 3, 4 ]
+          CenterX: -2500
+
+# ==============================================================
+# ==============================================================
+
+# SpawnRateZones:
+   # - SpawnAt: [TS_PlanetRG]
+     # Radius: 1000
+     # RadiusRandom: 50
+     # RateMultiplyerCenter: 0.0
+     # RateMultiplyerEdge: 0.7
+     # AffectEnemies: true
+     # Color: "0.0, 1.0, 0.0, 0.7"  
+      
+SpawnZones:
+   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+     BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [AlienBugs03, Spiders01]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [TribalVillageRG]
+     BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.8
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 300
+         Period: Always
+         DelayMinMax: [200, 240]
+   - SpawnAt: [DroneBaseT1RG, EpsilonBunkerRG]
+     BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
+     Radius: 1000
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [EpsilonAuxT2RG, AbandonedPOIRG, ErestrumResource, ZascosiumResource]
+     BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
+     Radius: 500
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+
+### Creatures
+CreatureSpawning:
+    - Biomes: [Grassland] 
+      Entities:
+        - Name: Megalonopses
+          Period: Day
+          Amount: 15
+          DelayMinMax: [10, 12]
+          Color: "0, 0, 1.0"
+        - Name: AlienBugs01
+          Period: Always
+          Amount: 12
+          DelayMinMax: [10, 12]
+          Color: "0, 1.0, 1.0"
+    - Biomes: [Grassland]
+      Entities:
+        - Name: Spiders01
+          Period: Night
+          Amount: 10
+          DelayMinMax: [20, 24]
+          Color: "1.0, 0, 0"
+    - Biomes: [Forest, DeepForest, Marsh]
+      Entities:
+        - Name: TalonGuardianHerd
+          Period: Always
+          Amount: 2
+          DelayMinMax: [10, 12]
+          Color: "0.2, 1.0, 0"
+        - Name: AlienBugs01
+          Period: Day
+          Amount: 10
+          DelayMinMax: [10, 12]
+          Color: "0, 1.0, 1.0"
+        - Name: Spiders01
+          Period: Day
+          Amount: 6
+          Color: "1.0, 0, 0"
+          DelayMinMax: [20, 24]
+        - Name: Triceratopses
+          Period: Day
+          Amount: 8
+          DelayMinMax: [10, 12]
+          Color: "0, 0.5, 1.0"
+        - Name: AlienBugs03
+          Period: Night
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "0.7, 0, 0"
+        - Name: Hexapods
+          Period: Night
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "0.5, 0, 0"
+    - Biomes: [TropicalForest, SavannaEdge]
+      Entities:
+        - Name: ZiraxMinigunPatrol
+          Period: Always
+          Amount: 16
+          DelayMinMax: [10, 12]
+        - Name: RaptorsNight
+          Period: Night
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "0.5, 0, 0"
+        - Name: AlienBugs04
+          Period: Always
+          Amount: 8
+          DelayMinMax: [10, 12]
+          Color: "0, 1.0, 1.0"
+    - Biomes: [Swamp, WaterSwamp, Beach]
+      Entities:
+        - Name: Slimes
+          Period: Day
+          Amount: 8
+          DelayMinMax: [10, 12]
+        - Name: Creepys
+          Period: Night
+          Amount: 12
+          DelayMinMax: [20, 24]
+        - Name: CaveWormsGreen
+          Period: Day
+          Amount: 8
+          DelayMinMax: [20, 24]
+    - Biomes: [LowMountains]
+      Entities:
+        - Name: Spiders01
+          Period: Always
+          Amount: 10
+          DelayMinMax: [20, 24]
+          Color: "1.0, 0, 0"
+        - Name: AlienBugs01
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 12]
+    - Biomes: [Tundra, ColdPlains]
+      Entities:
+        - Name: Megalonopses
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 12]
+        - Name: RaptorsNight
+          Period: Night
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "0.5, 0, 0"
+    - Biomes: [PolarSnow, PolarSnowEdge]
+      Entities:
+        - Name: SlimesWhite
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 12]
+          Color: "1.0, 1.0, 0"
+        - Name: CaveWormsWhite
+          Period: Night
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "1.0, 0, 0"
+    - Biomes: [Radiated]
+      Entities:
+        - Name: AlienAssassinGreys
+          Period: Night
+          Amount: 10
+          DelayMinMax: [20, 24]
+          Color: "0, 0, 0"
+        - Name: AlienBugs03
+          Period: Day
+          Amount: 8
+          DelayMinMax: [20, 24]
+          Color: "0, 0, 0"
+    - Biomes: [Sand]
+      Entities:
+        - Name: GolemsDesert   
+          Period: Always
+          Amount: 5
+          DelayMinMax: [20, 24]
+          Color: "1.0, 0, 0"
+        - Name: AlienBugs04    
+          Period: Always
+          Amount: 10
+          DelayMinMax: [20, 24]
+

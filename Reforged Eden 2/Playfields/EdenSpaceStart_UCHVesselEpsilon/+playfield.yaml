@@ -1,0 +1,768 @@
+PlayfieldType: Space
+WorldName: 
+RealRadius: 0
+ScaledRadius: 0
+Gravity: 0
+PlanetAxis: 0
+PlanetRotAxis: 
+AtmosphereDensity: 0
+AtmosphereO2: 0.100000001
+AtmosphereBreathable: false
+Temperature: 0
+TemperatureDay: -147
+TemperatureNight: 0
+Radiation: 3.72406888
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 0
+DayLength: 0
+PlanetType: UCH Research Vessel
+PlanetSize: 2
+Moons: 0
+Emissive: false
+Water: 
+PvP: false
+Difficulty: 1
+LegacyBiome: 
+ChunkProviderId: 0
+SunFlare: 
+# Nebula: PrefabNebulaPurple
+# Stars: SkyboxStarsOrange
+LocalEffect: 
+SpecialEffectsLocal: 
+SpecialEffectsGlobal: 
+AtmosphereEnabled: false
+AtmosphereColor: 0.55, 0.61, 0.65
+AtmosphereParams: 
+OrbitUsesLightColor: false
+SkyColor: 1, 1, 1
+SkyHorizonColor: 
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+AtmosphereFog: 0
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+FogIntensity: 0
+FogStartDistance: 0
+GroundFogIntensity: 0
+GroundFogHeight: 0
+Description: >-
+  The Terran research ship [c][00ffff]UCHN Pathfinder[-][/c] is parked here, performing maintenance.
+  
+  
+  If you haven't already, all Terran survivors are asked to activate the PDA mission [c][00ffff]"Make Contact with Terran Forces"[-][/c] under the [c][00ff00]Solo Mission[-][/c] tab and then report to the nearest UCH research vessel.
+  
+  You can activate the PDA with the [c][ffff00]F1[-][/c] key. (Default keybind)
+Seed: -2147483648
+TemperatureMinMax: 
+HumidityMinMax: 
+LandWaterRatio: 0
+TemperatureHeightRange: 
+TemperatureGradientRange: 
+TemperatureNoiseFac: 0
+HumidityHeightFac: 
+HumidityNoiseFac: 0
+TerrainHeightMapMax: -1
+GroundShapes: 
+TemperatureMasks: 
+HumidityMasks: 
+BiomeStampTries: 0
+PlayfieldLevel: 0
+PdaReferral: 
+BaseAttackCount: 1
+PfServerWeight: 0
+PlanetClass: Space
+UseFixed: true
+UseRandom: false
+Build: 2877
+Instance: 
+IndestructibleTerrain: false
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowBlueprintSV: true
+AllowBlueprintCV: true
+AllowBlueprintHV: true
+AllowBlueprintBA: true
+AllowMaxCPUTierSV: 0
+AllowMaxCPUTierCV: 0
+AllowMaxCPUTierHV: 0
+AllowMaxCPUTierBA: 0
+RestrictToOrigin: 255
+Music: Reaver
+LandClaimZone: Default
+IsOrbitPlayfield: false
+RandomPOIs: 
+RandomDroneBase: 
+RandomResources: 
+FixedResources: 
+AsteroidResources: 
+Terrain: 
+MainBiome: 
+SubBiomes: 
+BiomeTextureReplacements: 
+Biome: 
+POIs:
+  Random: 
+  Fixed:
+
+# ------------------------------------------------------------------------------------------------- UCH Research Vessel Beta
+  - Type: BA_Admin
+    Prefab: Eden_BAO_UCHPathfinder
+    Mode: Survival
+    SubMode: 
+    Name: UCH Research Vessel
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: Discovery
+      Value: False
+    - Key: Music
+      Value: Mute
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 0
+    - 0
+    Rot:
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: SV_Player
+    Prefab: SV_UCH039Rapier
+    Mode: Survival
+    SubMode: 
+    Name: Rapier
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 20
+    - 360
+    Rot:
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+# ------------------------------------------------------------------------------------------------- UCH Solar Arrays
+  - Type: BA_Admin
+    Prefab: Eden_BAO_UCHSolarArray
+    Mode: Survival
+    SubMode: 
+    Name: Solar Array
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - -200
+    - -50
+    - 80
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_UCHSolarArray
+    Mode: Survival
+    SubMode: 
+    Name: Solar Array
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 200
+    - -50
+    - 80
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+# ------------------------------------------------------------------------------------------------- Tutorial Beacons - lead to hacking tutorial
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutBeacon
+    Mode: Survival
+    SubMode: 
+    Name: Tutorial Beacon
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 200
+    - 20
+    - -450
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutBeacon
+    Mode: Survival
+    SubMode: 
+    Name: Tutorial Beacon
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 300
+    - 20
+    - -900
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutBeacon
+    Mode: Survival
+    SubMode: 
+    Name: Tutorial Beacon
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 600
+    - 20
+    - -1500
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutBeacon
+    Mode: Survival
+    SubMode: 
+    Name: Tutorial Beacon
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 800
+    - 20
+    - -2600
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutBeacon
+    Mode: Survival
+    SubMode: 
+    Name: Hacking Tutorial
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 800
+    - 20
+    - -3400
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+# ------------------------------------------------------------------------------------------------- Hacking Tutorial
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3400
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3420
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3440
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3460
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3480
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3500
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: BA_Admin
+    Prefab: Eden_BAO_TutHacking
+    Mode: Survival
+    SubMode: 
+    Name: Hacking 101
+    InitPower: true
+    LevelMod: 
+    Faction: UCH
+    Properties:
+    - Key: MapDistance
+      Value: 0
+    - Key: HudDistance
+      Value: 0
+    - Key: RegenAfter
+      Value: 30
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 915
+    - 30
+    - -3520
+    Rot:
+    - 0
+    - 270
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+
+  FixedPlayerStart: 
+DroneBaseSetup:
+  Random: 
+  Fixed: []
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 
+
+
+
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: 
+    Pos:
+    - 11863.832
+    - 899.514099
+    - 4346.67529
+    LevelMod: 
+    DroneOnDuty:
+
+    DroneSpaceFreighter: 
+    DronePlanetVessel: 
+    SpaceVessel:
+# =================================================================== UCH Freighters
+    # - Name: Eden_UCHFreighter
+      # Faction: UCH
+      # FixedMaxSpeed: 5
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 305
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - -60
+          # - 0
+          # - -650
+        # - - -60
+          # - 0
+          # - 550
+        # - - 100
+          # - 0
+          # - 550
+        # - - 100
+          # - 0
+          # - -550
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 0
+        # Extra: 1
+      # Properties: &o16
+
+# # =================================================================== UCH Mules
+# # ------------------------------------- Tug 1
+    # - Name: Eden_UCHTug
+      # Faction: UCH
+      # FixedMaxSpeed: 3
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 305
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - -100
+          # - 5
+          # - -13
+        # - - 100
+          # - 5
+          # - -13
+        # - - 350
+          # - 0
+          # - 450
+        # - - -350
+          # - 0
+          # - 450
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 0
+        # Extra: 1
+      # Properties: &o16
+
+# # ------------------------------------- Tug 2
+    # - Name: Eden_UCHTug
+      # Faction: UCH
+      # FixedMaxSpeed: 3
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 305
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - 100
+          # - 5
+          # - -13
+        # - - 350
+          # - 0
+          # - 450
+        # - - -350
+          # - 0
+          # - 450
+        # - - -100
+          # - 5
+          # - -13
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 0
+        # Extra: 1
+      # Properties: &o16
+
+# # ------------------------------------- Tug 3
+    # - Name: Eden_UCHTug
+      # Faction: UCH
+      # FixedMaxSpeed: 3
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 305
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - 350
+          # - 0
+          # - 450
+        # - - -350
+          # - 0
+          # - 450
+        # - - -100
+          # - 5
+          # - -13
+        # - - 100
+          # - 5
+          # - -13
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 0
+        # Extra: 1
+      # Properties: &o16
+
+# # ------------------------------------- Tug 4
+    # - Name: Eden_UCHTug
+      # Faction: UCH
+      # FixedMaxSpeed: 3
+      # Mission: Freighter
+      # RangePatrol: 
+      # Immobile: 
+      # Freighter:
+        # DelayBetweenRespawn: 305
+        # DelayBeforeSelfDestruction: 900
+        # IsRespawnAfterDestruction: true
+        # PathWayPoint:
+        # - - -350
+          # - 0
+          # - 450
+        # - - -100
+          # - 5
+          # - -13
+        # - - 100
+          # - 5
+          # - -13
+        # - - 350
+          # - 0
+          # - 450
+      # Stock:
+      # - Name: SpaceDroneLaser
+        # Amount: 0
+        # Extra: 1
+      # Properties: &o16
+      # - Key: MapDistance
+        # Value: 6000

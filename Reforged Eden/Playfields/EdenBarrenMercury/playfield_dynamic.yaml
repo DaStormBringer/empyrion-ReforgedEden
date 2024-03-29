@@ -1,0 +1,343 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [3,4]
+  SizeProbs: [0.7,0.3] 
+TemperatureMin: [350,375]
+TemperatureMax: [425,450] 
+TemperatureNight: [550,600]
+
+PlanetAxis: [-45,45]                     
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [3, 6]
+SeaLevel: [-1, -1]                                      
+TerrainLevel: [184, 184]                              
+BaseLevel: [72, 72]
+LandWaterRatio: [0, 0]    
+TemperatureHeightRange: [30, 200]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+GravityMinMax: [-15, -8]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+GroundFogProb: 0
+
+WaterProb: 0
+PvPProb: 0 #Normal.6
+Water: [WaterBlue]
+Music: [BarrenMoon]
+# ==============================================================
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+ - GroundShape_3, 0.5
+
+
+BiomeStampTries: 20
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole          # same as Craters biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [10,6,0.5, 2,7,0.5, 0.02]   
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.6, 0.6, 0.6]
+
+
+# ==============================================================
+# (HEIGHT CHECKER) -  Absolute minimum biome to check stamp interactions and keep enough ground depth. - Extremely rare, shouldn't show up.
+# ==============================================================
+  - Name: Plains
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.2] 
+    
+    SelectionCriteria:
+    - Height < 11
+    Color: [0.0, 1, 0.0]   
+    
+    Radiation: -10
+    Temperature: -50
+    
+    Decorations:  
+               # Harvestables:
+               - [CrystalStraight, 0.001]
+               
+    Grass:
+# ==============================================================
+# BIOMES
+# ==============================================================
+  - Name: Mountains
+    IgnoreForcedBiome: true 
+    Texture: [11, 11, 0.5]   
+ 
+    SelectionCriteria: 
+    - Height > 170
+    Color: [0.7, 0.7, 0.7]
+
+    UndergroundLayers:
+               - [1, 2]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 7  
+    Stamps:
+    - Mountain_4a, 0.1 
+    - Mountain_4b, 0.1
+
+
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+    Grass:
+    
+
+# ==============================================================
+  - Name: LargeCrater   
+    IgnoreForcedBiome: true 
+    Texture: [5, 6, 0.5]   
+    
+    SelectionCriteria: 
+       - false                  
+    Color: [0.7, 0.2, 0.2]
+
+    UndergroundLayers:
+               - [9, 8]
+               - [10, 3]
+               - [9, 4]
+               - [10, 3]
+               - [9, 3]
+               - [10, 3]
+               - [9, 2]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 240
+    Stamps:
+    - CraterMoon_10, 0.1
+    - CraterMoon_11, 0.1
+    - CraterMoon_12, 0.1
+    - CraterMoon_13, 0.2
+
+    
+
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+               # Harvestables:
+               - [RockResourceIron, 0.0003, Free]
+               - [RockResourceTitan, 0.0006, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: Mare     
+    Texture: [0, 0, 0.5]   
+
+    SelectionCriteria: 
+    - Height < 108
+    - Height > 10
+    Color: [0.3, 0.3, 0.3]
+
+    UndergroundLayers:
+               - [5, 30]
+               - [10, 2]
+               - [15, -1]
+               - [11, 1]
+    
+    StampProb: 0.9
+    Stamps:
+    - CraterMoon_1, 1   
+
+
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+               # Rock Resources:
+               - [RockResourceCobalt, 0.00025, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: SmallCrater_2        # Older craters; they lack the brown stone sides due to dust.       
+    Texture: [9,6, -0.4]
+
+    UndergroundLayers:
+               - [9, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false     
+    Color: [0.8, 0.3, 0.4]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    StampTries: 2200
+    Stamps:
+    - CraterMoon_2, 0.20 
+    - CraterMoon_3, 0.30  
+    - CraterMoon_4, 0.04
+    - CraterMoon_5, 0.10 
+    - CraterMoon_6, 0.08
+    - CraterMoon_7, 0.02
+    - CraterMoon_8, 0.015
+    - CraterMoon_9, 0.004
+
+
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+               # Harvestables:
+               - [CrystalStraight, 0.0001, Free]
+               - [CrystalStraight, 0.01, Tree]
+               - [RockResourcePromethium, 0.0003, Free]
+    Grass:    
+
+
+ # ==============================================================
+  - Name: SmallCrater                 
+    Texture: [8,3,0.3]  
+
+    UndergroundLayers:
+               - [9, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false                    
+    Color: [0.9, 0.3, 0.3]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 2200
+    Stamps: 
+    - CraterMoon_2, 0.20 
+    - CraterMoon_3, 0.30  
+    - CraterMoon_4, 0.04
+    - CraterMoon_5, 0.10 
+    - CraterMoon_6, 0.08
+    - CraterMoon_7, 0.02
+    - CraterMoon_8, 0.015
+    - CraterMoon_9, 0.004
+    - CraterMoon_10, 0.0007
+
+    
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+               
+               # Harvestables:
+               - [RockResourceIron, 0.0003, Free]
+               - [RockResourcePromethium, 0.0003, Free]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+    
+
+ # ==============================================================
+  - Name: LowMountains  
+    Texture: [10,10,0.5,]
+    
+    SelectionCriteria: 
+    - Height > 155
+    Color: [0.5, 0.5, 1]
+
+    UndergroundLayers:
+               - [1, 3]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+
+    Decorations: 
+    Grass: 
+
+ # # ==============================================================
+  # - Name: LowMountains_1     # Texture transistion biome  
+    # Texture: [0,0,0.5, 1,6,0.5, -0.4]
+
+    # SelectionCriteria: 
+    # - Height > 150
+
+    # UndergroundLayers:
+               # - [2, 5]
+               # - [10, 3]
+               # - [15, -1]
+               # - [11, 1]
+    
+    # Color: [0.4, 0.4, 1]
+    
+    # Decorations: 
+    # Grass: 
+
+# ==============================================================
+# (Catchall & Terrain base)
+# ==============================================================
+  - Name: Craters
+    Texture: [8,8,0.5]
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [9, 5]
+               - [10, 3]
+               - [15, -1]
+               - [11, 1]
+    
+    SelectionCriteria: 
+       - true
+
+    Color: [0.6, 0.6, 0.6]
+
+    Decorations:  
+               - [RealRock1Dark, 0.001]
+               - [RealRock2Dark, 0.001]
+               - [RealRock3Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               - [RealRock8Dark, 0.001]
+               - [RealRock10Dark, 0.001]
+               # Harvestables:
+               - [RockResourceIron, 0.0002, Free]
+    Grass:
+    
+  
+
+    

@@ -1,0 +1,9 @@
+[Advertisement]
+-Mode=Opaque
+-Pos=-6.500124,185.2627,32.9725
+-Rot=0,0.001131894,0
+-Size=0.46,0.46,0.46
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignRandomStockMarket
+

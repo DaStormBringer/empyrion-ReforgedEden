@@ -1,0 +1,17 @@
+[HarvestHydrogen]
+-Mode=Opaque
+-Pos=0.5,157,0.5
+-Rot=270,270,0
+-Size=2,2,2
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HarvestHydrogen
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-1.997464,187.5032,-0.5007873
+-Rot=0,270,0
+-Size=0.3574902,0.3574902,0.3574902
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignRandomCorp1
+

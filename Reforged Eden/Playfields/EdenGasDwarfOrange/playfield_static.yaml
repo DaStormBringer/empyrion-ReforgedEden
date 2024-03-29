@@ -1,0 +1,157 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+#Created by Needleship
+
+
+Description: "[c][e0e020] NOTE: For safety reasons, your ship's computer will prevent you from entering the atmosphere. [-][/c] \nNot all gas planets are born giants: If not enough material was in the vicinity during their formation, some stay rather small. \nNonetheless, this is a huge mass of Hydrogen, enveloping some small rocky core. Traces of other gases give the clouds some colour. \n\nViolent storms in the atmosphere can tear any daring craft apart - or the pressure on the 'surface' would crush them. \n- Landing is not advised.
+
+
+[c][808080][i]Originally created by Needleship.[/i][-][/c]"
+
+
+PlanetType: Gas
+PlayfieldType: Planet
+Difficulty: 2
+
+AllowHV: False                  # Dis-allow HVs to enter/spawn in this playfield, default is True
+AllowSV: False                  # Dis-allow SVs to enter/spawn in this playfield, default is True
+AllowCV: False                  # Dis-allow CVs to enter/spawn in this playfield, default is True
+AllowBA: False                  # Dis-allow BAs to enter/spawn in this playfield, default is True
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.93, 0.85, 0.75"
+SkyColor: "1, 0.8, 1"
+SkyHorizonColor: "1, 0.3, 0"
+
+# Light
+DayLightIntensity: 0.9
+NightLightIntensity: 0.05
+DayShadowStrength: 0.95
+NightShadowStrength: 0.5
+
+LightZenithColor: "0.80, 0.8, 1"
+LightHorizonColor: "1, 0.6, 0.15"
+NightLightColor: "0.2, 0.0, 1.0"
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite
+# OrbitUsesLightColor: True
+
+# Fog
+AtmosphereFog: 0.1
+FogCloudIntensity: 0.0
+GroundFogIntensity: 0.00
+GroundFogHeight: 0
+
+# Clouds and Wind
+CloudsDensity: 0.3
+CloudsSharpness: 0.2
+CloudsBrightness: 0.6
+CloudsZenithColor: "0.3, 0.1, 0"
+CloudsHorizonColor: "0, 0.3, 0"
+
+WindSpeed: 3
+
+
+# ==============================================================
+# ACTIVATE FOR GAS GIANT FLAIR
+# ==============================================================
+
+
+# # Atmosphere and Sky
+# AtmosphereEnabled: True
+# AtmosphereColor: "0.19, 0.26, 0.35"
+# SkyColor: "0, 0.8, 1"
+# SkyHorizonColor: "1, 0.3, 0"
+
+# # Light
+# DayLightIntensity: 0.9
+# NightLightIntensity: 0.05
+# DayShadowStrength: 0.95
+# NightShadowStrength: 0.5
+
+# LightZenithColor: "0.80, 0.8, 1"
+# LightHorizonColor: "1, 0.6, 0.15"
+# NightLightColor: "0.2, 0.0, 1.0"
+
+# # Sun
+# SunFlare: EnvironmentalEffects/SunFlareWhite
+
+# # Fog
+# #AtmosphereFog: 0.5
+# AtmosphereFog: 1.2
+
+# FogCloudIntensity: 1.0
+# GroundFogIntensity: 0.29
+# GroundFogHeight: 800
+
+# # Clouds and Wind
+# CloudsDensity: 0.7
+# CloudsSharpness: 0.0
+# CloudsBrightness: 0.0
+# CloudsZenithColor: "0.0, 0.95, 0"
+# CloudsHorizonColor: "1, 0.3, 0"
+
+# WindSpeed: 140
+
+
+
+
+# Special Effects
+SpecialEffectsGlobal:
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 3
+    Lifetime: 1200
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+
+
+
+### Resource Asteroids
+AsteroidResources:
+
+
+### POIs
+POIs:
+    Random:
+
+ 
+
+### Drones
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ 0, 120, 0 ]
+          RotY: 0
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 0, 0 ]
+          CenterX: -2500
+          Radius: 2000
+
+        - DronesMinMax: [ 0, 0 ]
+          CenterX: 2500
+          Radius: 2000
+
+# ==============================================================
+# ==============================================================
+
+SpawnRateZones:
+
+
+SpawnZones:
+
+### Creatures
+CreatureSpawning:

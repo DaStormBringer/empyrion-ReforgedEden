@@ -1,0 +1,16 @@
+[Cloak]
+-Mode=Opaque
+-Pos=-30.49753,128.5207,-10.95809
+-Rot=-6.83019E-06,90,0
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_CloakBlack
+
+[Cloak]
+-Mode=Opaque
+-Pos=31.4975,128.5161,-10.99969
+-Rot=0,270,0
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_CloakBlack
+

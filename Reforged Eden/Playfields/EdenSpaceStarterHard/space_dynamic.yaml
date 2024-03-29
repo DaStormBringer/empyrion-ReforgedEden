@@ -1,0 +1,347 @@
+# Playfield Characteristics
+Description: "Difficulty [c][00ff00]Easy[-][/c]
+\n \n Sovereignty [c][ffff00]Contested[-][/c]
+\n \n \n This area of space is mostly empty. Not much can be found here besides a few scattered resource asteroids and small wreckage.
+\n \n \n [c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0                            
+UseFixed: True                       
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+Music: [moonstone, Orbiting, space, Transit]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Orbit
+
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:            
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1               
+      Properties:     
+        - Key: RegenAfter
+          Value: 180    
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180                
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 1         
+      Properties:     
+        - Key: RegenAfter
+          Value: 180              
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0        
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0          # randomized (i.e. may or may not be present)       
+      Properties:     
+        - Key: RegenAfter
+          Value: 180       
+           
+### POIs
+POIs:    
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet, AsteroidRingPlanet, AsteroidFieldRing, AsteroidFieldRingOld]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.7
+      BaseField: True  
+      RandomRotation: True
+
+# SURVIVAL MODE
+
+    - Type: BA_Alien   
+      Name: [Eden_BAO_DerelictNoTP]
+      DisplayName: Derelict Ship
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 720   
+        - Key: Music
+          Value: EvilWhispering
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Space Junk
+# ======================================================================================================================================================================================================
+
+#Assorted Space Junk----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_Junk2, Eden_SJ_Junk2V2, Eden_SJ_Junk2V3, Eden_SJ_Junk3, Eden_SJ_Junk3V2, Eden_SJ_Junk3V3, Eden_SJ_Junk3V4]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 5, 10 ]    
+      Probability: 0.8
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Wreckage Tier 1. ----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 5, 10 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      # IsCompoundSubDesc: True
+      Compound:
+        CountMinMax: [1, 2]
+        Probability: 0
+        Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3]
+        DistanceMinMax: [35, 75] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Wreckage Tier 2. ----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_JunkT2_1, Eden_SJ_JunkT2_2, Eden_SJ_JunkT2_3, Eden_SJ_JunkT2_4]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 3, 5 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 8]
+        Probability: 1
+        Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3]
+        DistanceMinMax: [35, 75] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Wreckage Tier 3. ----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_JunkT3_1, Eden_SJ_JunkT3_2, Eden_SJ_JunkT3_2b]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 5, 12 ]    
+      Probability: 0
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [8, 12]
+        Probability: 0.6
+        Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3, Eden_SJ_JunkT2_1, Eden_SJ_JunkT2_2, Eden_SJ_JunkT2_3, Eden_SJ_JunkT2_4]
+        DistanceMinMax: [100, 300] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Abandoned Pallet. Typically contains specific ore. 50/50 chance of exploding.----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_Pallet1, Eden_SJ_Pallet2, Eden_SJ_PalletIron1, Eden_SJ_PalletIron1V2, Eden_SJ_PalletCopper1, Eden_SJ_PalletCopper1V2, Eden_SJ_PalletSilicon1, Eden_SJ_PalletSilicon1V2, Eden_SJ_PalletMedical1, Eden_SJ_PalletMedical1V2]
+      DisplayName: Abandoned Shipping Pallet
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]    
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [2, 3]
+        Probability: 0.3
+        Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3]
+        DistanceMinMax: [35, 75] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Wreckage Tier 1 Compound. ----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_JunkT1_1, Eden_SJ_JunkT1_2, Eden_SJ_JunkT1_3]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 15, 30 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+#Wreckage Tier 2 Compound. ----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_SJ_JunkT2_1, Eden_SJ_JunkT2_2, Eden_SJ_JunkT2_3, Eden_SJ_JunkT2_4]
+      DisplayName: Wreckage
+      Faction: Alien
+      Mode: Survival
+      CountMinMax: [ 10, 20 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:     
+        - Key: MapDistance
+          Value: 0  
+        - Key: MapMarker 
+          Value: Neutral  
+        - Key: RegenAfter
+          Value: 720  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDronePlasma]
+        Count: [2, 5]
+        Radius: [300, 800]
+      SpaceVessels:
+          - Name: [Freighter]     # we can define list of Freighters
+            Faction: Polaris    
+            Count: [1, 2]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    # maybe set as fixed in config yaml
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]  
+            Properties: 
+              - Key: MapDistance
+                Value: 6000
+                    
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation]
+            Faction: Zirax     
+            Count: [2, 4]
+            FixedMaxSpeed: [20,20]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2000 
+            StockDescription:
+              Name: [SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]          
+            Properties: 
+              - Key: RegenAfter
+                Value: 720                    
+
+FixedPlayerStart:
+    - Mode: Creative             
+      SubMode: Empty             
+      Armor: ArmorMedium
+      Pos: [ 61, -1996, -6805 ]  
+      RotY: 14                 
+
+    - Mode: Creative             
+      SubMode: Normal             
+      Armor: ArmorMedium
+      # Pos: [ 55, -1960, -6815 ] 
+      Pos: [ 89, -1932, -6795 ] 
+      RotY: -90                   
+
+    - Mode: Debug       
+      Pos: [ 65, -1900, -6800 ] 
+      RotY: 160         

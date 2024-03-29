@@ -1,0 +1,434 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][00ff00]Easy[-][/c]
+
+
+This barren rock carries its history on the surface:
+
+Completely solidified, and no atmosphere to remove tracks and shapes -
+
+All encounters will be remembered."
+
+PlanetClass: Barren Moon
+PlanetType: MoonStarter               
+PlayfieldType: Moon               
+Difficulty: 1
+
+LandClaimZone: Device            
+
+# Atmosphere and Sky
+AtmosphereEnabled: False
+
+# Light
+DayLightIntensity: 1.6
+NightLightIntensity: 0.7
+
+DayShadowStrength: 0.95
+
+# Sun                              
+SunFlare: EnvironmentalEffects/SunFlareWhiteMoon
+
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      IsScalingCount: True 
+      CountMinMax: [ 3, 5 ] 
+      SizeMinMax: [ 8, 13 ] 
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.2      
+      MaxDroneCount: 1
+
+    - Name: SiliconResource
+      IsScalingCount: True 
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 8, 9 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.2      
+
+    - Name: CobaltResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.2      
+      MaxDroneCount: 1
+
+    - Name: MagnesiumResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 3, 4 ]
+      DepthMinMax: [ 6, 15 ]
+      DroneProb: 0.2      
+      MaxDroneCount: 1
+
+    - Name: TitanResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 2, 3 ]
+      DroneProb: 0.5
+      MaxDroneCount: 1
+      DepthMinMax: [ 15, 20 ]
+
+    - Name: AluminiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 25, 35 ]
+      DroneProb: 0.2
+      MaxDroneCount: 1
+
+    - Name: PentaxidResource
+      IsScalingCount: True 
+      CountMinMax: [ 4, 5 ]
+      SizeMinMax: [ 4, 5 ]
+      DroneProb: 0.2
+      MaxDroneCount: 2
+      DepthMinMax: [ 0, 5 ]
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: MagnesiumResource
+       Threshold: 0.2
+       Amount: 0.2
+     # - Name: PromethiumResource
+       # Threshold: 0.2
+       # Amount: 0.2
+     - Name: PentaxidResource
+       Threshold: 0.2
+       Amount: 0.2
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG              #CommandCenter
+          Faction: Zirax  
+          NoShieldReload: True
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 0, 1 ]     
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ] 
+          ReserveCount: 5    
+          Properties: 
+            - Key: RegenAfter
+              Value: 720         
+
+# # ======================= CRASHED TITAN (Story) ======================= 
+
+        - GroupName: CrashedTitanFrontRG                                   #Required for: STORY OFFWORLD GRAVE
+          Faction: None
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [DroneBaseT1RG, XenuMainframeRG, XenuRadarMainRG]
+          SpawnPOIAvoidDistance: 2000
+          SpawnResource: ["PromethiumResource:1-1"]
+          SpawnResourceRange: [250,400]
+          Properties: 
+            # - Key: PersonalContainer
+            #   Value: "InsulationBoost:1"
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedTitanMidRG                                   #Required for: STORY OFFWORLD GRAVE
+          Faction: None
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [CrashedTitanFrontRG]
+          SpawnPOINearRange: [300, 400]
+          SpawnResource: ["TitanResource:1-1"]
+          SpawnResourceRange: [250,400]
+          Properties: 
+            # - Key: PersonalContainer
+              # Value: "InsulationBoost:1"
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedTitanRearRG                                  #Required for: STORY
+          Faction: None
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [CrashedTitanMidRG]
+          SpawnPOINearRange: [300, 400]
+          SpawnResource: ["TitanResource:1-1","PromethiumResource:0-1"]
+          SpawnResourceRange: [250,400]
+          Properties: 
+            # - Key: PersonalContainer
+              # Value: "ArmorBoost:1, ArmorMedium:1"
+            - Key: MapMarker 
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+
+
+# # ======================= ZIRAX - SETTLEMENT  ======================= 
+          # # Endboss Main  - Floating
+        - GroupName: XenuMainframeRG                             #Story relevant: OFFWORLD GRAVE
+          Faction: Zirax  
+          NoShieldReload: True
+    #      Biome: [ RadiatedFog ]
+          IsImportant: True
+         # LevelMod: +3
+          CountMinMax: [ 1, 1 ]
+          Properties: 
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+
+          # # Endboss Main
+        - GroupName: XenuRadarMainRG                       # Main Building
+          Faction: Zirax  
+          NoShieldReload: True
+     #     Biome: [ RadiatedFog ]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+         # LevelMod: +2
+          DroneProb: 0.6
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+          # # Endboss  Teleporter Access
+        - GroupName: XenuComArrayRG
+          Faction: Zirax  
+          NoShieldReload: True
+     #     Biome: [ RadiatedFog ] 
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          LevelMod: +1
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [XenuRadarMainRG]
+          SpawnPOINearRange: [500, 800]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+              
+          # # Endboss Main Defense Turrets
+
+          # # Anti-Aircraft turret
+        - GroupName: XenuRadarTurretRocketRG
+          Faction: Zirax  
+          NoShieldReload: True
+          # IsImportant: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [XenuRadarMainRG]
+          SpawnPOINearRange: [150, 200] 
+          SpawnPOIAvoid: [XenuComArrayRG]  
+          SpawnPOIAvoidDistance: 500
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: XenuRadarTurret
+          Faction: Zirax  
+          NoShieldReload: True
+          # IsImportant: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [XenuRadarMainRG]
+          SpawnPOINearRange: [100, 350] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# ======================= POLARIS Mining Stations ======================= 
+
+        - GroupName: PolarisMiningMainRG          # Main Building
+          Faction: Polaris  
+          NoShieldReload: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          LevelMod: +3
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 2000
+          SpawnResource: ["SiliconResource:1-2","PromethiumResource:2-2"]
+          SpawnResourceRange: [150,400]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisMiningAuxRG
+          Faction: Polaris 
+          NoShieldReload: True 
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
+          CountMinMax: [ 1, 3 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # - GroupName: PolarisIndustrialAuxRG
+          # Faction: Polaris  
+          # NoShieldReload: True
+          # BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
+          # CountMinMax: [ 1, 2 ]
+          # SpawnPOINear: [PolarisMiningMainRG]
+          # SpawnPOINearRange: [200, 400] 
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+ 
+        - GroupName: PolarisDefenceRG
+          Faction: Polaris  
+          NoShieldReload: True
+          # Territory: False        
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
+          CountMinMax: [ 5, 6 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            # - Key: HudDistance
+              # Value: 400    
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT1PolarisRG 
+          Territory: False
+          Faction: Polaris
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [200, 1000] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG1
+          Faction: Polaris
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [100, 400] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+ # ===== Fillers
+
+        - GroupName: CrashedShip 
+          Faction: None         
+          CountMinMax: [ 1, 3 ]
+          IsScalingCount: True 
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker 
+              Value: Neutral  
+            - Key: RegenAfter
+              Value: 720      
+
+# ====================================================
+# ================== FIXED START =====================
+# ====================================================
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125            
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0                  
+          PresetStyle: 0                       
+          Stock:
+              - Name: DroneSmallFast01Rocket   
+                Amount: 100 
+                Extra: 0 
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1                        
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              # - Name: RipperDog  # No atmosphere. But Zirax wear at least masks.
+                # Amount: 400
+                # Extra: 3
+
+              - Name: ZiraxRocketPatrol
+                Amount: 100
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500

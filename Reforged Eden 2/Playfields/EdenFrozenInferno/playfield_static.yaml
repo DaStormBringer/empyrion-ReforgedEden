@@ -1,0 +1,659 @@
+# From Monroe's Planet Pack I
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+
+Strong Rados Presence Detected
+
+The Rados faction of the Zirax Empire has established multiple missle research facilities on this bleak frozen inferno.  Poor atmospheric conditions lead us to believe their goal is to perfect their missle accuracy.
+
+
+Extinguish all research at any cost.
+
+
+[c][808080][i]Originally created by Monroe.[/i][-][/c]"
+PlanetType: Frozen Inferno
+PlayfieldType: Planet
+AtmosphereEnabled: True
+Difficulty: 4
+LandClaimZone: Device
+SpecialEffectsLocal:
+-  Name: FireFliesRed
+   Biome: [Water, ShallowWater, Shore]
+   Time: Night
+   MaxHeight: 75
+-  Name: DustDevil
+   Biome: [IceLens]
+   Time: Day
+   MaxHeight: 255
+-  Name: FireFliesOrangeFew
+   Biome: [Taiga]
+   Time: Night
+   MaxHeight: 140
+-  Name: WindLines
+   Biome: [LowMountains, Mountains]
+   Time: Always
+   MaxHeight: 255
+SpecialEffectsGlobal:
+-  Name: Clear
+   Type: Weather
+   Delay: 3
+   Lifetime: 1200
+-  Name: CloudsLight
+   Type: Weather
+   Delay: 2
+   Lifetime: 1200
+-  Name: CloudsMedium
+   Type: Weather
+   Delay: 3
+   Lifetime: 1200
+-  Name: Clouds
+   Type: Weather
+   InitialDelay: 5
+   Delay: 3
+   Lifetime: 1200
+-  Name: Fog
+   Type: Weather
+   InitialDelay: 12
+   Delay: 5
+   Lifetime: 1000
+-  Name: SnowLight
+   Type: Weather
+   InitialDelay: 24
+   Delay: 5
+   Lifetime: 600
+-  Name: SnowMedium
+   Type: Weather
+   InitialDelay: 24
+   Delay: 12
+   Lifetime: 600
+-  Name: SnowHeavy
+   Type: Weather
+   InitialDelay: 24
+   Delay: 12
+   Lifetime: 600
+-  Name: ColdWave
+   Type: Weather
+   InitialDelay: 48
+   Delay: 24
+   Lifetime: 1000
+-  Name: Hail
+   Type: Weather
+   InitialDelay: 48
+   Delay: 24
+   Lifetime: 600
+AtmosphereColor: .89, 0.4, 0
+OrbitUsesLightColor: False
+SkyColor: .8, 0, 0
+SkyHorizonColor: 1, 0.3, 0
+AtmosphereParams: [1, 1.6]
+LightZenithColor: 0.85,0.65,0.13
+LightHorizonColor: 1, 0.6, 0.15
+DayLightIntensity: 0.75
+NightLightIntensity: 0.63
+NightLightColor: 1,0.27,0
+SunFlare: EnvironmentalEffects/SunFlareYellow
+AtmosphereFog: 0.96997829999999996
+FogColor: .95, .5, .14
+FogCloudIntensity: 0.80000000000000004
+FogIntensity: 0.10000000000000001
+FogStartDistance: 800
+GroundFogIntensity: 0.01
+GroundFogHeight: 45
+CloudsDensity: 1
+CloudsSharpness: 0.20000000000000001
+CloudsBrightness: 1.3
+CloudsOpacity: 0.78000000000000003
+CloudsZenithColor: 1,0.65,0
+CloudsHorizonColor: 1, 0.3, 0
+WindSpeed: 3
+Build: 1905
+Radiation: 3.1000000000000001
+UseRandom: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 5
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+RandomResources:
+-  Name: IronResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 4]
+   SizeMinMax: [9, 12]
+   DepthMinMax: [4, 10]
+   DroneProb: 0.20000000000000001
+   MaxDroneCount: 2
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: CopperResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [5, 8]
+   DepthMinMax: [4, 8]
+   DroneProb: 0.29999999999999999
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: SiliconResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [5, 8]
+   DepthMinMax: [4, 8]
+   DroneProb: 0.29999999999999999
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: CobaltResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [8, 12]
+   DepthMinMax: [4, 8]
+   DroneProb: 0.20000000000000001
+   MaxDroneCount: 3
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: NeodymiumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [6, 9]
+   DepthMinMax: [0, 5]
+   DroneProb: 0.90000000000000002
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: TitanResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [7, 10]
+   DepthMinMax: [0, 5]
+   DroneProb: 0.90000000000000002
+   MaxDroneCount: 3
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+-  Name: PromethiumResource
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [1, 2]
+   SizeMinMax: [5, 7]
+   DepthMinMax: [0, 5]
+   DroneProb: 0.40000000000000002
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 10
+AsteroidResources:
+-  Name: IronResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+-  Name: CopperResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+-  Name: SiliconResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+-  Name: CobaltResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+-  Name: NeodymiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+-  Name: TitanResource
+   Threshold: 0.20000000000000001
+   Amount: 0.1
+
+POIs:
+   Random:
+   -  GroupName: DroneBaseT1RG
+      Faction: Zirax
+      NoShieldReload: True
+      DroneBaseSetup: DroneBaseSetup
+      CountMinMax: [1, 1]
+      DroneProb: 1
+      DronesMinMax: [3, 5]
+      ReserveCount: 5
+      Properties:
+      -  Key: Music
+         Value: moonstone
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: TS_PlanetRG
+      Faction: Polaris
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      SpawnPOIAvoid: [DroneBaseT1RG]
+      SpawnPOIAvoidDistance: 2000
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: Music
+         Value: SunnySkies
+   -  GroupName: CivilSettlementSnowRG
+      Faction: Polaris
+      NoShieldReload: True
+      CountMinMax: [1, 2]
+      DronesMinMax: [1, 1]
+      TroopTransport: False
+      SpawnPOINear: [TS_PlanetRG]
+      SpawnPOINearRange: [100, 250]
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosMainSnowRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DronesMinMax: [1, 1]
+      TroopTransport: True
+      SpawnPOIAvoid: [TS_PlanetRG]
+      SpawnPOIAvoidDistance: 2000
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosAuxT1SnowRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [3, 4]
+      IsImportant: True
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [1, 2]
+      ReserveCount: 3
+      TroopTransport: True
+      SpawnPOINear: [RadosMainSnowRG]
+      SpawnPOINearRange: [100, 250]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosDefenseT1Snow
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [4, 5]
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [1, 2]
+      ReserveCount: 3
+      TroopTransport: False
+      SpawnPOINear: [RadosMainSnowRG]
+      SpawnPOINearRange: [200, 350]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosAuxT1SnowRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [3, 4]
+      DroneProb: 1
+      DronesMinMax: [1, 2]
+      ReserveCount: 3
+      TroopTransport: False
+      SpawnPOINear: [DroneBaseT1RG]
+      SpawnPOINearRange: [350, 600]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosBunkerRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [2, 3]
+      IsScalingCount: True
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [3, 5]
+      ReserveCount: 3
+      TroopTransport: True
+      SpawnPOIAvoid: [TS_PlanetRG]
+      SpawnPOIAvoidDistance: 2000
+      Properties:
+      -  Key: Music
+         Value: lava
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: PolarisDefenceSnowRG
+      Faction: Polaris
+      NoShieldReload: True
+      CountMinMax: [2, 2]
+      IsScalingCount: True
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      SpawnPOINear: [TS_PlanetRG]
+      SpawnPOINearRange: [400, 600]
+   -  GroupName: GWWeapRes
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [3, 4]
+      IsScalingCount: False
+      IsImportant: True
+      DroneProb: 0.5
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [250, 350]
+      SpawnPOIAvoid: [GWWeapRes]
+      SpawnPOIAvoidDistance: 1000
+   -  GroupName: Ruins
+      CountMinMax: [3, 4]
+      DroneProb: 0.5
+      DronesMinMax: [1, 3]
+      ReserveCount: 2
+      TroopTransport: False
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [150, 250]
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: CivilSettlementSnowRG
+      Faction: Polaris
+      NoShieldReload: True
+      CountMinMax: [2, 3]
+      IsScalingCount: True
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [1, 3]
+      ReserveCount: 3
+      TroopTransport: False
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosAuxT2SnowRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [3, 4]
+      IsScalingCount: True
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [4, 6]
+      ReserveCount: 3
+      TroopTransport: True
+      SpawnPOIAvoid: [TS_PlanetRG]
+      SpawnPOIAvoidDistance: 1000
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: CrashedShip
+      CountMinMax: [3, 4]
+      IsScalingCount: True
+      PlaceAt: UnderWater
+      DroneProb: 0.80000000000000004
+      DronesMinMax: [1, 2]
+      ReserveCount: 4
+      TroopTransport: False
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: AbandonedPOIRG
+      Faction: Alien
+      CountMinMax: [1, 2]
+      IsScalingCount: True
+      DroneProb: 1
+      DronesMinMax: [2, 3]
+      ReserveCount: 3
+      TroopTransport: True
+      Properties:
+      -  Key: Music
+         Value: lava
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Wreckage
+      CountMinMax: [1, 3]
+      IsScalingCount: True
+      DroneProb: 0.5
+      DronesMinMax: [1, 3]
+      ReserveCount: 2
+      TroopTransport: True
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+
+# Harvestable Magmacite
+   -  GroupName: Eden_HarvestMagmacite
+      Faction: None
+      Biome: [Water]
+      PlaceAt: OnWater
+      CountMinMax: [ 1, 2 ]
+      IsScalingCount: True
+      DroneProb: 0
+      DronesMinMax: [ 1, 2 ]
+      ReserveCount: 3
+      TroopTransport: False 
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: SI
+         Value: Off
+      -  Key: RegenAfter
+         Value: 720
+
+   -  GroupName: Ruins
+      CountMinMax: [2, 3]
+      IsScalingCount: True
+      DroneProb: 0.5
+      DronesMinMax: [1, 3]
+      ReserveCount: 2
+      TroopTransport: False
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   FixedPlayerStart:
+   -  Mode: Survival
+      Spawn: EscapePod
+      Pos: [0, 0, 0]
+      PlayerArmor: ["ArmorMedium, ArmorLight, ArmorLight, #FreshStart:ArmorLight"]      
+      Items: [CrushedStone, "Pizza, Beer, Buds:4, PistolT2, 50Caliber:250, PowerBar:4, Flashlight, Bandages:3, AdrenalineShot, AntiParasitePills:2", CrushedStone]
+      Status: ["Food:500, Health: 500", "Food:500, Health: 500", "Food:500, Health: 500", "#FreshStart:Food:500, Health: 500"]
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseSetup
+      DronesMinMax: [0, 0]
+      Difficulty: 7
+      PresetStyle: 3
+      Stock:
+      -  Name: DroneSmallFast01Rocket
+         Amount: 200
+         Extra: 0
+      -  Name: DroneSmallFast01Plasma
+         Amount: 200
+         Extra: 0
+      -  Name: EnemyDroneV2Minigun
+         Amount: 300
+         Extra: 0
+      -  Name: DroneLargeAttackBase
+         Amount: Infinite
+         Extra: 1
+      -  Name: EnemyDroneV2Plasma
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneBomberAttackBase
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneTroopsTransport01
+         Amount: Infinite
+         Extra: 2
+      -  Name: ZiraxMinigun
+         Amount: 500
+         Extra: 3
+      -  Name: AlienAssassinGrey
+         Amount: 400
+         Extra: 3
+      -  Name: RipperDog
+         Amount: Infinite
+         Extra: 3
+      PlanetVesselBase:
+         Faction: Zirax
+         Position3D: [0, 102, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+         PlanetVessel:
+         -  Name: Patrol-XS-Medium
+            Faction: Zirax
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 5
+            RespawnDelay: 18
+            InitialDelay: 72
+            RangePatrolTask:
+               Position3D: [1000, 80, 0]
+               Radius: 500
+               DistToGround: 80
+            AttackCVCircleAround:
+               DistToTarget: 200
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [10, 15]
+      CenterX: -2500
+      Radius: 2000
+   -  DronesMinMax: [10, 15]
+      CenterX: 2500
+      Radius: 2000
+SpawnRateZones:
+-  SpawnAt: [TS_PlanetRG]
+   Radius: 1000
+   RadiusRandom: 50
+   RateMultiplyerEdge: 0.69999999999999996
+   AffectEnemies: True
+   Color: 0.0, 1.0, 0.0, 0.7
+SpawnZones:
+-  SpawnAt: [Wreckage, AbandonedPOIRG, CrashedShip]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 500
+   RadiusRandom: 50
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.5
+   Color: 1.0, 0.6, 0.2, 0.7
+   Entities:
+   -  Names: [CaveWormsWhite]
+      Biomes: [Any]
+      Amount: 200
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [NeodymiumResource, TitanResource]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 500
+   RadiusRandom: 50
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 0.6, 0.2, 0.7
+   Entities:
+   -  Names: [GolemsIce]
+      Biomes: [Any]
+      Amount: 300
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [DroneBaseT1RG, RadosMainSnowRG, RadosAuxT2SnowRG, RadosBunkerRG]
+   BiomesExcluded: [LowMountains, Mountains]
+   Radius: 800
+   RadiusRandom: 100
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 0.6, 0.2, 0.7
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol, ZiraxOverseerPatrol]
+      Biomes: [Any]
+      Amount: 350
+      Period: Always
+      DelayMinMax: [-1, -1]
+CreatureSpawning:
+-  Biomes: [Shore]
+   Entities:
+   -  Name: SlimesWhite
+      Period: Always
+      Amount: 10
+      DelayMinMax: [10, 12]
+   -  Name: CaveWormsWhite
+      Period: Night
+      Amount: 10
+      DelayMinMax: [0, 0]
+-  Biomes: [Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge]
+   Entities:
+   -  Name: SlimesWhite
+      Period: Day
+      Amount: 8
+      DelayMinMax: [10, 12]
+   -  Name: Oviraptors
+      Period: Always
+      Amount: 20
+      DelayMinMax: [10, 12]
+   -  Name: CaveWormWhiteHerd
+      Period: Always
+      Amount: 20
+      DelayMinMax: [20, 24]
+   -  Name: Spiders01
+      Period: Night
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [Dunes, Plains, IceShelf, Tundra, GlacierSnow, Rocks]
+   Entities:
+   -  Name: CaveWormWhiteHerd
+      Period: Day
+      Amount: 15
+      DelayMinMax: [20, 24]
+   -  Name: GolemsIce
+      Period: Night
+      Amount: 12
+      DelayMinMax: [20, 24]
+   -  Name: ZiraxRipperDogPatrol
+      Period: Always
+      Amount: 10
+      DelayMinMax: [0, 0]
+   -  Name: Crawlers
+      Period: Always
+      Amount: 8
+      DelayMinMax: [0, 0]
+-  Biomes: [LowMountains]
+   Entities:
+   -  Name: CaveWormWhiteHerd
+      Period: Always
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [Taiga]
+   Entities:
+   -  Name: RaptorHerd
+      Period: Always
+      Amount: 20
+      DelayMinMax: [12, 20]
+      Color: 0.5,0.5,0

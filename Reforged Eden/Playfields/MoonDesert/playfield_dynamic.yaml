@@ -1,0 +1,528 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [2]
+  SizeProbs: [1] 
+TemperatureMin: [-5, 0]                         
+TemperatureMax: [35,40]      
+TemperatureNight: [20,30]
+PlanetAxis: [-20,20]                      
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [5, 9]
+SeaLevel: [0, 0]                                      
+TerrainLevel: [184, 184]                              
+BaseLevel: [72, 72]
+LandWaterRatio: [0, 0]    
+TemperatureHeightRange: [70, 388]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+GravityMinMax: [-6, -7]
+AtmosphereDensityMinMax: [0.05, 0.15] 
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0, 0]
+GroundFogProb: 1
+GroundFogIntensityRange: [0.03, 0.1]
+GroundFogHeightRange: [100, 135]
+
+Water: [RockLava03]
+Music: [BarrenMoon]
+# ==============================================================
+
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+  - GroundShape_3, 0.5  
+
+
+BiomeStampTries: 10       
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole             # same as Desert biome
+    # Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [0,0, 0.02]   
+    Color: [0.6, 0.6, 0.6]
+    
+    SelectionCriteria:  
+    - +Lat > 0.975
+
+
+
+# ==============================================================
+# (HEIGHT CHECKER) -  Absolute minimum biome to check stamp interactions and keep enough ground depth. - Shouldn't even show up. 
+# ==============================================================
+  - Name: Unknown     
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.2]   
+    Color: [0.0, 1, 0.0]   
+    
+    SelectionCriteria:
+    - Height < SeaLevel
+
+    UndergroundLayers:
+               - [15, -1]
+               - [15, 1]
+    
+    
+    Temperature: 10
+    
+    Decorations:  
+
+    Grass:
+# ==============================================================
+  # BIOMES
+# ==============================================================
+  - Name: Dunes 
+    IgnoreForcedBiome: true  
+    Texture: [4, 5, -0.25]    
+    Color: [0.3, 0.3, 0.5]      
+    SelectionCriteria:
+    - Height > 600    
+    
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 2]
+               - [11, 1]
+               - [15, 30]
+               - [11, -1]
+               - [10, 1]
+    
+    StampForcesBiomeType: OverlapAll
+    StampForcesBiome: true
+    StampTries: 15
+    Stamps: 
+    - IceDunes_01a, 0.5
+    - IceDunes_01b, 0.5
+
+    Decorations:  
+               - [RockGrey01Large, 0.0001]    
+               - [RockGrey02Large, 0.0001] 
+
+
+# ==============================================================
+  - Name: Mountains                      
+    IgnoreForcedBiome: true  
+    Texture: [1,6,0.5, 2,7,0.8, 0.18]  
+    Color: [0.7, 0.7, 0.7]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 15 
+    SelectionCriteria: 
+    - Height > 170
+    
+    UndergroundLayers:
+               - [1, 3]
+               - [11, -1]
+               - [10, 1]
+    
+
+    Stamps:
+    - Mountain_4a, 0.1 
+    - Mountain_4b, 0.1
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+    Grass:
+    
+    
+    
+ # ==============================================================
+  - Name: MareEdge                  
+    Texture: [0,0,0.5, 2,7,0.8, 0.0]   
+    Color: [0.1, 0.1, 0.3]
+    
+    SelectionCriteria: 
+    - Height < 102
+    - Height > 99
+
+    # UndergroundLayers:   #(Using Default of OldLavaFields)
+
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: Mare                  
+    Texture: [4, 4, 0.5, 7,7, 0.5, -0.1]
+    Color: [0.3, 0.3, 0.3]
+    
+    SelectionCriteria: 
+    - Height < 102
+    - Height > 10
+
+    UndergroundLayers:
+               - [10, 2]
+               - [11, 1]
+               - [15, 30]
+               - [11, -1]
+               - [10, 1]
+    
+    
+    StampProb: 0.9               
+    Stamps:
+    - CraterMoon_1, 1    
+
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+ # ==============================================================
+  - Name: Rifts                    
+    Texture: [7, 2, 0.2]   
+    Color: [0.6, 0.7, 0.2]
+    
+    SelectionCriteria: 
+    - Height > 600                     
+
+    
+    Temperature: 5
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 1                   
+    Stamps:
+    - RiftLava_1b_BM, 0.5  
+    
+    UndergroundLayers:
+               - [9, 2]
+               - [15, 2]
+               - [9, 2]
+               - [15, 17]
+               - [11, -1]
+               - [10, 1]
+    
+
+ # ==============================================================  
+  - Name: LargeCrater            
+    Texture: [9,8,0.5, 3,2,0.5, -0.05]   
+    Color: [0.7, 0.2, 0.2]
+    
+    SelectionCriteria: 
+    - Height > 600                    
+
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 56                     
+    Stamps:
+    - CraterMoon_10, 0.09
+    - CraterMoon_11, 0.055
+    - CraterMoon_12, 0.019
+    - CraterMoon_13, 0.011
+
+    UndergroundLayers:                
+               - [8, 1]
+               - [9, 3]
+               - [15, 3]
+               - [9, 2]
+               - [15, 6]
+               - [9, 1]
+               - [15, 9]
+               - [11, 3]
+               - [15, 10]
+               - [11, -1]
+               - [10, 1]
+    
+    Temperature: 5
+
+    Decorations:  
+               - [RockGrey01Large, 0.004]
+               - [RockGrey02Large, 0.004]
+               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0001, Free]
+               - [RockResourceCobalt, 0.0001, Free]
+               - [RockResourceIron, 0.0002, Free]
+               - [CrystalStraight, 0.00015, Free]
+               
+    Grass:    
+
+ # ==============================================================
+  - Name: RayCrater                 
+    Texture: [9,8,0.5, 3,7,0.5, 0.001]   
+    Color: [0.7, 0.7, 0.2]
+    
+    SelectionCriteria: 
+    - Height > 600                     
+
+    
+    Temperature: 5
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 19                     
+    Stamps:
+    - CraterMoon_14, 0.025
+    - CraterMoon_14b, 0.007
+
+    
+    UndergroundLayers:
+               - [9, 2]
+               - [15, 2]
+               - [9, 2]
+               - [15, 17]
+               - [11, -1]
+               - [10, 1]
+    
+    
+ # ==============================================================
+  - Name: SmallCrater                 
+
+    Texture: [9,8,0.5, 3,3,0.5, 0.1]  
+    Color: [0.9, 0.3, 0.3]
+    
+    SelectionCriteria: 
+    - Height > 600                     
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 1200                    
+    Stamps:
+    - CraterMoon_1, 0.3  
+    - CraterMoon_2, 0.05 
+    - CraterMoon_3, 0.15
+    
+    - CraterMoon_4, 0.04
+    - CraterMoon_5, 0.10 
+    - CraterMoon_6, 0.08
+    - CraterMoon_7, 0.02
+    - CraterMoon_8, 0.015
+    - CraterMoon_9, 0.008
+    - CraterMoon_10, 0.003
+    
+    
+    UndergroundLayers:
+               - [8, 1]
+               - [9, 2]
+               - [15, 2]
+               - [9, 2]
+               - [15, 17]
+               - [11, -1]
+               - [10, 1]
+    
+    Temperature: 5
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Rock Resources:
+               - [CrystalStraight, 0.0001, Free]
+    Grass:    
+
+
+ # ============================================================== 
+  - Name: LowMountains
+#    Texture: [1,6,0.5, 7,7,1, -0.1]   
+    Texture: [1,6,0.5, 7,7,1, -0.0]   
+    Color: [0.5, 0.5, 1]
+    
+    SelectionCriteria: 
+    - Height > 150  
+    - Height < 280 
+
+    UndergroundLayers:
+               - [1, 1]
+               - [15, 30]
+               - [11, -1]
+               - [10, 1]
+    
+    Decorations: 
+    Grass: 
+
+    
+# ============================================================== 
+  - Name: RegolithEdge
+    Texture: [0,5,0.9, 3,3,1.0, -0.0]  
+    Color: [0.4, 0.4, 0.4]      
+    SelectionCriteria:
+    - Height > 140    
+    
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 2]
+               - [11, 1]
+               - [15, 30]
+               - [11, -1]
+               - [10, 1]
+    
+    
+    Decorations:
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]    
+    Grass:
+    
+# ==============================================================  
+  - Name: Regolith
+    Texture: [0, 7, 0.1]   
+    Color: [0.5, 0.5, 0.5]      
+    SelectionCriteria:
+    - Height > 130    
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, 1]
+               - [11, 1]
+               - [15, 60]
+               - [11, -1]
+               - [10, 1]
+    
+    
+    Decorations:
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]    
+               
+               # Rock Resources:
+               - [RockResourceIron, 0.0001, Free]
+               
+    Grass:
+    
+# ============================================================== 
+  - Name: Flats
+    Texture: [10,0,0.8, 7,3,0.6, 0.00] 
+    Color: [0.6, 0.6, 0.6]
+    
+    SelectionCriteria: 
+    - Height > 90
+
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [10, 2]
+               - [11, 3]
+               - [10, 1]
+               - [11, 12]
+               - [15, 40]
+               - [11, -1]
+               - [10, 1]
+    
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+    Grass:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================
+# (CATCHALL) - Shouldn't even show up. 
+# ==============================================================
+ # # Curiosity biome
+  - Name: GreetingsStranger                 # *{We come in peace - To learn about the universe and find new planets and lifeforms!}
+    Texture: [8,9,0.5, 3,3,0.5, 0.001]      
+    
+    Color: [0.3, 0.3, 0.3]
+#    Color: [0, 1, 0]
+        
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 1                           # *{And to watch the stars roll by... So relaxing.)
+    Stamps:
+    - CraterMoon_1_BM, 0.3   
+    
+    Temperature: 5
+    
+    Decorations:                            # *{Maybe somewhere out there are some tender-grown, well-glowing lifeforms that are like us?}
+               - [GlowTube01, 1]
+    Grass:    
+
+    

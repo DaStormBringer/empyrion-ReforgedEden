@@ -1,0 +1,16 @@
+[ModelTest]
+-Mode=Opaque
+-Pos=0.2958982,129.4402,3.154297
+-Rot=75.90308,134.8783,50.60607
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FlamesOrangeSmall3
+
+[ModelTest]
+-Mode=Opaque
+-Pos=-0.3164062,129.6132,-0.3641358
+-Rot=48.00807,218.411,190.4917
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FlamesOrangeSmall3
+

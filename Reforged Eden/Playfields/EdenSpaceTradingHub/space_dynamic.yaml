@@ -1,0 +1,152 @@
+# Playfield Characteristics
+Description: "Difficulty [c][00ffff]Safe[-][/c]
+\n \n Sovereignty [c][00ffff]Trade Guild[-][/c]
+\n \n \n The Trade Guild Drydock located here offers a safe haven and trading hub to any and all.
+\n \n \n [c][ffffff][i]This Drydock is currently under construction.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [3,4]                    
+TemperatureDay: [-125,-75]    
+# Habitable Orbit Music
+Music: [Artefact, ColdDivide, DistantWorlds, FirstHours, Migration, moonstone, Orbiting, space, Transit]
+ 
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Station
+
+Skybox:
+    - [SunFlareWhiteSpace, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4Space, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3Space, SkyboxStarsBlue, PrefabNebulaBlueGlittery] 
+    - [SunFlareWhiteSpace, SkyboxStarsBlack, PrefabNebulaBlue] 
+    - [SunFlareRedSpace, SkyboxStarsPurple, PrefabNebulaOrange] 
+    - [SunFlareWhite4Space, SkyboxStarsPurple, PrefabNebulaBluePinkPurple] 
+    - [SunFlareWhiteSpace, SkyboxStarsRed, PrefabNebulaRed] 
+    - [SunFlareWhite3Space, SkyboxStarsBlack, PrefabNebulaBlueOrange] 
+    - [SunFlareRedSpace, SkyboxStarsRed, PrefabNebulaBluePinkRed] 
+    - [SunFlareWhiteSpace, SkyboxStarsCyan, PrefabNebulaBlue2] 
+    
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0     
+      Properties:     
+        - Key: RegenAfter
+          Value: 180       
+
+### POIs
+POIs:
+# ====================================================================================================================================== Asteroids
+    - Type: AsteroidVoxel01Pentaxid   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Pentaxid Asteroid
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]    
+      Probability: 1
+      InitPower: True
+      # Position:
+         # PosXZMinMax: [2000, 5000]
+         # PosYMax: 1000
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Admin
+      Name: [Eden_TSO_Drydock]  
+      DisplayName: Trade Guild Drydock
+      Faction: Admin
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [2, 2]
+        Probability: 1
+        Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]
+        DistanceMinMax: [1500, 3000] 
+        Rotate: false
+      Properties: 
+        - Key: PersonalContainer
+          Value: "PentaxidCrystal:50"
+        - Key: MapDistance
+          Value: 25000
+        - Key: Music
+          Value: NebularClouds  
+
+    - Type: BA_Admin
+      Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]  
+      DisplayName: Trading Station
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 2, 2 ]     
+      Probability: 0.9
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Properties: 
+        - Key: Music
+          Value: SunnySkies  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [0, 0]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma]
+        Count: [0, 1]
+        Radius: [300, 800]
+      SpaceVessels:
+          - Name: [Freighter]     
+            Count: [0, 0]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+ 
+          - Name: [OPVZiraxRG]        
+            Count: [0, 0]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 1500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+                    
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            Count: [0, 0]
+            FixedMaxSpeed: [20,20]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]         
+            Properties: 
+              - Key: RegenAfter
+                Value: 720                     

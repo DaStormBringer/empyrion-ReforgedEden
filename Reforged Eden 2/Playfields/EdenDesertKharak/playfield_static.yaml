@@ -1,0 +1,727 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+# From Monroe's Planet Pack I
+
+# ==============================================================
+# Playfield Characteristics
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+
+The Hiigarans have landed a colony here from their journey to the Centaurus Cluster, and called it 'New Kharak', based on some distant planet similar to this one. The Zirax have setup some pretty stern defenses here, if somewhat green, guarding the ship graveyards which serve as valuable salvage.
+
+
+The Hiigarans tried to have peaceful contact, but has slowly devolved into violence, with much infighting to control the salvage here. Many ships still litter the surface, and most of them could be returned to service, with the right repairs...
+
+
+[c][DAA520][i]Tied first place for the November 2019 Custom Planet Challenge.[/i][-][/c]
+
+[c][808080][i]Originally created by Fenra369.[/i][-][/c]"
+
+
+PlanetType: Desert
+PlayfieldType: Planet
+AtmosphereEnabled: True
+Difficulty: 3
+LandClaimZone: Device
+SpecialEffectsLocal:
+-  Name: FireFliesRed
+   Biome: [Water, ShallowWater, Shore]
+   Time: Night
+   MaxHeight: 40
+-  Name: FireFliesGreenFew
+   Biome: [Plains, Sand, Flowers, FlowersEdge, Wadi, DustBowl]
+   Time: Night
+   MaxHeight: 150
+-  Name: FireFliesGreen
+   Biome: [Oasis, Plantation]
+   Time: Night
+   MaxHeight: 150
+-  Name: DustDevil
+   Biome: [Sand, Dunes, Plateau, SandDrift, DustBowl]
+   Time: Always
+   MaxHeight: 100
+SpecialEffectsGlobal:
+-  Name: Clear
+   Type: Weather
+   Delay: 2
+   Lifetime: 1200
+-  Name: HeatWave
+   Type: Weather
+   InitialDelay: 48
+   Delay: 12
+   Lifetime: 1600
+-  Name: Wind
+   Type: Weather
+   InitialDelay: 20
+   Delay: 8
+   Lifetime: 500
+-  Name: CloudsLight
+   Type: Weather
+   InitialDelay: 10
+   Delay: 4
+   Lifetime: 600
+-  Name: BirdFlocksVultures
+   Biome: [Dunes, Plains, Mountains, Water, Flowers, Plantation]
+   Time: Day
+   InitialDelay: 2
+   Delay: 4
+   PlyDist: 50
+   Struct: True
+   Lifetime: 600
+   SpawnY: 40
+AtmosphereColor: 0.85,0.65,0.13
+SkyColor: 0.53,0.81,0.98
+SkyHorizonColor: 1,0,0
+AtmosphereParams: [5, 1.5]
+LightZenithColor: 1, 0.7, 0.7
+LightHorizonColor: 1, 0.5, 0
+DayLightIntensity: 1.3999999999999999
+NightLightIntensity: 0.29999999999999999
+NightLightColor: 0.78, 0.78, 1
+SunFlare: EnvironmentalEffects/SunFlareRed
+# AtmosphereFog: 0.34999999999999998
+FogColor: 0.8, 0.4, 0.2
+FogCloudIntensity: 0.80000000000000004
+# GroundFogIntensity: 0.050000000000000003
+# GroundFogHeight: 60
+CloudsDensity: 0.10000000000000001
+CloudsSharpness: 0.050000000000000003
+CloudsBrightness: 0.69999999999999996
+CloudsOpacity: 0.29999999999999999
+CloudsZenithColor: 0.85, 0.36, 0.20
+CloudsHorizonColor: 0.2, 0.04, 0.03
+CloudsNightZenithColor: 0.03, 0.012, 0.012
+CloudsNightHorizonColor: 0.03, 0.012, 0.012
+WindSpeed: 3
+
+
+BaseAttackCount: 1
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+RandomResources:
+-  Name: IronResource
+   Biome: [Sand, Dunes]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 3]
+   SizeMinMax: [5, 7]
+   DepthMinMax: [5, 15]
+   DroneProb: 0.20000000000000001
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 5
+-  Name: CobaltResource
+   Biome: [Wadi, Oasis, Flowers]
+   IsScalingCount: True
+   IsImportant: True
+   CountMinMax: [1, 2]
+   SizeMinMax: [3, 7]
+   DepthMinMax: [10, 15]
+   DroneProb: 0.29999999999999999
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 5
+-  Name: CopperResource
+   Biome: [Plateau]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [1, 3]
+   SizeMinMax: [4, 6]
+   DepthMinMax: [10, 15]
+   DroneProb: 0.29999999999999999
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 5
+-  Name: SathiumResource
+   Biome: [Sand, Dunes]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [5, 9]
+   SizeMinMax: [6, 10]
+   DepthMinMax: [20, 38]
+   DroneProb: 0.80000000000000004
+   MaxDroneCount: 4
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 5
+-  Name: PromethiumResource
+   Biome: [Mountains, LowMountains, LowMountains_1]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 4]
+   SizeMinMax: [5, 8]
+   DepthMinMax: [10, 11]
+   DroneProb: 0.80000000000000004
+   #DistTypeCylinder:
+      #MaxRadius: 13
+      #YVariance: 5
+AsteroidResources:
+-  Name: IronResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: CobaltResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: CopperResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: SathiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: PromethiumResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+POIs:
+   Random:
+   -  GroupName: DroneBaseT1RG
+      Faction: Zirax
+      NoShieldReload: True
+      LevelMod: +2
+      Biome: [Plateau, LowMountains, LowMountains_1, Mountains, SandDrift]
+      DroneBaseSetup: DroneBaseSetup
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [3, 5]
+      ReserveCount: 5
+      SpawnResource: ['IronResource:0-1', 'PromethiumResource:0-1', 'CopperResource:0-1']
+      SpawnResourceRange: [150, 400]
+      Properties:
+      -  Key: RegenAfter
+         Value: 1440
+   -  GroupName: RadosDefenceT1Sand
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [2, 2]
+      DroneProb: 1
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      TroopTransport: True
+      SpawnPOINear: [DroneBaseT1RG]
+      SpawnPOINearRange: [200, 300]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: JunkT1
+      Faction: None
+      CountMinMax: [4, 7]
+      SpawnPOINear: [DroneBaseT1RG]
+      SpawnPOINearRange: [150, 600]
+      Properties:
+      -  Key: MapDistance
+         Value: 25
+      -  Key: HudDistance
+         Value: 50
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Ruins
+      Faction: None
+      Biome: [SandDrift, Dunes, Sand]
+      CountMinMax: [3, 5]
+      NoShieldReload: True
+      Properties:
+      -  Key: MapDistance
+         Value: 0
+      -  Key: HudDistance
+         Value: 50
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Wreckage
+      Faction: None
+      Biome: [SandDrift, Sand, Dunes]
+      CountMinMax: [2, 5]
+      NoShieldReload: True
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: CrashedShipGreen
+      Faction: None
+      Biome: [LargeCrater, Oasis]
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 0.20000000000000001
+      DronesMinMax: [1, 2]
+      ReserveCount: 1
+      TroopTransport: False
+      Properties:
+      -  Key: MapDistance
+         Value: 275
+   -  GroupName: ShipGrave
+      Faction: None
+      Biome: [Sand, Dunes, Plains, LargeCrater, SandDrift, DustBowl]
+      CountMinMax: [12, 20]
+      IsImportant: True
+      DroneProb: 0.10000000000000001
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      Properties:
+      -  Key: HudDistance
+         Value: 100
+      -  Key: RegenAfter
+         Value: 1440
+   -  GroupName: ShipWrecks
+      Faction: None
+      Biome: [DustBowl, SandDrift, Dunes, Sand, Plains]
+      CountMinMax: [14, 20]
+      IsImportant: True
+      DroneProb: 0.20000000000000001
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+      -  Key: MapDistance
+         Value: 275
+   -  GroupName: ShipWrecks
+      Faction: None
+      CountMinMax: [5, 8]
+      IsImportant: False
+      DroneProb: 0.20000000000000001
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      SpawnPOINear: [CrashedShipGreen]
+      SpawnPOINearDistance: 750
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+      -  Key: MapDistance
+         Value: 275
+   -  GroupName: FighterWreck
+      Faction: None
+      Biome: [DustBowl, SandDrift, Dunes, Sand, Plains, LargeCrater]
+      Type: SV_Player
+      CountMinMax: [16, 20]
+      IsImportant: True
+      DroneProb: 0.10000000000000001
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      Properties:
+      -  Key: MapDistance
+         Value: 50
+   -  GroupName: PlanetVesselBase
+      Faction: Zirax
+      NoShieldReload: True
+      BiomesExcluded: [Plains]
+      PlanetVesselBaseSetup: PlanetVesselBaseSetup
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [2, 3]
+      ReserveCount: 3
+      NoShieldReload: True
+      TroopTransport: True
+      SpawnResourceRange: [80, 100]
+      Properties:
+      -  Key: RegenAfter
+         Value: 1440
+   -  GroupName: RadosAuxT1SandRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      DroneProb: 0.90000000000000002
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: False
+      SpawnPOINear: [PlanetVesselBase]
+      SpawnPOINearRange: [100, 250]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosDefenseT1
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [2, 4]
+      DroneProb: 0.69999999999999996
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: False
+      SpawnPOINear: [PlanetVesselBase]
+      SpawnPOINearRange: [250, 400]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: CrashedShip
+      Faction: None
+      CountMinMax: [0, 1]
+      DroneProb: 0.29999999999999999
+      DronesMinMax: [1, 1]
+      TroopTransport: False
+      SpawnPOINear: [PlanetVesselBase]
+      SpawnPOINearRange: [500, 700]
+      Properties:
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosMainSandRG
+      Faction: Zirax
+      NoShieldReload: True
+      BiomesExcluded: [Plains]
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [2, 3]
+      ReserveCount: 2
+      TroopTransport: True
+      SpawnResource: ['PromethiumResource:1-2']
+      SpawnResourceRange: [80, 100]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosAuxT1SandRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      DroneProb: 1
+      DronesMinMax: [3, 3]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: False
+      SpawnPOINear: [RadosMainSandRG]
+      SpawnPOINearRange: [100, 250]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosDefenceT1Sand
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 2]
+      DroneProb: 0.69999999999999996
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: False
+      SpawnPOINear: [RadosMainSandRG]
+      SpawnPOINearRange: [250, 400]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosBunkerRG
+      Faction: Zirax
+      NoShieldReload: True
+      BiomesExcluded: [Plains]
+      CountMinMax: [1, 1]
+      IsImportant: True
+      DroneProb: 1
+      DronesMinMax: [2, 3]
+      ReserveCount: 5
+      TroopTransport: True
+      SpawnPOINear: [PlanetVesselBase]
+      SpawnPOINearRange: [1500, 2000]
+      SpawnResource: ['SathiumResource:1-2']
+      SpawnResourceRange: [80, 100]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosMainSandRG
+      Faction: Zirax
+      NoShieldReload: True
+      BiomesExcluded: [Plains]
+      CountMinMax: [1, 1]
+      DroneProb: 1
+      DronesMinMax: [2, 3]
+      ReserveCount: 2
+      TroopTransport: True
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [200, 250]
+      SpawnResource: ['PromethiumResource:1']
+      SpawnResourceRange: [80, 100]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosAuxT1SandRG
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      DroneProb: 1
+      DronesMinMax: [1, 3]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: True
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [150, 400]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: RadosDefenceT1Sand
+      Faction: Zirax
+      NoShieldReload: True
+      CountMinMax: [1, 1]
+      DroneProb: 0.69999999999999996
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: False
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [300, 550]
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: JunkT1
+      Faction: None
+      CountMinMax: [2, 5]
+      SpawnPOINear: [RadosBunkerRG]
+      SpawnPOINearRange: [300, 650]
+      Properties:
+      -  Key: MapDistance
+         Value: 25
+      -  Key: HudDistance
+         Value: 50
+      -  Key: MapMarker
+         Value: Neutral
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: JunkT2
+      Faction: None
+      CountMinMax: [5, 15]
+      DronesMinMax: [1, 1]
+      ReserveCount: 1
+      TroopTransport: False
+      SpawnPOINear: [ShipWrecks, ShipGrave]
+      SpawnPOINearDistance: 650
+      Properties:
+      -  Key: HudDistance
+         Value: 80
+      -  Key: MapDistance
+         Value: 50
+   -  GroupName: RadosAuxT1SandRG
+      Faction: Zirax
+      NoShieldReload: True
+      BiomesExcluded: [Plains]
+      CountMinMax: [5, 7]
+      IsScalingCount: True
+      DroneProb: 0.29999999999999999
+      DronesMinMax: [1, 2]
+      ReserveCount: 2
+      NoShieldReload: True
+      TroopTransport: True
+      Properties:
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Artifacts
+      Faction: Alien
+      BiomesExcluded: [Plains, LowMountains, LowMountains_1, Mountains]
+      CountMinMax: [1, 1]
+      IsScalingCount: False
+      IsImportant: True
+      Properties:
+      -  Key: Music
+         Value: EvilWhispering
+      -  Key: RegenAfter
+         Value: 720
+   FixedPlayerStart:
+   -  Mode: Creative
+      SubMode: Empty
+      Pos: [0, 147, 0]
+      RotY: 160
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorLight
+   -  Mode: Creative
+      SubMode: Normal
+      Pos: [0, 52, 0]
+      RotY: 30
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorLight
+   -  Mode: Debug
+      Pos: [0, 147, 0]
+      RotY: 160
+      Items: [CrushedStone, CrushedStone, CrushedStone]
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+   -  Mode: Survival
+      Spawn: EscapePod
+      Pos: [0, 0, 0]
+      Items: ['SurvivalTent, Flashlight, AntibioticOintment:2, Bandages:2, StomachPills:2, PowerBar:2, EnergyDrink', 'SurvivalTent, Flashlight, AntibioticOintment, Bandages, PowerBar', 'SurvivalTent, Flashlight, Bandages', '#FreshStart: SurvivalTent, Flashlight, Bandages, WaterBottle']
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorLight
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseSetup
+      DronesMinMax: [4, 5]
+      ReserveCount: 5
+      DroneProb: 1
+      Difficulty: 6
+      PresetStyle: 2
+      Stock:
+      -  Name: DroneSmallFast01Minigun
+         Amount: 300
+         Extra: 0
+      -  Name: DroneSmallFast01Rocket
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallFast01Minigun
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneSmallFast01Plasma
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneSmallAttackBase
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneTroopsTransport
+         Amount: Infinite
+         Extra: 2
+      -  Name: ZiraxMinigun
+         Amount: 500
+         Extra: 3
+      -  Name: ZiraxRocket
+         Amount: 500
+         Extra: 3
+      -  Name: RipperDog
+         Amount: 150
+         Extra: 3
+      -  Name: TurretRobotV2
+         Amount: 300
+         Extra: 3
+      PlanetVesselBase:
+         Name: PlanetVesselBaseSetup
+         Faction: Zirax
+         Position3D: [0, 102, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+         PlanetVessel:
+         -  Name: PV_RadosPatrolVessel2
+            Faction: Zirax
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 5
+            RespawnDelay: 12
+            RangePatrolTask:
+               Position3D: [1500, 80, 0]
+               Radius: 800
+               DistToGround: 60
+            AttackCVCircleAround:
+               DistToTarget: 210
+            RangePatrolAvoidArea: []
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [5, 10]
+      CenterX: -5000
+      Radius: 3000
+   -  DronesMinMax: [5, 10]
+      CenterX: -5000
+      Radius: 3000
+SpawnZones:
+-  SpawnAt: [DroneBaseT1RG, RadosBunkerRG]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 500
+   RadiusRandom: 50
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol]
+      Biomes: [Any]
+      Amount: 200
+      Period: Always
+      DelayMinMax: [8, 12]
+-  SpawnAt: [PlanetVesselBase, RadosMainSandRG]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 500
+   RadiusRandom: 25
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
+      Biomes: [Any]
+      Amount: 50
+      Period: Always
+      DelayMinMax: [5, 10]
+-  SpawnAt: [RadosAuxT1SandRG]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 100
+   RadiusRandom: 25
+   RateMultiplyerCenter: 0.29999999999999999
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
+      Biomes: [Any]
+      Amount: 10
+      Period: Always
+      DelayMinMax: [-1, -1]
+CreatureSpawning:
+-  Biomes: [LargeCrater]
+   Entities:
+   -  Name: AlienBugs01
+      Period: Day
+      Amount: 12
+      DelayMinMax: [20, 24]
+   -  Name: Otyughs
+      Period: Night
+      Amount: 12
+      DelayMinMax: [20, 24]
+-  Biomes: [Wadi]
+   Entities:
+   -  Name: CaveWormsGrey
+      Period: Always
+      Amount: 20
+      DelayMinMax: [20, 24]
+-  Biomes: [Oasis, Shore]
+   Entities:
+   -  Name: Slimes
+      Period: Always
+      Amount: 20
+      DelayMinMax: [20, 24]
+      Color: "1.0, 1.0, 0"
+   -  Name: AlienBugs01
+      Period: Always
+      Amount: 8
+      DelayMinMax: [20, 24]
+-  Biomes: [Flowers, FlowersEdge]
+   Entities:
+   -  Name: AlienBugs01
+      Period: Always
+      Amount: 10
+      DelayMinMax: [20, 24]
+   -  Name: Spiders02
+      Period: Night
+      Amount: 8
+      DelayMinMax: [20, 24]
+   -  Name: MegalonopsesBrown
+      Period: Day
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [Dunes, Sand, Plains, Plateau, DustBowl]
+   Entities:
+   -  Name: WormDesertLargeHerd
+      Period: Always
+      Amount: 6
+      DelayMinMax: [20, 24]
+   -  Name: GolemsDesert
+      Period: Night
+      Amount: 8
+      DelayMinMax: [20, 24]
+   -  Name: MegalonopsesBrown
+      Period: Day
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [LowMountains, LowMountains_1, SandDrift]
+   Entities:
+   -  Name: CaveWormsGrey
+      Period: Always
+      Amount: 8
+      DelayMinMax: [20, 24]
+   -  Name: GolemsDesert
+      Period: Night
+      Amount: 6
+      DelayMinMax: [20, 24]

@@ -1,0 +1,129 @@
+# Playfield Characteristics
+Description: "A warp arrival point for a D2 class system.
+
+[c][ffff00]Warp Rift:[-][/c] [c][ffffff]This sector cannot be locked or directly warped to. You can only warp to it from a different star system or via waypoint. Blueprint factory is disabled.[-][/c]
+
+[c][ffffff][i]Don't leave anything behind.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0 #Starter
+UseFixed: True                       
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+# Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase]
+
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: SpaceWarpTargetD2
+# PlanetClass: Sun Warp Target
+
+AllowBlueprintSV: False
+AllowBlueprintCV: False
+AllowBlueprintBA: False
+AllowBlueprintHV: False
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.05
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.05
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.05
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.01
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.01
+      Properties:     
+        - Key: RegenAfter
+          Value: 180            
+
+    # - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      # DisplayName: Neodymium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.01
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      # DisplayName: Titan Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.01
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] 
+      FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.1
+      BaseField: True  
+      RandomRotation: True
+
+DroneBaseSetup:

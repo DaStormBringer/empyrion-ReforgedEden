@@ -1,0 +1,156 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [Reaver]          
+ 
+PlayfieldType: Space  
+PlanetType: StationSigmaFulcrum            
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+  
+    # - Name: [ AsteroidVoxel01Ice, AsteroidVoxel02Ice, AsteroidVoxel03Ice]
+      # DisplayName: Ice Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.5 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180
+
+    - Name: [ AsteroidVoxel01Aluminium, AsteroidVoxel02Aluminium, AsteroidVoxel03Aluminium]
+      DisplayName: Aluminium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.6 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      # DisplayName: Platin Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.5  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180             
+           
+### POIs
+POIs:
+    # - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      # FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      # CountMinMax: [ 1, 1 ]     
+      # Probability: 1
+      # BaseField: True 
+      # RandomRotation: True
+
+# Polaris  
+
+    - Type: BA_Alien   
+      Name: [BAO_SigmaFulcrum]  
+      DisplayName: Sigma Fulcrum
+      Faction: Colonists
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Reaver  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+ # None ( not affected by territory-poi rule, only by probability)
+ 
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 4, 8 ]     
+      Probability: 0.8 
+      # Rotate: true
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+      #  - Key: MapDistance
+      #    Value: 2500     
+ 
+DroneBaseSetup:                                                # Note: not ALL possible settings are used in that config. Check +ExampleSpace folder > space_dynamic.yaml
+      - FreeDrones:                                             #FreeDrones = only relevant for NPC Factions that have a galactic territory: Zirax, Polaris, Trader, Kriel, Pirates, Legacy. Will not spawn in non-territory!
+          - Name: [SpaceDroneBattered01, SpaceDroneBattered02]
+            Faction: Colonists                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [0, 1]                          
+            Radius: [2500, 10000]
+            Properties:
+             # - Key: AIManPatrolFactions 
+             #   Value: "Zirax, Xenu, Ghyst, Epsilon, Abyssal, Serdu, Rados"
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+        SpaceVessels:
+# =========
+# Freighters for galactic TERRITORY
+# Note: they will only spawn for factions that have a galactic territory.
+
+          - Name: [Freighter] 
+            FixedMaxSpeed: [20, 40]
+            Mission: Freighter
+            CountMinMax: [3, 5]
+            Probability: 1
+            Faction: Colonists                              
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+              Position:                                  
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+            StockDescription:
+              Name: [SpaceDronePolarisLaser, SpaceDroneTraderLaser, SpaceDroneBattered01, SpaceDroneBattered02]         # lore: freighters are civilian ships under faction contract, but use drones that are available for civilians and companies, for example from polaris or traders. Freighters do NOT use 'military grade' drones from Kriel or Zirax, even when contracted by the latter!
+              AmountMinMax: [1, 2]
+              Type: FighterDrone 

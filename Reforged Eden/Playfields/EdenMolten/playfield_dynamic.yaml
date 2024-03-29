@@ -1,0 +1,732 @@
+---
+# # ============================================================== 
+
+PlanetSize: 
+  SizeRange: [3]
+  SizeProbs: [1]
+TemperatureMin: [400,450]          
+TemperatureMax: [550,600]            
+TemperatureNight: [0, 0]
+PlanetAxis: [-45,45]
+HumidityMin: [0.10, 0.15]
+HumidityMax: [0.70, 0.70 ]
+Radiation: [6, 9]
+LandWaterRatio: [1, 1]
+SeaLevel: [50, 50]
+TerrainLevel: [45, 45]
+BaseLevel: [30, 30]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [61, 19]
+TemperatureGradientRange: [0.7, 0]
+TemperatureNoiseFac: 0.33
+HumidityHeightFac: [1, 270]
+HumidityNoiseFac: 0.77
+
+GravityMinMax: [-26, -32]
+AtmosphereDensityMinMax: [0.01, 0.03]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 1
+WaterProb: 1
+PvPProb: 0 #Normal
+Water: [RockLava03]
+Music: [Encryptor, lava, lava2]
+
+
+
+
+
+# ==============================================================
+
+GroundShapes: 
+
+
+
+HumidityMasks:
+  - Global_2
+  - Global_2a
+  - Global_3
+  - Global_4
+
+
+TemperatureMasks: 
+  - Global_1_R, 0.125
+  - Global_2_R, 0.125 
+
+
+BiomeStampTries: 500
+
+Biomes:
+
+               
+# ============================================================               
+  - Name: LavaLake
+    IgnoreForcedBiome: true
+    AmbientSound: Lava 
+    Texture: [0, 0, -0.2] 
+    UndergroundLayers:
+               - [15, 1]
+               - [18, -1]
+               - [18, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel
+    Color: [1, 0, 0]
+
+    Temperature: 500 
+
+
+                 
+# ============================================================== # catch all for all biomes
+# MASTER CATCH ALL
+# ==============================================================
+                 
+
+  - Name: Flats
+    AmbientSound: LavaFog 
+    Texture: [4, 4, 0.6]
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    SelectionCriteria:
+       - true
+ 
+    Color: [0.1, 0.55, 0.0] 
+
+
+    Decorations:  
+               - [RealRock10, 0.00015, Free]
+               - [RealRock1, 0.00015, Free]
+               - [RealRock3, 0.00015, Free]
+               - [RealRock4, 0.00015, Free]
+               - [RealRock8, 0.00015, Free]
+
+               # Harvestables:
+
+               # Rock Resources:
+               - [RockResourceIron, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+
+    Grass:
+
+# ==============================================================
+# Fixed positioned biomes need to be behind catch all biome!
+# ==============================================================
+
+# ============================================================== Gold
+# ---------------------------------------
+  - Name: PlateA_1
+    SpecialBiome:  
+        FixedPosition: [ 100, 100 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_2
+    SpecialBiome:  
+        FixedPosition: [ 350, 400 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 0.35
+     - Crystalline_Bubbles, 0.35
+     - CraterMoon_01_INV, 0.35
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_3
+    SpecialBiome:  
+        FixedPosition: [ -753, -1200 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_4
+    SpecialBiome:  
+        FixedPosition: [ 500, 100 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_5
+    SpecialBiome:  
+        FixedPosition: [ -2000, 3000 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_6
+    SpecialBiome:  
+        FixedPosition: [ -1600, -2500 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_7
+    SpecialBiome:  
+        FixedPosition: [ 800, 500 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_8
+    SpecialBiome:  
+        FixedPosition: [ 500, 1000 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateA_9
+    SpecialBiome:  
+        FixedPosition: [ -2000, 125 ]
+    AmbientSound: LavaFog
+    Texture: [3, 9, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ============================================================== Iron
+# ---------------------------------------
+  - Name: PlateB_1
+    SpecialBiome:  
+        FixedPosition: [ 1000, 1000 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ---------------------------------------
+  - Name: PlateB_2
+    SpecialBiome:  
+        FixedPosition: [ 250, 300 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateB_3
+    SpecialBiome:  
+        FixedPosition: [ -1500, -500 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateB_4
+    SpecialBiome:  
+        FixedPosition: [ -1200, -200 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ---------------------------------------
+  - Name: PlateB_5
+    SpecialBiome:  
+        FixedPosition: [ -609, -200 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ---------------------------------------
+  - Name: PlateB_6
+    SpecialBiome:  
+        FixedPosition: [ -600, 300 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ---------------------------------------
+  - Name: PlateB_7
+    SpecialBiome:  
+        FixedPosition: [ -500, 450 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ---------------------------------------
+  - Name: PlateB_8
+    SpecialBiome:  
+        FixedPosition: [ -400, 700 ]
+    AmbientSound: LavaFog
+    Texture: [3, 10, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:  
+
+# ============================================================== Titanium
+# ---------------------------------------
+  - Name: PlateC_1
+    SpecialBiome:  
+        FixedPosition: [ 1800, 1110 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_2
+    SpecialBiome:  
+        FixedPosition: [ 1500, 3200 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_3
+    SpecialBiome:  
+        FixedPosition: [ 1200, 2400 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_4
+    SpecialBiome:  
+        FixedPosition: [ 750, 2100 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_5
+    SpecialBiome:  
+        FixedPosition: [ 750, -2000 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_6
+    SpecialBiome:  
+        FixedPosition: [ 60, 3200 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_7
+    SpecialBiome:  
+        FixedPosition: [ -1000, -1500 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_8
+    SpecialBiome:  
+        FixedPosition: [ 750, 800 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_9
+    SpecialBiome:  
+        FixedPosition: [ -100, -400 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_10
+    SpecialBiome:  
+        FixedPosition: [ -6000, -900 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_11
+    SpecialBiome:  
+        FixedPosition: [ -5500, -600 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_12
+    SpecialBiome:  
+        FixedPosition: [ -5200, -100 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_13
+    SpecialBiome:  
+        FixedPosition: [ 5500, 2000 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_14
+    SpecialBiome:  
+        FixedPosition: [ 5300, 1800 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_15
+    SpecialBiome:  
+        FixedPosition: [ 6150, 1750 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+# ---------------------------------------
+  - Name: PlateC_16
+    SpecialBiome:  
+        FixedPosition: [ 4300, -600 ]
+    AmbientSound: LavaFog
+    Texture: [3, 11, 0.9]
+    UndergroundLayers:
+               - [12, 2]
+               - [12, 20]
+               - [18, -1]
+               - [18, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - Crystalline_Plates, 1
+    
+    Decorations:
+
+
+
+
+
+

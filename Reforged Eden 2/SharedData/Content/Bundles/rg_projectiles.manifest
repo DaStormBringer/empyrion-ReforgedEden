@@ -1,0 +1,454 @@
+ManifestFileVersion: 0
+CRC: 2504666361
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 18495f0b0abc2393c277fcf312c65e47
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 98d664bbf1c0d42de1a228fa3f72e347
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 18495f0b0abc2393c277fcf312c65e47
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8396afed7c1a1d5498e6e8b2a5f94443, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0884dceb0d4308c4eb8bc763c8f8deae, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileVoidiumDrill.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserCyanLong.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriBlue.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanSprayYellow.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectilePulseGreenHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanBlueLNew.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarpM.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueL2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanRedLNew.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenL1.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigun2x8.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileRingBlue.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeM2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileFlakDualYellow.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileShotgunYellow.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileHeavyRocketRed.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueDarkM.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunNewOrange.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueL2x2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillTurretT2v2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserZiraxRedL.prefab
+- Assets/rg_projectiles/Misc/RG_ProjectileSlimeGreen.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanBlueNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunStream.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileDarkMatter.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest4.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileChaos.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueL3.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaBlue.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterCyan.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigun2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanYellowNew.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastNuke.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowHand3Long.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhiteHand2.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaGreenL.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMPS.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillYellow2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanYellowXLNew.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowM.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueM2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBluex3Tracer2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteXLNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanOrangeXLNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanRedNew.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileAugmentedPlasma.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanPurpleNew.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastShieldGenS.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenMSteady.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueMSteady.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastVoid.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterBlue.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamModulatedGamma.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenM.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteNewx3.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandGreen.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIce2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurret.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamModulatedIR.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueHand3Long.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileSwarmRocket.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam7.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanYellowLNew.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretBackup.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewv4x3Orange.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedL2.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileHeavyRocket2.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam6.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam10.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunHand2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenHand3Long.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMulti2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBluex6.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunHand1.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowXLSteady.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamLegacy.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanSprayYellowS.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunHand3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunStream2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiL2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarpS.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamWhiteL2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandBlueS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowHand3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanGreenLNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryRedNew.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastAdvThruster.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileHeavyRocket.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunHand2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactAbyssal.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandGreenS.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest6.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueS2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenM2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleXLSteady.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaGreen.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterYellow.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueL2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastLiquidGreen.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteLNew.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueM1.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedM.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryBlue.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamLegacy3Bright.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedDual2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunx8.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastTorpedoL.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileHeavyRocketBlue.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMP.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamWhiteL.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamThermalLance.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaWhiteL.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBluex3Tracer.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanOrangeNewx3.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactBlueL2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedHand3Long.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamModulatedUV.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileHeavyRocketGreen.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileFlakSpray1.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewv4x3Blue.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriPurple.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileShotgunGauss.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedL1.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactBlueDarkM.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedM2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserOrangeLong.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunNew2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedx3Tracer.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanCyanNew.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam14.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectilePulseWhiteHand.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileVoidiumDrillT2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest8.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunNew.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueDarkM2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandBlueS2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedL2x2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeM3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanSprayBlue.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastShieldGen.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaYellowL.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanYellowNewx3.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningWhiteL.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryYellowNew.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhiteS.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileFlakDualWhite.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueXL2Steady.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandGreenS2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillYellow.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningBolt.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactHexCyanM.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunCVTest.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedL3.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleM2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleM.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningBlueHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryYellow.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunCV.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryOrange.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillTurret.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSV.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunBeamTest3.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserZiraxRedSx2.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaBlueL.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteSNew.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBluex3.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastVoidT2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanOrangeNew.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamInfectedPositron.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunCVT2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryGreen.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamLegacy3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanCyanLNew.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueDualS.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSV2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastAugmentedPlasma.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunNewOrange2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactAugmentedRegen.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreenL 1.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeM.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowMSteady.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarpXL.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreenL.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileGrenade.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriOrange.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectilePulseBlueHand.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMPM.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreenLNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewv4x3.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam1.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedMSteady.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedLong.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedx3.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueDarkLSteady.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactOld.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriWhite.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleMSteady.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterOrange.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhiteHand3Long.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIce.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaOrangeS2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedS1.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastLightningGreenHand.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam11.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandRedS.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarp.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileGrenadeBlue.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedM1.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiL.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenHand.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenM1.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMPS2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMulti.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteNew.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowDualS.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest7.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam8.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterWhite.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandBlue.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactBlueM.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedL2Steady.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunBeamTest.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigun.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillTurretv2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillTurretT2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactHexBlue.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanSprayOld.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningWhiteS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedHand.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest1.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaGreenS.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletHand2.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunTest3.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMPM2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandYellowS2.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam2.prefab
+- Assets/rg_projectiles/Misc/RG_ProjectileFlamethrower.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaCloud.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunTest2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenS.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaBlueS.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam5.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriGreen.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamLaserCanonSVT3.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeMSteady.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueS1.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileRingBlue2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowLong.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreen.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunBeamTest4.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunTest1.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactCyanM.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaRed.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunBeamT2.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunBeam.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueL1.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunHand.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleL2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamPurpleLSteady.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaYellow.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriYellow.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowM3.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest5.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriCyan.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaNewL.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanOrangeLNew.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueS.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenLSteady.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiL2New.prefab
+- Assets/rg_projectiles/Misc/RG_ProjectileSprayGreen.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueXL2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarpXL2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenDualS.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeL2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactGreenM.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest3.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastWarpJumpTest.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSVNew2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactGreenL2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueLSteady.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenM2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamLegacy2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandRedS2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhiteLong.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileTorpedoSV.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactHexOrangeM.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedx6.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningBoltold.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenx3.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserPurpleHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectilePulseBlueWhiteHand.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamRepairShield2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastCruise2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenL2.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileFlakDualOrange.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamRepairShield.prefab
+- Assets/rg_projectiles/RG_ProjectileDummy.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandYellowS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenx6.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunNewSound.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewx5.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenM3.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam9.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenXLSteady.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanCyanXLNew.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSVold.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhiteDualS.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastShieldGenL.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactLegacy.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam12.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedLSteady.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewv2x3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewx3.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenL3.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactBlueM2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaBlueM2.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaRedM2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterWhiteL.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreenNew.prefab
+- Assets/rg_projectiles/Missiles/RG_ProjectileMissileDrone.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunStreamold.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaBlueS2.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam4.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenLong.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectileLightningGreenHand.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserPurpleLong.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSVNew.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedL2.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueDarkMSteady.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterRed.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedDualS.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTriRed.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactHexBlue2.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedDual.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastEMP2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandYellow.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserPurplex3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanGreenNew.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryPurple.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiS2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandRed.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueXL2x2.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_TestShield.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueDual.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserYellowS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterBlueHand.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueLong.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastDroneMissile.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanPinkNew.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeLSteady.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamRepairHandGreen.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowM2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryOrangeNew.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaRedL.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamOrangeXLSteady.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunWhitex8.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamRedXL2Steady.prefab
+- Assets/rg_projectiles/Misc/RG_ProjectileWarning.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunRedx8.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastLightningBlueHand.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactDroneSwarm.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryOrangeNew2.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamRepairShield3.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileBlasterGreenLNew2.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNew.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactOrangeM.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigun3x8.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastLiquidGreenS.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedSx10.prefab
+- Assets/rg_projectiles/Plasma/RG_ProjectilePlasmaWhite.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserRedS.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueM.prefab
+- Assets/rg_projectiles/Lasers/RG_ProjectileLaserWhitex3.prefab
+- Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSVPurple.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletMinigunx4.prefab
+- Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactHexGreenM.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamYellowLSteady.prefab
+- Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamZiraxRoyalRed.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastCruiseS.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewv3x3.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileBulletHand.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanNewx9.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileArtilleryRed.prefab
+- Assets/rg_projectiles/Bullets/RG_ProjectileVulcanGreenXLNew.prefab
+- Assets/rg_projectiles/Beams/RG_ProjectileBeamEMP.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastPlasmaGreenS1.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileTestBeam13.prefab
+- Assets/rg_projectiles/BlastEffects/RG_BlastCruise.prefab
+Dependencies: []

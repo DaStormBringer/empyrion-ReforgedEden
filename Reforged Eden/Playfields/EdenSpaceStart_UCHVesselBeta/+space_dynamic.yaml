@@ -1,0 +1,352 @@
+# Playfield Characteristics
+Description: "Difficulty - [c][FFFFFF]None[-][/c]
+
+Sovereignty - [c][ffffff]Unclaimed[-][/c]
+
+
+A UCH Research Ship is here."
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [3,6]                    
+TemperatureDay: [-150,-100]    
+Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide]
+
+PlayfieldType: Space
+PlanetType: Space
+
+Skybox:
+#Skyboxes are separated by star class.
+# ----------------------------------------------------------------------------------------
+# Sunflares Choose from pre-selection: SunFlareBlue, SunFlarePurple, SunFlareRed, SunFlareRedSpace, SunFlareWhite, SunFlareWhite2, SunFlareWhite3, SunFlareWhite3Space, SunFlareWhite4, SunFlareWhite4Space, SunFlareWhiteMoon,
+# SunFlareWhiteSpace, SunFlareYellow, SunFlareYellow2, SunFlareYellow3
+    # ---------------------------------------------------------------------
+# Skyboxes for Class G Stars ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # # ---------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    #
+    - [SunFlareWhite, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsGreen, PrefabNebulaBlueYellow]
+    #
+    - [SunFlareWhite, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsPurple, PrefabNebulaBlueYellow]
+    #
+    - [SunFlareWhite, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsGrey, PrefabNebulaBlueYellow]
+    #
+    - [SunFlareWhite, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsOrange, PrefabNebulaBlueYellow]
+    #
+    - [SunFlareWhite, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsBlue, PrefabNebulaBlueYellow]
+    # -----------------------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBlueOrange]
+    #
+    - [SunFlareWhite, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsGreen, PrefabNebulaBlueOrange]
+    #
+    - [SunFlareWhite, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsPurple, PrefabNebulaBlueOrange]
+    #
+    - [SunFlareWhite, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsGrey, PrefabNebulaBlueOrange]
+    #
+    - [SunFlareWhite, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsOrange, PrefabNebulaBlueOrange]
+    #
+    - [SunFlareWhite, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    - [SunFlareWhite2, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    - [SunFlareWhite3, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    - [SunFlareWhite4, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    - [SunFlareYellow3, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    - [SunFlareBlue, SkyboxStarsBlue, PrefabNebulaBlueOrange]
+    # -----------------------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBluePinkPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsGreen, PrefabNebulaBluePinkPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsPurple, PrefabNebulaBluePinkPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsGrey, PrefabNebulaBluePinkPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsOrange, PrefabNebulaBluePinkPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite2, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite3, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    - [SunFlareWhite4, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    - [SunFlareYellow3, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    - [SunFlareBlue, SkyboxStarsBlue, PrefabNebulaBluePinkPurple]
+    # -----------------------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBluePinkRed]
+    #
+    - [SunFlareWhite, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsGreen, PrefabNebulaBluePinkRed]
+    #
+    - [SunFlareWhite, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsPurple, PrefabNebulaBluePinkRed]
+    #
+    - [SunFlareWhite, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsGrey, PrefabNebulaBluePinkRed]
+    #
+    - [SunFlareWhite, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsOrange, PrefabNebulaBluePinkRed]
+    #
+    - [SunFlareWhite, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite2, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite3, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    - [SunFlareWhite4, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    - [SunFlareYellow3, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    - [SunFlareBlue, SkyboxStarsBlue, PrefabNebulaBluePinkRed]
+    # -----------------------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsGreen, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsGreen, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsGreen, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsGreen, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsGreen, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsGreen, PrefabNebulaPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsPurple, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsPurple, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsPurple, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsPurple, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsPurple, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsPurple, PrefabNebulaPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsGrey, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsGrey, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsGrey, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsGrey, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsGrey, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsGrey, PrefabNebulaPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsOrange, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsOrange, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsOrange, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsOrange, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsOrange, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsOrange, PrefabNebulaPurple]
+    #
+    - [SunFlareWhite, SkyboxStarsBlue, PrefabNebulaPurple]
+    - [SunFlareWhite2, SkyboxStarsBlue, PrefabNebulaPurple]
+    - [SunFlareWhite3, SkyboxStarsBlue, PrefabNebulaPurple]
+    - [SunFlareWhite4, SkyboxStarsBlue, PrefabNebulaPurple]
+    - [SunFlareYellow3, SkyboxStarsBlue, PrefabNebulaPurple]
+    - [SunFlareBlue, SkyboxStarsBlue, PrefabNebulaPurple]
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 0, 0 ]
+      Probability: 0    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+### POIs
+POIs:
+    # - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      # FieldName: [AsteroidFieldRing] # used if playfield is not an orbit
+      # CountMinMax: [ 1, 1 ]     
+      # Probability: 1
+      # BaseField: True  
+      # RandomRotation: True
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Project Eden POIs
+# ======================================================================================================================================================================================================
+#Project Eden Research Vessel ----------------------------------------------------------
+    - Type: BA_Admin
+      Name: [Eden_BAO_UCHResearchShp]  
+      DisplayName: UCH Research Vessel
+      Faction: UCH
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1000 
+      Properties:
+        # - Key: PersonalContainer
+          # Value: "Token:1:6103"
+        # - Key: MapDistance
+          # Value: 25000  
+        - Key: Discovery
+          Value: False
+        - Key: Music
+          Value: Reaver  
+        - Key: RegenAfter
+          Value: 720   
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [0, 0]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma]
+        Count: [1, 1]
+        Radius: [750, 1000]
+      SpaceVessels:
+          - Name: [Freighter]       
+            Faction: Polaris
+            Count: [0, 0]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+
+          - Name: [Eden_OPV_Xenuan]     
+            Faction: Alien     
+            Count: [0, 0]
+            FixedMaxSpeed: [60, 70]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 1500] 
+              Position:
+                PosXZMinMax: [50, 100]
+                PosYMax: 100             
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [100, 120]
+              ExtraMinMax: [0,0]                            
+            Properties: 
+              - Key: MapDistance
+                Value: 25000
+                    
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            Count: [0, 0]
+            Faction: Zirax     
+            FixedMaxSpeed: [0,0]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]      
+            Properties: 
+              - Key: RegenAfter
+                Value: 720    

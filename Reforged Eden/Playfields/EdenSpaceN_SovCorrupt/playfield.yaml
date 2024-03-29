@@ -1,0 +1,346 @@
+PlayfieldType: Space
+TemperatureDay: -209
+Radiation: 6.27677345
+PlanetType: Special Encounter
+AtmosphereEnabled: false
+FogCloudIntensity: 1
+CloudsSharpness: 1
+# Description: >-
+  # Difficulty: [c][ff00ff]Ultra++[-][/c]
+
+  # [c][ffff00][i]Group Special Encounter[/i][-][/c]
+
+
+  # An enemy fleet of unknown origin.
+
+
+  # UCH Command does not recommend engaging without a substantial fleet.
+
+  # [c][ffffff][i]A group is recommended.[/i][-][/c]
+
+Description: "Difficulty: [c][ff00ff]Ultra++[-][/c]
+
+[c][ffff00][i]Group Special Encounter[/i][-][/c]
+
+
+An enemy fleet of unknown origin.
+
+
+UCH Command does not recommend engaging without a substantial fleet.
+
+[c][ffffff][i]A group is recommended.[/i][-][/c]"
+
+PlayfieldLevel: 1
+BaseAttackCount: 0
+PlanetClass: Corrupted Encounter
+UseFixed: true
+Build: 3135
+Music: Praxis
+POIs:
+  Fixed:
+  - Type: BA_Admin
+    Prefab: Eden_BeaconAdmin
+    Mode: Survival
+    Name: Beacon
+    InitPower: true
+    Faction: Alien
+    Properties:
+    - Key: Discovery
+      Value: False
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - 0
+    - 0
+    - 0
+    SpaceDefenseOverrideDefaults: true
+  - Type: SV_Player
+    Prefab: SV_Destroyed_withWarp
+    Mode: Survival
+    Name: Destroyed Small Vessel
+    Faction: None
+    Properties:
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - -11146.5703
+    - 77.2443848
+    - 21.4730225
+    Rot:
+    - 109
+    - 252
+    - 154
+  - Type: CV_Alien
+    Prefab: CV_Destroyed2
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: &o0
+    - Key: MapMarker
+      Value: Neutral
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - -10792.2354
+    - 25.2849426
+    - 465.970093
+    Rot:
+    - 275
+    - 103
+    - 141
+  - Type: CV_Alien
+    Prefab: CV_DestroyedRear
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -9808.81348
+    - -738.401367
+    - 578.284058
+    Rot:
+    - 191
+    - 26
+    - 11
+  - Type: CV_Alien
+    Prefab: BA_CrashedCV_3
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -9706.52344
+    - 156.857208
+    - 756.065796
+    Rot:
+    - 194
+    - 321
+    - 335
+  - Type: CV_Alien
+    Prefab: CV_Destroyed4
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -9885.09082
+    - 1086.26599
+    - 216.032837
+    Rot:
+    - 251
+    - 313
+    - 51
+  - Type: CV_Alien
+    Prefab: CV_DestroyedFront
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -11579.8691
+    - 520.803955
+    - 1071.71533
+    Rot:
+    - 94
+    - 86
+    - 259
+  - Type: CV_Alien
+    Prefab: CV_Destroyed2
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -9660.54785
+    - 32.6738892
+    - 1366.71118
+    Rot:
+    - 86
+    - 129
+    - 79
+  - Type: CV_Alien
+    Prefab: CV_Destroyed2
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -11102.707
+    - 1615.42383
+    - 546.712646
+    Rot:
+    - 102
+    - 93
+    - 119
+  - Type: CV_Alien
+    Prefab: CV_Destroyed1
+    Mode: Survival
+    Name: Destroyed Vessel
+    Faction: None
+    Properties: *o0
+    Pos:
+    - -10455.8271
+    - -492.124146
+    - 1020.36163
+    Rot:
+    - 137
+    - 175
+    - 67
+  - Type: BA_Alien
+    Prefab: BAO_CombatWreckage
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: &o1
+    - Key: RegenAfter
+      Value: 720
+    Pos:
+    - -1882
+    - 1697
+    - -4864
+  - Type: BA_Alien
+    Prefab: BAO_CombatWreckage
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -5822
+    - -1180
+    - 8654
+  - Type: BA_Alien
+    Prefab: BAO_JettisonedCargoPod
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -722
+    - -1419
+    - -10406
+  - Type: BA_Alien
+    Prefab: BAO_TornThrusterArray
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 2549
+    - 70
+    - -1054
+  - Type: BA_Alien
+    Prefab: BAO_BurntOutReconVessel
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 2515
+    - 1437
+    - 1554
+  - Type: BA_Alien
+    Prefab: BAO_SeveredShip
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -6464
+    - 564
+    - -8186
+  - Type: BA_Alien
+    Prefab: BAO_JettisonedCargoPod
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - 5181
+    - 1564
+    - 591
+  - Type: BA_Alien
+    Prefab: SV_FA005XHunter
+    Mode: Survival
+    Name: Wreckage
+    InitPower: true
+    Faction: None
+    Properties: *o1
+    Pos:
+    - -1086
+    - 1974
+    - -2441
+DroneBaseSetup:
+  Fixed:
+  - Name: MainDroneBase
+    Pos:
+    - -2447.38037
+    - -2127
+    - -1238.69971
+    DroneOnDuty:
+    - Name: SpaceDroneLaser
+      Faction: Alien
+      Pos:
+      - 3583.05127
+      - -2050
+      - 82.4567871
+      Radius: 800
+    SpaceVessel:
+    - Name: Eden_OPV_SovCorrupt1
+      Faction: Alien
+      FixedMaxSpeed: 40
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 0
+        - 0
+        - 0
+        Radius: 1500
+      Stock:
+      - Name: Eden_SpaceDroneProgenitor
+        Amount: 2
+      # Properties:
+      # - Key: AIManPatrolGroups
+        # Value: Eden_BeaconAdmin
+    - Name: Eden_OPV_SovCorrupt2
+      Faction: Alien
+      FixedMaxSpeed: 40
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 250
+        - 0
+        - 0
+        Radius: 1500
+      Stock:
+      - Name: Eden_SpaceDroneProgenitor
+        Amount: 2
+      # Properties:
+      # - Key: AIManPatrolGroups
+        # Value: Eden_BeaconAdmin
+    - Name: Eden_OPV_SovCorrupt3
+      Faction: Alien
+      FixedMaxSpeed: 40
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -250
+        - 0
+        - 0
+        Radius: 1500
+      Stock:
+      - Name: Eden_SpaceDroneProgenitor
+        Amount: 2
+      # Properties:
+      # - Key: AIManPatrolGroups
+        # Value: Eden_BeaconAdmin

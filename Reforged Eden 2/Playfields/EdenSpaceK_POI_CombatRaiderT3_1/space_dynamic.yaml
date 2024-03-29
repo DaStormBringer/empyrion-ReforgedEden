@@ -1,0 +1,614 @@
+# Playfield Characteristics
+Description: "Type: [c][ff0000]Combat Site[-][/c] - [c][ffff00]Class 3[-][/c]
+
+Factions: [c][ff0000]Raiders[-][/c]
+
+Sensors pick up high levels of radio signals indicating the presence of ships or stations.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+
+# Hot Star
+Radiation: [10,15]
+TemperatureDay: [-175,-75]
+# Danger Music
+Music: [AlteredPhase, Apogee, Encryptor, FarEntropy, Ghost, Helios, lava2, Obelisk, Praxis, Resurgence, Sanctuary, Vanguard]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Combat Site Class 3
+PlayfieldLevelOverride: [1,3]
+
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.2
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      DisplayName: Zascosium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0
+      Position:
+         PosXZMinMax: [50, 100]
+         PosYMax: 50
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude]
+      FieldName: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      BaseField: True
+      RandomRotation: True
+
+    - Name: [Eden_SectorNebulaPirateYellow]
+      FieldName: [Eden_SectorNebulaPirateYellow] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+    - Name: [Eden_SectorNebulaXLDustDim, Eden_SectorNebulaXLOrangeDim, Eden_SectorNebulaXLYellowDim]
+      FieldName: [Eden_SectorNebulaXLDustDim, Eden_SectorNebulaXLOrangeDim, Eden_SectorNebulaXLYellowDim] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+
+# Bandit Main Outpost
+    - Type: BA_Alien
+      GroupName: Eden_RaiderSpaceMainT1
+      Faction: Warlord
+      Mode: Survival
+      NoShieldReload: True
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [1, 3]
+        Probability: 1
+        Name: [CompoundRaiderDefenseT2, CompoundRaiderDefenseT2, CompoundRaiderDefenseT2]
+        DistanceMinMax: [500, 800]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 25000
+        - Key: HudDistance
+          Value: 25000
+        - Key: RegenAfter
+          Value: 720
+
+# Defenses
+    - Type: BA_Alien
+      GroupName: Eden_RaiderSpaceDefT3
+      Faction: Warlord
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [1000, 0, 0]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [1, 2]
+        Probability: 1
+        Name: [CompoundAsteroidT3Hot, CompoundAsteroidT2]
+        DistanceMinMax: [1000, 1500]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 1500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      GroupName: Eden_RaiderSpaceDefT3
+      Faction: Warlord
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [-1000, 0, 0]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [1, 2]
+        Probability: 1
+        Name: [CompoundAsteroidT3Hot, CompoundAsteroidT2]
+        DistanceMinMax: [1000, 1500]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 1500
+        - Key: RegenAfter
+          Value: 720
+
+# Rare common ore site
+    - Type: BA_Alien
+      GroupName: Eden_OreSiteSpaceT1
+      Faction: Warlord
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1
+      InitPower: True
+      Pos: [2000, -500, 1000]
+      Rot: [0, 0, 0]
+      Compound:
+        CountMinMax: [2, 5]
+        Probability: 1
+        Name: [CompoundRaiderDefenseT2, CompoundRaiderDefenseT2, CompoundRaiderDefenseT2, CompoundRaiderDefenseT2, CompoundGasCloudRed]
+        DistanceMinMax: [300, 500]
+        Rotate: false
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+
+
+
+# Compound Definitions
+
+# Raider
+    - Type: BA_Alien
+      Name: [CompoundRaiderDefenseT2]
+      GroupName: Eden_RaiderSpaceDefT2
+      Faction: Warlord
+      FactionTerritory: [Warlord]
+      Mode: Survival
+      CountMinMax: [ 2, 8 ]
+      Probability: 0.7
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 1500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundGasCloudRed]
+      GroupName: Eden_GasCloudRed
+      Faction: None
+      FactionTerritory: [Warlord]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.25
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [100, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Asteroids for compounds.
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Cold]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Hot]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: RegenAfter
+          Value: 720
+
+# Dummy POI
+    - Type: BA_Alien
+      GroupName: Eden_DummyPOI
+      Faction: Warlord
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      Properties: 
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+
+# ================================================================================================================================================================================= Drones
+      - FreeDrones:
+
+# ------------------------------------------------------------------------------------------------- Faction Main
+# Asteroid Patrols
+          - Name: [SpaceDroneLaser, SpaceDronePlasma]
+            Faction: Warlord
+            CanNotBeControlledByMasterAI: False
+            POINameAsPositionRef: [Eden_DummyPOI]
+            Count: [8, 12]
+            Radius: [500, 3000]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "Eden_DummyPOI"
+              - Key: AIManPatrolFactions
+                Value: "Warlord"
+              - Key: AIManMaxPursuitRange
+                Value: 7500
+
+# ================================================================================================================================================================================= Ships
+        SpaceVessels:
+# ================================================================================================================================================================================= Patrol Vessels and Freighters and Bases
+
+# Warlord
+          - Name: [Eden_OPVRaiderT1]
+            Faction: Warlord
+            CountMinMax: [3, 5]
+            Probability: 1
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [90, 110]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [1500, 3000]
+              # POINameAsPositionRef: [Eden_GasCloudOrangeL]
+              POINameAsPositionRef: [Eden_BA_DummyPOI]
+              Position:
+                PosXZMinMax: [1500, 3000]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [12, 20]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              # - Key: Discovery
+                # Value: Discovery
+              - Key: MapDistance
+                Value: 3000
+              - Key: HudDistance
+                Value: 3000
+              # - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
+                # Value: "Eden_BA_DummyPOI2"
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Warlord"
+              # - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                # Value: "Pirates"
+              - Key: AIManMaxPursuitRange
+                Value: 7500
+
+# Cruise missile ships
+          - Name: [Eden_OPVRaiderT3]
+            Faction: Warlord
+            CountMinMax: [2, 2]
+            Probability: 1
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [20, 30]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [1500, 3000]
+              POINameAsPositionRef: [Eden_BA_DummyPOI]
+              Position:
+                PosXZMinMax: [1500, 3000]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [12, 20]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              - Key: MapDistance
+                Value: 3000
+              - Key: HudDistance
+                Value: 3000
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Warlord"
+              - Key: AIManMaxPursuitRange
+                Value: 7500
+
+          - Name: [Eden_OPVRaiderT1Boss]
+            Faction: Warlord
+            CountMinMax: [1, 1]
+            Probability: 0.5
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [60, 80]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [1500, 2000]
+              # POINameAsPositionRef: [Eden_GasCloudOrangeL]
+              POINameAsPositionRef: [Eden_BA_DummyPOI]
+              Position:
+                PosXZMinMax: [1500, 2000]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [12, 20]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              # - Key: Discovery
+                # Value: Discovery
+              - Key: MapDistance
+                Value: 3000
+              - Key: HudDistance
+                Value: 3000
+              # - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
+                # Value: "Eden_BA_DummyPOI2"
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Warlord"
+              # - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                # Value: "Pirates"
+              - Key: AIManMaxPursuitRange
+                Value: 5000
+
+# Rare Azure Patrol Vessels
+          - Name: [Eden_OPVAzureT1]
+            Faction: Alien
+            CountMinMax: [1, 1]
+            Probability: 0.03
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [30, 40]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [1500, 2000]
+              POINameAsPositionRef: [Eden_BA_DummyBandit]
+              Position:
+                PosXZMinMax: [1500, 2000]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [12, 20]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              - Key: MapDistance
+                Value: 3000
+              - Key: HudDistance
+                Value: 3000
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Warlord"
+              - Key: AIManMaxPursuitRange
+                Value: 5000

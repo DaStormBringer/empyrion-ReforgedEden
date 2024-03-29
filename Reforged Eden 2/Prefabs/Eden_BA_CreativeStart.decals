@@ -1,0 +1,11 @@
+[CreativeInfo]
+-Mode=Opaque
+-Pos=5.281433,131.65,5.215089
+-Rot=0,45,0
+-Size=3,0.5,0.5
+-Color=1,1,1,1
+-EmissiveColor=0.75,0.75,0.75
+-Cull=false
+-Diffuse=RECreativeSign.png
+-Emissive=RECreativeSign.png
+

@@ -1,0 +1,8 @@
+[Sign]
+-Mode=Opaque
+-Pos=8.5,148.5,0.5
+-Rot=90,180,0
+-Size=8,8,8
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FarrWelcomeSign
+

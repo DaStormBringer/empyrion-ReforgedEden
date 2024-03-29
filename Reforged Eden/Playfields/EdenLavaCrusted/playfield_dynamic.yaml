@@ -1,0 +1,407 @@
+---
+# # ==============================================================
+PlanetSize: 
+  SizeRange: [3,4,5]
+  SizeProbs: [0.40,0.55,0.05]
+PlayfieldLevelOverride: [6,8]
+TemperatureMin: [50,70]  # 40,50
+TemperatureMax: [180,220]  # 100, 150
+TemperatureNight: [100,200]
+PlanetAxis: [-25,25]
+HumidityMin: [0.05, 0.15]
+HumidityMax: [0.28, 0.35 ]
+Radiation: [6, 12]
+LandWaterRatio: [0, 0]
+SeaLevel: [1, 1]
+TerrainLevel: [75, 80]
+BaseLevel: [45, 55]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [14, 160]  # 160  #325
+TemperatureGradientRange: [0.57, 0.00]  # 0.4 0,0
+TemperatureNoiseFac: 0.49
+HumidityHeightFac: [20, 325]
+HumidityNoiseFac: 0.54
+
+GravityMinMax: [-13, -9]
+AtmosphereDensityMinMax: [0.2, 0.4]
+AtmosphereO2MinMax: [0.005, 0.009]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0.2, 0.3]
+GroundFogProb: 0
+GroundFogIntensityRange: [0.05, 0.15]
+GroundFogHeightRange: [25, 55]
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [RockLava03]
+Music: [Encryptor, lava, lava2]
+
+# ==============================================================
+
+GroundShapes:
+
+HumidityMasks: 
+  - Global_3
+  - Global_4
+
+BiomeStampTries: 20
+  
+Biomes: 
+
+  - Name: Pole          # same as Rocks biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true
+    Texture: [9, 11, 0.2]  
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.2, 0.4, 0.2] 
+
+# ==============================================================
+  - Name: Crusted
+    IgnoreForcedBiome: true  
+
+    AmbientSound: LavaFog 
+    Texture: [1, 1, 0.5]
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [15, 2]
+               - [19, 2]
+               - [19, -1]
+               
+    SelectionCriteria:
+    - Height < 6
+    Color: [0.9, 0.9, 0]
+
+    
+    # StampForcesBiome: true     
+    # StampForcesBiomeType: OverlapAll
+    # StampTries: 200
+    # Stamps:    
+    # - PlainsLava_1, 0.15
+    # - PlainsLava_1b, 0.03
+
+    Temperature: 400
+
+# ==============================================================
+  - Name: MetalVeins
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains 
+    Texture: [7, 8, 0.9, 8, 7, 0.9, 0.1]   
+    UndergroundLayers:
+               - [11, 2]  
+               - [9, 7]    
+               - [11, 7]  
+               - [11, 50] 
+               - [13, 1]   # Silicon resource! 
+               - [15, 5]    
+               - [12, 2]   # Iron resource! 
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria:   
+    - Height > 225   
+    Color: [1, 1, 1]
+    Decorations:  
+
+               - [ "RealRock1Dark", 0.002]
+               - [ "RealRock2Dark", 0.0005]
+               - [ "RealRock3Dark", 0.003]
+               - [ "RealRock4Dark", 0.003]
+               - [ "RealRock8Dark", 0.003]
+               - [ "RealRock10Dark", 0.003]   
+
+# ==============================================================
+  - Name: Mountains
+    IgnoreForcedBiome: true   
+    AmbientSound: Mountains 
+    Texture: [8, 11, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria: 
+    - Height > 150
+    Color: [0.4, 0.4, 0.6] 
+   
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+            
+# ==============================================================
+  - Name: LowMountains
+    IgnoreForcedBiome: true 
+    AmbientSound: LavaPlains 
+    Texture: [ 8, 5, 0.5, 11, 11, 0.5, 0.2] 
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 60]   
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria: 
+    - Height > 130
+    Color: [0.2, 0.2, 0.3] 
+    
+    StampForcesBiome: true  
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 30  
+    Stamps:
+    - Mountain_10_BM, 1 # Variant with high b-yOffset
+    - Mountain_11_BM, 1 # Variant with high b-yOffset
+    
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+               
+# ==============================================================
+  - Name: CrystallizedRocks
+    IgnoreForcedBiome: true
+    AmbientSound: LavaPlains 
+    Texture: [10,1, 0.8, 1,10, 0.35, -0.3]
+    UndergroundLayers:
+               - [10, 2]
+               - [14, 1]
+               - [10, 1]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:  
+    - Humidity < 0.25
+    - Humidity > 0.17    
+    - Temperature > 110  #75  175
+    - Temperature < 120  #90   195
+    Color: [0.3, 0.3, 1]  
+
+    StampProb: 0.5
+    Stamps: 
+    - HillsLava_1, 0.9   
+
+    Temperature: 5
+
+    Decorations:  
+               - [GasEmitter2Red, 0.001]
+               - [CoralStone01-03, 0.001, Free]
+               - [CoralStone01-05, 0.001, Free]
+               - [CoralStone04-03, 0.001, Free]
+               - [CrystalsPyramidOrange, 0.01]
+               
+# ============================================================               
+  - Name: LavaLake
+    IgnoreForcedBiome: true
+    AmbientSound: Lava 
+    Texture: [0, 0, -0.2] 
+    UndergroundLayers:
+               - [15, 1]
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel
+    Color: [1, 0, 0]
+
+    Temperature: 500 
+
+# ==============================================================
+  - Name: LavaEdge
+    IgnoreForcedBiome: true  
+
+    AmbientSound: LavaFog 
+    Texture: [1, 1, 0.0]
+    UndergroundLayers:
+               - [15, -1]
+               - [15, 1]
+               
+    SelectionCriteria:
+    - Height < SeaLevel + 2
+    - Humidity > 0.1     
+    - Temperature > 0
+    Color: [0.9, 0.9, 0]
+    
+    
+    StampForcesBiome: true     
+    StampForcesBiomeType: OverlapOff
+    StampTries: 200
+    Stamps:    
+    - PlainsLava_1, 0.15
+    - PlainsLava_1b, 0.03
+
+    Temperature: 400
+
+# ============================================================
+  - Name: Hotspot
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog 
+    Texture: [11, 0, 0.2]
+    UndergroundLayers:
+               - [0, 10]    
+               - [19, 4]    
+               - [12, 1]    
+               - [19, -1]
+               - [19, 1]
+    SelectionCriteria: 
+       - false
+    Color: [1, 0, 0.3]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapAll
+    StampTries: 300 #110 
+    Stamps:
+    - CraterMoon_1, 0.9
+    - CraterMoon_3, 0.4    
+    - CraterLava_3, 0.05      
+    - RiftIce_01, 0.01
+
+    Temperature: 150 
+
+# ==============================================================
+  - Name: LargeRift
+    IgnoreForcedBiome: true  
+
+    AmbientSound: LavaFog 
+    Texture: [1, 2, 0.5]
+    UndergroundLayers:
+               - [15, -1]
+               - [15, 1]
+               
+    SelectionCriteria:
+       - false
+    Color: [0.6, 0.6, 0]
+    
+    
+    StampForcesBiome: true     
+    StampForcesBiomeType: OverlapAll
+    StampTries: 10
+    Stamps:    
+    - RiftContinent_01, 0.5
+
+    Temperature: 400
+
+# ==============================================================
+  - Name: LavaFolds
+
+    AmbientSound: LavaFog 
+    Texture: [2, 2, 0.15] 
+    UndergroundLayers:
+               - [10, 3]
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria:
+       - false
+    Color: [0.7, 0.7, 0]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapOff
+    StampTries: 100 
+    Stamps:
+    # - RiftLava_2, 0.4    
+    # - RiftLava_1, 0.8
+    - RiftLava_2b, 0.7   
+    - RiftLava_1b, 0.6
+    - CraterLava_1, 0.2 
+    - CraterLava_2, 0.1
+
+    Temperature: 200
+
+# ==============================================================
+  - Name: Plains
+    AmbientSound: LavaPlains 
+    Texture: [3, 2, 0.4]
+    UndergroundLayers:
+               - [11, 1]
+               - [14, 5]   
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:  
+    - Humidity > 0.32 
+    - Height < SeaLevel + 15    
+    Color: [0.4, 0.4, 0.015]
+
+    Temperature: 50
+
+    Decorations:  
+               - [ RealRock4Dark, 0.015]
+               - [ RealRock3Dark, 0.015]
+               - [ RealRock1Dark, 0.015]
+
+
+
+# ==============================================================
+  - Name: Dunes      
+    AmbientSound: LavaPlains 
+    Texture: [5, 11, -0.20]  
+    UndergroundLayers:
+               - [11, 8]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria: 
+    - Humidity < 0.19    
+    - Temperature > 30
+    Color: [0.55, 0.45, 0.45]
+    
+
+
+    Decorations:
+               - [ RealRock4Dark, 0.01]    
+               - [ RealRock3Dark, 0.01]
+               - [ RealRock1Dark, 0.01]
+               - [ RockResourceNeodymium, 0.001, Free]
+
+ # ==============================================================
+  - Name: Rocks
+    AmbientSound: LavaPlains 
+    Texture: [9, 2, 0.2]   
+    UndergroundLayers:
+               - [11, 1]
+               - [10, 8]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:
+    - Height < SeaLevel + 28
+    - Humidity > 0.25
+    - Temperature > 30
+    Color: [0.2, 0.4, 0.2]
+    
+    Temperature: 10
+    
+    Decorations:
+               - [AridRock01, 0.02]
+               - [AridRock02, 0.015]
+               - [AridRock03, 0.02]
+               - [GasEmitter1, 0.015]
+               - [RealRock1Dark, 0.7]
+               - [RealRock2Dark, 0.03]
+               - [RealRock3Dark, 0.06]
+               - [RealRock4Dark, 0.06]
+               - [RealRock8Dark, 0.06]
+               - [RealRock10Dark, 0.1]
+               - [RockResourceCopper, 0.01, Free]
+               - [RockResourceIron, 0.01, Free]
+               - [RockResourceNeodymium, 0.01, Free]
+               - [RockResourceZascosium, 0.005, Free]
+#    Grass:
+
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+  - Name: Flats
+    AmbientSound: LavaPlains 
+    Texture: [4, 6, 0.55, 11, 11, 0.8, 0.8]
+    UndergroundLayers:
+               - [11, 12]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:  
+       - true
+    Color: [0.6, 0.4, 0.4]
+  
+    Decorations:  
+               - [ RealRock4Dark, 0.01] 
+
+
+

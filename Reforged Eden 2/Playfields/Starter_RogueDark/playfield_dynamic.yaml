@@ -1,0 +1,1395 @@
+---
+# # ==============================================================
+PlanetSize: 
+  SizeRange: [4]
+  SizeProbs: [1]
+PlayfieldLevelOverride: [3,3]
+TemperatureMin: [-75,-75]
+TemperatureMax: [25,25]  
+TemperatureNight: [0,0]
+PlanetAxis: [-25,25]                            
+HumidityMin: [0.10, 0.10]                   # Changing the values for humidity will change some mountain distributions (See: LavaFolds biome)
+HumidityMax: [0.40, 0.40 ]                  # As above
+Radiation: [6, 6]
+LandWaterRatio: [0.00, 0.00]
+SeaLevel: [20, 20]                          # Adjusted to canyon stamps
+TerrainLevel: [324, 324]                    # Adjusted to fog, canyon stamps
+BaseLevel: [155, 155]                       # Adjusted to fog, canyon stamps
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [14, 0]
+TemperatureGradientRange: [0.81, 0.00]
+TemperatureNoiseFac: 0.09
+HumidityHeightFac: [20, 325]
+HumidityNoiseFac: 0.54
+
+GravityMinMax: [-12, -11]
+AtmosphereDensityMinMax: [0.9, 1]
+AtmosphereO2MinMax: [0.05, 0.05]
+AtmoBreathableProb: 0
+
+GroundFogProb: 1
+GroundFogIntensityRange: [0.3, 0.3]
+GroundFogHeightRange: [800, 800]
+
+WaterProb: 1
+PvPProb: 0 #Starter
+Water: [WaterRed]   # Iron carbonyl lakes
+# Music: [temperate, Anomalous, Dusk, Ghost]
+Music: [barren, lava2, Dusk]
+
+# (Please don't use dynamic fog ranges. Fog is fitted to terrain height.)
+
+
+
+
+# ==============================================================
+
+# ==============================================================
+# NOTES TO RESOURCE PLACEMENT:
+# High-tier resources (Erestrum, Zacosium) are tied to dangerous POI, which will _only_ spawn close to the canyons.
+# This will make all those resources guarded; requiring a 'sneaking run' through the canyons to get close.
+
+# Tex channel 2 is iron ore. This is used in the biomes 'Canyon', 'ShallowCanyon' and 'CanyonEdge' as a 1m-thick wall coating. 
+# - Rather diffcult to mine due to steep angle (and possibly nearby POI).
+# The biome 'HighMountains' has a 1m-thick copper layer deep down (-80m).
+
+# ==============================================================
+# TEXTURE DISTRIBUTION
+
+# Tx.   Type                            Biomes  (T: Top, S: Side, a&b: alternative top or side tex, Splat: Tex is used in a splatmap stamp)
+# ==    ===                             ===
+# 0     Gravel, red wet dark            LavaFolds (Splat), Fluid T, ShallowCanyon T, Rifts S, Rifts_1 S, DustBowl Sa, Mare S, LargeCrater S, SmallCrater S
+# 1     AlienGreen07, green             Shore T/S
+# 2     = IRON ORE =, shiny brown       Canyon S, ShallowCanyon Sa
+# 3     AlienGreen07, green speckled    LavaFolds (Splat), CanyonEdge T/S
+# 4     SandBrown, yellow smooth        Rocks_1 T, Plains Tb
+# 5     SandMars, red                   Pole T&S, ColdPlains T&S, DustBowl T, Dunes T, Sand T, LowMountains Tb, LowMountains_1 Tb
+# 6     Dirt, red rusted                Mare T, Plains Ta, PlainsEdge S, LavaEdge S, DustBowl Sb, LowMountains/_1 Ta, Dunes S, Sand S 
+# 7     RockGrey02, grey shiny          LavaFolds (Splat), HighMountains Ta/Sb, Fluid S, ShallowCanyon Sb
+# 8     RockBlack02, glossy bubbles     Canyon T, HighMountains Ta/Sb, Mountains T, DeepCanyon S
+# Terrain / underground
+# 9     Dirt, matte dark                LowMountains (Splat), LavaFolds (Splat), DeepCanyon T, LavaFolds T
+# 10    RockGrassCliff,dark(Main stone) LowMountains (Splat), LavaFolds S, LowMountains /_1 S, Rocks S, Rocks_1 S
+# 11    AlienGreen07, grey-brown        LowMountains (Splat), LavaFolds (Splat), Rifts T, Rifts_1 T, Rocks T, LavaEdge Tb, PlainsEdge T, LargeCrater T, SmallCrater T, Plains S, Mountains S
+# Underground
+# 12    Resource: IRON
+# 13    Resource: COPPER
+# 14    Resource: COBALT
+# 15    Resource: ERESTRUM
+
+# ==============================================================
+# NOTE TO STAMP PLACEMENT:
+# Reducing the spawn numbers of ShallowCanyon, Rifts might result in _much_ higher DustBowl and mountain spawn numbers. Check the spawn tries / overlap parameters.  
+
+
+
+GroundShapes:
+
+
+BiomeStampTries: 120  #70
+  
+Biomes: 
+
+  - Name: Pole
+    # Weather: PoleFog # Turned off, since this planet has minimal atmosphere, no fog
+    IgnoreForcedBiome: true
+
+    Texture: [5, 5, 0.2]
+
+
+    SelectionCriteria:
+    - +Lat > 0.975
+    Color: [0.2, 0.4, 0.2]
+    
+
+# ==============================================================
+
+  - Name: Fluid
+    IgnoreForcedBiome: true
+
+    AmbientSound: Lava
+    Texture: [0, 7, -0.2]
+
+    UndergroundLayers:
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria:
+    - Height < SeaLevel
+
+    Color: [1, 0, 0]
+
+    Radiation: 12
+    Temperature: 150
+
+    Decorations:  
+               - [GasEmitter1, 0.05, Free]
+               - [GasEmitter2, 0.05, Free]
+               # Rock Resources:
+               - [RockResourceCobalt, 0.005, Free]
+               - [CrystalsPyramidOrange, 0.005, Free]
+               - [RockResourcePromethium, 0.005, Free]
+
+
+# ==============================================================
+  - Name: Shore
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog
+    Texture: [1, 1, 0.1]
+
+    UndergroundLayers:
+               - [10, -1]
+               - [11, 1]
+               
+
+    SelectionCriteria:
+    - Height < SeaLevel + 2
+    - Humidity > 0.1
+    - Temperature > 0
+
+    Color: [0.9, 0.9, 0]
+
+    Radiation: 4
+    Temperature: 60
+
+    Decorations:  
+               # Rock Resources:
+               - [RockResourceCobalt, 0.003, Free]
+               - [RockResourceCopper, 0.006, Free]
+    
+    
+# ==============================================================
+  - Name: DeepCanyon
+    IgnoreForcedBiome: true  
+    AmbientSound: LavaFog 
+    Texture: [9, 8, -0.0]
+
+
+    UndergroundLayers:
+               - [9, 3]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria:
+    - Height < 100
+   
+    Color: [0.9, 0.9, 0.9] 
+
+    Radiation: 6
+    Temperature: 40
+    
+    
+    Decorations:  
+               - [RealRock10Dark, 0.001]
+               - [RealRock4Dark, 0.001]
+               
+               # Rock Resources:
+               - [CrystalsPyramidOrange, 0.001, Free]
+               - [CrystalsPyramidOrange, 0.01, Tree]
+               - [RockResourceCopper, 0.0005, Tree]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.0002, Tree]
+               - [RockResourceSilicon, 0.001, Free]
+
+
+# ==============================================================
+  - Name: Canyon
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog 
+    Texture: [8, 2, 0.6]
+
+    UndergroundLayers:
+               - [8, 1]
+               - [9, 1]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria:
+    - Height < 130
+
+    Color: [0.8, 0.8, 0.3]
+
+    Radiation: 4
+    Temperature: 20
+    
+    Decorations:  
+               - [RockGrey02Large, 0.007]
+               
+               # Rock Resources:
+               - [RockResourceIron, 0.0003, Plant]
+               # - [RockResourceCarbon, 0.0003, Plant]
+               - [RockResourceIron, 0.0001, Free]
+               # - [RockResourceCarbon, 0.0001, Free]
+               - [RockResourceSilicon, 0.0001, Plant]
+               - [RockResourceSilicon, 0.0001, Free]
+
+
+# ==============================================================
+  - Name: ShallowCanyon
+    IgnoreForcedBiome: true 
+
+    AmbientSound: LavaPlains 
+    Texture: [0,0,0.5, 2,7,0.5, 0.98]
+
+    
+    UndergroundLayers:
+               - [9, 5]
+               - [10, -1]
+               - [11, 1]
+               
+    SelectionCriteria:
+    - Height < 150
+
+
+    Color: [0.8, 0.2, 0.3] 
+
+    Radiation: 2
+    Temperature: 10
+
+    Decorations:  
+               - [RockGrey01Large, 0.007, Free]
+               - [RockGrey02Large, 0.003, Free]
+               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0003, Plant]
+               - [RockResourceSilicon, 0.0005, Free]
+               - [RockResourceSilicon, 0.0003, BigPlant]
+               - [RockResourceCopper, 0.0003, Free]
+               - [RockResourceIron, 0.0003, Plant]
+               # - [RockResourceCarbon, 0.0003, Plant]
+
+               
+# ==============================================================
+  - Name: CanyonEdge
+    IgnoreForcedBiome: true 
+    AmbientSound: LavaPlains 
+
+    Texture: [3, 3, 0.2]
+    
+    UndergroundLayers:
+               - [6, 3]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false
+    Color: [0.2, 0.1, 0.1] 
+
+    Radiation: 1
+    Temperature: 3
+
+    StampForcesBiome: true  
+    StampForcesBiomeType: OverlapOther
+    StampTries: 20
+    Stamps:
+    - ErosionIce_01, 1
+    - ErosionIce_02, 1
+    - ErosionIce_03, 1
+    
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+
+
+# ==============================================================
+  - Name: LavaFolds                      # Nearly some kind of 'LowMountains'-biome. Places prominent hills, but these are tied to the biome distribution. 
+    AmbientSound: ArcticLowPlains
+
+    IgnoreForcedBiome: true
+    Texture: [9, 10, -0.4]
+    
+    UndergroundLayers:
+    
+               - [10, 1]
+               - [9, 1]
+               - [10, 1]
+               - [9, 2]
+               - [10, 1]
+               - [9, 1]
+               - [10, -1]
+               - [11, 1] 
+               
+    SelectionCriteria:  
+    - Humidity > 0.20
+    - Height > 200
+    - Height < 280
+    - Temperature > 7
+
+    
+    StampProb: 0.7
+    StampForcesBiomeType: OverlapOther               # The hills have different textures due to their individual splat tex distribution. 
+    Stamps:                                          # Some splat textures overwrite the standard LavaFolds biome TopTex for more diversity.
+                                                     # Splatmap has 'SdTb' tex distribution (Side-darkSide-Top-brightTop) 
+    
+    # Large HillsStamp, rather square-ish
+    - HillsLava_1_sp, 0.5, S,3,9,7   # (SdTb) Matte dark-green darkStone
+    - HillsLava_1_sp, 0.7, S,11,9,7  # (SdTb) Orange gravel darkStone
+    # Smaller HillsStamp
+    - Hillslava_2_sp, 0.6, S,3,9,7   # (SdTb) Matte dark-green darkStone
+    - Hillslava_2_sp, 0.9, S,0,9,7   # (SdTb) Dark red darkStone 
+    - MountainEroded_01b, 0.5
+
+    Color: [0.4, 0.4, 0.015]
+
+    Decorations:  
+               - [ RealRock4Dark, 0.015]    
+               - [ RealRock3Dark, 0.015]
+               - [ RealRock1Dark, 0.015]              
+
+
+# ============================================================
+  - Name: Rifts                         # Main rift biome. (Stamp biome will only show up in middle altitudes, but the shape will influence all altitudes.)
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog 
+    Texture: [11, 0, -0.7]
+
+    UndergroundLayers:
+               - [9, 3]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria:
+       - false
+       
+    Color: [1, 0, 0.3]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapAll
+    StampTries: 30
+    Stamps:
+    - CraterLava_3, 0.05
+
+    Radiation: 5
+    Temperature: 3
+
+    Decorations:  
+               - [RealRock10Dark, 0.05, Free]
+               - [RealRock4Dark, 0.03, Free]
+               - [RealRock1Dark, 0.01, Free]
+               
+               # Rock Resources:
+               - [CrystalStraight, 0.007, Tree]
+               - [RockResourcePromethium, 0.001, Tree]
+               - [RockResourceIron, 0.001, Free]
+               # - [RockResourceCarbon, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceCopper, 0.001, Free]
+
+
+# ============================================================
+  - Name: Rifts_1                     # Secondary rift biome to control spawning of very deep stamp; slightly different texture
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog 
+    Texture: [11, 0, -0.4]
+
+    UndergroundLayers:
+               - [9, 3]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false
+       
+    Color: [0.6, 0, 0.2]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapAll
+    StampTries: 15
+    Stamps:
+    - CraterLava_3_HI, 0.05
+
+    Radiation: 5
+    Temperature: 3
+    Decorations:  
+               - [RealRock10Dark, 0.05, Free]  
+               - [RealRock4Dark, 0.03, Free]
+               - [RealRock1Dark, 0.01, Free]
+               
+               # Rock Resources:
+               - [CrystalStraight, 0.007, Tree]
+               - [RockResourcePromethium, 0.001, Tree]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceIron, 0.001, Plant]
+               # - [RockResourceCarbon, 0.001, Plant]
+               - [RockResourceSilicon, 0.001, Free]
+
+
+# ============================================================
+  - Name: DustBowl                         # Random depression with lots of red and dark sand. Will also shape (but not texture) the LavaFolds, Rocks biome
+    IgnoreForcedBiome: true
+
+    AmbientSound: LavaFog 
+    Texture: [5,5,0.5, 0,6,0.7, -0.4]
+
+    UndergroundLayers:
+               - [5, 4]
+               - [9, 4]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false
+
+    Color: [0.7, 0, 0.4]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapOff       # OverlapOff, to prevent hostile stamp overlaps. Placed before Mountains, so that the SUB stamp doesn't create spikes.
+    StampTries: 600                        # High number of spawntries to find and fill all empty spots.
+    Stamps:
+    - Flats_2, 0.9
+    
+    Decorations:  
+               # Rock Resources:
+               - [RockResourceCopper, 0.0008, BigPlant]
+               - [RockResourceIron, 0.0002, Free]
+               # - [RockResourceCarbon, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+               - [RockResourceSilicon, 0.00007, Free]
+
+
+# ==============================================================
+  - Name: Mare
+    IgnoreForcedBiome: true
+    
+    AmbientSound: LavaPlains 
+    Texture: [6, 0, -0.7]
+    
+    UndergroundLayers:
+               - [6, 3]
+               - [9, 2]
+               - [10, -1]
+               - [11, 1]    
+
+    SelectionCriteria: 
+    - Height < 180
+
+    Color: [0.3, 0.2, 0.2]                       
+    
+    Decorations:  
+               - [RockGrey01Large, 0.003]
+               - [RockGrey02Large, 0.007]
+               
+               # Rock Resources:
+               - [RockResourceCopper, 0.0001, Free]
+               - [RockResourceIron, 0.0002, Free]
+               # - [RockResourceCarbon, 0.0002, Free]
+               - [RockResourceSilicon, 0.0002, Free]
+
+
+# ==============================================================       
+  - Name: StrangeSpire
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains 
+    Texture: [7, 8, 0.9, 8, 7, 0.9, 0.1]   
+    UndergroundLayers:
+               - [10, 80]
+               - [12, 1]    # Copper deposit
+               - [10, -1]  
+               - [11, 1] 
+               
+
+    SelectionCriteria:
+    - Height > 482
+    - +Long < 0.03
+    Color: [0, 0, 0]
+
+    Decorations:
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+               - [DeadTree01, 0.01, Free]
+               - [DeadTree02b, 0.01, Free]
+               - [CrystalsPyramidOrange, 0.02, Free]
+               - [RockResourceCobalt, 0.02, Free]
+
+
+
+# ==============================================================       
+  - Name: HighMountains
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains 
+    Texture: [7, 8, 0.9, 8, 7, 0.9, 0.1]   
+    UndergroundLayers:
+               - [10, 80]
+               - [12, 1]    # Copper deposit
+               - [10, -1]  
+               - [11, 1] 
+               
+
+    SelectionCriteria:
+    - Height > 380
+    Color: [1, 1, 1]
+
+    Decorations:
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+               - [DeadTree01, 0.01, Free]
+               - [DeadTree02b, 0.01, Free]
+               - [RockResourceCobalt, 0.01, Free]
+
+
+# ==============================================================
+  - Name: Mountains
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [8, 11, 0.3]
+    UndergroundLayers:
+               - [10, -1]
+               - [11, 1] 
+
+    SelectionCriteria: 
+    - Height > 320
+
+    Color: [0.4, 0.4, 0.6] 
+
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+
+
+# ==============================================================
+  - Name: LowMountains
+    IgnoreForcedBiome: true 
+
+    AmbientSound: ArcticLowPlains
+    Texture: [6,10, 0.2] 
+
+    UndergroundLayers:
+               - [10, -1]
+               - [11, 1] 
+               
+    SelectionCriteria: 
+    - Height > 280
+
+    Color: [0.2, 0.2, 0.3] 
+    
+    StampForcesBiome: true  
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 2000                # Very high number of spawn tries to find all empty spots
+                                    # Splat Texture distribution is 'Side, Top, darkSide, brightTop' (=STdb)
+    Stamps:
+    - MountainSharp_02_sp, 0.5, S,T,10,11  # (STdb) Very Dark and glossy
+    - MountainSharp_02_sp, 0.5, S,T,11,10  # (STdb) Dark with red sandy sides
+    - MountainSharp_02_sp, 0.5, S,T,9,10   # (STdb) Glossy black top, dark grey matte side
+    
+    - MountainSharp_03_sp, 0.5, S,T,10,11  # (STdb) Very Dark and glossy.
+    - MountainSharp_03_sp, 0.5, S,T,11,10  # (STdb) Dark with red sandy  sides
+    - MountainSharp_03_sp, 0.5, S,T,9,10   # (STdb) Glossy black top, dark grey matte side
+    
+    
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.002]
+ 
+               # Rock Resources:
+               - [RockResourceIron, 0.001, Plant]
+               # - [RockResourceCarbon, 0.001, Plant]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+
+
+# ==============================================================
+  - Name: LowMountains_1           # Smaller mountain, to fill the last empty spots. Placed after all other (large) mountains.
+    IgnoreForcedBiome: true
+
+    AmbientSound: ArcticLowPlains
+    Texture: [6,10, 0.2] 
+
+    UndergroundLayers:
+               - [10, -1]
+               - [11, 1] 
+               
+    SelectionCriteria: 
+       - false
+
+    Color: [0.2, 0.2, 0.3] 
+    
+    StampForcesBiome: true  
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 500
+    Stamps:
+    - MountainSharp_04_sp, 0.9, S,T,9,10  # (STdb) Glossy black top, dark grey matte side
+    
+    Decorations:  
+               - [RockGrey01Large, 0.007]
+               - [RockGrey02Large, 0.007]
+
+               # Rock Resources:
+               - [RockResourceIron, 0.001, Plant]
+               # - [RockResourceCarbon, 0.001, Plant]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+
+
+# ==============================================================
+  - Name: Spire
+    IgnoreForcedBiome: true   
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria: 
+    - Height > 500
+    Color: [0, 0.4, 0.9] 
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 15  
+    Stamps:
+    - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    # - AlienSpire_01, 0.8    
+
+   
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ============================================================
+  - Name: LargeCrater
+    IgnoreForcedBiome: true
+    AmbientSound: LavaFog ]
+    Texture: [11, 0, -0.0]
+    
+    UndergroundLayers:
+               - [9, 6]
+               - [11, 1]
+               - [9, 2]
+               - [11, 1]
+               - [9, 1]
+               - [11, 1]
+               - [10, -1]
+               - [11, 1]
+               
+    SelectionCriteria: 
+       - false
+
+    Color: [0.8, 0, 0.3]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapOther
+    StampTries: 30
+    Stamps:
+    - CraterMoon_5, 0.1  
+    - CraterMoon_6, 0.07  
+    - CraterMoon_7, 0.05
+    - CraterMoon_8, 0.03  
+    - CraterMoon_9, 0.01  
+    
+    Radiation: 5
+    Temperature: 3
+
+    Decorations:  
+               - [RealRock10Dark, 0.03, Free]
+               - [RealRock4Dark, 0.02, Free]
+               - [RealRock1Dark, 0.01, Free]
+               
+               # Rock Resources:
+               - [CrystalsPyramidBlue, 0.001, Plant]
+               - [CrystalsPyramidBlue, 0.002, Free]
+               - [RockResourcePromethium, 0.001, Tree]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceIron, 0.001, Free]
+               # - [RockResourceCarbon, 0.001, Free]
+
+
+# ============================================================               
+  - Name: SmallCrater
+    IgnoreForcedBiome: true
+    AmbientSound: LavaFog 
+    Texture: [11, 0, -0.4]
+
+    UndergroundLayers:
+               - [9, 2]
+               - [11, 1]
+               - [9, 1]
+               - [11, 1]
+               - [10, -1]
+               - [11, 1]
+
+    SelectionCriteria: 
+       - false
+
+    Color: [1, 0, 0.3]
+    
+    StampForcesBiome: true   
+    StampForcesBiomeType: OverlapOther
+    StampTries: 600
+    Stamps:
+    - CraterMoon_1, 0.9
+    - CraterMoon_3, 0.4    
+    - CraterMoon_4, 0.2  
+    - CraterMoon_5, 0.1  
+    - CraterMoon_6, 0.07  
+
+
+    Radiation: 5
+    Temperature: 3
+    Decorations:  
+               - [RealRock10Dark, 0.03, Free]
+               - [RealRock4Dark, 0.02, Free]
+               - [RealRock1Dark, 0.01, Free]
+               
+               # Rock Resources:
+               - [CrystalsPyramidBlue, 0.001, Plant]
+               - [CrystalsPyramidBlue, 0.004, Free]
+               - [RockResourcePromethium, 0.001, Free]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceSilicon, 0.0005, Free]
+               - [RockResourceIron, 0.0005, Free]
+               # - [RockResourceCarbon, 0.0005, Free]
+               - [RockResourceCopper, 0.0005, Free]
+
+
+
+# ==============================================================
+  - Name: ColdPlains # (='PoleEdge')  # Prevents POI from spawning too close to the poles.
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [5, 5, 0.2] 
+    
+    UndergroundLayers:
+               - [6, 5]
+               - [9, 2]
+               - [10, -1]
+               - [11, 1] 
+    
+    
+    SelectionCriteria:  
+    - +Lat > 0.93
+
+    Color: [0.3, 0.5, 0.3] 
+
+    
+# ====== (End of ignore-Forced chain) ====== 
+# ==============================================================
+  - Name: Rocks
+
+    AmbientSound: LavaPlains 
+    Texture: [11, 10, -0.3]
+    
+    UndergroundLayers:
+               - [10, 1]
+               - [9, 1]
+               - [10, 2]
+               - [9, 1]
+               - [10, -1]
+               - [11, 1]
+               
+    SelectionCriteria:
+    - Height > 235
+    - Humidity > 0.17
+    - Temperature > 6
+    
+    
+    Color: [0.2, 0.4, 0.2]
+    
+    Decorations:
+               - [ "AridRock03", 0.02]
+               - [ "RealRock1Dark", 0.03]
+               - [ "RealRock2Dark", 0.01]
+               - [ "RealRock3Dark", 0.03]
+               - [ "RealRock4Dark", 0.03]
+               - [ "RealRock8Dark", 0.03]
+               - [ "RealRock10Dark", 0.05]
+
+               # Rock Resources:
+               - [RockResourcePromethium, 0.0010, Tree]
+               - [RockResourceSilicon, 0.0001, Free]
+               - [RockResourceIron, 0.0003, Free]
+               # - [RockResourceCarbon, 0.0003, Free]
+               - [RockResourceCopper, 0.0001, Free]
+
+
+ # ==============================================================
+  - Name: Rocks_1  # ( = 'RocksPlainsEdge')
+
+    AmbientSound: LavaPlains 
+    Texture: [4, 10, 0.1]
+    
+    UndergroundLayers:
+               - [9, 3]
+               - [11, 1]
+               - [10, -1]
+               - [11, 1]
+               
+    SelectionCriteria:
+    - Height > 225
+    - Humidity > 0.16
+    - Temperature > 0
+    
+    Color: [0.25, 0.45, 0.25]
+    
+    Decorations:
+
+               - [ "RealRock1Dark", 0.03]
+               - [ "RealRock2Dark", 0.01]
+               - [ "RealRock3Dark", 0.03]
+               - [ "RealRock4Dark", 0.03]
+               - [ "RealRock8Dark", 0.03]
+               - [ "RealRock10Dark", 0.05]
+
+
+# ==============================================================
+  - Name: LavaEdge # (= 'LavaPlainsEdge')
+  
+    AmbientSound: LavaPlains 
+    Texture: [11, 6, -0.1]
+    
+    UndergroundLayers:
+               - [11, 3]
+               - [9, 1]
+               - [10, -1]
+               - [11, 1] 
+
+    SelectionCriteria:
+    - Humidity > 0.195  #0.185
+    - Height > 180
+    
+    Color: [0.65, 0.35, 0.2]
+
+    Decorations:  
+               - [RealRock4Dark, 0.001, Free]
+               - [RealRock3Dark, 0.001, Free]
+               - [RealRock1Dark, 0.001, Free]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0008, BigPlant]
+
+
+# ==============================================================
+  - Name: Dunes
+
+    AmbientSound: ArcticLowPlains
+    Texture: [5, 6, 0]
+
+    UndergroundLayers:
+               - [5, 9]
+               - [9, 1]
+               - [11, 1]
+               - [10, -1]
+               - [11, 1]
+
+    StampProb: 0.4
+    StampForcesBiomeType: OverlapOther
+    Stamps: 
+    - DunesSea_01_BM2, 0.5
+
+    SelectionCriteria: 
+    - Humidity < 0.14 #0.13
+    - Height > 205
+    - Temperature > 3
+
+    Color: [0.58, 0.48, 0.48]
+
+    Decorations:
+               - [RealRock4Dark, 0.01]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0003, Free]
+               - [RockResourceCopper, 0.0003, Free]
+
+
+# ==============================================================
+  - Name: Sand
+
+    AmbientSound: ArcticLowPlains
+    Texture: [5, 6, -0.2]   # Side Tex is chosen earlier than in the 'Dunes' biome, resulting in rough sands
+    
+    
+    UndergroundLayers:
+               - [5, 3]
+               - [9, 1]
+               - [11, 1]
+               - [10, -1]
+               - [11, 1]
+               
+               
+    SelectionCriteria: 
+    - Humidity < 0.152
+    - Height > 180
+    - Temperature > 3
+    
+    Color: [0.52, 0.42, 0.42]
+
+    Decorations:
+               - [RealRock4Dark, 0.01]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0001, Free]
+               - [RockResourceCopper, 0.0001, Free]
+
+
+# ==============================================================
+  - Name: Plains
+  
+    AmbientSound: LavaPlains 
+    Texture: [6, 4, 0.5, 11, 11, 0.3, 0.05]
+    
+    UndergroundLayers:
+               - [6, 5]
+               - [9, 2]
+               - [10, -1]
+               - [11, 1] 
+               
+
+    SelectionCriteria:
+    - Humidity > 0.161
+    # - Humidity < 0.178
+
+    Color: [0.7, 0.4, 0.4]
+  
+    StampProb: 0.1
+    StampForcesBiomeType: OverlapOther
+    Stamps: 
+    - DunesSea_01_BM2, 0.5
+
+    Decorations:  
+               - [RealRock4Dark, 0.001, Free]
+               - [RealRock3Dark, 0.001, Free]
+               - [RealRock1Dark, 0.001, Free]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+               - [RockResourceIron, 0.0002, Free]
+               # - [RockResourceCarbon, 0.0002, Free]
+  
+# ==============================================================
+# CATCH ALL 
+# ==============================================================
+
+  - Name: PlainsEdge
+
+    AmbientSound: LavaPlains 
+    Texture: [11, 6, -1.0]
+    
+    UndergroundLayers:
+               - [11, 5]
+               - [9, 2]
+               - [10, -1]
+               - [11, 1] 
+               
+    SelectionCriteria:
+       - true
+    Color: [0.65, 0.35, 0.4]
+  
+    StampProb: 0.1 
+    StampForcesBiomeType: OverlapOther
+    Stamps: 
+    - DunesSea_01_BM2, 0.5
+
+    Decorations:  
+               - [RealRock4Dark, 0.001, Free]
+               - [RealRock3Dark, 0.001, Free]
+               - [RealRock1Dark, 0.001, Free]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0001, Free]
+               - [RockResourceCopper, 0.0001, Free]
+               - [RockResourceIron, 0.0001, Free]
+               # - [RockResourceCarbon, 0.0001, Free]
+
+# ==============================================================
+# Fixed positioned biomes need to be behind catch all biome!
+# ==============================================================
+
+  - Name: Crashsite
+    SpecialBiome:
+        IsStarterBiome: true
+        FixedPosition: [ -13000, 100 ]
+    Texture: [6, 4, 0.5, 11, 11, 0.3, 0.05]
+
+    Color: [.6, 0.1, 0.1]
+    
+    Stamps:
+     - Starter_3
+    
+    AmbientSound: LavaPlains
+    Decorations:
+               - [RealRock4Dark, 0.001, Free]
+               - [RealRock3Dark, 0.001, Free]
+               - [RealRock1Dark, 0.001, Free]
+
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0002, Free]
+               - [RockResourceCopper, 0.0002, Free]
+               - [RockResourceIron, 0.0002, Free]
+               # - [RockResourceCarbon, 0.0002, Free]
+
+    # Grass:
+               # - Name: Flower01
+                 # Density: 0.005
+                 # YScale: 0.8
+                 # Preset: GrassDense
+               # - Name: Flower01
+                 # Density: 0.005
+                 # YScale: 1.0
+                 # Preset: GrassDense
+                 # Preset: GrassDense
+               # - Name: Flower02
+                 # Density: 0.002
+                 # YScale: 0.9
+                 # Preset: GrassDense
+               # - Name: Flower04
+                 # Density: 0.0015
+                 # YScale: 0.9
+                 # Preset: GrassDense
+               # - Name: GrassGreen02
+                 # Density: 1.8
+                 # Preset: GrassDense
+               # - Name: GrassGreen02
+                 # Density: 0.2
+                 # YScale: 1.12
+                 # Preset: GrassDense
+               # - Name: GrassGreen03
+                 # Density: 1
+                 # Preset: GrassDense
+
+# ==============================================================
+  - Name: Pillar_0
+    SpecialBiome:  
+        FixedPosition: [ 100, 100 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+               - [FantasyPlant1, 0.25]
+
+# ==============================================================
+  - Name: Pillar_1
+    SpecialBiome:  
+        FixedPosition: [ 100, 1000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_2
+    SpecialBiome:  
+        FixedPosition: [ 100, 2000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_3
+    SpecialBiome:  
+        FixedPosition: [ 100, 3000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_4
+    SpecialBiome:  
+        FixedPosition: [ 100, 4000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_5
+    SpecialBiome:  
+        FixedPosition: [ 100, 5000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_6
+    SpecialBiome:  
+        FixedPosition: [ 100, 6000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_6_2
+    SpecialBiome:  
+        FixedPosition: [ 100, 7000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_7
+    SpecialBiome:  
+        FixedPosition: [ 100, -1000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_8
+    SpecialBiome:  
+        FixedPosition: [ 100, -2000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_9
+    SpecialBiome:  
+        FixedPosition: [ 100, -3000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               - [AridRock01, 0.05, Free]
+               - [AridRock02, 0.05, Free]
+               - [AridRock03, 0.05, Free]
+
+# ==============================================================
+  - Name: Pillar_10
+    SpecialBiome:  
+        FixedPosition: [ 100, -4000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_11
+    SpecialBiome:  
+        FixedPosition: [ 100, -5000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_12
+    SpecialBiome:  
+        FixedPosition: [ 100, -6000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]
+
+# ==============================================================
+  - Name: Pillar_13
+    SpecialBiome:  
+        FixedPosition: [ 100, -7000 ]
+    AmbientSound: Mountains 
+    Texture: [11, 8, 0.3]  
+    UndergroundLayers:
+               - [11, 30]
+               - [9, 2]
+               - [11, 70]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]
+    Color: [1, 1, 1]
+
+    Stamps:
+     - AlienMountainBunny_sp, 0.3, 8,3,8,5   # S,d,T,b  # All classes
+    
+    Decorations:  
+               # - [RockGrey01Large, 0.007]
+               # - [RockGrey02Large, 0.007]

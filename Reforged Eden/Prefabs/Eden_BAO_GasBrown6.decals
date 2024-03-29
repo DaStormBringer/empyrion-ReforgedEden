@@ -1,0 +1,9 @@
+[GasCloud]
+-Mode=Opaque
+-Pos=0.5114733,129.5708,0.3780805
+-Rot=0,354.9465,0
+-Size=1.61051,1.61051,1.61051
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DecalGas_Rust3
+

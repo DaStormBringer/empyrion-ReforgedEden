@@ -1,0 +1,557 @@
+PlayfieldType: Space
+TemperatureDay: -167
+Radiation: 11.2100334
+PlanetType: Combat Site Class 5
+AtmosphereEnabled: false
+FogCloudIntensity: 1
+CloudsSharpness: 1
+Description: >-
+  Type: [c][ff0000]Combat Site[-][/c] - [c][FF0000]Class 5[-][/c]
+
+  Factions: [c][ff0000]Pirate[-][/c]
+
+
+  Sensors pick up high levels of radio signals.
+
+
+  [c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]
+PlayfieldLevel: 1
+BaseAttackCount: 0
+PlanetClass: Combat Site
+UseFixed: true
+Build: 3135
+Music: Fragments
+POIs:
+  Fixed:
+  - Type: AsteroidVoxel01Iron
+    Prefab: AsteroidVoxel01Iron
+    Name: Iron Asteroid
+    Properties: &o0
+    - Key: RegenAfter
+      Value: 180
+    Pos:
+    - -3104
+    - 476
+    - 11885
+    Rot:
+    - 0
+    - 0
+    - 0
+  - Type: AsteroidVoxel02Iron
+    Prefab: AsteroidVoxel02Iron
+    Name: Iron Asteroid
+    Properties: *o0
+    Pos:
+    - 11976
+    - -220
+    - 17079
+    Rot:
+    - 0
+    - 0
+    - 0
+  - Type: AsteroidVoxel02Iron
+    Prefab: AsteroidVoxel02Iron
+    Name: Iron Asteroid
+    Properties: *o0
+    Pos:
+    - 13145
+    - -134
+    - 338
+    Rot:
+    - 0
+    - 0
+    - 0
+  - Type: AsteroidVoxel02Gold
+    Prefab: AsteroidVoxel02Gold
+    Name: Gold Asteroid
+    Properties:
+    - Key: RegenAfter
+      Value: 180
+    Pos:
+    - -2319
+    - -1236
+    - -2291
+    Rot:
+    - 0
+    - 0
+    - 0
+  - Type: AsteroidVoxel02Platin
+    Prefab: AsteroidVoxel02Platin
+    Name: Platin Asteroid
+    Properties:
+    - Key: RegenAfter
+      Value: 180
+    Pos:
+    - 8124
+    - 1168
+    - 3593
+    Rot:
+    - 0
+    - 0
+    - 0
+DroneBaseSetup:
+  Fixed:
+  - Name: MainDroneBase
+    Pos:
+    - 192.876572
+    - -1762
+    - -2801.36792
+    DroneOnDuty:
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - 1698.63354
+      - 807
+      - 2141.01221
+      Radius: 8880
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - -7868.63672
+      - 1840
+      - -691.923279
+      Radius: 13700
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - 2822.28931
+      - 739
+      - 123.727242
+      Radius: 14592
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - 6312.02539
+      - 504
+      - -4629.89355
+      Radius: 14957
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - 2761.95801
+      - -2367
+      - -4052.25928
+      Radius: 13217
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - -45.8434601
+      - -2023
+      - 38.7088776
+      Radius: 8788
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -1512.03528
+      - -56
+      - 2023.46863
+      Radius: 10704
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - 182.697418
+      - -2169
+      - 2378.99487
+      Radius: 9390
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - 7019.20166
+      - 329
+      - -3810.90308
+      Radius: 13683
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - -1902.75525
+      - -2328
+      - -1763.05371
+      Radius: 13277
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - 4060.42163
+      - 2072
+      - -1890.61328
+      Radius: 10937
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - 668.437439
+      - 1518
+      - 3194.82178
+      Radius: 9157
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -5954.17236
+      - -1134
+      - -2884.31714
+      Radius: 10954
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - -2094.76318
+      - 751
+      - -5593.63037
+      Radius: 12325
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -2947.02563
+      - -919
+      - 7057.40332
+      Radius: 10274
+    - Name: Eden_SpaceDroneASCTorpedo
+      Faction: Pirates
+      Pos:
+      - 3852.86938
+      - 1947
+      - 6030.23535
+      Radius: 10977
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - 6542.42334
+      - -884
+      - 2950.59863
+      Radius: 10011
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -6094.88477
+      - -1671
+      - -37.41465
+      Radius: 14465
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - -168.437943
+      - -496
+      - 322.683533
+      Radius: 11652
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - 2427.41577
+      - -399
+      - -680.509399
+      Radius: 11619
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - 860.146912
+      - -9
+      - 4861.49316
+      Radius: 10222
+    - Name: Eden_SpaceDroneASCRocket
+      Faction: Pirates
+      Pos:
+      - -968.727173
+      - -1674
+      - 4167.90234
+      Radius: 13339
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -58.3738556
+      - 1002
+      - -3091.44897
+      Radius: 9339
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - 4793.48047
+      - -242
+      - 3935.39697
+      Radius: 14851
+    - Name: Eden_SpaceDroneASCGatling
+      Faction: Pirates
+      Pos:
+      - -4285.15771
+      - -575
+      - 971.934998
+      Radius: 13467
+    SpaceVessel:
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 22
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 526
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - 5371
+          - -6013
+          - 5964
+        - - -9286
+          - -2804
+          - -6964
+        - - -3627
+          - 4209
+          - -7289
+        - - 2460
+          - -3598
+          - -3444
+        - - -4581
+          - -91
+          - 9564
+        - - 2050
+          - -1027
+          - 3488
+        - - 10631
+          - -4277
+          - -3726
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 37
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 409
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - -933
+          - 2733
+          - -9946
+        - - 423
+          - -3668
+          - 54
+        - - -3376
+          - 5637
+          - 3459
+        - - 4322
+          - 7113
+          - 5573
+        - - -1504
+          - -6673
+          - 2594
+        - - -123
+          - -4142
+          - -2626
+        - - 4483
+          - -158
+          - 3061
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 3
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 31
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 410
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - -2944
+          - 7878
+          - -6857
+        - - -892
+          - -4221
+          - 1164
+        - - -1473
+          - -2533
+          - -2342
+        - - -1400
+          - 548
+          - 4718
+        - - 4605
+          - 6891
+          - -702
+        - - 325
+          - -7429
+          - 566
+        - - 3041
+          - 7793
+          - 1781
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 3
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 32
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 420
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - -2645
+          - 4516
+          - 4724
+        - - -2000
+          - -3110
+          - 659
+        - - 2052
+          - -2631
+          - -2288
+        - - 440
+          - 6394
+          - 49
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 3
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 24
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 460
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - -4512
+          - -1840
+          - -3116
+        - - 837
+          - 7489
+          - -4455
+        - - 4015
+          - 2681
+          - -2570
+        - - 3694
+          - -1226
+          - 416
+        - - 1098
+          - 3554
+          - -3333
+        - - -3313
+          - 579
+          - 938
+        - - 3156
+          - 3663
+          - 1939
+        - - -1741
+          - -6500
+          - 2689
+        - - 4310
+          - -6116
+          - -996
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 27
+      Mission: Freighter
+      Freighter:
+        DelayBetweenRespawn: 431
+        DelayBeforeSelfDestruction: 900
+        IsRespawnAfterDestruction: true
+        PathWayPoint:
+        - - -5641
+          - -767
+          - 1479
+        - - 348
+          - 6896
+          - -500
+        - - 3429
+          - -6445
+          - 820
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 90
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -1297.6261
+        - -3570.98755
+        - 4573.99414
+        Radius: 1205
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 100
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 6554.82422
+        - 7300.74023
+        - -4298.19092
+        Radius: 1400
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 80
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -1892.81445
+        - -3153.69702
+        - -1802.91357
+        Radius: 799
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 3
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 96
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -6701.04102
+        - 3051.60986
+        - 5825.24658
+        Radius: 1231
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 99
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - 6000.80322
+        - 6982.26855
+        - 2981.05591
+        Radius: 1323
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 3
+    - Name: OPVPiratesRG
+      Faction: Pirates
+      FixedMaxSpeed: 93
+      Mission: SpacePatrol
+      RangePatrol:
+        Position3D:
+        - -1441.55701
+        - -4169.98584
+        - 3828.92993
+        Radius: 764
+      Stock:
+      - Name: Eden_SpaceDronePirateGatling
+        Amount: 4
+    - Name: Eden_SpaceBlackFleet
+      Faction: Pirates
+      FixedMaxSpeed: 85
+      Mission: Immobile
+      Immobile:
+        Position3D:
+        - -5045.19434
+        - -4073.30688
+        - 1254.91455
+      Stock:
+      - Name: Eden_SpaceDroneASCGatling
+        Amount: 15
+      - Name: Eden_SpaceDroneASCRocket
+        Amount: 10
+      - Name: Eden_SpaceDroneASCTorpedo
+        Amount: 5
+      Properties:
+      - Key: RegenAfter
+        Value: 1440
+      - Key: Discovery
+        Value: False

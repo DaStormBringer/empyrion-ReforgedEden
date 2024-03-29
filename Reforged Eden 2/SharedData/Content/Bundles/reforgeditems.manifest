@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 284788199
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f270f2b9403b8c06be637431f7b02359
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 193c557d893f153aec3e68925dd05249
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_Reforged_BlockModels/HandheldWeapons/EnergyRifleV1RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/PistolT1RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/PistolT3RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/EnergyRifleV2RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/PistolT4RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/AssaultRifleT1V2RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/PlasmaSwordRG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/SMGT2RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/PistolT2RG.prefab
+- Assets/_Reforged_BlockModels/HandheldWeapons/CombatKnifeV2RG.prefab
+Dependencies: []

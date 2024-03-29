@@ -1,0 +1,38 @@
+---
+# Space Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html 
+
+# Playfield Characteristics
+Gravity: 0.00
+AtmosphereEnabled: False
+PvP: False
+UseFixed: True
+Radiation: 5.81
+TemperatureDay: -113
+Music: DistantWorlds
+
+# Playfield difficulty (has impact on experience gains)
+Difficulty: 1
+
+PlayfieldType: Space
+
+PlanetType: Empty
+
+Description: "Empty space"
+
+#SunFlare: EnvironmentalEffects/SunFlareWhite2
+#Stars: SkyboxStarsRed
+#Nebula: PrefabNebulaBluePinkRed
+
+### POIs
+
+POIs:
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [5000, 0, -5000]
+          RotY: 0
+
+# Drones
+DroneBaseSetup:
+    Fixed:

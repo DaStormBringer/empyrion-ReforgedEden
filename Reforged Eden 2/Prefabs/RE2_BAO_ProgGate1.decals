@@ -1,0 +1,9 @@
+[GateEffect]
+-Mode=Opaque
+-Pos=0,181,0
+-Rot=90,0,0
+-Size=1,0.75,0.75
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_WarpgateBlue3
+

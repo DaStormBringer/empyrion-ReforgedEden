@@ -1,0 +1,344 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+# Alien Music
+Music: [alien, alien2, barren, Blight, Cypher, Diaspora, WhatWalksBelow]
+ 
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Orbit            
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      DisplayName: Zascosium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3     
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+           
+### POIs
+POIs:
+    - Name: [AsteroidRingPlanet]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      BaseField: True  
+      RandomRotation: True
+
+
+# #Traders
+    # - Type: BA_Alien
+      # Name: [RBAO_TraderGasRefinery]  
+      # DisplayName: Gas Refinery
+      # Faction: Trader
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 0.6
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [0, 100]
+         # PosYMax: 100
+      # Properties: 
+        # - Key: Music
+          # Value: NebularClouds  
+        # - Key: Discovery
+          # Value: False
+        # - Key: StationInterface
+          # Value: "Fuel:1,O2:1,Repair:3,Shield:8,IfNeutral:0.05,IfFriendly:-0.08,IfHonored:-0.16"
+
+# #Polaris
+    # - Type: BA_Alien
+      # Name: [RBAO_PolarisGasRefinery]  
+      # DisplayName: Gas Refinery
+      # Faction: Polaris
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 0.8
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [0, 100]
+         # PosYMax: 100
+      # Properties: 
+        # - Key: Music
+          # Value: NebularClouds  
+        # - Key: Discovery
+          # Value: False
+        # - Key: StationInterface
+          # Value: "Fuel:1,O2:1,Repair:3,Shield:8,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+    # - Type: BA_Alien   
+      # Name: [RBAO_PolarisAsteroidMining]  
+      # DisplayName: Mining Facility
+      # Faction: Polaris
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+        # - Key: StationInterface
+          # Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+    # - Type: BA_Alien   
+      # Name: [RBAO_PolarisAlloySynthesis]  
+      # DisplayName: Alloy Synthesis Factory
+      # Faction: Polaris
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+        # - Key: StationInterface
+          # Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+# #Pirates
+    # - Type: BA_Alien   
+      # Name: [BAO_PiratesBlackMarket, BAO_PiratesHideout, BAO_PiratesSlaveMarket]  
+      # DisplayName: Asteroid Station
+      # Faction: Pirates
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: DarkSoundscape3  
+        # - Key: StationInterface
+          # Value: "Fuel:4,O2:4,IfNeutral:0.05,IfFriendly:-0.05,IfHonored:-0.10"
+
+# # Zirax
+
+    # - Type: BA_Alien   
+      # Name: [BAO_XenuProduction]  
+      # DisplayName: Orbital Production
+      # Faction: Zirax
+      # Mode: Survival
+      # CountMinMax: [ 0, 1]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+        # - Key: StationInterface
+          # Value: "Fuel:1.6,O2:1.6,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    # - Type: BA_Alien   
+      # Name: [RBAO_RadosRepairStation, RBAO_XenuSupplyStation]  
+      # DisplayName: Resupply Station
+      # Faction: Zirax
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+        # - Key: StationInterface
+          # Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    # - Type: BA_Alien   
+      # Name: [RBAO_XenuShipyard,RBAO_GhystShipyard]  
+      # DisplayName: Shipyard
+      # Faction: Zirax
+      # Mode: Survival
+      # CountMinMax: [ 0, 1 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+        # - Key: StationInterface
+          # Value: "Fuel:1.6,O2:1.6,Warp:1.6,Ammo:3,Repair:2,Shield:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    # - Type: BA_Alien   
+      # Name: [BAO_GhystDefence1,BAO_GhystDefence2]  
+      # DisplayName: Defence Station
+      # Faction: Zirax
+      # Mode: Survival
+      # CountMinMax: [ 0, 2 ]     
+      # Probability: 1
+      # InitPower: True
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+        # - Key: Music
+          # Value: Vanguard  
+    # #    - Key: MapDistance
+     # #     Value: 2500     
+
+#None
+ 
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 0, 8 ]     
+      Probability: 0.3
+      # Rotate: true
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+ 
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneKrielLaser]
+        Faction: Main
+        Count: [2, 5]
+        Radius: [300, 800]
+      SpaceVessels:
+# Freighter
+          - Name: [Freighter]    
+            Faction: Kriel     
+            Count: [3, 5]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneKrielLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+ 
+# Patrol Vessels
+          - Name: [OPVKrielRG]     
+            Faction: Kriel       
+            Count: [5, 10]
+            FixedMaxSpeed: [20, 50]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 2500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneKrielLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]

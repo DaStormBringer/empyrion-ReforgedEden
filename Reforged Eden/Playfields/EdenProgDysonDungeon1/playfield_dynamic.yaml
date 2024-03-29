@@ -1,0 +1,87 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [5]
+  SizeProbs: [1]
+TemperatureMin: [-150,-150]                         
+TemperatureMax: [-150,-150]      
+TemperatureNight: [0, 0]  
+PlanetAxis: [-5,5]                      
+HumidityMin: [0.10, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                    
+Radiation: [25, 25]
+SeaLevel: [-1, -1]                                      
+TerrainLevel: [150, 150]                              
+BaseLevel: [150, 150]
+LandWaterRatio: [0, 0]     
+# TemperatureHeightRange: [0, 195]
+TemperatureHeightRange: [800, 800]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.5
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.6
+
+# GravityMinMax: [-0.05, -0.04]
+GravityMinMax: [-10, -10]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0, 0]
+GroundFogProb: 0
+GroundFogIntensityRange: [0, 0]
+GroundFogHeightRange: [0, 0]
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [RockLava03]
+# Music: [Anomalous]
+Music: [EvilWhispering]
+# ==============================================================
+
+
+TerrainHeightMapMax: 490
+
+
+GroundShapes: 
+
+
+BiomeStampTries: 20
+
+Biomes: 
+  
+# ==============================================================
+  - Name: Pole
+    Weather: PoleFog
+    IgnoreForcedBiome: true 
+    Texture: [11, 11, 0.02]
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.6, 0.6, 0.6]
+
+# ==============================================================
+  - Name: Structure
+    Texture: [11, 11, 0.2]   
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [11, 4]
+               - [12, 5]
+               - [13, 5]
+               - [14, 20]
+               - [11, -1]
+               - [11, 1]
+    
+    
+    SelectionCriteria:  
+       - true                                    
+
+    Color: [0.3, 0.3, 0.3]    
+
+    
+    Decorations:  
+
+    Grass:
+
+
+    

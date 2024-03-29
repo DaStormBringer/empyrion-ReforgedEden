@@ -1,0 +1,261 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.93.0.2542, Playfield Version: 11.0.0 [2712] (Alpha 11.0.0)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [1, 2]
+   SizeProbs: [0.5, 0.5]
+PlanetAxis: [-20, 20]
+PlayfieldLevelOverride: [7, 10]
+TemperatureMin: [100, 100]
+TemperatureMax: [200, 200]
+TemperatureNight: [0, 0]
+HumidityMin: [0.1, 0.15]
+HumidityMax: [0.28, 0.35]
+Radiation: [15, 19]
+LandWaterRatio: [0, 0]
+BaseLevel: [172, 172]
+SeaLevel: [105, 105]
+TerrainLevel: [284, 284]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [240, 388]
+TemperatureGradientRange: [0, 0]
+TemperatureNoiseFac: 0.05
+HumidityHeightFac: [0, 365]
+HumidityNoiseFac: 0.59999999999999998
+GravityMinMax: [-8, -4]
+AtmosphereDensityMinMax: [0.4, 0.5]
+GroundFogProb: 1
+AtmosphereFogRange: [1, 1]
+GroundFogIntensityRange: [1, 1]
+GroundFogHeightRange: [-100, 800]
+Water: [RockLava03]
+Music: [BarrenMoon]
+BiomeStampTries: 20
+GroundShapes:
+- GroundShape_3, 0.5
+Biomes:
+-  Name: Pole
+   Weather: PoleFog
+   IgnoreForcedBiome: True
+   Texture: [0, 0, 0.02]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Color: [0.6, 0.6, 0.6]
+-  Name: LavaLake
+   IgnoreForcedBiome: True
+   Texture: [11, 11, 0.2]
+   UndergroundLayers:
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height < SeaLevel
+   Color: [0, 1, 0]
+   Temperature: 100
+-  Name: Mountains
+   IgnoreForcedBiome: True
+   Texture: [1, 6, 0.5, 2, 7, 0.8, 0.15]
+   UndergroundLayers:
+   - [1, 3]
+   - [10, 50]
+   - [9, 10]
+   - [11, 20]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 270
+   Color: [0.7, 0.7, 0.7]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - Mountain_4a, 0.1
+   - Mountain_4b, 0.1
+   StampTries: 15
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+-  Name: MareEdge
+   Texture: [0, 0, 0.5, 2, 7, 0.8, 0.5]
+   UndergroundLayers:
+   - [4, 3]
+   - [9, 2]
+   - [10, 10]
+   - [9, 10]
+   - [11, 10]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height < 202
+   - Height > 199
+   Color: [0.1, 0.1, 0.3]
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalStraight, 0.0001, Free]
+-  Name: Mare
+   Texture: [4, 5, 0.5, 2, 7, 0.5, 0.5]
+   UndergroundLayers:
+   - [4, 3]
+   - [9, 2]
+   - [10, 10]
+   - [9, 10]
+   - [11, 10]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height < 202
+   - Height > 110
+   Color: [0.3, 0.3, 0.3]
+   StampProb: 0.90000000000000002
+   Stamps:
+   - CraterMoon_1
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalStraight, 0.0001, Free]
+   - [MoundzTree, 0.01]
+-  Name: LargeCrater
+   Texture: [8, 9, 0.5, 3, 7, 0.5, 0.001]
+   UndergroundLayers:
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 700
+   Color: [0.7, 0.2, 0.2]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - CraterMoon_10, 0.09
+   - CraterMoon_11, 0.055
+   - CraterMoon_12, 0.019
+   - CraterMoon_13, 0.011
+   StampTries: 56
+   Temperature: 30
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalStraight, 0.0001, Free]
+-  Name: RayCrater
+   Texture: [8, 9, 0.5, 3, 7, 0.5, 0.001]
+   UndergroundLayers:
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 700
+   Color: [0.7, 0.7, 0.2]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOther
+   Stamps:
+   - CraterMoon_14, 0.025
+   - CraterMoon_14b, 0.007
+   StampTries: 19
+   Temperature: 20
+-  Name: SmallCrater
+   Texture: [8, 9, 0.5, 3, 3, 0.5, 0.001]
+   UndergroundLayers:
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 700
+   Color: [0.9, 0.3, 0.3]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - CraterMoon_1
+   - CraterMoon_2, 0.2
+   - CraterMoon_3, 0.3
+   - CraterMoon_4, 0.04
+   - CraterMoon_5, 0.1
+   - CraterMoon_6, 0.08
+   - CraterMoon_7, 0.02
+   - CraterMoon_8, 0.015
+   - CraterMoon_9, 0.008
+   - CraterMoon_10, 0.003
+   StampTries: 2200
+   Temperature: 15
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [CrystalStraight, 0.0001, Free]
+-  Name: LowMountains
+   Texture: [1, 6, 0.5, 7, 7, 1, 0.25]
+   UndergroundLayers:
+   - [1, 3]
+   - [10, 20]
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 250
+   - Height < 380
+   Color: [0.5, 0.5, 1]
+-  Name: RegolithEdge
+   Texture: [0, 5, 0.9, 3, 3, 1, 0.2]
+   UndergroundLayers:
+   - [0, 3]
+   - [10, 20]
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 240
+   Color: [0.4, 0.4, 0.4]
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+-  Name: Regolith
+   Texture: [0, 7, 0.2]
+   SelectionCriteria:
+   - Height > 230
+   Color: [0.5, 0.5, 0.5]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   Stamps:
+   - CraterMoon_15, 0.7
+   StampTries: 2
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [MoundzTree, 0.01]
+-  Name: LavaFolds
+   Texture: [10, 5, 0.5, 2, 7, 0.5, 0.02]
+   UndergroundLayers:
+   - [10, 3]
+   - [9, 2]
+   - [10, 20]
+   - [9, 10]
+   - [11, 30]
+   - [15, -1]
+   - [15, 1]
+   SelectionCriteria:
+   - Height > 190
+   Color: [0.6, 0.6, 0.6]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOther
+   Stamps:
+   - CraterLava_3
+   StampTries: 6
+   Temperature: 5
+   Decorations:
+   - [RockGrey01Large, 0.005]
+   - [RockGrey02Large, 0.005]
+   - [GasEmitter1, 0.01]
+   - [GasEmitter2, 0.01]
+   - [RealRock1Dark, 0.01]
+   - [RealRock10Dark, 0.01]
+   - [RealRock2Dark, 0.01]
+   - [RealRock3Dark, 0.01]
+   - [RealRock4Dark, 0.01]
+   - [RealRock8Dark, 0.01]
+   UndergroundLayersDefault: True
+-  Name: Flats
+   Texture: [0, 0, 0.2]
+   Color: [0, 1, 0]

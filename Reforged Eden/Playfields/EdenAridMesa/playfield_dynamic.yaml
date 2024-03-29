@@ -1,0 +1,720 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [3,4,5]
+  SizeProbs: [0.40,0.55,0.05]                       
+TemperatureMin: [3, 10]                            
+TemperatureMax: [50,70]      
+TemperatureNight: [10,25]
+PlanetAxis: [-25,25]                   
+HumidityMin: [0.0, 0.05]                        
+HumidityMax: [0.27, 0.45]                      
+Radiation: [0, 5]
+LandWaterRatio: [0, 0]    
+SeaLevel: [0, 0]                           
+TerrainLevel: [140, 160]   
+BaseLevel: [0, 0]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [94, 174]
+TemperatureGradientRange: [0.72, 0.1]
+TemperatureNoiseFac: 0.6
+HumidityHeightFac: [10, 390]
+HumidityNoiseFac: 0.7
+
+GravityMinMax: [-10, -8]
+AtmosphereDensityMinMax: [0.9, 1.5]
+AtmosphereO2MinMax: [0.1, 0.2]
+AtmoBreathableProb: 1
+
+AtmosphereFogRange: [0.25, 0.35]
+GroundFogProb: 0.5
+GroundFogIntensityRange: [0.01, 0.1]
+GroundFogHeightRange: [0, 150]
+
+WaterProb: 0
+PvPProb: 0 #Normal
+Water: [WaterBlue]
+Music: [default, FirstHours, Hyperion]
+# ==============================================================
+  
+GroundShapes: 
+
+HumidityMasks: 
+  - Global_1, 0.2   
+  - Global_1a, 0.225  
+  - Global_2, 0.4   
+  - Global_2a, 0.2  
+  - Global_3, 0.2   
+  - Global_3a, 0.2  
+  - Global_4, 0.2  
+  - Global_4a, 0.4 
+
+TemperatureMasks:   
+   - Global_1_R, 0.3 
+   - Global_2a_R, 0.3 
+   - Global_3_R, 0.3 
+   - Global_3a_R, 0.45 
+   - Global_4_R, 0.3 
+   - Global_4a_R, 0.45   
+
+BiomeStampTries: 90
+
+Biomes: 
+  - Name: Pole              # same as Desert biome
+    Weather: PoleFog
+    AmbientSound: DesertLowPlains
+    IgnoreForcedBiome: true
+    Texture: [3, 6, 0.25]  
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [1, 0.54, 0.18]  
+
+# ==============================================================
+
+  - Name: DeepWater
+    AmbientSound: Water
+    IgnoreForcedBiome: true
+    Texture: [9, 4, 0.25]   
+    SelectionCriteria: 
+    - Height < SeaLevel - 20
+    Color: [0, 0, 1]
+    Decorations:
+                - [ CoralStone01-05, 0.003, Free]
+                - [ CoralStone03-06, 0.003, Free]
+                - [ FingerSponge03-01, 0.001, Free]
+                - [ RealRock1Water, 0.001, Free]
+                - [ RealRock5Water, 0.001, Free]
+                - [ RealRock8Water, 0.001, Free]
+                - [ RealRock9Water, 0.001, Free]
+                - [ RockGrey01Large, 0.001, Free]
+                - [ RockGrey02Large, 0.001, Free]
+                - [ CoralBig01, 0.02, Plant]                
+                - [ CoralBig08, 0.03, Plant]
+    
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.9
+                 Preset: GrassDense
+
+# ==============================================================
+  - Name: Water
+    AmbientSound: Water
+    IgnoreForcedBiome: true
+    Texture: [1, 9, 0.01]  
+    SelectionCriteria: 
+    - Height < SeaLevel - 10
+    Color: [0.2, 0.2, 1]
+    Decorations:
+               - [ CoralBig08, 0.004, Plant]
+               - [ FingerSponge03-01, 0.01, Free]
+               - [ RealRock5Water, 0.001, Free]
+               - [ RockGrey01Large, 0.001, Free]
+               - [ RockGrey02Large, 0.001, Free]
+               - [ Hydrilla2, 0.01, Plant]
+               - [ SeaWeed02-04, 0.04, Plant]      
+    
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.8
+                 Preset: GrassDense
+                 
+# ============================================================== ( Thin belt of water plants)
+  - Name: ShallowWater
+    AmbientSound: SmallLake
+    IgnoreForcedBiome: true
+    Texture: [1, 9, 0.25]   
+    SelectionCriteria: 
+    - Height < SeaLevel
+    - Height > SeaLevel - 4   
+    - Temperature > 6       
+    Color: [0.4, 0.4, 1]
+    Decorations: 
+               - [OmicronPlant, 0.005, Plant]
+               - [ FingerSponge03-01, 0.003, Free]
+               - [ RockGrey01Large, 0.002, Free]
+               - [ RockGrey02Large, 0.002, Free]  
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.3
+                 Preset: GrassDense
+                 
+# ==============================================================  
+  - Name: Forest
+    AmbientSound: Oasis
+    IgnoreForcedBiome: true  
+    Texture: [2, 0, 0.2]   
+    SelectionCriteria:
+    - Height < SeaLevel + 3
+    - Height > SeaLevel + 1   
+    - Humidity > 0.26
+    - Temperature > 15
+    - Temperature < 25
+    Color: [0, 0.2, 0.1]  
+    Decorations:
+               - [ BaldCypres, 0.08, Tree]
+               - [ BushGreen01, 0.004, Bush]
+               - [ BushGreen02, 0.004, Bush]
+               - [ AkuaBush1, 0.002, Bush]
+               - [ ElderberryBushRed, 0.0004, Bush] 
+               #Harvestables:
+               - [PixieStalks, 0.001, Free]
+               - [CobraLeavesPlant, 0.001, Plant]
+    Grass: 
+               - Name: GrassGreen01a
+                 Density: 0.05
+                 YScale: 1
+                 Preset: GrassDense
+    
+# ============================================================== 
+  - Name: Drybed
+    AmbientSound: ArcticIntermediatePlains
+    IgnoreForcedBiome: true
+    Texture: [1, 9, 0.5]  
+    SelectionCriteria: 
+    - Height < SeaLevel + 2
+    Color: [1, 1, 0]
+    
+    StampProb: 0.7
+    Stamps: 
+               - RiftLava_1_BM, 0.9
+
+    Decorations: 
+               - [ EggPlant, 0.001]
+               - [ RockGrey01Large, 0.001]
+               - [ RockGrey02Large, 0.001]
+               - [ RockResourceNeodymium, 0.0002, Free]
+    Grass: 
+               - Name: GrassBrown02c
+                 Density: 0.1
+                 Preset: GrassDense
+
+
+# # ==============================================================
+  - Name: Mountains 
+    AmbientSound: Mountains
+    IgnoreForcedBiome: true
+    Texture: [3,7,0.7, 11,11,0.5, 0.2] 
+    SelectionCriteria: 
+    - Height > 150
+    Color: [0.6, 0.6, 0.6]
+    
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Harvestables:
+               - [Snakeweed, 0.003]
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.5
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.001
+                 Preset: GrassDense
+                 
+# ==============================================================
+  - Name: LowMountains
+    AmbientSound: DesertHighPlains
+    Texture: [3,7,0.7, 11,6,0.5, 0.2]
+    
+    IgnoreForcedBiome: true
+    SelectionCriteria: 
+    - Height > 130 
+    Color: [0.4, 0.4, 0.4]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff  
+    StampTries: 45 
+    Stamps:
+    - Mountain_9, 0.2     
+    - Mountain_10b, 0.2  
+    - Mountain_11, 0.5   
+    - Mountain_13, 0.5   
+    - Mountain_14, 0.5   
+    - Mountain_15, 0.6  
+    - Mountain_23_R, 0.2
+    - Mountain_14a, 0.3  
+    - Mountain_15a, 0.3   
+    
+    Decorations:  
+               - [DesertRock1, 0.0002, Free]
+               - [DesertRock2, 0.0002, Free]
+               # - [Boulder1, 0.01]
+               # - [Boulder2, 0.01]
+               # - [Boulder3, 0.01]
+               # - [Boulder4, 0.015]
+               # - [Boulder5, 0.015]
+    Grass:  
+               - Name: GrassBrown06
+                 Density: 0.1
+                 Preset: GrassDense
+   
+
+# ==============================================================
+  - Name: Erosion
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticIntermediatePlains
+    Texture: [7,6,0.65, 8,8,0.5, 0.01]   
+    
+    SelectionCriteria:      
+    - Height < 150   
+    - Temperature < -16
+    Color: [1, 1, 1] 
+    
+    UndergroundLayers:
+               - [7, 5]
+               - [8, 10]
+               - [10, -1]
+               - [9, 1]
+    
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 250 
+    Stamps: 
+               # - MountainIce_01, 0.65
+               # - MountainIce_01b, 0.15
+               # - RiftLava_2, 0.1
+               # - Valley_1, 1
+               # - Valley_2, 1
+               # - Valley_3, 1
+               - ErosionIce_01, 0.07
+               - ErosionIce_02, 0.07
+               - ErosionIce_03, 0.07
+
+    Decorations:  
+               - [ Butte1, 0.0001]
+               - [ Butte1a, 0.0001]
+               - [ Butte2, 0.0001]
+               - [ Butte2a, 0.0001]
+               - [ CrystalsPyramidOrange, 0.00002, Free]
+
+# ==============================================================
+  - Name: Oasis
+    AmbientSound: TropicalIsland
+    Texture: [10,10,1, 11,6,0.8, 0.2] 
+    SelectionCriteria:  
+    - Humidity > 0.26
+    - Temperature > 15  
+    - Temperature < 35  
+    - Height < SeaLevel + 10     
+    Color: [0, 0.4, 0.1]
+    
+    StampProb: 0.3
+    Stamps: 
+               - DunesSea_01_BM, 0.3
+               - DunesSea_01b_BM, 0.2
+
+    Decorations:
+               - [ChineseBanyan, 0.15, Tree]
+               - [ElderberryBushGreen, 0.02, BigPlant]
+               - [WhiteOak, 0.1, Tree]
+               - [OmicronPalmGreen, 0.1, Tree]
+               - [RiverBirch, 0.1, Tree]
+               - [OnionFlower, 0.02, BigPlant]
+               - [AlienDesertPlant, 0.02, BigPlant]
+               - [DesertPlant20, 0.003, Plant]
+               - [LeafPlant, 0.02, Plant]
+               - [BigFlower, 0.01, Plant]
+               - [AlienBush01, 0.02, BigPlant]
+               - [BushGreen01, 0.005, Plant]
+               - [BushGreen02, 0.005, Plant]
+               - [AlienPlant07, 0.001, Plant]
+               - [AlienPlant14, 0.001, Plant]
+               - [DeadTree01, 0.002, Free]
+               - [AridRockBrown01, 0.0003, Free]
+               - [AridRockBrown03, 0.0003, Free]
+               - [AlienPlantWorm1, 0.002, Free]
+               - [CobraLeavesPlant, 0.002, Free]
+               - [MushroomBellBrown01, 0.0001, Free]
+               - [PixieStalks, 0.001, Free]
+               - [InsanityPepper, 0.001, Free]
+    Grass: 
+               - Name: GrassGreen03
+                 Density: 0.8
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: GrassBrown05
+                 Density: 0.7
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Plant01
+                 Density: 0.01
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.01
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.01
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.01
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 3
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.01
+                 YScale: 3
+                 Preset: GrassDense
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.01
+                 YScale: 4
+                 Preset: GrassDense
+
+             
+# ==============================================================
+  - Name: OasisEdge
+    AmbientSound: TropicalIsland
+    Texture: [10,10,1, 11,6,0.8, 0.2]  
+    SelectionCriteria:  
+    - Humidity > 0.21
+    - Temperature > 13
+    - Temperature < 38 
+    - Height < SeaLevel + 14   
+    Color: [0, 0.8, 0.2]
+    
+       
+    Decorations:
+               - [ElderberryBushGreen, 0.01, BigPlant]
+               - [OmicronPalmGreen, 0.1, Tree]
+               - [OmicronPalm, 0.05, Tree]
+               - [RiverBirch, 0.05, Tree]
+               - [DesertPlant20, 0.001, Plant]
+               - [LeafPlant, 0.01, Plant]
+               - [BushGreen01, 0.005, Plant]
+               - [BushGreen02, 0.005, Plant]
+               - [AlienPlant07, 0.001, Plant]
+               - [AlienPlant14, 0.001, Plant]
+               - [DeadTree01, 0.0002, Free]
+               - [AridRockBrown01, 0.00006, Free]
+               - [AridRockBrown03, 0.00006, Free]
+               - [PixieStalks, 0.001, Free]
+    Grass: 
+               - Name: GrassGreen03
+                 Density: 0.7
+                 Preset: GrassDense
+               - Name: Plant01
+                 Density: 0.02
+                 Preset: GrassDense            
+
+
+# ==============================================================
+  - Name: Savanna
+    AmbientSound: Oasis
+    Texture: [5,0,0.5, 6,4,0.8, 0.20]  
+    UndergroundLayers:
+               - [12, 0]
+               - [12, 3]
+               - [11, -1]
+               - [12, 1]
+               
+    SelectionCriteria:  
+    - Humidity > 0.12 
+    - Humidity < 0.27
+    - Temperature > 23
+    - Temperature < 38
+    - Height < 110       
+    
+
+    Color: [0.45, 0.50, 0.02]  
+    
+    
+    StampProb: 0.6
+    Stamps: 
+               - Cliff_1, 0.4
+               - Cliff_2, 0.4
+               - Cliff_3, 0.6
+               - Valley_1, 0.1
+               - Valley_2, 0.1
+               - Valley_3, 0.07
+               - Pools_01, 0.07
+               - Hollow_01, 0.07
+               - MountainDesert_01, 0.1
+               - MountainDesert_02, 0.1
+               - MountainDesert_03, 0.1
+               - MountainDesert_04, 0.1
+               
+               
+    Decorations:  
+               - [OmicronPalm, 0.001, Tree]
+               - [AlienPalmTree, 0.001, Tree]
+               - [WeepingPalm1, 0.005, Tree]
+               - [WeepingPalm3, 0.005, Tree]
+               - [ElderberryBushOrange, 0.001, BigPlant]
+               - [CoralStone04-03, 0.003, BigPlant]
+               - [DesertRock1, 0.0004, Free]
+               - [DesertRock2, 0.0004, Free]
+               - [Boulder1, 0.0004, Free]
+               - [Boulder2, 0.0004, Free]
+               - [Boulder3, 0.0004, Free]
+               - [Boulder4, 0.0004, Free]
+               - [Boulder5, 0.0004, Free]
+               - [ModRocksBrown02, 0.0002, Free]
+               - [ModRocksBrown04, 0.0003, Free]
+               #Harvestables:
+               - [Cactus1, 0.002, Plant]
+               - [OpuntiaCactus, 0.002, Plant]
+               - [DesertPlant20, 0.005, Plant]
+               - [EggPlant, 0.001, Plant]
+               - [Snakeweed, 0.005, Plant]
+    Grass:  
+               - Name: GrassBrown04
+                 Density: 0.9
+                 Preset: GrassDense
+               - Name: GrassBrown02c
+                 Density: 0.9
+                 Preset: GrassDense   
+               - Name: Plant01Brown
+                 Density: 0.005
+                 Preset: GrassDense        
+
+# # ==============================================================
+  - Name: SavannaEdge
+    AmbientSound: Oasis
+    Texture: [0,3,0.5, 6,4,0.8, 0.2]   
+    
+    SelectionCriteria: 
+    - Humidity > 0.05   
+    - Humidity < 0.33
+    - Temperature > 22
+    - Temperature < 40
+    - Height < 110    
+    
+    Color: [0.65, 0.7, 0.15]  
+       
+    Decorations:  
+               - [Cactus2, 0.0001, BigPlant]
+               - [OmicronPalm, 0.0006, Free]
+               - [AlienPalmTree, 0.0002, Free]
+               - [WeepingPalm1, 0.0001, Free]
+               - [WeepingPalm3, 0.0001, Free]
+               - [ElderberryBushOrange, 0.0002, Free]
+               - [DesertRock1, 0.0004, Free]
+               - [DesertRock2, 0.0004, Free]
+               - [Boulder1, 0.0004, Free]
+               - [Boulder2, 0.0004, Free]
+               - [Boulder3, 0.0004, Free]
+               - [Boulder4, 0.0004, Free]
+               - [Boulder5, 0.0004, Free]
+               - [ModRocksBrown02, 0.0002, Free]
+               - [ModRocksBrown04, 0.0003, Free]
+               #Harvestables:
+               - [Cactus1, 0.002, Plant]
+               - [OpuntiaCactus, 0.002, Plant]
+               - [DesertPlant20, 0.005, Plant]
+               - [EggPlant, 0.001, Plant]
+               - [Snakeweed, 0.005, Plant]
+    Grass:  
+               - Name: GrassBrown02c
+                 Density: 0.4
+                 Preset: GrassDense
+               - Name: GrassBrown04
+                 Density: 0.9
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.005
+                 Preset: GrassDense
+                 
+
+# ==============================================================
+  - Name: Rocks
+    AmbientSound: DesertCricket
+    Texture: [4,4,1, 11,6,0.8, 0.2]  
+    SelectionCriteria:  
+    - Humidity < 0.32 
+    - Temperature > 12
+    - Temperature < 35
+ 
+    Color: [0.4, 0.3, 0.1]  
+    
+    StampProb: 0.1
+    Stamps:
+    - MountainDesert_01, 0.3
+    - MountainDesert_02, 0.3
+    - MountainDesert_03, 0.3
+    - MountainDesert_04, 0.4
+    
+    Decorations:  
+               - [Boulder1, 0.001, Free]
+               - [Boulder2, 0.0005, Free]
+               - [Boulder3, 0.0005, Free]
+               - [Boulder4, 0.001, Free]
+               - [Boulder5, 0.001, Free]
+               - [Pillar1, 0.001, Free]
+               - [Pillar2, 0.001, Free]
+               - [Pillar3, 0.001, Free]
+               - [Pillar4, 0.001, Free]
+               - [DesertRock1, 0.001, Free]
+               - [DesertRock2, 0.001, Free]
+               - [DesertRockMedium1, 0.005, BigPlant]
+               - [DesertRockMedium2, 0.005, BigPlant]
+               - [DesertRockLarge, 0.003, BigPlant]
+               - [ModRocksBrown01, 0.001, BigPlant]
+               - [ModRocksBrown02, 0.001, BigPlant]
+               - [ModRocksBrown03, 0.001, BigPlant]
+               - [ModRocksBrown04, 0.001, BigPlant]
+               - [AridRockYellow01, 0.003, Tree]
+               - [AridRockYellow02, 0.003, Tree]
+               - [AridRockYellow03, 0.003, Tree]
+               - [OpuntiaCactus, 0.003, Bush]
+               - [Snakeweed, 0.003, Bush]  
+               - [RockResourceCopper, 0.01, Bush]
+    Grass:  
+               - Name: GrassBrown06
+                 Density: 0.01
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.01
+                 Preset: GrassDense
+
+# ==============================================================
+
+  - Name: Dunes
+    AmbientSound: DesertLowPlains
+    Texture: [7, 3, 0.25]  
+    SelectionCriteria: 
+    - Humidity < 0.15
+    - Temperature > 23
+    
+    StampProb: 0.3
+    Stamps:
+    - MountainEroded_01, 0.8
+    - DunesSea_01b_BM, 0.1
+    
+    
+    Color: [1, 0.8, 0.47] 
+    Decorations:  
+               - [ DesertRock1, 0.0002, Free]    
+               - [ DesertRock2, 0.0002, Free]     
+               - [ Boulder2, 0.00001, Free]
+               - [ SkeletonMammothTorso, 0.00006, Free]
+
+# # ============================================================== (Caldera or crater with lush vegetation)
+  # - Name: Craters
+    # AmbientSound: TropicalIsland
+    # Texture: [10,10,1, 11,6,0.8, 0.2]  
+    
+   
+    # SelectionCriteria:  
+    # - Height > 500                      # Biome is only placed by stamp.
+    # Color: [1, 0.1, 0]
+    
+    # StampForcesBiome: true
+    # StampForcesBiomeType: OverlapOff  
+    # StampTries: 5 
+    # Stamps:
+    # - CraterMoon_11, 0.2   
+    # - CraterMoon_12, 0.2
+    # - CraterMoon_13, 0.01   # Very rare mega-crater
+       
+       
+    # Decorations:
+               # - [ChineseBanyan, 0.15, Tree]
+               # - [ElderberryBushGreen, 0.02, BigPlant]
+               # - [AkuaPlant2, 0.1, Tree]
+               # - [OmicronPalmGreen, 0.1, Tree]
+               # - [UmbrellaTree, 0.15, Tree]
+               # - [RiverBirch, 0.1, Tree]
+               # - [OnionFlower, 0.02, BigPlant]
+               # - [AlienDesertPlant, 0.02, BigPlant]
+               # - [DesertPlant20, 0.001, Plant]
+               # - [LeafPlant, 0.02, Plant]
+               # - [BigFlower, 0.01, Plant]
+               # - [AlienBush01, 0.02, BigPlant]
+               # - [BushGreen01, 0.005, Plant]
+               # - [BushGreen02, 0.005, Plant]
+               # - [AlienPlant07, 0.001, Plant]
+               # - [AlienPlant14, 0.001, Plant]
+               # - [DeadTree01, 0.002, Free]
+               # - [AridRockBrown01, 0.0003, Free]
+               # - [AridRockBrown03, 0.0003, Free]
+               # - [AlienPlantWorm1, 0.002, Free]
+               # - [CobraLeavesPlant, 0.002, Free]
+               # - [MushroomBellBrown01, 0.0001, Free]
+               # - [PixieStalks, 0.001, Free]
+               # - [InsanityPepper, 0.001, Free]
+    # Grass: 
+               # - Name: GrassGreen03
+                 # Density: 0.8
+                 # Preset: GrassDense
+               # - Name: GrassBrown05
+                 # Density: 0.7
+                 # Preset: GrassDense
+               # - Name: Plant01
+                 # Density: 0.01
+                 # Preset: GrassDense     
+
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+
+  - Name: Sand
+    AmbientSound: DesertLowPlains
+    Texture: [3, 6, 0.25]   
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [12, 0]
+               - [12, 3]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:  
+       - true                                    
+
+    Color: [1, 0.54, 0.18]  
+    StampProb: 0.6
+    Stamps: 
+               - Cliff_1, 0.4
+               - Cliff_2, 0.4
+               - Cliff_3, 0.6
+               - Valley_1, 0.1
+               - Valley_2, 0.05
+               - Valley_3, 0.05
+
+    Decorations:  
+               - [AridRockYellow01, 0.0001, Free]
+               - [AridRockYellow02, 0.0001, Free]
+               - [AridRockYellow03, 0.0001, Free]
+               - [Butte1, 0.004, Free]
+               - [Butte1a, 0.004, Free]
+               - [Butte2, 0.004, Free]
+               - [Butte2a, 0.004, Free]
+               - [Mod_rocks_yellow01, 0.006, Free]
+               - [Mod_rocks_yellow02, 0.006, Free]
+               - [Mod_rocks_yellow03, 0.006, Free]
+               - [Mod_rocks_yellow04, 0.006, Free]
+               - [Cactus2, 0.003, Free]
+               - [FantasyPlant2, 0.001, Free]
+               - [DesertRock1, 0.0008, Free]
+               - [DesertRock2, 0.0008, Free]
+               - [Boulder2, 0.00001, Free]
+               - [SkeletonMammothTorso, 0.00001, Free]
+               - [ModRocksBrown02, 0.00001, Free]
+               - [ModRocksBrown04, 0.00001, Free]
+               #Harvestables:
+               - [Cactus1, 0.007, Plant]
+               - [OpuntiaCactus, 0.003, Plant]
+               - [RockResourceGold, 0.012, Plant]
+    Grass:  
+

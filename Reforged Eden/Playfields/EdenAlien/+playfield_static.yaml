@@ -1,0 +1,731 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+
+An completely alien planet."
+
+PlanetType: Alien
+PlayfieldType: Planet
+Difficulty: 4
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.0, 1.1, 0.6" 
+SkyColor: "0.6,1,0.1"
+AtmosphereParams: [2, 1.2]       
+
+# Light
+DayLightIntensity: 0.6
+NightLightIntensity: 0.45
+DayShadowStrength: 0.95
+
+LightZenithColor: "0.6,1,0.1"
+LightHorizonColor: "0.6,1,0.1"
+NightLightColor: "0.83, 0.83, 1"
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+
+# Fog
+FogColor: "0.3, 0.7, 0.3"
+FogCloudIntensity: 0.8
+# AtmosphereFog: 0.95
+# GroundFogIntensity: 0.24
+# GroundFogHeight: 45
+
+# Clouds and Wind
+CloudsDensity: 1
+CloudsSharpness: 1
+CloudsBrightness: 1
+CloudsOpacity: 0.3
+
+CloudsZenithColor: "0.6,1,0.12" 
+CloudsHorizonColor: "0.15, 0.5, 0.075"
+CloudsNightZenithColor: "0.015, 0.020, 0.015"
+CloudsNightHorizonColor: "0.015, 0.020, 0.015"
+
+WindSpeed: 4
+
+
+# Special Effects
+SpecialEffectsLocal:
+  - Name: ButterfliesBlue
+    Biome: [ AlienForest ]
+    Time: Day
+    MaxHeight: 15
+  - Name: FireFliesGreenFew
+    Biome: [ AlienForest, AlienSavanna ]
+    Time: Day
+    MaxHeight: 15
+  - Name: FireFliesGreen
+    Biome: [ AlienForest, AlienSavanna ]
+    Time: Night
+    MaxHeight: 15
+
+SpecialEffectsGlobal:
+# Weather
+
+    # Basic
+  - Name: CloudsDark
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: Clouds
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 600
+  - Name: CloudsMedium
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 600
+    
+  - Name: Wind
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 600
+  - Name: Wind   # Double entry for more picking chance
+    Type: Weather
+    InitialDelay: 0
+    Delay: 6     # Can't be chosen right after another
+    Lifetime: 600
+    
+    # Uncommon
+  - Name: Fog
+    Type: Weather
+    InitialDelay: 0
+    Delay: 5
+    Lifetime: 1200
+  - Name: RainMedium
+    Type: Weather
+    InitialDelay: 12
+    Delay: 5
+    Lifetime: 600
+  - Name: RainHeavy
+    Type: Weather
+    InitialDelay: 12
+    Delay: 10
+    Lifetime: 600
+
+    # Rare
+  - Name: AcidRainHeavy
+    Type: Weather
+    InitialDelay: 48
+    Delay: 24
+    Lifetime: 600
+  - Name: FogRadiationPurple
+    Type: Weather
+    InitialDelay: 48
+    Delay: 24
+    Lifetime: 600
+
+
+# Global Effects
+  - Name: BirdFlockBats
+    Biome: [ AlienForest, AlienSavanna ]
+    Time: Day
+    InitialDelay: 0.5
+    Delay: 4
+    Lifetime: 600
+    PlyDist: 50
+    SpawnY: 20
+    Struct: True
+  - Name: ThunderAndLightning
+    Biome: [ Any ]
+    Time: Always
+    InitialDelay: 0.5
+    Delay: 6
+    Lifetime: 300
+    PlyDist: 100
+    SpawnY: 500
+    Struct: Avoid
+
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 8 ]
+      DepthMinMax: [ 4, 10 ]
+      DroneProb: 0.5
+      MaxDroneCount: 4
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+
+    - Name: CopperResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 8 ]
+      DepthMinMax: [ 4, 10 ]
+      DroneProb: 0.4
+      MaxDroneCount: 2
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+      
+    - Name: PromethiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DroneProb: 0.4
+      MaxDroneCount: 2
+      DepthMinMax: [ 0, 1 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+      
+    - Name: PentaxidResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 3, 5 ]
+      DroneProb: 1
+      MaxDroneCount: 4
+      DepthMinMax: [ 0, 5 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+      
+    - Name: ErestrumResource
+      IsScalingCount: True
+      CountMinMax: [ 5, 7 ]
+      SizeMinMax: [ 8, 10 ]
+      DepthMinMax: [ 4, 10 ]
+      DroneProb: 1
+      MaxDroneCount: 4
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 8
+      
+### Resource Asteroids
+AsteroidResources:
+    - Name: IronResource
+      Threshold: 0.2
+      Amount: 0.2
+    - Name: CopperResource
+      Threshold: 0.2
+      Amount: 0.2
+    - Name: PromethiumResource
+      Threshold: 0.2
+      Amount: 0.2
+    - Name: ErestrumResource
+      Threshold: 0.2
+      Amount: 0.2
+
+### POIs
+POIs:
+    Random:
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True    
+#          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties: 
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: SpaceClub 
+          Faction: Polaris
+          NoShieldReload: True    
+          Biome: [ DeepWater ]
+          PlaceAt: OnWater
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          Properties: 
+            - Key: Music
+              Value: ExtraktTechno
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: PolarisHeadquarter 
+          Faction: Polaris
+          NoShieldReload: True    
+          Biome: [ Grassland, Savanna, Forest ]
+       #   PlaceAt: OnWater
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          Properties: 
+            - Key: Music
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 720 
+
+        # - GroupName: Club 
+       # #   BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
+          # Biome: [ Forest ]
+          # PlaceAt: OnWater
+          # CountMinMax: [ 1, 1 ]
+          # IsImportant: True
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: True
+          # Properties: 
+            # - Key: Music
+              # Value: ExtraktTechno
+            # - Key: RegenAfter
+              # Value: 720 
+
+        # - GroupName: ClubAux
+       #    BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
+          # Biome: [ Forest ]
+          # PlaceAt: OnWater
+          # CountMinMax: [ 1, 3 ]
+          # IsImportant: True
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # SpawnPOINear: [Club]
+          # SpawnPOINearRange: [120, 200]
+          # TroopTransport: True
+          # Properties: 
+            # - Key: Music
+              # Value: ExtraktTechno
+            # - Key: RegenAfter
+              # Value: 720 
+
+        # - GroupName: HV 
+          # Type: HV_Player                  # Optional for special type of POI: SV_Player, HV_Player, CV_Player. If not used, then POI is a Base (default setting)
+          # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
+          # Biome: [ LavaLake ]
+          # PlaceAt: OnWater
+          # CountMinMax: [ 5, 10 ]
+          # IsImportant: True  
+          # InitPower: False
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: True
+          # SpawnPOINear: [Club]
+          # SpawnPOINearRange: [120, 200]
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+
+
+        - GroupName: CrashedShip      # Only use regeneration with buried POIs if LandClaimZone: Device is set in playfield.yaml
+          Faction: None    
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [100, 250] 
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720 
+
+       # ================================
+        # POI complex with several structures around
+        - GroupName: GhystMainRG
+          Faction: Zirax
+          NoShieldReload: True    
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 4 ]
+          ReserveCount: 5
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: GhystAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [EpsilonMainRG]
+          SpawnPOINearRange: [100, 250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: GhystDefenseT1RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 4, 5 ]
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [GhystMainRG]
+          SpawnPOINearRange: [200, 350]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Defense for drone base
+        - GroupName: GhystAuxT2RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINearRange: [200, 500] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Large Bunker
+        - GroupName: GhystBunker
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: Music
+              Value: lava 
+            - Key: RegenAfter
+              Value: 720
+      
+       # ================================
+        # POI amount scales with planet size 
+        # Random military outposts scattered around planet
+        - GroupName: GhystAuxT2RG
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True 
+          DroneProb: 0.8
+          DronesMinMax: [ 4, 6 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # Different POIs scattered around planet 
+        - GroupName: CrashedShip          # Only use regeneration with burried POIs if LandClaimZone: Device is set in playfield.yaml
+          Faction: None    
+          CountMinMax: [ 2, 3 ]
+          PlaceAt: UnderWater, Terrain
+          IsScalingCount: True 
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: AbandonedPOIRG
+          Faction: Alien
+          NoShieldReload: True    
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Wreckage
+          Faction: None    
+          CountMinMax: [ 1, 3 ]
+          IsScalingCount: True 
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          Properties:  
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Ruins
+          Faction: None    
+          CountMinMax: [ 3, 5 ]
+          IsScalingCount: True 
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          TroopTransport: False
+          Properties:  
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ 300, 170, 160 ] 
+          RotY: 160
+          Armor: ArmorMedium
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+# ==============================================================
+# ==============================================================
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup  
+          Difficulty: 7
+          PresetStyle: 3
+          Stock:
+              - Name: DroneSmallFast01Plasma
+                Amount: 200
+                Extra: 0
+
+              - Name: EnemyDroneV2Minigun
+                Amount: 400
+                Extra: 0
+
+              - Name: EnemyDroneV2Plasma
+                Amount: 400
+                Extra: 0
+
+              - Name: DroneLargeAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: EnemyDroneV2Plasma
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport01
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 250
+                Extra: 3
+
+              - Name: Mechanoid
+                Amount: 250
+                Extra: 3
+
+          PlanetVesselBase:
+              Name: PlanetVesselBaseSetup
+              Position3D: [ 0, 102, 0]
+              BaseType: PlanetVesselBase
+              KeyId: 0
+              PlanetVessel:
+                - Name: Patrol-S-Hard
+                  Mission: PlanetPatrol
+                  FixedMaxSpeed: 10
+                  RespawnDelay: 12
+                  InitialDelay: 48
+
+                  RangePatrolTask:
+                    Position3D: [ -1000, 80, 0 ]
+                    Radius: 800
+                    DistToGround: 80
+
+                  AttackCVCircleAround:
+                    DistToTarget: 190
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 3000
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 3000
+
+# ==============================================================
+# ==============================================================
+SpawnZones:
+   - SpawnAt: [ErestrumResource]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [AlienAssassinReds]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [Ruins, Wreckage, AbandonedPOIRG]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0" 
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [Overseers]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [GhystAuxT2RG]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 600
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0" 
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 1000
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+### Creatures
+CreatureSpawning:
+
+    - Biomes: [Shore]
+      Entities:
+        - Name: Slimes
+          Period: Always
+          Amount: 8
+          DelayMinMax: [10, 20]
+        - Name: AlienAssassinReds
+          Period: Night
+          Amount: 8
+          DelayMinMax: [10, 20]
+        - Name: GolemsSwamp
+          Period: Night
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: Spiders03
+          Period: Day
+          Amount: 10
+          DelayMinMax: [10, 20]
+
+    - Biomes: [Forest]
+      Entities:
+        - Name: GolemsSwamp
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: AlienBugs03
+          Period: Night
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: Spiders03
+          Period: Day
+          Amount: 8
+          DelayMinMax: [10, 20]
+
+    - Biomes: [Savanna, Grassland]
+      Entities:
+        - Name: AlienBugs03
+          Period: Day
+          Amount: 8
+          DelayMinMax: [10, 20]
+        - Name: Overseers
+          Period: Night
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: Spiders01
+          Period: Day
+          Amount: 8
+          DelayMinMax: [10, 20]
+
+    - Biomes: [PolarSnow, Tundra, ColdPlains]
+      Entities:
+        - Name: Overseers
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: GolemsIce
+          Period: Night
+          Amount: 10
+          DelayMinMax: [10, 20]
+ 
+    - Biomes: [LowMountains]
+      Entities:
+        - Name: Spiders01
+          Period: Always
+          Amount: 6
+          DelayMinMax: [10, 20]
+        - Name: GolemsSwamp
+          Period: Night
+          Amount: 10
+          DelayMinMax: [10, 20]

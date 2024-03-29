@@ -1,0 +1,9 @@
+[WarpEffect]
+-Mode=Opaque
+-Pos=0.4935185,133.2751,-4.002504
+-Rot=0,0,0
+-Size=1,1,1
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_WarpInShip2BlueS
+

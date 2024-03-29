@@ -1,0 +1,559 @@
+# Playfield Characteristics
+Description: "Difficulty [c][00ff00]Easy[-][/c]
+
+
+The orbit around a starting planet. Does not contain story mission POIs for the Reforged Galaxy 2 story missions.
+
+[c][ffffff][i]Mission POIs can sometimes have an invulnerable core, making the entire structure indestructable except for specific blocks or devices (turrets, some grates, etc).[/i][-][/c]
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+
+
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0 #Starter
+UseFixed: True                       
+Radiation: [2,4]                    
+TemperatureDay: [-90,-75]       
+Music: [moonstone, Orbiting, space, Transit]
+
+PlayfieldType: Space
+PlanetType: Orbit
+PlayfieldLevelOverride: [1,1]
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.2          # randomized (i.e. may or may not be present)       
+      Properties:     
+        - Key: RegenAfter
+          Value: 180
+
+### POIs
+POIs:
+# Planetary ring
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet, AsteroidRingPlanet, AsteroidFieldRing, AsteroidFieldRingOld]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.6
+      BaseField: True
+      RandomRotation: True
+
+# T1 Random Zirax POIs in orbit.
+    - Type: BA_Alien
+      GroupName: R2ZiraxSpaceT1
+      Faction: Zirax
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      SpaceDefensePriceMinMax: [ 15, 30 ]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [1000, 3000]
+         PosYMax: 5000
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+        - Key: StationInterface
+          Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+# Civilian dummy POI for spawning cargo tugs
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI3]
+      DisplayName: Shuttle Route
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [8550, -1300, 0]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: AIManExcludeFromPatrol
+          Value: True
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Civilian dummy POI for cargo tugs
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI2]
+      DisplayName: Shuttle Route
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [13550, -1400, 0]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI2]
+      DisplayName: Shuttle Route
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [8550, -1100, 4000]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI2]
+      DisplayName: Shuttle Route
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [8550, 0, 4000]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI2]
+      DisplayName: Shuttle Route
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [8550, 0, -4000]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI2]
+      DisplayName: Shuttle Route
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [4400, -420, -15]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Zirax dummy POI for patrol vessel
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: Zirax Patrol Route
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [5100, 0, 8200]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: Zirax Patrol Route
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [490, 750, 9338]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien
+      Name: [Eden_BA_DummyPOI]
+      DisplayName: Zirax Patrol Route
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [-4700, 2000, 9850]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720
+
+# Wreckage
+# ----------------------------------------------- BA
+# T1 wrecks in civilized territory
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # FactionTerritory: [Polaris, Colonists, Trader, Pirates, Warlord, Zirax, Wastelanders]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 8, 11 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 360
+
+# T2 wreck
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # FactionTerritory: [Polaris, Colonists, Trader, Pirates, Warlord, Zirax, Wastelanders]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 360
+
+# T2 wreck compound
+    - Type: BA_Alien
+      GroupName: Eden_SpaceJunkT2
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      # FactionTerritory: [Polaris, Colonists, Trader, Pirates, Warlord, Zirax, Wastelanders]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Compound:
+        CountMinMax: [2, 5]
+        Probability: 1
+        Name: [CompoundWreckT1Warlord, CompoundWreckT1Warlord, CompoundDebrisFieldWarlord, CompoundDebrisFieldWarlord, CompoundWreckT1Warlord]
+        DistanceMinMax: [35, 75]
+        Rotate: true
+      Position:
+         PosXZMinMax: [500, 2000]
+         PosYMax: 3000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 360
+
+
+# Wreckage Tier 1 Compound Warlord.
+    - Type: BA_Alien
+      Name: [CompoundWreckT1Warlord]
+      GroupName: Eden_SpaceJunkT1
+      Faction: Eden_Wreck
+      # FactionTerritory: [All]
+      FactionTerritory: [Rados, Eden_PolarisTerritory, Eden_TraderTerritory, Farr, Eden_ColonistsTerritory]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: MapDistance
+          Value: 3000
+        - Key: HudDistance
+          Value: 3000
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 360
+
+# Debris compound Warlord
+    - Type: BA_Alien
+      Name: [CompoundDebrisFieldWarlord]
+      GroupName: Eden_DebriField
+      Faction: Eden_Wreck
+      FactionTerritory: [Pirates, Warlord, Wastelanders]
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000 
+      Properties:
+        - Key: MapDistance
+          Value: 0
+        - Key: HudDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 360
+
+# CREATIVE MODE
+
+    - Type: BA_Player
+      Name: [Eden_BAO_CreativeStart]
+      DisplayName: Reforged Creative Station
+      Faction: Admin
+      Mode: Creative
+      SubMode: Normal
+      CountMinMax: [ 1, 1 ]
+      Pos: [10300, -1650, 180]
+      Rot: [0, 90, 0]
+      Probability: 1
+      InitPower: True
+      Properties:
+        - Key: RegenAfter
+          Value: 720
+
+FixedPlayerStart:
+    - Mode: Creative             
+      SubMode: Empty             
+      Armor: ArmorMedium
+      Pos: [ 61, -1996, -6805 ]  
+      RotY: 14                 
+
+    - Mode: Creative             
+      SubMode: Normal             
+      Armor: ArmorMedium
+      # Pos: [ 55, -1960, -6815 ] 
+      Pos: [ 89, -1932, -6795 ] 
+      RotY: -90                   
+
+    - Mode: Debug       
+      Pos: [ 65, -1900, -6800 ] 
+      RotY: 160         
+      
+      
+      
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+
+# ================================================================================================================================================================================= Drones
+      - FreeDrones:
+
+# ------------------------------------------------------------------------------------------------- Faction Main
+# Asteroid Patrols
+          - Name: [SpaceDroneLaser, SpaceDronePlasma]
+            Faction: Zirax
+            CanNotBeControlledByMasterAI: False
+            # POINameAsPositionRef: [BAO_GhystDefence1,BAO_GhystDefence2]
+            Count: [4, 4]
+            Radius: [1000, 5000]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              # - Key: AIManPatrolFactions
+                # Value: "Main"
+              - Key: AIManMaxPursuitRange
+                Value: 3000
+
+
+
+# ================================================================================================================================================================================= Ships
+        SpaceVessels:
+# ================================================================================================================================================================================= Patrol Vessels and Freighters and Bases
+
+# Asteroid Fields: (Reduce both speeds by 10m/s for denser fields)
+# Freighter: Zirax 60-80, Kriel 50-60, Colonists 50-60, Polaris 70-80, Farr 40-60, Trader 60-70, Pirates 80-90, Warlord 50-60
+# Patrol Vessels: Zirax 65-75, Kriel 50-75, Polaris 70-80, Trader 40-60, Pirates 90-110, Tesch 40-60, Warlord 50-70, Colonist 50-70, Farr 40-60
+
+# Open Space/Orbit:
+# Freighter: Zirax 70-90, Kriel 60-70, Colonists 60-80, Polaris 80-100, Farr 50-80, Trader 70-90, Pirates 90-100, Warlord 50-60
+# Patrol Vessels: Zirax 75-85, Kriel 60-70, Polaris 70-90, Trader 70-80, Pirates 90-100, Tesch 60-70, Warlord 60-70, Colonists 50-60, Farr 60-90, Legacy 80-100.
+# For home orbits/territory, add +10 to both speeds for that faction (Legacy get +20)
+
+# ------------------------------------------------------------------------------------------------- Faction Zirax
+# Colonist vessels
+          - Name: [R2OPV_ZiraxCarrier01]
+            Faction: Zirax
+            CountMinMax: [1, 1]
+            Probability: 1
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [30, 40]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: False
+              RadiusMinMax: [1000, 1500]
+              POINameAsPositionRef: [Eden_BA_DummyPOI]
+              Position:
+                PosXZMinMax: [500, 1500]
+                PosYMax: 500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [2, 4]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              - Key: AIManMaxPursuitRange
+                Value: 3000
+
+# ------------------------------------------------------------------------------------------------- Faction Civilian
+# Civilian Cargo Shuttles
+          - Name: [Eden_OPVTraderTSO]
+            Faction: Polaris
+            CountMinMax: [4, 5]
+            Probability: 0
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [20, 40]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: False
+              RadiusMinMax: [5000, 7500]
+              POINameAsPositionRef: [Eden_BA_DummyPOI3]
+              Position:
+                PosXZMinMax: [2500, 5000]
+                PosYMax: 1000
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [1, 2]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              - Key: MapDistance
+                Value: 0
+              - Key: HudDistance
+                Value: 3000
+              - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
+                Value: "Trader, Polaris, Colonists, Farr, Civilian"
+              - Key: AIManMaxPursuitRange
+                Value: 10000

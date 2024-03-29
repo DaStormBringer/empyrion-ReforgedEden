@@ -1,0 +1,1169 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+Drones patrolling this planet are [c][0000ff]Polaris[-][/c] faction.
+
+
+An world covered in thin ice and areas of shallow water."
+
+PlanetType: Ice
+PlayfieldType: Planet
+Difficulty: 3
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "1.25, 1.35, 1.45"
+SkyColor: "0.7, 0.7, 1.0"
+SkyHorizonColor: "0.9, 0.4, 0.9"
+AtmosphereParams: [1, 2.5]      
+
+# Light
+DayLightIntensity: 0.9
+NightLightIntensity: 0.6
+DayShadowStrength: 0.95
+NightShadowStrength: 0.5
+
+LightZenithColor: "1, 1, 1"
+LightHorizonColor: "1, 0.4, 1"
+NightLightColor: "0.2, 0.75, 0.9"
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+# Fog
+# AtmosphereFog: 0.5
+FogCloudIntensity: 0.8
+# GroundFogIntensity: 0.07
+# GroundFogHeight: 40
+
+# FogColor: "0.85, 0.85, 1.03"
+FogColor: "1, 1, 1.05"
+
+# Clouds and Wind
+CloudsDensity: 0.3
+CloudsSharpness: 0.2
+CloudsBrightness: 0.6
+
+CloudsZenithColor: "0.70, 0.75, 1.0"
+CloudsHorizonColor: "2, 2, 2"
+CloudsNightZenithColor: "0.1, 1.2, 1.5"
+CloudsNightHorizonColor: "0.4, 0.6, 0.9"
+
+WindSpeed: 12
+
+# Special Effects
+SpecialEffectsLocal:
+  - Name: WindLines
+    Biome: [ LowMountains, LowMountains_2, Mountaintop ]
+    Time: Always
+    MaxHeight: 15
+
+SpecialEffectsGlobal:
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 0
+    Lifetime: 1200
+  - Name: CloudsLight
+    Type: Weather
+    InitialDelay: 0
+    Delay: 0
+    Lifetime: 1200
+  # - Name: CloudsMedium  # Too bright here
+    # Type: Weather
+    # InitialDelay: 0
+    # Delay: 3
+    # Lifetime: 1200
+  - Name: Clouds
+    Type: Weather
+    InitialDelay: 5
+    Delay: 3
+    Lifetime: 300
+  - Name: Fog
+    Type: Weather
+    InitialDelay: 12
+    Delay: 48
+    Lifetime: 300
+  - Name: SnowLight
+    Type: Weather
+    InitialDelay: 24
+    Delay: 36
+    Lifetime: 300
+  - Name: SnowMedium
+    Type: Weather
+    InitialDelay: 24
+    Delay: 48
+    Lifetime: 300
+  - Name: SnowHeavy
+    Type: Weather
+    InitialDelay: 24
+    Delay: 60
+    Lifetime: 300
+  - Name: ColdWave
+    Type: Weather
+    InitialDelay: 48
+    Delay: 24
+    Lifetime: 1000
+
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: CopperResource
+      BiomesExcluded: [ Ice, Ice_2 ]
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 8 ]
+      DepthMinMax: [ 4, 8 ]
+      DroneProb: 0.3
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 5
+
+    - Name: CobaltResource
+      BiomesExcluded: [ Ice, Ice_2 ]
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 7, 10 ]
+      DepthMinMax: [ 4, 8 ]
+      DroneProb: 0.2
+      MaxDroneCount: 3
+      #DistTypeCylinder:
+        #MaxRadius: 20
+        #YVariance: 9
+
+    - Name: TitanResource
+      Biome: [ Ice, Ice_2 ]
+      IsScalingCount: True 
+      CountMinMax: [ 1, 2 ]
+      SizeMinMax: [ 8, 11 ]
+      DepthMinMax: [ 15, 30 ]
+      DroneProb: 0.9
+      MaxDroneCount: 3
+      #DistTypeCylinder:
+        #MaxRadius: 9
+        #YVariance: 48
+
+    - Name: TitanResource
+      IsScalingCount: True 
+      CountMinMax: [ 4, 5 ]
+      SizeMinMax: [ 7, 9 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.9
+      MaxDroneCount: 3
+      #DistTypeCylinder:
+        #MaxRadius: 32
+        #YVariance: 8
+
+    - Name: PromethiumResource
+      Biome: [ Ice, Ice_2 ]
+      IsScalingCount: True 
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 3, 5 ]
+      DroneProb: 0.4
+      DepthMinMax: [ 0, 5 ]
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+    - Name: IceResource
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 8, 12 ]
+      DepthMinMax: [ 5, 20 ]
+      DroneProb: 0.2
+
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: CopperResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: TitanResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:
+        - GroupName: Eden_ArgentTS
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+#          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          SpawnResource: ["CobaltResource:0-1","TitanResource:1-2","CopperResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties:
+            - Key: PersonalContainer
+              Value: "MoneyCard:100000"
+            - Key: MapDistance
+              Value: 25000  
+            - Key: HudDistance
+              Value: 3000  
+            - Key: Music
+              Value: moonstone 
+            - Key: RegenAfter
+              Value: 720
+
+# Auxillary POIs for Random Argent Spires
+        - GroupName: Eden_ArgentWarehouse
+          Faction: Polaris
+          NoShieldReload: True
+          IsAuxPOI: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINearRange: [125, 200]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 100
+            - Key: RegenAfter
+              Value: 720  
+
+        - GroupName: Eden_ArgentRefinery
+          Faction: Polaris
+          NoShieldReload: True
+          IsAuxPOI: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINearRange: [125, 200]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 100
+            - Key: RegenAfter
+              Value: 720  
+
+        - GroupName: Eden_ArgentDefense
+          Faction: Polaris
+          NoShieldReload: True
+          IsAuxPOI: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINearRange: [200, 250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720  
+
+       # ================================
+        # Trading Station with some settlements
+        # - GroupName: Eden_ArgentTS
+          # Faction: Polaris  
+          # IsImportant: True
+          # CountMinMax: [ 1, 1 ]
+          # SpawnPOIAvoid: [DroneBaseT1RG]
+          # SpawnPOIAvoidDistance: 2000
+          # SpawnResource: ["CobaltResource:0-1","TitanResource:1-2","CopperResource:0-1"]
+          # SpawnResourceRange: [150,400]
+          # Properties: 
+            # - Key: Music
+              # Value: SunnySkies
+            # - Key: RegenAfter
+              # Value: 720
+
+        # - GroupName: CivilSettlementSnowRG
+          # Faction: Polaris  
+          # CountMinMax: [ 4, 6 ]
+          # SpawnPOINear: [Eden_ArgentTS]
+          # SpawnPOINearRange: [150, 250] 
+          # Properties: 
+            # - Key: MapDistance
+              # Value: 0  
+            # - Key: HudDistance
+              # Value: 100  
+            # - Key: RegenAfter
+              # Value: 720
+ 
+        # - GroupName: PolarisDefenceSnowRG
+          # Faction: Polaris  
+          # CountMinMax: [ 5, 6 ]
+          # SpawnPOINear: [Eden_ArgentTS]
+          # SpawnPOINearRange: [300, 400] 
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+ 
+       # ================================
+        # Research North Compound
+        - GroupName: Eden_ArgentHQ
+          Faction: Polaris
+          NoShieldReload: True
+          BiomesExcluded: [ LowMountains, LowMountains_2]
+          IsImportant: True
+#          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 4
+          TroopTransport: True
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 3500
+          SpawnResource: ["TitanResource:1-2","CopperResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: Eden_ArgentDefense
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 6, 9 ]
+          SpawnPOIAvoid: [Eden_ArgentDefense]
+          SpawnPOIAvoidDistance: 100
+          SpawnPOINear: [Eden_ArgentHQ]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: Eden_ArgentStarport
+          Faction: Polaris
+          NoShieldReload: True  
+          BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 4
+          TroopTransport: True
+          # SpawnPOIAvoid: [Eden_ArgentTS]
+          # SpawnPOIAvoidDistance: 3000
+          SpawnPOINear: [Eden_ArgentHQ]
+          SpawnPOINearRange: [3000, 4500] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ArgentWarehouse
+          Faction: Polaris
+          NoShieldReload: True  
+          BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
+          CountMinMax: [ 1, 2 ]
+          SpawnPOIAvoid: [Eden_ArgentWarehouse]
+          SpawnPOIAvoidDistance: 50
+          SpawnPOINear: [Eden_ArgentStarport]
+          SpawnPOINearRange: [150, 250] 
+          Properties:
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ArgentRefinery
+          Faction: Polaris
+          NoShieldReload: True  
+          BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
+          CountMinMax: [ 2, 3 ]
+          SpawnPOIAvoid: [Eden_ArgentWarehouse, Eden_ArgentRefinery]
+          SpawnPOIAvoidDistance: 50
+          SpawnPOINear: [Eden_ArgentStarport]
+          SpawnPOINearRange: [200, 300] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100  
+            - Key: RegenAfter
+              Value: 720
+
+        # - GroupName: CivilSettlementSnowRG
+          # Faction: Polaris  
+          # CountMinMax: [ 1, 2 ]
+          # SpawnPOINear: [Eden_NorthMain]
+          # SpawnPOINearRange: [100, 250] 
+          # Properties: 
+            # - Key: MapDistance
+              # Value: 0  
+            # - Key: HudDistance
+              # Value: 100  
+            # - Key: RegenAfter
+              # Value: 720
+
+        - GroupName: Eden_ArgentDefense
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          SpawnPOIAvoid: [Eden_ArgentWarehouse, Eden_ArgentRefinery, Eden_ArgentDefense]
+          SpawnPOIAvoidDistance: 50
+          SpawnPOINear: [Eden_ArgentStarport]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # Research North Colony (rare)
+        - GroupName: Eden_NorthColony
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 4
+          TroopTransport: True
+          SpawnPOIAvoid: [Eden_ArgentTS, Eden_ArgentHQ]
+          SpawnPOIAvoidDistance: 3000
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+            - Key: Music
+              Value: SunnySkies
+
+        - GroupName: Eden_NorthAuxT1
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 2, 3 ]
+          SpawnPOINear: [Eden_NorthColony]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100  
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: CivilSettlementSnowRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [Eden_NorthColony]
+          SpawnPOINearRange: [100, 250] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100  
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: Eden_NorthDefenseT1
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 3, 4 ]
+          SpawnPOINear: [Eden_NorthColony]
+          SpawnPOINearRange: [250, 350] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ======================= POLARIS SETTLEMENT ======================= 
+        # Mining Station
+        - GroupName: PolarisIndustrialMainRG                      # Main Building
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 4
+          TroopTransport: True
+          SpawnPOIAvoid: [Eden_ArgentTS, Eden_NorthColony]
+          SpawnPOIAvoidDistance: 3000
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisLogisticsMainRG
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisIndustrialMainRG]
+          SpawnPOINearRange: [150, 300] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: TS_PlanetRG
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisIndustrialMainRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 300 
+            - Key: Music
+              Value: SunnySkies
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisIndustrialAuxRG
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 2, 3 ]
+          SpawnPOINear: [PolarisIndustrialMainRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: CivilSettlementSnowRG
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [PolarisLogisticsMainRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisLogisticsAuxRG
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 1, 3 ]
+          SpawnPOINear: [PolarisLogisticsMainRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+ 
+        - GroupName: Eden_NorthDefenseT1
+          Faction: Polaris
+          NoShieldReload: True  
+          # Territory: False        
+          Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
+          CountMinMax: [ 5, 6 ]
+          SpawnPOINear: [PolarisLogisticsMainRG]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            # - Key: MapDistance
+              # Value: 0  
+            # - Key: HudDistance
+              # Value: 500  
+            - Key: RegenAfter
+              Value: 720
+ 
+       # ================================
+        # POI complex with several structures around
+        - GroupName: RadosMainSnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 2000
+          SpawnResource: ["TitanResource:1-2","CopperResource:0-1"]
+          SpawnResourceRange: [150,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosAuxT1SnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosMainSnowRG]
+          SpawnPOINearRange: [100, 250]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenseT3Snow
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosMainSnowRG]
+          SpawnPOINearRange: [225, 350]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosDefenseT2Snow
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 5, 7 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosMainSnowRG]
+          SpawnPOINearRange: [400, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        - GroupName: RadosMissileBaseSnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 2000
+          SpawnResource: ["CobaltResource:1-1","PromethiumResource:0-2"]
+          SpawnResourceRange: [150,400]
+          Properties: 
+            - Key: Music
+              Value: lava 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Ruins
+          Faction: None  
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RadosMissileBaseSnowRG]
+          SpawnPOINearRange: [150, 250]
+          Properties:  
+            - Key: MapDistance
+              Value: 0   
+            - Key: HudDistance
+              Value: 100  
+            - Key: MapMarker 
+              Value: Neutral 
+            - Key: RegenAfter
+              Value: 720
+
+        # Research North Research Vessel. Capturable.
+        - GroupName: Eden_NorthCV
+          Type: CV_Alien
+          Faction: Polaris
+          NoShieldReload: True
+          Biome: [ Ice, Ice_2, GlacierSnow, Glacier, IceShelf ]
+          IsImportant: True
+          Territory: False
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 2000
+          Properties:
+            # - Key: RegenAfter
+              # Value: 720
+
+       # ================================
+        # POI amount scales with planet size 
+# Random Argent Spires
+        - GroupName: Eden_ArgentStarport
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: True
+          SpawnPOIAvoid: [Eden_ArgentTS, Eden_ArgentHQ, Eden_ArgentStarport]  
+          POIDistance: 1500
+          AuxiliaryPOIs: [Eden_ArgentWarehouse, Eden_ArgentRefinery, Eden_ArgentDefense]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ArgentSpire
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.8 
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: True
+          SpawnPOIAvoid: [Eden_ArgentTS, Eden_ArgentHQ, Eden_ArgentStarport]  
+          POIDistance: 1500
+          AuxiliaryPOIs: [Eden_ArgentWarehouse, Eden_ArgentRefinery, Eden_ArgentDefense]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # Random civil outposts scattered around planet
+        - GroupName: CivilSettlementSnowRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_NorthMain
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 1 
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_NorthAuxT1
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.3 
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_NorthTower
+          Faction: Polaris
+          NoShieldReload: True
+          IsImportant: True
+          Biome: [ Mountaintop ]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: True
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_PolarisAntenna
+          Faction: Polaris
+          NoShieldReload: True
+          IsImportant: True
+          Territory: False
+          Biome: [ Mountaintop ]
+          CountMinMax: [ 2, 5 ]
+          IsScalingCount: True
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: HudDistance
+              Value: 100  
+            - Key: MapDistance
+              Value: 0   
+            - Key: RegenAfter
+              Value: 720
+
+        # Random Zirax military outposts scattered around planet
+        - GroupName: RadosMainSnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 1000
+          SpawnResource: ["CobaltResource:0-1","PromethiumResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosAuxT2SnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RadosAuxT1SnowRG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 4, 6 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ArgentTS]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        # Crashed ships
+        - GroupName: CrashedShip  
+          Faction: None       
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          PlaceAt: Terrain, UnderWater
+          DroneProb: 0.8
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        # Ship buried in ice
+        - GroupName: Eden_BuriedWreckIce  
+          Faction: None
+          IsImportant: True
+          Biome: [ Ice_2 ]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 5, 8 ]
+          ReserveCount: 5
+          TroopTransport: True
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Needs a custom cave
+        # - GroupName: Eden_CaveCrystalBlue 
+          # Faction: Alien
+          # Biome: [ Ice ]
+          # CountMinMax: [ 2, 4 ]
+          # IsImportant: True
+          # DroneProb: 0
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False
+          # Properties:
+            # - Key: SI
+              # Value: Off
+            # - Key: HudDistance
+              # Value: 250
+            # - Key: MapDistance
+              # Value: 0
+            # - Key: RegenAfter
+              # Value: 720
+
+        - GroupName: Wreckage
+          Faction: None  
+          CountMinMax: [ 1, 3 ]
+          IsScalingCount: True 
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker 
+              Value: Neutral 
+            - Key: RegenAfter
+              Value: 720
+
+# Caves
+        - GroupName: Eden_CaveIceL
+          Faction: Eden_Wreck
+          FactionTerritory: [All]
+          NoShieldReload: True
+          Biome: [ Ice, Ice_2 ]
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 720
+
+# Aurora
+        - GroupName: Eden_TR_SpireProm
+          Type: Eden_AuroraGreen
+          CountMinMax: [ 0, 1 ]
+
+        - GroupName: Eden_TR_SpireProm
+          Type: Eden_AuroraGreen
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          SpawnPOINear: [Eden_TR_SpireProm]
+          SpawnPOINearRange: [2500, 15000]
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ 200, 80, 0 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 6
+          PresetStyle: 3
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallFast01Plasma
+                Amount: 200
+                Extra: 0
+
+              - Name: EnemyDroneV2Minigun
+                Amount: 300
+                Extra: 0
+
+              - Name: DroneLargeAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: EnemyDroneV2Plasma
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport01
+                Amount: Infinite
+                Extra: 2
+
+              - Name: AssaultCyborg
+                Amount: 500
+                Extra: 3
+
+          # PlanetVesselBase:
+              # Name: PlanetVesselBaseSetup
+              # Position3D: [ 0, 102, 0]
+              # BaseType: PlanetVesselBase
+              # KeyId: 0
+              # PlanetVessel:
+                # - Name: Patrol-XS-Medium
+                  # Mission: PlanetPatrol
+                  # FixedMaxSpeed: 5
+                  # RespawnDelay: 18
+                  # InitialDelay: 72
+
+                  # RangePatrolTask:
+                    # Position3D: [ 1000, 80, 0 ]
+                    # Radius: 500
+                    # DistToGround: 80
+
+                  # AttackCVCircleAround:
+                    # DistToTarget: 200
+
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 3000
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 3000
+
+# ==============================================================
+# ==============================================================
+
+SpawnRateZones:
+   - SpawnAt: [Eden_ArgentTS]
+     Radius: 1000
+     RadiusRandom: 50
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 0.7
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7"
+
+SpawnZones:
+   # - SpawnAt: [ Wreckage, AbandonedPOIRG, CrashedShip]
+     # BiomesExcluded: [ LowMountains, Mountains ]
+     # Radius: 500
+     # RadiusRandom: 50
+     # RateMultiplyerCenter: 1.0
+     # RateMultiplyerEdge: 0.5
+     # Color: "1.0, 0.6, 0.2, 0.7"
+     # SpawnOnlyIfPoiIsAlien: true
+     # Entities:
+       # - Names: [CaveWormsWhite]
+         # Biomes: [Any]
+         # Amount: 200
+         # Period: Always
+         # DelayMinMax: [-1, -1]
+   - SpawnAt: [TitanResource]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 0.6, 0.2, 0.7"
+     Entities:
+       - Names: [GolemsIce]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+   - SpawnAt: [RadosMainSnowRG, RadosAuxT2SnowRG, RadosMissileBaseSnowRG]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 800
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 0.6, 0.2, 0.7"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 250
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+### Creatures
+CreatureSpawning:
+    - Biomes: [Shore] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 12]
+
+    - Biomes: [ Plains, IceShelf, Tundra, GlacierSnow ] 
+      Entities:
+        - Name: Oviraptors
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 12]
+        - Name: CaveWormWhiteHerd
+          Period: Day
+          Amount: 6
+          DelayMinMax: [20, 24]
+
+    - Biomes: [ Plains, IceShelf, Tundra, GlacierSnow, Ice, Ice_2 ] 
+      Entities:
+        - Name: GolemsIce
+          Period: Always
+          Amount: 4
+          DelayMinMax: [24, 36]
+        - Name: Eden_GolemsIceMega
+          Period: Always
+          Amount: 1
+          DelayMinMax: [72, 96]
+
+    - Biomes: [ LowMountains, LowMountains_2 ] 
+      Entities:
+        - Name: GolemsIce
+          Period: Always
+          Amount: 4
+          DelayMinMax: [20, 24]
+
+    - Biomes: [ Infection ] 
+      Entities:
+        - Name: TotalHorrors
+          Period: Always
+          Amount: 20
+          DelayMinMax: [12, 16]
+        - Name: Overseers
+          Period: Night
+          Amount: 10
+          DelayMinMax: [24, 36]

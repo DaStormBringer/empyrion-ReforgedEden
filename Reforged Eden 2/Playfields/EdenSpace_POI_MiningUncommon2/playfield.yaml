@@ -1,0 +1,391 @@
+PlayfieldType: Space
+WorldName: 
+RealRadius: 0
+ScaledRadius: 0
+Gravity: 0
+PlanetAxis: 0
+PlanetRotAxis: 
+AtmosphereDensity: 0
+AtmosphereO2: 0.100000001
+AtmosphereBreathable: false
+Temperature: 0
+TemperatureDay: -117
+TemperatureNight: 0
+Radiation: 5.36471224
+SeaLevel: 0
+TerrainLevel: 0
+BaseLevel: 0
+DayLength: 0
+PlanetType: Mining Site Class 3
+PlanetSize: 2
+Moons: 0
+Emissive: false
+Water: 
+PvP: false
+Difficulty: 1
+LegacyBiome: 
+ChunkProviderId: 0
+SunFlare: 
+Nebula: 
+Stars: 
+LocalEffect: 
+SpecialEffectsLocal: 
+SpecialEffectsGlobal: 
+AtmosphereEnabled: false
+AtmosphereColor: 0.55, 0.61, 0.65
+AtmosphereParams: 
+OrbitUsesLightColor: false
+SkyColor: 1, 1, 1
+SkyHorizonColor: 
+LightZenithColor: 1, 0.95, 0.915
+LightHorizonColor: 1, 0.6, 0
+NightLightColor: 0.671, 0.647, 0.992
+CloudsZenithColor: 0.875, 0.918, 1
+CloudsHorizonColor: 1, 0.76, 0.566
+CloudsNightZenithColor: 0.054, 0.094, 0.152
+CloudsNightHorizonColor: 0.054, 0.094, 0.152
+CloudsOpacity: 0.899999976
+FogCloudIntensity: 1
+DayLightIntensity: 0.600000024
+NightLightIntensity: 0.699999988
+DayShadowStrength: 0.649999976
+NightShadowStrength: 0.400000006
+AtmosphereFog: 0
+CloudsDensity: 0
+CloudsSharpness: 1
+CloudsBrightness: 0.600000024
+WindSpeed: 1
+FogColor: 0.8, 0.8, 0.8
+FogIntensity: 0
+FogStartDistance: 0
+GroundFogIntensity: 0
+GroundFogHeight: 0
+
+
+Description: "Type: [c][A0522D]Mining Site[-][/c] - [c][ffff00]Class 3[-][/c]
+
+
+Gravimetric anomalies indicate the presence of ore bearing asteroids.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+
+Seed: -2147483648
+TemperatureMinMax: 
+HumidityMinMax: 
+LandWaterRatio: 0
+TemperatureHeightRange: 
+TemperatureGradientRange: 
+TemperatureNoiseFac: 0
+HumidityHeightFac: 
+HumidityNoiseFac: 0
+TerrainHeightMapMax: -1
+GroundShapes: 
+TemperatureMasks: 
+HumidityMasks: 
+BiomeStampTries: 0
+PlayfieldLevel: 1
+PdaReferral: 
+BaseAttackCount: 1
+PfServerWeight: 0
+PlanetClass: Mining Site
+UseFixed: true
+UseRandom: false
+Build: 2929
+Instance: 
+IndestructibleTerrain: false
+AllowSV: true
+AllowCV: true
+AllowHV: true
+AllowBA: true
+AllowBlueprintSV: true
+AllowBlueprintCV: true
+AllowBlueprintHV: true
+AllowBlueprintBA: true
+AllowMaxCPUTierSV: 0
+AllowMaxCPUTierCV: 0
+AllowMaxCPUTierHV: 0
+AllowMaxCPUTierBA: 0
+RestrictToOrigin: 255
+Music: AlteredPhase
+LandClaimZone: Default
+IsOrbitPlayfield: false
+RandomPOIs: 
+RandomDroneBase: 
+RandomResources: 
+FixedResources: 
+AsteroidResources: 
+Terrain: 
+MainBiome: 
+SubBiomes: 
+BiomeTextureReplacements: 
+Biome: 
+POIs:
+  Random: 
+  Fixed:
+
+# ------------------------------------------------------------------------------------------------- Main mining site
+  - Type: AsteroidVoxel01Titan
+    Prefab: Eden_AS_OreSiteT3_1
+    Mode: Survival
+    SubMode: 
+    Name: Uncommon Ore Site
+    InitPower: false
+    LevelMod: 
+    Faction: None
+    Properties:
+    - Key: Discovery
+      Value: False
+    - Key: RegenAfter
+      Value: 720
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 0
+    - 0
+    - 0
+    Rot: 
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseOverrideDefaults: false
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice: 
+    SpaceDefensePriceMinMax: 
+
+
+# ------------------------------------------------------------------------------------------------- Polaris mining HVs
+  - Type: HV_Player
+    Prefab: Eden_HV_PolMiner1
+    Mode: Survival
+    SubMode: 
+    Name: Miner
+    InitPower: true
+    LevelMod: 
+    Faction: Polaris
+    Properties:
+    - Key: MapDistance
+      Value: 3000
+    - Key: HudDistance
+      Value: 3000
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - 40.1
+    - 39.8
+    - -80.4
+    Rot:
+    - 7
+    - 33
+    - 1
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+  - Type: HV_Player
+    Prefab: Eden_HV_PolMiner1
+    Mode: Survival
+    SubMode: 
+    Name: Miner
+    InitPower: true
+    LevelMod: 
+    Faction: Polaris
+    Properties:
+    - Key: MapDistance
+      Value: 3000
+    - Key: HudDistance
+      Value: 3000
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - -11.3
+    - 11.8
+    - -6.4
+    Rot:
+    - 329
+    - 183
+    - 1
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+# ------------------------------------------------------------------------------------------------- Polaris hauler SV
+  - Type: SV_Player
+    Prefab: Eden_SV_PolHauler1
+    Mode: Survival
+    SubMode: 
+    Name: Hauler
+    InitPower: true
+    LevelMod: 
+    Faction: Polaris
+    Properties:
+    - Key: MapDistance
+      Value: 3000
+    - Key: HudDistance
+      Value: 3000
+    NoShieldReload: false
+    IsCommandCenter: false
+    Pos:
+    - -7.4
+    - 34.8
+    - -81.3
+    Rot:
+    - 0
+    - 188
+    - 0
+    SpawnResource: 
+    ResourceDistance: 0
+    SpawnResourceRange: 
+    SpaceDefenseProbability: 0
+    SpaceDefensePrice:
+
+
+
+  FixedPlayerStart: 
+
+
+
+DroneBaseSetup:
+  Random: 
+  Fixed:
+  - Name: MainDroneBase
+    Faction: 
+    Pos:
+    - -1534.22119
+    - -380
+    - 3263.34204
+    LevelMod: 
+    DroneOnDuty:
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -4198.8125
+      - 1844
+      - 5222.39209
+      Radius: 2562
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 532.23407
+      - 2171
+      - -1646.09436
+      Radius: 2779
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 255.746552
+      - 2459
+      - 234.526535
+      Radius: 1503
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 404.812347
+      - 1777
+      - 7206.63965
+      Radius: 2587
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -2785.97534
+      - -233
+      - 1614.54102
+      Radius: 2287
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 417.430481
+      - -2242
+      - 3670.33887
+      Radius: 2649
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -466.713745
+      - -389
+      - 476.515778
+      Radius: 2455
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -4015.00928
+      - -1322
+      - -769.053406
+      Radius: 2973
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 4696.94043
+      - 2457
+      - 6385.61475
+      Radius: 2243
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 328.737213
+      - -1680
+      - 1385.53528
+      Radius: 1716
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 4531.28955
+      - -1911
+      - 768.525085
+      Radius: 1853
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -3989.88013
+      - -2280
+      - 2828.91064
+      Radius: 1856
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - -194.690094
+      - 1355
+      - 267.687805
+      Radius: 1596
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - 6344.54004
+      - 677
+      - -522.272949
+      Radius: 2534
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -4569.91406
+      - -1267
+      - 4594.15723
+      Radius: 1963
+    - Name: SpaceDroneLaser
+      Faction: 
+      Pos:
+      - 4707.75098
+      - 1867
+      - 6307.90967
+      Radius: 1980
+    - Name: SpaceDronePlasma
+      Faction: 
+      Pos:
+      - -1227.87988
+      - -1857
+      - -385.590332
+      Radius: 1555
+    DroneSpaceFreighter: 
+    DronePlanetVessel: 
+    SpaceVessel: []
+    DronePlanetBase: 
+TroopsTransportContent: 
+DroneSpawning: 
+CreatureSpawning: 
+SpawnRateZones: 
+SpawnZones: 

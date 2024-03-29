@@ -1,0 +1,638 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [5]
+  SizeProbs: [1]       
+TemperatureMin: [-250, -230]                        
+TemperatureMax: [-182,-178]   
+TemperatureNight: [0,0]
+PlanetAxis: [-25,25]                
+HumidityMin: [0.05, 0.1]                   
+HumidityMax: [0.3, 0.35]                
+Radiation: [3, 6]             
+LandWaterRatio: [0, 0.0]                   
+SeaLevel: [0, 0]     
+TerrainLevel: [130, 135]
+BaseLevel: [130, 130]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [330, 107]
+TemperatureGradientRange: [1.0, 0.00]
+TemperatureNoiseFac: 0.16
+HumidityHeightFac: [0, 420]
+HumidityNoiseFac: 1.00
+
+GravityMinMax: [-8, -10]   # Jupiter: -24.79, Saturn: -10.44, Earth -9.807
+AtmosphereDensityMinMax: [1.2, 1.6]
+AtmosphereO2MinMax: [0.00, 0.00]
+AtmoBreathableProb: 0.0
+WaterProb: 0.0
+PvPProb: 0 #Normal
+
+GroundFogProb: 1
+GroundFogIntensityRange: [0.2, 0.2]      # 
+# GroundFogHeightRange: [50, 55]           # Fitted to Sealevel. Use this for SSG exports
+GroundFogHeightRange: [800, 800]             # Fitted to Sealevel. !!! Use this for ingame world generation !!!
+
+Water: [WaterGreen]
+Music: [Magnitude]
+# ==============================================================
+GroundShapes: 
+
+
+HumidityMasks: 
+
+TemperatureMasks: 
+
+
+BiomeStampTries: 0
+
+Biomes: 
+ 
+# ==============================================================                 
+  - Name: Pole
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.2]  
+
+    SelectionCriteria:  
+    - +Lat > 0.975       
+    Color: [0, 0, 0]
+
+
+
+# ==============================================================                 
+  - Name: WaterChecker
+    AmbientSound: SmallLake
+    IgnoreForcedBiome: true
+    Texture: [0, 8, 0.20]   
+    Temperature: 5
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 3
+    - Temperature > -16
+    Color: [1, 0.0, 0]
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+
+    Grass: 
+
+                 
+                 
+
+# # ==============================================================                 
+  # - Name: Band_01
+    # AmbientSound: ArcticLowPlains 
+    # IgnoreForcedBiome: true
+    # Texture: [0, 0, 0.5]  
+
+    
+    # SelectionCriteria: 
+# #    - Height < 3
+    # - Temperature > 7
+    # - Temperature < 15
+    # Color: [0.54, 0.7, 0.79] 
+    
+    # UndergroundLayersDefault: True
+    # UndergroundLayers:
+               # - [0, 3]
+               # - [11, -1]
+               # - [15, 1]
+               
+# ==============================================================                 
+  - Name: Rifts            
+    Texture: [10, 10, 0.5]
+    IgnoreForcedBiome: true  
+    SelectionCriteria: 
+    - Height > 600
+    Color: [0.7, 0.2, 0.2]
+    
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [1, 4]
+               - [2, 4]
+               - [3, 4]
+               - [4, 4]
+               - [5, 4]
+               - [6, 4]
+               - [7, 4]
+               - [8, 4]
+               - [9, 4]
+               - [10, 4]
+               - [11, -1]
+               - [11, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 25                    
+    Stamps:
+    - RiftIce_01, 0.3
+    
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.005]
+               - [RockGrey02Large, 0.005]
+               # Rock Resources:
+               - [CrystalsPyramidBlue, 0.0001, Free]
+
+    Grass:    
+                 
+# ==============================================================
+
+  - Name: CryoVolcano
+    AmbientSound: LavaPlains
+    IgnoreForcedBiome: true  
+    Texture: [6,7,0.2, 4,5,0.5, 0.002]  
+    SelectionCriteria: 
+    - Height > 160
+    Color: [0.4, 0.4, 0.4]
+    UndergroundLayers:
+               - [0, 3]
+               - [1, 4]
+               - [2, 4]
+               - [3, 4]
+               - [4, 4]
+               - [5, 4]
+               - [6, 4]
+               - [7, 4]
+               - [8, 4]
+               - [9, 4]
+               - [10, 4]
+               - [11, -1]
+               - [11, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapAll
+    StampTries: 3  
+    Stamps:
+    - Volcano_2, 0.1
+    - Volcano_3, 0.1
+    - Volcano_1, 0.1
+    # - MountainPlateau_01, 0.3
+    # - MountainPlateau_02, 0.3
+    # - MountainPlateau_03, 0.3
+    # - MountainPlateau_04, 0.3
+    # - MountainPlateau_05, 0.3
+    # - MountainPlateau_06, 0.3
+    
+    Decorations:  
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [Boulder1, 0.001]
+               - [Boulder2, 0.001]
+               - [Boulder3, 0.001]
+               - [Boulder4, 0.0015]
+               - [Boulder5, 0.0015]
+               - [RockResourceSathium, 0.018]
+               - [RockResourceNeodymium, 0.009]
+    # Grass: 
+               # - Name: GrassBrown06
+                 # Density: 0.3
+                 # Preset: GrassDense    
+                 
+# ==============================================================
+
+  - Name: Mountains
+    AmbientSound: LavaPlains
+    IgnoreForcedBiome: true  
+    Texture: [6,7,0.2, 4,5,0.5, 0.002]  
+    SelectionCriteria: 
+    - Height > 600
+    Color: [0.4, 0.4, 0.4]
+    UndergroundLayers:
+               - [0, 3]
+               - [1, 4]
+               - [2, 4]
+               - [3, 4]
+               - [4, 4]
+               - [5, 4]
+               - [6, 4]
+               - [7, 4]
+               - [8, 4]
+               - [9, 4]
+               - [10, 4]
+               - [11, -1]
+               - [11, 1]
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOwn
+    StampTries: 4  
+    Stamps:
+    - Volcanic_02b, 0.4
+    - Volcanic_02 , 0.4
+    - Volcanic_03, 0.4
+    - Volcanic_04, 0.4
+    
+    Decorations:  
+               - [DesertRock1, 0.002]
+               - [DesertRock2, 0.002]
+               - [Boulder1, 0.001]
+               - [Boulder2, 0.001]
+               - [Boulder3, 0.001]
+               - [Boulder4, 0.0015]
+               - [Boulder5, 0.0015]
+               - [RockResourceSathium, 0.018]
+               - [RockResourceNeodymium, 0.009]
+    # Grass: 
+               # - Name: GrassBrown06
+                 # Density: 0.3
+                 # Preset: GrassDense    
+                 
+# ============================================================== 
+  - Name: Band_01to3
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true  
+    IgnoreForcedBiome: true
+#    Texture: [3, 0, 0.5]  
+    Texture: [1, 1, 0.5]   # band 02
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -193
+    - Temperature < -185
+    Color: [0.54, 0.7, 0.79] 
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [0, 3]
+               - [1, 4]
+               - [2, 4]
+               - [3, 4]
+               - [4, 4]
+               - [5, 4]
+               - [6, 4]
+               - [7, 4]
+               - [8, 4]
+               - [9, 4]
+               - [10, 4]
+               - [11, -1]
+               - [11, 1]
+
+    Decorations:  
+               - [RockResourceIron, 0.003]
+
+# ==============================================================                 
+  - Name: Band_01b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [2,2,0.8, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -195
+    - Temperature < -185
+    Color: [0.75, 0.68, 0.78] 
+
+    Decorations:  
+               - [RockResourceSilicon, 0.003]
+
+# ==============================================================                 
+  - Name: Band_02a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0, 0, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -196
+
+    Color: [0.95, 0.68, 0.88] 
+
+    Decorations:  
+               - [RockResourceCopper, 0.003]
+
+   
+# ==============================================================                 
+  - Name: Band_02
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [1, 1, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -197
+
+    Color: [0.85, 0.78, 0.88] 
+
+    Decorations:  
+               - [RockResourceCobalt, 0.003]
+
+# ==============================================================                 
+  - Name: Band_02b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+#    Texture: [1,0,0.5, 1,1,0.5, 0.5]  
+    Texture: [2, 2, 0.5]  
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -199
+
+    Color: [0.9, 0.78, 0.95] 
+
+    Decorations:  
+               - [RockResourceSathium, 0.003]
+
+    
+# ==============================================================                 
+  - Name: Band_03ablu
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0,6,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -200
+
+    Color: [0.35, 0.68, 0.78] 
+
+    Decorations:  
+               - [RockResourceNeodymium, 0.001]
+
+
+# ==============================================================                 
+  - Name: Band_03abluDark
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [0,3,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -201
+
+    Color: [0.75, 0.68, 0.38] 
+
+    Decorations:  
+               - [RockResourceErestrum, 0.001]
+
+# ==============================================================                 
+  - Name: Band_03
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [2, 2, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -202
+
+    Color: [1.07, 0.72, 0.74] 
+
+    Decorations:  
+               - [RockResourceZascosium, 0.001]
+
+# ==============================================================                 
+  - Name: Band_04
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [3, 3, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -205
+
+    Color: [1, 0.77, 1] 
+
+    Decorations:  
+               - [RockResourceGold, 0.001]
+
+    
+# ==============================================================                 
+  - Name: Band_04b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [4,7,0.2, 1,1,0.5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -206.5
+
+    Color: [0.5, 0.77, 1] 
+
+    Decorations:  
+               - [RockResourcePromethium, 0.001]
+
+# ==============================================================                 
+  - Name: Band_05
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -209
+
+    Color: [1, 1, 1] 
+
+    Decorations:  
+               - [RockResourceZascosium, 0.001]
+
+# ==============================================================                 
+  - Name: Band_06
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [6, 6, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -213
+
+    Color: [0.85, 1.0, 0.8] 
+
+    Decorations:  
+               - [RockResourceErestrum, 0.001]
+
+# ==============================================================                 
+  - Name: Band_07
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [7, 7, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -214
+
+    Color: [0.99, 1, 0.85] 
+
+    Decorations:  
+               - [RockResourceNeodymium, 0.001]
+
+# ==============================================================                 
+  - Name: Band_08
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [8, 8, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -215
+
+    Color: [0.84, 1.03, 0.54] 
+
+    Decorations:  
+               - [RockResourceGold, 0.001]
+
+    
+# ==============================================================                 
+  - Name: Band_08b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [8,9,0.2, 9,9,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -220
+
+    Color: [0.74, 1, 0.44] 
+
+    Decorations:  
+               - [RockResourceSathium, 0.003]
+
+# ==============================================================                 
+  - Name: Band_09a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9,8,0.5, 9,9,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -222
+
+    Color: [1, 1, 0.55] 
+
+    Decorations:  
+               - [RockResourceIron, 0.003]
+
+# ==============================================================                 
+  - Name: Band_09
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9, 9, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -224
+
+    Color: [1, 1, 0.47] 
+
+    Decorations:  
+               - [RockResourceSilicon, 0.003]
+
+# ==============================================================                 
+  - Name: Band_09b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [9,2,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -228
+
+    Color: [1, 1, 0.35] 
+
+    Decorations:  
+               - [RockResourceCopper, 0.003]
+
+# ==============================================================                 
+  - Name: Band_10a
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10,9,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -31
+
+    Color: [0.9, 0.9, 0.34] 
+
+    Decorations:  
+               - [RockResourcePromethium, 0.001]
+
+# ==============================================================                 
+  - Name: Band_10
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10, 10, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -235
+
+    Color: [1.22, 1.23, 0.34] 
+
+    Decorations:  
+               - [RockResourceErestrum, 0.001]
+
+# ==============================================================                 
+  - Name: Band_10b
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [10,11,0.5, 10,10,0,5, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -238
+
+    Color: [0.9, 1, 0.34] 
+
+    Decorations:  
+               - [RockResourceIron, 0.003]
+
+# ==============================================================                 
+  - Name: Band_11
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > -242
+
+    Color: [1, 1, 1] 
+
+    Decorations:  
+               - [RockResourceNeodymium, 0.001]
+
+    
+
+    
+# ==============================================================                 
+  - Name: Band_00
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 11, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+
+
+    Color: [0.7, 0.7, 0.4] 
+    

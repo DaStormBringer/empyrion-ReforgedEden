@@ -1,0 +1,1423 @@
+#
+# Define here the decals for the decal guns
+# 
+
+
+# [SingleDecal]
+# -Group=Group_1
+# -Size=3,3
+# -ColliderMode=Off
+# -Diffuse=WeaponsLocker.png
+# -Mode=Cutout
+# -Cull=false
+# #-Audio=RoarScream07.wav
+# #-AudioVolume=.5
+# #-AudioMinMaxDistance=4,300
+# #-AudioPlayMode=Single
+
+# # SpriteSheet=cols,rows,FPS    defines a sprite sheet with columns and rows and number of FPS (optional, default is 30)
+# [SpriteSheetDecal]
+# -Group=Group_1
+# -ColliderMode=NoCollision
+# -Emissive=SpriteSheet.png
+# -SpriteSheet=8,8,30
+# -Mode=Transparent
+# -Color=0,0,0,0
+# -EmissiveColor=1,1,1
+# -Size=1,1
+
+# [Flames]
+# -Group=Group_1
+# -Mode=Transparent
+# -Size=2,3
+# -Color=0,0,0,0
+# -EmissiveColor=1,1,1
+# -Glossiness=1,1,1
+# -ColliderMode=NoCollision
+# -Video=Eden_Flames1.mp4
+
+# [Flames]
+# -Mode=Transparent
+# -Group=Group_1
+# -Size=1.9,1.6
+# -EmissiveColor=0.75,3,4
+# -Color=0,0,0,0
+# -Glossiness=1,1,1
+# -ColliderMode=NoCollision
+# -Video=Eden_Flames3.mp4
+
+# [Sparks]
+# -Group=Group_1
+# -Mode=Transparent
+# -Size=1.35,0.4
+# -EmissiveColor=4,4,1.25
+# -Color=0,0,0,0
+# -Glossiness=1,1,1
+# -ColliderMode=NoCollision
+# -Video=Eden_LightningBluePeriodic1.mp4
+
+
+
+# # Example for a decal taken from a sprite atlas
+# [AtlasDecal1]
+# -Size=1,1
+# -Group=Group_2
+# -ColliderMode=NoCollision
+# -Diffuse=SignDecals_2k.png
+# -Mode=Cutout
+# -Rect=672,440,259,230
+
+# [AtlasDecal1]
+# -Size=1,1
+# -Group=Group_2
+# -ColliderMode=NoCollision
+# -Diffuse=SignDecals_2k.png
+# -Mode=Cutout
+# -Rect=1144,690,215,209
+
+
+# ============================================================================================================================================================================
+# =================================================================================================================================================== Group 1 - Working Group
+# ============================================================================================================================================================================
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalBlue
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalBlueBright
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalBlueGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalCyan
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalCyanGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalGreen
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalGreenGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalOrange
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalOrangeGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalPurple
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalPurpleGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalRed
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalRedGlow
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalWhite
+
+[Crystals]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoCrystalWhiteGlow
+
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFungusBlue
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFungusCyan
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFungusOrange
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFungusPurple
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFungusRed
+
+
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantBlue
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantCyan
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantOrange
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantOrange2
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantPurple
+
+[Plants]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoPlantRed
+
+
+
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesBlue
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesGreen
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesOrange
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesWhite
+
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowstringBlue
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowstringCyan
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowstringGreen
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowstringOrange
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowstringWhite
+
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowwormsBlue
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowwormsGreen
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowwormsOrange
+
+[Fireflies]
+-Group=Group_1
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoGlowwormsWhite
+
+
+# # ------------------------------------------------------------------------------------------------- Wanted Posters
+# # Wanted poster
+# [Wanted]
+# -Group=Group_1
+# -Mode=Transparent
+# -Size=2,1
+# -EmissiveColor=1.25,1.25,1
+# -Cull=false
+# -Diffuse=Eden_Wanted1.png
+# -Emissive=Eden_Wanted1.png
+
+
+# # ------------------------------------------------------------------------------------------------- Advertisements
+# # Advertisement
+# [Advertisement]
+# -Group=Group_1
+# -Mode=Transparent
+# -Size=1,1
+# -Color=1,1,1,1
+# -EmissiveColor=1,1,1
+# -Cull=true
+# -Diffuse=Eden_PromethiumSlammer.png
+# -Emissive=Eden_PromethiumSlammer.png
+
+# # ------------------------------------------------------------------------------------------------- Project Eden
+# # Project Eden Holo
+# [Sign]
+# -Group=Group_1
+# # -Mode=Transparent
+# -Mode=Cutout
+# -Size=4,1
+# -Color=1,1,1,1
+# -EmissiveColor=1.6,1.6,1.6
+# -Cull=true
+# -Diffuse=UCHNDiscovery.png
+# -Emissive=UCHNDiscovery.png
+
+# # Project Eden LCD Display
+# [EdenDisplay]
+# -Group=Group_1
+# -Mode=Transparent
+# -Size=1,1
+# -Color=0,0,0,0
+# -EmissiveColor=1,1,1
+# -Glossiness=100
+# -ColliderMode=NoCollision
+# -Video=Eden_UCHScreen1.mp4
+
+# [EdenDisplay]
+# -Group=Group_1
+# # -Mode=Transparent
+# -Mode=Transparent
+# -Size=1,1
+# -Color=0,0,0,0
+# -EmissiveColor=1,1,1
+# -Glossiness=100
+# -ColliderMode=NoCollision
+# -Video=Eden_UCHScreen2.mp4
+
+
+# [Laser]
+# -Group=Group_1
+# -Mode=Opaque
+# -Rot=90,0,0
+# -Size=20,0.1
+# -EmissiveColor=5,3,1
+# -Cull=false
+# -Diffuse=Eden_Blank.png
+# -Emissive=Eden_Blank.png
+
+# # [DeadBody]
+# # -Group=Group_1
+# # # -Mode=Cutout
+# # -Size=1,1
+# # -Color=1,1,1,1
+# # # -EmissiveColor=2,4,12
+# # -Cull=false
+# # # -Asset=@models2/Entities/Decorations/TribalAssets/TribalBoxPrefab
+# # -Asset=@models2/TribalBoxPrefab
+
+# # [DeadBody]
+# # -Group=Group_1
+# # # -Mode=Cutout
+# # # -Size=1,1
+# # # -Color=1,1,1,1
+# # # -EmissiveColor=2,4,12
+# # # -Cull=false
+# # # -Asset=@models2/Entities/Decorations/TribalAssets/TribalBoxPrefab
+# # -Asset=@models/ConstructorT1Prefab
+
+
+# # Radio Chatter - Random
+# [SubspaceChatter]
+# -Group=Group_1
+# -Mode=Opaque
+# -Size=0.1,0.1
+# -Color=0,0,0,0
+# # -Audio=Eden_RadioChatterRandom1.ogg
+# # -Audio=@eden_soundeffects/Eden_RadioChatterRandom1.ogg
+# # -Audio=Eden_RadioChatterRandom1.ogg
+# -Asset=@eden_soundeffects/Eden_RadioChatterRandom1prefab
+# # -AudioMinMaxDistance=250,1750
+# # -AudioVolume=0.15
+# # -AudioDoppler=false
+# # -AudioPlayMode=Loop
+
+# [SubspaceChatter]
+# -Group=Group_2
+# -Size=1,1,1
+# -Color=1,1,1,1
+# -Asset=@eden_soundeffects/Eden_RadioChatterColonistCiv1
+
+# [Sound]
+# -Group=Group_2
+# -Size=1,1,1
+# -Color=1,1,1,1
+# -Asset=@eden_music/Eden_Sound_DataCache
+
+# [Sound]
+# -Group=Group_2
+# -Size=1,1,1
+# -Color=1,1,1,1
+# -Asset=@eden_music/Eden_Sound_WreckCreaks
+
+
+# ============================================================================================================================================================================
+# =================================================================================================================================================== Group 2 - Videos and Models
+# ============================================================================================================================================================================
+
+# Lightning Straight White
+# [Sparks]
+# -Group=Group_2
+# -Mode=Transparent
+# -Size=2,0.4
+# -Color=0,0,0,0
+# -EmissiveColor=2,2,2
+# -Glossiness=100
+# -ColliderMode=NoCollision
+# -Video=Eden_LightningWhite.mp4
+
+
+# # ------------------------------------------------------------------------------------------------- Docking lights and arrows
+# # Docking Arrows Blue
+# [DockingArrows]
+# -Group=Group_2
+# -Mode=Transparent
+# -Size=2.5,5
+# -Color=0,0,0,0
+# -EmissiveColor=0,0.8,1.7
+# -ColliderMode=NoCollision
+# -Video=Arrows2.mp4
+# -Glossiness=100
+
+# Docking Arrows Orange
+[DockingArrows]
+-Group=Group_2
+-Mode=Transparent
+-Size=2.5,5
+-Color=0,0,0,0
+-EmissiveColor=1,0.5,0
+-ColliderMode=NoCollision
+-Video=Arrows2.mp4
+-Glossiness=100
+
+# Docking Arrows Blue Large
+[DockingArrows]
+-Group=Group_2
+-Mode=Transparent
+-Size=5,2.5
+-Color=0,0,0,0
+-EmissiveColor=0,0.8,1.7
+-ColliderMode=NoCollision
+-Video=Arrows4.mp4
+-Glossiness=100
+
+# Docking Arrows Orange Large
+[DockingArrows]
+-Group=Group_2
+-Mode=Transparent
+-Size=10,10
+-Color=0,0,0,0
+-EmissiveColor=1,0.5,0
+-Glossiness=1,1,1
+-ColliderMode=NoCollision
+-Video=Arrows4.mp4
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexBlue1
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexBlue2
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexGreen1
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexGreen2
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexYellow1
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexYellow2
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexRed1
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexRed2
+
+[DockingHex]
+-Group=Group_2
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_HexRed3
+
+
+# ============================================================================================================================================================================
+# =================================================================================================================================================== Group 3 - Environmental
+# ============================================================================================================================================================================
+
+# TEST
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_NebulaGreenRandomL
+
+
+
+
+# Fog clouds
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudBlue
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudBlue2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudBlueRandom
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudCyan
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudCyan2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudGreen
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudGreen2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudOrange
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudOrange2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudPurple
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudPurple2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudRed
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudRed2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FogCloudRedRandom
+
+
+
+
+# Gas Clouds
+# Blue
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlue
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlue2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlue3
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlueRandom
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlueSmallRandom
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudBlueTinyRandom
+
+# Cyan
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudCyan
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudCyan2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudCyan3
+
+# Green
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreen
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreen2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreen3
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreenSmall
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreenSmall2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreenTiny
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreenTiny2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudGreenTiny3
+
+# Orange
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudOrange
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudOrange2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudOrange3
+
+# Purple
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudPurple
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudPurple2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudPurple3
+
+# Red
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudRed
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudRed2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudRed3
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudRedRandom
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudRedSmallRandom
+
+# Yellow
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudYellow
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudYellow2
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudYellow3
+
+[GasCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudYellowRandom
+
+# Debris Clouds
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRust
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud1
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud2
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud3
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud4
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud5
+
+# Debris Pieces Fields
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPieceField1
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPieceField2
+
+# Debris Pieces
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece1
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece2
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece3
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece4
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece5
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece6
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece7
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece8
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece9
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece10
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece11
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece12
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece13
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece14
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece15
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece16
+
+[DebrisCloud]
+-Group=Group_3
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisPiece17
+
+
+
+
+
+
+
+
+# Docking Lights
+[DockingLights]
+-Group=Group_4
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsWhite
+
+[DockingLights]
+-Group=Group_4
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsWhiteAnim
+
+# Docking Arrows
+[DockingLights]
+-Group=Group_4
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockArrowWhite
+
+[DockingLights]
+-Group=Group_4
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockArrowBlue
+
+
+
+
+# ================================================================================================= Group 5 - Gas Clouds
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlue
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlue2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlue3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlue4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedCyan
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedCyan2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedCyan3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedCyan4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedGreen
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedGreen2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedGreen3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedGreen4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrange
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrange2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrange3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrange4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrangeL
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedOrangeXL
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRed
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRed2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRed3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRed4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedYellow
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedYellow2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedYellow3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedYellow4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandom
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandom2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandom3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandom4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandomL
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedBlueRandomXL
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRedRandom
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRedRandom2
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRedRandom3
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRedRandom4
+
+[GasCloud]
+-Group=Group_5
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GasCloudVariedRedRandomL
+
+
+
+# =================================================================================================
+# Group 6 - Working Group
+# =================================================================================================
+
+
+[Fish]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_FishSchool
+
+[HoloGalaxy]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GalaxyHolo
+
+
+
+[Drill]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoBeamDrillIce2
+
+[Cloak]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_CloakBlack
+
+[Trail]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_LegacyTrail
+
+# Project Eden LCD Display
+[EdenDisplay]
+-Group=Group_6
+-Mode=Transparent
+-Size=1,1
+-Color=0,0,0,0
+-EmissiveColor=1,1,1
+-Glossiness=100
+-ColliderMode=NoCollision
+-Video=Eden_UCHScreen1.mp4
+
+[EdenDisplay]
+-Group=Group_6
+# -Mode=Transparent
+-Mode=Transparent
+-Size=1,1
+-Color=0,0,0,0
+-EmissiveColor=1,1,1
+-Glossiness=100
+-ColliderMode=NoCollision
+-Video=Eden_UCHScreen2.mp4
+
+[Portal]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_GalaxyHolo
+
+[HoloPlanets]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_PlanetDisplay
+
+[HoloPlanets]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_PlanetDisplayOld
+
+
+
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsWhite
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsWhiteAnim
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsCircleWhite
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockLightsCircleWhiteAnim
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockHexWhite
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockHexWhite2
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockHexBlue3
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockArrowWhite
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DockGlowWhite
+
+[DockingLights]
+-Group=Group_6
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_LightConeWhite
+

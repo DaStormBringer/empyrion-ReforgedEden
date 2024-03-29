@@ -1,0 +1,505 @@
+---
+# # ==============================================================
+
+PlanetSize: 
+  SizeRange: [5]
+  SizeProbs: [1]       
+TemperatureMin: [-100, -70]                        
+TemperatureMax: [13,13]   
+TemperatureNight: [0,0]
+PlanetAxis: [-25,25]                
+HumidityMin: [0.05, 0.1]                   
+HumidityMax: [0.3, 0.35]                
+Radiation: [3, 6]             
+LandWaterRatio: [0, 0.0]                   
+SeaLevel: [0, 0]     
+TerrainLevel: [4, 4]    
+BaseLevel: [2, 2]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [1.0, 0.00]
+TemperatureNoiseFac: 0.18
+HumidityHeightFac: [1, 350]
+HumidityNoiseFac: 0.77
+
+GravityMinMax: [-10, -13]   # Jupiter: 24.79, Saturn: 10.44, Earth 9.807
+AtmosphereDensityMinMax: [3.0, 4.0]
+AtmosphereO2MinMax: [0.00, 0.00]
+AtmoBreathableProb: 0.0
+WaterProb: 0.0
+PvPProb: 0
+Water: [WaterGreen]
+Music: [snow]
+# ==============================================================
+GroundShapes: 
+
+
+HumidityMasks: 
+
+TemperatureMasks: 
+
+BiomeStampTries: 100
+
+Biomes: 
+ 
+
+
+# ==============================================================                 
+  - Name: WaterChecker
+    AmbientSound: SmallLake
+    IgnoreForcedBiome: true
+    Texture: [0, 8, 0.20]   
+    Temperature: 5
+    
+    SelectionCriteria: 
+    - Height < SeaLevel - 3
+    - Temperature > -16
+    Color: [1, 0.0, 0]
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+
+    Grass: 
+
+                 
+                 
+                 
+# ==============================================================                 
+  - Name: CenterBandRose
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [6, 10, 0.5]  
+
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 7
+    - Temperature < 15
+    Color: [1, 0.8, 0.8] 
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0002, Free]
+               - [RockResourceCopper, 0.0001, Free]
+               
+    Grass: 
+
+                 
+# ==============================================================                 
+  - Name: CenterBandGreen
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [11, 8, 0.1]  
+    Temperature: 4
+    
+    SelectionCriteria: 
+#    - Height < 3
+    - Temperature > 0
+    - Temperature < 2
+    Color: [0.6, 0.6, 0]  
+    
+    UndergroundLayers:
+               - [0, 3]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free]
+               - [RockGrey02Large, 0.002, Free]               
+               # Rock Resources:
+               - [RockResourceSilicon, 0.0002, Free]
+               - [RockResourceCopper, 0.0001, Free]
+               
+    Grass: 
+
+# ==============================================================
+  - Name: Pole         
+    Weather: PoleFog
+    AmbientSound: ArcticIntermediatePlains
+    IgnoreForcedBiome: true
+    Texture: [7, 6, 0.5]   
+    
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [1, 1, 1] 
+   
+# ==============================================================
+
+  # - Name: Mountains 
+    # IgnoreForcedBiome: true
+    # AmbientSound: Mountains
+
+    # Texture: [3, 10, 0.6, 2, 10, 0.2, 0.2]  
+    # SelectionCriteria: 
+    # - Height > 200
+    # Color: [0.6, 0.6, 0.6]
+    
+    # UndergroundLayers:
+               # - [3, 3]
+               # - [10, -1]
+               # - [9, 1]
+    
+    # Decorations:  
+               # - [RealRock1Snow, 0.0001, Free]
+               # - [RealRock3Snow, 0.0001, Free]
+               # - [RealRock6Snow, 0.0001, Free]               
+               # # Rock Resources:
+               # - [CrystalsPyramidBlue, 0.0003, Free]   
+
+ 
+# ==============================================================
+  - Name: LowMountains
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [3,4,0.5, 2,10,0.5, 0.2]
+
+    
+    SelectionCriteria: 
+    - Height > 500   # dummy criteria
+    Color: [0.4, 0.4, 0.4]     
+     
+    UndergroundLayers:
+               - [3, 4]
+               - [10, -1]
+               - [9, 1]
+     
+
+    Decorations:  
+               - [ RealRock1Snow, 0.0001, Free]
+               - [ RealRock3Snow, 0.0001, Free]
+               - [ RealRock6Snow, 0.0001, Free]
+    Grass:  
+
+# ==============================================================
+  - Name: BandPolarLightBlue
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [6, 3, 0.5]     
+    
+    SelectionCriteria:          
+    # - Humidity < 0.35
+    # - Humidity > 0.18    
+    - Temperature < -30
+    - Temperature > -34    
+    
+    Color: [0.9, 1, 0.9] 
+
+    
+    
+    UndergroundLayers:
+               - [7, 1]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations:  
+               - [RealRock1Snow, 0.001, Free]
+               - [RealRock3Snow, 0.001, Free]
+               - [RealRock6Snow, 0.001, Free]
+               - [RealRock8Snow, 0.001, Free]
+               - [RealRock10Snow, 0.001, Free]
+
+               # Rock Resources:
+
+
+# ==============================================================
+  - Name: BandPolarRose
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [6, 10, 0.5]      
+    
+    SelectionCriteria:          
+    # - Humidity < 0.35
+    # - Humidity > 0.18    
+    - Temperature < -25
+    - Temperature > -40   
+    
+    Color: [1, 0.9, 1] 
+
+    UndergroundLayers:
+               - [7, 1]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations:  
+               - [RealRock1Snow, 0.001, Free]
+               - [RealRock3Snow, 0.001, Free]
+               - [RealRock6Snow, 0.001, Free]
+               - [RealRock8Snow, 0.001, Free]
+               - [RealRock10Snow, 0.001, Free]
+
+               # Rock Resources:
+
+    
+# ==============================================================
+  - Name: BandRose
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [7,6,0.65, 8,8,0.5, 0.01]  
+    
+    SelectionCriteria:   
+    - Temperature < -19
+    - Temperature > -22
+#    - Humidity > 0.3   
+    
+    Color: [1, 0.8, 0.8] 
+    
+    UndergroundLayers:
+               - [7, 4]
+               - [10, -1]
+               - [9, 1]    
+    
+    # StampProb: 0.4
+    # Stamps: 
+               # - IceBergs_01, 0.9   
+               # - IceSlabs_01, 0.3  
+               # - RiftLava_2, 0.2
+
+    Decorations:  
+               - [ RealRock1Snow, 0.00002, Free]
+               - [ RealRock3Snow, 0.00002, Free]    
+    
+    
+    
+   
+
+# ==============================================================
+  - Name: BandWhite
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [7,6,0.65, 8,8,0.5, 0.01]   
+    
+    SelectionCriteria:      
+    - Height < 100   
+    - Temperature < -16
+    Color: [1, 1, 1] 
+    
+    UndergroundLayers:
+               - [7, 4]
+               - [10, -1]
+               - [9, 1]
+    
+    
+    # StampProb: 0.15
+    # Stamps: 
+               # - MountainIce_01, 0.65
+               # - MountainIce_01b, 0.15
+               # - RiftLava_2, 0.1
+
+    Decorations:  
+               - [ RealRock1Snow, 0.00005, Free]
+               - [ RealRock3Snow, 0.00005, Free]
+                 
+                 
+
+# ==============================================================
+  - Name: CenterBandBlue
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [4,6,0.5, 10,8,0.1, 0.20]  
+
+    SelectionCriteria:
+    - Humidity > 0.1
+    - Temperature > -3
+    Color: [0.5, 0.8, 0.9] 
+    
+    UndergroundLayers:
+#               - [4, 1]
+               - [11, 1]
+               - [10, -1]
+               - [9, 1]    
+    
+            
+               
+    Decorations:
+
+               - [RealRock1Snow, 0.0001, Free]
+               - [RealRock3Snow, 0.0001, Free]
+               - [RealRock6Snow, 0.0001, Free]
+               - [RealRock8Snow, 0.0001, Free]
+               - [RealRock10Snow, 0.0001, Free]
+               
+               #Harvestables:
+
+    Grass:
+
+                 
+                 
+                 
+                 
+# ==============================================================
+  - Name: Taiga
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticForest
+    Texture: [1, 5, 0.5, 3,3,0.5, 0.1]   
+    SelectionCriteria:
+
+    - Humidity > 0.2
+    - Temperature > 1
+    Color: [0, 0.4, 0]    
+
+    UndergroundLayers:
+#               - [5, 1]
+               - [11, 3]
+               - [10, -1]
+               - [9, 1]    
+    
+    Decorations: 
+
+               # Rock Resources:
+               - [RockResourceIron, 0.001, Free]
+               - [RockResourceSilicon, 0.003, Free]
+               - [RockResourceCopper, 0.0008, Free]
+               
+    Grass:
+
+
+# ==============================================================
+  - Name: TaigaEdge
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticForest
+    Texture: [5,1,0.9, 8,8,0.5, 0.20]   
+
+    SelectionCriteria:
+    - Humidity > 0.2
+    - Temperature > -0.5
+   
+    Color: [0, 0.55, 0] 
+
+    UndergroundLayers:
+               - [5, 1]
+               - [11, 2]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations:
+
+               
+    Grass:
+              
+                 
+
+                 
+# ==============================================================
+  - Name: Center
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [4,6,0.5, 10,8,0.1, 0.20]   
+
+    SelectionCriteria:
+    - Humidity > 0.1
+    - Temperature > -5
+    Color: [0.8, 1, 0.5] 
+    
+    UndergroundLayers:
+               - [11, 1]
+               - [10, -1]
+               - [9, 1]
+               
+    Decorations:
+
+    Grass:
+       
+
+                 
+# ==============================================================
+  - Name: BandGreen
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticForest
+    Texture: [5,1,0.8, 10,8,0.5, 0.2]  
+    SelectionCriteria:  
+    - Height < 80
+    - Humidity > 0.20 
+    - Temperature > -9 
+    Color: [0, 0.7, 0]     
+
+    UndergroundLayers:
+               - [5, 5]
+               - [11, 2]
+               - [10, -1]
+               - [9, 1]
+
+    # StampProb: 0.3
+    # Stamps: 
+               # - Pingo_01, 0.55
+               # - IceSlabs_01, 0.15   #     
+
+    Decorations:  
+
+    Grass:  
+             
+                 
+# ==============================================================
+  - Name: TaigaSnowEdge
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticForest
+    Texture: [4,6,0.2, 8,8,0.5, 0.20]  
+    SelectionCriteria:  
+    - Height < 250
+    - Humidity > 0.1 
+    - Temperature > -10
+    
+    Color: [0.7, 0.9, 0.7]
+
+    UndergroundLayers:
+               - [5, 3]
+               - [11, 2]
+               - [10, -1]
+               - [9, 1]
+    
+    Decorations:  
+
+    Grass:  
+
+
+# ============================================================== 
+  - Name: BandLightBlue
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticForest
+    Texture: [6, 3, 0.5]  
+    
+    SelectionCriteria:   
+    - Temperature > -20
+    
+    Color: [0.9, 1, 0.9]     
+
+    Decorations:  
+
+    Grass:  
+
+
+             
+
+# ==============================================================
+# CATCH ALL
+# ============================================================== 
+  - Name: Glacier
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [7,6,0.65, 8,8,0.5, 0.01]  
+    
+    SelectionCriteria:   
+    Color: [0.9, 0.9, 0.9] 
+    
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [10, -1]
+               - [9, 1]
+ 
+    Decorations:  
+               - [ RealRock1Snow, 0.00005, Free]
+               - [ RealRock3Snow, 0.00005, Free]
+
+    Grass:  
+
+# ==============================================================

@@ -1,0 +1,421 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+
+Description: "Difficulty: [c][00ff00]Easy[-][/c]
+
+
+An otherwise standard barren moon that has very large fields of iron ore in its craters."
+
+
+PlanetType: Barren Moon
+PlayfieldType: Moon
+Difficulty: 2
+
+LandClaimZone: Device
+
+
+# Atmosphere and Sky
+AtmosphereEnabled: False
+
+# Light
+DayLightIntensity: 1.6
+NightLightIntensity: 0.7
+
+DayShadowStrength: 0.95
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+
+# ==============================================================
+
+# ==============================================================
+
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      Biome: [ LargeCrater ]
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 14, 16 ]
+      DepthMinMax: [ 1, 3 ]
+      DroneProb: 1
+      MaxDroneCount: 5
+      #DistTypeCylinder:                 # Special distribution type for resources: Cylinder. 3d models for underground resources will be used
+        #MaxRadius: 128                   # Radius of cylinder
+        #YVariance: 3                   # Height of cylinder
+
+    - Name: SiliconResource
+      IsScalingCount: True
+      CountMinMax: [ 3, 5 ]
+      SizeMinMax: [ 7, 8 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.4
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 0
+
+    - Name: CobaltResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 6 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 0
+
+    - Name: AluminiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 3 ]
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.3
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 10
+
+    - Name: PromethiumResource
+      IsScalingCount: True
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.7
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 8
+        #YVariance: 10
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: CobaltResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: AluminiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+     - Name: IronResource        # Possibility to spawn resource asteroids independent of the remaining amount of ore on a planet
+       Amount: 5000              # Amount of ore that is spawned per event
+       InitialDelay: 24           # Float [0, 10000] Initial delay in game hours before spawning of asteroids, if InitialDelay < 0 => no spawning
+       Delay: 72                 # Float [0, 10000] Subsequent delay in game hours, if Delay = 0 => no spawning
+       DespawnDelay: 144           # Float [0, 10000] Delay in game hours after which asteroid will be removed. If parameter is not set or set to 0, asteroid will not despawn  
+
+
+### POIs
+POIs:
+    Random:  
+        - GroupName: DroneBaseT1RG
+          Faction: Zirax
+          NoShieldReload: True  
+#          NoShieldReload: True
+          DroneBaseSetup: DroneBaseSetup
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 4, 5 ] 
+          ReserveCount: 5
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip    
+          Faction: None      
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+       # ================================
+        # PentaCorp Station with some nearby settlements. Doesn't always show up.
+        - GroupName: Eden_PolPentaCorp
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoidDistance: 1000
+          SpawnResource: ["AluminiumResource:1-2"]
+          SpawnResourceRange: [150,300]
+          Properties: 
+            - Key: Music
+              Value: SunnySkies
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisDefenceRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [Eden_PolPentaCorp]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+       # ======================= POLARIS MINING SETTLEMENT ======================= 
+        # Mining Station
+        - GroupName: PolarisMiningMainRG                      # Main Building
+          Faction: Polaris
+          NoShieldReload: True  
+          IsImportant: True
+          Biome: [ LargeCrater ]
+          CountMinMax: [ 0, 1 ]
+          SpawnResource: ["IronResource:1-1"]
+          SpawnResourceRange: [150,300]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+              # Cobalt Mine
+        - GroupName: Eden_PolMineIron
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [150, 250]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisMiningAuxRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [150, 250] 
+          Properties: 
+            - Key: MapDistance
+              Value: 0  
+            - Key: HudDistance
+              Value: 100 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: PolarisDefenceRG
+          Faction: Polaris
+          NoShieldReload: True  
+          CountMinMax: [ 2, 3 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [300, 400] 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG3
+          Faction: Polaris
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [PolarisMiningMainRG]
+          SpawnPOINearRange: [350, 500]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG1
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FactoryPolarisRG2
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: GhystAuxT1RG
+          Faction: Zirax
+          NoShieldReload: True  
+          CountMinMax: [ 2, 4 ]
+          IsScalingCount: True 
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnResource: ["SiliconResource:0-1"]
+          ResourceDistance: 400
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Civilians
+
+        - GroupName: CivilSettlementRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 0, 2 ]
+          Properties:
+            - Key: RegenAfter
+              Value: 720 
+
+        - GroupName: MineT2PolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [100, 200] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT1PolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [200, 600] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineGraphitePolarisRG 
+          Territory: False
+          Faction: Colonists
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINearRange: [500, 1000] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+# Tungsten
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Warlord]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: Eden_HarvestTungsten
+          Faction: None
+          FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
+          NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SI
+              Value: Off
+            - Key: RegenAfter
+              Value: 4320
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              # - Name: RipperDog  # No atmosphere. But Zirax wear at least masks.
+                # Amount: 400
+                # Extra: 3
+
+              - Name: ZiraxRocketPatrol
+                Amount: 100
+                Extra: 3
+                
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 2000
+    
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 2500
+          Radius: 1500
+          
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: 5000
+          Radius: 2000
+          

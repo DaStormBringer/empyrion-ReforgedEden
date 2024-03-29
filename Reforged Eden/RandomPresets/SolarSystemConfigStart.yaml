@@ -1,0 +1,1606 @@
+---
+GenerationParams:
+  MapScale: 1.0          # how much the sectors are spread out  
+  # float [0..1] solar systems are more like a cookie than a ball. the lower the value, the flatter the system
+  SolarSystemSqueezeMinMax: [0.005, 0.010]
+  # float [0..1] probability a warp connection will be one-way
+  OneWayWarpProb: 0
+  UniqueStarterPlanet: false
+  
+  #==== 1st Step of SolarSystem Generation: setting amount and playfield types  for System Content  ===
+
+  PlanetCountProbs:
+# ======================================================================================================================================================== Planets
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Gas Giants
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - Gas Planets
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 2 - Outer Gas Planets
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Stars
+     # - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - M type Red Dwarf
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Rocky Planets
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - Hot
+     - '0 : 0.0,   1 : 0.0,  2 : 1.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 2 - Desert
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 3 - Dead
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 4 - Temperate
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 5 - Ocean
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 6 - Alien
+     - '0 : 0.0,   1 : 0.0,  2 : 1.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 7 - Snow
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 8 - Barren
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 9 - Exotic
+
+# ======================================================================================================================================================== Sector POIs
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- UCH and Admin POIs
+     - '0 : 0.8,   1 : 0.2,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - UCH Research Vessel
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Asteroid Fields
+     - '0 : 0.0,   1 : 0.5,  2 : 0.5,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - Asteroid Fields
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Stations
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - Polaris Trade Station
+     - '0 : 0.0,   1 : 1.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 2 - Lost Station
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Anomalies
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- Events
+     - '0 : 1.0,   1 : 0.0,  2 : 0.0,  3 : 0.0,  4 : 0.0,  5 : 0.0,  6 : 0.0,  7 : 0.0,  8 : 0.0'                 # 1 - Random Events
+
+
+
+  PlanetLists:
+# ======================================================================================================================================================== Planets
+
+# -------------------------------------------------------------------------------------------------------------- Gas Giants
+    - 'Jupiter:0.6, Saturn: 0.4'                                                                                  # 1 Gas
+    - 'JupiterOuter:0.45, SaturnOuter:0.35, NeptuneOuter:0.2'                                                     # 2 Gas Outer
+# -------------------------------------------------------------------------------------------------------------- Stars
+    # - 'StarM:1'                                                                                                   # 1 M type Red Dwarf
+# -------------------------------------------------------------------------------------------------------------- Rocky Planets
+    - 'Lava:0.6, Lava2:0.35, Midnight:0.05'                                                                       # 1 Hot
+    - 'Desert:0.6, Arid:0.4, DesertOasis:0.0, DesertBlack:0.0'                                                    # 2 Desert
+    - 'Dead:1'                                                                                                    # 3 Dead
+    - 'Temperate:0.8, Tropical:0.0, Swamp:0.2, Irradiated:0.0, Jungle:0.0'                                        # 4 Temperate
+    - 'Ocean:1'                                                                                                   # 5 Ocean
+    - 'Alien:1'                                                                                                   # 6 Alien
+    - 'Snow:1.0, Ice:0.0'                                                                                         # 7 Snow
+    - 'Barren:0.8, BarrenHot:0.2'                                                                                 # 8 Barren
+    - 'Plasma:0.0, AlienLegacy:0.0, ProgenitorCore:0.0, IceGiant: 1.0'                                            # 9 Exotic
+# ======================================================================================================================================================== Sector POIs
+# -------------------------------------------------------------------------------------------------------------- UCH and Admin
+    - 'UCHResearchShip:1.0'                                                                                       # 1 UCH Research Vessel
+# -------------------------------------------------------------------------------------------------------------- Asteroid Fields
+    - 'AsteroidField:0.4, AsteroidFieldPirate:0.2, AsteroidFieldPolaris:0.2, AsteroidFieldZirax:0.2'              # 1 Asteroid Fields
+# -------------------------------------------------------------------------------------------------------------- Stations
+    - 'TradeStationPolaris:1.0'                                                                                   # 1 Polaris Trade Station
+    - 'LostStation:1.0'                                                                                           # 2 Lost Station
+
+# -------------------------------------------------------------------------------------------------------------- Anomalies
+# -------------------------------------------------------------------------------------------------------------- Events
+    - 'PentaxidMining:0.5, SyndicateCasino:0.5, XenuanCarrier:0.0'                                                # 1 Random Events
+
+
+
+# ======================================================================================================================================================== POIs
+  POICountProbs: '0 : 0.40,  1 : 0.20,  2 : 0.20,  3 : 0.05,  4 : 0.05,  5 : 0.05,  6 : 0.05,  7 : 0.00,  8: 0.00'
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- POI counts
+  POIs: 'SpaceEmpty: 1.00, POI_Combat: 0.00, POI_Exploration: 0.00, POI_Mining: 0.00'
+# --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# for 3D map purposes, limit climate (optional for non-terrain types) to one of Lava, Temperate, Snow, Desert, Alien, or Barren
+# =================================================================================================================================================================================
+#                                                                                                                Definitions for Planets
+# =================================================================================================================================================================================
+  PlanetTypes:      # come up with general categories of planet (playfield) types for distance purposes
+  
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Starter Planets
+# ======================================================================================================================================================================================================
+
+# ============================================================================================================= EdenStarterBeginner (Easy)
+      # - Name: EdenStarterBeginner
+        # Color: [0.0, 0.8, 0.8]
+        # Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            # - HabitableTemperate
+        # PlayerStart: true
+        # # Neighbor 'Name, Probability [0..1]' 
+        # # Neighbor: 
+          # # - EdenStarterTemperate, 1
+          # # - EdenStarterTemperate2, 1
+          # # - Arid, 1
+          # # - Snow, 1
+          # # - Barren, 1
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterBeginner
+
+# # -------------------------------------------------------------------------- EdenStarterTemperate
+      # - Name: EdenStarterTemperate
+        # Color: [0.04, 0.8, 0.4]
+        # Placement:
+            # - HabitableTemperate
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterTemperate
+
+# # -------------------------------------------------------------------------- EdenStarterTemperate2
+      # - Name: EdenStarterTemperate2
+        # Color: [0.04, 0.8, 0.4]
+        # Placement:
+            # - HabitableTemperate
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterTemperate2
+
+
+# # ============================================================================================================= EdenStarterArid (Medium)
+      # - Name: EdenStarterArid
+        # Color: [0.6, 0.3, 0.0]
+        # Placement:
+            # - HabitableHot
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Arid
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterArid
+
+# # -------------------------------------------------------------------------- EdenStarterSwamp
+      # - Name: EdenStarterSwamp
+        # Color: [0.1, 0.5, 0.1]
+        # Placement:
+            # - HabitableHot
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterSwamp
+
+# # -------------------------------------------------------------------------- EdenStarterTemperateOdd
+      # - Name: EdenStarterTemperateOdd
+        # Color: [0.5, 0.3, 0.0]
+        # Placement:
+            # - HabitableTemperate
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterEasy]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterTemperateOdd
+
+
+
+# # ============================================================================================================= EdenStarterJungle (Hard)
+      # - Name: EdenStarterJungle
+        # Color: [0.04, 0.3, 0.0]
+        # Placement:
+            # - HabitableHot
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterHard]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [6,6]
+        # Playfields:
+            # - EdenStarterJungle
+
+# # -------------------------------------------------------------------------- EdenStarterOcean
+      # - Name: EdenStarterOcean
+        # Color: [0.1, 0.1, 0.8]
+        # Placement:
+            # - HabitableHot
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterHard]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter, EdenMoonStarterDesert]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterOcean
+
+# # -------------------------------------------------------------------------- EdenStarterSnowDwarf
+      # - Name: EdenStarterSnowDwarf
+        # Color: [0.8, 0.8, 0.8]
+        # Placement:
+            # - OuterSystem
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterSnow]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter, EdenMoonStarterIce]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterSnowDwarf
+
+# # -------------------------------------------------------------------------- EdenStarterAlien
+      # - Name: EdenStarterAlien
+        # Color: [0.0, 1, 0.0]
+        # Placement:
+            # - HabitableCold
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterHard]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterAlien
+
+
+# # ============================================================================================================= EdenStarterDead (Very Hard)
+      # - Name: EdenStarterDead
+        # Color: [0.5, 0.1, 0.3]
+        # Placement:
+            # - HabitableCold
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterHard]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [6,6]
+        # Playfields:
+            # - EdenStarterDead
+
+# # -------------------------------------------------------------------------- EdenStarterDead2
+      # - Name: EdenStarterDead2
+        # Color: [0.5, 0.3, 0.5]
+        # Placement:
+            # - HabitableHot
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterHard]
+        # MoonProb: '2:1'
+        # MoonType: [MoonStarter]
+        # #MoonCount: [5,8]
+        # Climate: Temperate
+        # PlayfieldLevel: [1,1]
+        # Playfields:
+            # - EdenStarterDead2
+
+# # ============================================================================================================= Rogue Planets
+# # -------------------------------------------------------------------------- EdenStarterRogue
+      # - Name: EdenStarterRogue
+        # Color: [0.3, 0.0, 0.0]
+        # Placement:
+            # - OuterSystem
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterRogue]
+        # MoonProb: '3:1'
+        # MoonType: [EdenMoonStarterRogue]
+        # #MoonCount: [5,8]
+        # Climate: Barren
+        # PlayfieldLevel: [6,6]
+        # Playfields:
+            # - EdenStarterRogue
+
+# # ============================================================================================================= EdenStarterRogueDark (Ultra)
+      # - Name: EdenStarterRogueDark
+        # Color: [0.2, 0.0, 0.2]
+        # Placement:
+            # - OuterSystem
+        # PlayerStart: true
+        # OrbitType: [EdenSpaceStarterRogue]
+        # MoonProb: '3:1'
+        # MoonType: [EdenMoonStarterRogueDark]
+        # #MoonCount: [5,8]
+        # Climate: Barren
+        # PlayfieldLevel: [8,8]
+        # Playfields:
+            # - EdenStarterRogueDark
+
+
+
+
+
+# ======================================================================================================================================================================================================== * * * Planets
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Gas Giants
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Jupiter
+      - Name: Jupiter
+        Color: [0.22,0.54,0.69,  0.50,0.33,0.25,  0.68,0.56,0.26,  0.45,0.20,0.09,  0.38,0.27,0.40]
+        # Distance: [100, 300]
+        Icon: GasGiant
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+        MoonProb: '4:0.45, 5:0.35, 6:0.2'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [EdenMoonBarren, EdenMoonBarren, MoonTemperate, MoonLava, EdenMoonCrystal, MoonNascent]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [9,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [JupiterBlue, JupiterBrown, JupiterYellow, JupiterBrown2, JupiterPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+
+# -------------------------------------------------------------------------- Saturn
+      - Name: Saturn
+        Color: [0.22,0.54,0.69,  0.33,0.20,0.14,  0.68,0.56,0.26,  0.25,0.53,0.05,  0.38,0.27,0.40]
+        Icon: GasGiantRing
+        # Distance: [100, 300]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+        MoonProb: '3:0.4, 4:0.3, 5:0.3'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [EdenMoonBarren, EdenMoonBarren, MoonTemperate, EdenMoonCrystal, MoonNascent]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [8,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [SaturnBlue, SaturnBrown, SaturnYellow, SaturnGreen, SaturnPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+
+# -------------------------------------------------------------------------- JupiterOuter
+      - Name: JupiterOuter
+        Color: [0.22,0.54,0.69,  0.50,0.33,0.25,  0.68,0.56,0.26,  0.45,0.20,0.09,  0.38,0.27,0.40]
+        # Distance: [100, 300]
+        Icon: GasGiant
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '4:0.3, 5:0.3, 6:0.3, 7:0.01, 8:0.01, 9:0.01, 10:0.01, 11:0.01, 12:0.01, 13:0.01, 14:0.01, 15:0.01, 16:0.01'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [EdenMoonBarrenGasOuter, EdenMoonBarren, MoonIceOuter, EdenMoonMethane, EdenMoonVolcanic, MoonLava]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [9,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [JupiterBlue, JupiterBrown, JupiterYellow, JupiterBrown2, JupiterPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+
+# -------------------------------------------------------------------------- SaturnOuter
+      - Name: SaturnOuter
+        Color: [0.22,0.54,0.69,  0.33,0.20,0.14,  0.68,0.56,0.26,  0.25,0.53,0.05,  0.38,0.27,0.40]
+        Icon: GasGiantRing
+        # Distance: [100, 300]
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '3:0.2, 4:0.3, 5:0.4, 6:0.02, 7:0.02, 8:0.02, 9:0.01, 10:0.01, 11:0.01, 12:0.01'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [EdenMoonBarrenGasOuter, MoonIceOuter, MoonIceOuter, EdenMoonMethane, EdenMoonVolcanic, MoonLava]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [8,11]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        ForcePlanetType: [SaturnBlue, SaturnBrown, SaturnYellow, SaturnGreen, SaturnPurple]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - GasGiant
+
+# -------------------------------------------------------------------------- NeptuneOuter
+      - Name: NeptuneOuter
+        Color: [0.42,0.54,0.31,  0.36,0.30,0.56]
+        Icon: GasGiant
+        Placement:                  # Defines where the playfield appears in the Solar system, related to the Galaxy.ecf Sun parameters: HabitableTemperate, HabitableHot, HabitableCold, InnerSystem, OuterSystem
+            - OuterSystem
+        MoonProb: '1:0.3, 2:0.5, 3:0.2'    # NEW definition of Moon Prob PLUS Count; Gauss. >> can be used for all other definitions in that file!!
+        MoonType: [MoonIceOuter, EdenMoonMethane, EdenMoonVolcanic, EdenMoonCrystal]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [8,10]
+        ForcePlanetType: [NeptuneGreen, NeptunePurple]
+        HasOrbit: false
+        Playfields:
+            - GasGiant
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Stars
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- StarK
+      - Name: StarM
+        Color: [1,0.25,0.0]
+        # Distance: [100, 300]
+        Icon: Sun
+        Placement:
+            - InnerSystem
+        MoonProb: '0:1'
+        MoonType: [EdenMoonBarren, EdenMoonBarren, MoonLava]   
+        # Climate: Gas               # REQUIRED? > not required anymore
+        # PlayfieldLevel: [1,10]     # REQUIRED? > sets default value if not set
+        ForceSizeClass: [9,9]       # this is important for a gasgiant! if this is specified, the moons will not be put in the same sector as the gas giant (as the gas giant fills the whole sector)
+        # ForcePlanetType: [M]
+        HasOrbit: false              # also a gasgiant may never have an orbit!
+        Playfields:
+            - EdenSunRedDwarf
+            # - SunRandom
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Hot Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Lava
+      - Name: Lava 
+        Color: [0.75, 0.09, 0.05]
+        Placement:
+            - InnerSystem
+        OrbitType: [DefaultOrbit]
+        MoonProb: '0:0.5, 1:0.3, 2:0.1, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren, EdenMoonToxic, EdenMoonBarrenHot]   
+        Climate: Lava
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - LavaNascent, 0.6
+            - Lava, 0.4
+
+# -------------------------------------------------------------------------- Lava2
+      - Name: Lava2
+        Color: [0.57, 0, 0]
+        Placement:
+            - InnerSystem
+        OrbitType: [DefaultOrbit]
+        MoonProb: '0:0.5, 1:0.3, 2:0.1, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren, EdenMoonToxic, EdenMoonCrystalInner2]   
+        Climate: Lava
+        PlayfieldLevel: [7,10]
+        Playfields:
+            - EdenLavaCrusted, 0.6
+            - EdenHell, 0.4
+
+# -------------------------------------------------------------------------- Midnight
+      - Name: Midnight
+        Color: [0.25, 0, 0]
+        Placement:
+            - InnerSystem
+        OrbitType: [DefaultOrbit]
+        MoonProb: '2:0.4, 3:0.6'
+        MoonType: [EdenMoonCrystalInner, EdenMoonCrystalInner2, MoonLava, EdenMoonBarrenHot]   
+        Climate: Barren
+        PlayfieldLevel: [9,10]
+        Playfields:
+            - EdenMidnight
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Desert Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Desert
+      - Name: Desert
+        Color: [0.50, 0.32, 0.04]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+        MoonProb: '0:0.5, 1:0.2, 2:0.2, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren, MoonLava]   
+        OrbitType: [DefaultOrbit]      
+        Climate: Desert
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - Desert, 0.25
+            # - EdenDesertPummeled, 0.25
+            # - EdenDesertRock, 0.25
+            # - EdenDesertStorm, 0.25
+            # - EdenDesertKharak, 0.25
+            # - EdenDesertWhite, 0.25
+
+# -------------------------------------------------------------------------- Desert
+      - Name: DesertOasis
+        Color: [0.50, 0.32, 0.04]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+        MoonProb: '0:0.3, 1:0.3, 2:0.4'
+        MoonType: [MoonNascent, EdenMoonBarren, EdenMoonCrystal]   
+        OrbitType: [DefaultOrbit]      
+        Climate: Desert
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenDesertOasis
+
+# -------------------------------------------------------------------------- DesertBlack
+      - Name: DesertBlack 
+        Color: [0.4, 0.16, 0]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+        MoonProb: '0:0.3, 1:0.3, 2:0.3, 3:0.1'
+        MoonType: [EdenMoonToxic, EdenMoonBarren, MoonLava, EdenMoonCrystalInner]   
+        OrbitType: [DefaultOrbit]
+        Climate: Desert
+        PlayfieldLevel: [6,8]
+        Playfields:
+            - EdenDesertBlack
+
+# -------------------------------------------------------------------------- Arid
+      - Name: Arid 
+        Color: [0.50, 0.47, 0.04]
+        Placement:
+            - HabitableHot
+        MoonProb: '0:0.5, 1:0.2, 2:0.2, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren]
+        OrbitType: [DefaultOrbit]
+        Climate: Arid
+        PlayfieldLevel: [4,8]
+        Playfields:
+            - Arid, 0.6
+            # - EdenAridMesa, 0.4
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Dead Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Dead
+      - Name: Dead 
+        Color: [0.35, 0, 0.35]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:0.3, 1:0.35, 2:0.25, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren, EdenMoonAlien, EdenMoonCrystal]
+        OrbitType: [DefaultOrbit]
+        Climate: Barren
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - EdenDead, 0.3
+            # - EdenDead2, 0.3
+            # - EdenDead3, 0.3
+            # - EdenDead4, 0.3
+            # - EdenDead5, 0.3
+            # - EdenDead6, 0.3
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Temperate Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Temperate
+      - Name: Temperate
+        Color: [0.04, 0.5, 0.1]
+        Placement:
+            - HabitableTemperate
+        MoonProb: '0:0.5, 1:0.3, 2:0.1, 3:0.1'
+        MoonType: [EdenMoonBarren]
+        OrbitType: [DefaultOrbit, OrbitTradeCivilian]
+        Climate: Temperate
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - Temperate, 0.35
+            # - EdenTemperateBrooding, 0.35
+            # - EdenTemperateStrange, 0.35
+            # - EdenTemperateRainforest, 0.35
+
+# -------------------------------------------------------------------------- Tropical
+      - Name: Tropical
+        Color: [0.04, 0.5, 0.3]
+        Placement:
+            - HabitableHot
+        MoonProb: '0:0.3, 1:0.3, 2:0.3, 3:0.1'
+        MoonType: [EdenMoonBarren, EdenMoonCrystal, MoonTemperate]
+        OrbitType: [DefaultOrbit, OrbitTradeCivilian]
+        Climate: Temperate
+        PlayfieldLevel: [2,4]
+        Playfields:
+            - EdenTropical, 0.5
+            - EdenTropical2, 0.5
+
+# -------------------------------------------------------------------------- Swamp
+      - Name: Swamp 
+        Color: [0, 0.35, 0.35]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+        MoonProb: '0:0.6, 1:0.4'
+        MoonType: [EdenMoonBarren]
+        OrbitType: [DefaultOrbit]
+        Climate: Temperate
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - TemperateSwamp, 0.6
+            # - EdenSwampMire, 0.4
+
+# -------------------------------------------------------------------------- Jungle
+      - Name: Jungle 
+        Color: [0, 0.35, 0]
+        Placement:
+            - HabitableHot
+        MoonProb: '0:0.6, 1:0.4'
+        MoonType: [EdenMoonBarren]
+        OrbitType: [DefaultOrbit]
+        Climate: Temperate
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - EdenJungle
+
+# -------------------------------------------------------------------------- Irradiated
+      - Name: Irradiated 
+        Color: [0, 0.7, 0.2]
+        Placement:
+            - HabitableCold
+        MoonProb: '0:0.3, 1:0.35, 2:0.25, 3:0.1'
+        MoonType: [MoonNascent, EdenMoonBarren, EdenMoonAlien, EdenMoonCrystal]
+        OrbitType: [DefaultOrbit]
+        Climate: Temperate
+        PlayfieldLevel: [4,6]
+        Playfields:
+            - EdenIrradiated
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Ocean Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Ocean
+      - Name: Ocean
+        Color: [0, 0.2, 0.8]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:0.5, 1:0.2, 2:0.2, 3:0.1'
+        MoonType: [EdenMoonBarren, EdenMoonCrystal, MoonTemperate]
+        OrbitType: [DefaultOrbit, OrbitTradeCivilian]
+        Climate: Temperate
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - Ocean, 0.6
+            - EdenOcean2, 0.5
+            - EdenWater, 0.5
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Alien Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Alien
+      - Name: Alien
+        Color: [0.04, 0.75, 0.74]
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:0.6, 3:0.2, 4:0.2'  
+        MoonType: [EdenMoonEerie, EdenMoonAlien, EdenMoonCrystal]
+        OrbitType: [DefaultOrbit]
+        Climate: Alien
+        PlayfieldLevel: [7,10]
+        Playfields:
+            - Alien
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Snow Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Snow
+      - Name: Snow
+        Color: [0.85, 0.85, 0.85]
+        Placement:
+            - HabitableCold 
+        MoonProb: '0:0.5, 1:0.4, 2:0.05, 3:0.05'
+        MoonType: [MoonIceOuter, EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Snow
+        PlayfieldLevel: [4,10]
+        Playfields:
+            - Snow, 0.5
+            # - EdenFrozenInferno, 0.5
+
+# -------------------------------------------------------------------------- Ice
+      - Name: Ice
+        Color: [0.85, 1, 1]
+        Placement:
+            - OuterSystem 
+        MoonProb: '0:0.5, 1:0.4, 2:0.05, 3:0.05'
+        MoonType: [MoonIceOuter, EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Snow
+        PlayfieldLevel: [6,8]
+        Playfields:
+            - EdenIce, 0.6
+            - EdenIce2, 0.4
+            - EdenIce3, 0.4
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Barren Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Barren
+      - Name: Barren 
+        Color: [0.49, 0.49, 0.49]
+        Placement:
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [MoonIceOuter, EdenMoonBarren]
+        OrbitType: [DefaultOrbit]
+        Climate: Barren  
+        PlayfieldLevel: [5,10]
+        Playfields:
+            - BarrenMetal, 0.6
+            - Barren, 0.4
+            # - EdenBarrenElder, 0.4
+
+# -------------------------------------------------------------------------- BarrenHot
+      - Name: BarrenHot
+        Color: [0.8, 0.7, 0.1]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+        MoonProb: '0:0.7, 1:0.15, 2:0.1, 3:0.05'
+        MoonType: [EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Barren  
+        PlayfieldLevel: [5,8]
+        Playfields:
+            - EdenBarrenHot, 1
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Exotic Planets
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- Plasma
+      - Name: Plasma 
+        Color: [0, 0.8, 1]
+        Placement:
+            - OuterSystem
+        MoonProb: '2:0.2, 3:0.3, 4:0.3, 5:0.2'
+        MoonType: [MoonIceOuter, EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Lava  
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenPlasma, 0.5
+            - EdenPlasma2, 0.5
+
+# -------------------------------------------------------------------------- AlienLegacy
+      - Name: AlienLegacy 
+        Color: [0.04, 0.75, 0.74]
+        Placement:
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:0.2, 1:0.3, 2:0.3, 3:0.2'
+        MoonType: [EdenMoonAlien, EdenMoonEerie, MoonTemperate]
+        OrbitType: [DefaultOrbit]
+        Climate: Barren
+        PlayfieldLevel: [7,10]
+        Playfields:
+            - AlienLegacy, 0.5
+
+# -------------------------------------------------------------------------- ProgenitorCore
+      - Name: ProgenitorCore 
+        Color: [0, 1, 0.7]
+        Placement:
+            - InnerSystem
+        MoonProb: '0:1'
+        MoonType: [MoonIceOuter, EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Lava  
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenProgenitorCore
+
+# -------------------------------------------------------------------------- IceGiant
+      - Name: IceGiant
+        Color: [0, 0.2, 1]
+        Placement:
+            - OuterSystem 
+        MoonProb: '0:0.5, 1:0.4, 2:0.05, 3:0.05'
+        MoonType: [MoonIceOuter, EdenMoonBarren, MoonLava]
+        OrbitType: [DefaultOrbit]
+        Climate: Snow
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenIceGiant
+
+
+
+# ======================================================================================================================================================================================================== * * * Sector POIs
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= UCH and Admin POIs
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- UCHResearchShip
+      - Name: UCHResearchShip
+        Faction: [None]
+        Icon: Triangle
+        Color: [0, 1, 1]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        Climate: Barren
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - EdenSpaceG_UCHResearchShip
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroid Fields
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- EdenSpaceAsteroid
+      - Name: AsteroidField
+        Color: [0.7, 0.7, 0.7]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceG_Asteroid
+
+# -------------------------------------------------------------------------- EdenSpaceAsteroidPirate
+      - Name: AsteroidFieldPirate
+        Faction: [Pirates, None]
+        Color: [1, 1, 0]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceG_AsteroidPirate
+
+# -------------------------------------------------------------------------- EdenSpaceAsteroidPolaris
+      - Name: AsteroidFieldPolaris
+        Faction: [Polaris, None]
+        Color: [0.7, 0.5, 0.0]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceG_AsteroidPolaris
+
+# -------------------------------------------------------------------------- EdenSpaceAsteroidPolaris
+      - Name: SectorPolarisMining
+        Faction: [Polaris, None]
+        Color: [0.7, 0.5, 0.0]
+        Icon: AsteroidField
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [5,8]
+        Playfields:
+            - EdenSpaceG_AsteroidPolarisMining
+
+# -------------------------------------------------------------------------- EdenSpaceAsteroidZirax
+      - Name: AsteroidFieldZirax
+        Faction: [Zirax, None]
+        Color: [1, 0, 0]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceG_AsteroidZirax
+
+# -------------------------------------------------------------------------- AsteroidFieldRogue
+      - Name: AsteroidFieldRogue
+        Color: [1, 0.25, 0]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [15,20]
+        Playfields:
+            - EdenSpaceR_AsteroidRogue
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Stations
+# ======================================================================================================================================================================================================
+
+# Polaris Trade Stations
+# -------------------------------------------------------------------------- TradeStationPolaris
+      - Name: TradeStationPolaris
+        Faction: [Polaris, Trader, None]
+        Color: [0.0, 0.0, 1]
+        Icon: Station
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,4]
+        Playfields:
+            - EdenSpaceG_PolTradeStation1, 0.5
+            - EdenSpaceG_PolTradeStation2, 0.5
+
+# Mysterious Objects for Object 82
+# -------------------------------------------------------------------------- EdenSpacePOIObject82
+      - Name: Object82
+        Color: [1, 0.0, 1]
+        Icon: Station
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpacePOIObject82
+
+# -------------------------------------------------------------------------- EdenSpacePOIObject1
+      - Name: Object1
+        Color: [1, 0.0, 1]
+        Icon: Station
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpacePOIObject1
+
+# -------------------------------------------------------------------------- EdenSpacePOIObject13
+      - Name: Object13
+        Color: [1, 0.0, 1]
+        Icon: Station
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpacePOIObject13
+
+# -------------------------------------------------------------------------- EdenSpacePOIObject42
+      - Name: Object42
+        Color: [1, 0.0, 1]
+        Icon: Station
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpacePOIObject42
+
+# -------------------------------------------------------------------------- EdenSpacePOIObject276
+      - Name: Object276
+        Color: [1, 0.0, 1]
+        Icon: Station
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpacePOIObject276
+
+# -------------------------------------------------------------------------- LostStation
+      - Name: LostStation
+        Color: [0.4, 0.4, 0.4]
+        Icon: Staation
+        Placement:
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [3,5]
+        Playfields:
+            - EdenSpaceG_LostStation
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Anomalies
+# ======================================================================================================================================================================================================
+
+
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Events
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- PentaxidMining
+      - Name: PentaxidMining
+        Faction: [Zirax, None]
+        Color: [1, 0.0, 0.0]
+        Icon: Station
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenSpace_PentaxidMining
+
+# -------------------------------------------------------------------------- SyndicateCasino
+      - Name: SyndicateCasino
+        Faction: [Pirates, None]
+        Color: [0.56, 0.73, 0.56]
+        Icon: Station
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [5,8]
+        Playfields:
+            - EdenSpaceG_SyndicateCasino
+
+# -------------------------------------------------------------------------- XenuanCarrier
+      - Name: XenuanCarrier
+        Faction: [None]
+        Color: [1, 0.0, 1]
+        Icon: Triangle
+        Placement:
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [10,10]
+        Playfields:
+            - EdenSpaceA_XenuanCarrier
+
+
+# -------------------------------------------------------------------------- PirateBattlestation
+      - Name: PirateBattlestation
+        Faction: [Pirates, None]
+        Color: [1, 1, 0]
+        Icon: Station
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenSpaceG_PirateBattlestation
+
+
+# =================================================================================================================================================================================
+#                                                                                                                Moons
+# =================================================================================================================================================================================
+  MoonTypes:
+# -------------------------------------------------------------------------- Default Moon
+      - Name: DefaultMoon          # definition of default name 'DefaultMoon' is mandatory
+        Color: [0.5,0.5,0.5]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,4]
+        Playfields:
+            - Moon 
+# -------------------------------------------------------------------------- MoonStarterBarren
+      - Name: MoonStarter
+        Color: [0.5,0.5,0.5]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - MoonStarter
+# -------------------------------------------------------------------------- EdenMoonStarterDesert
+      - Name: EdenMoonStarterDesert
+        Color: [0.7,0.3,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - EdenMoonStarterDesert
+# -------------------------------------------------------------------------- EdenMoonStarterIce
+      - Name: EdenMoonStarterIce
+        Color: [0.16, 0.18, 0.51]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - EdenMoonStarterIce 
+# -------------------------------------------------------------------------- EdenMoonStarterRogue
+      - Name: EdenMoonStarterRogue
+        Color: [0.7,0,0]
+        Distance: [6000, 9000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenMoonStarterRogue, 0.6
+            - EdenMoonStarterRogue2, 0.4
+# -------------------------------------------------------------------------- EdenMoonStarterRogueX
+      - Name: EdenMoonStarterRogueDark
+        Color: [0.3,0,0]
+        Distance: [6000, 9000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenMoonStarterRogueDark, 0.6
+            - EdenMoonStarterRogueDark2, 0.4
+# -------------------------------------------------------------------------- EdenMoonBarren
+      - Name: EdenMoonBarren
+        Color: [0.5,0.5,0.5]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [2,4]
+        Playfields:
+            - EdenMoonBarren, 0.2
+            - EdenMoonBarrenSilicon, 0.2
+            - EdenMoonBarrenIron, 0.2
+            - EdenMoonBarrenCopper, 0.2
+            - EdenMoonBarrenCobalt, 0.2
+            - EdenMoonBarrenSath, 0.2
+# -------------------------------------------------------------------------- EdenMoonBarrenGasOuter
+      - Name: EdenMoonBarrenGasOuter
+        Color: [0.5,0.5,0.5]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [2,4]
+        Playfields:
+            - EdenMoonBarrenGas, 0.2
+            - EdenMoonBarren, 0.2
+            - EdenMoonBarrenSilicon, 0.2
+            - EdenMoonBarrenIron, 0.2
+            - EdenMoonBarrenCopper, 0.2
+            - EdenMoonBarrenCobalt, 0.2
+            - EdenMoonBarrenSath, 0.2
+# -------------------------------------------------------------------------- EdenMoonBarrenHot
+      - Name: EdenMoonBarrenHot
+        Color: [0.3,0.5,0.3]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [5,7]
+        Playfields:
+            - EdenMoonBarrenHot
+# -------------------------------------------------------------------------- MoonIce
+      - Name: MoonIce
+        Color: [0.16, 0.18, 0.51]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - MoonIce, 0.4
+            - MoonIce2, 0.4
+            - EdenMoonIce2, 0.5
+# -------------------------------------------------------------------------- MoonIceOuter
+      - Name: MoonIceOuter
+        Color: [0.16, 0.18, 0.51]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - MoonIce, 0.2
+            - MoonIce2, 0.2
+            - EdenMoonIce2, 0.2
+            - EdenMoonIceOuter, 0.3
+            - EdenMoonIceOuter2, 0.3
+            - EdenMoonIceOuter3, 0.3
+            - EdenMoonIceOuter4, 0.3
+# -------------------------------------------------------------------------- MoonLava
+      - Name: MoonLava
+        Color: [0.57, 0.09, 0.05]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - MoonLava, 0.5
+            - MoonLava2, 0.7
+            - EdenMoonLavaMetal, 0.1
+# -------------------------------------------------------------------------- MoonNascent
+      - Name: MoonNascent
+        Color: [0.3, 0.06, 0.04]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - MoonNascent
+# -------------------------------------------------------------------------- EdenMoonMethane
+      - Name: EdenMoonMethane
+        Color: [0.9,0.8,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenMoonMethane, 0.6
+            - EdenMoonMethane2, 0.4
+# -------------------------------------------------------------------------- EdenMoonVolcanic
+      - Name: EdenMoonVolcanic
+        Color: [0.9,0.3,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenMoonVolcanic, 0.5
+            - EdenMoonVolcanic2, 0.5
+# -------------------------------------------------------------------------- EdenMoonEerie
+      - Name: EdenMoonEerie
+        Color: [0.3,0.3,0.3]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenMoonEerie
+# -------------------------------------------------------------------------- EdenMoonAlien
+      - Name: EdenMoonAlien
+        Color: [0,0.9,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,9]
+        Playfields:
+            - EdenMoonAlien
+# -------------------------------------------------------------------------- EdenMoonAlien
+      - Name: EdenMoonToxic
+        Color: [0,0.9,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,9]
+        Playfields:
+            - EdenMoonToxic, 0.7
+            - EdenMoonSulfur, 0.3
+# -------------------------------------------------------------------------- EdenMoonCrystal
+      - Name: EdenMoonCrystal
+        Color: [0.5,0,1]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - EdenMoonCrystalProm, 0.5
+            - EdenMoonCrystalPent, 0.5
+# -------------------------------------------------------------------------- EdenMoonCrystalInner
+      - Name: EdenMoonCrystalInner
+        Color: [1,0,0]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenMoonCrystalZasc
+# -------------------------------------------------------------------------- EdenMoonCrystalInner2
+      - Name: EdenMoonCrystalInner2
+        Color: [0,1,1]
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenMoonCrystalErestrum
+# -------------------------------------------------------------------------- EdenMoonCrystalInner2
+      - Name: MoonTemperate
+        Color: [0,0.7,0.3]
+        Distance: [2500, 6000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [3,6]
+        Playfields:
+            - MoonForest, 0.5
+            - EdenMoonJungle, 0.5
+            - EdenMoonTemperate, 0.5
+            - EdenMoonTemperate2, 0.5
+
+# -------------------------------------------------------------------------- EdenMoonSun
+      - Name: EdenMoonSun
+        Color: [1,0.8,0]
+        Distance: [11000, 15000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [6,9]
+        Playfields:
+            - EdenSunNeutron, 0.5
+            - EdenSunWhiteDwarf, 0.5
+            - EdenSunRedDwarf, 0.5
+
+
+
+# =================================================================================================================================================================================
+#                                                                                                                POIs
+# =================================================================================================================================================================================
+  POITypes:
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Random Sector POIs
+# ======================================================================================================================================================================================================
+
+# -------------------------------------------------------------------------- SpaceEmpty
+      - Name: SpaceEmpty
+        Color: [0.3, 0.3, 0.3]
+        Icon: Triangle
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - SpaceEmpty
+
+# -------------------------------------------------------------------------- POI_Combat
+      - Name: POI_Combat
+        Icon: Triangle
+        Color: [1, 0, 0]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - SpaceEmpty
+
+# -------------------------------------------------------------------------- POI_Exploration
+      - Name: POI_Exploration
+        Icon: Triangle
+        Color: [0, 1, 0.7]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - SpaceEmpty
+
+# -------------------------------------------------------------------------- POI_Mining
+      - Name: POI_Mining
+        Icon: Triangle
+        Color: [0.62, 0.32, 0.17]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - SpaceEmpty
+
+# -------------------------------------------------------------------------- POI_AsteroidIce
+      - Name: POI_AsteroidIce
+        Icon: AsteroidField
+        Color: [0.5, 0.7, 1]
+        Placement:
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - EdenSpaceA_POI_Ice
+
+# -------------------------------------------------------------------------- POI_AsteroidIceRich
+      - Name: POI_AsteroidIceRich
+        Icon: AsteroidFieldRich
+        Color: [0.5, 0.7, 1]
+        Placement:
+            - OuterSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - EdenSpaceA_POI_IceRich
+
+
+
+# =================================================================================================================================================================================
+#                                                                                                                Stations
+# =================================================================================================================================================================================
+  StationTypes:
+      - Name: SpaceTradingStation
+        Color: [0.7, 0.5, 0.0]
+        Icon: Station
+        Distance: [200, 300]
+        Placement: 
+          - InnerSystem
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,10]
+        Playfields:
+            - SpaceTradingStation
+            
+
+# =================================================================================================================================================================================
+#                                                                                                                Orbits
+# =================================================================================================================================================================================
+  OrbitTypes:
+# -------------------------------------------------------------------------- DefaultOrbit
+      - Name: DefaultOrbit     # definition of default name 'DefaultOrbit' is mandatory
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,6]
+        Playfields:
+            - EdenSpaceG_Orbit
+# -------------------------------------------------------------------------- Civilian Trade Orbit
+      - Name: OrbitTradeCivilian
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,4]
+        Playfields:
+            - EdenSpaceG_OrbitTrade
+# -------------------------------------------------------------------------------------------------------------------- Starting Orbits
+# -------------------------------------------------------------------------- OrbitStarter
+      - Name: OrbitStarter
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - SpaceOrbitStarter 
+# -------------------------------------------------------------------------- EdenSpaceStarterEasy
+      - Name: EdenSpaceStarterEasy
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - EdenSpaceStarterEasy
+# -------------------------------------------------------------------------- EdenSpaceStarterHard
+      - Name: EdenSpaceStarterHard
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [2,4]
+        Playfields:
+            - EdenSpaceStarterHard
+# -------------------------------------------------------------------------- EdenSpaceStarterSnow
+      - Name: EdenSpaceStarterSnow
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - EdenSpaceStarterSnow 
+# -------------------------------------------------------------------------- EdenSpaceStarterRogue
+      - Name: EdenSpaceStarterRogue
+        Color: [0.3, 0.3, 0.3]
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [8,10]
+        Playfields:
+            - EdenSpaceStarterRogue

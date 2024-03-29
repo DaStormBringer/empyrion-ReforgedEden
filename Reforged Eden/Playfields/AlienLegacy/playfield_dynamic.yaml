@@ -1,0 +1,1109 @@
+---
+# # ==============================================================
+
+# ==============================================================
+
+ # Playfield is adjusted to SIZE 3 ONLY.
+ # DO NOT SSG GENERATE IN PLANET CLASS 2! - Thx!
+
+# ==============================================================
+
+
+PlanetSize:
+  SizeRange: [3]           # DO NOT SET TO SIZE 2!  => Index out of range / CoQ, due to fixed stamp beyond playfield edges
+  SizeProbs: [1]
+TemperatureMin: [-10, -10]
+TemperatureMax: [40,46]
+TemperatureNight: [10,20]
+PlanetAxis: [-10,10]
+HumidityMin: [0.16, 0.2]
+HumidityMax: [0.5, 0.6]
+Radiation: [3.3, 4.3]
+LandWaterRatio: [0.00, 0.00]
+SeaLevel: [0, 0]
+TerrainLevel: [110, 120]
+BaseLevel: [15, 15]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [0, 107]
+TemperatureGradientRange: [0.49, 0]
+TemperatureNoiseFac: 0.85
+HumidityHeightFac: [35, 350]
+HumidityNoiseFac: 0.57
+
+GravityMinMax: [-8, -7]
+AtmosphereDensityMinMax: [0.1, 0.1]   # (Will result in about 520m rocket turret range.)
+AtmosphereO2MinMax: [0.09, 0.12]
+AtmoBreathableProb: 1
+
+AtmosphereFogRange: [0.4, 0.4]
+GroundFogProb: 1
+GroundFogIntensityRange: [0.03, 0.03]
+GroundFogHeightRange: [60, 60]
+
+WaterProb: 0
+PvPProb: 0
+Water: [RockLava03]
+# Music: [DarkSoundscape3]   # (Instance version)
+Music: [WhatWalksBelow, Diaspora]    # (Default Random version)
+
+
+# ==============================================================
+
+
+# _Very_ rich in Silicon (See biome: AtomicWeaponry, GlassedTerrrain, BarrenRocks)
+# If that is not wanted, use for tex 3 in the primary 'TexID' no. 126 (Cliff) and as secondary 'ClusterID' no. 82 (Silicon) tex. (Only primary tex is able to drop ore.)
+# BarrenRocks has an alternative tex definition in the biome that doesn't contain Silicon. (See below)
+
+
+
+
+GroundShapes:
+
+BiomeStampTries: 900
+
+Biomes: 
+
+
+# ==============================================================
+  - Name: Pole
+    IgnoreForcedBiome: true
+    # Weather: PoleFog # (Do not use, too blue here.)
+    Weather: BmFogRadiationPurple
+    AmbientSound: ArcticLowPlains
+    Texture: [11,11, 0.3]
+
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.7, 0.6, 0.0]  
+
+
+# ==============================================================
+  - Name: GlassedTerrain
+    IgnoreForcedBiome: true
+    AmbientSound: BarrenOpenPlains
+    Texture: [0,3,0.8, 1,9,0.8, 0.0]   # CONTAINS SILICON ! (Tex 3, about 10% of surface, 1m thick.)
+    
+    SelectionCriteria: 
+    - Height < 2
+    Color: [0.2, 0.3, 0.8]
+    
+    Radiation: 3
+    Temperature: 60
+    
+    UndergroundLayers:
+               - [0, 10]
+               - [15, -1]
+               - [9, 1]
+
+
+    StampForcesBiomeType: OverlapAll
+    StampProb: 0.5
+
+
+    Stamps:
+    - Crystalline_Bubbles, 0.02
+    - Crystalline_Plates, 0.09
+    - AlnLegacy_Pillars_sp, 0.008, 5,9,9,6    # S,X,x,T  (Side, Extra/Crystal, Extra/Crystal, Top)
+    - Rift_Fissure, 0.003
+
+
+    Decorations: 
+               - [CrystalFormation, 0.0003, Free]
+
+               # RockResources
+               - [RockResourceSilicon, 0.0005, Plant]
+               - [RockResourceCobalt, 0.005, Plant]
+               - [RockResourceNeodymium, 0.001, Plant]
+               - [CrystalStraight, 0.008, BigPlant]
+               - [CrystalStraight, 0.02, Tree]
+
+
+
+
+# ==============================================================
+
+    # Special biome (Base)
+  - Name: Proximity
+    IgnoreForcedBiome: true
+    AmbientSound: LavaPlains
+    Weather: BmFogRadiationPurple
+
+    SpecialBiome:
+        IsStarterBiome: true        # = Will now count as 'START' for POI 'SpawnNear' rules
+        FixedPosition: [ 5150, 0 ]  # Size 3 planet position
+
+
+    Texture: [7,11,0.5, 9,9,1, 0.95]
+    Color: [1, 0.8, 0]
+
+    UndergroundLayers:
+               - [10, 0]
+               - [10, 3]
+               - [9, 20]
+               - [10, 3]
+               - [14, -1]
+               - [15, 1]
+
+
+    SelectionCriteria:
+       - false
+
+
+    LevelMod: 3
+    Radiation: 7
+    Temperature: 5
+
+
+    Stamps:
+     - AlnLegacy_Proximity, 1  # (Special biomes can only use ONE stamp of this list for the whole planet)
+
+
+    Decorations:
+    
+               - [DeadTree02a, 0.01, Tree]
+               - [DeadTree02b, 0.01, Tree]
+               - [DeadTree02c, 0.01, Tree]
+               - [AlienDeadTree, 0.001, Tree]
+
+               - [CrystalFormation, 0.00001, Free]
+               - [CrystalFormation, 0.08, Tree]
+
+               - [SkeletonMammothHead, 0.0008, Tree]
+               - [SkeletonMammothTorso, 0.001, Tree]
+               - [SkeletonDragonHead, 0.0008, Tree]
+               - [SkeletonDragonTorso, 0.001, Tree]
+               - [SkeletonDragonTorso, 0.04, Tree]
+               - [SkeletonWhaleFull, 0.0008, Tree]
+               - [SkeletonWhalePart, 0.001, Tree]
+ 
+               # Harvestables
+               - [DimpleDome, 0.01, Tree]
+               # RockResources
+               - [PromethiumStone, 0.08, Tree]
+               - [CrystalsPyramidOrange, 0.001, Free]
+
+    Grass: 
+               - Name: GrassBrown06
+                 Density: 0.005
+                 YScale: 0
+                 Preset: GrassDense
+
+
+# ==============================================================
+
+    # Special biome (Top)
+  - Name: Active
+    IgnoreForcedBiome: true
+    AmbientSound: Islands
+    Weather: BmFogRadiationPurple
+    Texture: [1, 1, 0.8, 9, 9, 0.5, 0.1]
+
+    SpecialBiome:
+        FixedPosition: [ 5150, 0 ]   # Fixed position, for evening on planet Size 3 planets.
+
+
+    SelectionCriteria:               # This removes the 'Mountains' biome from this stamp's peaks
+    - +Lat < 0.385
+    - -Long > 0.46
+    - -Long < 0.79
+
+
+    Color: [0.8, 0.1, 0.8]
+
+
+    UndergroundLayers:
+               - [9, -1]
+               - [15, 1]
+               - [14, 1]
+               - [15, 1]
+
+    LevelMod: 3
+    Radiation: 10
+    Temperature: 5
+
+
+    Stamps:
+     - AlnLegacy_Hub, 1  # (Special biomes can only use ONE stamp of this list for the whole planet)
+
+    Decorations:
+               - [CrystalFormation, 0.025, Free]
+               - [CrystalsPyramidOrange, 0.00025, Free]
+
+
+
+# ==============================================================
+  - Name: Mountains
+    IgnoreForcedBiome: true  
+    AmbientSound: ArcticLowPlains
+
+    Texture: [2,10,0.6, 5,4,0.5, 0.001]
+    UndergroundLayers:
+               - [14, -1]
+               - [15, 1]
+
+    SelectionCriteria: 
+    - Height > 140
+    - -Long < 0.31  # To prevent mountains biome overwriting the Proximity biome edges.
+
+    Color: [0.3, 0.3, 0.3]
+
+    Decorations:  
+               - [RockGrey01Large, 0.08]
+               - [RockGrey02Large, 0.02]
+               - [RealRock7, 0.0004, Free]
+               - [RealRock7, 0.0107, Tree]
+
+               # RockResources
+               - [RockResourceIron, 0.002, Free]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [CrystalStraight, 0.0001, Plant]
+
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.05
+                 YScale: 0.7
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.00015
+                 YScale: 0.7
+                 Preset: GrassDense
+
+
+ # ==============================================================
+  - Name: GeoBuster
+    IgnoreForcedBiome: true  
+    AmbientSound: LavaFog
+    Texture: [0,1,0.8, 0,1,0.1, 0.15]
+
+
+    SelectionCriteria: 
+       - false
+    Color: [0.9, 0.3, 0.2]
+
+    UndergroundLayers:
+               - [0, 20]
+               - [15, -1]
+               - [9, 1]
+
+    Temperature: 80
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 200
+    Stamps:
+
+    - CraterMeteorite_Large, 0.01
+    - CraterBattle_Geo1a, 0.6
+    - CraterBattle_Geo1b, 0.9
+
+
+    Decorations:
+               # RockResources
+               - [RockResourceNeodymium, 0.0005, Plant]
+               - [RockResourceZascosium, 0.001, Plant]
+
+
+# ==============================================================
+  - Name: LowMountains
+    AmbientSound: ArcticLowPlains
+    Texture: [8,7,0.35, 4,5,0.5, 0.002]
+
+    SelectionCriteria: 
+    - Height > 130
+    Color: [0.4, 0.4, 0.4]
+
+
+    UndergroundLayers:
+               - [5, 8]
+               - [14, -1]
+               - [15, 1]
+
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    StampTries: 90
+    Stamps:
+
+
+    - Mountain_2_LO, 0.5
+    - Mountain_3_LO, 0.3
+    
+    - MountainDesert_01_LO, 0.1
+    - MountainDesert_02_LO, 0.1
+    - MountainDesert_03_LO, 0.1
+
+    - AlnLegacy_FakeMtn_2_sp, 0.18, 5,4,9,6      # 'Legacy' crystal spikes     # S,d,X,T  (Splat texture channel distrubution on stamp shape: [S]ideTex, [d]ark SideRifts, E[x]tra(Crystal), [T]op)
+    - AlnLegacy_FakeMtn_sp, 0.2, 5,4,9,6         # 'Legacy' crystal spikes     # S,d,X,T 
+
+
+
+    Decorations:
+
+               - [RealRock10Dark, 0.0004, Free]
+               - [RealRock10Dark, 0.005, Tree]
+               - [RealRock4Dark, 0.0006, Free]
+               - [RealRock4Dark, 0.015, Tree]
+               - [RealRock1Dark, 0.0004, Free]
+               - [RealRock1Dark, 0.01, Tree]
+
+               - [ElderberryBushHarvested, 0.005, Tree]
+               - [BushGreen01, 0.005, Tree]
+               - [BushGreen02, 0.005, Tree]
+
+               # Harvestables
+               - [AlienPlantReef2, 0.01, Tree]
+               - [AlienPlantReef2, 0.001, Plant]
+               - [Snakeweed, 0.005, BigPlant]
+
+               # RockResources
+               - [RockResourceIron, 0.002, Free]
+               - [RockResourceCopper, 0.001, Free]
+               - [RockResourceSilicon, 0.001, Free]
+               - [RockResourceSathium, 0.001, Free]
+               - [CrystalStraight, 0.0001, Plant]
+
+
+    Grass: 
+               - Name: GrassType01Red
+                 Density: 1.8
+                 YScale: 1.3
+                 Preset: GrassDense
+               - Name: GrassType01Red
+                 Density: 0.02
+                 YScale: 3.8
+                 Preset: GrassDense
+           
+               - Name: GrassBrown06
+                 Density: 0.2
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.05
+                 YScale: 1.2
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.002
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.002
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: GrassType01Red
+                 Density: 0.0015
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: GrassType03Red
+                 Density: 0.012
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.0015
+                 YScale: 0.7
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.0005
+                 YScale: 0.9
+                 Preset: GrassDense
+
+
+# ==============================================================
+
+  - Name: Organized
+    AmbientSound: Mountains
+    Texture: [0,6,0.8, 9,9,0.5, -0.1]
+
+    SelectionCriteria: 
+       - false
+    Color: [0.6, 0.1, 0.6]
+
+    UndergroundLayers:
+               - [9, 15]     # 'Legacy' tex
+               - [15, 1]     # Lava tex
+               - [9, 5]
+               - [15, 2]
+               - [9, 10]
+               - [9, -1]     # ("Fill close to bottom")
+               - [15, 1]     # (Lowest layers)
+               - [9, 1]      # ("Bedrock")
+
+    LevelMod: 2
+    Temperature: 10
+    Radiation: 5
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 2
+    Stamps:
+    - AlnLegacy_Scar, 1
+
+
+
+    Decorations:
+               - [FantasyPlant1, 0.0005, Free]
+
+               - [CrystalFormation, 0.01, Free]
+               - [CrystalFormation, 0.01, BigPlant]
+               # RockResources:
+               - [RockResourceZascosium, 0.01, BigPlant]
+
+
+ # ==============================================================  
+  - Name: AtomicWeaponry
+    AmbientSound: BarrenOpenPlains
+
+    Texture: [3,2,0.8, 2,9,0.9, -0.6]   # ! CONTAINS SILICON RESOURCE (Tex 3)
+
+
+    SelectionCriteria: 
+       - false
+    Color: [0.8, 0.6, 0.6]
+
+
+
+    UndergroundLayers:       # Directly under the surface is a 1m thick, _white_ Silicon resource layer.
+               # - [10, 0]   # (Activate this, to turn the Silicon layer dark)
+               - [10, 6]
+               - [14, 1]
+               - [10, 1]
+               - [14, -1]
+               - [15, 1]
+
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    StampTries: 60
+    Stamps:
+    - CraterBattle_Atomic, 0.1
+
+    Temperature: 5
+    Radiation: 9
+
+    Decorations:  
+               - [RockGrey01Large, 0.004]
+               - [RockGrey02Large, 0.004]
+               
+               # Rock Resources:
+               - [CrystalFormation, 0.0015, Tree]
+               - [RockResourceSilicon, 0.0001, Free]
+               - [RockResourceCobalt, 0.001, Free]
+               - [RockResourceIron, 0.0002, Free]
+               - [CrystalStraight, 0.00015, Free]
+               - [CrystalsPyramidBlue, 0.0015, Plant]
+
+
+
+
+
+ # ==============================================================
+  - Name: Structure
+    AmbientSound: LavaPlains
+    Texture: [0, 9, 0.3]
+
+    Color: [0.4, 0.0, 0.4]
+
+    SelectionCriteria: 
+       - false
+
+    UndergroundLayers:
+               - [9, 17]
+               - [15, 1]
+               - [14, -1]
+               - [15, 1]
+
+    Temperature: 5
+    Radiation: 3
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 10
+    Stamps:
+
+    - AlnLegacy_Struct, 0.5
+    - AlnLegacy_Struct_2, 0.5
+    - AlnLegacy_Ziggurat_2_sp, 0.02, 0,9,9,9   # T,X,x,d  (Top, Extra/Crystal, Extra/Crystal, darkSide)
+    - AlnLegacy_Ziggurat, 0.6
+
+
+
+    Decorations:  
+               - [CrystalFormation, 0.00005, Plant]
+               # Rock Resources:
+               - [RockResourcePromethium, 0.001, Free]
+
+    Grass: 
+               - Name: GrassBlue03
+                 Density: 0.9
+                 Preset: GrassDense
+               - Name: Plant01Blue
+                 Density: 0.04
+                 Preset: GrassDense 
+
+
+# # ==============================================================
+  - Name: BarrenRocks
+    AmbientSound: BarrenFog
+    # Texture: [5,9,0.8, 0,4,0.6, -0.4]  # (Without silicon)
+    Texture: [5,9,0.8, 0,3,0.6, -0.4]    # Contains lots of SILICON RESOURCE (Tex 3)
+
+    SelectionCriteria: 
+    - Height < 33
+    Color: [0.1, 0.0, 0.5]
+
+
+    UndergroundLayers:
+               - [5, 0]
+               - [5, 8]
+               - [14, -1]
+               - [15, 1]
+
+    Radiation: 5
+    Temperature: 1
+    
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther
+    StampTries: 12
+    Stamps:
+    - CraterBattle_LaserScar, 0.05
+    - Rift_Fissure, 0.1
+
+
+    Decorations: 
+               - [RockGrey01Large, 0.003]
+               - [RockGrey02Large, 0.01, Tree]
+               # RockResources
+               - [RockResourceNeodymium, 0.01, Tree]
+               - [RockResourceCopper, 0.005, BigPlant]
+
+
+
+
+
+# ==============================================================
+  - Name: Forest
+    AmbientSound: LavaPlains
+    Texture: [6, 11,0.5, 5,5,0.5, -0.5]
+
+    SelectionCriteria:
+    - Height < 65
+    
+    - Humidity > 0.1
+    - Temperature > 10
+    Color: [0.4, 0.4, 0]
+
+    UndergroundLayers:
+               - [6, 0]
+               - [10, 8]
+               - [14, -1]
+               - [15, 1]
+
+
+    Decorations: 
+               - [RockGrey01Large, 0.05, Free]
+               - [RockGrey02Large, 0.003, Free]
+               - [RealRock5, 0.0015, Free]
+               - [RealRock7, 0.0015, Free]
+               - [RealRock10, 0.001, Free]
+
+               - [AlaskaCedarBare, 0.05, Tree]
+               - [AlienDeadTree, 0.03, Tree]
+               - [DeadTree02b, 0.07, Tree]
+               - [DeadTree01, 0.15, Tree]
+               - [ElderberryBushHarvested, 0.002, Tree]
+               - [LavaPlant1NoFruit, 0.01, Tree]
+               - [LeafPlant, 0.0005, BigPlant]
+
+               - [SkeletonWhalePart, 0.001]
+
+               # Harvestables
+               - [Cactus1, 0.002, Free]
+               - [ClusterShroom, 0.01, Bush]
+
+               # RockResources
+               - [PromethiumStone, 0.0005, BigPlant]
+               - [RockResourceCopper, 0.0005, BigPlant]
+               - [RockResourceIron, 0.002, Free]
+               - [RockResourceSathium, 0.001, BigPlant]
+               - [RockResourceNeodymium, 0.002, Free]
+               - [RockResourceSilicon, 0.001, Free]
+
+
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.18
+                 YScale: 0
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.08
+                 YScale: 1.6
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.009
+                 YScale: 0.8
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.006
+                 YScale: 0.4
+                 Preset: GrassDense
+               - Name: Plant01a
+                 Density: 0.004
+                 YScale: 0.6
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.00003
+                 YScale: 3
+                 Preset: GrassDense
+
+
+
+# ==============================================================
+  - Name: Plains
+    AmbientSound: LavaPlains
+    Texture: [6,7,0.5, 5,5,0.5, 0.5]
+
+    SelectionCriteria:
+    - Height < 105
+    - Humidity > 0.1
+    - Temperature > 10
+    Color: [0.8, 0.8, 0]
+
+    UndergroundLayers:
+               - [6, 0]
+               - [10, 8]
+               - [14, -1]
+               - [15, 1]
+
+
+    StampProb: 0.02
+    StampForcesBiomeType: OverlapOther
+    Stamps:
+
+
+               - Cliff_1_Eroded, 0.2
+               # - Cliff_2, 0.4
+               - MountainSharp_01, 0.2
+               - CliffPlate_01, 1
+
+
+    Decorations: 
+    
+               - [RockGrey01Large, 0.003]
+               - [RockGrey02Large, 0.003]
+               - [RealRock5, 0.002]
+               - [RealRock7, 0.002]
+
+               - [DeadTree02b, 0.005, Tree]
+               - [DeadTree02c, 0.05, Tree]
+               - [SnowTreeRed2, 0.001, Tree]
+               - [ElderberryBushHarvested, 0.003, Tree]
+
+               - [SkeletonWhalePart, 0.001]
+               - [CoralStone04-03, 0.005]
+               - [BulbShroomYoung, 0.002]
+               - [AlienWillow, 0.0001, Plant]
+               
+               # Harvestables
+               - [Cactus1, 0.004]
+               - [Snakeweed, 0.04, Tree]
+               - [BulbShroom, 0.002]
+               - [OpuntiaCactus, 0.002]
+
+               # RockResources
+               - [PromethiumStone, 0.0003, BigPlant]
+               - [CrystalsPyramidBlue, 0.00015, BigPlant]
+               - [RockResourceSathium, 0.0002, Free]
+               - [RockResourceSathium, 0.02, Tree]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceCopper, 0.05, Tree]
+
+
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.18
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.08
+                 YScale: 1.6
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.009
+                 Preset: GrassDense
+               - Name: Plant01Brown
+                 Density: 0.006
+                 YScale: 0.6
+                 Preset: GrassDense
+               - Name: Plant01a
+                 Density: 0.004
+                 YScale: 0.6
+                 Preset: GrassDense
+
+
+# ==============================================================
+  - Name: TacticalStrike
+    AmbientSound: BarrenFog
+    Texture: [6,6,0.5, 5,9,0.85, -0.3]
+
+
+    SelectionCriteria: 
+       - false
+    Color: [0.9, 0.3, 0.3]
+
+    UndergroundLayers:
+               - [6, 1]
+               - [10, 5]
+               - [14, -1]
+               - [15, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOff
+    StampTries: 5000
+    Stamps:
+
+     # Only low crater size diversity -> Standardized bomb yields
+    - CraterBattle_Bomblets, 0.1    # Sub stamp  (=gets _inserted_ into existing terrain curvature & can go 'down' and 'up'. See StampDatabase, last column. - Careful with overlapping these stamps!)
+    - CraterMoon_2, 0.1             # Sub stamp
+    - CraterBattle_Bomb, 0.25       # Sub stamp
+    - CraterBattle_Bombx3, 0.06     # Sub stamp
+    - CraterBattle_Bomb_2_sp, 0.03, 10,9,4,T  #Sub stamp. # S,b,d,T
+
+
+    Temperature: 5
+    Radiation: 3
+
+    Decorations:  
+               - [RockGrey01Large, 0.072]
+               - [RockGrey02Large, 0.035]
+               - [RockGrey01Large, 0.072, Bush]
+               - [RockGrey02Large, 0.03, Bush]
+
+               - [RealRock4Dark, 0.02]
+               - [RealRock10Dark, 0.01]
+               
+               # RockResources
+               - [RockResourceIron, 0.02]
+               - [RockResourceCobalt, 0.006, Free]
+               - [CrystalStraight, 0.0005, Free]
+               - [CrystalsPyramidBlue, 0.0005, Free]
+               - [CrystalsPyramidOrange, 0.00025, Free]
+
+    Grass:
+
+
+
+
+# ==============================================================
+
+   # Both Special biome and standard biome. 
+   # (Special biome is a guaranteed flat spawn place offer for story POIs.)
+  - Name: Remnant
+    AmbientSound: ArcticForest
+    Texture: [8, 5, 0.1]
+
+    SpecialBiome: #  Prevents other stamps from spawning too close nearby
+        FixedPosition: [ -4000, -2800 ]
+
+
+    SelectionCriteria:
+    - Temperature < 0.5
+    - Temperature > -2.5  #-2
+    - Height < 100
+    - Humidity < 0.35
+    - +Lat > 0.65
+
+    Color: [0.1, 0.9, 0.0] 
+
+
+    UndergroundLayers:
+               - [14, 2]
+               - [10, 1]
+               - [14, 1]
+               - [10, 1]
+               - [14, -1]
+               - [15, 1]
+
+
+    StampForcesBiome: true 
+    StampForcesBiomeType: OverlapOff
+    StampTries: 5
+    Stamps:
+    - StarterGroves_1, 1
+
+    Decorations:
+
+
+               - [AlienWillow, 0.20, Tree]
+               - [AlienPlant22, 0.08, Tree]
+               - [AlienPlant24, 0.1, Tree] 
+               - [ChineseBanyan, 0.2, Tree]
+               - [UmbrellaTree, 0.10, Tree]
+               - [BaldCypresFall, 0.03, Tree]
+               - [OmicronPalmGreen, 0.05, Tree]
+               - [AlienPalm, 0.05, Tree]
+               - [AlienBushRedFronds, 0.025, BigPlant]
+               - [RiverBirch, 0.02, BigPlant]
+               - [MushroomBigSky, 0.075, Bush]
+               - [ElderberryBushGreen, 0.01, BigPlant]
+               - [ElderberryBushRed, 0.01, BigPlant]
+               - [AlienPlant20, 0.015, Plant]
+               - [BushGreen01, 0.005, Plant]
+               - [BushGreen02, 0.005, Plant]
+               - [AlienPlant07, 0.001, Plant]  # was AlienPlant14. Harvestable now!
+               - [DeadTree02b, 0.004, Free]
+               - [CthulhuTree02, 0.001, Free]
+               - [OnionFlower, 0.01, Plant]
+               - [MushroomBellGreen01, 0.003, Free]
+
+                # Harvestables
+               - [AlienPlantReef2, 0.026, Bush]      # AlienPlasma ZR1
+               - [AlienPlantReef2, 0.001, Free]
+               - [AlienPlant07, 0.001, Plant]        # Plant protein
+               - [AlienPlant07, 0.01, Bush]
+               - [BulbShroom, 0.002, Free]           # Vegetables
+               - [MushroomTallGreen01, 0.01, Bush]   # Mushrooms
+
+                # RockResources
+               - [RockResourceCobalt, 0.020, Bush]
+               - [RockResourceCobalt, 0.02, Plant]
+               - [RockResourceErestrum, 0.023, Bush]
+               - [RockResourceNeodymium, 0.007, Bush]
+               - [CrystalStraight, 0.005, Plant]
+
+
+    Grass: 
+               - Name: GrassType01Red
+                 Density: 1.8
+                 YScale: 1.3
+                 Preset: GrassDense
+               - Name: GrassType01Red
+                 Density: 0.02
+                 YScale: 3.8
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.007
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.002
+                 YScale: 8
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.002
+                 YScale: 16
+                 Preset: GrassDense
+               - Name: Seaweed05
+                 Density: 0.004
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Plant01Red
+                 Density: 0.005
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Plant01Red
+                 Density: 0.01
+                 YScale: 1.5
+                 Preset: GrassDense
+
+
+
+
+# ==============================================================
+  - Name: FlowersEdge
+    AmbientSound: ArticHighPlains
+    Texture: [8,11,0.8, 10,5,0.8, -0.3]
+    
+
+    SelectionCriteria: 
+    - Temperature < 2
+    - Temperature > -4
+    - Height < 150
+    - Humidity < 0.36
+    - +Lat > 0.62 
+
+
+    Color: [0.05, 0.70, 0.0] 
+
+    UndergroundLayers:
+               - [14, 2]
+               - [10, 1]
+               - [14, 1]
+               - [10, 1]
+               - [14, -1]
+               - [15, 1]
+
+
+    Decorations: 
+               - [RockGrey01Large, 0.006]
+               - [RockGrey02Large, 0.006]
+
+               - [RealRock5, 0.002]
+               - [RealRock7, 0.002]
+
+               - [DeadTree02a, 0.01, Tree]
+               - [DeadTree02b, 0.01, Tree]
+
+               - [DeadTree02a, 0.01, BigPlant]
+               - [DeadTree02b, 0.1, BigPlant]
+               - [DeadTree02c, 0.01, BigPlant]
+               - [AlienDeadTree, 0.05, Tree]
+               
+               - [AlienPlant07, 0.001, Plant]  # was AlienPlant14. Harvestable now!
+               - [MushroomTallGreen01, 0.003, Free]
+               - [BulbShroomYoung, 0.004]
+               - [AlienWillow, 0.0001, Plant]
+
+                # Harvestables
+               - [Cactus1, 0.004]
+               - [Snakeweed, 0.04, Tree]
+               - [OpuntiaCactus, 0.002]
+                # RockResources
+               - [PromethiumStone, 0.0003, BigPlant]
+               - [CrystalStraight, 0.00015, BigPlant]
+               - [RockResourceNeodymium, 0.0002, Free]
+               - [RockResourceNeodymium, 0.02, Tree]
+               - [RockResourceCopper, 0.0005, Free]
+               - [RockResourceCopper, 0.05, Tree]
+
+
+    Grass:
+               - Name: GrassType01Red
+                 Density: 0.5
+                 YScale: 1.3
+                 Preset: GrassDense
+
+               - Name: GrassType01Red
+                 Density: 0.02
+                 YScale: 3.0
+                 Preset: GrassDense
+               - Name: Flower06
+                 Density: 0.003
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: Plant01Red
+                 Density: 0.002
+                 YScale: 2
+                 Preset: GrassDense
+               - Name: Plant01Red
+                 Density: 0.005
+                 YScale: 1.5
+                 Preset: GrassDense
+
+
+
+
+# ==============================================================
+# CATCH ALL  
+# ==============================================================
+  - Name: Dunes
+    AmbientSound: ArcticIntermediatePlains
+    Texture: [11,10, -0.4]
+
+    SelectionCriteria:
+       - true   # (= Catchall)
+    Color: [0.7, 0.6, 0.0]  
+
+
+    UndergroundLayers:
+               - [10, 5]
+               - [11, 1]
+               - [10, 3]
+               - [9, 3]    # 'Legacy' tex
+               - [14, -1]
+               - [15, 1]
+
+    StampProb: 0.01
+    StampForcesBiomeType: OverlapOther
+    Stamps: 
+
+               - Mountain_10_LO, 1
+               - Cliff_1, 0.4
+               - Cliff_2, 0.4
+               - Cliff_3, 0.6
+               - Valley_1, 0.1
+               - Valley_2, 0.1
+               - Valley_3, 0.07
+               - Pools_01, 0.07
+               - Hollow_01, 0.07
+
+
+
+    Decorations:
+               - [RealRock8, 0.001]
+               - [RealRock9, 0.001]
+
+               - [DeadTree02a, 0.01, Tree]
+               - [DeadTree02b, 0.01, Tree]
+               - [DeadTree02c, 0.01, Tree]
+               - [AlienDeadTree, 0.001, Tree]
+
+               #Harvestables:
+               - [Cactus1, 0.002]
+               - [ClusterShroom, 0.001]
+
+
+    Grass:
+               - Name: GrassBrown06
+                 Density: 0.005
+                 YScale: 0.7
+                 Preset: GrassDense
+
+
+
+# # ==============================================================  # (Turned off due to overlap instability)
+# # Other GlobalStamp biomes, overwriting even Catchall
+ 
+  # - Name: MeteoriteImpact
+    # AmbientSound: ArcticLowPlains
+    # Texture: [10,5,0.8, 4,9,0.95, -0.35]
+
+    # SelectionCriteria:
+       # - false
+    # Color: [0.7, 0.2, 0.2]
+
+
+    # UndergroundLayers:
+               # - [5, 1]
+               # - [10, 3]
+               # - [14, 3]
+               # - [10, 2]
+               # - [14, 6]
+               # - [10, 1]
+               # - [14, 9]
+               # - [10, 1]
+               # - [14, -1]
+               # - [15, 1]
+
+    # StampForcesBiome: true
+    # StampForcesBiomeType: OverlapOther
+    # StampTries: 20
+    # Stamps:
+
+    # - CraterMoon_10, 0.09
+    # - CraterMoon_11, 0.055
+    # # - CraterMoon_14, 0.015
+    # # - CraterMoon_14b, 0.4
+
+
+    # Temperature: 5
+
+    # Decorations:  
+               # - [RockGrey01Large, 0.016, Free]
+               # - [RockGrey02Large, 0.007, Free]
+               # - [RealRock4Dark, 0.00075, Free]
+               # - [RealRock5, 0.00025, Free]
+               # - [RealRock6, 0.00025, Free]
+               # - [CrystalFormation, 0.0015, Tree]
+
+               # # RockResources
+               # - [RockResourceSilicon, 0.0003, Free]
+               # - [RockResourceCobalt, 0.006, Free]
+               # - [RockResourceIron, 0.002, Free]
+               # - [CrystalStraight, 0.0002, Free]
+               # - [CrystalStraight, 0.001, Plant]
+               # - [CrystalsPyramidBlue, 0.0008, Plant]
+               # - [CrystalsPyramidBlue, 0.014, Tree]
+               # - [CrystalsPyramidOrange, 0.0025, Tree]
+
+
+
+

@@ -1,0 +1,68 @@
+ManifestFileVersion: 0
+CRC: 431829530
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2edc39585f0e572713a5af4462e24b91
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f33c3a197b4455df641c63d395c9bcad
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 2edc39585f0e572713a5af4462e24b91
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: dca28f2534ac11c40b56aa33a43ce40d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 164
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop8.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop2.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop3.prefab
+- Assets/eden_musicimported/Aim to Head - Karnal.mp3
+- Assets/eden_music/Dark Ambient/Eden_Music_LostStation.prefab
+- Assets/eden_music/Dark Techno/Eden_Music_TheFallenWorld.prefab
+- Assets/eden_music/Dark Ambient/Eden_Music_BattleForFreedom.prefab
+- Assets/eden_music/Dark Ambient/Eden_Music_BreathOfTheWasteland.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop4.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop6.prefab
+- Assets/eden_music/Eden_DrWestonPhase2.prefab
+- Assets/eden_music/Announcements/Eden_AnnounceBlastDoors.prefab
+- Assets/eden_music/Announcements/Eden_AnnounceEvacuate.prefab
+- Assets/eden_music/Announcements/Eden_AnnounceBiological.prefab
+- Assets/eden_music/Announcements/Eden_AnnounceContainment.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop5.prefab
+- Assets/eden_music/Dark Techno/Eden_Music_DeadMoon.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_DataCache.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop7.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckCreaks.prefab
+- Assets/eden_music/Ambient Sound Effects/Eden_Sound_WreckAmbientLoop9.prefab
+- Assets/eden_music/Audio.prefab
+- Assets/eden_music/Dark Techno/Eden_Music_DeathLoop.prefab
+- Assets/eden_music/Alexander Jordan/Eden_Music_UCHResearch.prefab
+- Assets/eden_music/Dark Ambient/Eden_Music_Wreckage.prefab
+- Assets/eden_music/Dark Techno/Eden_Music_Karnal.prefab
+Dependencies: []

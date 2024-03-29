@@ -1,0 +1,127 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ffffff]None[-][/c]
+
+Sovereignty: [c][ffffff]Unclaimed[-][/c]
+
+
+An alien structure of unknown origin. Classified by UCH as Object 276, it may be part of a larger puzzle."
+
+Gravity: 0
+AtmosphereEnabled: False
+PvPProb: 0
+UseFixed: True
+Radiation: [15,30]
+TemperatureDay: [-250,-200]
+# Music: [Vanguard, Helios, Anomalous, AlteredPhase, ColdDivide]
+Music: [EvilWhispering]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Unknown Object
+
+
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0
+      Properties:
+        - Key: RegenAfter
+          Value: 180
+
+### POIs
+POIs:
+
+# Asteroid Field
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet, AsteroidRingPlanet, AsteroidFieldRing, AsteroidFieldRingOld]
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.0
+      BaseField: True
+      RandomRotation: True
+
+    - Name: [Eden_NebulaL_RandomCyan]
+      FieldName: [Eden_NebulaL_RandomCyan] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+    - Name: [Eden_AnomalyRadiationGreen, Eden_AnomalyRadiationBlue]
+      FieldName: [Eden_AnomalyRadiationGreen, Eden_AnomalyRadiationBlue] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+# TEST
+    # - Type: Eden_NebulaObject1
+      # Name: [Eden_NebulaObject1]
+      # DisplayName: TEST Gas
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 10, 15 ]
+      # Probability: 1
+      # InitPower: True
+      # Pos: [0, 0, 0]
+      # Rot: [0, 0, 0]
+      # # Position:
+         # # PosXZMinMax: [2000, 15000]
+         # # PosYMax: 5000 
+
+    - Type: BA_Alien
+      Name: [Eden_BAO_Object276]
+      DisplayName: Object 276
+      Faction: Eden_Progenitor
+      FactionTerritory: [All]
+      Mode: Survival
+      CountMinMax: [ 1, 1]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+      Properties:
+        - Key: Discovery
+          Value: False
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: AsteroidFieldRing
+      Name: [AsteroidFieldRing]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+
+    - Type: AsteroidFieldRing
+      Name: [AsteroidFieldRing]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [90, 0, 0]
+
+    - Type: AsteroidFieldRing
+      Name: [AsteroidFieldRing]
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      InitPower: True
+      Pos: [0, 0, 0]
+      Rot: [90, 0, 90]

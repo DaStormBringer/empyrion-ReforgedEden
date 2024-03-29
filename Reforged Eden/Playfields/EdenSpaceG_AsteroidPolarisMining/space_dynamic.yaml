@@ -1,0 +1,551 @@
+# Playfield Characteristics
+# Asteroid Field with Polaris Mining Fleet.
+Description: "Difficulty: [c][ff0000]Hard[-][/c]
+
+Sovereignty: [c][FFA500]Polaris[-][/c]
+
+
+A signal beacon broadcasts that Polaris Mining Corporation has put a claim on all nearby asteroids. Any mining activity will be considered an act of aggression and travelers are encouraged to purchase ore from the Mining Foreman.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase] # POI
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: Polaris Mining Operation
+
+Skybox:
+#Skyboxes are separated by star class.
+# ----------------------------------------------------------------------------------------
+# Sunflares Choose from pre-selection: SunFlareBlue, SunFlarePurple, SunFlareRed, SunFlareRedSpace, SunFlareWhite, SunFlareWhite2, SunFlareWhite3, SunFlareWhite3Space, SunFlareWhite4, SunFlareWhite4Space, SunFlareWhiteMoon,
+# SunFlareWhiteSpace, SunFlareYellow, SunFlareYellow2, SunFlareYellow3
+    # ---------------------------------------------------------------------
+# Skyboxes for Class G Stars ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # # ---------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 4 ]
+      Probability: 0    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    # - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      # DisplayName: Copper Asteroid
+      # CountMinMax: [ 1, 4 ]
+      # Probability: 0.4  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+ 
+    # - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      # DisplayName: Silicon Asteroid
+      # CountMinMax: [ 1, 4 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      # DisplayName: Magnesium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.2 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      # DisplayName: Cobalt Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180             
+
+    # - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      # DisplayName: Neodymium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.2 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+
+    # - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      # DisplayName: Promethium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.2  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      # DisplayName: Sathium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.2 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      # FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      FieldName: [AsteroidFieldBoxExclude]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      # RandomRotation: True
+
+#Asteroid Fields
+    - Type: AsteroidFieldRectangle2
+      Name: [AsteroidFieldRectangle2]  
+      DisplayName: Asteroid Field
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.3
+      InitPower: True
+      Compound:
+        CountMinMax: [1, 1]
+        Probability: 0.5
+        Name: [Eden_BAO_BeaconPol, Eden_BAO_PolMinerT1a, Eden_BAO_PolMinerT1b, Eden_BAO_PolMinerT1c, Eden_BAO_PolMinerT2a, Eden_AsteroidCopper1, Eden_AsteroidIron1, Eden_AsteroidNeodymium1, Eden_AsteroidSathium1, Eden_AsteroidErestrum1]
+        DistanceMinMax: [250, 2000] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [7000, 12000]
+         PosYMax: 5000 
+
+         # Mining Foreman
+    - Type: BA_Alien
+      Name: [Eden_BAO_PolForemanT3]  
+      DisplayName: Mining Foreman
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Compound:
+        CountMinMax: [4, 8]
+        Probability: 1
+        Name: [Eden_BAO_PolMinerT1a, Eden_BAO_PolMinerT1b, Eden_BAO_PolMinerT1c, Eden_BAO_PolMinerT2a]
+        DistanceMinMax: [500, 1000] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [200, 800]
+         PosYMax: 300
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: Music
+          Value: NebularClouds  
+        - Key: RegenAfter
+          Value: 720  
+
+          #Hauler for mining operation
+    - Type: BA_Alien
+      Name: [Eden_BAO_PolHaulerT2]  
+      DisplayName: Hauler
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [350, 1000]
+         PosYMax: 500
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+
+          #Security ships stationed around mining operation
+    # - Type: BA_Alien
+      # Name: [Eden_OPV_Polaris1]  
+      # DisplayName: Frigate
+      # Faction: Polaris
+      # Mode: Survival
+      # CountMinMax: [ 2, 3 ]     
+      # Probability: 1
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [500, 1500]
+         # PosYMax: 1000
+      # Properties: 
+        # - Key: RegenAfter
+          # Value: 720  
+
+          #Warning beacons
+    - Type: BA_Alien
+      Name: [Eden_BAO_BeaconPol]  
+      DisplayName: NO MINING
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 2, 2 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [2000, 3000]
+         PosYMax: 1500
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: RegenAfter
+          Value: 720  
+
+    - Type: BA_Alien
+      Name: [Eden_BAO_BeaconPol]  
+      DisplayName: FIELD CLAIMED BY POLARIS
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [1500, 3000]
+         PosYMax: 2000
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: RegenAfter
+          Value: 720  
+
+          # Definitions for mining barge compound
+    - Type: BA_Alien
+      Name: [Eden_BAO_PolMinerT1a, Eden_BAO_PolMinerT1b, Eden_BAO_PolMinerT1c, Eden_BAO_PolMinerT2a]  
+      DisplayName: Mining Barge
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 6, 8 ]     
+      Probability: 1
+      IsCompoundSubDesc: True
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1000
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+
+          # Random mining barges
+    - Type: BA_Alien
+      Name: [Eden_BAO_PolMinerT1a, Eden_BAO_PolMinerT1b, Eden_BAO_PolMinerT1c, Eden_BAO_PolMinerT2a]  
+      DisplayName: Mining Barge
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 4 ]     
+      Probability: 0.5
+      InitPower: True
+      Position:
+         PosXZMinMax: [2000, 5000]
+         PosYMax: 2500
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+ # ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Asteroids
+# ======================================================================================================================================================================================================
+#Asteroids for compounds-----------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidIron1, Eden_AsteroidIron2, Eden_AsteroidIron3]
+      DisplayName: Claimed Iron Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]    
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidSilicon1, Eden_AsteroidSilicon2, Eden_AsteroidSilicon3]
+      DisplayName: Claimed Silicon Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.7
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidCopper1, Eden_AsteroidCopper2, Eden_AsteroidCopper3]
+      DisplayName: Claimed Copper Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.7
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidMagnesium1, Eden_AsteroidMagnesium2, Eden_AsteroidMagnesium3]
+      DisplayName: Claimed Magnesium Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.5
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidSathium1, Eden_AsteroidSathium2, Eden_AsteroidSathium3]
+      DisplayName: Claimed Sathium Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.6
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidNeodymium1, Eden_AsteroidNeodymium2, Eden_AsteroidNeodymium3]
+      DisplayName: Claimed Neodymium Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.4
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidGold1, Eden_AsteroidGold2, Eden_AsteroidGold3]
+      DisplayName: Claimed Gold Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0.2
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidPromethium1, Eden_AsteroidPromethium2, Eden_AsteroidPromethium3]
+      DisplayName: Claimed Promethium Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.5
+      Position:
+         PosXZMinMax: [500, 1500]
+         PosYMax: 1000
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidErestrum1, Eden_AsteroidErestrum2, Eden_AsteroidErestrum3]
+      DisplayName: Claimed Erestrum Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 1
+      Position:
+         PosXZMinMax: [500, 1500]
+         PosYMax: 1000
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Claimed Pentaxid Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 3, 6 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+          
+
+#Smaller Pentaxid asteroids-----------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+      DisplayName: Claimed Pentaxid Asteroid
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 1
+      # InitPower: True
+      Compound:
+        CountMinMax: [1, 1]
+        Probability: 0.6
+        Name: [Eden_AsteroidPentaxidS1, Eden_AsteroidPentaxidS2, Eden_AsteroidPentaxidS3, Eden_AsteroidPentaxidS4, Eden_AsteroidPentaxidS5]
+        DistanceMinMax: [35, 75] 
+        Rotate: true
+      Position:
+         PosXZMinMax: [500, 2500]
+         PosYMax: 1500
+      Properties:     
+        - Key: RegenAfter
+          Value: 180  
+
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma]
+        Count: [1, 1]
+        Radius: [1500, 3000]
+      SpaceVessels:
+          - Name: [Freighter]       
+            Faction: Polaris
+            Count: [2, 4]
+            FixedMaxSpeed: [10, 20]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [500, 1000]
+                PosYMax: 300                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+ 
+          - Name: [Eden_OPV_Polaris]     
+            Faction: Polaris     
+            Count: [4, 6]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [3000, 4500] 
+              Position:
+                PosXZMinMax: [5, 50]
+                PosYMax: 10             
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]
+
+          # - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            # Count: [0, 4]
+            # Faction: Zirax     
+            # FixedMaxSpeed: [0,0]
+            # Mission: Immobile
+            # MissionDescription:
+              # Name: Immobile
+              # Position:
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500               
+            # StockDescription:
+              # Name: [SpaceDroneLaser, SpaceDronePlasma]
+              # AmountMinMax: [0, 1]
+              # ExtraMinMax: [0,0]      
+            # Properties: 
+              # - Key: RegenAfter
+                # Value: 720    

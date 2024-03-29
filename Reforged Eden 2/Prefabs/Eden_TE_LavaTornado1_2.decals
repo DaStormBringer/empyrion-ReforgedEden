@@ -1,0 +1,8 @@
+[Fire]
+-Mode=Opaque
+-Pos=0,0,0
+-Rot=90,0,273
+-Size=0.25,0.25,0.25
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_LavaTornadoWander

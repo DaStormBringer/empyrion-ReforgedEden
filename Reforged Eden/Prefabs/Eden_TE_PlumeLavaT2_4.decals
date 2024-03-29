@@ -1,0 +1,14 @@
+[Flames]
+-Mode=Opaque
+-Pos=-2,169,0.5
+-Rot=90,0,0
+-Size=0.75,0.75,0.75
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_LavaSpoutPeriodic
+[Flames]
+-Mode=Opaque
+-Pos=-2,169,0.5
+-Rot=90,0,0
+-Size=0.75,0.75,0.75
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_LavaSpoutSteady

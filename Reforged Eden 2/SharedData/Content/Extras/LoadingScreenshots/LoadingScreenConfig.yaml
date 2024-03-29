@@ -1,0 +1,45 @@
+# Example file for controlling loading image and overlay text display
+# To activate remove "_example" from filename
+# ---------------------------------------------------------------------------------------
+# Note: Specify filenames without extension (.jpg will be added internally)
+# ---------------------------------------------------------------------------------------
+
+# Overlay title
+Title: <b><#FF0000>Reforged Eden 2 Alpha</color></b> <size=65%><#ffffff>Alpha</color></size>
+
+# Overlay body (typically multi-line text)
+# If commented out, only the title will be displayed
+Body: |
+  <size=135%><#ffffff><b>March 26:</b></color></size>
+  <size=85%><b>Current testing priorities:</b>
+  Starting planets Akua, Omicron, Roggery, Rogue J-5565, Rogue PX-37.
+  Progression through the starting system (orbits, asteroid fields, other planets and moons).
+  Planetary orbits in habitable, cold, and hot star systems.
+  Asteroid fields in habitable systems (only ones with the white icon on the solar system map).
+  
+  A new save game is recommended for this update.
+  
+  Note: The Project Eden content has been merged but has NOT been integrated or balanced for Reforged Galaxy 2 yet.
+  Please do not test or report any issues with Project Eden content or anything that is outside of the above testing priorities at this time.
+  <#ff0000>⚠</color> <#ffff00>FOR TESTING ONLY.
+  <#ff0000>⚠</color> FREQUENT SAVE GAME BREAKS WILL OCCUR.
+  <#ff0000>⚠</color> BACK UP YOUR BLUEPRINTS.</color></size>
+  
+# To show a certain image at the start of each loading image sequence, specify the respective file name
+# To use the default random image selection, comment out the following line
+# FirstPic: p49
+
+# To show the overlay text with certain images only, specify the respective file names
+# To show the text with every image, comment out the following line
+# ShowWith: [ p02, p03 ]
+
+# Show time for images - if not specified differently below
+# If commented out, the default is 10 seconds
+# Note: This time depends on the speed of the client computer as when loading a game a lot of work is done in parallel
+StandardShowTime: 15
+
+# To set a specific show time for certain images, specify "filename: time" lines
+# If not needed, comment out all lines of the following parameter
+# ShowTimes:
+  # p49: 45
+  # p06: 8

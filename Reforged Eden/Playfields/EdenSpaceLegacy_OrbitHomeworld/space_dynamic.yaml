@@ -1,0 +1,423 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][ff00ff]Ultra[-][/c]
+
+
+The orbit above the homeworld of The Legacy.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0
+AtmosphereEnabled: False
+Difficulty: 10
+PvPProb: 0
+UseFixed: True
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+Music: [Cypher, Diaspora]
+
+PlayfieldType: Space
+LandClaimZone: Device
+PlanetType: OrbitLegacyHome
+
+PlayfieldLevelOverride: [25,25]
+
+### Resource Asteroid
+Resources:
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 3, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 3, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 3, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+    - Name: [ AsteroidVoxel01Platin, AsteroidVoxel02Platin, AsteroidVoxel03Platin]
+      DisplayName: Platin Asteroid
+      CountMinMax: [ 2, 3 ]
+      Probability: 1
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+### POIs
+POIs:
+
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      BaseField: True 
+      RandomRotation: True
+
+    - Name: [Eden_PFNebulaLegacyHomeworld]
+      FieldName: [Eden_PFNebulaLegacyHomeworld] # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      Position:
+         PosXZMinMax: [1000, 5000]
+         PosYMax: 500
+
+
+# Ion Storm Cloud
+    # - Type: Eden_SectorNebulaLGreenCircle3
+      # Name: [Eden_SectorNebulaLGreenCircle3]
+      # DisplayName: Ion Storm Cloud
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Pos: [2500, 0, 0]
+      # Rot: [0, 0, 0]
+      # # Position:
+         # # PosXZMinMax: [1000, 2500]
+         # # PosYMax: 500
+      # # Compound:
+        # # CountMinMax: [3, 4]
+        # # Probability: 1
+        # # Name: [CompoundBAOLegacy, CompoundAsteroidT4, CompoundAsteroidT3Hot, CompoundAsteroidT3Hot]
+        # # DistanceMinMax: [1500, 4500]
+        # # Rotate: false
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+
+# Black Ion Storm Cloud
+    # - Type: Eden_SectorNebulaLBlackGreenCircle
+      # Name: [Eden_SectorNebulaLBlackGreenCircle]
+      # DisplayName: Ion Storm Cloud
+      # Faction: None
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Position:
+         # PosXZMinMax: [20000, 25000]
+         # PosYMax: 10000
+      # Compound:
+        # CountMinMax: [3, 4]
+        # Probability: 1
+        # Name: [CompoundBAOLegacy, CompoundAsteroidT4, CompoundAsteroidT4, CompoundAsteroidT4]
+        # DistanceMinMax: [1500, 4500]
+        # Rotate: false
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+
+
+
+
+
+
+# Main Legacy Station
+    - Type: BA_Alien
+      GroupName: BAOLegacyRG
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 3, 4 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [1500, 6000]
+         PosYMax: 1500
+      Compound:
+        CountMinMax: [3, 4]
+        Probability: 1
+        Name: [CompoundBAOLegacy, CompoundBAOLegacy, CompoundBAOLegacy, CompoundBAOLegacy]
+        DistanceMinMax: [500, 1000]
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+# Legacy Station Compound
+    - Type: BA_Alien
+      Name: [CompoundBAOLegacy]
+      GroupName: BAOLegacyRG
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 1
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [1500, 6000]
+         PosYMax: 1500
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+# Random Legacy Stations
+    - Type: BA_Alien
+      GroupName: BAOLegacyRG
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 6, 8 ]
+      Probability: 1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 1
+      InitPower: True
+      Position:
+         PosXZMinMax: [1500, 6000]
+         PosYMax: 1500
+      Properties:
+        - Key: RegenAfter
+          Value: 4320
+
+    - Type: BA_Alien   
+      Name: [RBAO_LegacyMatterConverter]
+      DisplayName: Matter Converter
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Encryptor  
+     #   - Key: MapDistance
+     #     Value: 2500     
+
+    - Type: BA_Alien   
+      Name: [BAO_SecretArtefactSite]  
+      DisplayName: Artifact Site
+      Faction: TheLegacy
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.8
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Encryptor  
+      #  - Key: MapDistance
+     #     Value: 2500     
+
+
+# Asteroids for compounds.
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT1]
+      GroupName: Eden_AsteroidT1
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT2]
+      GroupName: Eden_AsteroidT2
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Cold]
+      GroupName: Eden_AsteroidT3Cold
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT3Hot]
+      GroupName: Eden_AsteroidT3Hot
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+    - Type: BA_Alien
+      Name: [CompoundAsteroidT4]
+      GroupName: Eden_AsteroidT4
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      Properties:
+        - Key: MapDistance
+          Value: 6000
+        - Key: HudDistance
+          Value: 6000
+        - Key: RegenAfter
+          Value: 720
+        - Key: MapMarker
+          Value: Neutral
+
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+
+# ================================================================================================================================================================================= Drones
+      - FreeDrones:
+
+# ------------------------------------------------------------------------------------------------- Faction Main
+# Asteroid Patrols
+          - Name: [SpaceDroneLegacyLaser, SpaceDroneLegacyLaser]
+            Faction: TheLegacy
+            CanNotBeControlledByMasterAI: False
+            # POINameAsPositionRef: [BAO_GhystDefence1,BAO_GhystDefence2]
+            Count: [20, 25]
+            Radius: [1000, 10000]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+              # - Key: AIManPatrolFactions
+                # Value: "Main"
+              - Key: AIManMaxPursuitRange
+                Value: 15000
+
+# POI patrols
+          - Name: [SpaceDroneLegacyLaser, SpaceDroneLegacyLaser]
+            Faction: TheLegacy
+            CanNotBeControlledByMasterAI: False
+            Count: [20, 25]
+            Radius: [500, 7500]
+            Properties:
+              # - Key: AIManPatrolGroups
+                # Value: "TSO_AkuaOrbit, RBAO_PolarisGasRefinery, RBAO_PolarisAlloySynthesis"
+
+              - Key: AIManMaxPursuitRange
+                Value: 10000
+
+# ------------------------------------------------------------------------------------------------- Faction Zirax
+# ------------------------------------------------------------------------------------------------- Faction Polaris
+# ------------------------------------------------------------------------------------------------- Faction Trader
+# ------------------------------------------------------------------------------------------------- Faction Pirates
+# ------------------------------------------------------------------------------------------------- Faction UCH
+
+# ------------------------------------------------------------------------------------------------- Faction Kriel
+# ------------------------------------------------------------------------------------------------- Faction Drone Swarm
+# ------------------------------------------------------------------------------------------------- Faction Ancient Progenitor
+# ------------------------------------------------------------------------------------------------- Faction Tesch
+# ------------------------------------------------------------------------------------------------- Faction Warlord
+# ------------------------------------------------------------------------------------------------- Faction Colonists
+# ------------------------------------------------------------------------------------------------- Faction Civilian
+# ------------------------------------------------------------------------------------------------- Faction TheLegacy
+# ------------------------------------------------------------------------------------------------- Faction Alien
+
+# ================================================================================================================================================================================= Ships
+        SpaceVessels:
+# ================================================================================================================================================================================= Patrol Vessels and Freighters and Bases
+# ------------------------------------------------------------------------------------------------- Faction Main
+
+
+# ------------------------------------------------------------------------------------------------- Faction Zirax
+# Patrol vessels
+          - Name: [OPVLegacyRG]
+            Faction: TheLegacy
+            CountMinMax: [6, 8]
+            Probability: 1
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [90, 100]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 4320]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+              RadiusMinMax: [500, 10000]
+              # POINameAsPositionRef: [RBAO_XenuShipyard, RBAO_GhystShipyard]
+              Position:
+                PosXZMinMax: [1500, 8000]
+                PosYMax: 3000
+            StockDescription:
+              Name: [SpaceDroneLegacyLaser]
+              AmountMinMax: [12, 24]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              - Key: AIManMaxPursuitRange
+                Value: 25000
+
+# ------------------------------------------------------------------------------------------------- Faction Polaris
+
+# ------------------------------------------------------------------------------------------------- Faction Trader
+
+# ------------------------------------------------------------------------------------------------- Faction Pirates
+
+# ------------------------------------------------------------------------------------------------- Faction UCH
+# ------------------------------------------------------------------------------------------------- Faction Kriel
+# ------------------------------------------------------------------------------------------------- Faction Drone Swarm
+# ------------------------------------------------------------------------------------------------- Faction Ancient Progenitor
+# ------------------------------------------------------------------------------------------------- Faction Tesch
+# ------------------------------------------------------------------------------------------------- Faction Warlord
+
+# ------------------------------------------------------------------------------------------------- Faction Colonists
+
+# ------------------------------------------------------------------------------------------------- Faction Civilian
+
+# ------------------------------------------------------------------------------------------------- Faction The Legacy
+

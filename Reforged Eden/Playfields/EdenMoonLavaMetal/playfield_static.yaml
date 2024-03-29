@@ -1,0 +1,307 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: "Difficulty: [c][ffff00]Medium[-][/c]
+
+[c][ffff00]High Gravity Warning[-][/c]
+
+
+A dense iron core covered by an impenetrable layer of solidified metal. Hotspots of molten gold allow access to the softer mantle, providing a way of mining the gold deposits trapped beneath the crust.
+
+Sensors detect Iron deposits that can be indefinitely mined via autominer without depleting. Platinum deposits can be mined the same way but will deplete."
+
+PlanetType: Metallic Moon
+PlayfieldType: Moon
+Emissive: True
+
+Difficulty: 2
+
+LandClaimZone: Device
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.4, 0.3, 0.3"
+
+SkyColor: "0, 0, 0" 
+SkyHorizonColor: "0.1, 0, 0"
+AtmosphereParams: [1, 2]     
+
+# Light
+DayLightIntensity: 0.4
+NightLightIntensity: 0.4
+
+LightZenithColor: "0.98, 0.90, 0.90"
+LightHorizonColor: "1, 0.6, 0.15"
+NightLightColor: "1, 0.78, 0.78"
+
+DayShadowStrength: 1
+NightShadowStrength: 1
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+# Fog
+# AtmosphereFog: 0.00
+FogCloudIntensity: 0.0
+FogColor: "1, 1, 1"
+# GroundFogIntensity: 0.07
+# GroundFogHeight: 130
+
+# Clouds and Wind
+CloudsDensity: 0.0
+CloudsSharpness: 1
+CloudsBrightness: 0.0
+CloudsOpacity: 0.0
+CloudsZenithColor: "0.1, 0.03, 0.03"
+CloudsHorizonColor: "1, 0.3, 0.1"
+
+WindSpeed: 0
+
+SpecialEffectsGlobal:
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 120
+    Delay: 120
+    Lifetime: 30
+# ==============================================================
+# Size Scaling of ore amount. Poor = 66%. Normal = 100%. Rich = 143%. Gold = 66%. Penatix = 50%.
+# ======================================================================================================
+# 1=2          6=542      11=3300     16=10200    21=23200
+# 2=20         7=862      12=4300     17=12300    22=26700
+# 3=67         8=1200     13=5500     18=14600    23=30500
+# 4=160        9=1800     14=6800     19=17200    24=34700
+# 5=314        10=2500    15=8400     20=20100    25=39200
+# ======================================================================================================
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+# ======================================================================================================
+      # DistTypeWorm:
+        # FreqDirChange: 0.2
+        # DirChangeMagnitude: 0.2
+        # MaxLength: 50
+        # DeepnessType: 0 #Depth Style 0=Undefined, 1=Free, 2=Shallow
+# ======================================================================================================
+
+### Resource Deposits
+RandomResources:
+    - Name: IronResource
+      IsScalingCount: True 
+      CountMinMax: [ 2, 3 ] 
+      SizeMinMax: [ 4, 4 ] 
+      DepthMinMax: [ 50, 60 ]
+      DroneProb: 0
+      MaxDroneCount: 1
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 8
+
+    - Name: GoldResource
+      Biome: [ Metal ]
+      IsScalingCount: True 
+      CountMinMax: [ 7, 9 ]
+      SizeMinMax: [ 7, 8 ]
+      DepthMinMax: [ 10, 15 ]
+      DroneProb: 0
+      MaxDroneCount: 1
+      # #DistTypeCylinder:
+        # #MaxRadius: 13
+        # #YVariance: 3
+
+    - Name: PlatinResource
+      # IsScalingCount: True 
+      CountMinMax: [ 1, 3 ] 
+      SizeMinMax: [ 7, 8 ] 
+      DepthMinMax: [ 50, 60 ]
+      DroneProb: 0
+      MaxDroneCount: 1
+      #DistTypeCylinder:
+        #MaxRadius: 3
+        #YVariance: 3
+
+    - Name: PromethiumResource
+      Biome: [ Metal ]
+      IsScalingCount: True 
+      CountMinMax: [ 2, 4 ]
+      SizeMinMax: [ 3, 6 ]
+      DroneProb: 0
+      MaxDroneCount: 1
+      DepthMinMax: [ 15, 20 ]
+      #DistTypeCylinder:
+        #MaxRadius: 13
+        #YVariance: 10
+      
+### Resource Asteroids
+AsteroidResources:
+     - Name: GoldResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+     - Name: PromethiumResource
+       Threshold: 0.2
+       Amount: 0.1
+
+### POIs
+POIs:
+    Random:
+        # - GroupName: DroneBaseT1RG  #CommandCenter
+          # Faction: Zirax  
+          # NoShieldReload: True
+          # IsCommandCenter: True
+          # DroneBaseSetup: DroneBaseSetup
+          # CountMinMax: [ 0, 1 ]
+          # DroneProb: 1.0
+          # DronesMinMax: [ 4, 5 ]
+          # ReserveCount: 5
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
+
+       # ================================
+        # POI complex with several structures around
+        - GroupName: Eden_ZiraxMain
+          Faction: Zirax
+          NoShieldReload: True    
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          TroopTransport: True
+          SpawnResource: ["GoldResource:1-1"]
+          SpawnResourceRange: [150,300]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ZiraxAuxT2
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINearRange: [300, 450]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: Eden_ZiraxDefenseT3
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 2, 6 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_ZiraxDefenseT3]
+          SpawnPOIAvoidDistance: 600
+          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINearRange: [400, 600]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Random POIs, tied to main group spawning.
+        - GroupName: Eden_ZiraxAuxT2
+          Faction: Zirax
+          NoShieldReload: True    
+          CountMinMax: [ 2, 4 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 2, 4 ]
+          ReserveCount: 3
+          TroopTransport: True 
+          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINearRange: [1000, 5000]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+              # Cobalt Mine
+        - GroupName: Eden_PolMineGold2
+          Faction: Polaris
+          NoShieldReload: True  
+          Biome: [ Gold ]
+          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: CrashedShip      
+          Faction: None     
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 4
+          TroopTransport: False
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+    FixedPlayerStart:
+        - Mode: Debug
+          Pos: [ -596, 104, -1063 ]
+          RotY: 125
+
+        - Mode: Survival
+          Spawn: EscapePod
+          Armor: ArmorMedium
+
+### Drones
+DroneBaseSetup:
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 0
+          PresetStyle: 0
+          Stock:
+              - Name: DroneSmallFast01Rocket
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallFast01Minigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeSlow01Minigun
+                Amount: 100
+                Extra: 0
+
+              - Name: DroneSmallSlow01Cannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneSmallAttackBase
+                Amount: 300
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 400
+                Extra: 3
+
+DroneSpawning:
+    Random:
+        - DronesMinMax: [ 0, 0 ]
+          CenterX: -2500
+          Radius: 1500
+
+        - DronesMinMax: [ 0, 0 ]
+          CenterX: 2500
+          Radius: 1500

@@ -1,0 +1,224 @@
+---
+PlanetSize:
+   SizeRange: [2,3]
+   SizeProbs: [0.8,0.2]
+PlanetAxis: [15, 25]
+TemperatureMin: [-50, -50]
+TemperatureMax: [-5, -5]
+TemperatureNight: [-50, -50]
+HumidityMin: [0, 0]
+HumidityMax: [1, 1]
+Radiation: [0, 0]
+LandWaterRatio: [0.04, 0.08]
+BaseLevel: [0, 0]
+SeaLevel: [35, 40]
+TerrainLevel: [130, 140]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [30, 50]
+TemperatureGradientRange: [0.55, 0]
+TemperatureNoiseFac: 0.75
+HumidityHeightFac: [0, 270]
+HumidityNoiseFac: 0.9
+GravityMinMax: [-30, -25]
+AtmosphereDensityMinMax: [1.2, 1.4]
+AtmosphereO2MinMax: [0, 0]
+AtmosphereFogRange: [1, 1]
+GroundFogIntensityRange: [0, 0]
+GroundFogHeightRange: [0, 0]
+WaterProb: 0.7
+PvPProb: 0 #Normal
+Water: [WaterBlue,WaterGreen]
+Music: [alien]
+HumidityMasks:
+- Global_3
+- Global_4
+BiomeStampTries: 50
+Biomes:
+-  Name: Pole
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [5, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [10, 4]
+   - [11, -1]
+   - [10, 1]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Color: [1, 1, 1]
+   StampProb: 1
+   Temperature: -6
+-  Name: LiquidDeep
+   AmbientSound: Swamp
+   IgnoreForcedBiome: True
+   Texture: [2, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [12, 4]
+   - [11, -1]
+   - [10, 1]
+   SelectionCriteria:
+   - Height < SeaLevel - 4
+   Color: [0, 0, 1]
+   Radiation: 150
+   Decorations:
+   - [AlienDeadTree, 0.2, Tree]
+   - [SkeletonDragonHead, 0.1, Tree]
+   - [SkeletonDragonTorso, 0.1, Tree]
+   - [SkeletonMammothTorso, 0.1, Tree]
+   - [SkeletonMammothHead, 0.1, Tree]
+   - [SkeletonWhaleFull, 0.1, Tree]
+   - [SkeletonWhaleHead, 0.1, Tree]
+   - [SkeletonWhalePart, 0.1, Tree]
+   - [ScalyPodsHarvested, 0.04, Plant]
+   - [RockResourcePromethium, 0.007, Free]
+   - [RockResourceErestrum, 0.007, Free]
+   - [RockResourceGold, 0.007, Free]
+   - [CrystalsPyramidBlue, 0.05, Free]
+-  Name: Liquid
+   AmbientSound: Swamp
+   IgnoreForcedBiome: True
+   Texture: [2, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [12, 4]
+   - [11, -1]
+   - [10, 1]
+   SelectionCriteria:
+   - Height < SeaLevel
+   Color: [0, 0, 1]
+   Radiation: 100
+   # Decorations:
+-  Name: Shore
+   AmbientSound: Swamp
+   IgnoreForcedBiome: True
+   Texture: [2, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [12, 4]
+   - [11, -1]
+   - [10, 1]
+   SelectionCriteria:
+   - Height < SeaLevel + 3
+   Color: [0, 0.4, 1]
+   Decorations:
+-  Name: Boneyard
+   Texture: [1, 1, 0.5]
+   UndergroundLayers:
+   - [1, 1]
+   - [1, 0]
+   - [1, 1]
+   SelectionCriteria:
+   - Humidity > .8
+   Color: [0, 0, 0]
+   StampProb: 0.5
+   StampForcesBiome: False
+   Stamps:
+   - Hollow_01_SUB
+   StampTries: 200
+   Decorations:
+   - [SkeletonDragonHead, 0.1, Tree]
+   - [SkeletonDragonTorso, 0.1, Tree]
+   - [SkeletonMammothTorso, 0.1, Tree]
+   - [SkeletonMammothHead, 0.1, Tree]
+   - [SkeletonWhaleFull, 0.1, Tree]
+   - [SkeletonWhaleHead, 0.1, Tree]
+   - [SkeletonWhalePart, 0.1, Tree]
+   - [ScalyPodsHarvested, 0.04, Plant]
+-  Name: Ooze
+   AmbientSound: BarrenFog
+   LevelMod: +8
+   Texture: [2, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [12, 4]
+   - [11, -1]
+   - [10, 1]
+   SelectionCriteria:
+   - Humidity < .2
+   Color: [1, 0, 1]
+   StampProb: 0.29999999999999999
+   StampForcesBiome: False
+   StampForcesBiomeType: OverlapOwn
+   Stamps:
+   - DunesSea_01b
+   - Flats_1b_BM
+   StampTries: 5
+   Radiation: 100
+   Decorations:
+   - [SkeletonWhaleHead, 0.0001, Tree]
+   - [SkeletonWhaleFull, 0.0001, Tree]
+   - [SkeletonWhalePart, 0.0001, Tree]
+-  Name: Bonecoast
+   Texture: [1, 1, 1]
+   UndergroundLayers:
+   - [1, 1]
+   - [1, 0]
+   - [1, 1]
+   SelectionCriteria:
+   - Humidity < .205
+   - Humidity > .20
+   Color: [0, 0, 0]
+   StampProb: 0.20000000000000001
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOwn
+   Stamps:
+   - RiftLava_1_BM, 0
+   StampTries: 5
+   Radiation: 50
+   Decorations:
+   - [SkeletonWhalePart, 0.01, Tree]
+   - [SkeletonWhaleHead, 0.01, Tree]
+   - [SkeletonWhaleFull, 0.01, Tree]
+   - [SkeletonMammothTorso, 0.01, Tree]
+   - [SkeletonMammothHead, 0.01, Tree]
+   - [SkeletonDragonTorso, 0.01, Tree]
+   - [SkeletonDragonHead, 0.01, Tree]
+-  Name: Flats
+   LevelMod: +10
+   Texture: [5, 4, 0]
+   UndergroundLayers:
+   - [10, 1]
+   - [11, 0]
+   - [12, 1]
+   SelectionCriteria:
+   - Temperature < -25
+   Color: [1, 0.27, 0]
+   StampProb: 0.20000000000000001
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOwn
+   Stamps:
+   - IceDunes_01b
+   StampTries: 50
+   Radiation: -10
+   Temperature: -5
+   Decorations:
+   - [PulpitFungus, 0.01, Tree]
+   - [RockResourceErestrum, 0.0001]
+   Grass:
+   -  Name: GrassGreen01
+      Density: 0.01
+      YScale: 0.20000000000000001
+      Preset: GrassPatches4b
+-  Name: Forest
+   Texture: [5, 4, 0.2]
+   SelectionCriteria:
+   - Temperature > -25
+   Color: [0, 0, 0]
+   StampProb: 0.5
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOwn
+   Stamps:
+   - Valley_1
+   StampTries: 5
+   Decorations:
+   - [DeadTree01, 0.1, Tree]
+   - [DeadTree02a, 0.1, Tree]
+   - [DeadTree02b, 0.1, Tree]
+   - [DeadTree02c, 0.1, Tree]
+   Grass:
+   -  Name: GrassGreen01
+      Density: 0.01
+      YScale: 0.20000000000000001
+      Preset: GrassPatches2

@@ -1,0 +1,79 @@
+---
+# # ==============================================================
+PlanetSize: 
+  SizeRange: [5]
+  SizeProbs: [1]
+TemperatureMin: [120000,130000]  # 40,50
+TemperatureMax: [160000,180000]  # 100, 150
+TemperatureNight: [10,30]
+PlanetAxis: [-25,25]
+HumidityMin: [0.05, 0.15]
+HumidityMax: [0.28, 0.35 ]
+Radiation: [20, 20]
+LandWaterRatio: [0, 0]
+SeaLevel: [1, 1]
+TerrainLevel: [120, 130]
+BaseLevel: [90, 100]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [14, 160]  # 160  #325
+TemperatureGradientRange: [0.57, 0.00]  # 0.4 0,0
+TemperatureNoiseFac: 0.49
+HumidityHeightFac: [20, 325]
+HumidityNoiseFac: 0.54
+
+GravityMinMax: [-12, -10]
+AtmosphereDensityMinMax: [0, 0]
+AtmosphereO2MinMax: [0, 0]
+AtmoBreathableProb: 0
+
+AtmosphereFogRange: [0.9, 1]
+GroundFogProb: 1
+GroundFogIntensityRange: [0.05, 0.15]
+GroundFogHeightRange: [25, 55]
+
+WaterProb: 1
+PvPProb: 0 #Normal
+Water: [RockLava03]
+Music: [Encryptor, lava, lava2]
+
+# ==============================================================
+
+GroundShapes:
+
+BiomeStampTries: 20
+  
+Biomes: 
+
+  - Name: Pole          # same as Rocks biome
+    Weather: PoleFog
+    IgnoreForcedBiome: true
+    Texture: [1, 1, 0.2]  
+    SelectionCriteria:  
+    - +Lat > 0.975
+    Color: [0.2, 0.4, 0.2] 
+    Temperature: 2000                      
+    Radiation: 50                      
+
+# ============================================================               
+
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+  - Name: Surface
+    AmbientSound: LavaPlains 
+    Texture: [1, 1, 0.2]  
+    UndergroundLayers:
+               - [11, 12]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:  
+       - true
+    Color: [1, 1, 0]
+    Temperature: 2000                      
+    Radiation: 50                      
+  
+    Decorations:  
+
+
+

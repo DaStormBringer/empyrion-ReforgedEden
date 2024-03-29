@@ -1,0 +1,16 @@
+[DebrisCloud]
+-Mode=Opaque
+-Pos=0.5012014,128.4337,0.3973177
+-Rot=0,359.2711,0
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud3
+
+[DebrisCloud]
+-Mode=Opaque
+-Pos=0.5012014,128.4337,0.3973177
+-Rot=0,359.2711,0
+-Size=1,1,1
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DebrisCloud4
+

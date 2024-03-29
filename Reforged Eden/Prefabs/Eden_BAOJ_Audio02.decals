@@ -1,0 +1,9 @@
+[Audio]
+-Mode=Opaque
+-Pos=0.5308877,129.6417,0.3813408
+-Rot=0,345.4557,0
+-Size=1,1,1
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_music/Eden_Sound_WreckAmbientLoop2
+

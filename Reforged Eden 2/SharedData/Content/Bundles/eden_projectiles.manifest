@@ -1,0 +1,144 @@
+ManifestFileVersion: 0
+CRC: 480833236
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0f2dc2f7816fef87159aa3802e77870d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1f27a3d17c66030b57c01b0e97d3af2c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0f2dc2f7816fef87159aa3802e77870d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 63370acbe4b11f24280fe48a7c5e7dcf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8396afed7c1a1d5498e6e8b2a5f94443, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 24ff3199a15f84e469258023a00cc54f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 168
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserYellowBeam.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserPurplex3.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunCVSpinalT2New.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileTorpedoCV.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileVulcanYellowM.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectilePlasmaOrange.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileArtilleryYellowT2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserPurpleMedium.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletWhiteSx4.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectilePlasmaGreenM.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileDisruptorGreenM.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileBlasterGreenM.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileTorpedoL.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletRedSx4.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletBlueSx10.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunCVSpinalT2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserBlueMx3.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileBlasterOrangeS.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileSwarmx3.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectilePlasmaGreenL.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletYellowSx4.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileDisruptorGreenMImpact.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunBeamT1.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileCruise.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserRedLong.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserBlueBeam.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserBlueMedium.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectileOrbBlueTriple.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletRedx3.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileCruiseEMP.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectileOrbBlue.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletOrangeSx4.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileBlasterGreenS.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunL.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileFlakOrangeL.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunCVSpinalT2V2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserYellowBeam2.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileFlakYellowM.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileLight.prefab
+- Assets/eden_projectiles/BlastEffects/Eden_BlastRingYellow.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletYellowL.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectilePlasmaGreen.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserPurpleBeam.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserRedPulse.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectileIonRifle.prefab
+- Assets/eden_projectiles/Plasma/bEden_ProjectileSphereYellowx3.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunLightS.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletRedL.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunLight.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileDefenseYellowx4.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileLightx2.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunHeavy.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileVulcanYellowMold.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserBlueMx6.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectileSphereYellowx3.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileBlasterGreenMx2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserCyanMedium.prefab
+- Assets/eden_projectiles/Blasters/Eden_ProjectileDisruptorGreenM2.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletBlueSx6.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileCruiseVert.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletVulcanSmall.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileSwarmx7.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileSwarmRedx26.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileRailgunLT2.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileCruiseEMPSide.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileSwarmx7_2.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileArtilleryOrangeT2.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileSwarmx6.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletYellowSx10.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileTorpedoS.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserBlueMx2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserRedBeam.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileArtilleryRedT2.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletYellowSx6.prefab
+- Assets/eden_projectiles/Missiles/Eden_ProjectileMissileCruiseSide.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletYellowSx2.prefab
+- Assets/eden_projectiles/Lasers/Eden_ProjectileLaserGreenBeam.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletBlueSx2.prefab
+- Assets/eden_projectiles/Plasma/Eden_ProjectileIonRifle2.prefab
+- Assets/eden_projectiles/Eden_NoticeProjectiles.prefab
+- Assets/eden_projectiles/Bullets/Eden_ProjectileBulletRedMx4.prefab
+Dependencies: []

@@ -1,0 +1,154 @@
+---
+# # ==============================================================
+PlanetSize: 
+  SizeRange: [2,3]
+  SizeProbs: [0.5,0.5]   
+TemperatureMin: [-200,-100]
+TemperatureMax: [-20,-10]
+TemperatureNight: [50,60]
+PlanetAxis: [3,35]                              
+HumidityMin: [0.05, 0.15]                       
+HumidityMax: [0.28, 0.35 ]                     
+Radiation: [15, 20]
+LandWaterRatio: [0.2, 0.07]     # 0.3 = 30% Water, 70% Land. 0.9 = 90% Water, 10% Land
+SeaLevel: [20, 30]                                      
+TerrainLevel: [120, 130]                   
+BaseLevel: [0, 22]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [14, 160]
+TemperatureGradientRange: [0.75, 0.10]
+TemperatureNoiseFac: 0.49
+HumidityHeightFac: [20, 325]
+HumidityNoiseFac: 0.54
+
+
+GravityMinMax: [-10, -12]
+AtmosphereDensityMinMax: [0.9, 1.2]
+AtmosphereO2MinMax: [0.005, 0.009]
+AtmoBreathableProb: 0
+GroundFogProb: 1
+GroundFogIntensityRange: [0.1, 0.3]
+GroundFogHeightRange: [50, 300]
+
+WaterProb: 1
+PvPProb: 0 #Normal
+Water: [WaterBlue]
+Music: [Encryptor]
+
+# ==============================================================
+
+## Splatmaps:
+# Channel: 0 1 2 3
+# Splat 1: R G B A
+# Channel: 4 5 6 7
+# Splat 2: R G B A
+# Channel: 8 9 10 11
+# Splat 3: R G B A
+
+GroundShapes: 
+     
+#  - _LavaCrater600x600_GS1, 1   # WIP
+
+
+  
+Biomes: 
+  - Name: MethaneLake
+    IgnoreForcedBiome: true
+    Texture: [7, 0, 0.25]  
+    UndergroundLayers:
+               - [15, 1]
+               - [15, -1]
+               - [15, 1]
+    SelectionCriteria: 
+    - Height < SeaLevel
+    Color: [0, 0, 1]
+
+    Temperature: -250 
+# ==============================================================
+  - Name: IceCap
+    IgnoreForcedBiome: true
+    PoleBiome: True
+    Texture: [8, 11, 0.2]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    UndergroundLayers:
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+    SelectionCriteria:  
+    - Height < 200 
+    - Temperature < -50
+    # - Humidity > 0.1 
+    Color: [1, 1, 1]
+    Decorations:  
+               - [ "CrystalsPyramidBlue", 0.01]
+# ==============================================================
+  - Name: Mountains 
+    AmbientSound: Mountains 
+    IgnoreForcedBiome: true
+    Texture: [1,10,0.5, 11,2,0.8, 0.2]   # ID Top Texture, ID Side Texture, Slope Side: low value, early 
+    UndergroundLayers:
+               - [10, 0]
+               - [10, -1]
+               - [10, 1]
+    SelectionCriteria: 
+    - Height > 150
+    - Temperature > -50
+    Color: [0.6, 0.6, 0.6]
+    StampTries: 60  # number of tries to place the stamps for a class 2 planet with 100% land, more tries the more water and the bigger the planet  
+    StampProb: 0.6
+    Stamps: 
+    - Mountain_3b, 0.5     # Class 2,3,4,5
+    - Mountain_10b, 0.3   # Class 4,5
+    - Mountain_21, 0.3    # Class 4,5 
+    - Mountain_9, 0.4     # Class 3,4,5  
+    - Mountain_11, 0.3    # Class 3,4,5  
+    - Mountain_13, 0.5    # Class 3,4,5 
+    - Mountain_14, 0.3    # Class 3,4,5 
+    - Mountain_15, 0.3    # Class 3,4,5 
+    - Mountain_23, 0.5    # Class 4,5 
+    - Volcano_2, 0.2      # Class 3,4,5 
+    - Mountain_14a, 0.9   # Class 2,3
+    - Mountain_15a, 0.9   # Class 2,3
+    Decorations:  
+               - [Boulder1, 0.01, Free]
+               - [Boulder2, 0.01, Free]
+               - [Boulder3, 0.01, Free]
+               - [Boulder4, 0.01, Free]
+               - [Boulder5, 0.01, Free]
+               - [DesertRock1, 0.001, Free]
+               - [DesertRock2, 0.001, Free]
+# ==============================================================
+# CATCH ALL
+# ==============================================================
+  - Name: SulfuricDesert
+    Texture: [1, 6, 0.55, 11, 11, 0.5, 0.2] 
+    UndergroundLayers:
+               - [11, 8]
+               - [13, 5]
+               - [14, 5]    
+               - [15, -1]
+               - [15, 1]  
+    SelectionCriteria:  
+       - true
+    Color: [1 , 1, 0]
+    Decorations:  
+               - [Boulder1, 0.01, Free]
+               - [Boulder2, 0.01, Free]
+               - [Boulder3, 0.01, Free]
+               - [Boulder4, 0.01, Free]
+               - [Boulder5, 0.01, Free]
+               - [DesertRock1, 0.001, Free]
+               - [DesertRock2, 0.001, Free]
+               - [DesertRockMedium1, 0.001, Free]
+               - [DesertRockMedium2, 0.001, Free]
+               - [DesertRockLarge, 0.001, BigPlant]
+               - [ModRocksBrown01, 0.002, BigPlant]
+               - [ModRocksBrown02, 0.002, BigPlant]
+               - [ModRocksBrown03, 0.002, BigPlant]
+               - [ModRocksBrown04, 0.002, BigPlant]
+               - [AridRockYellow01, 0.0001, Tree]
+               - [AridRockYellow02, 0.0001, Tree]
+               - [AridRockYellow03, 0.0001, Tree]
+    Temperature: -150
+
+
+

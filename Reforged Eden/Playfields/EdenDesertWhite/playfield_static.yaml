@@ -1,0 +1,814 @@
+Description: "Difficulty: [c][FF0000][b]Hard[/b][-][/c]
+
+
+For the first few years the colony was successful by leaps and bounds, until it lost contact.  Investigators were sent but no information returned.  The planet was originally sought for its unique fauna and primitive life. Hope jumped that the system would serve as an ideal location as a bridgeway to further exploration into that galaxy.  Apparently, something else sought the location as well.
+
+
+[c][DAA520][i]Tied first place for the November 2019 Custom Planet Challenge.[/i][-][/c]
+
+[c][808080][i]Originally created by Ravis.[/i][-][/c]"
+
+PlanetType: White Desert
+PlayfieldType: Planet
+AtmosphereEnabled: True
+Difficulty: 4
+LandClaimZone: Device
+SpecialEffectsLocal:
+-  Name: FireFliesRed
+   Biome: [Water, ShallowWater, Shore]
+   Time: Night
+   MaxHeight: 40
+-  Name: FireFliesGreenFew
+   Biome: [Plains, Sand, Flowers, FlowersEdge, Wadi, DustBowl]
+   Time: Night
+   MaxHeight: 150
+-  Name: Pollen
+   Biome: [Plains, DustBowl, Plantation, Flowers, FlowersEdge, Oasis]
+   Time: Day
+   MaxHeight: 150
+-  Name: FireFliesGreen
+   Biome: [Oasis, Plantation]
+   Time: Night
+   MaxHeight: 150
+SpecialEffectsGlobal:
+-  Name: HeatWave
+   Type: Weather
+   InitialDelay: 48
+   Delay: 12
+   Lifetime: 1200
+-  Name: Wind
+   Type: Weather
+   InitialDelay: 20
+   Delay: 8
+   Lifetime: 500
+-  Name: BirdFlocksVultures
+   Biome: [Dunes, Plains, Mountains, Water, Flowers, Plantation]
+   Time: Day
+   InitialDelay: 2
+   Delay: 4
+   PlyDist: 50
+   Struct: True
+   Lifetime: 600
+   SpawnY: 40
+-  Name: MeteorFireRain
+   Type: Weather
+   InitialDelay: 50
+   Delay: 90
+   Lifetime: 600
+-  Name: CloudsDark
+   Type: Weather
+   InitialDelay: 20
+   Delay: 20
+   Lifetime: 600
+-  Name: FogRadiationPurple
+   Type: Weather
+   InitialDelay: 60
+   Delay: 60
+   Lifetime: 600
+AtmosphereColor: 0.17, 0, 0
+SkyColor: 0.17, 0, 0
+SkyHorizonColor: 0.17, 0, 0
+AtmosphereParams: [-40, -40]
+LightZenithColor: 0.17, 0, 0
+LightHorizonColor: 0.17, 0, 0
+OrbitUsesLightColor: True
+DayLightIntensity: 1.3999999999999999
+NightLightIntensity: 0.29999999999999999
+NightLightColor: 0.17, 0, 0
+SunFlare: EnvironmentalEffects/SunFlareWhite2
+AtmosphereFog: 0.34999999999999998
+FogCloudIntensity: 0.80000000000000004
+GroundFogIntensity: 0.050000000000000003
+GroundFogHeight: 60
+CloudsDensity: 1
+CloudsSharpness: 1
+CloudsBrightness: 2
+CloudsOpacity: 0.69999999999999996
+CloudsZenithColor: 0.17, 0, 0
+CloudsHorizonColor: 0.17, 0, 0
+CloudsNightZenithColor: 0.17, 0, 0
+CloudsNightHorizonColor: 0.17, 0, 0
+WindSpeed: 7
+BaseAttackCount: 1
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+RandomResources:
+-  Name: IronResource
+   Biome: [Sand, Dunes]
+   IsScalingCount: True
+   IsImportant: True
+   CountMinMax: [2, 5]
+   SizeMinMax: [5, 7]
+   DepthMinMax: [5, 15]
+   DroneProb: 0.20000000000000001
+-  Name: CopperResource
+   Biome: [Plateau]
+   IsScalingCount: True
+   IsImportant: True
+   CountMinMax: [2, 5]
+   SizeMinMax: [4, 6]
+   DepthMinMax: [10, 15]
+   DroneProb: 0.29999999999999999
+-  Name: SiliconResource
+   Biome: [Sand]
+   IsScalingCount: True
+   IsImportant: True
+   CountMinMax: [2, 5]
+   SizeMinMax: [4, 7]
+   DepthMinMax: [0, 1]
+   DroneProb: 0.10000000000000001
+   MaxDroneCount: 1
+AsteroidResources:
+-  Name: IronResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: CopperResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+-  Name: SiliconResource
+   Threshold: 0.20000000000000001
+   Amount: 0.20000000000000001
+POIs:
+   Random:
+   -  GroupName: Fallen_Drone_Base
+      Faction: Zirax
+      NoShieldReload: True
+      DroneBaseSetup: DroneBaseSetup
+      CountMinMax: [1, 1]
+      DroneProb: 1
+      DronesMinMax: [6, 9]
+      ReserveCount: 5
+      NoShieldReload: True
+      IsImportant: True
+      SpawnResource: ['IronResource:0-1', 'CopperResource:0-1']
+      SpawnResourceRange: [150, 400]
+      Properties:
+      -  Key: Music
+         Value: moonstone
+      -  Key: RegenAfter
+         Value: 720
+   -  GroupName: Fallen_Floating_Island_1
+      Faction: None
+      Biome: [ Mountains, LowMountains ]      
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 10, 15 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 0
+      TroopTransport: False
+      Properties:
+      - Key: MapDistance
+        Value: 0   
+      - Key: SI
+        Value: Off        
+      - Key: RegenAfter
+        Value: 720 
+   -  GroupName: Fallen_Dist_Center
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 4 ]
+      ReserveCount: 5
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720               
+# ZRX Fixed        
+   -  GroupName: Fallen_Avalon
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720          
+   -  GroupName: Fallen_Delta
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Avalon]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720        
+   -  GroupName: Fallen_Gamma
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Avalon]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720     
+# ZRX Random        
+   -  GroupName: Fallen_Delta
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720         
+   -  GroupName: Fallen_Gamma
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720        
+   -  GroupName: Fallen_Outpost1
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 4 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720         
+   -  GroupName: Fallen_Outpost2
+      Faction: Zirax  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 4 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720      
+# Alien Random        
+   -  GroupName: Fallen_OldFarmHouse
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 0
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 0
+      TroopTransport: False
+      Properties: 
+      - Key: RegenAfter
+        Value: 720   
+   -  GroupName: Fallen_Oxygen_Plant
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720     
+   -  GroupName: Fallen_Warehouse_Ref
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720    
+   -  GroupName: Fallen_Spaceport
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720 
+   -  GroupName: Fallen_BioLab
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 2, 3 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720 
+   -  GroupName: Fallen_Abandoned_Const
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      Properties: 
+      - Key: RegenAfter
+        Value: 720                          
+# Alien Fixed        
+   -  GroupName: Fallen_Commandcenter
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 3, 5 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720   
+   -  GroupName: Fallen_Oxygen_Plant
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Commandcenter]
+      SpawnPOINearRange: [800, 999]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720             
+   -  GroupName: Fallen_Warehouse_Ref
+      Faction: Alien  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Commandcenter]
+      SpawnPOINearRange: [800, 999]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720
+# Polaris Fixed 1       
+   -  GroupName: Fallen_Petra
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 2, 3 ]
+      ReserveCount: 4
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Drone_Base]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720               
+      -  Key: Music
+         Value: SunnySkies 
+   -  GroupName: Fallen_Pol_Def
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 3 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Petra]
+      SpawnPOINearRange: [150, 350]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720     
+   -  GroupName: Fallen_Pol_Def2
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 2, 3 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Petra]
+      SpawnPOINearRange: [150, 350]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720                     
+# Polaris Fixed 2        
+   -  GroupName: Fallen_Elona_Exp
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 1, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720      
+   -  GroupName: Fallen_Ranma
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 1, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Elona_Exp]
+      SpawnPOINearRange: [150, 350]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720           
+   -  GroupName: Fallen_Inari_Maint
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 1, 3 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Elona_Exp]
+      SpawnPOINearRange: [150, 350]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720           
+   -  GroupName: Fallen_Pol_Def
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Elona_Exp]
+      SpawnPOINearRange: [150, 300]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720      
+   -  GroupName: Fallen_Pol_Def2
+      Faction: Polaris  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Elona_Exp]
+      SpawnPOINearRange: [150, 350]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720   
+# Talon Fixed 1       
+   -  GroupName: Fallen_Talon_Citadel
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 1
+      DronesMinMax: [ 1, 1 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720         
+   -  GroupName: Fallen_Talon_Village2
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 1 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Talon_Citadel]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720            
+   -  GroupName: Fallen_Talon_Village3
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Talon_Citadel]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720     
+# Talon Fixed 2         
+   -  GroupName: Fallen_Talon_Village1
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 2 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOIAvoid: [Fallen_Petra]
+      SpawnPOIAvoidDistance: 2000
+      Properties: 
+      - Key: RegenAfter
+        Value: 720                  
+   -  GroupName: Fallen_Talon_Village2
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 1 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Talon_Village1]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720            
+   -  GroupName: Fallen_Talon_Village3
+      Faction: Talon  
+      NoShieldReload: True
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      DroneProb: 1
+      DronesMinMax: [ 0, 0 ]
+      ReserveCount: 1
+      TroopTransport: True
+      SpawnPOINear: [Fallen_Talon_Village1]
+      SpawnPOINearRange: [150, 250]
+      Properties: 
+      - Key: RegenAfter
+        Value: 720
+   FixedPlayerStart:
+   -  Mode: Creative
+      SubMode: Empty
+      Pos: [0, 147, 0]
+      RotY: 160
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorLight
+      PlayerArmor: ['']
+   -  Mode: Creative
+      SubMode: Normal
+      Pos: [0, 52, 0]
+      RotY: 30
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorLight
+      PlayerArmor: ['']
+   -  Mode: Debug
+      Pos: [0, 147, 0]
+      RotY: 160
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      PlayerArmor: ['']
+   -  Mode: Survival
+      Spawn: EscapePod
+      Items: ['SurvivalTent, Flashlight, AntibioticOintment:2, Bandages:2, StomachPills:2, PowerBar:2, EnergyDrink, OxygenBottleSmall:7, EnergyCellHydrogen', 'SurvivalTent, Flashlight, AntibioticOintment, Bandages, PowerBar, OxygenBottleSmall:6', 'SurvivalTent, Flashlight, Bandages, OxygenBottleSmall:5', '#FreshStart: SurvivalTent, Flashlight, Bandages, WaterBottle, OxygenBottleSmall:5']
+      Status: ['Food:500, Health: 500', 'Food:400, Health: 400', 'Food:300, Health: 300', '#FreshStart:Food:400, Health: 400']
+      Armor: ArmorLight
+      PlayerArmor: ["ArmorLight, ArmorLight, ArmorLight, #FreshStart: ArmorLight"]
+DroneBaseSetup:
+   Random:
+   -  GroupName: DroneBaseSetup
+      DronesMinMax: [7, 9]
+      ReserveCount: 15
+      DroneProb: 1
+      Difficulty: 6
+      PresetStyle: 2
+      Stock:
+      -  Name: DroneSmallFast01Minigun
+         Amount: 300
+         Extra: 0
+      -  Name: DroneSmallFast01Rocket
+         Amount: 100
+         Extra: 0
+      -  Name: DroneSmallFast01Minigun
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneSmallAttackBase
+         Amount: Infinite
+         Extra: 1
+      -  Name: DroneTroopsTransport
+         Amount: Infinite
+         Extra: 2
+      -  Name: ZiraxMale
+         Amount: 500
+         Extra: 3
+      -  Name: ZiraxRocket
+         Amount: 500
+         Extra: 3
+      -  Name: RipperDog
+         Amount: 150
+         Extra: 3
+      -  Name: Mechanoid
+         Amount: 300
+         Extra: 3
+      PlanetVesselBase:
+         Name: PlanetVesselBaseSetup
+         Faction: Zirax
+         Position3D: [0, 102, 0]
+         BaseType: PlanetVesselBase
+         KeyId: 0
+         PlanetVessel:
+         -  Name: Eden_Fallen-PV-Ship
+            Faction: Zirax
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 10
+            RespawnDelay: 12
+            RangePatrolTask:
+               Position3D: [1500, 80, 0]
+               Radius: 800
+               DistToGround: 320
+            AttackCVCircleAround:
+               DistToTarget: 210
+            RangePatrolAvoidArea: []
+         -  Name: Eden_PV-Mefina-C
+            Faction: Zirax
+            Mission: PlanetPatrol
+            FixedMaxSpeed: 10
+            RespawnDelay: 1
+            RangePatrolTask:
+               Position3D: [1400, 80, 0]
+               Radius: 300
+               DistToGround: 300
+            AttackCVCircleAround:
+               DistToTarget: 200
+            RangePatrolAvoidArea: []
+DroneSpawning:
+   Random:
+   -  DronesMinMax: [30, 40]
+      CenterX: -5000
+      Radius: 3000
+   -  DronesMinMax: [30, 40]
+      CenterX: -5000
+      Radius: 3000
+SpawnRateZones:
+-  SpawnAt: [Fallen_Petra]
+   Radius: 400
+   RadiusRandom: 100
+   RateMultiplyerEdge: 1
+   AffectEnemies: True
+   Color: 0.0, 1.0, 0.0, 0.7
+SpawnZones:
+-  SpawnAt: [Fallen_Commandcenter, Fallen_Drone_Base]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 1000
+   RadiusRandom: 100
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol]
+      Biomes: [Any]
+      Amount: 200
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [Fallen_Avalon, Fallen_Gamma, Fallen_Delta]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 500
+   RadiusRandom: 25
+   RateMultiplyerCenter: 1
+   RateMultiplyerEdge: 0.59999999999999998
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxMinigunPatrol, ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
+      Biomes: [Any]
+      Amount: 50
+      Period: Always
+      DelayMinMax: [-1, -1]
+-  SpawnAt: [Fallen_Outpost1, Fallen_Outpost2]
+   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
+   Radius: 100
+   RadiusRandom: 25
+   RateMultiplyerCenter: 0.29999999999999999
+   Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: True
+   Entities:
+   -  Names: [ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
+      Biomes: [Any]
+      Amount: 10
+      Period: Always
+      DelayMinMax: [-1, -1]
+CreatureSpawning:
+-  Biomes: [LargeCrater]
+   Entities:
+   -  Name: AlienBugs01
+      Period: Day
+      Amount: 12
+      DelayMinMax: [20, 24]
+-  Biomes: [Wadi]
+   Entities:
+   -  Name: CaveWormsGrey
+      Period: Always
+      Amount: 20
+      DelayMinMax: [20, 24]
+-  Biomes: [Oasis, Shore]
+   Entities:
+   -  Name: Slimes
+      Period: Always
+      Amount: 20
+      DelayMinMax: [20, 24]
+      Color: "1.0, 1.0, 0"
+   -  Name: AlienBugs01
+      Period: Always
+      Amount: 8
+      DelayMinMax: [20, 24]
+-  Biomes: [Flowers, FlowersEdge, Plantation]
+   Entities:
+   -  Name: AlienBugs01
+      Period: Always
+      Amount: 10
+      DelayMinMax: [20, 24]
+   -  Name: Spiders02
+      Period: Night
+      Amount: 8
+      DelayMinMax: [20, 24]
+   -  Name: MegalonopsesBrown
+      Period: Day
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [Dunes, Sand, Plains, Plateau, DustBowl]
+   Entities:
+   -  Name: WormDesertHerd
+      Period: Always
+      Amount: 6
+      DelayMinMax: [20, 24]
+   -  Name: MegalonopsesBrown
+      Period: Day
+      Amount: 10
+      DelayMinMax: [20, 24]
+-  Biomes: [LowMountains, LowMountains_1, SandDrift]
+   Entities:
+   -  Name: CaveWormsGrey
+      Period: Always
+      Amount: 8
+      DelayMinMax: [20, 24]
+-  Biomes: [Any]
+   Entities:
+   -  Name: Spiders03
+      Period: Night
+      Amount: 200
+      DelayMinMax: [20, 30]

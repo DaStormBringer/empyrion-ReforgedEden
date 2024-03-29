@@ -1,0 +1,804 @@
+[Decals]
+-Mode=Opaque
+-Pos=0.5,150,-0.5
+-Rot=90,0,0
+-Size=0.5,0.5,0.5
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DockLightsCircleBlue
+
+[Decals]
+-Mode=Opaque
+-Pos=0.5,150,-0.5
+-Rot=90,17.5,0
+-Size=0.5,0.5,0.5
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DockLightsCircleBlue
+
+[Decals]
+-Mode=Opaque
+-Pos=0.5,150,-0.5
+-Rot=90,0,0
+-Size=0.5,0.5,0.5
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DockLightsCircleCyanAnim2
+
+[Decals]
+-Mode=Opaque
+-Pos=0.5,150,-0.5
+-Rot=90,17.5,0
+-Size=0.5,0.5,0.5
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DockLightsCircleCyanAnim2
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.319038,166.75,-25.00276
+-Rot=0,0,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.29771,166.75,-25.00265
+-Rot=0,0,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-25.00238,166.75,-5.307378
+-Rot=0,89.99998,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-25.00244,166.75,6.320337
+-Rot=6.830189E-06,90,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.305943,166.75,26.00248
+-Rot=0,180,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.29018,166.75,26.00256
+-Rot=0,180,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=26.00252,166.75,6.308178
+-Rot=0,270,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=26.00244,166.75,-5.292575
+-Rot=0,270,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.319038,136.25,-25.00276
+-Rot=0,0,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.29771,136.25,-25.00265
+-Rot=0,0,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-25.00238,136.25,-5.307378
+-Rot=0,89.99998,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-25.00244,136.25,6.320337
+-Rot=6.830189E-06,90,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.305943,136.25,26.00248
+-Rot=0,180,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.29018,136.25,26.00256
+-Rot=0,180,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=26.00252,136.25,6.308178
+-Rot=0,270,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=26.00244,136.25,-5.292575
+-Rot=0,270,0
+-Size=2.593743,2.593743,2.593743
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpPosterRandom2B
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.968139,162,-28.67986
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-7.839323,162,-28.05614
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-9.944451,162,-27.35441
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=7.000718,162,-28.66897
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=10.99248,162,-27.33828
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=9.071708,162,-27.97868
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.32979,162,-10.01848
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.96119,162,-8.124365
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=29.66678,162,-6.007388
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=29.67434,162,6.985055
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.32187,162,11.04217
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.99622,162,9.018657
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=11.01924,162,28.32957
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.979028,162,29.67622
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=9.05901,162,28.98279
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.976479,162,29.67696
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-10.08739,162,28.30666
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-7.990004,162,29.00584
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.32838,162,11.02271
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.68253,162,6.96065
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.99387,162,9.026726
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.67867,162,-5.971831
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.32191,162,-10.04245
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.01325,162,-7.967948
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.968139,141,-28.67986
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-7.839323,141,-28.05614
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-9.944451,141,-27.35441
+-Rot=3.347839E-05,18.43494,-8.14222E-13
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=7.000718,141,-28.66897
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=10.99248,141,-27.33828
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=9.071708,141,-27.97868
+-Rot=-3.347839E-05,341.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.32979,141,-10.01848
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.96119,141,-8.124365
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=29.66678,141,-6.007388
+-Rot=3.185847E-05,288.4349,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=29.67434,141,6.985055
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.32187,141,11.04217
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=28.99622,141,9.018657
+-Rot=-3.762943E-05,251.5651,-1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=11.01924,141,28.32957
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=6.979028,141,29.67622
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=9.05901,141,28.98279
+-Rot=2.969858E-05,198.435,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-5.976479,141,29.67696
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-10.08739,141,28.30666
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-7.990004,141,29.00584
+-Rot=-3.347839E-05,161.565,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.32838,141,11.02271
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.68253,141,6.96065
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.99387,141,9.026726
+-Rot=2.932734E-05,108.435,0
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.67867,141,-5.971831
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-27.32191,141,-10.04245
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-28.01325,141,-7.967948
+-Rot=-3.833815E-05,71.56505,1.628444E-12
+-Size=1.948717,1.948717,1.948717
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignCorpGeneric3
+
+
+
+
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=-120,185,18
+# # -Rot=0,100,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-110,185,54
+# -Rot=0,115,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignArtemis
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-90,185,85
+# -Rot=0,135,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-55,185,110
+# -Rot=0,150,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=-18,185,120
+# # -Rot=0,170,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignBertrams
+
+
+
+
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=-120,185,-18
+# # -Rot=0,80,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-110,185,-54
+# -Rot=0,65,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignCargoHaul
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-90,185,-85
+# -Rot=0,40,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignIceMining
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=-55,185,-110
+# -Rot=0,25,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=-18,185,-120
+# # -Rot=0,10,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignIceMining
+
+
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=120,185,-18
+# # -Rot=0,-80,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=110,185,-54
+# -Rot=0,-65,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignFuelCore
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=90,185,-85
+# -Rot=0,-40,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignPolHab
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=55,185,-110
+# -Rot=0,-25,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignMACorp
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=18,185,-120
+# # -Rot=0,-10,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignPolHab
+
+
+
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=120,185,18
+# # -Rot=0,-100,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignUIM
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=110,185,54
+# -Rot=0,-115,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignQuantumStar
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=90,185,85
+# -Rot=0,-135,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignUIM
+
+# [Advertisement]
+# -Mode=Opaque
+# -Pos=55,185,110
+# -Rot=0,-155,0
+# -Size=7,7,7
+# -Color=1,1,1,1
+# -ColliderMode=NoCollision
+# -Asset=@eden_decalmodels/Eden_SignTotallyOverpowered
+
+# # [Advertisement]
+# # -Mode=Opaque
+# # -Pos=18,185,120
+# # -Rot=0,-170,0
+# # -Size=7,7,7
+# # -Color=1,1,1,1
+# # -ColliderMode=NoCollision
+# # -Asset=@eden_decalmodels/Eden_SignFuelCore

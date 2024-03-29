@@ -1,0 +1,506 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v1.93.0.2542, Playfield Version: 11.5.0 [2744] (Alpha 11.5.0)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [2]
+   SizeProbs: [1]
+PlanetAxis: [-10, 10]
+PlayfieldLevelOverride: [0, 0]
+TemperatureMin: [-15, -15]
+TemperatureMax: [45, 45]
+TemperatureNight: [20, 20]
+HumidityMin: [0.05, 0.1]
+HumidityMax: [0.7, 0.7]
+Radiation: [0, 0]
+LandWaterRatio: [0.1, 0.15]
+BaseLevel: [10, 10]
+SeaLevel: [50, 50]
+TerrainLevel: [160, 160]
+TerrainHeightMapMax: 495
+TemperatureHeightRange: [80, 256]
+TemperatureGradientRange: [0.5, 0.1]
+TemperatureNoiseFac: 0.67000000000000004
+HumidityHeightFac: [0, 420]
+HumidityNoiseFac: 0.67000000000000004
+GravityMinMax: [-8, -6]
+AtmosphereDensityMinMax: [1.3, 1.6]
+AtmosphereO2MinMax: [0.18, 0.3]
+AtmoBreathableProb: 1
+AtmosphereFogRange: [0, 1]
+WaterProb: 1
+Water: [WaterBlue]
+Music: [Helios]
+HumidityMasks:
+- Global_3_R
+- Global_4_R
+- Global_2_R
+BiomeStampTries: 150
+Biomes:
+-  Name: Pole
+   Color: [1, 1, 1]
+   SelectionCriteria:
+   - +Lat > 0.95
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [0, 0, 0.5]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+   Temperature: -15
+-  Name: DeepWater
+   Color: [0, 0.2, 8]
+   SelectionCriteria:
+   - Height < SeaLevel - 15
+   Stamps:
+   - CraterLava_1
+   Grass:
+   -  Name: GrassBlue03
+      Density: 0.80000000000000004
+      YScale: 1.5
+      Preset: GrassDense
+   -  Name: Seaweed03
+      Density: 0.001
+      Preset: GrassPatches4
+   -  Name: Seaweed04
+      Density: 0.001
+      Preset: GrassPatches3
+   Decorations:
+   - [BallFlower01, 0.002, Free]
+   - [BallFlower02, 0.002, Free]
+   - [BallFlower03, 0.002, Free]
+   - [CthulhuTree02, 0.003, Free]
+   - [CthulhuTree01, 0.001, Free]
+   - [BallTree, 0.003, Free]
+   - [RealRock1Water, 0.001, Free]
+   - [FingerSponge03-01, 0.01, Free]
+   - [CoralStone03-05, 0.0005, Free]
+   - [CoralStone03-06, 0.0005, Free]
+   - [Hydrilla2, 0.01, Tree]
+   - [CrystalFormation, 0.005, Free]
+   - [CrystalTall, 0.01, Plant]
+   AmbientSound: Water
+   IgnoreForcedBiome: True
+   Texture: [7, 7, -0.4]
+   UndergroundLayers:
+   - [9, 2]
+   - [10, -1]
+   - [8, 1]
+   StampProb: 0.14999999999999999
+   StampForcesBiomeType: OverlapOwn
+   StampTries: 15
+   Temperature: 5
+-  Name: Water
+   Color: [0.1, 0.4, 1]
+   SelectionCriteria:
+   - Height < SeaLevel - 4
+   Grass:
+   -  Name: GrassBlue04
+      Density: 0.80000000000000004
+      Preset: GrassDense
+   -  Name: GrassBlue03
+      Density: 0.80000000000000004
+      YScale: 1.5
+      Preset: GrassDense
+   -  Name: Plant01Blue
+      Density: 0.050000000000000003
+      Preset: GrassPatches2
+   Decorations:
+   - [SucculentTree, 0.001, Free]
+   - [CrystalTall, 0.005, Free]
+   - [CrystalStraight, 0.001, Free]
+   - [CrystalFormation, 0.001, Free]
+   - [Bush02, 0.001, Free]
+   - [CoralBig08, 0.001, Free]
+   - [CoralStone03-05, 0.002, Free]
+   - [CoralStone03-06, 0.002, Free]
+   - [FingerSponge03-01, 0.002, Free]
+   - [OnionFlower, 0.02, Plant]
+   - [Hydrilla2, 0.01, Plant]
+   - [LeafPlant, 0.01, Plant]
+   - [MushroomTallBlue02, 0.01, Tree]
+   - [MushroomTallGreen01, 0.01, Free]
+   - [OmicronPlant, 0.001, Free]
+   - [OmicronWaterleaf, 0.001, Free]
+   - [RockFormationI, 0.003, Free]
+   - [RockFormationJ, 0.003, Free]
+   - [RockFormationK, 0.003, Free]
+   - [RockFormationN, 0.003, Free]
+   AmbientSound: Water
+   IgnoreForcedBiome: True
+   Texture: [7, 7, -0.2]
+   UndergroundLayers:
+   - [9, 2]
+   - [10, -1]
+   - [8, 1]
+   StampForcesBiome: False
+   Temperature: 10
+-  Name: Shallows
+   Color: [0.6, 0.6, 1]
+   SelectionCriteria:
+   - Height < SeaLevel 0
+   Grass:
+   -  Name: Plant01Blue
+      Density: 0.050000000000000003
+      YScale: 0.75
+      Preset: GrassPatches8
+   -  Name: GrassBlue04
+      Density: 0.40000000000000002
+      YScale: 1.25
+      Preset: GrassDense
+   -  Name: GrassBlue03
+      Density: 0.40000000000000002
+      YScale: 1.2
+      Preset: GrassDense
+   Decorations:
+   - [AlienTreeBlue02, 0.0006, Free]
+   - [MushroomBigSky, 0.002, Free]
+   - [GlowTube01, 0.002, Plant]
+   - [BallFlower01, 0.002, Free]
+   - [BallFlower03, 0.002, Free]
+   - [OmicronWaterleaf, 0.001, Free]
+   - [OmicronPlant, 0.001, Free]
+   - [BigFlower, 0.005, Free]
+   - [Mod_rocks_grey01, 0.0005, Free]
+   - [Mod_rocks_grey02, 0.0005, Free]
+   - [Mod_rocks_grey03, 0.0005, Free]
+   - [Mod_rocks_grey04, 0.0005, Free]
+   - [RockFormationI, 0.003]
+   - [RockFormationJ, 0.003]
+   - [RockFormationK, 0.003]
+   AmbientSound: SmallLake
+   IgnoreForcedBiome: True
+   Texture: [7, 7, -0.35]
+   UndergroundLayers:
+   - [9, 2]
+   - [10, -1]
+   - [8, 1]
+   StampForcesBiome: False
+-  Name: Beach
+   Color: [1, 0.98, 0.8]
+   SelectionCriteria:
+   - Height < SeaLevel + 4
+   Grass:
+   -  Name: GrassBlue02
+      Density: 0.0050000000000000001
+      Preset: GrassPatches
+   Decorations:
+   - [RockGrey01Large, 0.002, Free]
+   - [RockGrey02Large, 0.002, Free]
+   - [RockFormationI, 0.005, Free]
+   - [RockFormationJ, 0.005, Free]
+   - [RockFormationK, 0.005, Free]
+   - [RealRock5Water, 0.005, Tree]
+   - [AlienPlant13, 0.02, BigPlant]
+   - [AkuaBushRed, 0.0075, Plant]
+   - [AlienPlant20, 0.002, Free]
+   - [AlienPlant17, 0.01, Plant]
+   AmbientSound: Oasis
+   IgnoreForcedBiome: True
+   Texture: [6, 7, -0.2]
+   UndergroundLayers:
+   - [7, 2]
+   - [10, -1]
+   - [8, 1]
+-  Name: Glacier
+   Color: [0.94, 0.97, 1]
+   SelectionCriteria:
+   - Height > 100
+   - Temperature < 0
+   Grass:
+   -  Name: GrassGreen04aSnow
+      Density: 0.20000000000000001
+      Preset: GrassDense
+   -  Name: GrassGreen06Snow
+      Density: 0.40000000000000002
+      Preset: GrassPatches
+   Decorations:
+   - [RealRock10Snow, 0.0005, Free]
+   - [RealRock1Snow, 0.0005, Free]
+   - [RealRock2Snow, 0.0005, Free]
+   - [RealRock3Snow, 0.0005, Free]
+   - [RealRock8Snow, 0.0005, Free]
+   - [BlueSpruceWinter, 0.005, Free]
+   - [AlaskaCedarBare, 0.005, Tree]
+   - [HollywoodJuniperDesktopBare, 0.005, Tree]
+   - [CrystalFormation, 0.0005, Free]
+   Weather: PoleFog
+   AmbientSound: Mountains
+   IgnoreForcedBiome: True
+   Texture: [0, 10, -0.5]
+   UndergroundLayers:
+   - [8, 2]
+   - [10, -1]
+   - [8, 1]
+-  Name: Mountains
+   Color: [0.6, 0.6, 0.6]
+   SelectionCriteria:
+   - Height > 150
+   Grass:
+   -  Name: FlowerBlue01
+      Density: 0.0050000000000000001
+      Preset: GrassDense
+   -  Name: GrassBlue03
+      Density: 0.20000000000000001
+      Preset: GrassDense
+   Decorations:
+   - [RockGrey01Large, 0.001, Free]
+   - [RockGrey02Large, 0.001, Free]
+   - [AkuaBushRed, 0.002, Free]
+   - [AlienPlant17, 0.001, Free]
+   - [AlienPlant13, 0.001, Free]
+   - [AlienPlant20, 0.001, Free]
+   AmbientSound: Mountains
+   IgnoreForcedBiome: True
+   Texture: [5, 1, 0.5, 10, 10, 0.5, -0.4]
+   UndergroundLayers:
+   - [9, 2]
+   - [8, -1]
+   - [10, 1]
+-  Name: PolarSnow
+   Color: [0.94, 0.97, 1]
+   SelectionCriteria:
+   - Height > SeaLevel +2
+   - Temperature < -5
+   Grass:
+   -  Name: GrassGreen04aSnow
+      Density: 0.40000000000000002
+      Preset: GrassDense
+   -  Name: GrassGreen06Snow
+      Density: 0.20000000000000001
+      YScale: 1.2
+      Preset: GrassPatches
+   Decorations:
+   - [PixieStalksSnow, 0.0001, Plant]
+   - [CornDogBushSnow, 0.0001, Plant]
+   - [RealRock10Snow, 0.0001, Free]
+   - [RealRock1Snow, 0.0001, Free]
+   - [RealRock2Snow, 0.0001, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock6Snow, 0.0001, Free]
+   - [RealRock8Snow, 0.0001, Free]
+   - [CrystalFormation, 0.0005, Free]
+   - [SnowTreeRed2, 0.0001, Free]
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: False
+   Texture: [0, 10, 0.5]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+   StampForcesBiome: False
+-  Name: ColdPlains
+   Color: [0.69, 0.77, 0.87]
+   SelectionCriteria:
+   - Temperature < 5
+   - Height > SeaLevel + 2
+   - Height < 100
+   Grass:
+   -  Name: GrassBlue01
+      Density: 0.01
+      Preset: GrassDense
+   -  Name: GrassGreen06Snow
+      Density: 0.0025000000000000001
+      Preset: GrassDense
+   -  Name: GrassBlue02
+      Density: 0.01
+      Preset: GrassDense
+   -  Name: GrassGreen04aSnow
+      Density: 0.80000000000000004
+      Preset: GrassDense
+   Decorations:
+   - [ElderberryBushBlue, 0.005, Tree]
+   - [BlueSpruceWinter, 0.0005, Free]
+   - [HollywoodJuniperDesktopBare, 0.0002, Free]
+   - [AlienPlant14, 0.005, Plant]
+   - [AlienPlant07, 0.001, Plant]
+   - [RealRock10Snow, 0.0003, Free]
+   - [RealRock3Snow, 0.0001, Free]
+   - [RealRock8Snow, 0.0002, Free]
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: False
+   Texture: [1, 2, 0.75, 10, 10, 0.65, -0.1]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+-  Name: DeepForest
+   Color: [0.18, 0.31, 0.31]
+   SelectionCriteria:
+   - Height < 80
+   - Humidity > 0.4
+   - Temperature > 20
+   Grass:
+   -  Name: GrassBlue04
+      Density: 1.2
+      YScale: 1.25
+      Preset: GrassDense
+   -  Name: GrassBlue02
+      Density: 0.20000000000000001
+      YScale: 1.5
+      Preset: GrassPatches
+   -  Name: FlowerBlue01
+      Density: 0.050000000000000003
+      Preset: GrassDense
+   Decorations:
+   - [AlienTreeBlue, 0.05, Free]
+   - [AlienWillow, 0.0075, Free]
+   - [AlienTreeBlue02, 0.0025, Free]
+   - [RiverBirch, 0.0001, Free]
+   - [ElderberryBushBlue, 0.04, Free]
+   - [AkuaBushRed, 0.1, Tree]
+   - [AlienPlant20, 0.05, Tree]
+   - [AlienPlant13, 0.05, Plant]
+   - [AlienPlant14, 0.005, Plant]
+   - [AlienPlant17, 0.001, Free]
+   - [AridRock01, 0.0001, Free]
+   - [AridRock02, 0.0001, Free]
+   - [AridRock03, 0.0001, Free]
+   AmbientSound: TropicalForest
+   Texture: [3, 4, 0.5, 8, 10, 0.75, -0.3]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+-  Name: Forest
+   Color: [0, 0.5, 0.5]
+   SelectionCriteria:
+   - Height < 80
+   - Humidity > 0.2
+   - Temperature > 10
+   Grass:
+   -  Name: GrassBlue04
+      Density: 1.2
+      YScale: 1.2
+      Preset: GrassDense
+   -  Name: GrassBlue02
+      Density: 0.5
+      YScale: 1.2
+      Preset: GrassDense
+   -  Name: FlowerBlue01
+      Density: 0.050000000000000003
+      YScale: 1.2
+      Preset: GrassPatches
+   Decorations:
+   - [AlienTreeBlue, 0.02, Free]
+   - [AlienWillow, 0.005, Free]
+   - [AlienTreeBlue02, 0.005, Free]
+   - [AlienPlant22, 0.002, Free]
+   - [AlienPlant20, 0.05, Tree]
+   - [AkuaBushRed, 0.005, Free]
+   - [ElderberryBushBlue, 0.01, Free]
+   - [RealRock10Dark, 0.0005, Free]
+   - [RealRock3Dark, 0.0005, Free]
+   - [RealRock4Dark, 0.0005, Free]
+   - [RealRock8Dark, 0.0005, Free]
+   AmbientSound: TropicalForest
+   Texture: [3, 4, 0.5, 10, 10, 0, -0.3]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+-  Name: LowMountains
+   Color: [0.4, 0.4, 0.4]
+   SelectionCriteria:
+   - Height > 100
+   Stamps:
+   - MountainPlateau_01_LO, 0.4
+   - MountainPlateau_02_LO, 0.4
+   - MountainPlateau_03_LO, 0.4
+   - MountainPlateau_04_LO, 0.4
+   - MountainPlateau_05_LO, 0.4
+   - MountainPlateau_06_LO, 0.4
+   Grass:
+   -  Name: GrassBlue03
+      Density: 0.90000000000000002
+      Preset: GrassDense
+   -  Name: GrassBlue01
+      Density: 0.94999999999999996
+      Preset: GrassDense
+   -  Name: FlowerBlue01
+      Density: 0.02
+      Preset: GrassDense
+   -  Name: Plant01Blue
+      Density: 0.050000000000000003
+      YScale: 0.5
+      Preset: GrassDense
+   Decorations:
+   - [RockGrey01Large, 0.004, Free]
+   - [RockGrey02Large, 0.004, Free]
+   - [ElderberryBushBlue, 0.0045, Tree]
+   - [AlienTreeBlue, 0.2, Tree]
+   - [AlienTreeBlue02, 0.05, Tree]
+   - [AlienPalm, 0.02, Tree]
+   - [AlienPlant22, 0.03, Tree]
+   - [AlienPlant24, 0.03, BigPlant]
+   - [RealRock3Dark, 0.0004, Free]
+   - [RealRock4Dark, 0.002, Free]
+   - [RealRock8Dark, 0.0004, Free]
+   - [RealRock10Dark, 0.0005, Free]
+   - [AridRock01, 0.0002, Free]
+   - [AlienPlant07, 0.001, Plant]
+   - [BigFlower, 0.001, Plant]
+   - [AlienPlant20, 0.001, Plant]
+   - [AlienPlant17, 0.004, BigPlant]
+   AmbientSound: Mountains
+   IgnoreForcedBiome: True
+   Texture: [5, 10, -0.4]
+   UndergroundLayers:
+   - [8, 2]
+   - [10, -1]
+   - [8, 1]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   StampTries: 30
+-  Name: Plains
+   Color: [0.8, 0.7, 0.4]
+   SelectionCriteria:
+   - true
+   Stamps:
+   - ErosionIce_01, 0.15
+   - ErosionIce_02, 0.15
+   - ErosionIce_03, 0.15
+   Grass:
+   -  Name: GrassBlue04
+      Density: 1.2
+      YScale: 1.2
+      Preset: GrassDense
+   -  Name: FlowerBlue01
+      Density: 0.050000000000000003
+      Preset: GrassDense
+   -  Name: GrassBlue02
+      Density: 0.80000000000000004
+      YScale: 1.5
+      Preset: GrassDense
+   Decorations:
+   - [AlienWillow, 0.001, Free]
+   - [AlienPalm, 0.0005, Free]
+   - [AlienPlant22, 0.005, Tree]
+   - [AlienPlant24, 0.001, Tree]
+   - [ElderberryBushBlue, 0.0005, Free]
+   - [AlienPlant13, 0.005, Plant]
+   - [AlienPlant20, 0.05, Tree]
+   - [AlienPlant17, 0.001, Plant]
+   - [AkuaBushRed, 0.005, Plant]
+   - [CrystalFormation, 0.003, Free]
+   - [CrystalsPyramidBlue, 0.005, Free]
+   - [CrystalTall, 0.001, Free]
+   AmbientSound: OpenPlains
+   Texture: [3, 4, 0.5, 4, 5, 0.5, -0.1]
+   UndergroundLayers:
+   - [11, 2]
+   - [9, 4]
+   - [10, -1]
+   - [8, 1]
+   StampProb: 0.25
+   StampForcesBiomeType: OverlapAll
+   StampTries: 30
+   UndergroundLayersDefault: True
