@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2669938982
+CRC: 3339286929
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 61dfc7ecb9029232f3bd74c09f9972b7
+    Hash: e5c4726f58fe3bf3e32b551bab373a47
   TypeTreeHash:
     serializedVersion: 2
     Hash: b8e796416c122cb7ae0b64edacfc817d
@@ -57,88 +57,92 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorT3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerSmallT3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserCVT3V3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/PlasmaTurbineT1.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombProjectileEMP.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightPlasmaCVT1.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CVHeavyRocket.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/PlasmaTurbineT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombLauncherSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPlasmaCVT3V2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/30mmGAU-8round.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightGatlingSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumCannonCVT2V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketHomingProjectileRG2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco9x9.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CVMediumRocket.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FlamethrowerBlast2RG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ConstructorT3V2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightCannonSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumCannonCVT2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketHomingSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV4.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallT4.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyGatlingSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FlamethrowerProjectile2RG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunCVT3V3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightLaserCVT1.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightPlasmaSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumBombLauncherEMP.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco5x5.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumLaserSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeQuantum.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FlamethrowerBlastRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DroneSpawnerRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT5.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT2.prefab
+- Assets/BlockModels/Shaders/EmpShader-Example_Block_Colored-Conflict.shader
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco9x9V2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPositronCVT3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV5.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/FlamethrowerProjectileRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorT3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT4.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallQuantum.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunCVT2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketProjectileMk3RG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketSmallV2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerSmallT3.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/PlasmaTurbineT1.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombLauncherSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPlasmaCVT3V2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/30mmGAU-8round.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketHomingSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPlasmaSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CVMediumRocket.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ConstructorT3V2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyFlamethrowerSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumPlasmaCVT2V3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyFlamethrowerSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldGeneratorCVT0.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunCVT2V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketProjectileMk1RG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumPlasmaCVT2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightCannonSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumCannonCVT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DroneBayRG2T1v2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumCannonSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketHomingSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV4.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumLaserCVT2V4.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPlasmaCVT3V3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallT4.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DroneBayRG2T2v2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyGatlingSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunCVT3V3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightLaserCVT1.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightPlasmaSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketProjectileRG2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunCVT3V2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRailgunSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumBombLauncherEMP.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco5x5.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumLaserSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightCannonCVT1.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketProjectileMk2RG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserCVT3V4.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightCannonCVT1.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldChargerSmallT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumLaserCVT2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeQuantum.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightLaserSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DroneSpawnerRG.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT5.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT2.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserCVT3V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumPlasmaSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco9x9V2.prefab
-- Assets/BlockModels/Shaders/EmpShader-Example_Block_Colored-Conflict.shader
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV5.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPositronCVT3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT4.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumGatlingSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombProjectileRG.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallQuantum.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunCVT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRailgunCVT1.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco5x5V2.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallT5.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/TorpedoProjectileRG.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketProjectileMk3RG.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumGatlingSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketSmallV2.prefab
 Dependencies:
 - C:/Users/User/OneDrive/Desktop/Vermillion/UnityPackage/RGMk2/Bundles/reforged/reforgedcontent

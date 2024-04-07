@@ -904,26 +904,44 @@ POIs:
 # =================================================
 # =================================================
 
+    Fixed:
+        - Type: BA_Player
+          Faction: Admin
+          Prefab: RE2_BA_Creative
+          Mode: Creative
+          SubMode: Normal
+          Name: Reforged Creative Library
+          Pos: [ -191.5, 64.5, 136.5 ]
+          Rot: [ 0, 270, 0 ]
+          InitPower: True
 
-# Player Start
     FixedPlayerStart:
         - Mode: Creative
           SubMode: Empty
           Armor: ArmorLight
-          Pos: [ -1074, 37, 1730 ]
-          RotY: -18
+          Pos: [ -196.9, 70.6, 143.9 ]
+          RotY: 315
+          Items: [ 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000", 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000", 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000",
+          "#FreshStart: Token:1:6999, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000" ]
 
         - Mode: Creative
           SubMode: Normal
           Armor: ArmorLight
-          Pos: [ -1093, 54, 1724 ]
-          RotY: 14
+          Pos: [ -196.9, 70.6, 143.9 ]
+          RotY: 315
+          Items: [ 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000", 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000", 
+          "Token:1:6997, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000", 
+          "#FreshStart: Token:1:6999, Token:1:6998, FusionCell:4000, OxygenBottleLarge:4000, PentaxidCrystal:4000, MultiCharge:4000, MultiToolT2, TextureColorTool, Core:1000, SpawnNewBase:1000, SpawnNewGV:1000, SpawnNewSV:1000, SpawnNewCV:1000" ]
 
         - Mode: Debug
+          Armor: ArmorLight
           Pos: [ 0, 147, 0 ]
-          RotY: 160
-
-
+          RotY: 160 
 
         - Mode: Survival
 

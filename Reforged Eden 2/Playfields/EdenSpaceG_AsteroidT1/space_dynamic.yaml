@@ -1,12 +1,12 @@
 # Playfield Characteristics
 Description: "Difficulty: [c][00ff00]Easy[-][/c]
 
-[c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c]
-
-
 Common resource asteroids and the occasional abandoned mine or survey satellite are about all you will find in this asteroid field.
 
-[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+[sup][c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c][/sup]
+
+[sup][c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c][/sup]"
 
 Gravity: 0
 AtmosphereEnabled: False
@@ -491,7 +491,7 @@ POIs:
       Faction: None
       Mode: Survival
       CountMinMax: [ 1, 1 ]
-      Probability: 1
+      Probability: 0.25
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
@@ -754,7 +754,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -772,7 +772,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -790,7 +790,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -808,7 +808,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -826,7 +826,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 

@@ -14047,6 +14047,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 # ========================================================================================================================== Planetary Drones
 
+# Damaged Plasma Hover Drone
+{ +Entity Name: Eden_PlasmaDroneEasy, Ref: DroneSmallFast01Plasma
+  MaxHealth: 3500 # 7000
+  XpFactor: 3.25
+}
+
 # Abyssal Plasma Drone
 { +Entity Name: Eden_DroneAbyssalPlasma
   EntityType: EnemyDrone
@@ -16236,11 +16242,29 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Eden_AsteroidFieldL_BlackThick, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlackThick
 }
+{ +Entity Name: Eden_AsteroidFieldL_BlackThick2, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlackThick2
+}
+{ +Entity Name: Eden_AsteroidFieldL_BlackThick3, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlackThick3
+}
 { +Entity Name: Eden_AsteroidFieldL_Blue, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Blue
 }
+{ +Entity Name: Eden_AsteroidFieldL_Blue2, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Blue2
+}
+{ +Entity Name: Eden_AsteroidFieldL_Blue3, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Blue3
+}
 { +Entity Name: Eden_AsteroidFieldL_BlueThick, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlueThick
+}
+{ +Entity Name: Eden_AsteroidFieldL_BlueThick2, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlueThick2
+}
+{ +Entity Name: Eden_AsteroidFieldL_BlueThick3, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlueThick3
 }
 { +Entity Name: Eden_AsteroidFieldL_BlueThickOrbit, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlueThickOrbit
@@ -16254,6 +16278,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Eden_AsteroidFieldL_Brown3, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Brown3
 }
+{ +Entity Name: Eden_AsteroidFieldL_Brown4, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Brown4
+}
 { +Entity Name: Eden_AsteroidFieldL_BrownThick, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BrownThick
 }
@@ -16263,6 +16290,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Eden_AsteroidFieldL_BrownThick3, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BrownThick3
 }
+{ +Entity Name: Eden_AsteroidFieldL_BrownThick4, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BrownThick4
+}
 { +Entity Name: Eden_AsteroidFieldL_CrystalCopper, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_CrystalCopper
 }
@@ -16271,6 +16301,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 }
 { +Entity Name: Eden_AsteroidFieldL_CrystalSilver, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_CrystalSilver
+}
+{ +Entity Name: Eden_AsteroidFieldL_DarkBlack, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_DarkBlack
+}
+{ +Entity Name: Eden_AsteroidFieldL_DarkBrown, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_DarkBrown
 }
 { +Entity Name: Eden_AsteroidFieldL_DarkGray, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_DarkGray
@@ -16299,7 +16335,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Eden_AsteroidFieldL_GrayThick3, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_GrayThick3
 }
-{ +Entity Name: Eden_AsteroidFieldL_GrayThick4, Ref: Eden_NebulaTemplate
+{ +Entity Name: Eden_AsteroidFieldL_GrayThick4, Ref: Eden_NebulaTemplate # Good for main field
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_GrayThick4
 }
 { +Entity Name: Eden_AsteroidFieldL_GrayThick5, Ref: Eden_NebulaTemplate

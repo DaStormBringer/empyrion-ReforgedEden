@@ -3562,7 +3562,7 @@ Biomes:
      # - MountainPlateau_08_sp
      # - MountainPlateau_01
     
-    Temperature: 20
+    Temperature: 10
     AmbientSound: Oasis
     # AmbientSound: DesertHighPlains
 

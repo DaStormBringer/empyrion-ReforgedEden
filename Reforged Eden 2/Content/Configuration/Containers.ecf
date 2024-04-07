@@ -812,8 +812,8 @@
     Name_21: EnergyCellLarge, param1: 1, param2: "10,20"
 
     Group_0: Hacking, param1: 0.05
-    Group_1: WeaponUpgradesRare, param1: 0.15
-    Group_2: WeaponUpgradesCommon, param1: 0.20
+    Group_1: WeaponUpgradesRare, param1: 0.10
+    Group_2: WeaponUpgradesCommon, param1: 0.15
     Group_3: SuitBooster, param1: 0.20
     Group_4: Medikits, param1: 0.5
 #ReforgedReplaceString    Group_5: Eden_RecipesWeapon, param1: 0.01
@@ -1422,7 +1422,7 @@
     Name_0: IronOre, param1: 0.6, param2: "50,180"
     Name_1: CopperOre, param1: 0.5, param2: "40,120"
     Name_2: SiliconOre, param1: 0.5, param2: "40,120"
-    Name_3: WoodLogs, param1: 0.5, param2: "75,150"
+    Name_3: Graphite, param1: 0.5, param2: "75,150"
     Name_4: PromethiumOre, param1: 0.4, param2: "25,80"
     Name_5: CobaltOre, param1: 0.3, param2: "40,100"
     Name_6: MagnesiumOre, param1: 0.3, param2: "40,100"
@@ -2305,7 +2305,7 @@
   SfxClose: UseActions/electric
 
   { Child Items
-    Name_0: PentaxidCrystal, param1: 0.5, param2: "1,18"
+    Group_0: empty
   }
 }
 
@@ -2345,7 +2345,7 @@
   SfxClose: UseActions/electric
 
   { Child Items
-    Name_0: PentaxidCrystal, param1: 0.5, param2: "1,5"
+    Group_0: empty
   }
 }
 
@@ -2500,6 +2500,24 @@
 
   { Child Items
     Group_0: empty
+  }
+}
+## Random Dedicated Crew (Specified by dialog)
+{ +Container Id: 400
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/drone_open
+  SfxClose: UseActions/drone_close
+
+  { Child Items
+    Name_0: CrewSecurity01, param1: 0.1, param2: "1"
+    Name_1: CrewMedical01, param1: 0.1, param2: "1"
+    Name_2: CrewBridge01, param1: 0.1, param2: "1"
+    Name_3: CrewBridge02, param1: 0.1, param2: "1"
+    Name_4: CrewEngineer01, param1: 0.1, param2: "1"
+    Name_5: CrewEngineer02, param1: 0.1, param2: "1"
+    Name_6: CrewEngineer03, param1: 0.1, param2: "1"
+    Name_7: CrewPilot01, param1: 0.1, param2: "1"
   }
 }
 

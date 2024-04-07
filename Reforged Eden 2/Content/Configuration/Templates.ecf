@@ -20,10 +20,19 @@
  # =======================
  #  Reprocessed Ores  
  # =======================
- 
+
+{ Template Name: Graphite
+  BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+  CraftTime: 10
+  OutputCount: 5
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    RockDust: 25
+  }
+}
 { +Template Name: IronOre
   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
-  CraftTime: 5
+  CraftTime: 10
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     RockDust: 25
@@ -31,7 +40,7 @@
 }
 { +Template Name: CopperOre
   BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
-  CraftTime: 5
+  CraftTime: 10
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     RockDust: 25
@@ -39,7 +48,7 @@
 }
 { +Template Name: SiliconOre
   BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
-  CraftTime: 5
+  CraftTime: 10
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     RockDust: 25
@@ -65,7 +74,7 @@
 }
 { +Template Name: GoldOre
   BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
-  CraftTime: 50
+  CraftTime: 25
   OutputCount: 5
   Target: "Furn"
   { Child Inputs
@@ -81,13 +90,13 @@
     SteelPlateArmored: 24
   }
 }
-{ Template Name: Graphite
-  DeconOverride: Continue #Can be broken down into carbon substrate with deconstructor
-  CraftTime: 15
+{ +Template Name: PlatinOre
+  BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+  CraftTime: 25
   OutputCount: 5
-  Target: ""
+  Target: "Furn"
   { Child Inputs
-    PlasticMaterial: 10
+    PlatinOunce: 24
   }
 }
  # =======================
@@ -121,6 +130,16 @@
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC,Furn"
   { Child Inputs
     SiliconOre: 5
+  }
+}
+
+{ +Template Name: PlasticMaterial
+  BaseItem: true 
+  OutputCount: 10
+  CraftTime: 3
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs    
+    Graphite: 5
   }
 }
 
@@ -228,16 +247,6 @@
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC,Furn"
   { Child Inputs
     AluminiumOre: 5
-  }
-}
-
-{ +Template Name: PlasticMaterial
-  BaseItem: true 
-  OutputCount: 3
-  CraftTime: 3
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs    
-    CrushedStone: 5
   }
 }
 
@@ -3029,8 +3038,20 @@
 # =======================
 #      Exotic Devices 
 # =======================
-
-{ +Template Name: GravityGeneratorMS
+{ +Template Name: GravityGeneratorBlocksSVHV
+  CraftTime: 5
+  Target: "AdvC"
+  { Child Inputs
+    Motor: 2
+	Computer: 2
+    EnergyMatrix: 4
+    CapacitorComponent: 2
+    MechanicalComponents: 18
+    FluxCoil: 2
+    PentaxidElement: 12
+  }
+}
+{ +Template Name: GravityGeneratorBlocksBACV
   CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -3040,21 +3061,6 @@
     CapacitorComponent: 4
     MechanicalComponents: 36
     FluxCoil: 4
-    PentaxidElement: 24
-  }
-}
-
-{ +Template Name: GravityGeneratorSmall
-  CraftTime: 10
-  Target: "SmallC,AdvC"
-  { Child Inputs
-    GoldIngot: 20
-    PlatinOunce: 16
-	Computer: 8
-    Oscillator: 16
-    CapacitorComponent: 8
-    Superconductor: 8
-    PowerCoil: 4
     PentaxidElement: 24
   }
 }
@@ -5505,6 +5511,20 @@
 	SmallUpgradeKit: 1
   }
 }
+# T2 HV Flamethrower - Uses FlamethrowerTank
+{ +Template Name: WeaponHVFlamethrowerT2
+  CraftTime: 12
+  Target: "SmallC,LargeC,AdvC"
+  { Child Inputs
+	TitanPlates: 24
+    AluminiumCoil: 20
+    Nanotubes: 28
+    Motor: 4
+	CobaltAlloy: 24
+    FluxCoil: 2
+	SmallUpgradeKit: 1
+  }
+}
 # =========== T3 HV/SV Weapons ============
 # T3 HV/SV Gatling Gun - Uses 30mmHEBullet
 { +Template Name: WeaponSVGatlingT3
@@ -6479,10 +6499,10 @@
 # Used by Flamethrower
 { +Template Name: FlameThrowerCanister
   OutputCount: 1
-  CraftTime: 15
+  CraftTime: 10
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
-    BioFuel: 3
+    BioFuelT2: 3
 	HydrogenBottle: 2
   }
 }
@@ -6788,6 +6808,18 @@
     AluminiumPowder: 25
 	PentaxidElement: 25
 	FusionCell: 4
+  }
+}
+# Used by FlamethrowerHVWeaponT2
+{ +Template Name: FlamethrowerTank
+  OutputCount: 2
+  CraftTime: 8
+  Target: "SmallC,LargeC,AdvC"
+  { Child Inputs
+    BioFuelT2: 5
+	HydrogenBottle: 5
+    AluminiumPowder: 8
+    MagnesiumPowder: 8
   }
 }
 # ===============================
@@ -9999,9 +10031,11 @@
   CraftTime: 20 #A1 Ba CV 1
   Target: "LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 80
+    SteelPlate: 50
     MechanicalComponents: 80
+    Computer: 5
     Motor: 10
+    OpticalFiber: 25
   }
 }
 
@@ -10011,9 +10045,11 @@
   # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   Target: ""
   { Child Inputs
-    SteelPlate: 80
+    SteelPlate: 50
     MechanicalComponents: 80
+    Computer: 5
     Motor: 10
+    OpticalFiber: 25
     Eden_WaterSample: 1
   }
 }
@@ -10458,10 +10494,10 @@
   CraftTime: 25
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlasticMaterial: 6
-    Electronics: 4
-    Computer: 5
-    OpticalFiber: 3
+    SteelPlate: 24
+    Electronics: 48
+    Computer: 15
+    OpticalFiber: 36
   }
 }
 
@@ -11067,6 +11103,22 @@
   }
 }
 
+# Slag
+{ +Template Name: Eden_Slag
+  DeconOverride: Continue
+  CraftTime: 5
+  Target: ""
+  { Child Inputs
+    NeodymiumIngot: 10
+    Eden_TungstenIngot: 5
+    CopperIngot: 15
+    SathiumIngot: 5
+    CobaltIngot: 5
+    IronIngot: 25
+  }
+}
+
+
 # Advanced Trade Goods
 
 # Polaris, Zirax, and Trader
@@ -11323,7 +11375,7 @@
   CraftTime: 10
   Target: "BaseC,LargeC,AdvC"
   { Child Inputs
-    Eden_TungstenOre: 10
+    Eden_TungstenOre: 5
   }
 }
 
@@ -11811,9 +11863,10 @@
   CraftTime: 5
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    MechanicalComponents: 2
-    Electronics: 2
-    SteelPlate: 1
+    MechanicalComponents: 4
+    Electronics: 4
+    SteelPlate: 8
+	Motor: 1
   }
 }
 

@@ -319,8 +319,8 @@ POIs:
               # Value: 720
          
        # # ================================
-        # # AbandonedPOIRG with some ruins around
-        # - GroupName: AbandonedPOIRG
+        # # R2AbandonedPOI with some ruins around
+        # - GroupName: R2AbandonedPOI
           # Faction: Alien  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           # CountMinMax: [ 1, 1 ]
@@ -343,7 +343,7 @@ POIs:
           # DronesMinMax: [ 1, 3 ]
           # ReserveCount: 2
           # TroopTransport: False
-          # SpawnPOINear: [AbandonedPOIRG]
+          # SpawnPOINear: [R2AbandonedPOI]
           # SpawnPOINearRange: [150, 250] 
           # Properties: 
             # - Key: MapDistance
@@ -386,7 +386,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        # - GroupName: AbandonedPOIRG
+        # - GroupName: R2AbandonedPOI
           # Faction: Alien  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           # CountMinMax: [ 1, 2 ]
@@ -548,7 +548,7 @@ DroneSpawning:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [CrashedShip, AbandonedPOIRG, Wreckage]
+   # - SpawnAt: [CrashedShip, R2AbandonedPOI, Wreckage]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

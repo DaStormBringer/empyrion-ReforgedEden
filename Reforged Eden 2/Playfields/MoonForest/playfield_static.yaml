@@ -889,7 +889,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   # - SpawnAt: [Artifacts, AbandonedPOIRG]
+   # - SpawnAt: [Artifacts, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 100
      # RadiusRandom: 0

@@ -1281,7 +1281,7 @@
   Item3: "TalonCrossbowTribalPlayer, mf=1.0-1.25, 10-15, 0, 0"
   Item4: "CrossbowBoltPlayer, mf=1.0-1.5, 240-480, 0, 0"
   Item5: "WoodBlocks, mf=0.75-1.0, 200-400, 0, 0"
-  Item6: "CivilianFurniture, mf=1.0-1.25, 300-600, 0, 0"
+  Item6: "CivilianFurniture, mf=1.0-1.25, 10-30, 0, 0"
 #BUYING from player
   Item7: "WoodLogs, 0, 0 , mf=0.5-0.75, 400-600"
   Item8: "WoodPlanks, 0, 0 , mf=0.75-1.25, 1000-2000"
@@ -2964,7 +2964,16 @@
   Item19: "Token:170, 0, 0 , 1100-1300, 0-25"
   Item20: "Token:162, 0, 0 , 5000-6000, 0-25"
 }
-
+# ========= Bank Teller (ArkBank) ==========
+{ Trader Name: ArkBank
+  SellingText: "Welcome to ArkBank! Most of our services are automated by ATMs these days, but there's always a need for a physical presence for some exchanges.\nWould you like to exchange any valid currency or bullion in the vault?"
+  SellingGoods: "trwResources"
+# 1:1 Value Exchange
+  Item1: "PlatinumCard, 10000, 999-1000, 10000, 1001-2000"
+  Item2: "GoldCoins, 50, 5000-10000, 50, 10000-25000"
+  Item3: "GoldIngot, 100, 1000-1250, 100, 1100-1500"
+  Item4: "PlatinBar, 150, 250-500, 150, 251-750"
+}
 
 
 # ============================================================================================================================================================================

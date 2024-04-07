@@ -1660,13 +1660,13 @@
   ShowUser: No
   Group: resource
   { Child DropOnDestroy_1
-    Item: PlasticMaterial
-    Count: "3,5"
-    Prob: 0.4
+    Item: Graphite
+    Count: "1,4"
+    Prob: 0.6
   }
   { Child DropOnDestroy_2
-    Item: Graphite
-    Count: "0,2"
+    Item: CrushedStone
+    Count: "1,2"
     Prob: 0.1
   }
 }
@@ -1791,7 +1791,7 @@
   IndexName: FuelTank
   Group: cpgFuelTank
   EssentialCategory: cpgFuelTank
-  MarketPrice: 364, display: true
+  MarketPrice: 420, display: true
   Material: Device
   Shape: ModelEntity
   ShowBlockName: true
@@ -1831,7 +1831,7 @@
 }
 { +Block Id: 260, Name: FuelTankMSLarge, Ref: FuelTankMSSmall
   Model: @models/Blocks/Mothership/FuelTankMSLargePrefab
-  MarketPrice: 1314, display: true
+  MarketPrice: 1410, display: true
   HitPoints: 1125, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, FusionCell, BioFuel, BioFuelT2"
   FuelCapacity: 8000, type: int, display: true 
@@ -2037,7 +2037,7 @@
   Group: cpgPassengerSeat
   Material: Device
   Shape: ModelEntity
-  MarketPrice: 340, display: true
+  MarketPrice: 364, display: true
   ShowBlockName: true
   Model: @models/Blocks/Mothership/passengerSeatMSPrefab
   Mesh-Damage-1: Mesh/D0
@@ -2356,12 +2356,14 @@
   Shape: ModelEntity
   ShowBlockName: true
   MarketPrice: 8292, display: true
-  Model: @models/Blocks/Mothership/gravitygeneratorMSPrefab
-  Mesh-Damage-1: Mesh/D0
-  Mesh-Damage-2: Mesh/D1
-  Mesh-Damage-3: Mesh/D2
-  Mesh-Damage-4: Mesh/D3
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorBACVLargePrefab
+  # Model: @models/Blocks/Mothership/gravitygeneratorMSPrefab
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  CustomIcon: GravityGeneratorBlocksBACV
   Place: Free
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "2,2,2", display: true
@@ -2369,27 +2371,30 @@
   Volume: 1600, type: float, display: true, formatter: Liter
   IsActivateable: true
   IsOxygenTight: false, display: true 
-  Info: bkiGravityGenerator, display: true
+  # Info: bkiGravityGenerator, display: true
+  Info: bkiGravityGeneratorBlocksPreviewInfo, display: true
   StackSize: 250
   BlockColor: "110,110,110"
   Category: Devices
-  HitPoints: 1200, type: int, display: true
+  HitPoints: 2400, type: int, display: true
   Mass: 10000, type: float, display: true, formatter: Kilogram
   EnergyIn: 250, type: int, display: true, formatter: Watt
-  CPUIn: 1000, type: int, display: true
+  CPUIn: 800, type: int, display: true
+  TemplateRoot: GravityGeneratorBlocksBACV
 
+  GravityGeneratorRadius: 75, type: int, display: true
   BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 250
 
-  UnlockCost: 11, display: true
-  UnlockLevel: 7, display: true
-  TechTreeParent: ElevatorMS
-  TechTreeNames: "Base,Capital Vessel"
+  #UnlockCost: 11, display: true
+  #UnlockLevel: 7, display: true
+  #TechTreeParent: ElevatorMS
+  #TechTreeNames: "Base,Capital Vessel"
   
-  Radiation: 5, display: RadiationLevel
-  Temperature: 32, display: true
+  Radiation: 20, display: RadiationLevel
+  Temperature: -132, display: true
 }
 { +Block Id: 279, Name: LightSS01
   Class: Light
@@ -3480,7 +3485,7 @@
 
   UnlockCost: 13, display: true
   UnlockLevel: 10, display: true
-  TechTreeParent: GravityGeneratorMS
+  TechTreeParent: GravityGeneratorBlocksBACV
   TechTreeNames: "Base,Capital Vessel"
 
   WarpAccept: PentaxidCrystal
@@ -3710,7 +3715,7 @@
   BlastDamage: 600
   EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 1000, type: int, display: true
-  HitPoints: 7500, type: int, display: true
+  HitPoints: 5000, type: int, display: true
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
 }
@@ -4776,7 +4781,7 @@
   HitPoints: 500, type: int, display: true
   ShowUser: No
   { Child DropOnDestroy_1
-    Item: PlasticMaterial
+    Item: Graphite
     Count: "6,12"
     Prob: 1
   }
@@ -4882,7 +4887,7 @@
 { +Block Id: 419, Name: FuelTankSV
   Class: FuelTank
   IndexName: FuelTank
-  MarketPrice: 168, display: true
+  MarketPrice: 200, display: true
   Group: cpgFuelTank
   EssentialCategory: cpgFuelTank
   Material: Device
@@ -5021,7 +5026,7 @@
   Class: Container
   IndexName: Fridge
   Group: cpgFridge
-  MarketPrice: 136, display: true
+  MarketPrice: 160, display: true
   LootList: 1   #  empty medium  
   DontDecayFood: true   #  now this loot container is a fridge  
   Material: Device
@@ -6138,7 +6143,7 @@
   Class: FuelTank
   IndexName: FuelTank
   Group: cpgFuelTank
-  MarketPrice: 90, display: true
+  MarketPrice: 106, display: true
   EssentialCategory: cpgFuelTank
   Material: Device
   Shape: ModelEntity
@@ -11112,7 +11117,7 @@
   Class: PassengerSeat
   Group: cpgPassengerSeat
   Material: Device
-  MarketPrice: 432, display: true
+  MarketPrice: 464, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Spaceship/PassengerSeatSVPrefab
@@ -11235,7 +11240,7 @@
   Class: PassengerSeat
   Group: cpgPassengerSeat
   Material: Device
-  MarketPrice: 340, display: true
+  MarketPrice: 364, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Spaceship/PassengerSeat2SVPrefab
@@ -13234,12 +13239,12 @@
   SizeInBlocks: "1,6,1", display: true
   AllowPlacingAt: "SS", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
-  Mass: 1165, type: float, display: true, formatter: Kilogram
+  Mass: 665, type: float, display: true, formatter: Kilogram
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
   EnergyIn: 600, type: int, display: true, formatter: Watt
-  CPUIn: 750, type: int, display: true 
+  CPUIn: 700, type: int, display: true 
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 3000, type: int, display: true
   StackSize: 1000
@@ -14116,7 +14121,7 @@
 { +Block Id: 927, Name: DecoBlocks
   Material: Device
   Shape: Invisible
-  MarketPrice: 48, display: true
+  MarketPrice: 68, display: true
   # Model: @models2/Entities/Decorations/Sci-Fi_InteriorPack/ScifiBedPrefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -14139,7 +14144,7 @@
 { +Block Id: 928, Name: ConsoleBlocks
   Material: Device
   Shape: Invisible
-  MarketPrice: 326, display: true
+  MarketPrice: 346, display: true
   ShowBlockName: true
   # Model: @models/Blocks/Mothership/ConsoleMS01Prefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
@@ -14165,7 +14170,7 @@
 { +Block Id: 929, Name: IndoorPlants
   Material: Device
   Shape: Invisible
-  MarketPrice: 25, display: true
+  MarketPrice: 29, display: true
   # Model: @models2/Entities/Decorations/IndoorPlants/IndoorPlant01Prefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -14835,7 +14840,7 @@
 { +Block Id: 962, Name: FoodProcessorV2
   Class: FoodProcessorV2
   IndexName: Constructor
-  MarketPrice: 1400, display: true
+  MarketPrice: 1440, display: true
   Group: cpgFoodProcessor
   DontDecayFood: true
   Material: Device
@@ -15739,7 +15744,7 @@
   Radiation: 24, display: RadiationLevel
 }
 { +Block Id: 1035, Name: FuelTankMSLargeT2, Ref: FuelTankMSLarge
-  MarketPrice: 2204, display: true
+  MarketPrice: 2332, display: true
   Model: @models/Blocks/Mothership/FuelTankMSLargeT2Prefab
   SizeInBlocks: "2,2,1", display: true
   Volume: 255, type: float, display: true, formatter: Liter
@@ -16568,7 +16573,7 @@
 { +Block Id: 1095, Name: LCDScreenBlocks
   Material: Device
   Shape: Invisible
-  MarketPrice: 318, display: true
+  MarketPrice: 334, display: true
   # Model: @models/Blocks/Misc/LCDNoFrame1x1Prefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   HitPoints: 250, type: int, display: false
@@ -17299,7 +17304,7 @@
 { +Block Id: 1135, Name: WingBlocks
   Material: SteelSmall
   Texture: 50
-  MarketPrice: 214, display: true
+  MarketPrice: 230, display: true
   BlockColor: "110,110,110"
   Shape: Invisible
   # Model: Wings/Wing6x9a
@@ -19076,7 +19081,7 @@
 }
 { +Block Id: 1281, Name: DecoBlocks2, Ref: DecoBlocks
   Shape: Invisible
-  MarketPrice: 180, display: true
+  MarketPrice: 200, display: true
   # Model: @models2/Entities/Decorations/LaboratoryPack/Scanner3Prefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -21036,7 +21041,7 @@
 { +Block Id: 1437, Name: PentaxidTankSV
   Class: WarpDriveTank
   Group: cpgWarp
-  MarketPrice: 2640, display: true
+  MarketPrice: 2688, display: true
   IndexName: WarpDriveTank
   LootList: 13   #   lootcontainer Warp Drive Tank SV 
   Material: Device
@@ -21533,7 +21538,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Material: CarbonSmall
   Texture: 77
-  MarketPrice: 8, display: true
+  MarketPrice: 14, display: true
   BlockColor: "10,10,10"
   Shape: Invisible
   Place: Free
@@ -21583,7 +21588,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Material: CarbonLarge
   Texture: 77
-  MarketPrice: 18, display: true
+  MarketPrice: 34, display: true
   BlockColor: "10,10,10"
   Shape: New
   Place: Free
@@ -21834,7 +21839,7 @@
   Class: SolarPanel
   IndexName: SolarPanel
   Group: cpgSolar
-  MarketPrice: 1690, display: true
+  MarketPrice: 1770, display: true
   PanelAngle: 30
   SolarPanelEfficiency: 1.8, display: true 
   EssentialCategory: cpgFuelTank
@@ -21863,7 +21868,7 @@
   Class: SolarGenerator
   IndexName: SolarGenerator
   Group: cpgSolar
-  MarketPrice: 896, display: true
+  MarketPrice: 944, display: true
   EssentialCategory: cpgGenerator
   IsSolarPanel: true
   Material: Device
@@ -22064,7 +22069,7 @@
   Class: SolarPanel
   IndexName: SolarPanel
   Group: cpgSolar
-  MarketPrice: 745, display: true
+  MarketPrice: 785, display: true
   PanelAngle: 30
   SolarPanelEfficiency: 1.0, display: true 
   EssentialCategory: cpgFuelTank
@@ -22655,7 +22660,7 @@
 { +Block Id: 1571, Name: MedicalStationBlocks
   Material: Device
   Shape: Invisible
-  MarketPrice: 2772, display: true
+  MarketPrice: 2820, display: true
   # Model: @models/Blocks/Mothership/MedicStationPrefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -22711,7 +22716,7 @@
 { +Block Id: 1575, Name: DetectorHVT1 
   Info: bkiDetector, display: true 
   WeaponItem: DetectorHVWeapon
-  MarketPrice: 372, display: true
+  MarketPrice: 388, display: true
   WeaponItemRotation: false
   TurretTargetIgnore: true
   CustomIcon: DetectorSVT1
@@ -22922,7 +22927,7 @@
 # Do not change name of block since it is referenced in code (WdwVesselStatistics.cs)
 { +Block Id: 1584, Name: MedicStationHV
   Class: MedicStation
-  MarketPrice: 1338, display: true
+  MarketPrice: 1370, display: true
   Group: cpgMedic
   Material: Device
   Shape: ModelEntity
@@ -22995,7 +23000,7 @@
 { +Block Id: 1588, Name: FridgeBlocks
   Material: Device 
   Shape: Invisible
-  MarketPrice: 388, display: true
+  MarketPrice: 436, display: true
   # Model: @models/Blocks/Mothership/FridgeT1Prefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -23412,7 +23417,7 @@
   ShowUser: NoButCSV
 }
 { +Block Id: 1626, Name: ModularWingBlocks
-  MarketPrice: 140, display: true
+  MarketPrice: 160, display: true
   Material: CarbonSmall
   Shape: Invisible
   # Model: @models/Blocks/WingsModular/ModWingTaperLPrefab
@@ -23440,7 +23445,7 @@
 { +Block Id: 1627, Name: RemoteConnection
   Class: RemoteConnector
   IndexName: Connector
-  MarketPrice: 1144, display: true
+  MarketPrice: 1176, display: true
   Group: cpgRepair
   Material: Device 
   Shape: ModelEntity
@@ -23684,7 +23689,7 @@
   Info: bkiDetector, display: true
   WeaponItem: DetectorSVWeapon
   WeaponItemRotation: false
-  MarketPrice: 372, display: true
+  MarketPrice: 388, display: true
   SizeInBlocks: "1,1,1", display: true
   AllowPlacingAt: "SS", display: true  
   MaxCount: 1, type: int, display: true
@@ -25098,7 +25103,7 @@
 { +Block Id: 1719, Name: DecoVesselBlocks
   Material: Device
   Shape: Invisible
-  MarketPrice: 96, display: true
+  MarketPrice: 116, display: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Face
   Info: bkiBlockGroup, display: true
@@ -31115,6 +31120,7 @@
   Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Hero_Forest
   DecoParticle: chinesebanyan
   ShowUser: No
+  XpFactor: 5.0
   HitPoints: 2990, type: int, display: false
   { Child DropOnDestroy
     Item: WoodLogs
@@ -31132,6 +31138,7 @@
   Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Hero_Field
   DecoParticle: chinesebanyan
   ShowUser: No
+  XpFactor: 5.0
   HitPoints: 2940, type: int, display: false
   { Child DropOnDestroy
     Item: WoodLogs
@@ -31149,6 +31156,7 @@
   Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Desktop_Forest
   DecoParticle: chinesebanyan
   ShowUser: No
+  XpFactor: 3.0
   HitPoints: 2990, type: int, display: false
   { Child DropOnDestroy
     Item: WoodLogs
@@ -31166,6 +31174,7 @@
   Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Desktop_Field
   DecoParticle: chinesebanyan
   ShowUser: No
+  XpFactor: 3.0
   HitPoints: 2970, type: int, display: false
   { Child DropOnDestroy
     Item: WoodLogs
@@ -36239,7 +36248,55 @@
   TechTreeParent: WeaponHVCannonT1
   TechTreeNames: Hover Vessel
 }
+{ Block Name: WeaponHVFlamethrowerT2
+  Class: Weapon
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: WeaponSmall
+  Shape: ModelEntity
+  ShowBlockName: true
+  MarketPrice: 30490, display: true
+  WeaponItem: FlamethrowerHVWeaponT2
+  Model: @reforged2/HeavyFlamethrowerSmall
+  Mesh-Damage-1: D0
+  Mesh-Damage-2: D1
+  Mesh-Damage-3: D2
+  Mesh-Damage-4: D3
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  
+  IsTextureable: true
+  IsGPUInstance: false
+  Texture: 50 
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
+  IsActivateable: true
+  IsRetractable: false, display: false
+  
+  Place: WeaponDir
+  AllowPlacingAt: GV, display: true
+  SizeInBlocks: "2,9,2", display: true
+  Volume: 800, type: float, display: true, formatter: Liter
+  Mass: 1000, type: float, display: true, formatter: Kilogram
+  Info: bkiWeaponHVFlamethrowerT2, display: true
+  Category: Weapons/Items
+  BlockColor: "110,110,110"
+  StackSize: 500
+  MaxCount: 4, type: int, display: true
+  ForceMaxCount: true
+  BlastParticleIndex: 1
+  BlastRadius: 5
+  BlastDamage: 900
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  CPUIn: 2000, type: int, display: true
+  HitPoints: 6000, type: int, display: true
+  OccupySizeInBlocks: true
+  Voxelize: false
 
+  UnlockCost: 15, display: true
+  UnlockLevel: 15, display: true
+  TechTreeParent: WeaponHVCannonT1
+  TechTreeNames: Hover Vessel
+}
 # =========================================
 # Heavy Weapons HV/SV
 # =========================================
@@ -42365,7 +42422,7 @@
   MarketPrice: 1108, display: true
   Shape: ModelEntity
   ShowBlockName: true
-  WeaponItem: DrillAttachmentWeapon
+  WeaponItem: DrillAttachmentSVT1Weapon
   Model: @models/Blocks/WeaponsShip/DrillAttachmentRetractPrefab
   # Model: @models/Blocks/WeaponsShip/DrillAttachmentPrefab
   DropMeshfile: Entities/Misc/DropContainerNewPrefab  
@@ -42381,7 +42438,7 @@
   SizeInBlocks: "1,6,1", display: true
   AllowPlacingAt: "SS", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
-  Mass: 600, type: float, display: true, formatter: Kilogram
+  Mass: 400, type: float, display: true, formatter: Kilogram
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
@@ -42399,45 +42456,6 @@
   UnlockLevel: 10, display: true
   TechTreeParent: ContainerHarvestControllerSmall
   TechTreeNames: "Small Vessel"
-}
-{ Block Name: GravityGeneratorSmall
-  IndexName: Gravity
-  Group: cpgGravityGenerator
-  Material: Device
-  Shape: ModelEntity
-  ShowBlockName: true
-  MarketPrice: 37600, display: true
-  Model: @reforgedcontent/RadioisotopeGeneratorRG
-  DropMeshfile: Entities/Misc/DropContainerNewPrefab
-  Place: Free
-  AllowPlacingAt: "Base,MS,SS,GV", display: true
-  SizeInBlocks: "1,1,1", display: true
-  SizeInBlocksLocked: "Base,MS"
-  Volume: 800, type: float, display: true, formatter: Liter
-  IsActivateable: true
-  IsOxygenTight: false, display: true 
-  Info: bkiGravGenSmall, display: true
-  StackSize: 250
-  CustomIcon: RTG
-  BlockColor: "110,110,110"
-  Category: Devices
-  HitPoints: 1000, type: int, display: true
-  Mass: 1000, type: float, display: true, formatter: Kilogram
-  EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 1000, type: int, display: true
-
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
-  BlastParticleIndex: 0
-  BlastRadius: 4
-  BlastDamage: 450
-
-  UnlockCost: 12, display: true
-  UnlockLevel: 25, display: true
-  TechTreeParent: GravityGeneratorMS
-  TechTreeNames: "Base,Capital Vessel"
-  
-  Radiation: 6, display: RadiationLevel
-  Temperature: -110, display: true
 }
 # ============= SV Dismantler =============
 { Block Name: MultitoolSV
@@ -42757,7 +42775,7 @@
 # HV/SV Food Processor
 { Block Name: FoodProcessorSmall
   Class: FoodProcessorV2
-  MarketPrice: 1192, display: true
+  MarketPrice: 1216, display: true
   IndexName: Constructor
   Group: cpgFoodProcessor
   Material: Device
@@ -43185,7 +43203,7 @@
   
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
-  TechTreeParent: GravityGeneratorMS
+  TechTreeParent: GravityGeneratorBlocksBACV
   TechTreeNames: "Base,Capital Vessel"
 }
 { Block Name: ShieldGeneratorPlanetZirax
@@ -43796,7 +43814,7 @@
 
   UnlockCost: 15, display: true
   UnlockLevel: 10, display: true
-  TechTreeParent: GravityGeneratorMS
+  TechTreeParent: GravityGeneratorBlocksBACV
   TechTreeNames: "Base,Capital Vessel"
 }
 { Block Name: ShieldBoosterLargeT2Blocks
@@ -44663,7 +44681,7 @@
   # ModelOffset: "0,0.5,0"
   Category: Deco Blocks 
   
-  MarketPrice: 70, display: true
+  MarketPrice: 78, display: true
   XpFactor: 0  
   RPFactor: 0
   
@@ -44998,6 +45016,236 @@
   Radiation: 4, display: RadiationLevel
   Temperature: 760, display: true
 }
+## ========== Gravity Generators
+{ Block Name: GravityGeneratorBlocksBACV
+  Info: bkiGravityGeneratorBlocks, display: true
+  
+  IndexName: Gravity
+  Group: cpgGravityGenerator  
+  Category: Devices  
+  
+  Material: Device
+
+  Mass: 10000, type: float, display: true, formatter: Kilogram
+  Volume: 1600, type: float, display: true, formatter: Liter
+  MarketPrice: 8292, display: true
+  
+  IsOxygenTight: false, display: true    #all of the group!
+  StackSize: 250
+  
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  
+  Shape: Invisible
+  ShowBlockName: true
+  BlockColor: "110,110,110"
+ 
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+
+  UnlockCost: 11, display: true
+  UnlockLevel: 7, display: true
+  TechTreeParent: ElevatorMS
+  TechTreeNames: "Base,Capital Vessel"
+  
+  ChildBlocks: "GravityGeneratorMS, GravityGeneratorBACVMedium, GravityGeneratorBACVSmall, GravityGeneratorBACVVerySmall"
+}
+
+{ Block Name: GravityGeneratorBACVMedium, Ref: GravityGeneratorMS
+  HitPoints: 1600, type: int, display: true 
+  EnergyIn: 200, type: int, display: true, formatter: Watt
+  CPUIn: 400, type: int, display: true
+  Mass: 7500, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 50, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorBACVMediumPrefab
+  SizeInBlocks: "2,1,2", display: true   
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 4
+  BlastDamage: 150 
+  
+  Radiation: 16, display: RadiationLevel 
+  Temperature: -104, display: true
+}
+
+{ Block Name: GravityGeneratorBACVSmall, Ref: GravityGeneratorMS 
+  HitPoints: 1200, type: int, display: true 
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  CPUIn: 200, type: int, display: true
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 25, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorBACVSmallPrefab
+  SizeInBlocks: "1,1,1", display: true   
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 3
+  BlastDamage: 100 
+  
+  Radiation: 12, display: RadiationLevel 
+  Temperature: -84, display: true
+}
+
+{ Block Name: GravityGeneratorBACVVerySmall, Ref: GravityGeneratorMS 
+  HitPoints: 800, type: int, display: true 
+  EnergyIn: 100, type: int, display: true, formatter: Watt
+  CPUIn: 100, type: int, display: true
+  Mass: 2500, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 12, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorBACVVerySmallPrefab
+  SizeInBlocks: "1,1,1", display: true   
+
+  BlastParticleIndex: 4
+  BlastRadius: 2
+  BlastDamage: 75 
+  
+  Radiation: 8, display: RadiationLevel 
+  Temperature: -62, display: true
+}
+
+## Gravity Generators SVHV
+
+{ Block Name: GravityGeneratorBlocksSVHV
+  Info: bkiGravityGeneratorBlocks, display: true
+  
+  IndexName: Gravity
+  Group: cpgGravityGenerator  
+  Category: Devices  
+  
+  Material: Device
+
+  Mass: 750, type: float, display: true, formatter: Kilogram
+  Volume: 240, type: float, display: true, formatter: Liter
+  MarketPrice: 3624, display: true
+  
+  IsOxygenTight: false, display: true
+  StackSize: 250
+  
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  
+  Shape: Invisible
+  ShowBlockName: true
+  BlockColor: "110,110,110"
+ 
+  Place: Free
+  AllowPlacingAt: "SS,GV", display: true
+
+  UnlockCost: 13, display: true
+  UnlockLevel: 12, display: true
+  TechTreeParent: FoodProcessorSmall
+  TechTreeNames: "Small Vessel,Hover Vessel"
+ 
+ ChildBlocks: "GravityGeneratorSVHVLarge, GravityGeneratorSVHVMedium, GravityGeneratorSVHVSmall, GravityGeneratorSVHVVerySmall"
+}
+
+
+{ Block Name: GravityGeneratorSVHVLarge  
+  Info: bkiGravityGeneratorBlocksPreviewInfo, display: true
+  CustomIcon: GravityGeneratorBlocksSVHV
+  
+  IndexName: Gravity
+  Group: cpgGravityGenerator  
+  Category: Devices  
+  TemplateRoot: GravityGeneratorBlocksSVHV
+  
+  Material: Device
+
+  HitPoints: 1000, type: int, display: true 
+  EnergyIn: 250, type: int, display: true, formatter: Watt
+  CPUIn: 250, type: int, display: true
+  Mass: 1000, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 12, type: int, display: true
+ 
+  IsActivateable: true
+  IsOxygenTight: false, display: true 
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorSVHVLargePrefab
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab             #Large container box; Available variants: see start of this document!
+  
+  Shape: ModelEntity 
+  ShowBlockName: true
+  BlockColor: "110,110,110"
+ 
+  Place: Free
+  AllowPlacingAt: "SS,GV", display: true
+  SizeInBlocks: "2,2,2", display: true 
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 3
+  BlastDamage: 240 
+  
+  Radiation: 10, display: RadiationLevel     
+  Temperature: -82, display: true
+}
+
+{ Block Name: GravityGeneratorSVHVMedium, Ref: GravityGeneratorSVHVLarge     
+
+  HitPoints: 750, type: int, display: true 
+  EnergyIn: 200, type: int, display: true, formatter: Watt
+  CPUIn: 200, type: int, display: true
+  Mass: 750, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 8, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorSVHVMediumPrefab
+  SizeInBlocks: "2,1,2", display: true   
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 3
+  BlastDamage: 200 
+  
+  Radiation: 8, display: RadiationLevel 
+  Temperature: -63, display: true
+}
+{ Block Name: GravityGeneratorSVHVSmall, Ref: GravityGeneratorSVHVLarge    
+
+  HitPoints: 500, type: int, display: true 
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  CPUIn: 150, type: int, display: true
+  Mass: 500, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 4, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorSVHVSmallPrefab
+  SizeInBlocks: "1,1,1", display: true   
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 2
+  BlastDamage: 160 
+  
+  Radiation: 6, display: RadiationLevel 
+  Temperature: -41, display: true
+}
+{ Block Name: GravityGeneratorSVHVVerySmall, Ref: GravityGeneratorSVHVLarge    
+
+  HitPoints: 250, type: int, display: true 
+  EnergyIn: 100, type: int, display: true, formatter: Watt
+  CPUIn: 100, type: int, display: true
+  Mass: 250, type: float, display: true, formatter: Kilogram
+  
+  GravityGeneratorRadius: 2, type: int, display: true
+  
+  Model: @models/Blocks/GravityGenerators/GravityGeneratorSVHVVerySmallPrefab
+  SizeInBlocks: "1,1,1", display: true   
+
+  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleIndex: 0
+  BlastRadius: 2
+  BlastDamage: 120 
+  
+  Radiation: 4, display: RadiationLevel 
+  Temperature: -27, display: true
+}
 
 
 # ============================================================================================================================================================================
@@ -45069,6 +45317,7 @@
   NPCModelRotation: false
   DialogueState: Eden_ScanTable_Init
   OmitCone: true
+  MarketPrice: 37909, display: true
   Group: cpgEquipment
   Material: Device
   Shape: ModelEntity
@@ -45104,6 +45353,7 @@
   DialogueState: Eden_ScienceStation_Init
   DialogueSingleUserAccess: true
   OmitCone: true
+  MarketPrice: 37909, display: true
   Group: cpgEquipment
   Material: Device
   Shape: ModelEntity
@@ -45145,7 +45395,7 @@
   Group: cpgCore
   IndexName: Core
   CustomIcon: CorePlayerAdmin
-  MarketPrice: 1166, display: true
+  MarketPrice: 3948, display: true
   EssentialCategory: cpgCore
   Material: Device
   Shape: ModelEntity
@@ -45158,8 +45408,8 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Faction: Player
   Place: Free
-  Mass: 140, type: float, display: true, formatter: Kilogram
-  Volume: 31.25, type: float, display: true, formatter: Liter
+  Mass: 420, type: float, display: true, formatter: Kilogram
+  Volume: 93.75, type: float, display: true, formatter: Liter
   StackSize: 1000
   AllowPlacingAt: "Base,MS,SS,GV", display: true
   IsAccessible: true, type: bool
@@ -45177,9 +45427,9 @@
   BlastRadius: 0
   BlastDamage: 0
   BlockColor: "150,0,0"
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 30, type: int, display: true, formatter: Watt
   CPUIn: 250, type: int, display: true
-  HitPoints: 125, type: int, display: true
+  HitPoints: 1250, type: int, display: true
   AllowWander: true
   CanPickup: true
   PickupToToolbar: true
@@ -45193,7 +45443,7 @@
 # ----------------------------------------- Lift Blocks
 # Lift Blocks (Experimental)
 { +Block Name: Eden_LiftLargeBlocks
-  MarketPrice: 11615, display: true
+  MarketPrice: 247, display: true
   Material: Device
   Shape: Invisible
   ShowBlockName: true
@@ -45217,7 +45467,7 @@
 
 # 1x2x1 Lift
 { +Block Name: Eden_LiftLargeBlocks1x2x1
-  MarketPrice: 11615, display: true
+  MarketPrice: 247, display: true
   Material: Device
   Shape: ModelEntity
   ShowBlockName: true
@@ -45283,7 +45533,7 @@
   DialogueState: Eden_WaterSetup_Init
   OmitCone: true
   DialogueSingleUserAccess: true
-  MarketPrice: 5000, display: true
+  MarketPrice: 2975, display: true
   IndexName: EdenWaterGenT2
   Material: Device
   Shape: ModelEntity
@@ -47134,6 +47384,7 @@
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   StackSize: 1000
   MaxCount: 10, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 4
   RepairToTemplate: false, display: true
 
@@ -47177,6 +47428,7 @@
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   StackSize: 1000
   MaxCount: 10, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 4
   RepairToTemplate: false, display: true
 
@@ -47211,6 +47463,7 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 12, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -47257,6 +47510,7 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 12, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -47303,6 +47557,7 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 6, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -48344,6 +48599,8 @@
   StackSize: 25
   BlockColor: "110,110,110"
   GlobalRef: Eden_AllowPlacingAtPOI
+  TemplateRoot: Eden_VoidiumCrystal
+  PickupTarget: Eden_Slag
   Volume: 7500, type: float, display: true, formatter: Liter
   Mass: 100000, type: float, display: true, formatter: Kilogram
   EnergyIn: 0, type: int, display: true, formatter: Watt
@@ -48371,6 +48628,8 @@
   StackSize: 25
   BlockColor: "110,110,110"
   GlobalRef: Eden_AllowPlacingAtPOI
+  TemplateRoot: Eden_VoidiumCrystalT2
+  PickupTarget: Eden_Slag
   Volume: 30000, type: float, display: true, formatter: Liter
   Mass: 1000000, type: float, display: true, formatter: Kilogram
   EnergyIn: 0, type: int, display: true, formatter: Watt
@@ -48390,6 +48649,8 @@
   Place: Free
   IsAccessible: false, type: bool
   GlobalRef: Eden_AllowPlacingAtPOI
+  TemplateRoot: Eden_IceAsteroid
+  PickupTarget: Eden_Slag
   SizeInBlocks: "15,15,15", display: true
   SizeInBlocksLocked: "Base,MS"
   OccupySizeInBlocks: true
@@ -48415,6 +48676,8 @@
 { +Block Name: Eden_IceAsteroidT2, Ref: Eden_IceAsteroid
   Model: @eden_blockmodels/Eden_ModelAsteroidIceT2L
   CustomIcon: Eden_IceAsteroid
+  TemplateRoot: Eden_IceAsteroidT2
+  PickupTarget: Eden_Slag
   Info: Eden_ResourceGenericinfo, display: true
   HitPoints: 9000, type: int, display: true
   { Child DropOnDestroy_1
@@ -48442,6 +48705,8 @@
   Place: Free
   IsAccessible: false, type: bool
   GlobalRef: Eden_AllowPlacingAtPOI
+  TemplateRoot: Eden_AsteroidRichT1
+  PickupTarget: Eden_Slag
   SizeInBlocks: "15,15,15", display: true
   SizeInBlocksLocked: "Base,MS"
   OccupySizeInBlocks: true
@@ -48462,6 +48727,8 @@
 { +Block Name: Eden_AsteroidRichT2, Ref: Eden_AsteroidRichT1
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT2
   CustomIcon: Eden_OreDenseT2
+  TemplateRoot: Eden_AsteroidRichT2
+  PickupTarget: Eden_Slag
   Info: Eden_ResourceGenericinfo, display: true
   HitPoints: 9375, type: int, display: true
   { Child DropOnDestroy_1
@@ -48475,6 +48742,8 @@
 { +Block Name: Eden_AsteroidRichT3, Ref: Eden_AsteroidRichT1
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT3
   CustomIcon: Eden_OreDenseT3
+  TemplateRoot: Eden_AsteroidRichT3
+  PickupTarget: Eden_Slag
   Info: Eden_ResourceGenericinfo, display: true
   HitPoints: 11250, type: int, display: true
   { Child DropOnDestroy_1
@@ -48488,6 +48757,8 @@
 { +Block Name: Eden_AsteroidRichT4, Ref: Eden_AsteroidRichT1
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT4
   CustomIcon: Eden_OreDenseT4
+  TemplateRoot: Eden_AsteroidRichT4
+  PickupTarget: Eden_Slag
   Info: Eden_ResourceGenericinfo, display: true
   HitPoints: 12500, type: int, display: true
   { Child DropOnDestroy_1
@@ -48501,6 +48772,8 @@
 { +Block Name: Eden_AsteroidRichT5, Ref: Eden_AsteroidRichT1
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT5
   CustomIcon: Eden_OreDenseT5
+  TemplateRoot: Eden_AsteroidRichT5
+  PickupTarget: Eden_Slag
   Info: Eden_ResourceGenericinfo, display: true
   HitPoints: 12500, type: int, display: true
   { Child DropOnDestroy_1
@@ -48540,14 +48813,16 @@
   GlobalRef: Eden_AllowPlacingAtPOI
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  OccupySizeInBlocks: true
-  Voxelize: false
+  # OccupySizeInBlocks: true
+  Voxelize: true
   BlockColor: "180,180,180"
   ShowUser: Yes
+  TemplateRoot: Eden_TungstenResource
+  PickupTarget: Eden_Slag
   AllowedInBlueprint: false, display: true
   Volume: 1500000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
-  HitPoints: 250, type: int, display: true
+  HitPoints: 5000, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_TungstenOre
     Count: "25,75"
@@ -48584,14 +48859,16 @@
   GlobalRef: Eden_AllowPlacingAtPOI
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  OccupySizeInBlocks: true
-  Voxelize: false
+  # OccupySizeInBlocks: true
+  Voxelize: true
   BlockColor: "180,180,180"
   ShowUser: Yes
+  TemplateRoot: Eden_TungstenResource
+  PickupTarget: Eden_Slag
   AllowedInBlueprint: false, display: true
   Volume: 1500000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
-  HitPoints: 150, type: int, display: true
+  HitPoints: 5000, type: int, display: true
   FoodDecayTime: 0, display: true, type: int
   { Child DropOnDestroy_1
     Item: Eden_PalladiumOre
@@ -48642,6 +48919,8 @@
   IsAccessible: false, type: bool
   AllowedInBlueprint: false, display: true
   GlobalRef: Eden_AllowPlacingAtPOI
+  TemplateRoot: Eden_MagmaciteResourceNew
+  PickupTarget: Eden_Slag
   SizeInBlocks: "3,3,3", display: true
   SizeInBlocksLocked: "Base,MS"
   OccupySizeInBlocks: true
@@ -48774,6 +49053,8 @@
   BlockColor: "180,180,180"
   ShowUser: Yes
   AllowedInBlueprint: false, display: true
+  TemplateRoot: ConcreteBlocks
+  PickupTarget: ConcreteBlocks
   Volume: 1500000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
   HitPoints: 500, type: int, display: true
@@ -49019,7 +49300,7 @@
   { Child DropOnDestroy_2
     Item: IronOre
     Count: "1,2"
-    Prob: 0.15
+    Prob: 0.5
   }
 }
 
@@ -49043,7 +49324,7 @@
   { Child DropOnDestroy_2
     Item: TitanOre
     Count: "1,2"
-    Prob: 0.15
+    Prob: 0.35
   }
   { Child DropOnDestroy_3
     Item: ErestrumOre
@@ -49072,7 +49353,7 @@
   { Child DropOnDestroy_2
     Item: IronOre
     Count: "1,2"
-    Prob: 0.15
+    Prob: 0.35
   }
   { Child DropOnDestroy_3
     Item: ZascosiumOre
@@ -49106,7 +49387,7 @@
   { Child DropOnDestroy_2
     Item: IronOre
     Count: "2,4"
-    Prob: 0.35
+    Prob: 0.65
   }
   { Child DropOnDestroy_3
     Item: IronOre
@@ -49356,18 +49637,19 @@
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 6, type: int, display: true
+  MaxCount: 4, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
   EnergyDynamicGroup: DrillTurret
-  EnergyIn: 250, type: int, display: true, formatter: Watt  
+  EnergyIn: 11660, type: int, display: true, formatter: Watt  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
-  CPUIn: 50000, type: int, display: true
-  Mass: 24600, type: float, display: true, formatter: Kilogram
+  CPUIn: 20000, type: int, display: true
+  Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 20000, type: int, display: true
-  MarketPrice: 50000, display: true
-  Volume: 5760, type: float, display: true, formatter: Liter
+  MarketPrice: 25000, display: true
+  Volume: 2880, type: float, display: true, formatter: Liter
   RepairToTemplate: false, display: true
 
   RotSpeed: 100, type: int, display: true
@@ -49398,18 +49680,19 @@
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 6, type: int, display: true
+  MaxCount: 4, type: int, display: true
+  ForceMaxCount: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
   EnergyDynamicGroup: DrillTurret
-  EnergyIn: 250, type: int, display: true, formatter: Watt  
+  EnergyIn: 11660, type: int, display: true, formatter: Watt  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
-  CPUIn: 50000, type: int, display: true
-  Mass: 24600, type: float, display: true, formatter: Kilogram
+  CPUIn: 20000, type: int, display: true
+  Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 20000, type: int, display: true
   MarketPrice: 50000, display: true
-  Volume: 5760, type: float, display: true, formatter: Liter
+  Volume: 2880, type: float, display: true, formatter: Liter
   RepairToTemplate: false, display: true
 
   RotSpeed: 100, type: int, display: true
@@ -50011,14 +50294,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 # =========================================
 # Project Eden POI Shield Generators
 # =========================================
@@ -50027,6 +50302,7 @@
 { +Block Name: Eden_ShieldCapacitorPOIT1, Ref: HullCombatFullLarge
   CustomIcon: HullCombatLargeBlocks
   Info: Eden_ShieldCapacitorPOIT1info, display: true
+  Group: cpgShield
   ShowUser: Yes
   IsAccessible: true, type: bool
   AllowedInBlueprint: false, display: true
@@ -50035,7 +50311,7 @@
   ShieldRechargeBonus: 0, type: int, display: true
   PickupTarget: HullCombatFullLarge
   TemplateRoot: HullCombatFullLarge
-  MarketPrice: 25000, display: true
+  MarketPrice: 480, display: true
   ChildShapes: "Cube, CutCornerE, CylinderThin, CylinderThinTJoint, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, Wall, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, Beam, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 }
 
@@ -50067,6 +50343,15 @@
 { +Block Name: Eden_ShieldRechargePOIT2, Ref: Eden_ShieldCapacitorPOIT1
   ShieldCapacityBonus: 0, type: int, display: true
   ShieldRechargeBonus: 1000, type: int, display: true
+  PickupTarget: HullCombatFullLarge
+  TemplateRoot: HullCombatFullLarge
+}
+
+# Shield Supressor T2 (POI)
+{ +Block Name: Eden_ShieldNullifierPOIT1, Ref: Eden_ShieldCapacitorPOIT1
+  Info: Eden_ShieldNullifierPOIT1info, display: true
+  ShieldCapacityBonus: -5000, type: int, display: true
+  ShieldRechargeBonus: 0, type: int, display: true
   PickupTarget: HullCombatFullLarge
   TemplateRoot: HullCombatFullLarge
 }
@@ -50259,7 +50544,7 @@
   EnergyIn: 1, type: int, display: false, formatter: Watt
   Volume: 1500000, type: float, display: true, formatter: Liter
   Category: Devices
-  ChildBlocks: "Eden_CoreNPCSpecial, Eden_CoreNPCFake, Eden_GeneratorStealth, Eden_CoreNPCInvisible, Eden_GeneratorInvisible, Eden_FuelTankInvisible, Eden_DecalInvisible, Eden_SpawnerOrganic, Eden_SpawnerOrganicSmall, Eden_TurretOrganicAlien, Eden_TurretOrganicAlienBeam, Eden_SpawnerGateRed, Eden_DroneSpawnerInvisible, Eden_TurretPlasmaSmall, Eden_TurretBolterBA, Eden_TurretAlienPDCT1, Eden_TurretAlienPDCT1_2, Eden_TurretAlienDummy, Eden_TurretAlienBlaster, Eden_TurretAlienBlasterT2, Eden_TurretRocketRapid, Eden_TurretAlienMissileSwarm, Eden_TurretTorpedo, Eden_PlasmaTurretAugmented, Eden_TurretAlienDisruptor, Eden_TurretAlienLaserT4, Eden_TurretBeamHeavyPOIT1, Eden_TurretAlienShieldBooster, Eden_CargoContainerReinforcedS, Eden_CargoContainerReinforcedL, Eden_CargoContainerReinforcedL2, Eden_StatueDialog, Eden_ConsoleDialog, Eden_ConsoleDialog2, Eden_PadDialog, Eden_CargoDialog, Eden_TreasureDialog, Eden_InvisibleDialog, Eden_ShieldGeneratorPOILightT0, Eden_ShieldGeneratorPOILightT1, Eden_ShieldGeneratorPOILightT2, Eden_ShieldGeneratorPOILightT3, Eden_ShieldGeneratorRegenerate, Eden_ShieldGeneratorRegenerateT2, Eden_ShieldGeneratorRegenerateT3, Eden_ShieldGeneratorRegenerateT4, Eden_ShieldGeneratorBastionT0, Eden_ShieldGeneratorBastion, Eden_ShieldGeneratorBastionT2, Eden_ShieldGeneratorBastionT3, Eden_ShieldGeneratorBastionT4, Eden_DecoyAlienTurretSmall, Eden_DecoyAlienTurretLarge, Eden_DecoyAlienGenSmall, Eden_DecoyAlienGenLarge, Eden_ECMAlienTurretLarge, Eden_ECMAlienGenLarge, Eden_RadioPirates, Eden_RadioColonists, Eden_RadioDroneSwarm, Eden_CrystalBlue, Eden_CrystalCyan, Eden_CrystalGreen, Eden_CrystalOrange, Eden_CrystalRed, Eden_CrystalPurple"
+  ChildBlocks: "Eden_CoreNPCSpecial, Eden_CoreNPCFake, Eden_GeneratorStealth, Eden_CoreNPCInvisible, Eden_GeneratorInvisible, Eden_FuelTankInvisible, Eden_TargetInvisible, Eden_DecalInvisible, Eden_SpawnerOrganic, Eden_SpawnerOrganicSmall, Eden_TurretOrganicAlien, Eden_TurretOrganicAlienBeam, Eden_SpawnerGateRed, Eden_DroneSpawnerInvisible, Eden_TurretPlasmaSmall, Eden_TurretBolterBA, Eden_TurretAlienPDCT1, Eden_TurretAlienPDCT1_2, Eden_TurretAlienDummy, Eden_TurretAlienBlaster, Eden_TurretAlienBlasterT2, Eden_TurretRocketRapid, Eden_TurretAlienMissileSwarm, Eden_TurretTorpedo, Eden_PlasmaTurretAugmented, Eden_TurretAlienDisruptor, Eden_TurretAlienLaserT4, Eden_TurretBeamHeavyPOIT1, Eden_TurretAlienShieldBooster, Eden_CargoContainerReinforcedS, Eden_CargoContainerReinforcedL, Eden_CargoContainerReinforcedL2, Eden_StatueDialog, Eden_ConsoleDialog, Eden_ConsoleDialog2, Eden_PadDialog, Eden_CargoDialog, Eden_TreasureDialog, Eden_InvisibleDialog, Eden_ShieldGeneratorPOILightT0, Eden_ShieldGeneratorPOILightT1, Eden_ShieldGeneratorPOILightT2, Eden_ShieldGeneratorPOILightT3, Eden_ShieldGeneratorRegenerate, Eden_ShieldGeneratorRegenerateT2, Eden_ShieldGeneratorRegenerateT3, Eden_ShieldGeneratorRegenerateT4, Eden_ShieldGeneratorBastionT0, Eden_ShieldGeneratorBastion, Eden_ShieldGeneratorBastionT2, Eden_ShieldGeneratorBastionT3, Eden_ShieldGeneratorBastionT4, Eden_DecoyAlienTurretSmall, Eden_DecoyAlienTurretLarge, Eden_DecoyAlienGenSmall, Eden_DecoyAlienGenLarge, Eden_ECMAlienTurretLarge, Eden_ECMAlienGenLarge, Eden_RadioPirates, Eden_RadioColonists, Eden_RadioDroneSwarm, Eden_CrystalBlue, Eden_CrystalCyan, Eden_CrystalGreen, Eden_CrystalOrange, Eden_CrystalRed, Eden_CrystalPurple"
 }
 
 # Invulnerable Core
@@ -50470,6 +50755,44 @@
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
   FuelCapacity: 1200, type: int, display: true
   TurretTargetIgnore: true
+}
+
+# Invisible NPC Target
+{ +Block Name: Eden_TargetInvisible
+  IndexName: WarpDrive
+  # Class: Generator
+  # Group: cpgGenerator
+  MarketPrice: 3600, display: true
+  # EssentialCategory: cpgGenerator
+  # Material: Device
+  Material: edenadmin
+  Shape: ModelEntity
+  # ShowBlockName: true
+  Model: @models/Blocks/Misc/EntitySpawnerPlateThinPrefab
+  Collide: "bullet,rocket,melee,sight"
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  StackSize: 1000
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  CPUIn: 0, type: int, display: true
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 1500000, type: float, display: true, formatter: Liter
+  Mass: 1480, type: float, display: true, formatter: Kilogram
+  TemplateRoot: ConcreteBlocks
+  PickupTarget: ConcreteBlocks
+  AllowedInBlueprint: false, display: true
+  
+  BlockColor: "110,110,110"
+  SymType: 4
+  IsOxygenTight: false, display: true 
+  IsIgnoreLC: true
+  Info: Eden_TargetInvisibleinfo, display: true
+  Category: Devices
+  HitPoints: 50000, type: int, display: true
+  IsActivateable: true
+  # TurretTargetIgnore: true
 }
 
 # Invisible Decal Control Unit
@@ -51163,6 +51486,31 @@
   CustomIcon: TurretBaseRocket
   Volume: 1600, type: float, display: true, formatter: Liter
   Mass: 4110, type: float, display: true, formatter: Kilogram
+}
+
+# Slag
+{ +Block Name: Eden_Slag
+  AllowedInBlueprint: false, display: true
+  RepairToTemplate: false, display: false
+  ShowUser: NoButCSV
+  Material: Concrete
+  Shape: ModelEntity
+  Model: @eden_blockmodels/Eden_ModelNuggetTungsten
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  DropInventoryEntity: DropContainer
+  Place: Free
+  GlobalRef: Eden_AllowPlacingAtPOI
+  SizeInBlocks: "1,1,1", display: false
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 50, type: float, display: true, formatter: Liter
+  Mass: 25, type: float, display: true, formatter: Kilogram
+  BlockColor: "110,110,110"
+  Info: Eden_Slaginfo, display: true
+  StackSize: 1000
+  IsOxygenTight: false, display: false
+  MarketPrice: 2475, display: true
+  HitPoints: 500, type: int, display: false
+  LifetimeOnDrop: 0
 }
 
 # ========================================================================================================================== Water Block

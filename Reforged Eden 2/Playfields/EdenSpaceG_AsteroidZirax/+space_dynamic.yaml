@@ -1,0 +1,676 @@
+# Playfield Characteristics
+Description: "Difficulty: [c][00ff00]Easy[-][/c]
+
+Sovereignty: [c][ffffff]Unclaimed[-][/c]
+
+
+An unclaimed asteroid field.
+
+
+[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+
+# Standard Star
+Radiation: [5,10]
+TemperatureDay: [-200,-100]
+# Music: [moonstone, space, DistantWorlds, Migration, Artefact, ColdDivide] # Orbit
+Music: [Sanctuary, Vanguard, Helios, ColdDivide, AlteredPhase] # POI
+
+PlayfieldType: Space  
+PlanetType: Asteroid Field
+
+Skybox:
+#Skyboxes are separated by star class.
+# ----------------------------------------------------------------------------------------
+# Sunflares Choose from pre-selection: SunFlareBlue, SunFlarePurple, SunFlareRed, SunFlareRedSpace, SunFlareWhite, SunFlareWhite2, SunFlareWhite3, SunFlareWhite3Space, SunFlareWhite4, SunFlareWhite4Space, SunFlareWhiteMoon,
+# SunFlareWhiteSpace, SunFlareYellow, SunFlareYellow2, SunFlareYellow3
+    # ---------------------------------------------------------------------
+# Skyboxes for Class G Stars ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # # ---------------------------------------------------------------------
+    - [SunFlareWhite, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite2, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareWhite4, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareYellow3, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+    - [SunFlareBlue, SkyboxStarsCyan, PrefabNebulaBlueYellow]
+
+    # # # ---------------------------------------------------------------------
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+# ===========================================================================================================================================================================================
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.6
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.5
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.2 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 3 ]
+      Probability: 0.3  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.2 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.2  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.15
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.1     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.1 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidFieldRing] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      # RandomRotation: True
+      
+    - Type: BA_Admin
+      Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]  
+      DisplayName: Trading Station
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.1
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Position:
+         PosXZMinMax: [0, 100]
+         PosYMax: 100
+      Properties: 
+        - Key: Discovery
+          Value: False
+        - Key: Music
+          Value: NebularClouds
+        - Key: RegenAfter
+          Value: 720
+        - Key: StationInterface
+          Value: "Fuel:1.1,O2:1.1,Warp:1.1,Ammo:1,Repair:2,Shield:2,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+    - Type: BA_Alien   
+      Name: [RBAO_PolarisAsteroidMining]  
+      DisplayName: Mining Facility
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]     
+      Probability: 0.3
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+    - Type: BA_Alien   
+      Name: [RBAO_PolarisAlloySynthesis]  
+      DisplayName: Alloy Synthesis Factory
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+    - Type: BA_Alien   
+      Name: [BAO_SecretArtefactSite]  
+      DisplayName: Artifact Site
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 0, 1 ]     
+      Probability: 0.1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Encryptor  
+
+#Traders
+
+    - Type: BA_Alien   
+      Name: [RBAO_TraderGasRefinery]  
+      DisplayName: Gas Refinery
+      Faction: Trader
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.2
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1,O2:1,Repair:3,Shield:8,IfNeutral:0.05,IfFriendly:-0.08,IfHonored:-0.16"
+
+# Zirax
+
+    - Type: BA_Alien   
+      Name: [BAO_XenuProduction]  
+      DisplayName: Orbital Production
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.2
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.6,O2:1.6,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [RBAO_RadosRepairStation, RBAO_XenuSupplyStation]  
+      DisplayName: Resupply Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.2
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.2,O2:1.2,Warp:1.2,Ammo:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [RBAO_XenuShipyard,RBAO_GhystShipyard]  
+      DisplayName: Shipyard
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]     
+      Probability: 0.1
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "Fuel:1.6,O2:1.6,Warp:1.6,Ammo:3,Repair:2,Shield:3,IfNeutral:0.2,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [BAO_GhystDefence1,BAO_GhystDefence2]  
+      DisplayName: Defence Station
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]     
+      Probability: 0.2
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+    #    - Key: MapDistance
+     #     Value: 2500     
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Pirate Outposts
+# ======================================================================================================================================================================================================
+#Pirate Outposts (default)----------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [BAO_PiratesBase, BAO_PiratesBlackMarket, BAO_PiratesHideout, BAO_PiratesSlaveMarket]  
+      DisplayName: Pirates Base
+      Faction: Pirates
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 0.05
+      InitPower: True
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: Vanguard  
+        - Key: StationInterface
+          Value: "All,IfNeutral:0.05,IfFriendly:-0.05,IfHonored:-0.10"
+
+    - Type: BA_Alien   
+      Name: [BAO_BurntOutReconVessel, BAO_CombatWreckage, BAO_JettisonedCargoPod, BAO_SeveredShip, BAO_TornThrusterArray, CV_LightCarrierWreck, SV_FA005XHunter]  
+      DisplayName: Wreckage
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]     
+      Probability: 0.35
+      # Rotate: true
+      InitPower: True
+      Position:
+         PosXZMinMax: [500, 3000]
+         PosYMax: 2000
+      Properties:
+        - Key: HudDistance
+          Value: 0
+        - Key: MapDistance
+          Value: 0
+        - Key: RegenAfter
+          Value: 720  
+
+# ======================================================================================================================================================================================================
+# ================================================================================================================================================================================= Definitions for Compounds
+# ======================================================================================================================================================================================================
+#Polaris Sentries ---------------------------------------------------------------------------------------------------
+    - Type: BA_Alien   
+      Name: [Eden_BAO_PolSecurity1]
+      DisplayName: Sentry I
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]    
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_BAO_PolSecurity2]
+      DisplayName: Sentry II
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]    
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_BAO_PolSecurity3]
+      DisplayName: Sentry III
+      Faction: Polaris
+      Mode: Survival
+      CountMinMax: [ 1, 2 ]    
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+#Zirax Sentries ---------------------------------------------------------------------------------------------------
+#Found near some resource asteroids or alien bases
+#Sentry
+    - Type: BA_Alien   
+      Name: [Eden_ST_Sentry1]
+      DisplayName: Sentry I
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_ST_Sentry2]
+      DisplayName: Sentry II
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 1
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+#Ion Sentry
+    - Type: BA_Alien   
+      Name: [Eden_ST_Ion1]
+      DisplayName: Ion Sentry I
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]    
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_ST_Ion2]
+      DisplayName: Ion Sentry II
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]    
+      Probability: 0.7
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_ST_Ion3]
+      DisplayName: Ion Sentry III
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 4 ]    
+      Probability: 0.5
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+#Laser Sentry
+    - Type: BA_Alien   
+      Name: [Eden_ST_Laser1]
+      DisplayName: Laser Sentry I
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]    
+      Probability: 0.8
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+    - Type: BA_Alien   
+      Name: [Eden_ST_Laser2]
+      DisplayName: Laser Sentry II
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]    
+      Probability: 0.6
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+#Rocket Sentry
+    - Type: BA_Alien   
+      Name: [Eden_ST_Rocket1]
+      DisplayName: Rocket Sentry I
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]    
+      Probability: 1
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+#Heavy Sentry
+    - Type: BA_Alien   
+      Name: [Eden_ST_Mixed3]
+      DisplayName: Heavy Sentry III
+      Faction: Zirax
+      Mode: Survival
+      CountMinMax: [ 1, 3 ]    
+      Probability: 0.3
+      IsCompoundSubDesc: True
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      Properties:
+        - Key: HudDistance
+          Value: 2500
+        - Key: MapDistance
+          Value: 2500
+        - Key: RegenAfter
+          Value: 720
+
+
+# ================================================================================================================================================================================= Drone Base Setup
+DroneBaseSetup:
+    - Name: MainDroneBase
+      Count: [1, 1]
+      DroneOnDuty:
+        Name: [SpaceDroneLaser, SpaceDronePlasma, SpaceDronePolarisLaser, SpaceDroneKrielLaser, SpaceDroneTraderLaser]
+        Faction: Main
+        Count: [8, 15]
+        Radius: [1500, 3000]
+      SpaceVessels:
+          - Name: [Freighter]       
+            Faction: Polaris
+            Count: [0, 3]
+            FixedMaxSpeed: [20, 40]  
+            Mission: Freighter    
+            MissionDescription:
+              Name: Freighter
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDronePolarisLaser]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]     
+
+              # # Zirax Ore Freighter T3
+          # - Name: [Eden_Freighter_T3]       
+            # Faction: Zirax
+            # Count: [0, 1]
+            # FixedMaxSpeed: [10, 20]  
+            # Mission: Freighter    
+            # MissionDescription:
+              # Name: Freighter
+              # Position:
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500                
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              # IsRespawnAfterDestruction: True
+            # StockDescription:
+              # Name: [SpaceDroneLaser, SpaceDronePlasma]
+              # AmountMinMax: [8, 12]
+              # ExtraMinMax: [0,0]     
+
+          - Name: [OPVZiraxRG]     
+            Faction: Zirax     
+            Count: [0, 2]
+            FixedMaxSpeed: [20, 40]  
+            Mission: SpacePatrol    
+            MissionDescription:
+              Name: RangePatrol
+              RadiusMinMax: [750, 1500] 
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500             
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: True
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [3, 5]
+              ExtraMinMax: [0,0]                            
+                    
+          - Name: [RBAO_XenuSupplyStation, RBAO_XenuShipyard, BAO_Dion-III, BAO_Thermica-Station, BAO_XenuSupplyStation, RBAO_GhystShipyard, BAO_OrbitalSpire, BAO_CrusaldOrbital, RBAO_RadosRepairStation] 
+            Count: [0, 4]
+            Faction: Zirax     
+            FixedMaxSpeed: [0,0]
+            Mission: Immobile
+            MissionDescription:
+              Name: Immobile
+              Position:
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500               
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [15, 25]
+              ExtraMinMax: [0,0]      
+            Properties: 
+              - Key: RegenAfter
+                Value: 720    

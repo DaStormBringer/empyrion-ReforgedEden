@@ -464,7 +464,7 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien
           NoShieldReload: True    
           CountMinMax: [ 1, 2 ]
@@ -613,7 +613,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [Ruins, Wreckage, AbandonedPOIRG]
+   - SpawnAt: [Ruins, Wreckage, R2AbandonedPOI]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

@@ -34,7 +34,7 @@
 
  { BlockGroup Name: MediumWeaponsSmall
    MaxCount: 4
-   Blocks: "WeaponSVPlasmaCannonT2,WeaponSVRailgunT2,WeaponSVLaserT2,WeaponSVGatlingT2,WeaponSVBombLauncherT2,WeaponSVBombLauncherEMPT2,WeaponHVCannonT2,WeaponSVRocketT2,WeaponSVRocketHomingT2,TurretGVMinigunT2, TurretGVMinigunT2Retract,TurretGVCannonT2,TurretGVCannonT2Retract,TurretGVRocketT2,TurretGVRocketT2Retract,TurretGVLaserT2,TurretGVLaserT2Retract,TurretGVPlasmaT2,TurretGVPlasmaT2Retract, Eden_ModularLaserBlocksSV, Eden_ModularPulseLaserSVIR, Eden_ModularPulseLaserSVUV, Eden_ModularPulseLaserSVGamma, Eden_TurretVulcanSmall"
+   Blocks: "WeaponSVPlasmaCannonT2,WeaponSVRailgunT2,WeaponSVLaserT2,WeaponSVGatlingT2,WeaponSVBombLauncherT2,WeaponSVBombLauncherEMPT2,WeaponHVCannonT2,WeaponHVFlamethrowerT2,WeaponSVRocketT2,WeaponSVRocketHomingT2,TurretGVMinigunT2, TurretGVMinigunT2Retract,TurretGVCannonT2,TurretGVCannonT2Retract,TurretGVRocketT2,TurretGVRocketT2Retract,TurretGVLaserT2,TurretGVLaserT2Retract,TurretGVPlasmaT2,TurretGVPlasmaT2Retract, Eden_ModularLaserBlocksSV, Eden_ModularPulseLaserSVIR, Eden_ModularPulseLaserSVUV, Eden_ModularPulseLaserSVGamma, Eden_TurretVulcanSmall"
  }
 
  { BlockGroup Name: HeavyWeaponsSmall
@@ -71,7 +71,7 @@
    MaxCount: 1
    Blocks: "ShieldGeneratorT0, ShieldGeneratorBA, ShieldGeneratorBAT2, ShieldGeneratorBADome, ShieldGeneratorCV, ShieldGeneratorCVT2, ShieldGeneratorSV, ShieldGeneratorSVT2, ShieldGeneratorHV, ShieldGeneratorHVT2"
  }
-
+ 
 # Project Eden Custom block limits
 
  { BlockGroup Name: Eden_MaxWindTurbines

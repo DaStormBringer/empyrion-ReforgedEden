@@ -502,7 +502,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"
 
 # SpawnZones:
-   # - SpawnAt: [ Wreckage, AbandonedPOIRG, CrashedShip]
+   # - SpawnAt: [ Wreckage, R2AbandonedPOI, CrashedShip]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

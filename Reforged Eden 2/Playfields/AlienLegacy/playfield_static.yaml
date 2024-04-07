@@ -1234,7 +1234,7 @@ POIs:
 
 
           # Destroyed / overrun Zirax military structures
-        - GroupName: AbandonedPOIRG  # PLACEHOLDER  - Ideally a completely wrecked shell of an powerful BA of this playfield.
+        - GroupName: R2AbandonedPOI  # PLACEHOLDER  - Ideally a completely wrecked shell of an powerful BA of this playfield.
           Faction: TheLegacy 
           Biome: [ Remnant, FlowersEdge, Plains, Dunes, Forest, LowMountains, Mountains ]
           CountMinMax: [ 2, 2 ]

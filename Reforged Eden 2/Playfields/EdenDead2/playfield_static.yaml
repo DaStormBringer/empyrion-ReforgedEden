@@ -477,7 +477,7 @@ POIs:
           # ReserveCount: 0
           # # SpawnPOIAvoid: [Eden_RuinsMainT1] 
           # # SpawnPOIAvoidDistance: 5000 
-          # # SpawnPOINear: [AbandonedPOIRG]
+          # # SpawnPOINear: [R2AbandonedPOI]
           # # SpawnPOINearRange: [1000, 64000]
           # # AuxiliaryPOIs: [Eden_RuinsIndustryAuxT1, Eden_RuinsScifiMiscT0]
           # # SpawnResource: ["PromethiumResource:0-1","ZascosiumResource:0-1"]
@@ -1305,7 +1305,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"  
       
 # SpawnZones:
-   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

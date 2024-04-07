@@ -461,7 +461,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   # - SpawnAt: [Ruins, Wreckage, AbandonedPOIRG]
+   # - SpawnAt: [Ruins, Wreckage, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 25

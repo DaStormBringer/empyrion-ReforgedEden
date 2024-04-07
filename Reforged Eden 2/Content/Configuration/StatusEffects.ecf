@@ -1356,6 +1356,46 @@
 # ============================================================================================================================================================================
 
 # ========================================================================================================================== Short Duration Debuffs
+
+# Long disorientation
+{ StatusEffect Name: Eden_DisorientLong
+  Duration: 10
+  Name: Eden_DisorientLong
+  CastSound: UseActions/VOICEOhNo2
+  Type: speedmodifier
+  # Stack: extend
+  Description: Eden_DisorientLonginfo
+  Icon: TmpEff_Hangover
+  Actions: "screen(poison_v2);screen(underWaterFog)"
+  # Actions: "screen(underWaterFog)"
+  # Actions: screen(underWaterFog)
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.25
+  }
+}
+
+# { StatusEffect Name: Eden_DisorientLong2
+  # Duration: 15
+  # Name: Eden_DisorientLong
+  # CastSound: UseActions/VOICEOhNo2
+  # # Type: speedmodifier
+  # # Stack: extend
+  # Description: Eden_DisorientLonginfo
+  # Icon: TmpEff_Hangover
+  # # Actions: "screen(poison_v2);screen(underWaterFog);screen(underWaterFog);screen(underWaterFog);screen(underWaterFog);screen(underLavaFog)"
+  # Actions: "screen(poison_v2);screen(underWaterFog);screen(underLavaFog)"
+  # # Actions: "screen(poison_v2);screen(underWaterFog);screen(underWaterFog);screen(underWaterFog);screen(underWaterFog)"
+  # # Actions: screen(underWaterFog)
+
+  # { Child Modify0
+    # Stat: speedmodifier
+    # SetValue: 0.1
+  # }
+# }
+
+
 # Slows and chills the player. Used by Abyssal Zirax.
 
 { StatusEffect Name: Eden_Cryoshock

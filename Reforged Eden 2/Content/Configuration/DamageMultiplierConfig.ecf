@@ -317,9 +317,10 @@
 { DamageMultiplierGroup Name: BladeT2
   DamageMultiplier_1: 0, param1: dirt|stone|rock|tree|steellarge|titaniumlarge|combatlarge|concrete|concretearmored|combatsmall|xenosteel|legacy|foundation
   DamageMultiplier_2: 0, param1: shield|ShieldLarge|ShieldSmall|ShieldPlanet
-  DamageMultiplier_3: 0, param1: device|weaponsmall|weaponlarge|thruster|steelsmall|titaniumsmall
+  DamageMultiplier_3: 0, param1: weaponsmall|weaponlarge|thruster|steelsmall|titaniumsmall
   DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
-  DamageMultiplier_5: 1.15, param1: CreatureSoft|HumanSoft|Mechanical
+  DamageMultiplier_5: 1.15, param1: CreatureSoft|HumanSoft|Mechanical|device
+  DamageMultiplier_6: 2.0, param1: device
   BlastDamageMultiplier_1: 0, param1: dirt|stone|rock|tree|device|thruster|weaponlarge|weaponsmall|steellarge|titaniumlarge|combatlarge|concrete|concretearmored|steelsmall|titaniumsmall|combatsmall|xenosteel|legacy|foundation|shield
 }
 { DamageMultiplierGroup Name: PlasmaCannonT1
@@ -664,6 +665,18 @@
   BlastDamageMultiplier_1: 0.20, param1: dirt|stone|rock|tree
   BlastDamageMultiplier_2: 1.5, param1: carbonsmall|steelsmall|titaniumsmall|combatsmall
   BlastDamageMultiplier_3: 0, param1: shield|foundation
+}
+{ DamageMultiplierGroup Name: HVFlamethrower
+  DamageMultiplier_1: 0, param1: dirt|stone|rock|thruster|weaponlarge|weaponsmall|steellarge|titaniumlarge|combatlarge|concrete|concretearmored|steelsmall|titaniumsmall|combatsmall|xenosteel|legacy|foundation
+  DamageMultiplier_2: 0.585, param1: shield|ShieldLarge|ShieldSmall|ShieldPlanet
+  DamageMultiplier_3: 0.15, param1: device
+  DamageMultiplier_4: 1.5, param1: head
+  DamageMultiplier_5: 1.5, param1: CreatureHard
+  BlastDamageMultiplier_1: 0.25, param1: stone|rock|tree|thruster|weaponlarge|weaponsmall|steellarge|titaniumlarge|combatlarge|concrete|concretearmored|steelsmall|titaniumsmall|combatsmall|xenosteel|legacy|foundation
+  BlastDamageMultiplier_2: 1.0, param1: carbonsmall|wood|device
+  BlastDamageMultiplier_3: 0.005, param1: dirt
+  BlastDamageMultiplier_4: 0, param1: shield|foundation
+  BlastDamageMultiplier_5: 1.5, param1: CreatureHard|CreatureSoft|HumanSoft|HumanHard
 }
 # ====================================================================
 # ================ HV/SV Turret Groups
@@ -1615,7 +1628,6 @@
   DamageMultiplier_6: 0.75, param1: steellarge|titaniumlarge|combatlarge|combatsmall
   BlastDamageMultiplier_1: 0.5, param1: dirt|stone|rock|tree|device|thruster|weaponlarge|weaponsmall|steellarge|titaniumlarge|combatlarge|concrete|concretearmored|steelsmall|titaniumsmall|combatsmall|xenosteel|legacy|foundation|Shield
 }
-
 
 
 # =================================================================================================

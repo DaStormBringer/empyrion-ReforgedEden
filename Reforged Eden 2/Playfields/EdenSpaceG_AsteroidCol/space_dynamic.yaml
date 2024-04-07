@@ -1,13 +1,12 @@
 # Playfield Characteristics
 Description: "Difficulty: [c][00ff00]Easy[-][/c]
 
-[c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c]
-
-
 A group of colonists have made this asteroid field their home, but there are still plenty of unclaimed resource asteroids free for the taking.
 
 
-[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+[sup][c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c][/sup]
+
+[sup][c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c][/sup]"
 
 Gravity: 0
 AtmosphereEnabled: False
@@ -308,8 +307,8 @@ POIs:
           Value: 720
 
 # Asteroid Field 2
-    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
-      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
       CountMinMax: [ 1, 1 ]
       Probability: 1
       Pos: [8500, -2000, 7500]
@@ -405,8 +404,8 @@ POIs:
           Value: 720
 
 # Asteroid Field 3
-    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
-      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
       CountMinMax: [ 1, 1 ]
       Probability: 1
       Pos: [-7000, 1000, 7500]
@@ -432,9 +431,9 @@ POIs:
       Pos: [-7000, 1000, 7500]
       Rot: [0, 0, 0]
       Compound:
-        CountMinMax: [2, 3]
+        CountMinMax: [1, 2]
         Probability: 1
-        Name: [CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT1]
+        Name: [CompoundAsteroidT1, CompoundAsteroidT2]
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
@@ -836,7 +835,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -854,7 +853,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -872,7 +871,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -890,7 +889,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -908,7 +907,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 

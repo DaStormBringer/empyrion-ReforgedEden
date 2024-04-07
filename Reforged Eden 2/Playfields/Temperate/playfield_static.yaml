@@ -893,7 +893,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -1100,7 +1100,7 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7"  
       
 SpawnZones:
-   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 50
@@ -1142,7 +1142,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [EpsilonAuxT2RG, AbandonedPOIRG]
+   - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

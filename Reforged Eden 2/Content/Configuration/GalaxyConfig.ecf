@@ -1405,7 +1405,7 @@
     Radius: 145
     Other_1: Talon, param1: "0.3, 0.7"  # prob for Talon spawn at "center, radius"
     Other_2: Alien, param1: "1, 1"
-    Other_3: Xenu, param1: "1, 0.35"
+    Other_3: Xenu, param1: "1, 1"
     Other_4: Rados, param1: "1, 1"
     Other_5: Epsilon, param1: "0.1, 1"
     Other_6: Ghyst, param1: "1, 0"
@@ -1551,7 +1551,7 @@
     Other_2: Alien, param1: "1"
     Other_3: Pirates, param1: "1"
     Other_4: Polaris, param1: "1"
-    Other_5: Trader, param1: "0.05"
+    Other_5: Trader, param1: "0.25"
     Other_6: Zirax, param1: "1"
     Other_7: Eden_Defender, param1: "1"
     Other_8: Colonists, param1: "1"

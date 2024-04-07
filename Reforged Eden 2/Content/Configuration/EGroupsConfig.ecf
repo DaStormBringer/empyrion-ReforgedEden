@@ -585,7 +585,7 @@
 # =============================================== Zirax
 
 { EGroup Name: Eden_ZiraxPatrolSniper
-  ZiraxSniper: "3, 3"
+  ZiraxSniper: "1, 1"
   ZiraxShotgun: "1, 1"
 }
 

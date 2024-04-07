@@ -1,13 +1,12 @@
 # Playfield Characteristics
 Description: "Difficulty: [c][00ff00]Easy[-][/c]
 
-[c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c]
-
-
 Several suspicious radio signals can be detected coming from this asteroid field. Caution is advised.
 
 
-[c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c]"
+[sup][c][ffff00]Clouds of metallic dust in this sector interfere with both optical and radar scans obscuring resource-rich asteroids throughout the area and lowering the range of detectors.[-][/c][/sup]
+
+[sup][c][ffffff][i]Mining asteroids claimed by a faction is considered an act of war. Presence of POIs affected by galaxy faction territory.[/i][-][/c][/sup]"
 
 Gravity: 0
 AtmosphereEnabled: False
@@ -79,9 +78,9 @@ POIs:
       Pos: [0, 0, 0]
       Rot: [0, 0, 0]
       Compound:
-        CountMinMax: [3, 5]
+        CountMinMax: [2, 4]
         Probability: 1
-        Name: [CompoundAsteroidT2, CompoundBanditSpaceDefense, CompoundAsteroidT1, CompoundAsteroidT2, CompoundBanditSpaceDefense]
+        Name: [CompoundAsteroidT2, CompoundBanditSpaceDefense, CompoundAsteroidT1, CompoundBanditSpaceDefense]
         DistanceMinMax: [1000, 2500]
         Rotate: false
       Properties:
@@ -120,9 +119,9 @@ POIs:
       Pos: [0, 0, 0]
       Rot: [0, 0, 0]
       Compound:
-        CountMinMax: [5, 7]
+        CountMinMax: [4, 6]
         Probability: 1
-        Name: [CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT1, CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT2, CompoundAsteroidT1]
+        Name: [CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT1, CompoundAsteroidT1, CompoundAsteroidT2, CompoundAsteroidT1]
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
@@ -210,7 +209,7 @@ POIs:
         - Key: RegenAfter
           Value: 720
 
-# Colonist patrol route
+# Warlord patrol route
     - Type: BA_Alien
       # GroupName: Eden_DummyPOI
       Name: [Eden_BA_DummyPOI3]
@@ -222,7 +221,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [-3500, -500, 0]
+      Pos: [-3500, 500, 0]
       Rot: [0, 0, 0]
       Properties:
         - Key: MapDistance
@@ -233,8 +232,8 @@ POIs:
           Value: 720
 
 # Asteroid Field 2
-    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
-      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
       CountMinMax: [ 1, 1 ]
       Probability: 1
       Pos: [-8500, -4000, -7500]
@@ -330,8 +329,8 @@ POIs:
           Value: 720
 
 # Asteroid Field 3
-    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
-      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray4, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+    - Name: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
+      FieldName: [Eden_AsteroidFieldL_Gray, Eden_AsteroidFieldL_Gray2, Eden_AsteroidFieldL_Gray3, Eden_AsteroidFieldL_Gray5, Eden_AsteroidFieldL_GrayThick, Eden_AsteroidFieldL_GrayThick2, Eden_AsteroidFieldL_GrayThick3, Eden_AsteroidFieldL_GrayThick4, Eden_AsteroidFieldL_GrayThick5, Eden_AsteroidFieldL_GrayThick6]
       CountMinMax: [ 1, 1 ]
       Probability: 1
       Pos: [8500, 3500, 1500]
@@ -761,7 +760,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -779,7 +778,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -797,7 +796,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -815,7 +814,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -833,7 +832,7 @@ POIs:
         - Key: HudDistance
           Value: 6000
         - Key: RegenAfter
-          Value: 720
+          Value: 4320
         - Key: MapMarker
           Value: Neutral
 
@@ -866,7 +865,7 @@ DroneBaseSetup:
 # Warlord
           - Name: [Eden_OPVBanditT1]
             Faction: Warlord
-            CountMinMax: [2, 3]
+            CountMinMax: [2, 4]
             Probability: 1
             CanNotBeControlledByMasterAI: False
             FixedMaxSpeed: [40, 50]
@@ -877,68 +876,6 @@ DroneBaseSetup:
               IsRespawnAfterDestruction: True
               RadiusMinMax: [750, 3000]
               POINameAsPositionRef: [Eden_BA_DummyPOI]
-              Position:
-                PosXZMinMax: [1000, 2000]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneLaser, SpaceDronePlasma]
-              AmountMinMax: [2, 4]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              - Key: MapDistance
-                Value: 6000
-              - Key: HudDistance
-                Value: 6000
-              - Key: AIManPatrolFactions
-                Value: "Warlord, Eden_Resource"
-              - Key: AIManMaxPursuitRange
-                Value: 6000
-
-          - Name: [Eden_OPVBanditT1]
-            Faction: Warlord
-            CountMinMax: [1, 1]
-            Probability: 0.5
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [40, 50]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3600, 3600]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: True
-              RadiusMinMax: [750, 3000]
-              POINameAsPositionRef: [Eden_BA_DummyPOI2]
-              Position:
-                PosXZMinMax: [1000, 2000]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneLaser, SpaceDronePlasma]
-              AmountMinMax: [2, 4]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              - Key: MapDistance
-                Value: 6000
-              - Key: HudDistance
-                Value: 6000
-              - Key: AIManPatrolFactions
-                Value: "Warlord, Eden_Resource"
-              - Key: AIManMaxPursuitRange
-                Value: 6000
-
-          - Name: [Eden_OPVBanditT1]
-            Faction: Warlord
-            CountMinMax: [1, 1]
-            Probability: 0.5
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [40, 50]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3600, 3600]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: True
-              RadiusMinMax: [750, 3000]
-              POINameAsPositionRef: [Eden_BA_DummyPOI3]
               Position:
                 PosXZMinMax: [1000, 2000]
                 PosYMax: 500

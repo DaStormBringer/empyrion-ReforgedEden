@@ -62,7 +62,7 @@
 
 { Faction Id: 4, Name: "Prey"
   Abbrev: Pry
-  Color: "0.75, 0.75, 0.75"
+  Color: "1,1,1"
   HideAbbrev: true
   OmitMapLegend: true
 }
@@ -93,7 +93,7 @@
   ClaimTerritory: true
   Reputation: true
   Discovery: true
-  ForceAttack: "Eden_Resource, Warlord"
+  ForceAttack: "Eden_Resource, Warlord, Prey"
 }
 
 { Faction Id: 8, Name: "Alien"             #Use for Dungeons and abandoned POI
@@ -123,7 +123,7 @@
   Abbrev: Legacy
   Color: "0, 1, 0.67"
   Unfriendly: true
-  AttackNPC: true
+  # AttackNPC: true
   Discovery: true
 }
 

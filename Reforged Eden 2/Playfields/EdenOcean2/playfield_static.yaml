@@ -552,7 +552,7 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien
           NoShieldReload: True
           CountMinMax: [ 1, 2 ]
@@ -787,7 +787,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"  
       
 SpawnZones:
-   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
      Radius: 500
      RadiusRandom: 50
@@ -826,7 +826,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [EpsilonAuxT2RG, AbandonedPOIRG, ErestrumResource, ZascosiumResource]
+   - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
      BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
      Radius: 500
      RadiusRandom: 25

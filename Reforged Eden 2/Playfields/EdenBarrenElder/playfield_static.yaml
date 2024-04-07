@@ -359,7 +359,7 @@ POIs:
          Value: Neutral
       -  Key: RegenAfter
          Value: 720
-   -  GroupName: AbandonedPOIRG
+   -  GroupName: R2AbandonedPOI
       Faction: Alien
       CountMinMax: [1, 2]
       IsScalingCount: True
@@ -672,7 +672,7 @@ SpawnZones:
       Amount: 200
       Period: Always
       DelayMinMax: [-1, -1]
--  SpawnAt: [CrashedShip, AbandonedPOIRG, Artifacts]
+-  SpawnAt: [CrashedShip, R2AbandonedPOI, Artifacts]
    BiomesExcluded: [LowMountains, Mountains]
    Radius: 500
    RadiusRandom: 50

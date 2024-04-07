@@ -1,4 +1,4 @@
-#  Created with eWPDA 2.75.0 | 19.3.2024 - 1:17:22  
+#  Created with eWPDA 2.75.0 | 29.3.2024 - 15:13:28  
 #  Made by Hayawen & RexXxuS  
 #  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible PDA gameplay!) 
 #  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  
@@ -16021,6 +16021,88 @@ Chapters:
     Activatable: Always
     Visibility: Always
     Tasks:
+      - TaskTitle: eden_pda_uQmG2C0
+        Actions:
+          - ActionTitle: eden_pda_qeqCSmi
+            Description: eden_pda_8e7uaCq
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 10
+            IsOrdered: 'true'
+        StartMessage: norm;10|eden_pda_qWOUGCK
+        CompletedMessage: ''
+        OnActivatePlayerOps:
+          - 'Effect: +Eden_DisorientLong'
+      - TaskTitle: eden_pda_emiui48
+        StartMessage: norm;10|eden_pda_08iW4q4
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_aS8ea0S
+            Description: eden_pda_Ge4e8K0
+            Check: WaitAction
+            Amount: 10
+            CompletedMessage: ''
+      - TaskTitle: eden_pda_euuWCqO
+        StartMessage: norm;15|eden_pda_G0qaGwK
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_SHaWqWe
+            Description: eden_pda_jOmuCuG
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 15
+      - TaskTitle: eden_pda_40YWmGG
+        CompletedMessage: ''
+        StartMessage: norm;20|eden_pda_8K4aq8q
+        Actions:
+          - ActionTitle: eden_pda_euW0Keq
+            Description: eden_pda_K0C9u4u
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 20
+      - TaskTitle: eden_pda_OWuiaCW
+        Actions:
+          - ActionTitle: eden_pda_feeWCOi
+            Description: eden_pda_8Su0qqE
+            CompletedMessage: ''
+            Check: WindowOpened
+            Names:
+              - Pda
+        StartMessage: norm;30|eden_pda_Uiuk4KC
+        CompletedMessage: dlg;Eden_DreadStartIDA1_Init|
+      - TaskTitle: eden_pda_Ge4ui4q
+        Actions:
+          - ActionTitle: eden_pda_KSC48iG
+            Description: eden_pda_G0a8ai0
+            CompletedMessage: ''
+            Check: BlockDestroyed
+            Types:
+              - CoreNPC
+            Amount: 1
+            IsOptional: 'true'
+          - ActionTitle: eden_pda_USu8Ke0
+            CompletedMessage: ''
+            Description: eden_pda_SGaK4eS
+            Check: InventoryContainsCountOfItem
+            Names:
+              - Player
+            Amount: 2
+            Types:
+              - Electronics
+        StartMessage: norm;45|eden_pda_0iXiSCO
+        CompletedMessage: ''
+        OnCompletePlayerOps:
+          - 'InventoryOp: Electronics#-2#0#0'
+      - TaskTitle: eden_pda_GaKQMaQ
+        Actions:
+          - ActionTitle: eden_pda_CmiCSSa
+            CompletedMessage: ''
+            Description: eden_pda_uiit8ia
+            Check: WindowOpened
+            Names:
+              - Pda
+        CompletedMessage: dlg;Eden_DreadStartIDA2_Init|
+        StartMessage: norm;45|eden_pda_weCOqua
       - TaskTitle: eden_pda_0Kmm0
         Actions:
           - ActionTitle: eden_pda_MGmu0
@@ -16033,7 +16115,7 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 2000
+            Count: 5600
         StartMessage: norm;20|eden_pda_WmO00
         CompletedMessage: norm;15|eden_pda_Q0CiW
       - TaskTitle: eden_pda_42uGq
@@ -16048,10 +16130,10 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 5000
+            Count: 7200
         StartDelay: 15
-        StartMessage: norm;10|eden_pda_KaDCa
-        CompletedMessage: norm;10|eden_pda_Waaiq
+        StartMessage: norm;10|eden_pda_WmO00
+        CompletedMessage: norm;10|eden_pda_Q0CiW
       - TaskTitle: eden_pda_KCSaW
         Actions:
           - ActionTitle: eden_pda_GmsGu
@@ -16064,10 +16146,10 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 7500
+            Count: 8800
         StartDelay: 10
-        StartMessage: norm;10|eden_pda_S0Swe
-        CompletedMessage: norm;10|eden_pda_KGyWW
+        StartMessage: norm;10|eden_pda_WmO00
+        CompletedMessage: norm;10|eden_pda_Q0CiW
       - TaskTitle: eden_pda_4UKqS
         Actions:
           - ActionTitle: eden_pda_0a40m
@@ -16080,10 +16162,25 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 7500
+            Count: 10400
         StartDelay: 10
-        StartMessage: norm;10|eden_pda_GA0a0
-        CompletedMessage: norm;10|eden_pda_CieOG
+        StartMessage: norm;10|eden_pda_WmO00
+        CompletedMessage: norm;10|eden_pda_Q0CiW
+      - TaskTitle: eden_pda_uiaCCOk
+        Actions:
+          - ActionTitle: eden_pda_OOqmKaW
+            Description: eden_pda_aeeOO8O
+            Check: BlockDestroyed
+            Amount: 5
+            Types:
+              - CoreNPC
+            Required: NeedOne
+        Rewards:
+          - Type: XP
+            Count: 12000
+        StartDelay: 10
+        StartMessage: norm;10|eden_pda_ueSeGiq
+        CompletedMessage: norm;10|eden_pda_KGeqkCa
       - TaskTitle: eden_pda_WBqCO
         Actions:
           - ActionTitle: eden_pda_iSq4a
@@ -16096,10 +16193,10 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 10000
+            Count: 13600
         StartDelay: 10
-        StartMessage: norm;10|eden_pda_uGiu4
-        CompletedMessage: norm;10|eden_pda_e0qOS
+        StartMessage: norm;10|eden_pda_WmO00
+        CompletedMessage: norm;10|eden_pda_Q0CiW
       - TaskTitle: eden_pda_imK0Y80
         Actions:
           - ActionTitle: eden_pda_CmSKAS4
@@ -16112,10 +16209,22 @@ Chapters:
             CompletedMessage: ''
         Rewards:
           - Type: XP
-            Count: 10000
+            Count: 15200
         StartDelay: 10
-        StartMessage: norm;10|eden_pda_ODiWGGq
-        CompletedMessage: norm;10|eden_pda_0CKEuii
+        StartMessage: norm;10|eden_pda_WmO00
+        CompletedMessage: norm;10|eden_pda_Q0CiW
+      - TaskTitle: eden_pda_COaGWSK
+        Actions:
+          - ActionTitle: eden_pda_4WSKaCY
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 20
+            Description: eden_pda_uoC0KS8
+        StartMessage: norm;20|eden_pda_m0kqSWi
+        CompletedMessage: ''
+        Rewards:
+          - Type: XP
+            Count: 16800
     VisibleOnStartPlayfieldTypes:
       - Dead Starter 2
     AutoActivateOnGameStart: true
@@ -16123,12 +16232,10 @@ Chapters:
       NumRepeats: 1
     HideTasks: true
     ActivateChapterOnCompletion: eden_pda_OTK8m
-    StartMessage: mbox;30|eden_pda_ammKm
-    Rewards:
-      - Type: LevelTarget
-        Count: 13
+    StartMessage: norm;0|eden_pda_4SCmeqW
     Description: eden_pda_KGKqq
     Group: eden_pda_08GKE
+    CompletedMessage: ''
   - ChapterTitle: eden_pda_W88Za
     Category: SoloMission
     NoSkip: true
@@ -23095,7 +23202,7 @@ Chapters:
     NoSkip: false
     PlayerLevel: 1
     Activatable: Always
-    Visibility: Always
+    Visibility: Never
     Tasks:
       - TaskTitle: eden_pda_8KaWO
         Actions:
@@ -23130,7 +23237,7 @@ Chapters:
     NoSkip: false
     PlayerLevel: 10
     Activatable: ByReputation
-    Visibility: Always
+    Visibility: Never
     Tasks:
       - TaskTitle: eden_pda_Sb0em
         Actions:

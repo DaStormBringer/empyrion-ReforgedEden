@@ -441,7 +441,7 @@ POIs:
               Value: 720
 
        # ================================
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien  
           Biome: [ Forest ]
           CountMinMax: [ 1, 1 ]
@@ -720,7 +720,7 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7"  
       
 SpawnZones:
-   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 50

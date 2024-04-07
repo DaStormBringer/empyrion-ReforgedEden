@@ -543,7 +543,7 @@ POIs:
           ReserveCount: 0
           # SpawnPOIAvoid: [Eden_RuinsMainT1] 
           # SpawnPOIAvoidDistance: 5000 
-          # SpawnPOINear: [AbandonedPOIRG]
+          # SpawnPOINear: [R2AbandonedPOI]
           # SpawnPOINearRange: [1000, 64000]
           # AuxiliaryPOIs: [Eden_RuinsIndustryAuxT1, Eden_RuinsScifiMiscT0]
           # SpawnResource: ["PromethiumResource:0-1","ZascosiumResource:0-1"]
@@ -1295,10 +1295,10 @@ POIs:
           PlayerArmor: ["ArmorLight, ArmorLight, ArmorLight, #FreshStart:ArmorLight"]     
           Status: [ "Food: 500, Health: 500", "Food: 500, Health: 500", "Food: 500, Health: 500", "#FreshStart:Food: 250, Health: 250" ]  
           Items: [ 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, Pistol, 50Caliber:250, Shotgun, ShotgunShells:400, Explosives:10, EmergencyRations:15, BioFuel:5, OxygenBottleSmall:35", 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, Pistol, 50Caliber:200, Shotgun, ShotgunShells:300, Explosives:8, EmergencyRations:10, BioFuel:4, OxygenBottleSmall:30", 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, Pistol, 50Caliber:150, Shotgun, ShotgunShells:200, Explosives:6, EmergencyRations:5, BioFuel:3, OxygenBottleSmall:25", 
-          "#FreshStart: Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, Pistol, 50Caliber:100, Explosives:5, EmergencyRations:1, BioFuel:1, OxygenBottleSmall:3" ]
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Pistol, 9mmBullet:250, Shotgun, ShotgunShells:400, Explosives:10, EmergencyRations:15, BioFuel:5, OxygenBottleSmall:35, Token:1:6019", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Pistol, 9mmBullet:200, Shotgun, ShotgunShells:300, Explosives:8, EmergencyRations:10, BioFuel:4, OxygenBottleSmall:30, Token:1:6019", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Pistol, 9mmBullet:150, Shotgun, ShotgunShells:200, Explosives:6, EmergencyRations:5, BioFuel:3, OxygenBottleSmall:25, Token:1:6019", 
+          "#FreshStart: Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Pistol, 9mmBullet:100, Explosives:5, EmergencyRations:1, BioFuel:1, OxygenBottleSmall:3, Token:1:6019" ]
 
 ### Drones
 DroneBaseSetup: 
@@ -1368,7 +1368,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"  
       
 # SpawnZones:
-   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

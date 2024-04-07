@@ -630,7 +630,7 @@ GenerationParams:
             - EdenTropical2
 
 # -------------------------------------------------------------------------- Swamp
-      - Name: Swamp 
+      - Name: Swamp
         Color: [0, 0.35, 0.35]
         Placement:
             - HabitableHot
@@ -1277,8 +1277,7 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [4,7]
         Playfields:
-            - EdenSpaceG_AsteroidCol, 0.5
-            - EdenSpaceG_AsteroidBandit, 0.5
+            - EdenSpaceG_AsteroidT1
 
       - Name: AsteroidFieldGT1
         Faction: [Colonists, None]
@@ -1299,7 +1298,7 @@ GenerationParams:
             - EdenSpaceG_AsteroidT1
 
       - Name: AsteroidFieldGT2
-        Faction: [Pirates, Polaris, Zirax, Colonists, Trader, Tesch, None]
+        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
         Icon: AsteroidField
         Placement:
@@ -1317,7 +1316,44 @@ GenerationParams:
             - EdenSpaceG_AsteroidCol, 0.5
             - EdenSpaceG_AsteroidBandit, 0.5
 
-      - Name: AsteroidField_D
+      - Name: AsteroidFieldD
+        Faction: [Colonists, None]
+        Color: [0.7, 0.7, 0.7]
+        Icon: AsteroidFieldFew
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - EdenSpaceD_AsteroidT1
+
+      - Name: AsteroidFieldDT1
+        Faction: [Colonists, None]
+        Color: [0.7, 0.7, 0.7]
+        Icon: AsteroidFieldFew
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - EdenSpaceD_AsteroidT1
+
+      - Name: AsteroidFieldDT2
+        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
         Icon: AsteroidField
         Placement:
@@ -1332,9 +1368,10 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [6,10]
         Playfields:
-            - EdenSpaceD_Asteroid
+            - EdenSpaceD_AsteroidT1
 
       - Name: AsteroidField_K
+        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
         Icon: AsteroidField
         Placement:
@@ -1540,6 +1577,42 @@ GenerationParams:
 
 # =================================================================================================================================================== Zirax
 # -------------------------------------------------------------------------- Zirax Asteroid Field
+      - Name: AsteroidFieldZiraxG
+        Faction: [Zirax, None]
+        Color: [1, 0, 0]
+        Icon: AsteroidFieldFew
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceG_AsteroidZirax
+
+      - Name: AsteroidFieldZiraxD
+        Faction: [Zirax, None]
+        Color: [1, 0, 0]
+        Icon: AsteroidFieldFew
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [4,7]
+        Playfields:
+            - EdenSpaceD_AsteroidZirax
+
       - Name: AsteroidFieldZirax
         Faction: [Zirax, None]
         Color: [1, 0, 0]

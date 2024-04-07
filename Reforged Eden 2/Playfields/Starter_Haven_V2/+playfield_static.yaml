@@ -1012,7 +1012,7 @@ POIs:
               Value: 720
 
        # ================================
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien  
           Biome: [ Forest ]
           IsScalingCount: True              # scales with planet size
@@ -1399,7 +1399,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [Artifacts, AlienTowerSmallStory, AlienTowerDMG, AbandonedPOIRG, AlienWatchtower]
+   - SpawnAt: [Artifacts, AlienTowerSmallStory, AlienTowerDMG, R2AbandonedPOI, AlienWatchtower]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 50

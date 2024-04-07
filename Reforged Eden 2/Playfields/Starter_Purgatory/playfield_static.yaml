@@ -218,7 +218,7 @@ POIs:
           Properties: 
             - Key: PersonalContainer
               # Value: "ArmorLight, MultiTool, MultiCharge:3, ConstructorSurvival, RadarSuitT1, Flashlight, Chainsaw, BioFuel:5, IronIngot:10, SiliconIngot:5, CopperIngot:5, WaterBottle:4, CornStage1, SnakeweedStage1, PearthingStage1, DurianRoot, Fiber:10"
-              Value: "ArmorLight, Flashlight, MultiTool, MultiCharge:3, BioFuel:2, Fiber:10, EmergencyRations:1, Explosives:3, HotBeverage:3, Bandages:5"
+              Value: "ArmorLight, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, MultiTool, MultiCharge:3, BioFuel:2, Fiber:10, EmergencyRations:1, Explosives:3, HotBeverage:3, Bandages:5"
             # - Key: Discovery
               # Value: False
             - Key: MapMarker 

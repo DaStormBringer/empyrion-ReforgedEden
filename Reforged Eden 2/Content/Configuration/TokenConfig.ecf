@@ -878,7 +878,7 @@
 }
 
 
-# ================================================================================================================================ Rogue starter tokens
+# ================================================================================================================================ Starting planet tokens
 
 { Token Id: 6016, Name: [c][ff0000]Red Key Card[-][/c]
   CustomIcon: KeyCardRed
@@ -901,7 +901,12 @@
   Description: "A security card used to access doors in the crashed prison transport on the rogue planet."
 }
 
-
+# On Dread starter
+{ Token Id: 6019, Name: [c][A9A9A9]Message to the Terran[-][/c]
+  CustomIcon: Tablet
+  DropOnDeath: false
+  Description: "[c][A9A9A9]Dear Terran,\n\nThank you for the ship! We'll make sure to think of you every time we're out cruisin' the galaxy.\nToo bad we had to leave you in that pit, I was just starting to like you.\n\nLucky for you I was able to convince the rest of me crew to leave you with some gear to give you a fightin' chance!\n\nAh well, perhaps we will meet again one day and I might even give you the opportunity to win back your ship.\nWho am I kidding? I could read you like an open book! Hah!\n\nUntil we meet again.[-][/c]"
+}
 
 # ================================================================================================================================ Trading seperators
 # old color [CC99FF]

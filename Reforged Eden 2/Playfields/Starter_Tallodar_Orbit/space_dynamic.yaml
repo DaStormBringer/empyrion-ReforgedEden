@@ -425,7 +425,7 @@ POIs:
 # CREATIVE MODE
 
     - Type: BA_Player
-      Name: [Eden_BAO_CreativeStart]
+      Name: [RE2_BAO_Creative]
       DisplayName: Reforged Creative Station
       Faction: Admin
       Mode: Creative

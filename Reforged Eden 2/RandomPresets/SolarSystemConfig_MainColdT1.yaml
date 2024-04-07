@@ -81,7 +81,8 @@ GenerationParams:
 # -------------------------------------------------------------------------------------------------------------- UCH and Admin
     - 'UCHResearchShip:1.0'                                                                                       # 1 UCH Research Vessel
 # -------------------------------------------------------------------------------------------------------------- Asteroid Fields
-    - 'AsteroidField_D:0.5, AsteroidFieldPirate:0.0, AsteroidFieldPolaris_D:0.3, SectorPolarisMining:0.2, AsteroidFieldZirax:0.0'              # 1 Asteroid Fields
+    # - 'AsteroidFieldDT1:0.5, AsteroidFieldPirate:0.0, AsteroidFieldPolaris_D:0.3, SectorPolarisMining:0.2, AsteroidFieldZirax:0.0'              # 1 Asteroid Fields
+    - 'AsteroidFieldDT1:1'              # 1 Asteroid Fields
     - 'AsteroidFieldIce:1.00, AsteroidFieldIceRich:0.00'                                                          # 2 Ice Fields
     - 'AsteroidFieldRichGeneric:1'                                                                                  # 3 Rich Asteroid Fields
 # -------------------------------------------------------------------------------------------------------------- Stations

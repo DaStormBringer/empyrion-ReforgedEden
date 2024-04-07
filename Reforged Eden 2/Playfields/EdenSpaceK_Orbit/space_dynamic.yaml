@@ -2046,14 +2046,14 @@ POIs:
 
 # ================================================================================================================================================================================= Colonists
 
-# Trade Station 
+# Main station
     - Type: BA_Alien
-      GroupName: TSOColonists
+      GroupName: R2ColonistSpaceMain
       Faction: Colonists
       NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
-      Probability: 0.1
+      Probability: 0.3
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
@@ -2062,57 +2062,31 @@ POIs:
          # PosXZMinMax: [100, 2500]
          # PosYMax: 2500
       Compound:
-        CountMinMax: [1, 6]
+        CountMinMax: [4, 9]
         Probability: 0.5
-        Name: [CompoundColonistsCivHome, CompoundColonistsCivHome, CompoundColonistsIndHome, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home]
+        Name: [CompoundColonistsDeco, CompoundColonistsDeco, CompoundColonistsDeco, CompoundColonistsCivHome, CompoundColonistsCivHome, CompoundColonistsIndHome, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home]
         DistanceMinMax: [350, 600]
         Rotate: false
-      Properties: 
-        - Key: Discovery
-          Value: False
-        - Key: PvEArea
-          Value: 500
-        - Key: Music
-          Value: NebularClouds
+      Properties:
         - Key: RegenAfter
           Value: 720
         - Key: StationInterface
           Value: "Fuel:3,O2:2.4,Warp:2,IfNeutral:0.2,IfHonored:-0.20"
 
-# Colonists Main POI
     - Type: BA_Alien
-      GroupName: Eden_ColSpaceMainT2
-      Faction: Colonists
-      NoShieldReload: True
-      Mode: Survival
-      CountMinMax: [ 1, 2 ]
-      Probability: 0.2
-      InitPower: True
-      Compound:
-        CountMinMax: [1, 6]
-        Probability: 0.5
-        Name: [CompoundColonistsCivHome, CompoundColonistsCivHome, CompoundColonistsIndHome, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home, CompoundColonistsDefenseT1Home]
-        DistanceMinMax: [350, 600]
-        Rotate: false
-      Properties:
-        - Key: Discovery
-          Value: False
-        - Key: Music
-          Value: NebularClouds
-        - Key: RegenAfter
-          Value: 720
-        - Key: StationInterface
-          Value: "Fuel:2,O2:1.5,Warp:1.5,Ammo:3,Repair:2,Shield:2,IfNeutral:1,IfFriendly:-0.08,IfHonored:-0.16"
-
-    - Type: BA_Alien
-      # Name: [BAO_Waystation-01, BAO_Waystation-02, BAO_Waystation-03, BAO_Waystation-04, BAO_SecretArtefactSite, BAO_DESC_v1, BAO_CivilMinOutpost]
       GroupName: R2ColonistSpace
       Faction: Colonists
       NoShieldReload: True
       Mode: Survival
-      CountMinMax: [ 1, 3 ]
-      Probability: 0.4
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.3
       InitPower: True
+      Compound:
+        CountMinMax: [0, 2]
+        Probability: 0.5
+        Name: [CompoundColonistsDeco, CompoundColonistsDeco]
+        DistanceMinMax: [350, 600]
+        Rotate: false
       Properties:
         - Key: Music
           Value: NebularClouds
@@ -2332,6 +2306,25 @@ POIs:
           Value: 720
         - Key: StationInterface
           Value: "O2:1.25,IfNeutral:1,IfFriendly:-0.08,IfHonored:-0.16"
+
+# Billboards
+    - Type: BA_Alien
+      Name: [CompoundColonistsDeco]
+      GroupName: R2TraderSpaceDeco
+      Faction: Colonists
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.8
+      SpaceDefenseOverrideDefaults: True
+      SpaceDefenseProbability: 0
+      InitPower: True
+      IsCompoundSubDesc: True
+      Position:
+         PosXZMinMax: [750, 7000]
+         PosYMax: 5000
+      Properties:
+        - Key: RegenAfter
+          Value: 720
 
     - Type: BA_Alien
       Name: [CompoundColonistsDefenseT1Home]

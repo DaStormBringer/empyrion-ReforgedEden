@@ -616,7 +616,7 @@ POIs:
               Value: 180 
 
 # Random Abandoned POIs with Industrial ruin hubs =================================================================
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien
           NoShieldReload: True
           # IsImportant: True
@@ -796,7 +796,7 @@ POIs:
               Value: Neutral
 
 # Random Abandoned POIs
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien
           NoShieldReload: True  
           # IsScalingCount: True
@@ -1109,7 +1109,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"  
       
 # SpawnZones:
-   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

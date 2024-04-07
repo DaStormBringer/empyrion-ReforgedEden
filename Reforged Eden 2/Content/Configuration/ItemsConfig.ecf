@@ -66,6 +66,8 @@
 # HoldType: 14   Pistol
 # HoldType: 15   Rifle
 # HoldType: 16   Rifle + weaker shoot animation (Survival Tool, Multitool, Drill)
+# HoldType: 17   Ranged Weapon Bow
+# HoldType: 20   Melee
 #
 #  Categories: 
 # > Sufficient condition given in Templates.ecf
@@ -86,8 +88,8 @@
 # Durability: max is 5000 for all handheld weapons and tools 
 # AutoReload: true > per default it is set to "true"
 
-# Free IDs: 12, 13, 47, 59*, 70-77, 95-99, 145-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504, 606-619 (armor), 630-649 (boosters)
-# Free IDs: 659-699 (boosters), 709-799, 805*, 849, 854-855+862-863+878 (drone weapon), *921-965 (upgrade weapons/ammo), 975-982* (T2CV weapons)
+# Free IDs: 12, 13, 47, 59*, 70-77, 95-99, 146-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504, 606-619 (armor), 630-649 (boosters)
+# Free IDs: 659-699 (boosters), 709-799, 805*, 849, 854-855+862-863+878 (drone weapon), *921-965* (upgrade weapons/ammo), 975-982* (T2CV weapons)
 # Reclaimed IDs: 53, 79, 82, 83, 84, 312*, 322*, 336*, 353*, 358, [medical 366*, 388*, 390*, 393*, 392*, 378*]
 # RGFREEFLAG
 # * = Used
@@ -283,6 +285,7 @@
     CameraShake: 2  
     Automatic: false
     BulletSpread: 0.0, display: false
+	ShieldDamagePenFac: 0.05, display: false
     Recoil: 0.75, display: false
     Damage: 220, display: true
 	Stamina: -100, display: true
@@ -2291,7 +2294,7 @@
   Meshfile: Entities/Items/Weapons/Snipers/SniperRiflePrefab
   CustomIcon: Sniper
   PickupToToolbar: true
-  MarketPrice: 14170, display: true
+  MarketPrice: 14186, display: true
   Material: Device
   HoldType: 15
   StackSize: 1
@@ -3301,8 +3304,8 @@
   Crosshair: @RG_crosshairs/Flamethrower
   { Child 0
     Class: LauncherSS
-    ROF: 0.2, type: float
-    Range: 9, display: false
+    ROF: 0.1, type: float
+    Range: 24, display: false
     Recoil: 0.05, display: true
     NoiseStrength: 40, display: false 
     CameraShake: 0 
@@ -3908,7 +3911,7 @@
 { +Item Id: 11, Name: MultiTool
   Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
   PickupToToolbar: true
-  MarketPrice: 354, display: true
+  MarketPrice: 370, display: true
   HoldType: 16
   StackSize: 1
   Material: Device
@@ -4261,7 +4264,7 @@
 }
 { +Item Id: 31, Name: MultiToolT2, Ref: MultiTool
   Meshfile: Entities/Items/Weapons/MultiToolT2Prefab
-  MarketPrice: 1584, display: true
+  MarketPrice: 1600, display: true
   Durability: 500, display: false
   RepairCount: 3, type: int, display: false
   DegradationProb: 0.0333, type: float, display: false
@@ -5087,7 +5090,7 @@
 # ======================
 # Damage and Multipliers defined in EClassConfig > Entity Name: ExplosiveDevice
 { +Item Id: 32, Name: Explosives
-  MarketPrice: 258, display: true
+  MarketPrice: 266, display: true
   Meshfile: Entities/Misc/ScifiExplosiveDevice1Prefab
   DropMeshfile: Entities/Misc/BagSmallNewPrefab   #Available variants: BagSmallChristmasPrefab
   PickupToToolbar: true
@@ -5294,7 +5297,7 @@
   Material: Device
   Category: Weapons/Items 
   IsOreScannerItem: true
-  MarketPrice: 234, display: true
+  MarketPrice: 242, display: true
   CustomIcon: OreScannerRG
 
   UnlockCost: 3, display: true
@@ -5505,7 +5508,7 @@
 }
 { +Item Id: 58, Name: ShotgunShells, Ref: 9mmBullet
   StackSize: 8000
-  MarketPrice: 8, display: true
+  MarketPrice: 9, display: true
   Mass: 0.031, type: float, display: true, formatter: Kilogram
   Volume: 0.02, type: float, display: true, formatter: Liter
   Info: itmShotgunShells, display: true
@@ -5513,7 +5516,7 @@
 { +Item Id: 60, Name: PulseLaserChargePistol, Ref: 9mmBullet
   Meshfile: @rg_projectiles/RG_ProjectileRingBlue2
   StackSize: 1000
-  MarketPrice: 131, display: true
+  MarketPrice: 135, display: true
   Mass: 0.55, type: float, display: true, formatter: Kilogram
   Volume: 0.30, type: float, display: true, formatter: Liter
   Info: itmLaserPistolCharge, display: true
@@ -5535,7 +5538,7 @@
 }
 { +Item Id: 61, Name: PulseLaserChargeRifle, Ref: 9mmBullet
   StackSize: 1000
-  MarketPrice: 206, display: true
+  MarketPrice: 210, display: true
   Mass: 0.92, type: float, display: true, formatter: Kilogram
   Volume: 0.51, type: float, display: true, formatter: Liter
   Info: itmLaserRifleCharge, display: true
@@ -5603,7 +5606,7 @@
 { +Item Id: 64, Name: SciFiCannonPlasmaCharge
   Meshfile: Entities/Items/Weapons/Projectiles/PlasmaProjectilePrefab
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
-  MarketPrice: 60, display: true
+  MarketPrice: 61, display: true
   HoldType: 0
   Material: Device
   Canhold: false
@@ -5691,9 +5694,10 @@
   TechTreeNames: Hidden
 }
 { +Item Id: 67, Name: FlameThrowerCanister
-  Meshfile: Entities/Items/Weapons/Projectiles/FlameThrowerProjectilePrefab
+  #Meshfile: Entities/Items/Weapons/Projectiles/FlameThrowerProjectilePrefab
+  Meshfile: @reforged2/FlamethrowerProjectile2RG
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
-  MarketPrice: 255, display: true
+  MarketPrice: 383, display: true
   HoldType: 0
   Material: Device
   Canhold: false
@@ -5704,16 +5708,17 @@
   Volume: 7.5, type: float, display: true, formatter: Liter
   { Child 0
     Class: Projectile
-    Damage: 35, display: true 
-    BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL2
+    Damage: 25, display: false 
+    #BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL2
+    BlastParticleName: @reforged2/FlamethrowerBlast2RG
     BlastParticleIndex: 0
-    BlastRadius: 2, display: true
-    BlastDamage: 40, display: true
+    BlastRadius: 4, display: true
+    BlastDamage: 70, display: true
     Speed: 30
     Range: 24
-    RangeSpace: 12
+    RangeSpace: 24
     NoiseStrength: 80, display: false   
-    Ballistic: false
+    Ballistic: true
 
     DamageMultiplier_Group: FlamethrowerT1
 
@@ -5823,7 +5828,7 @@
 { +Item Id: 81, Name: OxygenBottleSmall
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
-  MarketPrice: 27, display: true
+  MarketPrice: 29, display: true
   Canhold: false
   AutoFill: false
   HoldType: 0
@@ -6860,6 +6865,42 @@
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ Item Id: 978, Name: FlamethrowerHVWeaponT2
+  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMinigunPrefab
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  ShowUser: NoButCSV
+  CustomIcon: WeaponHVFlamethrowerT2
+  Canhold: false
+  HoldType: 0
+  StackSize: 500
+  Material: Device
+  Mass: 1250, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  Crosshair: @RG_crosshairs/Flamethrower
+  { Child 0
+    Class: LauncherSS
+    IsShootThroughCrosshair: false
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 30, display: false
+    RangeSpace: 40, display: false
+    Automatic: true    
+    Damage: 150, display: true
+    AmmoCapacity: 100, display: true
+    AmmoType: FlamethrowerTank, display: true
+    UseSingleMagazine: true
+    NoiseStrength: 100, display: false
+    BulletSpread: 0.1, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 7.5, display: true
+    SfxBegin: Weapons/Player/FlameThrower/Flamethrower_Start 
+    SfxLoop: Weapons/Player/FlameThrower/Flamerthrower_Firing 
+    SfxStop: Weapons/Player/Drill/Mute
+    SfxReload: Weapons/Player/FlameThrower/Flamethrower_Reload 
+    SfxNoAmmo: UseActions/oxygen_tank_release_air
+	PfxMuzzle: SMGAutoMuzzleFire
   }
 }
 { Item Id: 1544, Name: WeaponSVEMPBombLauncherT2
@@ -9833,8 +9874,8 @@
 #  RadialMenu: true
   { Child 0
     Class: Driller
-	DrillMode: 3
-    AllowAt: "Planet"
+	DrillMode: 0
+    AllowAt: "Space,Planet"
     DecoMode: true
     InfoPopup: true
     TerrainMode: true
@@ -10416,7 +10457,7 @@
 }
 { +Item Id: 176, Name: DrillAttachmentLargeWeapon, Ref: DrillAttachmentWeapon
   { Child 0
-	DrillMode: 3
+	DrillMode: 0
     ROF: 0.5, type: float
     Damage: 580
     Radius: 4.0, display: true
@@ -10813,7 +10854,7 @@
   Volume: 1.25, type: float, display: true, formatter: Liter
   Info: itmSVPlasmaCannonCharge, display: true
   Category: Weapons/Items
-  MarketPrice: 40, display: true
+  MarketPrice: 41, display: true
   { Child 0
     Class: Projectile
     Damage: 46
@@ -10907,7 +10948,7 @@
 }
 { +Item Id: 154, Name: PulseLaserChargeSS
   Meshfile: @rg_projectiles/RG_ProjectileVulcanBlueNew
-  MarketPrice: 390, display: true
+  MarketPrice: 400, display: true
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
   AllowPlacingAt: "SS,GV", display: false
   HoldType: 0
@@ -11167,7 +11208,7 @@
 # SV Laser Charge T2
 { Item Id: 955, Name: LaserCannonChargeSVT2
   Meshfile: @rg_projectiles/RG_ProjectileLaserBlueS
-  MarketPrice: 526, display: true
+  MarketPrice: 536, display: true
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
   AllowPlacingAt: "SS,GV", display: false
   HoldType: 0
@@ -11211,7 +11252,7 @@
   Volume: 2.25, type: float, display: true, formatter: Liter
   Info: itmSVPlasmaCannonChargeT2, display: true
   Category: Weapons/Items
-  MarketPrice: 87, display: true
+  MarketPrice: 88, display: true
   { Child 0
     Class: Projectile
     Damage: 56 
@@ -11296,6 +11337,37 @@
     Ballistic: false
 
     DamageMultiplier_Group: HVCannonT2
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
+{ +Item Id: 145, Name: FlamethrowerTank
+  Meshfile: @reforged2/FlamethrowerProjectileRG
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  MarketPrice: 932, display: true
+  HoldType: 0
+  Material: Device
+  Canhold: false
+  Info: itmFlamethrowerTank, display: true
+  Category: Weapons/Items
+  StackSize: 2000
+  Mass: 30, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
+  { Child 0
+    Class: Projectile
+    Damage: 25, display: false
+    BlastParticleName: @reforged2/FlamethrowerBlastRG
+    BlastParticleIndex: 0
+    BlastRadius: 5, display: true
+    BlastDamage: 150, display: true
+    Speed: 40
+    Range: 30
+    RangeSpace: 40
+    NoiseStrength: 80, display: false   
+    Ballistic: true
+
+    DamageMultiplier_Group: HVFlamethrower
   }
 
   UnlockLevel: 1
@@ -11424,7 +11496,7 @@
   Volume: 4.0, type: float, display: true, formatter: Liter
   Info: itmSVPlasmaCannonChargeT3, display: true
   Category: Weapons/Items
-  MarketPrice: 154, display: true
+  MarketPrice: 156, display: true
   { Child 0
     Class: Projectile
     Damage: 312
@@ -11534,7 +11606,7 @@
   Volume: 1.25, type: float, display: true, formatter: Liter
   Info: itmHVPlasmaChargeT1, display: true
   Category: Weapons/Items
-  MarketPrice: 54, display: true
+  MarketPrice: 55, display: true
   { Child 0
     Class: Projectile
     Damage: 53
@@ -11658,7 +11730,7 @@
   Volume: 6.25, type: float, display: true, formatter: Liter
   Info: itmLaserChargeCVT1, display: true
   Category: Weapons/Items
-  MarketPrice: 780, display: true
+  MarketPrice: 800, display: true
   { Child 0
     Class: Projectile
     Damage: 433, display: true
@@ -11690,7 +11762,7 @@
   Volume: 11.25, type: float, display: true, formatter: Liter
   Info: itmLaserChargeCVT2, display: true
   Category: Weapons/Items
-  MarketPrice: 1302, display: true
+  MarketPrice: 1322, display: true
   { Child 0
     Class: Projectile
     Damage: 1000, display: true
@@ -11921,7 +11993,7 @@
   Mass: 16, type: float, display: true, formatter: Kilogram
   Volume: 7.5, type: float, display: true, formatter: Liter
   Info: itmCVPlasmaCannonChargeT1, display: true
-  MarketPrice: 37, display: true
+  MarketPrice: 38, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -11953,7 +12025,7 @@
   Mass: 40, type: float, display: true, formatter: Kilogram
   Volume: 15, type: float, display: true, formatter: Liter
   Info: itmCVPlasmaCannonChargeT2, display: true
-  MarketPrice: 110, display: true
+  MarketPrice: 112, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -11985,7 +12057,7 @@
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 30, type: float, display: true, formatter: Liter
   Info: itmCVPlasmaCannonChargeT3, display: true
-  MarketPrice: 290, display: true
+  MarketPrice: 293, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -12194,7 +12266,7 @@
   Volume: 6.25, type: float, display: true, formatter: Liter
   Info: itmCVLaserChargeT1, display: true
   Category: Weapons/Items
-  MarketPrice: 780, display: true
+  MarketPrice: 800, display: true
   { Child 0
     Class: Projectile
     Damage: 278, display: true
@@ -12260,7 +12332,7 @@
   Mass: 32, type: float, display: true, formatter: Kilogram
   Volume: 15, type: float, display: true, formatter: Liter
   Info: itmCVPlasmaChargeT1, display: true
-  MarketPrice: 57, display: true
+  MarketPrice: 58, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -12364,7 +12436,7 @@
   Volume: 11.25, type: float, display: true, formatter: Liter
   Info: itmCVLaserChargeT2, display: true
   Category: Weapons/Items
-  MarketPrice: 1052, display: true
+  MarketPrice: 1072, display: true
   { Child 0
     Class: Projectile
     Damage: 876, display: true
@@ -12430,7 +12502,7 @@
   Mass: 54, type: float, display: true, formatter: Kilogram
   Volume: 16.5, type: float, display: true, formatter: Liter
   Info: itmCVPlasmaChargeT2, display: true
-  MarketPrice: 118, display: true
+  MarketPrice: 120, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -12547,7 +12619,7 @@
   Mass: 32.5, type: float, display: true, formatter: Kilogram
   Volume: 6.25, type: float, display: true, formatter: Liter
   Info: itmBALaserChargeT1, display: true
-  MarketPrice: 780, display: true
+  MarketPrice: 800, display: true
   { Child 0
     Damage: 334, display: true
     Speed: 600
@@ -12590,7 +12662,7 @@
   Mass: 35, type: float, display: true, formatter: Kilogram
   Volume: 16, type: float, display: true, formatter: Liter
   Info: itmBAPlasmaChargeT1, display: true
-  MarketPrice: 57, display: true
+  MarketPrice: 58, display: true
   { Child 0
     Damage: 72
     BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
@@ -12618,7 +12690,7 @@
   Volume: 12.5, type: float, display: true, formatter: Liter
   Info: itmBALaserChargeT2, display: true
   Category: Weapons/Items
-  MarketPrice: 1052, display: true
+  MarketPrice: 1072, display: true
   { Child 0
     Class: Projectile
     Damage: 1050, display: true
@@ -12683,7 +12755,7 @@
   Mass: 60, type: float, display: true, formatter: Kilogram
   Volume: 17.5, type: float, display: true, formatter: Liter
   Info: itmBAPlasmaChargeT2, display: true
-  MarketPrice: 118, display: true
+  MarketPrice: 120, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -12784,7 +12856,7 @@
   Mass: 125, type: float, display: true, formatter: Kilogram
   Volume: 30, type: float, display: true, formatter: Liter
   Info: itmBAPlasmaChargeT3, display: true
-  MarketPrice: 547, display: true
+  MarketPrice: 555, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -13802,7 +13874,7 @@
   Mass: 0.74, type: float, display: true, formatter: Kilogram
   Volume: 1.12, type: float, display: true, formatter: Liter
   Info: itmGraphite, display: true
-  MarketPrice: 50, display: true
+  MarketPrice: 25, display: true
   XpFactor: 2
   ShowUser: Yes
 }
@@ -13874,7 +13946,7 @@
 }
 { +Item Id: 215, Name: Nanotubes, Ref: ComponentsTemplate
   ShowUser: Yes
-  MarketPrice: 6, display: true
+  MarketPrice: 10, display: true
   Mass: 0.57, type: float, display: true, formatter: Kilogram
   Volume: 2.25, type: float, display: true, formatter: Liter
   Info: itmNanotubes, display: true
@@ -13920,7 +13992,7 @@
   Mass: 0.18, type: float, display: true, formatter: Kilogram
   Volume: 0.12, type: float, display: true, formatter: Liter
   Info: itmPlasticMaterial, display: true
-  MarketPrice: 3, display: true
+  MarketPrice: 5, display: true
   XpFactor: 2
   ShowUser: Yes
 }
@@ -13974,7 +14046,7 @@
   Volume: 127.5, type: float, display: true, formatter: Liter
   # Info: itmPlayerBikeKit, display: true
   Info: bkiPlayerbikeKit, display: true
-  MarketPrice: 213, display: true
+  MarketPrice: 233, display: true
 }
 { +Item Id: 261, Name: PentaxidElement, Ref: ComponentsTemplate
   ShowUser: Yes
@@ -14027,7 +14099,7 @@
 }
 { +Item Id: 286, Name: Bone, Ref: ComponentsTemplate
   ShowUser: Yes
-  MarketPrice: 13, display: true
+  MarketPrice: 16, display: true
   Mass: 0.28, type: float, display: true, formatter: Kilogram
   Volume: 0.44, type: float, display: true, formatter: Liter
   Info: itmBone, display: true
@@ -15823,7 +15895,7 @@
   Volume: 1.75, type: float, display: true, formatter: Liter
   Category: Medical
   LifetimeOnDrop: 1200
-  MarketPrice: 61, display: true
+  MarketPrice: 75, display: true
   Info: itmCast, display: true
   StackSize: 1000
   ShowUser: Yes
@@ -15843,7 +15915,7 @@
   Mass: 0.5, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Category: Medical
-  MarketPrice: 1425, display: true
+  MarketPrice: 1427, display: true
   Info: itmMedikit01, display: true
   StackSize: 1000
   ShowUser: Yes
@@ -15863,7 +15935,7 @@
   Mass: 0.5, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Category: Medical
-  MarketPrice: 1513, display: true
+  MarketPrice: 1515, display: true
   Info: itmMedikit02, display: true
   StackSize: 1000
   ShowUser: Yes
@@ -15883,7 +15955,7 @@
 { +Item Id: 308, Name: Medikit03, Ref: FoodTemplate         #DecontKit
   Mass: 0.5, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
-  MarketPrice: 1554, display: true
+  MarketPrice: 1556, display: true
   Category: Medical
   Info: itmMedikit03, display: true
   StackSize: 1000
@@ -15906,7 +15978,7 @@
   Mass: 0.06, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
   Category: Medical
-  MarketPrice: 388, display: true
+  MarketPrice: 390, display: true
   Info: itmMedikit04, display: true
   StackSize: 1000
   ShowUser: Yes
@@ -18470,7 +18542,7 @@
 { +Item Id: 600, Name: ArmorLight
   Class: Armor
   RecipeName: LightArmor
-  MarketPrice: 182, display: true
+  MarketPrice: 198, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
   Mass: 25, type: float, display: false, formatter: Kilogram
@@ -19097,15 +19169,15 @@
 { Item Id: 1904, Name: CivilianFurniture, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 100, type: float, display: true, formatter: Kilogram
-  Volume: 25, type: float, display: true, formatter: Liter
-  MarketPrice: 480, display: true
+  Volume: 10, type: float, display: true, formatter: Liter
+  MarketPrice: 680, display: true
   Info: itmCivilianFurniture, display: true
 }
 { Item Id: 1905, Name: LuxuryFurniture, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 200, type: float, display: true, formatter: Kilogram
-  Volume: 30, type: float, display: true, formatter: Liter
-  MarketPrice: 674, display: true
+  Volume: 20, type: float, display: true, formatter: Liter
+  MarketPrice: 1674, display: true
   Info: itmLuxuryFurniture, display: true
 }
 { Item Id: 1906, Name: PrefabHousing, Ref: ComponentsTemplate
@@ -19420,6 +19492,8 @@
   Material: Device
   Info: Don't write anything here, display: true
   Category: Components 
+  Mass: 0, type: float, display: false, formatter: Kilogram
+  Volume: 0, type: float, display: false, formatter: Liter
   
   StackSize: 1
   ShowUser: Yes
@@ -20539,7 +20613,7 @@
   Canhold: false
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
-  MarketPrice: 437
+  MarketPrice: 137
   ShowUser: Yes
   Info: Eden_TurretRailgun_Ammoinfo, display: true
   Category: Weapons/Items
@@ -21996,7 +22070,7 @@
   Canhold: false
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 50, type: float, display: true, formatter: Liter
-  MarketPrice: 874
+  MarketPrice: 274
   ShowUser: Yes
   Info: Eden_TurretRailgunT2_Ammoinfo, display: true
   Category: Weapons/Items
@@ -24345,7 +24419,7 @@
   Mass: 1.4, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: Eden_TurretBolterBA_Ammoinfo, display: true
-  MarketPrice: 9, display: true
+  MarketPrice: 4, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -24396,7 +24470,7 @@
 { +Item Id: 3144, Name: Eden_TurretBolterCV_Ammo, Ref: Eden_TurretBolterBA_Ammo
   Meshfile: @eden_projectiles/Eden_ProjectileBulletYellowSx6
   AllowPlacingAt: MS, display: false
-  MarketPrice: 9, display: true
+  MarketPrice: 4, display: true
   Info: Eden_TurretBolterCV_Ammoinfo, display: true
   ShowUser: Yes
   { Child 0
@@ -25563,7 +25637,7 @@
   Volume: 2, type: float, display: true, formatter: Liter
   Info: Eden_TurretVulcanCV_Ammoinfo, display: true
   Category: Weapons/Items
-  MarketPrice: 32, display: true
+  MarketPrice: 16, display: true
 }
 
 # CV Ice Mining Drill
@@ -25935,7 +26009,7 @@
     # Damage: 3
     Damage: 10, display: true
     Radius: 0
-    Range: 450, display: false
+    Range: 800, display: false
     IgnoreAtmo: true
     Automatic: true
     NoiseStrength: 30, display: false
@@ -25984,7 +26058,7 @@
     ROF: 0.5, type: float
     Damage: 10, display: true
     Radius: 0
-    Range: 450, display: false
+    Range: 800, display: false
     IgnoreAtmo: true
     Automatic: true
     NoiseStrength: 30, display: false
@@ -26008,6 +26082,7 @@
     DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
+    DamageMultiplier_5: 0, param1: resourcesoft|resourcehard
   }
 }
 
@@ -26970,7 +27045,7 @@
   Info: A magnetized plate used in the construction of advanced devices., display: true
   StackSize: 4000
   ShowUser: Yes
-  MarketPrice: 101, display: true
+  MarketPrice: 96, display: true
   Mass: 20, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
 }
@@ -27088,7 +27163,7 @@
 { +Item Id: 3234, Name: Eden_Electromagnet, Ref: ComponentsTemplate
   Info: Eden_Electromagnetinfo, display: true
   ShowUser: Yes
-  MarketPrice: 3500, display: true
+  MarketPrice: 7000, display: true
   Mass: 321.07, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
 }
@@ -27206,7 +27281,7 @@
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
   ShowUser: Yes
-  MarketPrice: 300, display: true
+  MarketPrice: 150, display: true
   Info: Eden_TungstenOreinfo, display: true
 }
 
@@ -27215,7 +27290,7 @@
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
   ShowUser: Yes
-  MarketPrice: 375, display: true
+  MarketPrice: 75, display: true
   Info: Eden_TungstenIngotinfo, display: true
 }
 
@@ -27224,7 +27299,7 @@
   Mass: 32.17, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
   ShowUser: Yes
-  MarketPrice: 150, display: true
+  MarketPrice: 450, display: true
   Info: Eden_PalladiumOreinfo, display: true
 }
 

@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.57.0 | 27.3.2024 - 12:2:45  */
+/*  Created with eWCCT 3.57.0 | 29.3.2024 - 15:12:38  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -11198,16 +11198,19 @@
   OptionNext_1: End
   OptionExecute_1: "OpenTraderWindow()"
   Option_2: dialogue_q4WuWl4
-  OptionIf_2: "SettlementMission == 0"
+  OptionIf_2: "SettlementMission == 0 && CanTrade < 4"
   OptionNext_2: TD_Settlement_Mission
-  Option_3: dialogue_4O4i2em
-  OptionIf_3: "CanTrade > 3"
-  OptionNext_3: TD_Settlement_NoMission
-  Option_4: dialogue_4uaGa4W
-  OptionIf_4: "SettlementMission > 0"
-  OptionNext_4: TD_Settlement_MissionCheck
-  Option_5: dialogue_aK4Gd0Q
-  OptionNext_5: End
+  Option_3: dialogue_0t8KGO0
+  OptionIf_3: "CanTrade == 4"
+  OptionNext_3: TD_Settlement_Crew
+  Option_4: dialogue_4O4i2em
+  OptionIf_4: "CanTrade > 4"
+  OptionNext_4: TD_Settlement_NoMission
+  Option_5: dialogue_4uaGa4W
+  OptionIf_5: "SettlementMission > 0"
+  OptionNext_5: TD_Settlement_MissionCheck
+  Option_6: dialogue_aK4Gd0Q
+  OptionNext_6: End
   Variable_1: "SettlementMission", param1: dbplayerpoipos_int
   Variable_2: "MoneyCounter", param1: int
   Variable_3: "CanTrade", param1: dbplayerpoipos_int
@@ -11223,6 +11226,14 @@
   NextIf_4: "SettlementMission == 4"
   Next_5: TD_Settlement_Mission05
   NextIf_5: "SettlementMission == 5"
+  Next_6: TD_Settlement_Mission06
+  NextIf_6: "SettlementMission == 6"
+  Next_7: TD_Settlement_Mission07
+  NextIf_7: "SettlementMission == 7"
+  Next_8: TD_Settlement_Mission08
+  NextIf_8: "SettlementMission == 8"
+  Next_9: TD_Settlement_Mission09
+  NextIf_9: "SettlementMission == 9"
 }
 { +Dialogue Name: TD_Settlement_MissionComplete
   Output: dialogue_8Gi4Kue
@@ -11233,7 +11244,7 @@
   Output: dialogue_04WM4m6
   Option_1: dialogue_4u0aO4C
   OptionNext_1: TD_Settlement_MissionCheck
-  OptionExecute_1: "SettlementMission = Random(1,5)"
+  OptionExecute_1: "SettlementMission = Random(1,9)"
   Option_2: dialogue_OaGlS2q
   OptionNext_2: TD_Settlement_Start
 }
@@ -11282,10 +11293,65 @@
   Option_2: dialogue_WSGK8ia
   OptionNext_2: End
 }
+{ +Dialogue Name: TD_Settlement_Mission06
+  Output: dialogue_GaWW0d0
+  Option_1: dialogue_8GemOA0
+  OptionIf_1: "HasItem('WorkClothing', 50)"
+  OptionNext_1: TD_Settlement_MissionComplete
+  OptionExecute_1: "RemoveItem('WorkClothing', 50); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 26000); MoneyCounter = 26000"
+  Option_2: dialogue_iuauOKK
+  OptionNext_2: End
+}
+{ +Dialogue Name: TD_Settlement_Mission07
+  Output: dialogue_EHOe4ai
+  Option_1: dialogue_Bma4Ge8
+  OptionIf_1: "HasItem('CivilianClothing', 80)"
+  OptionNext_1: TD_Settlement_MissionComplete
+  OptionExecute_1: "RemoveItem('CivilianClothing', 80); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 32000); MoneyCounter = 32000"
+  Option_2: dialogue_AOiqDS0
+  OptionNext_2: End
+}
+{ +Dialogue Name: TD_Settlement_Mission08
+  Output: dialogue_8aKKuOe
+  Option_1: dialogue_80WqOui
+  OptionIf_1: "HasItem('LuxuryFurniture', 10) && HasItem('Jewellery', 25)"
+  OptionNext_1: TD_Settlement_MissionComplete
+  OptionExecute_1: "RemoveItem('LuxuryFurniture', 10); RemoveItem('Jewellery', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 70000); MoneyCounter = 70000"
+  Option_2: dialogue_SSqoSWW
+  OptionNext_2: End
+}
+{ +Dialogue Name: TD_Settlement_Mission09
+  Output: dialogue_aSii8ee
+  Option_1: dialogue_K8i4UOR
+  OptionIf_1: "HasItem('CivilianFurniture', 25)"
+  OptionNext_1: TD_Settlement_MissionComplete
+  OptionExecute_1: "RemoveItem('CivilianFurniture', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 34000); MoneyCounter = 34000"
+  Option_2: dialogue_qmL0Kiu
+  OptionNext_2: End
+}
 { +Dialogue Name: TD_Settlement_NoMission
   Output: dialogue_aGSW0WY
   Option_1: dialogue_CqiSuKe
   OptionNext_1: TD_Settlement_Start
+}
+{ +Dialogue Name: TD_Settlement_Crew
+  Output: dialogue_4CGul4l
+  Option_1: dialogue_meGRGaS
+  OptionNext_1: TD_Settlement_CrewYes
+  OptionExecute_1: "CanTrade = CanTrade + 1; AddItemsFromContainer(400, 1)"
+  Option_2: dialogue_Gwiq8Se
+  OptionNext_2: TD_Settlement_CrewNo
+  OptionExecute_2: "CanTrade = CanTrade + 1;"
+}
+{ +Dialogue Name: TD_Settlement_CrewYes
+  Output: dialogue_SSqGdKK
+  Option_1: dialogue_8ei8uCC
+  OptionNext_1: End
+}
+{ +Dialogue Name: TD_Settlement_CrewNo
+  Output: dialogue_4aeGKiK
+  Option_1: dialogue_CSu8iSu
+  OptionNext_1: End
 }
 { +Dialogue Name: TD_SpaceportSmall_Start
   NPCName: dialogue_0KKq4a4
@@ -14885,8 +14951,10 @@
   Option_5: dialogue_GC2Ge0s
   OptionIf_5: "QuantumStarMission == 4"
   OptionNext_5: TD_QuantumStar_NoWork, param1: TD_QuantumStar_Start
-  Option_6: dialogue_cYKm8ma
-  OptionNext_6: End
+  Option_6: dialogue_amuuK24
+  OptionNext_6: TD_QuantumStar_QP, param1: TD_QuantumStar_Start
+  Option_7: dialogue_cYKm8ma
+  OptionNext_7: End
   Variable_1: "TalkOption", param1: int
   Variable_2: "QuantumStarMission", param1: dbplayerpoipos_int
 }
@@ -14966,6 +15034,11 @@
   Option_1: dialogue_qGGaKaF
   OptionNext_1: Return
 }
+{ +Dialogue Name: TD_QuantumStar_QP
+  Output: dialogue_aWGWK04
+  Option_1: dialogue_WuCq8SG
+  OptionNext_1: Return
+}
 { +Dialogue Name: TD_TotallyOP_Start
   NPCName: dialogue_8mi0imq
   Output: dialogue_wmV4mae
@@ -14979,15 +15052,22 @@
   OptionIf_3: "TOPMission == 0"
   OptionNext_3: TD_TotallyOP_Mission
   Option_4: dialogue_KeKea0G
-  OptionIf_4: "TOPMission > 0 && TOPMission < 4"
+  OptionIf_4: "TOPMission > 0 && TOPMission < 6"
   OptionNext_4: TD_TotallyOP_MissionCheck
-  Option_5: dialogue_qK8em4K
-  OptionIf_5: "TOPMission == 4"
-  OptionNext_5: TD_TotallyOP_NoWork, param1: TD_TotallyOP_Start
-  Option_6: dialogue_O88DCaK
-  OptionNext_6: End
+  Option_5: dialogue_SaqWGia
+  OptionIf_5: "TOPMission == 6 && CrewCheck == 3"
+  OptionNext_5: TD_TotallyOP_Crew
+  Option_6: dialogue_aukSN4a
+  OptionIf_6: "TOPMission == 6 && CrewCheck < 3"
+  OptionNext_6: TD_TotallyOP_NoCrew
+  Option_7: dialogue_qK8em4K
+  OptionIf_7: "TOPMission == 7"
+  OptionNext_7: TD_TotallyOP_NoWork, param1: TD_TotallyOP_Start
+  Option_8: dialogue_O88DCaK
+  OptionNext_8: End
   Variable_1: "TalkOption", param1: int
   Variable_2: "TOPMission", param1: dbplayerpoipos_int
+  Variable_3: "CrewCheck", param1: dbplayerpoipos_int
 }
 { +Dialogue Name: TD_TotallyOP_Talk
   Next_1: TD_TotallyOP_Talk1
@@ -15016,7 +15096,7 @@
   Output: dialogue_4SSG48W
   Option_1: dialogue_G4iiugl
   OptionNext_1: TD_TotallyOP_MissionCheck
-  OptionExecute_1: "TOPMission = Random(1,3)"
+  OptionExecute_1: "TOPMission = Random(1,5)"
   Option_2: dialogue_CI80eWi
   OptionNext_2: TD_TotallyOP_Start
 }
@@ -15027,13 +15107,17 @@
   NextIf_2: "TOPMission == 2"
   Next_3: TD_TotallyOP_Mission03
   NextIf_3: "TOPMission == 3"
+  Next_4: TD_TotallyOP_Mission04
+  NextIf_4: "TOPMission == 4"
+  Next_5: TD_TotallyOP_Mission05
+  NextIf_5: "TOPMission == 5"
 }
 { +Dialogue Name: TD_TotallyOP_Mission01
   Output: dialogue_448i80i
   Option_1: dialogue_GieKmmm
   OptionIf_1: "HasItem('IceBlocks', 100)"
   OptionNext_1: TD_TotallyOP_MissionComplete
-  OptionExecute_1: "RemoveItem('IceBlocks', 100); AddItem('MoneyCard', 7000); TOPMission = 4"
+  OptionExecute_1: "RemoveItem('IceBlocks', 100); AddItem('MoneyCard', 7000); TOPMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_8eWuKWS
   OptionNext_2: TD_TotallyOP_Start
 }
@@ -15042,7 +15126,7 @@
   Option_1: dialogue_uW8qwiu
   OptionIf_1: "HasItem('HeliumBottle', 50)"
   OptionNext_1: TD_TotallyOP_MissionComplete
-  OptionExecute_1: "RemoveItem('HeliumBottle', 50); AddItem('MoneyCard', 24000); TOPMission = 4"
+  OptionExecute_1: "RemoveItem('HeliumBottle', 50); AddItem('MoneyCard', 24000); TOPMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_8KqaWeq
   OptionNext_2: TD_TotallyOP_Start
 }
@@ -15051,8 +15135,26 @@
   Option_1: dialogue_meqGOqe
   OptionIf_1: "HasItem('Salt', 600)"
   OptionNext_1: TD_TotallyOP_MissionComplete
-  OptionExecute_1: "RemoveItem('Salt', 600); AddItem('MoneyCard', 60000); TOPMission = 4"
+  OptionExecute_1: "RemoveItem('Salt', 600); AddItem('MoneyCard', 60000); TOPMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_Oum04CX
+  OptionNext_2: TD_TotallyOP_Start
+}
+{ +Dialogue Name: TD_TotallyOP_Mission04
+  Output: dialogue_GcGGS4a
+  Option_1: dialogue_Ga00m8O
+  OptionIf_1: "HasItem('Buds', 250)"
+  OptionNext_1: TD_TotallyOP_MissionComplete
+  OptionExecute_1: "RemoveItem('Buds', 250); AddItem('MoneyCard', 50000); TOPMission = 6; CrewCheck = Random(1,3)"
+  Option_2: dialogue_aemUaeC
+  OptionNext_2: TD_TotallyOP_Start
+}
+{ +Dialogue Name: TD_TotallyOP_Mission05
+  Output: dialogue_ieSCi4i
+  Option_1: dialogue_iO2gGuG
+  OptionIf_1: "HasItem('AlienSpikeLemon', 100)"
+  OptionNext_1: TD_TotallyOP_MissionComplete
+  OptionExecute_1: "RemoveItem('AlienSpikeLemon', 100); AddItem('MoneyCard', 25000); TOPMission = 6; CrewCheck = Random(1,3)"
+  Option_2: dialogue_4WWKiWK
   OptionNext_2: TD_TotallyOP_Start
 }
 { +Dialogue Name: TD_TotallyOP_MissionComplete
@@ -15065,6 +15167,30 @@
   Output: dialogue_SCCSQC8
   Option_1: dialogue_Oi8rS8C
   OptionNext_1: Return
+}
+{ +Dialogue Name: TD_TotallyOP_Crew
+  Output: dialogue_qCGW8ep
+  Option_1: dialogue_8meR84a
+  OptionIf_1: "HasItem('MoneyCard', 75000)"
+  OptionNext_1: TD_TotallyOP_CrewYes
+  OptionExecute_1: "RemoveItem('MoneyCard', 75000); AddItemsFromContainer(400, 1); TOPMission = 7"
+  Option_2: dialogue_GiK0Gma
+  OptionIf_2: "Player.Credit > 75000"
+  OptionNext_2: TD_TotallyOP_CrewYes
+  OptionExecute_2: "Player.Credit -= 75000; AddItemsFromContainer(400, 1); TOPMission = 7"
+  Option_3: dialogue_iuie0AS
+  OptionNext_3: End
+}
+{ +Dialogue Name: TD_TotallyOP_CrewYes
+  Output: dialogue_A8uaSKC
+  Option_1: dialogue_4gO0i0a
+  OptionNext_1: End
+}
+{ +Dialogue Name: TD_TotallyOP_NoCrew
+  Output: dialogue_qmiGumQ
+  Option_1: dialogue_GW8KKGS
+  OptionNext_1: End
+  OptionExecute_1: "TOPMission = 7"
 }
 { +Dialogue Name: TD_Pax_Start
   NPCName: dialogue_SS42eOW
@@ -15079,15 +15205,22 @@
   OptionIf_3: "PaxMission == 0"
   OptionNext_3: TD_Pax_Mission
   Option_4: dialogue_4uSmBOi
-  OptionIf_4: "PaxMission > 0 && PaxMission < 4"
+  OptionIf_4: "PaxMission > 0 && PaxMission < 6"
   OptionNext_4: TD_Pax_MissionCheck
-  Option_5: dialogue_C8WWCaO
-  OptionIf_5: "PaxMission == 4"
-  OptionNext_5: TD_Pax_NoWork, param1: TD_Pax_Start
-  Option_6: dialogue_uaeSGSm
-  OptionNext_6: End
+  Option_5: dialogue_u0W4uYe
+  OptionIf_5: "PaxMission == 6 && CrewCheck == 3"
+  OptionNext_5: TD_Pax_Crew
+  Option_6: dialogue_8m44CmG
+  OptionIf_6: "PaxMission == 6 && CrewCheck < 3"
+  OptionNext_6: TD_Pax_NoCrew
+  Option_7: dialogue_C8WWCaO
+  OptionIf_7: "PaxMission == 7"
+  OptionNext_7: TD_Pax_NoWork, param1: TD_Pax_Start
+  Option_8: dialogue_uaeSGSm
+  OptionNext_8: End
   Variable_1: "TalkOption", param1: int
   Variable_2: "PaxMission", param1: dbplayerpoipos_int
+  Variable_3: "CrewCheck", param1: dbplayerpoipos_int
 }
 { +Dialogue Name: TD_Pax_Talk
   Next_1: TD_Pax_Talk1
@@ -15116,7 +15249,7 @@
   Output: dialogue_8104a4O
   Option_1: dialogue_O4Suq4a
   OptionNext_1: TD_Pax_MissionCheck
-  OptionExecute_1: "PaxMission = Random(1,3)"
+  OptionExecute_1: "PaxMission = Random(1,5)"
   Option_2: dialogue_64C88OG
   OptionNext_2: TD_Pax_Start
 }
@@ -15127,13 +15260,17 @@
   NextIf_2: "PaxMission == 2"
   Next_3: TD_Pax_Mission03
   NextIf_3: "PaxMission == 3"
+  Next_4: TD_Pax_Mission04
+  NextIf_4: "PaxMission == 4"
+  Next_5: TD_Pax_Mission05
+  NextIf_5: "PaxMission == 5"
 }
 { +Dialogue Name: TD_Pax_Mission01
   Output: dialogue_SamWKCi
   Option_1: dialogue_icGKaia
   OptionIf_1: "HasItem('KeyCardSecurity', 1)"
   OptionNext_1: TD_Pax_MissionComplete
-  OptionExecute_1: "RemoveItem('KeyCardSecurity', 1); AddItem('MoneyCard', 48000); PaxMission = 4"
+  OptionExecute_1: "RemoveItem('KeyCardSecurity', 1); AddItem('MoneyCard', 48000); PaxMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_uui0SSC
   OptionNext_2: TD_Pax_Start
 }
@@ -15142,7 +15279,7 @@
   Option_1: dialogue_miuCh4S
   OptionIf_1: "HasItem('AncientRelics', 6)"
   OptionNext_1: TD_Pax_MissionComplete
-  OptionExecute_1: "RemoveItem('AncientRelics', 6); AddItem('MoneyCard', 130000); PaxMission = 4"
+  OptionExecute_1: "RemoveItem('AncientRelics', 6); AddItem('MoneyCard', 130000); PaxMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_emiOK0S
   OptionNext_2: TD_Pax_Start
 }
@@ -15151,8 +15288,26 @@
   Option_1: dialogue_Wm08MiK
   OptionIf_1: "HasItem('Leather', 40)"
   OptionNext_1: TD_Pax_MissionComplete
-  OptionExecute_1: "RemoveItem('Leather', 40); AddItem('MoneyCard', 25000); PaxMission = 4"
+  OptionExecute_1: "RemoveItem('Leather', 40); AddItem('MoneyCard', 25000); PaxMission = 6; CrewCheck = Random(1,3)"
   Option_2: dialogue_0eSCGCm
+  OptionNext_2: TD_Pax_Start
+}
+{ +Dialogue Name: TD_Pax_Mission04
+  Output: dialogue_YKai048
+  Option_1: dialogue_ueiuWaW
+  OptionIf_1: "HasItem('Token', 1, 23)"
+  OptionNext_1: TD_Pax_MissionComplete
+  OptionExecute_1: "RemoveItem('Token', 1, 23); AddItem('MoneyCard', 25000); PaxMission = 6; CrewCheck = Random(1,3)"
+  Option_2: dialogue_CueivGe
+  OptionNext_2: TD_Pax_Start
+}
+{ +Dialogue Name: TD_Pax_Mission05
+  Output: dialogue_K8e2YmO
+  Option_1: dialogue_EUWqM4q
+  OptionIf_1: "HasItem('Token', 1, 133)"
+  OptionNext_1: TD_Pax_MissionComplete
+  OptionExecute_1: "RemoveItem('Token', 1, 133); AddItem('MoneyCard', 9000); PaxMission = 6; CrewCheck = Random(1,3)"
+  Option_2: dialogue_4KOQKGa
   OptionNext_2: TD_Pax_Start
 }
 { +Dialogue Name: TD_Pax_MissionComplete
@@ -15165,6 +15320,30 @@
   Output: dialogue_C8WW0OW
   Option_1: dialogue_GC8a4JW
   OptionNext_1: Return
+}
+{ +Dialogue Name: TD_Pax_Crew
+  Output: dialogue_WQeWiG0
+  Option_1: dialogue_OGqQKSO
+  OptionIf_1: "HasItem('MoneyCard', 75000)"
+  OptionNext_1: TD_Pax_CrewYes
+  OptionExecute_1: "RemoveItem('MoneyCard', 75000); AddItemsFromContainer(400, 1); PaxMission = 7"
+  Option_2: dialogue_0iuaq8u
+  OptionIf_2: "Player.Credit > 75000"
+  OptionNext_2: TD_Pax_CrewYes
+  OptionExecute_2: "Player.Credit -= 75000; AddItemsFromContainer(400, 1); PaxMission = 7"
+  Option_3: dialogue_CSYq8iS
+  OptionNext_3: End
+}
+{ +Dialogue Name: TD_Pax_CrewYes
+  Output: dialogue_aO4WmOE
+  Option_1: dialogue_0ueWiqO
+  OptionNext_1: End
+}
+{ +Dialogue Name: TD_Pax_NoCrew
+  Output: dialogue_K8wSeSW
+  Option_1: dialogue_Kuu4OaG
+  OptionNext_1: End
+  OptionExecute_1: "PaxMission = 7"
 }
 { +Dialogue Name: TD_Bertram_Start
   NPCName: dialogue_uGWKugm
@@ -18825,7 +19004,7 @@
   OptionExecute_11: "Player.Skills['LaserRifleT2FrameDamageUp'] = 0; Player.Skills['LaserRifleT2FrameSpreadUp'] = 0; Player.Skills['LaserRifleT2FrameRecoilUp'] = 0; Player.Skills['LaserRifleT2FrameReloadUp'] = 375; Player.Skills['LaserRifleT2FrameDamageDown'] = 108; Player.Skills['LaserRifleT2FrameSpreadDown'] = 0; Player.Skills['LaserRifleT2FrameRecoilDown'] = 0; Player.Skills['LaserRifleT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 66); LaserRifleT2Frame = 'Mk-00 Generator Frame'; ModSelection = 'Mk-00 Generator Frame'"
   Option_12: dialogue_4808qS7
   OptionNext_12: GS_WeaponBench_Restore
-  OptionExecute_12: "Player.Skills['LaserRifleT2BarrelDamageUp'] = 0; Player.Skills['LaserRifleT2BarrelSpreadUp'] = 0; Player.Skills['LaserRifleT2BarrelRecoilUp'] = 0; Player.Skills['LaserRifleT2BarrelReloadUp'] = 0; Player.Skills['LaserRifleT2BarrelDamageDown'] = 0; Player.Skills['LaserRifleT2BarrelSpreadDown'] = 0; Player.Skills['LaserRifleT2BarrelRecoilDown'] = 0; Player.Skills['LaserRifleT2BarrelReloadDown'] = 0; Player.Skills['LaserRifleT2GripDamageUp'] = 0; Player.Skills['LaserRifleT2GripSpreadUp'] = 0; Player.Skills['LaserRifleT2GripRecoilUp'] = 0; Player.Skills['LaserRifleT2GripReloadUp'] = 0; Player.Skills['LaserRifleT2GripDamageDown'] = 0; Player.Skills['LaserRifleT2GripSpreadDown'] = 0; Player.Skills['LaserRifleT2GripRecoilDown'] = 0; Player.Skills['LaserRifleT2GripReloadDown'] = 0; Player.Skills['LaserRifleT2FrameDamageUp'] = 0; Player.Skills['LaserRifleT2FrameSpreadUp'] = 0; Player.Skills['LaserRifleT2FrameRecoilUp'] = 0; Player.Skills['LaserRifleT2FrameReloadUp'] = 0; Player.Skills['LaserRifleT2FrameDamageDown'] = 0; Player.Skills['LaserRifleT2FrameSpreadDown'] = 0; Player.Skills['LaserRifleT2FrameRecoilDown'] = 0; Player.Skills['LaserRifleT2FrameReloadDown'] = 0; LaserRifleT2Barrel = 'Default'; LaserRifleT2Grip = 'Default'; LaserRifleT1Frame = 'Default'"
+  OptionExecute_12: "Player.Skills['LaserRifleT2BarrelDamageUp'] = 0; Player.Skills['LaserRifleT2BarrelSpreadUp'] = 0; Player.Skills['LaserRifleT2BarrelRecoilUp'] = 0; Player.Skills['LaserRifleT2BarrelReloadUp'] = 0; Player.Skills['LaserRifleT2BarrelDamageDown'] = 0; Player.Skills['LaserRifleT2BarrelSpreadDown'] = 0; Player.Skills['LaserRifleT2BarrelRecoilDown'] = 0; Player.Skills['LaserRifleT2BarrelReloadDown'] = 0; Player.Skills['LaserRifleT2GripDamageUp'] = 0; Player.Skills['LaserRifleT2GripSpreadUp'] = 0; Player.Skills['LaserRifleT2GripRecoilUp'] = 0; Player.Skills['LaserRifleT2GripReloadUp'] = 0; Player.Skills['LaserRifleT2GripDamageDown'] = 0; Player.Skills['LaserRifleT2GripSpreadDown'] = 0; Player.Skills['LaserRifleT2GripRecoilDown'] = 0; Player.Skills['LaserRifleT2GripReloadDown'] = 0; Player.Skills['LaserRifleT2FrameDamageUp'] = 0; Player.Skills['LaserRifleT2FrameSpreadUp'] = 0; Player.Skills['LaserRifleT2FrameRecoilUp'] = 0; Player.Skills['LaserRifleT2FrameReloadUp'] = 0; Player.Skills['LaserRifleT2FrameDamageDown'] = 0; Player.Skills['LaserRifleT2FrameSpreadDown'] = 0; Player.Skills['LaserRifleT2FrameRecoilDown'] = 0; Player.Skills['LaserRifleT2FrameReloadDown'] = 0; LaserRifleT2Barrel = 'Default'; LaserRifleT2Grip = 'Default'; LaserRifleT2Frame = 'Default'"
   Option_13: dialogue_44COCmG
   OptionNext_13: GS_WeaponBench_LaserRifles
   Variable_1: "LaserRifleT2Barrel", param1: dbplayer_string
@@ -19646,7 +19825,7 @@
   Option_1: dialogue_aW4GC4M
   OptionNext_1: End
 }
-/*  Created with eWCCT 3.57.0 | 26.3.2024 - 16:27:54  */
+/*  Created with eWCCT 3.57.0 | 6.4.2024 - 12:26:10  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -22818,6 +22997,81 @@
   Option_1: eden_dialogue_8mW0o4S
   OptionNext_1: End
   Output: eden_dialogue_CkaCCWW
+}
+{ +Dialogue Name: Eden_DreadStartIDA1_Init
+  Output: eden_dialogue_0O60mSS
+  Option_1: eden_dialogue_GgOW44O
+  OptionNext_1: Eden_DreadStartIDA1_Info
+  Option_2: eden_dialogue_WW84TCN
+  OptionNext_2: Eden_DreadStartIDA1_Complete
+  NPCName: eden_dialogue_wOuWqOS
+  Variable_1: "Item1", param1: string
+  Execute: "Item1 = 'Electronics'"
+}
+{ +Dialogue Name: Eden_DreadStartIDA1_Info
+  Output: eden_dialogue_8OmSe0e
+  Option_1: eden_dialogue_uaIWO0e
+  OptionNext_1: Eden_DreadStartIDA1_Info2
+}
+{ +Dialogue Name: Eden_DreadStartIDA1_Info2
+  Output: eden_dialogue_G8evi4S
+  Option_1: eden_dialogue_CeeuqGq
+  OptionNext_1: Eden_DreadStartIDA1_Complete
+}
+{ +Dialogue Name: Eden_DreadStartIDA1_Complete
+  Output: eden_dialogue_i4Wfi4W
+  Option_1: eden_dialogue_OWaKu04
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Init
+  Option_1: eden_dialogue_0W44mrW
+  OptionNext_1: Eden_DreadStartIDA2_Info
+  OptionExecute_1: "if (Player.Level == 2) Player.UpgradePoints += 15; if (Player.Level == 2) Player.ExperiencePoints += 2400"
+  Option_2: eden_dialogue_qqiiuWq
+  OptionNext_2: Eden_DreadStartIDA2_Info2
+  OptionExecute_2: "if (Player.Level == 2) Player.ExperiencePoints += 2400; if (Player.Level == 2) Player.UpgradePoints += 15"
+  Output: eden_dialogue_4CKmw0O
+  NPCName: eden_dialogue_TlKu0am
+  Variable_1: "Item1", param1: string
+  Execute: "Item1 = 'Electronics'; if (Player.Level == 1) Player.UpgradePoints += 10; if (Player.Level == 1) Player.ExperiencePoints += 800"
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Info
+  Output: eden_dialogue_0m0nuOG
+  Option_1: eden_dialogue_mu8Ga80
+  OptionNext_1: Eden_DreadStartIDA2_Info2
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Info2
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/IDA.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f)); if (Player.Level == 3) Player.UpgradePoints += 20; if (Player.Level == 3) Player.ExperiencePoints += 4000"
+  Output: eden_dialogue_ee4eKiW
+  Option_1: eden_dialogue_S8WCC08
+  OptionNext_1: Eden_DreadStartIDA2_Info3
+  Option_2: eden_dialogue_COWKSea
+  OptionNext_2: Eden_DreadStartIDA2_Name
+  Option_3: eden_dialogue_WWtrCOe
+  OptionNext_3: End
+  OptionExecute_3: "CloseHtmlWindow()"
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Name
+  Output: eden_dialogue_eKCuiKq
+  Option_1: eden_dialogue_qimuGja
+  OptionNext_1: Eden_DreadStartIDA2_Info3
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Info3
+  Output: eden_dialogue_eimuXuG
+  Option_1: eden_dialogue_0q88WSa
+  OptionNext_1: Eden_DreadStartIDA2_Info4
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Info4
+  Output: eden_dialogue_4iCqq6e
+  Option_1: eden_dialogue_mOuGy08
+  OptionNext_1: Eden_DreadStartIDA2_Complete
+}
+{ +Dialogue Name: Eden_DreadStartIDA2_Complete
+  Option_1: eden_dialogue_S0K8KGK
+  OptionNext_1: End
+  OptionExecute_1: "CloseHtmlWindow()"
+  Output: eden_dialogue_8480O00
+  Execute: "if (Player.Level == 3) Player.UpgradePoints += 20; if (Player.Level == 3) Player.ExperiencePoints += 4000"
 }
 { +Dialogue Name: Eden_RogueStartIDA_Init
   Option_1: eden_dialogue_SCuie46
@@ -26156,8 +26410,8 @@
   OptionNext_2: End
 }
 { +Dialogue Name: Eden_ExploreT1_1C_Init
-  Variable_1: "SystemLockdownExploration", param1: dbplayerpoi_int
-  Variable_2: "SystemLockdownScience", param1: dbplayerpoi_int
+  Variable_1: "HackCountPOI", param1: dbplayerpoi_int
+  Variable_2: "HackCountPF", param1: dbplayerpf_int
   Variable_3: "Eden_Complete", param1: dbplayerpoi_int
   Next_1: Eden_ExploreT1_1C_Deny
   NextIf_1: "Eden_Complete == 1"
@@ -26171,7 +26425,7 @@
 { +Dialogue Name: Eden_ExploreT1_1C_Greet
   Output: eden_dialogue_Ca4mg0m
   Option_1: eden_dialogue_mCeOq8C
-  OptionIf_1: "SystemLockdownExploration == 1 && SystemLockdownScience == 1"
+  OptionIf_1: "HackCountPOI >= 2"
   OptionNext_1: End
   OptionExecute_1: "SetSignal('Open', true); Eden_Complete = 1"
   Option_2: eden_dialogue_Se4JSi0

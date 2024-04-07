@@ -683,7 +683,7 @@ DroneBaseSetup:
           Difficulty: 7
           PresetStyle: 3
           Stock:
-              - Name: DroneSmallFast01Plasma
+              - Name: Eden_PlasmaDroneEasy
                 Amount: Infinite
                 Extra: 0
 
@@ -770,7 +770,7 @@ DroneSpawning:
 
 SpawnZones:
 
-   - SpawnAt: [IronResource, SiliconResource, CopperResource, PromethiumResource]
+   - SpawnAt: [IronResource, SiliconResource, CopperResource]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 200
@@ -778,7 +778,21 @@ SpawnZones:
      RateMultiplyerEdge: 0.1
      Color: "1.0, 1.0, 1.0, 1.0" 
      Entities:
-       - Names: [Eden_ZiraxPatrolSniper, Eden_ZiraxRipperDogPatrolMinigun]
+       - Names: [Eden_ZiraxRipperDogPatrolMinigun]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+   - SpawnAt: [PromethiumResource]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 1000
+     RadiusRandom: 200
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 1.0, 1.0, 1.0" 
+     Entities:
+       - Names: [Eden_ZiraxRipperDogPatrolMinigun, Eden_ZiraxRipperDogPatrolSniper, Eden_ZiraxPatrolSniper]
          Biomes: [Any]
          Amount: 75
          Period: Always
@@ -794,9 +808,9 @@ SpawnZones:
      Color: "1.0, 1.0, 1.0, 1.0"
      SpawnOnlyIfPoiIsAlien: false
      Entities:
-       - Names: [Eden_ZiraxRipperDogPatrolMinigun, Eden_ZiraxRipperDogPatrolSniper]
+       - Names: [Eden_ZiraxRipperDogPatrolMinigun]
          Biomes: [Any]
-         Amount: 400
+         Amount: 300
          Period: Always
          DelayMinMax: [12, 16]
 
@@ -810,7 +824,7 @@ SpawnZones:
      Color: "1.0, 1.0, 1.0, 1.0"
      SpawnOnlyIfPoiIsAlien: true
      Entities:
-       - Names: [Eden_ZiraxRipperDogPatrolMinigun, Eden_ZiraxRipperDogPatrolSniper, Eden_ZiraxPatrolSniper]
+       - Names: [Eden_ZiraxRipperDogPatrolMinigun]
          Biomes: [Any]
          Amount: 75
          Period: Always
@@ -826,7 +840,7 @@ SpawnZones:
      Color: "1.0, 1.0, 1.0, 1.0"
      # SpawnOnlyIfPoiIsAlien: true
      Entities:
-       - Names: [Eden_ZiraxRipperDogPatrolMinigun, Eden_ZiraxRipperDogPatrolSniper, Eden_ZiraxPatrolSniper]
+       - Names: [Eden_ZiraxRipperDogPatrolMinigun]
          Biomes: [Any]
          Amount: 400
          Period: Always

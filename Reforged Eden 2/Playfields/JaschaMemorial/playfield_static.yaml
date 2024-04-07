@@ -349,7 +349,7 @@ DroneSpawning:
 # SpawnZones:
 
 # Wildlife
-   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, AbandonedPOIRG]
+   # - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
      # BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 50
@@ -389,7 +389,7 @@ DroneSpawning:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [EpsilonAuxT2RG, AbandonedPOIRG, ErestrumResource, ZascosiumResource]
+   # - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 25

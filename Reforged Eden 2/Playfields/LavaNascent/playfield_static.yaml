@@ -1361,7 +1361,7 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: AbandonedPOIRG
+        - GroupName: R2AbandonedPOI
           Faction: Alien  
           Biome: [Rifts_1, Sand, LavaFolds, BarrenRocks, LowMountains, LowMountains_1, Mountains]
           CountMinMax: [ 1, 2 ]
@@ -1583,7 +1583,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
      # Ruins in lowlands : Infested with monsters  === 
-   - SpawnAt: [CrashedShip, Artifacts, AbandonedPOIRG, Wreckage, JunkT3_Engine]
+   - SpawnAt: [CrashedShip, Artifacts, R2AbandonedPOI, Wreckage, JunkT3_Engine]
      BiomesExcluded: [ HighMountains ]
      Radius: 100
      RadiusRandom: 50
@@ -1597,7 +1597,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [CrashedShip, Artifacts, AbandonedPOIRG, Wreckage, JunkT3_Engine]
+   - SpawnAt: [CrashedShip, Artifacts, R2AbandonedPOI, Wreckage, JunkT3_Engine]
      BiomesExcluded: [ HighMountains ]
      Radius: 100
      RadiusRandom: 50
@@ -1611,7 +1611,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [CrashedShip, Artifacts, AbandonedPOIRG, Wreckage, JunkT3_Engine]
+   - SpawnAt: [CrashedShip, Artifacts, R2AbandonedPOI, Wreckage, JunkT3_Engine]
      BiomesExcluded: [ HighMountains ]
      Radius: 100
      RadiusRandom: 50
@@ -1626,7 +1626,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
      # Lowlands ruins: Wider radius 
-   - SpawnAt: [CrashedShip, Artifacts, AbandonedPOIRG, Wreckage, JunkT3_Engine]
+   - SpawnAt: [CrashedShip, Artifacts, R2AbandonedPOI, Wreckage, JunkT3_Engine]
      BiomesExcluded: [ HighMountains ]
      Radius: 500
      RadiusRandom: 80

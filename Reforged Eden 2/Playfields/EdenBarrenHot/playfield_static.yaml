@@ -744,7 +744,7 @@ SpawnZones:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [CrashedShip, AbandonedPOIRG, Artifacts]
+   # - SpawnAt: [CrashedShip, R2AbandonedPOI, Artifacts]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 50

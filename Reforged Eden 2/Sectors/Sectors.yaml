@@ -74,14 +74,14 @@ SolarSystems:
           # - ['-8558, -4587, 11434', Akua Moon 1, Start_MoonBarren_V2]
           # - ['0,0,0', Akua Sector, EdenSpaceStarterBeginnerRE, '']
           - ['0,0,0', Akua Sector, Starter_Akua_Orbit, '']
-      # - Coordinates: [-45, 0, 45]
-      # # - Coordinates: [-180, 0, 180]
-        # Color: '0.04,0.8,0.4 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
-        # Playfields:
-          # - ['0, 0, 0', Tallodar, EdenStarterTemperate2,'Human:1', '', '', '']
-          # - ['-10695, 8475, -6228', Tallodar Moon, Start_MoonBarren_V2]
-          # - ['-10898, -10116, 1982', Tallodar Moon 1, Start_MoonBarren_V2]
-          # - ['0,0,0', Tallodar Sector, Starter_Tallodar_Orbit, '']
+      - Coordinates: [-45, 0, 45]
+      # - Coordinates: [-180, 0, 180]
+        Color: '0.04,0.8,0.4 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Tallodar, Starter_Tallodar_V2,'Human:1', '', '', '']
+          - ['-10695, 8475, -6228', Tallodar Moon, Start_MoonBarren_V2]
+          - ['-10898, -10116, 1982', Tallodar Moon 1, Start_MoonBarren_V2]
+          - ['0,0,0', Tallodar Sector, Starter_Tallodar_Orbit, '']
 
 # ------------------------------------------------------------------------------------------------- Planets
       - Coordinates: [28, 0, -77]
@@ -222,7 +222,7 @@ SolarSystems:
       - Coordinates: [-29, 0, -49]
         Color: '0.5,0.3,0 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
-          - ['0, 0, 0', Uai, EdenStarterTemperateOdd,'Human:1', '', '', '']
+          - ['0, 0, 0', Uai, Starter_Uai,'Human:1', '', '', '']
           - ['-3820, -14484, -797', Uai Moon, Start_MoonBarren_V2]
           - ['-8928, -11694, 2926', Uai Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Uai Sector, Starter_Tallodar_Orbit, '']
@@ -364,28 +364,28 @@ SolarSystems:
       - Coordinates: [20, 3, -80]
         Color: '0.04,0.3,0 : 0.5,0.5,0.5 : 0.5,0.5,0.5 : 0.04,0.3,0'
         Playfields:
-          - ['0, 0, 0', Pandora, EdenStarterJungle_V2,'Human:1', '', '', '']
+          - ['0, 0, 0', Pandora, Starter_Pandora_V2,'Human:1', '', '', '']
           - ['-10357, -7302, -8028', Pandora Moon, Start_MoonBarren_V2]
           - ['9608, -11409, 1587', Pandora Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Pandora Sector, Starter_Tallodar_Orbit, '']
       - Coordinates: [34, -2, -71]
         Color: '0.1,0.1,0.8 : 0.7,0.3,0 : 0.7,0.3,0'
         Playfields:
-          - ['0, 0, 0', Oscutune, EdenStarterOcean,'Human:1', '', '', '']
+          - ['0, 0, 0', Oscutune, Starter_Oscutune,'Human:1', '', '', '']
           - ['5534, -11621, 7703', Oscutune Moon, Start_MoonBarren_V2]
           - ['3582, -14310, -2723', Oscutune Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Oscutune Sector, Starter_Tallodar_Orbit, '']
       - Coordinates: [-80, 0, 85]
         Color: '0.8,0.8,0.8 : 0.16,0.18,0.51 : 0.5,0.5,0.5'
         Playfields:
-          - ['0, 0, 0', Sienna, EdenStarterSnowDwarf_V2,'Human:1', '', '', '']
+          - ['0, 0, 0', Sienna, Starter_Sienna_V2,'Human:1', '', '', '']
           - ['-5877, 8126, 11154', Sienna Moon, Start_MoonIce_V2]
           - ['2550, -9341, -11457', Sienna Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Sienna Sector, Starter_Sienna_Orbit, '']
       - Coordinates: [55, 0, -93]
         Color: '0,1,0 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
-          - ['0, 0, 0', Masperon, EdenStarterAlien,'Human:1', '', '', '']
+          - ['0, 0, 0', Masperon, Starter_Masperon,'Human:1', '', '', '']
           - ['-306, -7183, -13165', Masperon Moon, Start_MoonBarren_V2]
           - ['-14575, -3521, -440', Masperon Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Masperon Sector, Starter_Tallodar_Orbit, '']
@@ -965,7 +965,14 @@ SolarSystems:
         Color: '1, 0, 0'
         SectorMapType: Triangle
         Playfields:
-          - ['0, 0, 0', ZiraxNoPOI, TestSpaceZirax3,'', '', '', '']
+          - ['0, 0, 0', TestAsteroidField, EdenSpaceG_AsteroidTest,'', '', '', '']
+
+# Space Test 16
+      - Coordinates: [200, 0, 80]
+        Color: '1, 0, 0'
+        SectorMapType: Triangle
+        Playfields:
+          - ['0, 0, 0', TestAsteroidField2, EdenSpaceG_AsteroidTest2,'', '', '', '']
 
 
 # ------------------------------------------------------------------------------------------------- POIs
