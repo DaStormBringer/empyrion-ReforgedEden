@@ -508,6 +508,10 @@ POIs:
           SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [80,100]
           Properties:
+            - Key: Discovery
+              Value: False
+            - Key: Music
+              Value: AlteredPhase
             - Key: RegenAfter
               Value: 4320
 
@@ -1016,7 +1020,7 @@ DroneSpawning:
 
 SpawnRateZones:
 
-   - SpawnAt: [TS_PlanetRG]    #'Peaceful' zone
+   - SpawnAt: [R2PolarisTradePlanet]    #'Peaceful' zone
      Radius: 400
      RadiusRandom: 100
      RateMultiplyerCenter: 0.0

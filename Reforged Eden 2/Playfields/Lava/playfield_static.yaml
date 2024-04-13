@@ -221,7 +221,7 @@ POIs:
 
         - GroupName: VOIDSoulAnchor
           Faction: Void  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
           DronesMinMax: [ 0, 1 ]
@@ -236,9 +236,9 @@ POIs:
               Value: 720
 
 #Zirax
-        - GroupName: DroneBaseT1RG              #CommandCenter
+        - GroupName: R2DroneBase              #CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           IsImportant: True
@@ -257,7 +257,7 @@ POIs:
               # Rados Foundry =======================================================
         - GroupName: Eden_RadosMainLava 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
        #   BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           Biome: [ LavaLake ]
           PlaceAt: OnWater
@@ -271,7 +271,7 @@ POIs:
 
         - GroupName: Eden_RadosT0Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 2, 3 ]
@@ -287,7 +287,7 @@ POIs:
 
         - GroupName: Eden_RadosT1Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 2, 3 ]
@@ -306,7 +306,7 @@ POIs:
 
         # - GroupName: TOP 
           # Faction: Polaris  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Biome: [ LavaLake ]
           # PlaceAt: OnWater
           # CountMinMax: [ 1, 1 ]
@@ -317,7 +317,7 @@ POIs:
 
         # - GroupName: TOPSV 
           # Faction: Polaris  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Type: SV_Player                  # Optional for special type of POI: SV_Player, HV_Player, CV_Player. If not used, then POI is a Base (default setting)
           # Biome: [ LavaLake ]
           # PlaceAt: OnWater
@@ -332,7 +332,7 @@ POIs:
 
         - GroupName: PolarisMiningLava
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LavaLake ] 
           PlaceAt: OnWater 
           CountMinMax: [ 1, 2 ]
@@ -350,7 +350,7 @@ POIs:
 
         - GroupName: PolarisMiningLavaAux
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.2
           DronesMinMax: [ 0, 1 ]
@@ -366,7 +366,7 @@ POIs:
 
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisMiningLava]
           SpawnPOINearRange: [500, 1000]
@@ -377,7 +377,7 @@ POIs:
         - GroupName: MineT4PolarisRG 
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           SpawnPOINear: [PolarisLavaMiningAuxRG]
           SpawnPOINearRange: [200, 800]
           CountMinMax: [ 1, 2 ]
@@ -388,7 +388,7 @@ POIs:
         - GroupName: MineSulfurPolarisRG 
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -398,7 +398,7 @@ POIs:
         # Zirax POI complex with several structures around
         - GroupName: GhystMainRG 
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -410,9 +410,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -425,9 +425,9 @@ POIs:
             - Key: RegenAfter
               Value: 720   
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
@@ -442,16 +442,16 @@ POIs:
 
        # ================================
         # Defense for drone base
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 500]
           Properties: 
             - Key: RegenAfter
@@ -459,9 +459,9 @@ POIs:
 
        # ================================
         # Large Bunker
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -477,9 +477,9 @@ POIs:
 
 # Kriel
 
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: Music
@@ -487,9 +487,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 4 ]
           Properties: 
             - Key: Music
@@ -499,9 +499,9 @@ POIs:
 
 # Pirates
 
-        - GroupName: PiratesAuxRG 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           Properties:  
             - Key: RegenAfter
@@ -542,9 +542,9 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random military outposts scattered around planet
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -574,10 +574,10 @@ POIs:
 # Civilians
 
 
-        - GroupName: CivilMainRG
+        - GroupName: R2ColonistMain
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -586,9 +586,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilMainRG]
+          SpawnPOINear: [R2ColonistMain]
           SpawnPOINearRange: [100, 200] 
           Properties:  
             - Key: RegenAfter
@@ -597,11 +597,30 @@ POIs:
         - GroupName: MineSulfurPolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilMainRG]
+          SpawnPOINear: [R2ColonistMain]
           SpawnPOINearRange: [100, 500] 
           Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2ColonistDeco
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
@@ -653,7 +672,7 @@ POIs:
 
         - GroupName: Eden_HarvestMagmacite
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 1, 2 ]
@@ -802,7 +821,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+   - SpawnAt: [R2DroneBase, GhystMainRG, R2GhystMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 100
@@ -816,7 +835,7 @@ SpawnZones:
          Amount: 250
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [GhystAuxT2RG]
+   - SpawnAt: [R2GhystAuxT2]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

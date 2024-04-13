@@ -245,7 +245,7 @@ POIs:
 # VOID drone base & perimeter defenses ====            # Forced to spawn on mountains. Allows different attack vectors
         # - GroupName: Eden_VoidDroneBaseT1 
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # IsCommandCenter: True
           # DroneBaseSetup: DroneBaseSetup
           # Biome: [ Dunes, Sand ]

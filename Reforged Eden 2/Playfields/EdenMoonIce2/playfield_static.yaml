@@ -238,10 +238,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
           DroneProb: 1.0
@@ -267,7 +267,7 @@ POIs:
 
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7
@@ -282,10 +282,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -294,9 +294,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 500] 
           Properties:  
             - Key: RegenAfter
@@ -305,9 +305,9 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [300, 1000] 
           Properties:  
             - Key: RegenAfter
@@ -316,9 +316,9 @@ POIs:
         - GroupName: PolBiolabRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [2000, 2500] 
           Properties:
             - Key: RegenAfter

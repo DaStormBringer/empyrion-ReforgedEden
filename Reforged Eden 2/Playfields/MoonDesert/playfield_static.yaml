@@ -167,9 +167,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG     #CommandCenter
+        - GroupName: R2DroneBase     #CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -187,7 +187,7 @@ POIs:
         - GroupName: FarrAuxT2RG               
           BiomesExcluded: [ Radiated ]
           Faction: Farr    
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 1.0
@@ -202,7 +202,7 @@ POIs:
         - GroupName: FarrAuxT1RG               
           BiomesExcluded: [ Radiated ]
           Faction: Farr    
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [FarrAuxT2RG]
@@ -219,7 +219,7 @@ POIs:
         - GroupName: FarrDefenseT1RG               
           BiomesExcluded: [ Radiated ]
           Faction: Farr    
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 3, 6 ]
           SpawnPOINear: [FarrAuxT2RG]
@@ -234,9 +234,9 @@ POIs:
               Value: 720 
 # Trader
 
-        - GroupName: TraderSettlementRG 
+        - GroupName: R2TraderAuxT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           Properties: 
             - Key: Music
@@ -244,11 +244,11 @@ POIs:
             - Key: RegenAfter
               Value: 720  
 
-        - GroupName: TraderDefenseA 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINear: [R2TraderAuxT1]
           SpawnPOINearRange: [100,250]
           Properties: 
             - Key: Music
@@ -258,26 +258,26 @@ POIs:
 
 # Pirates
 
-        - GroupName: PiratesMainRG 
+        - GroupName: R2PirateMain 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720         
 
-        - GroupName: PiratesAuxDesertRG 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           Properties:  
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: PiratesDefenseT1Desert 
+        - GroupName: R2PirateDefenseT1 
           Faction: Pirates    
-          NoShieldReload: True 
-          SpawnPOINear: [PiratesMainRG]
+          # NoShieldReload: True 
+          SpawnPOINear: [R2PirateMain]
           SpawnPOINearRange: [100,250]
           CountMinMax: [ 1, 3 ]
      #     IsImportant: True
@@ -287,10 +287,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -312,9 +312,9 @@ POIs:
               Value: 720
 
 #Zirax
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]

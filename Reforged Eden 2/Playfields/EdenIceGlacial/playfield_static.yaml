@@ -187,21 +187,21 @@ AsteroidResources:
    Amount: 0.20000000000000001
 POIs:
    Random:
-   # -  GroupName: DroneBaseT1RG
+   # -  GroupName: R2DroneBase
       # Faction: Zirax
       # DroneBaseSetup: DroneBaseSetup
       # CountMinMax: [0, 1]
       # DroneProb: 1
       # DronesMinMax: [4, 5]
       # ReserveCount: 5
-      # NoShieldReload: True
+      # # NoShieldReload: True
       # Properties:
       # -  Key: RegenAfter
          # Value: 720
 
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 0, 1 ]
@@ -220,14 +220,14 @@ POIs:
               # Auxiliary POIs for Drone Base
         - GroupName: RadosAuxT2SnowRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 2 ]
           # IsImportant: True
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 12
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [250, 400]
           TroopTransport: True
           Properties:
@@ -236,7 +236,7 @@ POIs:
 
         - GroupName: RadosDefenseT3Snow 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           # IsImportant: True
           DroneProb: 0
@@ -245,7 +245,7 @@ POIs:
           TroopTransport: False
           SpawnPOIAvoid: [RadosDefenseT3Snow] 
           SpawnPOIAvoidDistance: 200 
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [150, 300]
           # SpawnResource: ["PromethiumResource:1-1"]
           # SpawnResourceRange: [250,500]
@@ -256,7 +256,7 @@ POIs:
 
         - GroupName: RadosDefenseT2Snow
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -264,7 +264,7 @@ POIs:
           TroopTransport: False
           SpawnPOIAvoid: [RadosDefenseT2Snow] 
           SpawnPOIAvoidDistance: 300 
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [400, 600]
           Properties: 
             - Key: RegenAfter
@@ -273,13 +273,13 @@ POIs:
               # Only spawn if the Dronebase spawns.
         - GroupName: RadosAuxT2SnowRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 12
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [2000, 8000]
           TroopTransport: True
           Properties:
@@ -289,13 +289,13 @@ POIs:
               # Only spawn if the Dronebase spawns.
         - GroupName: RadosAuxT1SnowRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           IsScalingCount: True
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 12
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [6000, 20000]
           TroopTransport: True
           Properties:
@@ -305,7 +305,7 @@ POIs:
               # Only spawn if the Dronebase spawns.
         - GroupName: RadosMiscSnow
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
           DroneProb: 1
@@ -322,13 +322,13 @@ POIs:
               # Only spawns if the Dronebase does NOT spawn (or on a large planet)
         - GroupName: Eden_ZiraxMain
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 7
-          SpawnPOIAvoid: [DroneBaseT1RG] 
+          SpawnPOIAvoid: [R2DroneBase] 
           SpawnPOIAvoidDistance: 25000
           TroopTransport: True
           SpawnResource: ["TitanResource:2-3","PromethiumResource:1-1"]
@@ -339,7 +339,7 @@ POIs:
 
         - GroupName: Eden_ZiraxDefenseT3
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           DroneProb: 0
           DronesMinMax: [ 3, 5 ]
@@ -354,13 +354,13 @@ POIs:
               # Only spawns if the Abyssal Dronebase does NOT spawn (or on a large planet)
         - GroupName: Eden_ZiraxAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 6 ]
           IsScalingCount: True
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 7
-          SpawnPOIAvoid: [DroneBaseT1RG] 
+          SpawnPOIAvoid: [R2DroneBase] 
           SpawnPOIAvoidDistance: 25000
           TroopTransport: True
           Properties:
@@ -370,7 +370,7 @@ POIs:
               # Auxillary structures to make a group
         - GroupName: Eden_ZiraxAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           IsScalingCount: True
           DroneProb: 1
@@ -387,13 +387,13 @@ POIs:
               # Only spawns if the Dronebase AND the Zirax Main does NOT spawn (or on a large planet)
         - GroupName: RadosMissileBaseSnowRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 7
-          SpawnPOIAvoid: [DroneBaseT1RG, Eden_ZiraxMain] 
+          SpawnPOIAvoid: [R2DroneBase, Eden_ZiraxMain] 
           SpawnPOIAvoidDistance: 25000
           TroopTransport: True
           SpawnResource: ["CobaltResource:2-3","PentaxidResource:1-2"]
@@ -404,9 +404,9 @@ POIs:
 
 # Random Pirate Outposts
 
-        - GroupName: PiratesMainRG 
+        - GroupName: R2PirateMain 
           Faction: Pirates
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           SpawnResource: ["TitanResource:0-1","PromethiumResource:0-1"]
           SpawnResourceRange: [125,250]
@@ -416,7 +416,7 @@ POIs:
 
         - GroupName: PiratesAuxSnowRG 
           Faction: Pirates
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 5 ]
           Properties:  
             - Key: RegenAfter

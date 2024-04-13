@@ -1188,7 +1188,7 @@ POIs:
   - GroupName: Eden_EscapeRocketPad
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1215,7 +1215,7 @@ POIs:
   - GroupName: Eden_RuinsLaunchAuxT2
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 3
@@ -1246,7 +1246,7 @@ POIs:
   - GroupName: Eden_RuinsLogisticsAuxT1
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 6
       Max: 9
@@ -1277,7 +1277,7 @@ POIs:
   - GroupName: Eden_RuinsIndustryAuxT1
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 3
       Max: 4
@@ -1336,7 +1336,7 @@ POIs:
   - GroupName: Eden_RuinsSpaceportMain
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1368,7 +1368,7 @@ POIs:
   - GroupName: Eden_RuinsLaunchAuxT2
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 4
@@ -1399,7 +1399,7 @@ POIs:
   - GroupName: Eden_RuinsLogisticsAuxT1
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 6
       Max: 9
@@ -1459,7 +1459,7 @@ POIs:
   - GroupName: Eden_RuinsSkyhookBase
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1492,7 +1492,7 @@ POIs:
   - GroupName: Eden_RuinsSkyhookCarriage
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1523,7 +1523,7 @@ POIs:
   - GroupName: Eden_RuinsSpaceTether
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1579,7 +1579,7 @@ POIs:
   - GroupName: Eden_RuinsSpaceRadar
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     IsImportant: true
     Count:
       Min: 1
@@ -1615,7 +1615,7 @@ POIs:
   - GroupName: Eden_RuinsRadarDish
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 1
       Max: 2
@@ -1649,7 +1649,7 @@ POIs:
   - GroupName: Eden_RuinsSpaceRadarAuxT1
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 2
       Max: 3
@@ -1683,7 +1683,7 @@ POIs:
   - GroupName: Eden_RuinsLogisticsAuxT1
     Faction: Alien
     Territory: true
-    NoShieldReload: true
+    # NoShieldReload: True
     Count:
       Min: 2
       Max: 6

@@ -165,7 +165,7 @@ POIs:
               # Rados Foundry =======================================================
         - GroupName: Eden_RadosMainLava 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           PlaceAt: OnWater
           CountMinMax: [ 0, 1 ]
           IsImportant: True
@@ -177,7 +177,7 @@ POIs:
 
         - GroupName: Eden_RadosT0Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 2, 3 ]
@@ -193,7 +193,7 @@ POIs:
 
         - GroupName: Eden_RadosT1Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 2, 3 ]
@@ -209,7 +209,7 @@ POIs:
 
         - GroupName: Eden_RadosT1Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 0, 3 ]
@@ -226,7 +226,7 @@ POIs:
 
         - GroupName: Eden_HarvestMagmacite
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 3, 5 ]

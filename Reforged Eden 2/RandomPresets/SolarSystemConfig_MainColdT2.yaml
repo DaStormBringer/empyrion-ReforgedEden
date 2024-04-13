@@ -66,7 +66,7 @@ GenerationParams:
     - 'SunB:0.00, SunA:0.00, SunG:0.00, SunF:0.00, SunM:0.30, SunD:0.40, SunN2:0.30, SunA4V:0.00'                 # 1 Companion Stars
 # -------------------------------------------------------------------------------------------------------------- Rocky Planets
     - 'Lava:0.6, Lava2:0.35, Midnight:0.05'                                                                       # 1 Hot
-    - 'Desert:0.6, Arid:0.4, DesertOasis:0.0, DesertBlack:0.0'                                                    # 2 Desert
+    - 'Desert:0.6, Arid:0.4, DesertOasis:0.0, DesertHot:0.0'                                                    # 2 Desert
     - 'Dead:1'                                                                                                    # 3 Dead
     - 'Temperate:0.8, Tropical:0.0, Swamp:0.2, Irradiated:0.0, Jungle:0.0'                                        # 4 Temperate
     - 'Ocean:1'                                                                                                   # 5 Ocean
@@ -82,7 +82,7 @@ GenerationParams:
 # -------------------------------------------------------------------------------------------------------------- UCH and Admin
     - 'UCHResearchShip:1.0'                                                                                       # 1 UCH Research Vessel
 # -------------------------------------------------------------------------------------------------------------- Asteroid Fields
-    # - 'AsteroidFieldDT1:0.3, AsteroidFieldPirate:0.2, AsteroidFieldPolaris_D:0.2, SectorPolarisMining:0.3, AsteroidFieldZirax:0.0, AsteroidFieldLegacy:0.0'              # 1 Asteroid Fields
+    # - 'AsteroidFieldDT1:0.3, AsteroidFieldPirate:0.2, AsteroidFieldPolaris_D:0.2, SectorPolarisMining:0.3, AsteroidFieldZirax:0.0, AsteroidFieldLegacyT1:0.0'              # 1 Asteroid Fields
     - 'AsteroidFieldDT1:1'              # 1 Asteroid Fields
     - 'AsteroidFieldIce:0.80, AsteroidFieldIceRich:0.20'                                                          # 2 Ice Fields
     - 'AsteroidFieldRichGeneric:1'                                                                                  # 3 Rich Asteroid Fields

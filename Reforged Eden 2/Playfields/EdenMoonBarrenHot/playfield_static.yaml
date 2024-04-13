@@ -160,7 +160,7 @@ POIs:
           # Reclaimer Transfer Station
         - GroupName: Eden_ReclaimerAuxT2Float
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 1 ]
@@ -175,7 +175,7 @@ POIs:
           # Reclaimer Mining Pits. Contains random ore.
         - GroupName: Eden_ReclaimerAuxT1
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # Biome: [ RadiatedFog ]
           IsScalingCount: True
           CountMinMax: [ 8, 11 ]
@@ -185,10 +185,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           Properties:
             - Key: RegenAfter
@@ -196,9 +196,9 @@ POIs:
 
         - GroupName: FactoryPolarisRG2
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [350, 500]
           Properties:  
             - Key: RegenAfter
@@ -207,7 +207,7 @@ POIs:
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
           FactionTerritory: [Eden_PolarisTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -216,9 +216,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 200] 
           Properties:  
             - Key: RegenAfter
@@ -227,9 +227,9 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [200, 600] 
           Properties:  
             - Key: RegenAfter
@@ -238,9 +238,9 @@ POIs:
         - GroupName: MineGraphitePolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [500, 1000] 
           Properties:  
             - Key: RegenAfter
@@ -250,7 +250,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -268,7 +268,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -287,7 +287,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -305,7 +305,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5

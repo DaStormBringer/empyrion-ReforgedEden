@@ -138,13 +138,13 @@ POIs:
    Random:
    -  GroupName: Fallen_Drone_Base
       Faction: Zirax
-      NoShieldReload: True
+      # NoShieldReload: True
       DroneBaseSetup: DroneBaseSetup
       CountMinMax: [1, 1]
       DroneProb: 1
       DronesMinMax: [6, 9]
       ReserveCount: 5
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       SpawnResource: ['IronResource:0-1', 'CopperResource:0-1']
       SpawnResourceRange: [150, 400]
@@ -156,7 +156,7 @@ POIs:
    -  GroupName: Fallen_Floating_Island_1
       Faction: None
       Biome: [ Mountains, LowMountains ]      
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 10, 15 ]
       DroneProb: 1
@@ -172,7 +172,7 @@ POIs:
         Value: 720 
    -  GroupName: Fallen_Dist_Center
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -187,7 +187,7 @@ POIs:
 # ZRX Fixed        
    -  GroupName: Fallen_Avalon
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -201,7 +201,7 @@ POIs:
         Value: 720          
    -  GroupName: Fallen_Delta
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -215,7 +215,7 @@ POIs:
         Value: 720        
    -  GroupName: Fallen_Gamma
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -230,7 +230,7 @@ POIs:
 # ZRX Random        
    -  GroupName: Fallen_Delta
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -244,7 +244,7 @@ POIs:
         Value: 720         
    -  GroupName: Fallen_Gamma
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -258,7 +258,7 @@ POIs:
         Value: 720        
    -  GroupName: Fallen_Outpost1
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 4 ]
       DroneProb: 1
@@ -272,7 +272,7 @@ POIs:
         Value: 720         
    -  GroupName: Fallen_Outpost2
       Faction: Zirax  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 4 ]
       DroneProb: 1
@@ -287,7 +287,7 @@ POIs:
 # Alien Random        
    -  GroupName: Fallen_OldFarmHouse
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 0
@@ -299,7 +299,7 @@ POIs:
         Value: 720   
    -  GroupName: Fallen_Oxygen_Plant
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -311,7 +311,7 @@ POIs:
         Value: 720     
    -  GroupName: Fallen_Warehouse_Ref
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -323,7 +323,7 @@ POIs:
         Value: 720    
    -  GroupName: Fallen_Spaceport
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -335,7 +335,7 @@ POIs:
         Value: 720 
    -  GroupName: Fallen_BioLab
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 2, 3 ]
       DroneProb: 1
@@ -347,7 +347,7 @@ POIs:
         Value: 720 
    -  GroupName: Fallen_Abandoned_Const
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -360,7 +360,7 @@ POIs:
 # Alien Fixed        
    -  GroupName: Fallen_Commandcenter
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -374,7 +374,7 @@ POIs:
         Value: 720   
    -  GroupName: Fallen_Oxygen_Plant
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -388,7 +388,7 @@ POIs:
         Value: 720             
    -  GroupName: Fallen_Warehouse_Ref
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -403,7 +403,7 @@ POIs:
 # Polaris Fixed 1       
    -  GroupName: Fallen_Petra
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -419,7 +419,7 @@ POIs:
          Value: SunnySkies 
    -  GroupName: Fallen_Pol_Def
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 3 ]
       DroneProb: 1
@@ -433,7 +433,7 @@ POIs:
         Value: 720     
    -  GroupName: Fallen_Pol_Def2
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 2, 3 ]
       DroneProb: 1
@@ -448,7 +448,7 @@ POIs:
 # Polaris Fixed 2        
    -  GroupName: Fallen_Elona_Exp
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -462,7 +462,7 @@ POIs:
         Value: 720      
    -  GroupName: Fallen_Ranma
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -476,7 +476,7 @@ POIs:
         Value: 720           
    -  GroupName: Fallen_Inari_Maint
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -490,7 +490,7 @@ POIs:
         Value: 720           
    -  GroupName: Fallen_Pol_Def
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -504,7 +504,7 @@ POIs:
         Value: 720      
    -  GroupName: Fallen_Pol_Def2
       Faction: Polaris  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -519,7 +519,7 @@ POIs:
 # Talon Fixed 1       
    -  GroupName: Fallen_Talon_Citadel
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1
@@ -533,7 +533,7 @@ POIs:
         Value: 720         
    -  GroupName: Fallen_Talon_Village2
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -547,7 +547,7 @@ POIs:
         Value: 720            
    -  GroupName: Fallen_Talon_Village3
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -562,7 +562,7 @@ POIs:
 # Talon Fixed 2         
    -  GroupName: Fallen_Talon_Village1
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -576,7 +576,7 @@ POIs:
         Value: 720                  
    -  GroupName: Fallen_Talon_Village2
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1
@@ -590,7 +590,7 @@ POIs:
         Value: 720            
    -  GroupName: Fallen_Talon_Village3
       Faction: Talon  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 2 ]
       DroneProb: 1

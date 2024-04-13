@@ -239,7 +239,7 @@ RandomResources:
       Biome: [ Shore, Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge, LowMountains, Mountains, Mountains_1, HighMountains, HighMountains_1 ]
       IsScalingCount: True   # Medium Planet: 6 Deposits, Large planet 9
       CountMinMax: [ 3, 3 ]  # (No ranges here, since the Resources are spawned by POI!)
-      SizeMinMax: [ 3, 4 ]
+      SizeMinMax: [ 4, 5 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0.0
       MaxDroneCount: 1
@@ -256,7 +256,7 @@ RandomResources:
       Biome: [ Shore, LowMountains, Mountains, Mountains_1, HighMountains, HighMountains_1 ]
       IsScalingCount: True   # Medium Planet: 4 Deposits, Large planet 6
       CountMinMax: [ 2, 2 ]  # (Ranges: See above)
-      SizeMinMax: [ 3, 4 ]
+      SizeMinMax: [ 4, 5 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0.0
 
@@ -276,9 +276,9 @@ RandomResources:
     # =======  Nice find -
     - Name: GoldResource
       Biome: [ LowMountains, Mountains, HighMountains ]
-      CountMinMax: [ 0, 1 ]
+      CountMinMax: [ 1, 1 ]
       SizeMinMax: [ 2, 2 ]      # 2 => 20 ore
-      DroneProb: 0.0
+      DroneProb: 1
       DepthMinMax: [ 5, 10 ]
       # #DistTypeCylinder:
         # #MaxRadius: 13
@@ -719,30 +719,16 @@ POIs:
           Pos: [0, 70, 0]                  # Equator at mid-day.
           RotY: 160
           PlayerArmor: ["ArmorLight, ArmorLight, ArmorLight, #FreshStart:ArmorLight"]
-          Status: [ "Food: 400, Health: 400", "Food: 250, Health: 250", "Food: 150, Health: 150", "#FreshStart:Food: 250, Health: 250" ]      # NEW
-          Items: [ "Token:1:6999, Token:1:6998, SurvivalTool:1#Drop, Flashlight:1#Drop", "Token:1:6999, Token:1:6998, SurvivalTool:1#Drop, Flashlight:1#Drop", "Token:1:6999, Token:1:6998, SurvivalTool:1#Drop, Flashlight:1#Drop", "#FreshStart: Token:1:6999, Token:1:6998, SurvivalTool:1#Drop, Flashlight:1#Drop" ]
-
-          # Spawn: EscapePod
-          # Pos: [ 0, -350 ]  #-350, 0    # fixed x,z position of escape pod start (Equator)
-
-
-          # PlayerArmor: ["ArmorLight, ArmorLight, None, #FreshStart:ArmorLight"]
-          # Status: [ 
-          # "Food: 400, Health: 400", 
-          # "Food: 250, Health: 250", 
-          # "Food: 150, Health: 150", 
-          # "#FreshStart:Food: 250, Health: 250" ]
-
-          # # This is intended as a hard(er) start planet.
-          # # 'Easy' setting is a casual quickstart: This world may not have Iron an Silicon deposits close to the Crashsite. 
-          # # The 'Easy' gear reduces the need of rock drilling by directly giving those ores (but not too much). Ingots for less volume taken.
-          # # Pistol against wandering drones. - There may be a few.
-
-          # Items: [ 
-          # "Pistol:1, 50Caliber: 70, MobileAirCon:1, HotBeverage: 15, EmergencyRations:1, ConstructorSurvival:1, PlayerBike:1, Bandages:3, AntibioticOintment:2, AntiToxicOintment:1, AntiRadiationOintment:1, SurvivalTool:1, Medikit04:3, IronIngot:50, SiliconIngot:40, TomatoStage1:1, Core:1, Flashlight:1", 
-          # "Pistol:1, 50Caliber: 50, MobileAirCon:1, HotBeverage: 5, ConstructorSurvival:1, PlayerBikeKit:1, Bandages:3, AntibioticOintment:2, AntiToxicOintment:1, AntiRadiationOintment:1, SurvivalTool:1, Medikit04:2, Core:1, Flashlight:1", 
-          # "Pistol:1, 50Caliber: 40, MobileAirCon:1, Bandages:2, AntibioticOintment:2, SurvivalTool:1, Medikit04:1, Flashlight:1", 
-          # "#FreshStart: Pistol:1, 50Caliber: 50, MobileAirCon:1, ConstructorSurvival, PlayerBike:1, Bandages:3, AntibioticOintment:2, AntiToxicOintment:1, AntiRadiationOintment:1, SurvivalTool:1, Medikit04:2, Core:1, Flashlight:1" ]
+          Status: [ 
+          "Food: 500, Health: 500", 
+          "Food: 400, Health: 500", 
+          "Food: 350, Health: 500", 
+          "#FreshStart:Food: 350, Health: 350" ]
+          Items: [ 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:8, HotBeverage:2, PowerBar:1, Bandages:2, AntibioticOintment:2", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:6, Bandages:2, AntibioticOintment:1", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:4", 
+          "#FreshStart: Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight" ]
 
 
 

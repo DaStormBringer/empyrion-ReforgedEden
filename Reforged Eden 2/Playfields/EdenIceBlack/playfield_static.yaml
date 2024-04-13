@@ -174,10 +174,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
           DroneProb: 1.0
@@ -192,7 +192,7 @@ POIs:
 # Black Ice castle
         - GroupName: Eden_BlackIceMain
           Faction: Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           IsImportant: True
           BiomesExcluded: [ CrystallizedRocks ]
           CountMinMax: [ 1, 1 ]
@@ -200,16 +200,16 @@ POIs:
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # Kriel
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: Music
@@ -217,9 +217,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 7 ]
           Properties: 
             - Key: Music
@@ -230,13 +230,13 @@ POIs:
 # XCorp POIs
         - GroupName: Eden_XCorpAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           # IsScalingCount: True 
           DroneProb: 1
           DronesMinMax: [ 8, 8 ]
           ReserveCount: 8
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           SpawnResource: ["ErestrumResource:1-1","TitanResource:1-1"]
           SpawnResourceRange: [150,400]
@@ -247,14 +247,14 @@ POIs:
 
         - GroupName: Eden_XCorpAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains ]
           CountMinMax: [ 2, 3 ]
           # IsScalingCount: True 
           DroneProb: 1
           DronesMinMax: [ 4, 4 ]
           ReserveCount: 4
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           SpawnPOINear: [Eden_XCorpAuxT2]
           SpawnPOINearRange: [300, 800]
@@ -265,14 +265,14 @@ POIs:
 
         - GroupName: Eden_XCorpAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains ]
           CountMinMax: [ 3, 5 ]
           IsScalingCount: True 
           DroneProb: 1
           DronesMinMax: [ 4, 4 ]
           ReserveCount: 4
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           SpawnPOINear: [Eden_XCorpAuxT2]
           SpawnPOINearRange: [3000, 10000]
@@ -283,7 +283,7 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 8, 12 ]
           DroneProb: 0.3
           DronesMinMax: [ 1, 2 ]
@@ -301,10 +301,10 @@ POIs:
         # Argent Compoind
         - GroupName: Eden_ArgentHQ
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ LowMountains, LowMountains_2]
           IsImportant: True
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -318,7 +318,7 @@ POIs:
  
         - GroupName: Eden_ArgentDefense
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 6, 9 ]
           SpawnPOIAvoid: [Eden_ArgentDefense]
           SpawnPOIAvoidDistance: 100
@@ -330,7 +330,7 @@ POIs:
  
         - GroupName: Eden_ArgentStarport
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -348,7 +348,7 @@ POIs:
 
         - GroupName: Eden_ArgentWarehouse
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           CountMinMax: [ 1, 2 ]
           SpawnPOIAvoid: [Eden_ArgentWarehouse]
@@ -361,7 +361,7 @@ POIs:
 
         - GroupName: Eden_ArgentRefinery
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           CountMinMax: [ 2, 3 ]
           SpawnPOIAvoid: [Eden_ArgentWarehouse, Eden_ArgentRefinery]

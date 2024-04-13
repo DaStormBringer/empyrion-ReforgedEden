@@ -304,7 +304,7 @@ AsteroidResources:
 POIs:
     Random:   
         # - GroupName: Eden_AkuaMain
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
@@ -320,10 +320,10 @@ POIs:
         # Akua Luxury Resort and auxillary POIs
         - GroupName: Eden_AkuaMain
           Faction: Trader
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Water ]
           IsImportant: True
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           PlaceAt: OnWater
           DroneProb: 0
@@ -363,7 +363,7 @@ POIs:
 
         - GroupName: Eden_AkuaAuxT2Water
           Faction: Trader
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ ShallowWater_2, Water, DeepWater ]
           CountMinMax: [ 1, 2 ]
           PlaceAt: OnWater
@@ -377,7 +377,7 @@ POIs:
 
         - GroupName: Eden_AkuaAuxT1Water
           Faction: Trader
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           Biome: [ ShallowWater_2, Water, DeepWater ]
           CountMinMax: [ 4, 6 ]
@@ -408,7 +408,7 @@ POIs:
        # ======================= TALON SETTLEMENT in forest area ======================= 
         - GroupName: TribalBazar                      # Main Building
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ DeepForest, Forest, CoconutForest ]
           IsImportant: True
           IsCommandCenter: True
@@ -439,7 +439,7 @@ POIs:
 
         - GroupName: TribalBazarAux
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           LevelMod: +1
           SpawnPOINear: [TribalBazar]
@@ -454,20 +454,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TribalRecreation
+        - GroupName: TalonFarm
           Faction: Talon
-          NoShieldReload: True  
-          Territory: False  
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TribalBazar]
-          SpawnPOINearRange: [80, 200]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: TribalField
-          Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           CountMinMax: [ 5, 6 ]
           SpawnPOINear: [TribalBazar]
@@ -482,9 +471,9 @@ POIs:
             - Key: RegenAfter
               Value: 720  
  
-        - GroupName: TribalDefence
+        - GroupName: TalonDefense
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # Territory: False        
           CountMinMax: [ 4, 5 ]
           SpawnPOINear: [TribalBazar]
@@ -500,7 +489,7 @@ POIs:
        # ======================= TALON SETTLEMENT in sandy area ======================= 
         - GroupName: TribalBazarArid                      # Main Building
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Sand, PalmForest ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -512,9 +501,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TribalVillageAridMain
+        - GroupName: TalonStoneMain
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [TribalBazarArid]
@@ -529,11 +518,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalVillageAridAux
+        - GroupName: TalonAuxSand
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TribalVillageAridMain]
+          SpawnPOINear: [TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -545,20 +534,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalRecreation
+        - GroupName: TalonDefenseSand
           Faction: Talon
-          NoShieldReload: True  
-          Territory: False  
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TribalBazarArid]
-          SpawnPOINearRange: [80, 200]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: TribalAridDefence
-          Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 6 ]
           SpawnPOINear: [TribalBazarArid]
           SpawnPOINearRange: [300, 400] 
@@ -569,7 +547,7 @@ POIs:
        # ======================= TALON Stilt Village in shallow water ======================= 
         - GroupName: VillageStilt
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ ShallowWater_2 ]
           PlaceAt: OnWater
@@ -589,7 +567,7 @@ POIs:
 
         - GroupName: VillageStiltHut 
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ ShallowWater_2 ]
           PlaceAt: OnWater
@@ -617,7 +595,7 @@ POIs:
           Faction: Talon
           PlaceAt: OnWater
           Biome: [Deepwater, Water, OpenSea]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.0
           DronesMinMax: [ 1, 1 ]
@@ -631,7 +609,7 @@ POIs:
         # Random Akua resorts in the water
         - GroupName: Eden_AkuaAuxT2Water
           Faction: Trader
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ ShallowWater_2, Water, DeepWater ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -644,7 +622,7 @@ POIs:
 
         - GroupName: Eden_AkuaAuxT1Water
           Faction: Trader
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           Biome: [ ShallowWater_2, Water, DeepWater ]
           CountMinMax: [ 4, 6 ]
@@ -658,20 +636,20 @@ POIs:
 
        # ================================
         # Random tribal villages scattered around planet
-        - GroupName: TribalVillageRG
+        - GroupName: TalonMain
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Forest, DeepForest, CoconutForest, Grove ]
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TribalField, Ruins, TribalDefence]
+          AuxiliaryPOIs: [TalonFarm, Ruins, TalonDefense]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TribalField
+        - GroupName: TalonFarm
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False         
           IsAuxPOI: True
           CountMinMax: [ 5, 6 ]
@@ -703,9 +681,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalDefence
+        - GroupName: TalonDefense
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           IsAuxPOI: True
           CountMinMax: [ 4, 5 ]
           # SpawnPOINear: [TribalBazar]
@@ -717,7 +695,7 @@ POIs:
               #Beekeepers
         - GroupName: Eden_TribalBeekeeper
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           Biome: [ Flowers, Oasis] 
           CountMinMax: [ 6, 9 ]
@@ -731,7 +709,7 @@ POIs:
         # Random civil outposts scattered around planet
         - GroupName: CivilSettlementO2
           Faction: Trader
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 5 ]
           IsScalingCount: True
           DroneProb: 0
@@ -749,7 +727,7 @@ POIs:
         - GroupName: FarrAbandonedRG
           Faction: Alien
           FactionTerritory: [Farr]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -763,7 +741,7 @@ POIs:
         - GroupName: FarrTradingT2RG
        #   BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrAbandonedRG]
@@ -780,7 +758,7 @@ POIs:
         - GroupName: FarrAuxT2RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -795,7 +773,7 @@ POIs:
         - GroupName: FarrAuxT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 6 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -810,7 +788,7 @@ POIs:
         - GroupName: FarrDefenseT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -908,7 +886,7 @@ POIs:
 # Ancient Walker mission statue
         - GroupName: Eden_AncientWalker
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           CountMinMax: [ 0, 1 ]
           Properties: 
@@ -923,7 +901,7 @@ POIs:
         - GroupName: Eden_CaveTemperate
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Forest, DeepForest, Oasis ]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -945,7 +923,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -961,38 +939,50 @@ POIs:
               Value: 4320
 
 # Aurora
-        - GroupName: Eden_TR_SpireProm
-          Type: Eden_AuroraGreen
-          CountMinMax: [ 0, 1 ]
+        # - GroupName: Eden_TR_SpireProm
+          # Type: Eden_AuroraGreen
+          # CountMinMax: [ 0, 1 ]
 
-        - GroupName: Eden_TR_SpireProm
-          Type: Eden_AuroraGreen
-          CountMinMax: [ 0, 1 ]
-          IsScalingCount: True
-          SpawnPOINear: [Eden_TR_SpireProm]
-          SpawnPOINearRange: [2500, 15000]
+        # - GroupName: Eden_TR_SpireProm
+          # Type: Eden_AuroraGreen
+          # CountMinMax: [ 0, 1 ]
+          # IsScalingCount: True
+          # SpawnPOINear: [Eden_TR_SpireProm]
+          # SpawnPOINearRange: [2500, 15000]
 
     FixedPlayerStart:
         - Mode: Debug
           Pos: [ -596, 104, -1063 ]
           RotY: 125
 
-### Drones
-DroneBaseSetup: 
+# Drones
+# ------------ Aerodrones with propellers.
+# DroneSmallZiraxEMP
+# DroneAeroZiraxMinigun
+# DroneAeroZiraxCannon
+# DroneAeroZiraxRocket
+
+# ------------ Small hoverdrones
+# DroneHoverZiraxMinigun
+# DroneHoverZiraxLaser
+# DroneHoverZiraxRocket
+
+# ------------ Large gunships
+# DroneLargeZiraxMinigun
+# DroneLargeZiraxRocket
+# DroneLargeZiraxPlasma
+
+DroneBaseSetup:
     Random:
         - GroupName: DroneBaseSetup
           Difficulty: 6
           PresetStyle: 3
           Stock:
 
-              - Name: DroneSmallFast01Minigun
-                Amount: 300
+              - Name: DroneSmallPolarisLaser
+                Amount: 200
                 Extra: 0
 
-              - Name: DroneSmallFast01Rocket
-                Amount: 100
-                Extra: 0  
-    
               - Name: DroneBomberAttackBase
                 Amount: Infinite
                 Extra: 1
@@ -1013,44 +1003,70 @@ DroneBaseSetup:
                 Amount: 500
                 Extra: 3
 
-              - Name: Crawler
+              - Name: RipperDog
                 Amount: 150
                 Extra: 3
 
-              - Name: AlienAssassinGrey
+              - Name: Mechanoid
                 Amount: 300
                 Extra: 3
 
-                
-          # PlanetVesselBase:
-              # Name: PlanetVesselBaseSetup
-              # Position3D: [ 0, 150, 0]
-              # BaseType: PlanetVesselBase
-              # KeyId: 0
-              # PlanetVessel:
-                # - Name: Eden_PVAkuaT3
-                  # Mission: PlanetPatrol
-                  # FixedMaxSpeed: 5
-                  # RespawnDelay: 48
+    PlanetVessels:
+# Guarding Deluxe Resort
+              - Name: R2OPVPolarisT1
+                Faction: Polaris
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 10
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 300
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [Eden_AkuaMain]
+                  Radius: 1000
+                  DistToGround: 200
+             #   Properties:
+              #    - Key: AIManPatrolFactions
+             #       Value: "Farr"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneSmallPolarisLaser
+                    Amount: 2
+                    Type: FighterDrone
 
-                  # RangePatrolTask:
-                    # Position3D: [ 1500, 80, 0 ]
-                    # Radius: 800
-                    # DistToGround: 100
+# Patrolling whole planet. Only in Zirax territory.
+              - Name: R2OPVPolarisT1
+                Faction: Polaris
+                CountMinMax: [1, 2]
+                LevelMod: 2
+                FixedMaxSpeed: 40
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 1200
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [Eden_AkuaMain]
+                  DistToGround: 200
+                Properties:
+                  - Key: AIManPatrolFactions
+                    Value: "Polaris, Colonists, Talon, Trader, Civilian"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneSmallPolarisLaser
+                    Amount: 2
+                    Type: FighterDrone
 
-                  # AttackCVCircleAround:
-                    # DistToTarget: 350
-
-
-
-# Drones that patrol on whole planet 
-DroneSpawning:    
+DroneSpawning:
     Random:
-        - DronesMinMax: [ 2, 4 ]
-          CenterX: -5000
-
-        - DronesMinMax: [ 2, 4 ]
+        - DronesMinMax: [ 5, 10 ]
           CenterX: 5000
+          Radius: 3000
+
+        - DronesMinMax: [ 5, 10 ]
+          CenterX: -5000
+          Radius: 3000
+
 
 # ==============================================================
 # ==============================================================
@@ -1080,8 +1096,25 @@ SpawnZones:
          Amount: 100
          Period: Always
          DelayMinMax: [-1, -1]
+
+# Fish around Akua Resort
+   - SpawnAt: [Eden_AkuaMain]
+     BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
+     Radius: 250
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "1.0, 1.0, 1.0, 1.0"
+     Entities:
+       - Names: [ShoalofFishesLarge]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         AllowInWater: true
+         DelayMinMax: [-1, -1]
+
 # Talon villagers
-   - SpawnAt: [TribalVillageRG, TribalBazar, TribalBazarArid]
+   - SpawnAt: [TalonMain, TribalBazar, TribalBazarArid]
      BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
      Radius: 500
      RadiusRandom: 50
@@ -1094,7 +1127,7 @@ SpawnZones:
          Amount: 150
          Period: Always
          DelayMinMax: [48, 72]
-   # - SpawnAt: [DroneBaseT1RG, EpsilonBunkerRG]
+   # - SpawnAt: [R2DroneBase, R2EpsilonMain]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 1000
      # RadiusRandom: 25
@@ -1107,7 +1140,7 @@ SpawnZones:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
+   # - SpawnAt: [R2EpsilonAuxT2, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 25
@@ -1212,3 +1245,21 @@ CreatureSpawning:
           Amount: 12
           DelayMinMax: [20, 24]
 
+# Fish
+    - Biomes: [DeepWater,Water]
+      Entities:
+        - Name: ShoalofFishesLarge
+          Period: Always
+          Amount: 20
+          AllowInWater: true
+          DelayMinMax: [0, 1]
+          Color: "1, 1.0, 0.0"
+
+    - Biomes: [ShallowWater]
+      Entities: 
+        - Name: ShoalofFishesSmall
+          Period: Always
+          Amount: 10
+          AllowInWater: true
+          DelayMinMax: [0, 1]
+          Color: "1, 1.0, 0.0"

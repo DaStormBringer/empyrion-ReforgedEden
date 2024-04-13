@@ -239,10 +239,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           DroneBaseSetup: DroneBaseSetup
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1  
@@ -255,15 +255,15 @@ POIs:
               Value: moonstone   
 
 # Defense for drone base
-        - GroupName: Eden_ZiraxDefenseT3
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 8, 12 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 1500]
           Properties: 
             - Key: RegenAfter
@@ -271,52 +271,52 @@ POIs:
 
        # ================================
         # POI complex with several structures around
-        - GroupName: Eden_ZiraxMain
+        - GroupName: R2XenuMain
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 4
           TroopTransport: True
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [3500, 6000]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: Eden_ZiraxAuxT2
+        - GroupName: R2XenuAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 3, 4 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [500, 3000]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: Eden_ZiraxDefenseT3
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [Eden_ZiraxMain]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [200, 350]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 5 ]
           DroneProb: 1  
           DronesMinMax: [ 1, 2 ]  
@@ -333,7 +333,7 @@ POIs:
         - GroupName: Eden_NecroAuxT1
           Faction: Alien
           FactionTerritory: [Warlord, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -348,7 +348,7 @@ POIs:
         - GroupName: Eden_NecroAuxT2
           Faction: Alien
           FactionTerritory: [Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -362,7 +362,7 @@ POIs:
 # Ancient Walker mission statue
         - GroupName: Eden_AncientWalker
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           CountMinMax: [ 1, 1 ]
           Properties: 
@@ -381,36 +381,79 @@ POIs:
 # ==============================================================
 # ==============================================================
 
-### Drones
-DroneBaseSetup: 
+# Drones
+# ------------ Aerodrones with propellers.
+# DroneSmallZiraxEMP
+# DroneAeroZiraxMinigun
+# DroneAeroZiraxCannon
+# DroneAeroZiraxRocket
+
+# ------------ Small hoverdrones
+# DroneHoverZiraxMinigun
+# DroneHoverZiraxLaser
+# DroneHoverZiraxRocket
+
+# ------------ Large gunships
+# DroneLargeZiraxMinigun
+# DroneLargeZiraxRocket
+# DroneLargeZiraxPlasma
+
+DroneBaseSetup:
     Random:
         - GroupName: DroneBaseSetup
-          DronesMinMax: [ 2, 3 ]        
-          ReserveCount: 3               
-          DroneProb: 1.0                
-          Difficulty: 5                 
-          PresetStyle: 2                
-          # BaseAttack: DroneSmallAttackBase
-          Stock:                 
+          Difficulty: 6
+          PresetStyle: 3
+          Stock:
 
-              - Name: DroneSmallFast01Minigun
-                Amount: 300
+              - Name: DroneHoverZiraxMinigun
+                Amount: 200
                 Extra: 0
 
-              - Name: DroneSmallFast01Minigun    # Base attack drones  
+              - Name: DroneHoverZiraxRocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeZiraxMinigun
+                Amount: 50
+                Extra: 0
+
+              - Name: DroneBomberAttackBase
                 Amount: Infinite
-                Extra: 1     
+                Extra: 1
 
+              - Name: EnemyDroneV2Plasma
+                Amount: Infinite
+                Extra: 1
 
-# Drones that patrol on whole planet 
-# Type determined by stock of drone base (default drone - type = 0)
-DroneSpawning:    
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: ZiraxRocket
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 150
+                Extra: 3
+
+              - Name: Mechanoid
+                Amount: 300
+                Extra: 3
+
+DroneSpawning:
     Random:
-        - DronesMinMax: [ 1, 2 ]    # Range of number of drones that patrol
-          CenterX: -5000             # Center of circle around which drones patrol (radius 1500m)
+        - DronesMinMax: [ 1, 2 ]
+          CenterX: -5000
+          Radius: 3000
 
-        - DronesMinMax: [ 1, 2 ]    # Range of number of drones that patrol
-          CenterX: 5000              # Center of circle around which drones patrol (radius 1500m)
+        - DronesMinMax: [ 1, 2 ]
+          CenterX: -5000
+          Radius: 3000
 
 # ==============================================================
 # ==============================================================

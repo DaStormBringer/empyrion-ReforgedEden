@@ -122,10 +122,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -153,10 +153,10 @@ POIs:
         # PentaCorp Station with some nearby settlements. Doesn't always show up.
         - GroupName: Eden_PolPentaCorp
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["AluminiumResource:1-2"]
           SpawnResourceRange: [150,300]
@@ -166,9 +166,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_PolPentaCorp]
           SpawnPOINearRange: [300, 400] 
@@ -180,7 +180,7 @@ POIs:
         # Mining Station
         - GroupName: PolarisMiningMainRG                      # Main Building
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           Biome: [ LargeCrater ]
           CountMinMax: [ 0, 1 ]
@@ -193,7 +193,7 @@ POIs:
               # Cobalt Mine
         - GroupName: Eden_PolMineIron
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [150, 250]
@@ -203,7 +203,7 @@ POIs:
 
         - GroupName: PolarisMiningAuxRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [150, 250] 
@@ -215,9 +215,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [300, 400] 
@@ -227,7 +227,7 @@ POIs:
 
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [350, 500]
@@ -238,7 +238,7 @@ POIs:
         - GroupName: FactoryPolarisRG1
           Faction: Polaris
           FactionTerritory: [Eden_PolarisTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -247,15 +247,15 @@ POIs:
         - GroupName: FactoryPolarisRG2
           Faction: Polaris
           FactionTerritory: [Eden_PolarisTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7
@@ -270,10 +270,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           Properties:
             - Key: RegenAfter
@@ -282,9 +282,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 200] 
           Properties:  
             - Key: RegenAfter
@@ -293,9 +293,9 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [200, 600] 
           Properties:  
             - Key: RegenAfter
@@ -304,9 +304,9 @@ POIs:
         - GroupName: MineGraphitePolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [500, 1000] 
           Properties:  
             - Key: RegenAfter
@@ -316,7 +316,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -334,7 +334,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5

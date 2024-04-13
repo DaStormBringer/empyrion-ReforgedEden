@@ -65,7 +65,7 @@ SolarSystems:
           # - ['-5702, -3897, -13316', Persephone Moon, Start_MoonBarren_V2]
           # - ['9082, -7468, -9314', Persephone Moon 1, Start_MoonBarren_V2]
           # - ['0,0,0', Persephone Sector, Starter_Akua_Orbit, '']
-      - Coordinates: [-30, -5, 30]
+      - Coordinates: [-20, -4, 20]
         Color: '0.04,0.8,0.4 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
           # - ['0, 0, 0', Akua, EdenStarterTemperateRE_V2,'Human:1', '', '', '']
@@ -74,7 +74,7 @@ SolarSystems:
           # - ['-8558, -4587, 11434', Akua Moon 1, Start_MoonBarren_V2]
           # - ['0,0,0', Akua Sector, EdenSpaceStarterBeginnerRE, '']
           - ['0,0,0', Akua Sector, Starter_Akua_Orbit, '']
-      - Coordinates: [-45, 0, 45]
+      - Coordinates: [-30, 0, -10]
       # - Coordinates: [-180, 0, 180]
         Color: '0.04,0.8,0.4 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
@@ -100,21 +100,21 @@ SolarSystems:
           - ['0, 0, 0', Alpha I Moon 1, Start_MoonBarren_V2,'', '', '', '']
           - ['-8279, -7524, -9994', Alpha I Moon 2, Start_MoonBarren_V2]
           - ['0,0,0', Alpha I Moon 1 Sector, Start_OrbitEasy, '']
-      - Coordinates: [18, 0, 55]
+      - Coordinates: [15, 0, -10]
         Color: '0.50,0.32,0.04 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
           - ['0, 0, 0', Alpha II, Start_Desert,'', '', '', '']
           - ['-8279, -7524, -9994', Alpha II Moon, Start_MoonBarren_V2]
           - ['6287, 7726, 11214', Alpha II Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Alpha II Sector, Start_OrbitEasy, '']
-      - Coordinates: [25, 0, -15]
+      - Coordinates: [18, 0, 12]
         Color: '0.50,0.32,0.04 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
           - ['0, 0, 0', Alpha III, Start_Desert,'', '', '', '']
           - ['-8279, -7524, -9994', Alpha III Moon, Start_MoonBarren_V2]
           - ['6287, 7726, 11214', Alpha III Moon 1, Start_MoonBarren_V2]
           - ['0,0,0', Alpha III Sector, Start_OrbitEasy, '']
-      - Coordinates: [98, 1, -16]
+      - Coordinates: [45, 1, -10]
         Color: '0.35,0,0.35 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
         Playfields:
           - ['0, 0, 0', Alpha IV, EdenDead,'', '', '', '']
@@ -151,7 +151,7 @@ SolarSystems:
         SectorMapType: AsteroidFieldFew
         Playfields:
           - ['0, 0, 0', Alpha Asteroid Field II, Start_AsteroidField,'', '', '', '']
-      - Coordinates: [-3, 0, -5]
+      - Coordinates: [30, 0, 50]
         Color: '0.7,0.5,0'
         SectorMapType: Station
         Playfields:
@@ -163,7 +163,6 @@ SolarSystems:
         SectorMapType: Triangle
         Playfields:
           - ['0, 0, 0', UCHN Discovery, EdenSpaceStart_UCHVesselAlpha,'', '', '', '']
-          
 
 # ======================================================================================================================================================== Beta Starting System
   - Name: Beta
@@ -862,117 +861,117 @@ SolarSystems:
         # # # Playfields:
           # # # - ['0, 0, 0', Object 82, EdenSpacePOIObject82,'', '', '', '']
 
-# Space Test 1
-      - Coordinates: [50, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Legacy1, TestSpaceLegacy,'', '', '', '']
+# # Space Test 1
+      # - Coordinates: [50, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Legacy1, TestSpaceLegacy,'', '', '', '']
 
-# Space Test 2
-      - Coordinates: [60, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Legacy2, TestSpaceLegacy,'', '', '', '']
+# # Space Test 2
+      # - Coordinates: [60, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Legacy2, TestSpaceLegacy,'', '', '', '']
 
-# Space Test 3
-      - Coordinates: [70, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Legacy3, TestSpaceLegacy,'', '', '', '']
+# # Space Test 3
+      # - Coordinates: [70, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Legacy3, TestSpaceLegacy,'', '', '', '']
 
-# Space Test 4
-      - Coordinates: [80, 0, -40]
-        Color: '1, 0.4, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Drone1, EdenSpaceDrone_Orbit,'', '', '', '']
+# # Space Test 4
+      # - Coordinates: [80, 0, -40]
+        # Color: '1, 0.4, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Drone1, EdenSpaceDrone_Orbit,'', '', '', '']
 
-# Space Test 5
-      - Coordinates: [90, 0, -40]
-        Color: '1, 0.4, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Drone2, EdenSpaceDrone_Orbit,'', '', '', '']
+# # Space Test 5
+      # - Coordinates: [90, 0, -40]
+        # Color: '1, 0.4, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Drone2, EdenSpaceDrone_Orbit,'', '', '', '']
 
-# Space Test 6
-      - Coordinates: [100, 0, -40]
-        Color: '1, 0.4, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Drone3, EdenSpaceDrone_Orbit,'', '', '', '']
+# # Space Test 6
+      # - Coordinates: [100, 0, -40]
+        # Color: '1, 0.4, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Drone3, EdenSpaceDrone_Orbit,'', '', '', '']
 
-# Space Test 7
-      - Coordinates: [110, 0, 40]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Bandit1, EdenSpace_POI_CombatT2_3,'', '', '', '']
+# # Space Test 7
+      # - Coordinates: [110, 0, 40]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Bandit1, EdenSpace_POI_CombatT2_3,'', '', '', '']
 
-# Space Test 8
-      - Coordinates: [120, 0, 40]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Bandit2, EdenSpaceG_POI_CombatBanditT1_1,'', '', '', '']
+# # Space Test 8
+      # - Coordinates: [120, 0, 40]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Bandit2, EdenSpaceG_POI_CombatBanditT1_1,'', '', '', '']
 
-# Space Test 9
-      - Coordinates: [130, 0, 40]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Bandit3, EdenSpaceG_POI_CombatBanditT1_2,'', '', '', '']
+# # Space Test 9
+      # - Coordinates: [130, 0, 40]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Bandit3, EdenSpaceG_POI_CombatBanditT1_2,'', '', '', '']
 
-# Space Test 10
-      - Coordinates: [140, 0, 40]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Raider1, EdenSpace_POI_CombatT3_2,'', '', '', '']
+# # Space Test 10
+      # - Coordinates: [140, 0, 40]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Raider1, EdenSpace_POI_CombatT3_2,'', '', '', '']
 
-# Space Test 11
-      - Coordinates: [150, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Zirax1, TestSpaceZirax,'', '', '', '']
+# # Space Test 11
+      # - Coordinates: [150, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Zirax1, TestSpaceZirax,'', '', '', '']
 
-# Space Test 12
-      - Coordinates: [160, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Zirax2, TestSpaceZirax,'', '', '', '']
+# # Space Test 12
+      # - Coordinates: [160, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Zirax2, TestSpaceZirax,'', '', '', '']
 
-# Space Test 13
-      - Coordinates: [170, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Zirax3, TestSpaceZirax,'', '', '', '']
+# # Space Test 13
+      # - Coordinates: [170, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Zirax3, TestSpaceZirax,'', '', '', '']
 
-# Space Test 14
-      - Coordinates: [180, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', ZiraxNoOPV, TestSpaceZirax2,'', '', '', '']
+# # Space Test 14
+      # - Coordinates: [180, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', ZiraxNoOPV, TestSpaceZirax2,'', '', '', '']
 
-# Space Test 15
-      - Coordinates: [190, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', TestAsteroidField, EdenSpaceG_AsteroidTest,'', '', '', '']
+# # Space Test 15
+      # - Coordinates: [190, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', TestAsteroidField, EdenSpaceG_AsteroidTest,'', '', '', '']
 
-# Space Test 16
-      - Coordinates: [200, 0, 80]
-        Color: '1, 0, 0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', TestAsteroidField2, EdenSpaceG_AsteroidTest2,'', '', '', '']
+# # Space Test 16
+      # - Coordinates: [200, 0, 80]
+        # Color: '1, 0, 0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', TestAsteroidField2, EdenSpaceG_AsteroidTest2,'', '', '', '']
 
 
 # ------------------------------------------------------------------------------------------------- POIs

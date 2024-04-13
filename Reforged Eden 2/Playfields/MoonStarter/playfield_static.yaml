@@ -120,9 +120,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG              #CommandCenter
+        - GroupName: R2DroneBase              #CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]     
@@ -143,7 +143,7 @@ POIs:
           # DronesMinMax: [ 2, 4 ]
           # ReserveCount: 0
           # TroopTransport: False
-          # SpawnPOIAvoid: [DroneBaseT1RG, XenuMainframe, XenuRadarMain]
+          # SpawnPOIAvoid: [R2DroneBase, XenuMainframe, XenuRadarMain]
           # SpawnPOIAvoidDistance: 2000
           # SpawnResource: ["PromethiumResource:1-1"]
           # SpawnResourceRange: [250,400]
@@ -201,7 +201,7 @@ POIs:
           # # Endboss Main  - Floating
         # - GroupName: XenuMainframe                             #Story relevant: OFFWORLD GRAVE
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
     # #      Biome: [ RadiatedFog ]
           # IsImportant: True
           # LevelMod: +3
@@ -215,7 +215,7 @@ POIs:
           # # Endboss Main
         # - GroupName: XenuRadarMain                       # Main Building
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
      # #     Biome: [ RadiatedFog ]
           # IsImportant: True
           # CountMinMax: [ 1, 1 ]
@@ -231,7 +231,7 @@ POIs:
           # # Endboss  Teleporter Access
         # - GroupName: XenuRadarAddition
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
      # #     Biome: [ RadiatedFog ] 
           # IsImportant: True
           # CountMinMax: [ 1, 1 ]
@@ -250,9 +250,9 @@ POIs:
           # # Endboss Main Defense Turrets
 
           # # Anti-Aircraft turret
-        # - GroupName: XenuRadarTurretRocketRG
+        # - GroupName: R2XenuDefenseT3
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # # IsImportant: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 0
@@ -269,7 +269,7 @@ POIs:
 
         # - GroupName: XenuRadarTurret
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # # IsImportant: True
           # CountMinMax: [ 2, 3 ]
           # DroneProb: 0
@@ -286,7 +286,7 @@ POIs:
 
         - GroupName: PolarisMiningMainRG          # Main Building
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
         #  IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -301,7 +301,7 @@ POIs:
 
         - GroupName: PolarisMiningAuxRG
           Faction: Polaris 
-          NoShieldReload: True 
+          # NoShieldReload: True 
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [PolarisMiningMainRG]
@@ -310,9 +310,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        # - GroupName: PolarisIndustrialAuxRG
+        # - GroupName: R2PolarisAuxT2
           # Faction: Polaris  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           # CountMinMax: [ 1, 2 ]
           # SpawnPOINear: [PolarisMiningMainRG]
@@ -321,9 +321,9 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
  
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           # Territory: False        
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 5, 6 ]

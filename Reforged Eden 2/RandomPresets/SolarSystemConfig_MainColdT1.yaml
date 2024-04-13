@@ -65,7 +65,7 @@ GenerationParams:
     - 'SunB:0.00, SunA:0.00, SunK:0.00, SunG:0.00, SunF:0.00, SunM:0.30, SunD:0.65, SunN2:0.05, SunA4V:0.00'      # 1 Companion Stars
 # -------------------------------------------------------------------------------------------------------------- Rocky Planets
     - 'Lava:1.0, Lava2:0.0, Midnight:0.0'                                                                       # 1 Hot
-    - 'Desert:0.6, Arid:0.4, DesertOasis:0.0, DesertBlack:0.0'                                                    # 2 Desert
+    - 'Desert:0.6, Arid:0.4, DesertOasis:0.0, DesertHot:0.0'                                                    # 2 Desert
     - 'Dead:1'                                                                                                    # 3 Dead
     - 'Temperate:0.8, Tropical:0.0, Swamp:0.2, Irradiated:0.0, Jungle:0.0'                                        # 4 Temperate
     - 'Ocean:1'                                                                                                   # 5 Ocean

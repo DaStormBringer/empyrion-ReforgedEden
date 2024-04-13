@@ -278,17 +278,17 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: PiratesMainRG 
+        - GroupName: R2PirateMain 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720         
 
-        - GroupName: PiratesAmbush 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           Properties:  
             - Key: RegenAfter
@@ -298,7 +298,7 @@ POIs:
 
 
          # Resource cluster
-        - GroupName: ResourceMarker01
+        - GroupName: Eden_DummyPOI
           Biome: [ LowMountains ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -316,7 +316,8 @@ POIs:
        # # ======================= Determining which faction spawns here (if at all)
 
 
-        - GroupName: SignalMarker01      #  => 50% that this moon is inhabited
+        # - GroupName: SignalMarker01      #  => 50% that this moon is inhabited
+        - GroupName: Eden_DummyTalon      #  => 50% that this moon is inhabited
           CountMinMax: [ 0, 1 ]
           Properties:
             - Key: MapMarker 
@@ -333,51 +334,54 @@ POIs:
        # Might only rarely spawn (in about 12,5% of cases)
        # - Otherwise the planet might be claimed by Zirax
 
-        - GroupName: VillageStilt #TribalVillageRG
-          CountMinMax: [ 0, 1 ]
+
+
+
+# =============================================== Faction Talon Main
+# ====================== Main Village
+        - GroupName: TalonMain
           Faction: Talon
+          IsCommandCenter: True
           IsImportant: True
-          Territory: False
-          PlaceAt: OnWater, Terrain
-          DroneProb: 0.0
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
-          TroopTransport: False 
-          SpawnPOINear: [SignalMarker01]
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyTalon]
           SpawnPOINearRange: [200, 800]
           SpawnResource: ["PentaxidResource:0-1"]
           SpawnResourceRange: [150,400]
-          Properties: 
+          Properties:
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: TribalField
+        - GroupName: TalonAux
           Faction: Talon
-          Territory: False         
-          CountMinMax: [ 0, 2 ]
-          SpawnPOINear: [VillageStilt]
-          SpawnPOINearRange: [30, 100]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720 
-
-        - GroupName: VillageStiltHut
-          Faction: Talon
-          Territory: False
-          Biome: [ ShallowWater, Water, Swamp ]
-          PlaceAt: OnWater, Terrain
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0.0
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
-          TroopTransport: False 
-          SpawnPOINear: [VillageStilt]
-          SpawnPOINearRange: [200, 800]
+          TroopTransport: False
+          SpawnPOINear: [TalonMain]
+          SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-
+        - GroupName: TalonFarm
+          Faction: Talon
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
 
        # ================================
        # ZIRAX
@@ -385,9 +389,9 @@ POIs:
        # (NO Dronebase. This is a backwater.)
 
 
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Grassland, ColdPlains, Forest, TallTrees, Marsh, LowMountains ]
           CountMinMax: [ 1, 1 ]
           LevelMod: +1
@@ -395,9 +399,9 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [VillageStilt, TribalVillageRG]
+          SpawnPOIAvoid: [TalonMain, TalonAux]
           SpawnPOIAvoidDistance: 20000  # Larger than the planet
-          SpawnPOINear: [SignalMarker01]
+          SpawnPOINear: [Eden_DummyTalon]
           SpawnPOINearRange: [200, 800]
           SpawnResource: ["PentaxidResource:0-1"]
           SpawnResourceRange: [150,400]
@@ -405,10 +409,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-
-        - GroupName: XenuAuxT1RG
+        - GroupName: R2XenuAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           Biome: [ Grassland, ColdPlains, Forest, TallTrees, Marsh, LowMountains ]
           CountMinMax: [ 1, 1 ]
@@ -417,23 +420,23 @@ POIs:
           DronesMinMax: [ 1, 4 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [XenuAuxT2RG]
-          SpawnPOINearRange: [500, 800] 
+          SpawnPOINear: [R2XenuAuxT2]
+          SpawnPOINearRange: [500, 800]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax
           Territory: False
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Grassland, ColdPlains, Forest, TallTrees, Marsh, LowMountains ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOINear: [XenuAuxT1RG]
+          SpawnPOINear: [R2XenuAuxT1]
           SpawnPOINearRange: [700, 1000] 
           POIDistance: 800
           Properties:
@@ -441,9 +444,9 @@ POIs:
               Value: 720
 
 
-        # - GroupName: DroneBaseT1RG                         # CommandCenter   # (Not here, this is a backwater planet.)
+        # - GroupName: R2DroneBase                         # CommandCenter   # (Not here, this is a backwater planet.)
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsCommandCenter: True
           # DroneBaseSetup: DroneBaseSetup
           # IsImportant: True
@@ -454,7 +457,7 @@ POIs:
           # ReserveCount: 5
           # # SpawnPOIAvoid: [START]
           # # SpawnPOIAvoidDistance: 8000
-          # SpawnPOINear: [DroneBaseT1RG]
+          # SpawnPOINear: [R2DroneBase]
           # SpawnPOINearRange: [100, 300] 
           # SpawnResource: ["PentaxidResource:0-1"]
           # SpawnResourceRange: [150,400]
@@ -465,9 +468,9 @@ POIs:
 
 # Trader
 
-        - GroupName: TraderSettlementRG
+        - GroupName: R2TraderAuxT1
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: Music
@@ -475,11 +478,11 @@ POIs:
             - Key: RegenAfter
               Value: 720  
 
-        - GroupName: TraderDefenseA 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINear: [R2TraderAuxT1]
           SpawnPOINearRange: [100,250]
           Properties: 
             - Key: Music
@@ -489,34 +492,14 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilMainRG
+        - GroupName: R2ColonistAux
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
-          CountMinMax: [ 1, 1 ]
-          Properties:  
-            - Key: RegenAfter
-              Value: 720 
-
-        - GroupName: CivilSettlementRG 
-          Territory: False
-          Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
               Value: 720 
-
-        # - GroupName: CivilSettlementRG 
-        # #  Territory: False
-          # Faction: Main                    #fill up territories when CIV faction is not placed
-          # NoShieldReload: True
-          # CountMinMax: [ 3, 4 ]
-          # Properties:  
-            # - Key: RegenAfter
-              # Value: 720 
-
-
 
        # ================================
        # Wreckage and Human Ruins  50% spawn chance.
@@ -527,7 +510,7 @@ POIs:
           Biome: [ Forest ]
           IsImportant: True
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 3000
           Properties:
             - Key: MapMarker
@@ -551,11 +534,11 @@ POIs:
        # ================================
        # GraveDigger complex. Less than 50% chance
 
-        - GroupName: RuinsTribalTower
+        - GroupName: TalonWoodRuin
           Faction: None 
           Biome: [ TallTrees, Forest, DeepForest, LowMountains  ]
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [VillageStilt, XenuAuxT2RG]
+          SpawnPOIAvoid: [VillageStilt, R2XenuAuxT2]
           SpawnPOIAvoidDistance: 2000
           Properties:
             - Key: MapMarker
@@ -563,25 +546,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TribalBurialChamberRG 
-          Faction: None  
-          IsImportant: True
-          BiomesExcluded: [ ColdPlains, Tundra ] 
-          CountMinMax: [ 1, 1 ]
-          LevelMod: +3
-          SpawnPOINear: [RuinsTribalTower]
-          SpawnPOINearRange: [200, 600]
-          Properties: 
-            - Key: Music
-              Value: lava
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
        # ================================
        # Just some ruins to walk to. 50% chance.
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           BiomesExcluded: [ Tundra ] 
           CountMinMax: [ 0, 1 ]
@@ -591,13 +558,13 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           BiomesExcluded: [ Tundra ] 
           CountMinMax: [ 0, 1 ]
-          SpawnPOINear: [RuinsTribal]
+          SpawnPOINear: [TalonWoodRuin]
           SpawnPOINearRange: [1000, 3000]
-          SpawnPOIAvoid: [RuinsTribal] 
+          SpawnPOIAvoid: [TalonWoodRuin] 
           POIDistance: 1000
           Properties: 
             - Key: MapMarker
@@ -621,27 +588,6 @@ POIs:
               Value: 720
 
 
-        - GroupName: SmugglerBargeLootT1
-          Faction: None
-          Biome: [ LowMountains, Mountains ]
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          SpawnPOIAvoid: [SmugglerBargeLootT1, XenuAuxT1RG]
-          POIDistance: 1500
-          Properties: 
-            - Key: MapDistance
-              Value: 50
-            - Key: HudDistance
-              Value: 100
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
-
         - GroupName: JunkT1
           Faction: None
           AvoidFactionTerritory: True
@@ -652,48 +598,12 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: SmugglerHideout
-          Faction: None
-          Biome: [ Swamp, TallTrees, DeepForest ]
-          IsScalingCount: True
-          CountMinMax: [ 0, 2 ]
-          DroneProb: 0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 1
-          TroopTransport: False   
-          SpawnPOIAvoid: [SmugglerHideout, DroneBaseT1RG, XenuAuxT1RG, XenuAuxT2RG]
-          POIDistance: 2000
-          Properties: 
-            - Key: MapDistance
-              Value: 70
-            - Key: HudDistance
-              Value: 70
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 4 ]
           Properties:
             - Key: MapMarker
               Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eggs
-          Faction: None
-          Biome: [ Swamp ]
-          CountMinMax: [ 2, 4 ]
-          IsScalingCount: True
-          DroneProb: 0.0
-          DronesMinMax: [ 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          SpawnPOIAvoid: [Eggs]
-          POIDistance: 1200
-          Properties: 
             - Key: RegenAfter
               Value: 720
 
@@ -730,23 +640,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-
-        - GroupName: Artifacts
-          Faction: TheLegacy
-          AvoidFactionTerritory: True
-          Biome: [ Marsh, Swamp, DeepForest, TallTrees ]
-          CountMinMax: [ 0, 1 ]
-          Properties: 
-            - Key: Music
-              Value: EvilWhispering
-            - Key: RegenAfter
-              Value: 720
-
 # Tungsten
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           IsScalingCount: True
           DroneProb: 0
@@ -761,7 +659,18 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-
+# Ancient Walker mission statue
+        - GroupName: Eden_AncientWalker
+          Faction: Talon
+          Territory: False
+          CountMinMax: [ 1, 1 ]
+          Properties: 
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 720
 
 
     FixedPlayerStart:
@@ -851,24 +760,6 @@ DroneSpawning:
 
 SpawnRateZones:
 
-     # ===  Just for the SSG - to show where the signal markers are =====
-   - SpawnAt: [SignalMarker01, SignalMarker02, ResourceMarker01]
-     Radius: 120
-     RadiusRandom: 0
-     RateMultiplyerCenter: 1
-     RateMultiplyerEdge: 1
-     AffectEnemies: true
-     Color: "1.0, 0.8, 0.5, 1.0" 
-   - SpawnAt: [ResourceMarker01]
-     Radius: 180
-     RadiusRandom: 0
-     RateMultiplyerCenter: 1
-     RateMultiplyerEdge: 1
-     AffectEnemies: true
-     Color: "1.0, 0.8, 0.5, 1.0" 
-
-
-
 SpawnZones:
 
 
@@ -920,7 +811,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [VillageStilt ]
+   - SpawnAt: [VillageStilt]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 600
      RadiusRandom: 50
@@ -940,7 +831,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [200, 240]
 
-   - SpawnAt: [DroneBaseT1RG]    # Main Xenu Buildings
+   - SpawnAt: [R2DroneBase]    # Main Xenu Buildings
      BiomesExcluded: [ Mountains ]
      Radius: 400
      RadiusRandom: 25
@@ -955,7 +846,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
          
-   - SpawnAt: [XenuAuxT2RG, XenuAuxT1RG]
+   - SpawnAt: [R2XenuAuxT2, R2XenuAuxT1]
      BiomesExcluded: [ Mountains ]
      Radius: 200
      RadiusRandom: 0
@@ -970,7 +861,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [XenuAuxT1RG, XenuAuxT2RG]    # at the front door
+   - SpawnAt: [R2XenuAuxT1, R2XenuAuxT2]    # at the front door
      BiomesExcluded: [ Mountains ]
      Radius: 100
      RadiusRandom: 0

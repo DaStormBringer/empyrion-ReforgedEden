@@ -496,7 +496,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -600,7 +601,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -692,7 +694,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -712,7 +715,7 @@ POIs:
 # XCorp POI complex with several structures around. Doesn't always appear.
         - GroupName: Eden_XCorpAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -727,7 +730,7 @@ POIs:
 
         - GroupName: Eden_XCorpAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -1253,7 +1256,7 @@ POIs:
         - GroupName: FarrTradingT2RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrAbandonedRG]
@@ -1270,7 +1273,7 @@ POIs:
         - GroupName: FarrAuxT2RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1285,7 +1288,7 @@ POIs:
         - GroupName: FarrAuxT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 6 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1300,7 +1303,7 @@ POIs:
         - GroupName: FarrDefenseT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1315,7 +1318,7 @@ POIs:
         - GroupName: MineT2PolarisRG
           Territory: False
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [FarrTradingT2RG]
           SpawnPOINearRange: [100, 400]
@@ -1326,7 +1329,7 @@ POIs:
         - GroupName: MineGraphitePolarisRG
           Territory: False
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           SpawnPOINear: [FarrTradingT2RG]
           SpawnPOINearRange: [100, 500]
@@ -1338,7 +1341,7 @@ POIs:
         - GroupName: FarrAbandonedRG
           Faction: Alien
           FactionTerritory: [Farr]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -1371,7 +1374,6 @@ POIs:
 
         - GroupName: R2PirateAuxT1
           Faction: Pirates
-          IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
@@ -1467,6 +1469,25 @@ POIs:
           SpawnPOINear: [R2ColonistMain]
           SpawnPOINearRange: [500, 600]
           Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2ColonistDeco
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
@@ -1746,10 +1767,10 @@ POIs:
 
 # ---------------------- Zirax Random POIs home territory
 # T2 aux
-        - GroupName: R2EpsilonAuxT2
+        - GroupName: R2XenuAuxT2
           Faction: Zirax
           FactionTerritory: [Xenu]
-          CountMinMax: [ 1, 1 ]
+          CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
           DronesMinMax: [ 2, 3 ]
@@ -1760,7 +1781,7 @@ POIs:
               Value: 720
 
 # T1 aux
-        - GroupName: R2EpsilonAuxT1
+        - GroupName: R2XenuAuxT1
           Faction: Zirax
           FactionTerritory: [Xenu]
           CountMinMax: [ 2, 3 ]
@@ -1883,7 +1904,6 @@ POIs:
 
         - GroupName: R2PirateAuxT1
           Faction: Pirates
-          IsImportant: True
           CountMinMax: [ 0, 1 ] # 50% chance
           IsScalingCount: True
           DroneProb: 0.5

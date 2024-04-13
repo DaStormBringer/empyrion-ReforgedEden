@@ -251,10 +251,10 @@ POIs:
 # =========== Placing the basic POI for the playfield to work ===========
 
           # DroneBase Xenu - High difficulty POI (outdated, but fond memories of that 'plasma phalanx')
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           IsImportant: True
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           BiomesExcluded: [ PoleEdge ] 
@@ -275,7 +275,7 @@ POIs:
         - GroupName: TS_Metal_Waypoint
           IsImportant: True
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ PoleEdge ] 
           CountMinMax: [ 1, 1 ]
           DroneProb: 0
@@ -284,7 +284,7 @@ POIs:
           TroopTransport: False 
           SpawnResource: ["ErestrumResource:1-1"]
           SpawnResourceRange: [100, 250]
-          SpawnPOIAvoid: [DroneBaseCommandRG, START]
+          SpawnPOIAvoid: [R2DroneBaseT5, START]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: MapMarker
@@ -294,9 +294,9 @@ POIs:
 
 # Kriel
 
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: Music
@@ -304,9 +304,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 4 ]
           Properties: 
             - Key: Music
@@ -316,19 +316,19 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilMainRG
+        - GroupName: R2ColonistMain
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -337,18 +337,18 @@ POIs:
         - GroupName: MineT4PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 200] 
           Properties:  
             - Key: RegenAfter
               Value: 720
 
-        # - GroupName: CivilSettlementRG 
+        # - GroupName: R2PolarisAuxT1 
        # #   Territory: False
           # Faction: Main                    #fill up territories when CIV faction is not placed
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 3, 4 ]
           # Properties:  
             # - Key: RegenAfter
@@ -356,29 +356,29 @@ POIs:
 
 # Pirates
 
-        - GroupName: PiratesMainRG 
+        - GroupName: R2PirateMain 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
      #     IsImportant: True
           Properties:  
             - Key: RegenAfter
               Value: 720         
 
-        - GroupName: PiratesAuxDesertRG 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
      #     IsImportant: True
           Properties:  
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: PiratesDefenseT1Desert 
+        - GroupName: R2PirateDefenseT1 
           Faction: Pirates    
-          NoShieldReload: True 
+          # NoShieldReload: True 
           CountMinMax: [ 1, 3 ]
-          SpawnPOINear: [PiratesMainRG]
+          SpawnPOINear: [R2PirateMain]
           SpawnPOINearRange: [100,250]
      #     IsImportant: True
           Properties:  
@@ -392,7 +392,7 @@ POIs:
           IsImportant: True
           IsScalingCount: True 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           Biome: [ CanyonEdge, ShallowCanyon, Rifts, Rifts_1 ]
           CountMinMax: [ 10, 10 ]
@@ -421,7 +421,7 @@ POIs:
         - GroupName: Eden_ZiraxDSRCMain
           IsImportant: True 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SmallCrater, Dunes, DustBowl, LavaFolds, Mountains ]
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0 
@@ -430,7 +430,7 @@ POIs:
           TroopTransport: True
           SpawnPOINear: [START]
           SpawnPOINearRange: [0, 3000] 
-          SpawnPOIAvoid: [ TS_Metal_Waypoint, DroneBaseCommandRG]
+          SpawnPOIAvoid: [ TS_Metal_Waypoint, R2DroneBaseT5]
           SpawnPOIAvoidDistance: 2000
           Properties:
             - Key: Music
@@ -440,7 +440,7 @@ POIs:
 
         - GroupName: DSRCTurret
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           DroneProb: 0.8 
           DronesMinMax: [ 1, 2 ]
@@ -479,7 +479,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 6
           TroopTransport: True
-          SpawnPOIAvoid: [ TS_Metal_Waypoint, DroneBaseCommandRG, XenuArtilleryBase ]
+          SpawnPOIAvoid: [ TS_Metal_Waypoint, R2DroneBaseT5, XenuArtilleryBase ]
           SpawnPOIAvoidDistance: 650
           Properties: 
             - Key: MapMarker
@@ -489,7 +489,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -507,7 +507,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -628,7 +628,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
      # # Zirax spawing
-   - SpawnAt: [DroneBaseCommandRG]
+   - SpawnAt: [R2DroneBaseT5]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 100

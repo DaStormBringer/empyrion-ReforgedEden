@@ -414,12 +414,11 @@
 { +LootGroup Name: SuitBoosterT2
   Count: "1"
   Item_0: ArmorBoostEpic, param1: 1, param2: 0.1
-  Item_1: JetpackBoostEpic, param1: 1, param2: 0.1
+  Item_1: RadiationBoostEpic, param1: 1, param2: 0.1
   Item_2: MultiBoostEpic, param1: 1, param2: 0.1
   Item_3: InsulationBoostEpic, param1: 1, param2: 0.1
   Item_4: CoolingBoostEpic, param1: 1, param2: 0.1
   Item_5: MobilityBoostEpic, param1: 1, param2: 0.1
-  Item_6: RadiationBoostEpic, param1: 1, param2: 0.1
 }
 # ====================================================================
 { +LootGroup Name: MissingCargo
@@ -447,6 +446,8 @@
   Item_11: PosterTalon, param1: 1, param2: 0.1
   Item_12: PosterTrader, param1: 1, param2: 0.1
   Item_13: PosterZiraxAlienWorld, param1: 1, param2: 0.1
+  Item_14: PosterCrystalMoon, param1: 1, param2: 0.1
+  Item_15: PosterOffIntoTheUnknown, param1: 1, param2: 0.1
 }
 # ====================================================================
 { +LootGroup Name: Keycards
@@ -633,7 +634,6 @@
   Item_3: Token, param1: "meta=162", param2: 0.05
   Item_4: Token, param1: "meta=168", param2: 0.05
 }
-
 
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Loot Groups

@@ -10,12 +10,12 @@ Title: <b><#FF0000>Reforged Eden 2 Alpha</color></b> <size=65%><#ffffff>Alpha</c
 # Overlay body (typically multi-line text)
 # If commented out, only the title will be displayed
 Body: |
-  <size=135%><#ffffff><b>April 6:</b></color></size>
+  <size=135%><#ffffff><b>April 12:</b></color></size>
   <size=85%><b>Current testing priorities:</b>
   <size=85%>•<indent=3%>All starting planets and progression through the starting systems.</indent></size>
-  <size=85%>•<indent=3%>Planetary and gas giant orbits in habitable, cold, and hot star systems.</indent></size>
-  <size=85%>•<indent=3%>Asteroid fields in habitable and cold systems.</indent></size>
-  <size=85%>•<indent=3%>Temperate, Brooding Temperate, Temperate Plateau, Strange Temperate, Temperate Rainforest, Swamp, Mire planets.</indent></size>
+  <size=85%>•<indent=3%>Planetary and gas giant orbits.</indent></size>
+  <size=85%>•<indent=3%>Asteroid fields.</indent></size>
+  <size=85%>•<indent=3%>Planet types: Most variations of temperate-like, desert, ocean, swamp, alien, arid, tropical planets, Temperate-like moons.</indent></size>
   <size=85%>•<indent=3%>General combat and building.</indent></size>
   
   A new save game is recommended for this update.

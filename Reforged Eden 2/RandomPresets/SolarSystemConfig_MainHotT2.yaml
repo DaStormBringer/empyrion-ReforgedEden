@@ -75,7 +75,7 @@ GenerationParams:
     - 'SunB:0.20, SunA:0.10, SunG:0.05, SunF:0.05, SunM:0.20, SunD:0.20, SunN2:0.20, SunA4V:0.00'                 # 1 Companion Stars
 # -------------------------------------------------------------------------------------------------------------- Rocky Planets
     - 'Lava:0.6, Lava2:0.4, Midnight:0.0'                                                                       # 1 Hot
-    - 'Desert:0.7, Arid:0.0, DesertOasis:0.0, DesertBlack:0.3'                                                    # 2 Desert
+    - 'Desert:0.7, Arid:0.0, DesertOasis:0.0, DesertHot:0.3'                                                    # 2 Desert
     - 'Dead:1'                                                                                                    # 3 Dead
     - 'Temperate:0.7, Tropical:0.1, Swamp:0.2, Irradiated:0.0, Jungle:0.0'                                        # 4 Temperate
     - 'Ocean:1'                                                                                                   # 5 Ocean
@@ -104,7 +104,8 @@ GenerationParams:
 # ------------------------------------------------------------------------------------------------- UCH and Admin
     - 'UCHResearchShip:1.0'                                                                                         # 1 UCH Research Vessel
 # ------------------------------------------------------------------------------------------------- Asteroid Fields
-    - 'AsteroidField_K:0.4, AsteroidFieldPirate:0.2, AsteroidFieldPolaris:0.1, AsteroidFieldZirax:0.3'              # 1 Asteroid Fields
+    # - 'AsteroidFieldKT1:0.4, AsteroidFieldPirate:0.2, AsteroidFieldPolaris:0.1, AsteroidFieldZirax:0.3'              # 1 Asteroid Fields
+    - 'AsteroidFieldKT1:1'              # 1 Asteroid Fields
     - 'AsteroidFieldRichGeneric:1'                                                                                  # 2 Rich Asteroid Fields
 # ------------------------------------------------------------------------------------------------- Stations
     - 'TradeStationPolaris:1.0'                                                                                  # 1 Polaris Trade Station

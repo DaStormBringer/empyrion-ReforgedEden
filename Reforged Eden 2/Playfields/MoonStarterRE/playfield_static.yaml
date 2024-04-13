@@ -111,9 +111,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG              #CommandCenter
+        - GroupName: R2DroneBase              #CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]     
@@ -134,7 +134,7 @@ POIs:
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [DroneBaseT1RG, XenuMainframeRG, XenuRadarMainRG]
+          SpawnPOIAvoid: [R2DroneBase, XenuMainframeRG, XenuRadarMainRG]
           SpawnPOIAvoidDistance: 2000
           SpawnResource: ["PromethiumResource:1-1"]
           SpawnResourceRange: [250,400]
@@ -192,7 +192,7 @@ POIs:
           # # Endboss Main  - Floating
         - GroupName: XenuMainframeRG                             #Story relevant: OFFWORLD GRAVE
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
     #      Biome: [ RadiatedFog ]
           IsImportant: True
          # LevelMod: +3
@@ -210,7 +210,7 @@ POIs:
           # # Endboss Main
         - GroupName: XenuRadarMainRG                       # Main Building
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
      #     Biome: [ RadiatedFog ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -226,7 +226,7 @@ POIs:
           # # Endboss  Teleporter Access
         - GroupName: XenuComArrayRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
      #     Biome: [ RadiatedFog ] 
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -245,9 +245,9 @@ POIs:
           # # Endboss Main Defense Turrets
 
           # # Anti-Aircraft turret
-        - GroupName: XenuRadarTurretRocketRG
+        - GroupName: R2XenuDefenseT3
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           # IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -264,7 +264,7 @@ POIs:
 
         - GroupName: XenuRadarTurret
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           # IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -281,12 +281,12 @@ POIs:
 
         - GroupName: PolarisMiningMainRG          # Main Building
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           LevelMod: +3
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 2000
           SpawnResource: ["SiliconResource:1-2","PromethiumResource:2-2"]
           SpawnResourceRange: [150,400]
@@ -296,7 +296,7 @@ POIs:
 
         - GroupName: PolarisMiningAuxRG
           Faction: Polaris 
-          NoShieldReload: True 
+          # NoShieldReload: True 
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 1, 3 ]
           SpawnPOINear: [PolarisMiningMainRG]
@@ -305,9 +305,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        # - GroupName: PolarisIndustrialAuxRG
+        # - GroupName: R2PolarisAuxT2
           # Faction: Polaris  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           # CountMinMax: [ 1, 2 ]
           # SpawnPOINear: [PolarisMiningMainRG]
@@ -316,9 +316,9 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
  
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           # Territory: False        
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 5, 6 ]
@@ -333,7 +333,7 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [200, 1000] 
@@ -343,7 +343,7 @@ POIs:
 
         - GroupName: FactoryPolarisRG1
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [100, 400] 

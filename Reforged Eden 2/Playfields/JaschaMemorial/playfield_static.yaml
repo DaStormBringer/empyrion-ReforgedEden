@@ -363,7 +363,7 @@ DroneSpawning:
          # Period: Always
          # DelayMinMax: [-1, -1]
 # Talon villagers
-   # - SpawnAt: [TribalVillageRG, TribalBazar, TribalBazarArid]
+   # - SpawnAt: [TalonMain, TribalBazar, TribalBazarArid]
      # BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 50
@@ -376,7 +376,7 @@ DroneSpawning:
          # Amount: 150
          # Period: Always
          # DelayMinMax: [48, 72]
-   # - SpawnAt: [DroneBaseT1RG, EpsilonBunkerRG]
+   # - SpawnAt: [R2DroneBase, R2EpsilonMain]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 1000
      # RadiusRandom: 25
@@ -389,7 +389,7 @@ DroneSpawning:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
+   # - SpawnAt: [R2EpsilonAuxT2, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 25

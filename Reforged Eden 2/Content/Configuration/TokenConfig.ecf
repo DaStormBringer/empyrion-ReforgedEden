@@ -898,7 +898,7 @@
   CustomIcon: KeyCardBlue
   DropOnDeath: false
   RemoveOnUse: true
-  Description: "A security card used to access doors in the crashed prison transport on the rogue planet."
+  Description: "A security card used to access doors and medical equipment in the crashed prison transport on the rogue planet."
 }
 
 # On Dread starter

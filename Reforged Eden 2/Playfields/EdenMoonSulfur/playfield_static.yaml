@@ -116,7 +116,7 @@ POIs:
       DroneProb: 1
       DronesMinMax: [5, 9]
       ReserveCount: 5
-      NoShieldReload: True
+      # NoShieldReload: True
       SpawnResource: ['GoldResource:1-2']
       SpawnResourceRange: [150, 400]
       Properties:
@@ -126,7 +126,7 @@ POIs:
          Value: 720
    -  GroupName: Fallen_Tara_Plant
       Faction: Alien  
-      NoShieldReload: True
+      # NoShieldReload: True
       IsImportant: True
       CountMinMax: [ 1, 1 ]
       DroneProb: 1

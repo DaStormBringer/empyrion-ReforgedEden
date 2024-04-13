@@ -217,10 +217,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
           DroneProb: 1.0
@@ -231,9 +231,9 @@ POIs:
               Value: 720
 
               #Ghyst Compound =================================================
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ LargeCrater ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -248,16 +248,16 @@ POIs:
               Value: 720
 
               # Auxillary POIs for Ghyst Compound
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 8 ]
           # IsImportant: True
           DroneProb: 0.7
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [250, 500]
           SpawnResource: ["GoldResource:0-1"]
           SpawnResourceRange: [100,125]
@@ -265,25 +265,25 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT2RG
+        - GroupName: R2GhystDefenseT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 5 ]
           # IsImportant: True
           DroneProb: 0.5
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [600, 1000]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
         # Random Ghyst Compounds ====================================
-        - GroupName: GhystAuxT2RG 
+        - GroupName: R2GhystAuxT2 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           # IsImportant: True
           IsScalingCount: True
@@ -291,16 +291,16 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          AuxiliaryPOIs: [GhystAuxT1RG]
+          AuxiliaryPOIs: [R2GhystAuxT1]
           SpawnResource: ["GoldResource:0-1","ZascosiumResource:0-1"]
           SpawnResourceRange: [100,125]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False         
           IsAuxPOI: True
           SpawnPOINearRange: [200, 400]
@@ -309,7 +309,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [GhystAuxT1RG] 
+          SpawnPOIAvoid: [R2GhystAuxT1] 
           SpawnPOIAvoidDistance: 150 
           TroopTransport: False
           Properties: 
@@ -319,7 +319,7 @@ POIs:
         # Rogue Drone Harvesters ====================================
         - GroupName: Eden_RogueHarvestAnchor
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 5, 6 ]
           # IsImportant: True
           IsScalingCount: True
@@ -338,7 +338,7 @@ POIs:
 
         - GroupName: Eden_RogueHarvest
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False         
           IsAuxPOI: True
           SpawnPOINearRange: [100, 200]
@@ -347,7 +347,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          # SpawnPOIAvoid: [GhystAuxT1RG] 
+          # SpawnPOIAvoid: [R2GhystAuxT1] 
           # SpawnPOIAvoidDistance: 150 
           TroopTransport: False
           Properties: 
@@ -357,9 +357,9 @@ POIs:
               Value: 720
 
               # Random Ghyst POIs
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True 
           DroneProb: 0.7
@@ -375,7 +375,7 @@ POIs:
        # Alien Artifacts - Floating
         - GroupName: ArtifactsFloating
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           Properties: 

@@ -244,10 +244,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Alien
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -259,63 +259,63 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-              # Alien Compound
-        - GroupName: Eden_AlienMain                            # Main Building
-          Faction: Alien
-          NoShieldReload: True  
-          BiomesExcluded: [ Rifts, Mountains ] 
-          CountMinMax: [ 0, 1 ]
-          IsImportant: True
-          # LevelMod: +2
-          DroneProb: 1.0
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 3
-          TroopTransport: True
-          # SpawnPOINear: [DroneBaseT1RG]
-          # SpawnPOINearRange: [150, 250]
-          SpawnResource: ["PromethiumResource:1-2","CopperResource:1-2","SiliconResource:1-1"]
-          SpawnResourceRange: [150,400]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
+              # # Alien Compound
+        # - GroupName: Eden_AlienMain                            # Main Building
+          # Faction: Alien
+          # # NoShieldReload: True  
+          # BiomesExcluded: [ Rifts, Mountains ] 
+          # CountMinMax: [ 0, 1 ]
+          # IsImportant: True
+          # # LevelMod: +2
+          # DroneProb: 1.0
+          # DronesMinMax: [ 2, 4 ]
+          # ReserveCount: 3
+          # TroopTransport: True
+          # # SpawnPOINear: [R2DroneBase]
+          # # SpawnPOINearRange: [150, 250]
+          # SpawnResource: ["PromethiumResource:1-2","CopperResource:1-2","SiliconResource:1-1"]
+          # SpawnResourceRange: [150,400]
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
 
-       # Auxiliary Buildings
-        - GroupName: Eden_AlienAuxT2
-          Faction: Alien
-          NoShieldReload: True  
-          BiomesExcluded: [ Rifts, Mountains ] 
-          CountMinMax: [ 1, 2 ]
-          # LevelMod: +1
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: False
-          SpawnPOINear: [Eden_AlienMain]
-          SpawnPOINearRange: [250, 500]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
+       # # Auxiliary Buildings
+        # - GroupName: Eden_AlienAuxT2
+          # Faction: Alien
+          # # NoShieldReload: True  
+          # BiomesExcluded: [ Rifts, Mountains ] 
+          # CountMinMax: [ 1, 2 ]
+          # # LevelMod: +1
+          # DroneProb: 0.8
+          # DronesMinMax: [ 1, 2 ]
+          # ReserveCount: 3
+          # TroopTransport: False
+          # SpawnPOINear: [Eden_AlienMain]
+          # SpawnPOINearRange: [250, 500]
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
 
-       # Random Alien Buildings
-        - GroupName: Eden_AlienAuxT2
-          Faction: Alien
-          NoShieldReload: True  
-          BiomesExcluded: [ Rifts, Mountains ] 
-          CountMinMax: [ 2, 4 ]
-          IsScalingCount: True
-          # LevelMod: +1
-          DroneProb: 0.3
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: False
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
+       # # Random Alien Buildings
+        # - GroupName: Eden_AlienAuxT2
+          # Faction: Alien
+          # # NoShieldReload: True  
+          # BiomesExcluded: [ Rifts, Mountains ] 
+          # CountMinMax: [ 2, 4 ]
+          # IsScalingCount: True
+          # # LevelMod: +1
+          # DroneProb: 0.3
+          # DronesMinMax: [ 1, 2 ]
+          # ReserveCount: 3
+          # TroopTransport: False
+          # Properties: 
+            # - Key: RegenAfter
+              # Value: 720
 
        # Alien Caves
         - GroupName: Eden_CaveAlien
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ Rifts, Mountains ] 
           CountMinMax: [ 5, 6 ]
           IsScalingCount: True
@@ -487,7 +487,7 @@ SpawnZones:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG]
+   - SpawnAt: [R2DroneBase]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 100
@@ -497,34 +497,6 @@ SpawnZones:
      SpawnOnlyIfPoiIsAlien: true
      Entities:
        - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
-         Biomes: [Any]
-         Amount: 200
-         Period: Always
-         DelayMinMax: [-1, -1]
-   - SpawnAt: [Eden_AlienMain]
-     BiomesExcluded: [ Mountains ]
-     Radius: 500
-     RadiusRandom: 100
-     RateMultiplyerCenter: 1.0
-     RateMultiplyerEdge: 0.6
-     Color: "1.0, 1.0, 1.0, 1.0"
-     SpawnOnlyIfPoiIsAlien: true
-     Entities:
-       - Names: [ZiraxRipperDogPatrol]
-         Biomes: [Any]
-         Amount: 200
-         Period: Always
-         DelayMinMax: [-1, -1]
-   - SpawnAt: [Eden_AlienAuxT2]
-     BiomesExcluded: [ Mountains ]
-     Radius: 300
-     RadiusRandom: 100
-     RateMultiplyerCenter: 1.0
-     RateMultiplyerEdge: 0.6
-     Color: "1.0, 1.0, 1.0, 1.0"
-     SpawnOnlyIfPoiIsAlien: true
-     Entities:
-       - Names: [ZiraxRipperDogPatrol]
          Biomes: [Any]
          Amount: 100
          Period: Always

@@ -431,9 +431,9 @@ POIs:
     Random:   
         # - GroupName: Eden_KaranaDroneBase
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsImportant: True
-# #          NoShieldReload: True
+# #          # NoShieldReload: True
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
@@ -563,7 +563,7 @@ POIs:
               Value: 720
 
               # Random Tribal Ruins
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None  
           Biome: [ RainForest, JungleMountains, Swamp, SwampBeach, WaterSwamp, ShallowWater, Water]
           CountMinMax: [ 12, 15 ]
@@ -681,7 +681,7 @@ DroneSpawning:
 # ==============================================================
 
 SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]
+   # - SpawnAt: [R2PolarisTradePlanet]
      # Radius: 1000
      # RadiusRandom: 50
      # RateMultiplyerCenter: 0.0

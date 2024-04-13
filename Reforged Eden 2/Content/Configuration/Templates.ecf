@@ -24,7 +24,7 @@
 { Template Name: Graphite
   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
   CraftTime: 10
-  OutputCount: 5
+  OutputCount: 1
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     RockDust: 25
@@ -1327,6 +1327,19 @@
   }
 }
 
+{ +Template Name: DecoAutominerBlocks
+  CraftTime: 3
+  Target: "SmallC,LargeC,AdvC"
+  { Child Inputs
+    Electronics: 32
+    TitanPlates: 32
+    CobaltAlloy: 16
+    Computer: 8
+    OpticalFiber: 32
+    MiningEquipment: 1
+  }
+}
+
 { +Template Name: DecoStoneBlocks
   CraftTime: 2
   BaseItem: true
@@ -1466,7 +1479,7 @@
     CobaltAlloy: 8
     TitanPlates: 10
     EnergyMatrix: 5
-    CapacitorComponent: 3
+    AluminiumCoil: 8
   }
 }
 { +Template Name: CPUExtenderSVT3
@@ -1478,6 +1491,7 @@
     CobaltAlloy: 16
     Oscillator: 24
     SmallOptronicBridge: 6
+    AluminiumCoil: 12
   }
 }
 { +Template Name: CPUExtenderSVT4R
@@ -5245,7 +5259,7 @@
     Motor: 4
     MechanicalComponents: 24
     SteelPlate: 8
-	CobaltAlloy: 16
+	CobaltAlloy: 12
   }
 }
 
@@ -9026,7 +9040,6 @@
     AntimatterConverter: 1
   }
 }
-
 
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Templates

@@ -143,9 +143,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        # - GroupName: DroneBaseT1RG  #CommandCenter
+        # - GroupName: R2DroneBase  #CommandCenter
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsCommandCenter: True
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 0, 1 ]
@@ -159,7 +159,7 @@ POIs:
               # Entries into the planet
         # - GroupName: Eden_ProgenitorEntry
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # CountMinMax: [ 1, 1 ]
           # IsImportant: True
           # Properties:
@@ -228,7 +228,7 @@ POIs:
 
         - Type: BA_Admin             # THIS IS THE KEYSTONE POI (Centrally placed on Legacy hub stamp)
           Faction: Admin             
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_DysonHub  # <= (Use the blueprint save name to spawn it!)
           Mode: Survival
           Name: Hub

@@ -153,10 +153,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           IsImportant: True
           DroneBaseSetup: DroneBaseSetup
@@ -174,7 +174,7 @@ POIs:
         # Abandoned Atlas Mine
         - GroupName: Eden_AtlasMine
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           IsScalingCount: True
@@ -192,7 +192,7 @@ POIs:
         # POI complex with several structures around
         - GroupName: GhystMainRG 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -204,9 +204,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -219,9 +219,9 @@ POIs:
             - Key: RegenAfter
               Value: 720   
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
@@ -236,16 +236,16 @@ POIs:
 
        # ================================
         # Defense for drone base
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 500]
           Properties: 
             - Key: RegenAfter
@@ -253,9 +253,9 @@ POIs:
 
        # ================================
         # Large Bunker
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -273,7 +273,7 @@ POIs:
         # Large Bunker
         - GroupName: Eden_ToxicMainWater
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ SludgeDeep ]  
           CountMinMax: [ 1, 1 ]
           PlaceAt: OnWater
@@ -308,7 +308,7 @@ POIs:
         - GroupName: Eden_ToxicCV
           Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SludgeEdge, Sludge, SludgeDeep ]
           IsImportant: True
           Territory: False
@@ -326,9 +326,9 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random military outposts scattered around planet
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -374,7 +374,7 @@ POIs:
        # Alien Artifacts - Floating
         - GroupName: ArtifactsFloating
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 0, 1 ]
           PlaceAt: OnWater
           IsScalingCount: True
@@ -407,7 +407,7 @@ POIs:
         # Trash Piles
         - GroupName: Eden_JunkTrash
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, SludgeEdge ]
           CountMinMax: [ 15, 30 ]
           # IsScalingCount: True 
@@ -427,7 +427,7 @@ POIs:
 
         - GroupName: Eden_JunkTrashLarge
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, SludgeEdge ]
           CountMinMax: [ 6, 10 ]
           # IsScalingCount: True 
@@ -448,7 +448,7 @@ POIs:
         # Underwater Trash Piles
         - GroupName: Eden_JunkTrashWater
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SludgeDeep, Sludge ]
           CountMinMax: [ 15, 30 ]
           PlaceAt: UnderWater
@@ -469,7 +469,7 @@ POIs:
 
         - GroupName: Eden_JunkTrashWaterLarge
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SludgeDeep, Sludge ]
           CountMinMax: [ 6, 10 ]
           PlaceAt: UnderWater
@@ -513,7 +513,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.75
           DronesMinMax: [ 2, 4 ]
@@ -530,7 +530,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 3 ]
@@ -649,7 +649,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+   - SpawnAt: [R2DroneBase, GhystMainRG, R2GhystMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 100
@@ -663,7 +663,7 @@ SpawnZones:
          Amount: 250
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [GhystAuxT2RG]
+   - SpawnAt: [R2GhystAuxT2]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

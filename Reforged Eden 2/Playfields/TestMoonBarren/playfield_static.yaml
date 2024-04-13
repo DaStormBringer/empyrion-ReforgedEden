@@ -174,7 +174,7 @@ POIs:
 # ---------------------- Drone Base
         - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
@@ -189,7 +189,7 @@ POIs:
         - GroupName: R2XenuDefenseT2
           Faction: Ghyst
           Territory: False
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           DroneProb: 1.0
           DronesMinMax: [ 1, 2 ]
@@ -207,10 +207,10 @@ POIs:
 # PentaCorp Station with some nearby trader settlements. Doesn't always show up. Sells Pentaxid.
         - GroupName: Eden_PolPentaCorp
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: Music
@@ -234,9 +234,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7
@@ -253,7 +253,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -271,7 +271,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5

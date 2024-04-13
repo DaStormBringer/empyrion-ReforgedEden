@@ -288,7 +288,7 @@ POIs:
     Random:   
         - GroupName: FarrDroneBaseRG                    #CommandCenter
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -306,7 +306,7 @@ POIs:
 # Dronebase defenses
         - GroupName: FarrDefenseT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 2, 2 ]
@@ -323,7 +323,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]
@@ -343,7 +343,7 @@ POIs:
 # ------------------------------------------------------------------------------------------------- Main lore POI group
         - GroupName: FarrTemplePrimeRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -361,7 +361,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]
@@ -380,7 +380,7 @@ POIs:
 
         - GroupName: FarrCrashSiteRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [FarrTemplePrimeRG]
@@ -398,7 +398,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -416,7 +416,7 @@ POIs:
         # - GroupName: Eden_FarrArchive
         - GroupName: Eden_FarrArchive
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [FarrTemplePrimeRG]
@@ -436,7 +436,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -455,7 +455,7 @@ POIs:
 # Main Single
         - GroupName: FarrMainSingleRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG]
@@ -471,7 +471,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -489,7 +489,7 @@ POIs:
 # Main HQ
         - GroupName: FarrMainRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
           SpawnPOIAvoidDistance: 3000
@@ -504,7 +504,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -522,7 +522,7 @@ POIs:
 # Trading Compound
         - GroupName: FarrTradingT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
           SpawnPOIAvoidDistance: 3000
@@ -537,7 +537,7 @@ POIs:
 
         - GroupName: FarrAuxT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [200, 350]
@@ -552,7 +552,7 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -567,7 +567,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -582,9 +582,9 @@ POIs:
 
 # Settlement around Farr Monument
 
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
           SpawnPOIAvoidDistance: 3000
@@ -601,9 +601,9 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [200, 350]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -616,9 +616,9 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 6, 10 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [250, 800]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -630,11 +630,11 @@ POIs:
               Value: 720
 
 # More settlements
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
-          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, FarrMonument]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, R2FarrMonument]
           SpawnPOIAvoidDistance: 2000
           DroneProb: 1.0
           DronesMinMax: [ 3, 5 ]
@@ -650,9 +650,9 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
-          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, FarrMonument, FarrAuxT2RG]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, R2FarrMonument, FarrAuxT2RG]
           SpawnPOIAvoidDistance: 1500
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
@@ -668,7 +668,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsAuxPOI: True
           SpawnPOINearRange: [100, 250]
@@ -683,7 +683,7 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 6 ]
           IsAuxPOI: True
           SpawnPOINearRange: [300, 500]
@@ -705,7 +705,7 @@ POIs:
 
         - GroupName: FarrAuxT3bRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
         #  IsImportant: True
           CountMinMax: [ 3, 4 ]
        #   SpawnPOIAvoid: [FarrMainSingleRG]
@@ -722,7 +722,7 @@ POIs:
         - GroupName: FarrAuxT2bRG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT3bRG]
@@ -739,7 +739,7 @@ POIs:
         - GroupName: FarrAuxT1b
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT1b]
@@ -756,7 +756,7 @@ POIs:
 # Random structures
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.35
@@ -770,7 +770,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.2
@@ -782,7 +782,7 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 4, 5 ]
           DroneProb: 0
@@ -798,7 +798,7 @@ POIs:
 
         - GroupName: FarrDefenseT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]
@@ -817,7 +817,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 4, 6 ]
@@ -836,7 +836,7 @@ POIs:
 
         - GroupName: FarrRuinT2
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -855,7 +855,7 @@ POIs:
 
         - GroupName: FarrRuinT1
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -874,7 +874,7 @@ POIs:
 
         - GroupName: FarrRuinT0
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -971,7 +971,7 @@ DroneSpawning:
 # ==============================================================
  
 SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]
+   # - SpawnAt: [R2PolarisTradePlanet]
      # Radius: 1000
      # RadiusRandom: 50
      # RateMultiplyerCenter: 0.0

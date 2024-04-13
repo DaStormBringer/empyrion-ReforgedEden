@@ -332,9 +332,9 @@ POIs:
     Random:
 
 # Main Anchor Points
-        - GroupName: DroneBaseT1RG   # CommandCenter & POI anchor for defense structures
+        - GroupName: R2DroneBase   # CommandCenter & POI anchor for defense structures
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           Biome: [ Marsh, Hills, Peat, Plains, TallTrees, Fungus, LowMountains, LowMountains_1, LowMountains_2 ]
           DroneBaseSetup: DroneBaseSetup
@@ -350,15 +350,15 @@ POIs:
               Value: 720
 
           # Defence: DroneBase
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           DroneProb: 1.0
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
@@ -366,7 +366,7 @@ POIs:
  
         - GroupName: FactoryZiraxRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 2, 4 ]
@@ -376,7 +376,7 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: DroneBaseCommandRG
+        - GroupName: R2DroneBaseT5
           Faction: Zirax
           FactionTerritory: [Rados]
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
@@ -386,22 +386,22 @@ POIs:
           DronesMinMax: [ 8, 12 ]
           ReserveCount: 15
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 3000
           Properties: 
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: XenuRadarTurretRocketRG
+        - GroupName: R2XenuDefenseT3
           Faction: Zirax
           FactionTerritory: [Rados]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 9, 12 ]
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           TroopTransport: False
-          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINear: [R2DroneBaseT5]
           SpawnPOINearRange: [250, 350]
           Properties: 
             - Key: RegenAfter
@@ -409,10 +409,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Main
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -422,7 +422,7 @@ POIs:
           Faction: None
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 2 ]
-        #  SpawnPOINear: [TS_BogRG]
+        #  SpawnPOINear: [R2PolarisTradePlanet]
         #  SpawnPOINearRange: [150, 400]
           Properties: 
             - Key: MapMarker
@@ -431,11 +431,11 @@ POIs:
               Value: 720
               
 
-          # === Xenu blockade, encircling TS_BogRG
+          # === Xenu blockade, encircling R2PolarisTradePlanet
 
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ ColdPlains ]
           IsImportant: True
           CountMinMax: [ 4, 4 ]
@@ -443,9 +443,9 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-      #    SpawnPOINear: [TS_BogRG]
+      #    SpawnPOINear: [R2PolarisTradePlanet]
        #   SpawnPOINearRange: [2000, 5000]
-      #    SpawnPOIAvoid: [ExcavationSite_Thing, XenuDefenceT1RG, RuinsTribalTower]
+      #    SpawnPOIAvoid: [ExcavationSite_Thing, R2XenuDefenseT1, TalonWoodRuin]
       #    POIDistance: 800
           Properties: 
             - Key: RegenAfter
@@ -453,7 +453,7 @@ POIs:
 
         - GroupName: SmugglerBargeCaptured
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ ShallowWater, Water, DeepWater ]
           PlaceAt: OnWater
           CountMinMax: [ 1, 2 ]
@@ -470,7 +470,7 @@ POIs:
 # Zirax (Xenu) Spaceport === (For defenses, see further below)
         - GroupName: PlanetVesselBase 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           BiomesExcluded: [ ColdPlains, Plains ]
           PlanetVesselBaseSetup: PlanetVesselBaseSetup
@@ -479,7 +479,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_BogRG, TribalVillageRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, TalonMain]
           POIDistance: 3000
           Properties: 
             - Key: RegenAfter
@@ -488,7 +488,7 @@ POIs:
           # Ship radar
         - GroupName: XenuComArray
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
           DronesMinMax: [ 1, 2 ]
@@ -501,9 +501,9 @@ POIs:
               Value: 720
 
 # Zirax (Xenu) Main === (For defenses, see further below)
-        - GroupName: XenuMainRG
+        - GroupName: R2XenuMain
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           BiomesExcluded: [ ColdPlains, Plains ]
           CountMinMax: [ 1, 2 ]
@@ -511,24 +511,24 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_BogRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           POIDistance: 2500
           Properties: 
             - Key: RegenAfter
               Value: 720
 
 # Zirax (Xenu) Aux, spawning close to other Xenu sites, but will avoid other Aux.
-        - GroupName: XenuAuxT1RG
+        - GroupName: R2XenuAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [PlanetVesselBase,DroneBaseT1RG, XenuMainRG]
+          SpawnPOINear: [PlanetVesselBase,R2DroneBase, R2XenuMain]
           SpawnPOINearRange: [250, 300]
-          SpawnPOIAvoid: [XenuAuxT1RG]
+          SpawnPOIAvoid: [R2XenuAuxT1]
           POIDistance: 2000 
           Properties: 
             - Key: RegenAfter
@@ -536,24 +536,24 @@ POIs:
 
 # Zirax (Xenu) defenses spawning after the Aux (or else Aux would be too far away)
 
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
           # Defence: Spaceport
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
@@ -566,15 +566,15 @@ POIs:
               Value: 720
 
           # Defence: Main
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOINear: [XenuMainRG]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [350, 400]
           Properties: 
             - Key: RegenAfter
@@ -584,7 +584,7 @@ POIs:
 # Zirax (Serdu) outposts  == Secondary military faction ===  POI ANCHOR FOR 'NEST' (EggPile) - POI!
         - GroupName: SerduTierIRG
           Faction: Serdu
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SwampUpper, Swamp, AlienSwamp, SwampEdge ]
           IsImportant: True
           IsScalingCount: True
@@ -593,7 +593,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [SerduTierIRG, TS_BogRG, TribalTalonTemple, XenuMainRG, XenuAuxT1RG, PlanetVesselBase, DroneBaseT1RG]
+          SpawnPOIAvoid: [SerduTierIRG, R2PolarisTradePlanet, TribalTalonTemple, R2XenuMain, R2XenuAuxT1, PlanetVesselBase, R2DroneBase]
           POIDistance: 2500
           Properties: 
             - Key: RegenAfter
@@ -601,7 +601,7 @@ POIs:
 
         - GroupName: SerduDefence
           Faction: Serdu
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           DroneProb: 0.9
@@ -623,7 +623,7 @@ POIs:
           Biome: [  Marsh ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
-          SpawnPOIAvoid: [TS_BogRG]  
+          SpawnPOIAvoid: [R2PolarisTradePlanet]  
           POIDistance: 2000 
           DroneProb: 1.0
           DronesMinMax: [ 1, 2 ]
@@ -646,7 +646,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 4
           TroopTransport: False
-          SpawnPOIAvoid: [CrashedShip, TS_BogRG]  
+          SpawnPOIAvoid: [CrashedShip, R2PolarisTradePlanet]  
           POIDistance: 2500 
           Properties: 
             - Key: MapMarker
@@ -656,9 +656,9 @@ POIs:
 
 
          # Zirax (Xenu) POIs that likely shot down the ships.
-        - GroupName: XenuDefenceT2RG 
+        - GroupName: R2XenuDefenseT2 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ ColdPlains ]
           CountMinMax: [ 2, 2 ]
           IsScalingCount: True
@@ -666,7 +666,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TS_BogRG, SerduTierIRG, RuinsTribalTower]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, SerduTierIRG, TalonWoodRuin]
           POIDistance: 2000
           SpawnPOINear: [CrashedShip]
           SpawnPOINearRange: [1000, 5000]
@@ -806,7 +806,7 @@ SpawnRateZones:
 
 
 # Zones (mostly) without aggressive creatures
-   - SpawnAt: [TS_BogRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 400
      RadiusRandom: 10
      RateMultiplyerCenter: 0.0
@@ -814,7 +814,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "0.0, 1.0, 0.0, 0.7"
 
-   - SpawnAt: [RuinsTribalTower]
+   - SpawnAt: [TalonWoodRuin]
      Radius: 400
      RadiusRandom: 100
      RateMultiplyerCenter: 0.0
@@ -832,7 +832,7 @@ SpawnRateZones:
 
      
      # Zirax already shot here all predators
-   - SpawnAt: [DroneBaseT1RG, XenuAuxT1RG, PlanetVesselBase] 
+   - SpawnAt: [R2DroneBase, R2XenuAuxT1, PlanetVesselBase] 
      Radius: 600
      RadiusRandom: 0
      RateMultiplyerCenter: 0.0
@@ -840,7 +840,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "1.0, 1.0, 1.0, 0.7"
 
-   - SpawnAt: [XenuMainRG]
+   - SpawnAt: [R2XenuMain]
      Radius: 600
      RadiusRandom: 0
      RateMultiplyerCenter: 0.0
@@ -852,7 +852,7 @@ SpawnRateZones:
 SpawnZones:  
 
      # Zirax patrols
-   - SpawnAt: [DroneBaseT1RG]
+   - SpawnAt: [R2DroneBase]
      Radius: 500
      RadiusRandom: 50
      RateMultiplyerCenter: 1.0
@@ -866,7 +866,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [15, 25]
 
-   - SpawnAt: [ PlanetVesselBase, XenuMainRG ]
+   - SpawnAt: [ PlanetVesselBase, R2XenuMain ]
      Radius: 500
      RadiusRandom: 25
      RateMultiplyerCenter: 1.0
@@ -880,7 +880,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [15, 25]
 
-   - SpawnAt: [ XenuAuxT1RG ]
+   - SpawnAt: [ R2XenuAuxT1 ]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 400
      RadiusRandom: 25
@@ -896,7 +896,7 @@ SpawnZones:
          DelayMinMax: [15, 25]
 
      # Ruined monument Slime colony
-   - SpawnAt: [ RuinsTribalTower ]
+   - SpawnAt: [ TalonWoodRuin ]
      BiomesExcluded: [ Heath ]  
      Radius: 150
      RadiusRandom: 10
@@ -988,7 +988,7 @@ SpawnZones:
 
 
     # Talon Villages ====
-   - SpawnAt: [ TribalVillageRG ]
+   - SpawnAt: [ TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 400
      RadiusRandom: 50
@@ -1016,7 +1016,7 @@ SpawnZones:
          Color: "0.7, 1, 0.8"
 
      # Long distance Talon hunting parties
-   - SpawnAt: [ TribalVillageRG ]
+   - SpawnAt: [ TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 1500
      RadiusRandom: 2100

@@ -138,6 +138,11 @@ Chapters:
         StartMessage: norm;20|pda_aWCCi
         StartDelay: 14
     AutoActivateOnGameStart: true
+    VisibleOnStartPlayfieldTypes:
+      - TemperateStarter
+      - AridStarter
+      - SwampStarter
+      - SnowStarter
     ActivateChapterOnCompletion: pda_u8qi4
     RewardedChapters:
       - pda_u8qi4
@@ -145,6 +150,11 @@ Chapters:
     Rewards:
       - Type: XP
         Count: 5000
+    # PlayfieldTypes:
+      # - TemperateStarter
+      # - AridStarter
+      # - SwampStarter
+      # - SnowStarter
   - ChapterTitle: pda_u8qi4
     Category: SoloMission
     NoSkip: false
@@ -375,6 +385,11 @@ Chapters:
         Count: 5
       - Type: XP
         Count: 7500
+    PlayfieldTypes:
+      - TemperateStarter
+      - AridStarter
+      - SwampStarter
+      - SnowStarter
   - ChapterTitle: pda_p3Ke0
     Category: SoloMission
     NoSkip: false
@@ -732,6 +747,11 @@ Chapters:
       - pda_4g4me
       - pda_KMuKa
       - pda_M0CKe
+    PlayfieldTypes:
+      - TemperateStarter
+      - AridStarter
+      - SwampStarter
+      - SnowStarter
   - ChapterTitle: pda_KMuKa
     Category: SoloMission
     NoSkip: false
@@ -967,6 +987,11 @@ Chapters:
       - pda_KCsC0
       - pda_40KR4u0
       - pda_OWSi4GG
+    PlayfieldTypes:
+      - TemperateStarter
+      - AridStarter
+      - SwampStarter
+      - SnowStarter
   - ChapterTitle: pda_mGxUG
     Category: SoloMission
     NoSkip: false
@@ -11441,6 +11466,36 @@ Chapters:
         PopupActivatesChapter: 'true'
     HideTasks: true
     Description: eden_pda_OWA0qqq
+  - ChapterTitle: eden_pda_SimqaSi
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_408euum
+    Tasks:
+      - TaskTitle: eden_pda_H0KSCC4
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_OI0eKmw
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 20
+            Description: eden_pda_Kiii4W4
+    StartMessage: high;20|eden_pda_u4OKq88
+    CompletedMessage: ''
+    ChapterActivation:
+      - Check: NearPoi
+        Names:
+          - RE2_PatrolRouteAkua
+        GuidingDistance: 1
+        TriggerDistance: 5000
+        NotifyMessage: high;20|eden_pda_0i8CgqC
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    HideTasks: true
+    Description: eden_pda_m8C8KGi
   - ChapterTitle: eden_pda_GC4Cm4m
     Category: SoloMission
     NoSkip: true
@@ -11474,6 +11529,7 @@ Chapters:
         NotifyMessage: norm;45|eden_pda_0juG0Xi
         NoSkip: 'true'
         PopupActivatesChapter: 'true'
+    Group: eden_pda_408euum
   - ChapterTitle: eden_pda_eCeuKWe
     Category: SoloMission
     NoSkip: true

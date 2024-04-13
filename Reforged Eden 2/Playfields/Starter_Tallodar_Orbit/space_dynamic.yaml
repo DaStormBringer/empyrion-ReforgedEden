@@ -225,7 +225,8 @@ POIs:
 
 # Zirax dummy POI for patrol vessel
     - Type: BA_Alien
-      Name: [Eden_BA_DummyPOI]
+      # Name: [Eden_BA_DummyPOI]
+      Name: [RE2_BA_PatrolRouteAkua]
       DisplayName: Zirax Patrol Route
       Faction: Zirax
       Mode: Survival
@@ -234,7 +235,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [5100, 0, 8200]
+      Pos: [-12650, 3100, 5150]
       Rot: [0, 0, 0]
       Properties:
         - Key: MapDistance
@@ -245,7 +246,7 @@ POIs:
           Value: 720
 
     - Type: BA_Alien
-      Name: [Eden_BA_DummyPOI]
+      Name: [RE2_BA_PatrolRouteAkua]
       DisplayName: Zirax Patrol Route
       Faction: Zirax
       Mode: Survival
@@ -254,7 +255,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [490, 750, 9338]
+      Pos: [-13500, 3100, 200]
       Rot: [0, 0, 0]
       Properties:
         - Key: MapDistance
@@ -264,25 +265,25 @@ POIs:
         - Key: RegenAfter
           Value: 720
 
-    - Type: BA_Alien
-      Name: [Eden_BA_DummyPOI]
-      DisplayName: Zirax Patrol Route
-      Faction: Zirax
-      Mode: Survival
-      CountMinMax: [ 1, 1 ]
-      Probability: 1
-      SpaceDefenseOverrideDefaults: True
-      SpaceDefenseProbability: 0
-      InitPower: True
-      Pos: [-4700, 2000, 9850]
-      Rot: [0, 0, 0]
-      Properties:
-        - Key: MapDistance
-          Value: 0
-        - Key: HudDistance
-          Value: 0
-        - Key: RegenAfter
-          Value: 720
+    # - Type: BA_Alien
+      # Name: [RE2_PatrolRouteAkua]
+      # DisplayName: Zirax Patrol Route
+      # Faction: Zirax
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # InitPower: True
+      # Pos: [-12850, 3050, -4750]
+      # Rot: [0, 0, 0]
+      # Properties:
+        # - Key: MapDistance
+          # Value: 0
+        # - Key: HudDistance
+          # Value: 0
+        # - Key: RegenAfter
+          # Value: 720
 
 # Wreckage
 # ----------------------------------------------- BA
@@ -510,7 +511,7 @@ DroneBaseSetup:
               DelayBeforeSelfDestructionMinMax: [3600, 3600]
               IsRespawnAfterDestruction: False
               RadiusMinMax: [1000, 1500]
-              POINameAsPositionRef: [Eden_BA_DummyPOI]
+              POINameAsPositionRef: [RE2_BA_PatrolRouteAkua]
               Position:
                 PosXZMinMax: [500, 1500]
                 PosYMax: 500

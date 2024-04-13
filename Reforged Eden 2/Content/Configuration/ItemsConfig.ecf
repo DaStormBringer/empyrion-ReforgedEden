@@ -88,7 +88,7 @@
 # Durability: max is 5000 for all handheld weapons and tools 
 # AutoReload: true > per default it is set to "true"
 
-# Free IDs: 12, 13, 47, 59*, 70-77, 95-99, 146-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504, 606-619 (armor), 630-649 (boosters)
+# Free IDs: 12, 13, 47*, 59*, 71-77, 95-99, 146-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504, 606-619 (armor), 630-649 (boosters)
 # Free IDs: 659-699 (boosters), 709-799, 805*, 849, 854-855+862-863+878 (drone weapon), *921-965* (upgrade weapons/ammo), 975-982* (T2CV weapons)
 # Reclaimed IDs: 53, 79, 82, 83, 84, 312*, 322*, 336*, 353*, 358, [medical 366*, 388*, 390*, 393*, 392*, 378*]
 # RGFREEFLAG
@@ -279,7 +279,7 @@
     AllowRemote: false
     AllowAt: "UnderWater,Space,Planet"
     ROF: 1.0, type: float, display: true, formatter: ROF
-    Range: 1.95, display: false
+    Range: 2.15, display: false
     IgnoreAtmo: true
     NoiseStrength: 1, display: false
     CameraShake: 2  
@@ -4978,6 +4978,430 @@
   UnlockLevel: 20
   TechTreeNames: Hidden
 }
+{ Item Id: 70, Name: MultiToolDebug
+  Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
+  CustomIcon: MultiToolT2
+  PickupToToolbar: true
+  MarketPrice: 0, display: true
+  HoldType: 16
+  StackSize: 1
+  Material: Device
+  Category: Weapons/Items
+  Mass: 8, type: float, display: true, formatter: Kilogram
+  Volume: 4.5, type: float, display: true, formatter: Liter
+  Info: bkiMultiToolDebug, display: true
+  Durability: 500, display: false
+  RepairCount: 7, type: int, display: false
+  DegradationProb: 0, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+  Crosshair: @RG_crosshairs/Multitool
+  RadialMenu: true
+  { Child 0 # "Retrieve Blocks" (= get complete blocks in own structure, do "Salvage" in others)
+    Class: Driller
+    AllowAt: "UnderWater, Planet, Space"
+    ROF: 0.5, type: float, display: false, formatter: ROF
+    Range: 10
+    NoiseStrength: 10, display: false  
+    CameraShake: 0    
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 10000
+    ReturnFactor: 1, display: true
+    AmmoCapacity: 250, display: false
+    AmmoType: AmmoInfinite, display: true
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25, display: true
+    # ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle
+    SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
+    ParticleTransform: ""     /* do NOT show a particle effect */
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlueS2
+	
+    DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
+    DamageMultiplier_2: 50, param1: steellarge|concrete|wood
+    DamageMultiplier_3: 50, param1: titaniumlarge|xenosteel
+    DamageMultiplier_4: 50, param1: combatlarge|legacy|concretearmored
+    DamageMultiplier_5: 1000, param1: foundation
+    DamageMultiplier_6: 50, param1: steelsmall|carbonsmall
+    DamageMultiplier_7: 50, param1: titaniumsmall|carbonlarge
+    DamageMultiplier_8: 50, param1: combatsmall
+	
+    RadialText: rdlDisassemble 
+    RadialDesc: rdlDisassembleTxt
+    RadialIcon: Radial_Disassemble
+  }
+  { Child 1 # "Repair"
+    Class: Repair
+    AllowAt: "UnderWater, Planet, Space"
+    Range: 10
+    NoiseStrength: 10, display: false  
+    CameraShake: 0    
+    IgnoreAtmo: true
+    ROF: 0.1, type: float
+    RepairPoints: 10000
+    Automatic: true
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    # ParticleTransform: Muzzle/Particle2  # particle effect shown at muzzle    
+    SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    SfxUpgrade: UseActions/UpgradeBlock2
+    SfxUpgradeErr: UseActions/UpgradeBlockError
+    ParticleTransform: ""   
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamRepairHandGreen
+
+    AllowUpgrade: false
+    RadialText: rdlRepair
+    RadialDesc: rdlRepairTxt
+    RadialIcon: Radial_Repair
+  }
+  { Child 2 # "Exchange and Rotate"
+    Class: ExchangeBlockEx
+	AllowAt: "UnderWater, Planet, Space"
+    Range: 10
+    NoiseStrength: 10, display: false  
+    CameraShake: 0      
+	IgnoreAtmo: true
+    ROF: 1.0, type: float
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    Focused_blockname_1: "Window_v1x1, Window_v1x1Inv"
+    Focused_blockname_2: "Window_v1x2, Window_v1x2Inv"
+    Focused_blockname_3: "Window_v2x2, Window_v2x2Inv"
+    Focused_blockname_4: "Window_s1x1, Window_s1x1Inv"
+    Focused_blockname_5: "Window_s1x2, Window_s1x2Inv"
+    Focused_blockname_6: "Window_sd1x1, Window_sd1x1Inv"
+    Focused_blockname_7: "Window_sd1x2, Window_sd1x2Inv"
+    Focused_blockname_8: "Window_sd1x2V2, Window_sd1x2V2Inv"
+    Focused_blockname_9: "Window_c1x1, Window_c1x1Inv"
+    Focused_blockname_10: "Window_c1x2, Window_c1x2Inv"
+    Focused_blockname_11: "Window_cr1x1, Window_cr1x1Inv"
+    Focused_blockname_12: "Window_crc1x1, Window_crc1x1Inv"
+    Focused_blockname_13: "Window_crsd1x1, Window_crsd1x1Inv"
+    Focused_blockname_14: "Window_3side1x1, Window_3side1x1Inv"
+    Focused_blockname_15: "Window_L1x1, Window_L1x1Inv"		
+    Focused_blockname_16: "Window_crctw1x1, Window_crctw1x1Inv"	
+    Focused_blockname_17: "Window_creA1x1, Window_creA1x1Inv"	
+    Focused_blockname_18: "Window_creB1x1, Window_creB1x1Inv"	
+    Focused_blockname_19: "Window_crl1x1, Window_crl1x1Inv"		
+    Focused_blockname_20: "Window_crse1x1, Window_crse1x1Inv"	
+    Focused_blockname_21: "Window_cc1x1, Window_cc1x1Inv"		
+    Focused_blockname_22: "Window_v1x1Thick, Window_v1x1ThickInv"
+    Focused_blockname_23: "Window_v1x2Thick, Window_v1x2ThickInv"
+    Focused_blockname_24: "Window_v2x2Thick, Window_v2x2ThickInv"
+    Focused_blockname_25: "Window_s1x1Thick, Window_s1x1ThickInv"
+    Focused_blockname_26: "Window_s1x2Thick, Window_s1x2ThickInv"
+    Focused_blockname_27: "Window_sd1x1Thick, Window_sd1x1ThickInv"
+    Focused_blockname_28: "Window_sd1x2Thick, Window_sd1x2ThickInv"
+    Focused_blockname_29: "Window_sd1x2V2Thick, Window_sd1x2V2ThickInv"
+    Focused_blockname_30: "Window_c1x1Thick, Window_c1x1ThickInv"
+    Focused_blockname_31: "Window_c1x2Thick, Window_c1x2ThickInv"
+    Focused_blockname_32: "Window_cr1x1Thick, Window_cr1x1ThickInv"
+    Focused_blockname_33: "Window_crc1x1Thick, Window_crc1x1ThickInv"
+    Focused_blockname_34: "Window_crsd1x1Thick, Window_crsd1x1ThickInv"
+    Focused_blockname_35: "Window_3side1x1Thick, Window_3side1x1ThickInv"
+    Focused_blockname_36: "Window_L1x1Thick, Window_L1x1ThickInv"	
+    Focused_blockname_37: "Window_crctw1x1Thick, Window_crctw1x1ThickInv"	
+    Focused_blockname_38: "Window_creA1x1Thick, Window_creA1x1ThickInv"	
+    Focused_blockname_39: "Window_creB1x1Thick, Window_creB1x1ThickInv"	
+    Focused_blockname_40: "Window_crl1x1Thick, Window_crl1x1ThickInv"		
+    Focused_blockname_41: "Window_crse1x1Thick, Window_crse1x1ThickInv"	
+    Focused_blockname_42: "Window_cc1x1Thick, Window_cc1x1ThickInv"			
+    Focused_blockname_43: "Wing6x9a, Wing6x9b, Wing6x9c, Wing6x9d, Wing6x9e"
+    Focused_blockname_44: "Wing9x6a, Wing9x6b, Wing9x6c, Wing9x6d, Wing9x6e"
+    Focused_blockname_45: "Wing12x9a, Wing12x9b, Wing12x9c, Wing12x9d, Wing12x9e"
+    Focused_blockname_46: "Wing6x5a, Wing6x5b, Wing6x5c, Wing6x5d, Wing6x5e"
+    Focused_blockname_47: "RailingVertGlass, RailingVertGlassInv"
+    Focused_blockname_48: "RailingRoundGlass, RailingRoundGlassInv"
+    Focused_blockname_49: "RailingLGlass, RailingLGlassInv"
+    Focused_blockname_50: "RailingSlopeGlassRight, RailingSlopeGlassRightInv"
+    Focused_blockname_51: "RailingSlopeGlassLeft, RailingSlopeGlassLeftInv"
+    Focused_blockname_52: "RailingDiagonalGlass, RailingDiagonalGlassInv"
+    Focused_blockname_53: "HeavyWindowA, HeavyWindowAInv"
+    Focused_blockname_54: "HeavyWindowB, HeavyWindowBInv"
+    Focused_blockname_55: "HeavyWindowC, HeavyWindowCInv"
+    Focused_blockname_56: "HeavyWindowD, HeavyWindowDInv"
+    Focused_blockname_57: "HeavyWindowE, HeavyWindowEInv"
+    Focused_blockname_58: "HeavyWindowF, HeavyWindowFInv"
+    Focused_blockname_59: "HeavyWindowG, HeavyWindowGInv"
+    Focused_blockname_60: "HeavyWindowH, HeavyWindowHInv"
+    Focused_blockname_61: "HeavyWindowI, HeavyWindowIInv"
+    Focused_blockname_62: "HeavyWindowJ, HeavyWindowJInv"
+    Focused_blockname_63: "HeavyWindowK, HeavyWindowKInv"
+    Focused_blockname_64: "HeavyWindowL, HeavyWindowLInv"
+    Focused_blockname_65: "HeavyWindowM, HeavyWindowMInv"
+    Focused_blockname_66: "HeavyWindowN, HeavyWindowNInv"
+    Focused_blockname_67: "HeavyWindowO, HeavyWindowOInv"
+    Focused_blockname_68: "HeavyWindowP, HeavyWindowPInv"
+    Focused_blockname_69: "HeavyWindowQ, HeavyWindowQInv"
+    Focused_blockname_70: "HeavyWindowV, HeavyWindowVInv"
+    Focused_blockname_71: "HeavyWindowS, HeavyWindowSInv"
+    Focused_blockname_72: "HeavyWindowT, HeavyWindowTInv"
+    Focused_blockname_73: "HeavyWindowU, HeavyWindowUInv"
+    Focused_blockname_74: "HeavyWindowPConnectLeft, HeavyWindowPConnectLeftInv"
+    Focused_blockname_75: "HeavyWindowPConnectRight, HeavyWindowPConnectRightInv"
+    Focused_blockname_76: "HeavyWindowPConnectTwo, HeavyWindowPConnectTwoInv"
+    Focused_blockname_77: "HeavyWindowQConnect, HeavyWindowQConnectInv"
+    Focused_blockname_78: "HeavyWindowQConnectTwo, HeavyWindowQConnectTwoInv"
+    Focused_blockname_79: "HeavyWindowQConnectThree, HeavyWindowQConnectThreeInv"
+    Focused_blockname_80: "HeavyWindowSConnect, HeavyWindowSConnectInv"
+    Focused_blockname_81: "HeavyWindowTConnect, HeavyWindowTConnectInv"
+    Focused_blockname_82: "HeavyWindowUConnect, HeavyWindowUConnectInv"
+    Focused_blockname_83: "HeavyWindowVConnect, HeavyWindowVConnectInv"
+    Focused_blockname_84: "HeavyWindowQConnectFour, HeavyWindowQConnectFourInv"
+    Focused_blockname_85: "HeavyWindowEBottom, HeavyWindowEBottomInv"
+    Focused_blockname_86: "HeavyWindowFBottom, HeavyWindowFBottomInv"
+    Focused_blockname_87: "HeavyWindowGBottom, HeavyWindowGBottomInv"
+    Focused_blockname_88: "HeavyWindowHBottom, HeavyWindowHBottomInv"
+    Focused_blockname_89: "HeavyWindowIBottom, HeavyWindowIBottomInv"
+    Focused_blockname_90: "HeavyWindowJBottom, HeavyWindowJBottomInv"
+    Focused_blockname_91: "HeavyWindowEGlass, HeavyWindowEGlassInv"
+    Focused_blockname_92: "HeavyWindowFGlass, HeavyWindowFGlassInv"
+    Focused_blockname_93: "HeavyWindowGGlass, HeavyWindowGGlassInv"
+    Focused_blockname_94: "HeavyWindowHGlass, HeavyWindowHGlassInv"
+    Focused_blockname_95: "HeavyWindowIGlass, HeavyWindowIGlassInv"
+    Focused_blockname_96: "HeavyWindowJGlass, HeavyWindowJGlassInv"
+    Focused_blockname_97: "HeavyWindowQConnectTwoDiagonal, HeavyWindowQConnectTwoDiagonalInv"
+    Focused_blockname_98: "RailingDoubleVertGlass, RailingDoubleVertGlassInv"
+    Focused_blockname_99: "HeavyWindowQConnectTwoDiagonalMirror, HeavyWindowQConnectTwoDiagonalMirrorInv"
+    Focused_blockname_100: "HeavyWindowASmall, HeavyWindowAInvSmall"
+    Focused_blockname_101: "HeavyWindowBSmall, HeavyWindowBInvSmall"
+    Focused_blockname_102: "HeavyWindowCSmall, HeavyWindowCInvSmall"
+    Focused_blockname_103: "HeavyWindowDSmall, HeavyWindowDInvSmall"
+    Focused_blockname_104: "HeavyWindowESmall, HeavyWindowEInvSmall"
+    Focused_blockname_105: "HeavyWindowFSmall, HeavyWindowFInvSmall"
+    Focused_blockname_106: "HeavyWindowGSmall, HeavyWindowGInvSmall"
+    Focused_blockname_107: "HeavyWindowHSmall, HeavyWindowHInvSmall"
+    Focused_blockname_108: "HeavyWindowISmall, HeavyWindowIInvSmall"
+    Focused_blockname_109: "HeavyWindowJSmall, HeavyWindowJInvSmall"
+    Focused_blockname_110: "HeavyWindowKSmall, HeavyWindowKInvSmall"
+    Focused_blockname_111: "HeavyWindowLSmall, HeavyWindowLInvSmall"
+    Focused_blockname_112: "HeavyWindowMSmall, HeavyWindowMInvSmall"
+    Focused_blockname_113: "HeavyWindowNSmall, HeavyWindowNInvSmall"
+    Focused_blockname_114: "HeavyWindowOSmall, HeavyWindowOInvSmall"
+    Focused_blockname_115: "HeavyWindowPSmall, HeavyWindowPInvSmall"
+    Focused_blockname_116: "HeavyWindowQSmall, HeavyWindowQInvSmall"
+    Focused_blockname_117: "HeavyWindowVSmall, HeavyWindowVInvSmall"
+    Focused_blockname_118: "HeavyWindowSSmall, HeavyWindowSInvSmall"
+    Focused_blockname_119: "HeavyWindowTSmall, HeavyWindowTInvSmall"
+    Focused_blockname_120: "HeavyWindowUSmall, HeavyWindowUInvSmall"
+    Focused_blockname_121: "HeavyWindowEBottomSmall, HeavyWindowEBottomInvSmall"
+    Focused_blockname_122: "HeavyWindowFBottomSmall, HeavyWindowFBottomInvSmall"
+    Focused_blockname_123: "HeavyWindowGBottomSmall, HeavyWindowGBottomInvSmall"
+    Focused_blockname_124: "HeavyWindowHBottomSmall, HeavyWindowHBottomInvSmall"
+    Focused_blockname_125: "HeavyWindowIBottomSmall, HeavyWindowIBottomInvSmall"
+    Focused_blockname_126: "HeavyWindowJBottomSmall, HeavyWindowJBottomInvSmall"
+    Focused_blockname_127: "HeavyWindowEGlassSmall, HeavyWindowEGlassInvSmall"
+    Focused_blockname_128: "HeavyWindowFGlassSmall, HeavyWindowFGlassInvSmall"
+    Focused_blockname_129: "HeavyWindowGGlassSmall, HeavyWindowGGlassInvSmall"
+    Focused_blockname_130: "HeavyWindowHGlassSmall, HeavyWindowHGlassInvSmall"
+    Focused_blockname_131: "HeavyWindowIGlassSmall, HeavyWindowIGlassInvSmall"
+    Focused_blockname_132: "HeavyWindowJGlassSmall, HeavyWindowJGlassInvSmall"
+    Focused_blockname_133: "HeavyWindowQConnectSmall, HeavyWindowQConnectInvSmall"
+
+    RadialText: rdlChangeRotate
+    RadialDesc: rdlChangeRotateTxt
+    RadialIcon: Radial_ChangeRotate
+  }
+  { Child 3 # "Downgrade"
+    Class: Repair
+    AllowAt: "UnderWater, Planet, Space"
+    Range: 15
+    NoiseStrength: 10, display: false  
+    CameraShake: 0     
+    IgnoreAtmo: true
+    ROF: 0.25, type: float
+    RepairPoints: 250
+    ReturnFactor: 0
+    Automatic: true
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    # ParticleTransform: Muzzle/Particle2    # particle effect shown at muzzle  
+    SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    SfxDowngrade: UseActions/UpgradeBlock2
+    AllowDowngrade: true
+    ParticleTransform: ""   
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRedS
+
+    RadialText: btnDowngrade
+    RadialDesc: lblDowngradeTxt
+    RadialIcon: Radial_Downgrade
+  }
+  { Child 4 # "Upgrade"
+    Class: Repair
+    AllowAt: "UnderWater, Planet, Space"
+    Range: 15
+    NoiseStrength: 10, display: false  
+    CameraShake: 0     
+    IgnoreAtmo: true
+    ROF: 0.25, type: float
+    RepairPoints: 1000
+    Automatic: true
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    ParticleTransform: ""
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandYellowS
+    SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    SfxUpgrade: UseActions/UpgradeBlock2
+    SfxUpgradeErr: UseActions/UpgradeBlockError
+
+    AllowUpgrade: true
+    RadialText: rdlUpgrade
+    RadialDesc: rdlUpgradeTxt
+    RadialIcon: Radial_Upgrade
+  }
+  { Child 5 # "Salvage" (get components from a block)
+    Class: Driller
+    AllowAt: "UnderWater, Planet, Space"
+    ROF: 0.25, type: float, display: false, formatter: ROF
+    Range: 15
+    NoiseStrength: 10, display: false  
+    CameraShake: 0      
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 10000
+    Demolish: True
+    ReturnFactor: 1.0
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    ParticleTransform: ""     /* do NOT show a particle effect */
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRedS2
+	
+    DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
+    DamageMultiplier_2: 10, param1: steellarge|concrete|wood
+    DamageMultiplier_3: 10, param1: titaniumlarge|xenosteel
+    DamageMultiplier_4: 10, param1: combatlarge|legacy|concretearmored
+    DamageMultiplier_5: 1000, param1: foundation
+    DamageMultiplier_6: 10, param1: steelsmall|carbonsmall
+    DamageMultiplier_7: 10, param1: titaniumsmall|carbonlarge
+    DamageMultiplier_8: 10, param1: combatsmall
+	
+    RadialText: rdlDeconstruct
+    RadialDesc: rdlDeconstructTxt 
+    RadialIcon: Radial_Deconstruct
+  }
+  { Child 6 # Microdamage 1 hp
+    Class: Driller
+    AllowAt: "UnderWater, Planet, Space"
+    ROF: 0.1, type: float, display: false, formatter: ROF
+    Range: 10
+    NoiseStrength: 10, display: false  
+    CameraShake: 0      
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 1
+    Demolish: True
+    ReturnFactor: 0
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    ParticleTransform: ""     /* do NOT show a particle effect */
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRedS2
+	
+    DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
+    DamageMultiplier_2: 1, param1: steellarge|concrete|wood|titaniumlarge|xenosteel|combatlarge|legacy|concretearmored
+    DamageMultiplier_3: 1, param1: steelsmall|carbonsmall|titaniumsmall|carbonlarge|combatsmall
+    DamageMultiplier_4: 1, param1: device|weaponsmall|weaponlarge|thruster
+    DamageMultiplier_5: 100, param1: foundation
+	
+    RadialText: "1 Microdamage"
+    RadialDesc: "Deals 1 block damage for admin-core POI construction"
+    RadialIcon: Radial_Deconstruct
+  }
+  { Child 7 # Microdamage 100 hp
+    Class: Driller
+    AllowAt: "UnderWater, Planet, Space"
+    ROF: 0.2, type: float, display: false, formatter: ROF
+    Range: 10
+    NoiseStrength: 10, display: false  
+    CameraShake: 0      
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 100
+    Demolish: True
+    ReturnFactor: 0
+    AmmoCapacity: 250
+    AmmoType: AmmoInfinite
+    AmmoUnlimited: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.25
+    SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    ParticleTransform: ""     /* do NOT show a particle effect */
+	TracerIsBeam: true
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRedS2
+	
+    DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
+    DamageMultiplier_2: 1, param1: steellarge|concrete|wood|titaniumlarge|xenosteel|combatlarge|legacy|concretearmored
+    DamageMultiplier_3: 1, param1: steelsmall|carbonsmall|titaniumsmall|carbonlarge|combatsmall
+    DamageMultiplier_4: 1, param1: device|weaponsmall|weaponlarge|thruster
+    DamageMultiplier_5: 100, param1: foundation
+	
+    RadialText: "100 Microdamage"
+    RadialDesc: "Deals 100 block damage for admin-core POI construction"
+    RadialIcon: Radial_Deconstruct
+  }
+  { Child 10
+    Class: Movements
+    StandingLocation: "-0.035, 0.018, 0.03"
+    StandingRotation: "-0.2, -1.8, -2.7"
+    AimingLocation: "0.0, 0.0, 0.0"
+    AimingRotation: "0.0, 0.0, 0.0"
+    RunningLocation: "-0.03, 0.013, 0.04"
+    RunningRotation: "-15, -45, 5"
+    CrouchingLocation: "0.02, 0.018, 0.03"
+    CrouchingRotation: "-0.2, -1.8, -2.7"
+    RecoilLocation: "0.0, 0.0, 0.0"
+    RecoilRotation: "0.0, 0.0, 0.0"
+    WalkMovement: "0.04"
+    RunMovement: "0.1"
+  }
+}
 # ===================================================================
 # The decal gun puts decals on structures
 # Use RMB to switch between selecting existing decals, adding new decals and removing delals
@@ -5601,6 +6025,11 @@
 
     DamageMultiplier_Group: FlamethrowerT1
   }
+
+  UnlockCost: 3
+  UnlockLevel: 3
+  TechTreeNames: Misc
+  TechTreeParent: BioFuel
 }
 
 { +Item Id: 64, Name: SciFiCannonPlasmaCharge
@@ -9874,7 +10303,7 @@
 #  RadialMenu: true
   { Child 0
     Class: Driller
-	DrillMode: 0
+	DrillMode: 3
     AllowAt: "Space,Planet"
     DecoMode: true
     InfoPopup: true
@@ -10457,7 +10886,7 @@
 }
 { +Item Id: 176, Name: DrillAttachmentLargeWeapon, Ref: DrillAttachmentWeapon
   { Child 0
-	DrillMode: 0
+	DrillMode: 3
     ROF: 0.5, type: float
     Damage: 580
     Radius: 4.0, display: true
@@ -14999,7 +15428,7 @@
     AddFood: 0
     AddOxygen: 0
     AddTemperature: 6, display: TemperatureValue
-    Debuff: "Hangover,Dehydration", display: EffectiveAgainst 
+    Debuff: "Hangover,Dehydration,Fever", display: EffectiveAgainst 
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -19728,7 +20157,6 @@
   UnlockLevel: 10, display: true
   TechTreeNames: Weapons
 }
-
 
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Items
@@ -26953,7 +27381,7 @@
 { +Item Id: 3203, Name: Eden_PowerRegulator, Ref: ComponentsTemplate
   Info: Eden_PowerRegulatorinfo, display: true
   ShowUser: Yes
-  MarketPrice: 101, display: true
+  MarketPrice: 54350, display: true
   Mass: 1354.84, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
 }
@@ -27054,7 +27482,7 @@
   Info: A magnetic coil for controlling the flow of plasma. Used to craft advanced devices., display: true
   StackSize: 4000
   ShowUser: Yes
-  MarketPrice: 3703, display: true
+  MarketPrice: 8846, display: true
   Mass: 184.9, type: float, display: true, formatter: Kilogram
   Volume: 15, type: float, display: true, formatter: Liter
 }
@@ -27171,7 +27599,7 @@
 { +Item Id: 3235, Name: Eden_ModularPulseLaserLensLarge, Ref: ComponentsTemplate
   Info: Eden_ModularPulseLaserLensLargeinfo, display: true
   ShowUser: Yes
-  MarketPrice: 80000, display: true
+  MarketPrice: 31409, display: true
   Mass: 116, type: float, display: true, formatter: Kilogram
   Volume: 8, type: float, display: true, formatter: Liter
 }
@@ -27315,7 +27743,7 @@
 { +Item Id: 3250, Name: Eden_GaussRail, Ref: ComponentsTemplate
   Info: Eden_GaussRailinfo, display: true
   ShowUser: Yes
-  MarketPrice: 7000, display: true
+  MarketPrice: 35117, display: true
   Mass: 700, type: float, display: true, formatter: Kilogram
   Volume: 50, type: float, display: true, formatter: Liter
 }
@@ -27332,14 +27760,14 @@
 
 { +Item Id: 3252, Name: Eden_Semiconductor, Ref: ComponentsTemplate
   ShowUser: Yes
-  # MarketPrice: 5000, display: true
+  MarketPrice: 3275, display: true
   Mass: 0.05, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
 }
 
 { +Item Id: 3253, Name: Eden_ComputerT2, Ref: ComponentsTemplate
   ShowUser: Yes
-  # MarketPrice: 25000, display: true
+  MarketPrice: 50035, display: true
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 2000, type: float, display: true, formatter: Liter
 }

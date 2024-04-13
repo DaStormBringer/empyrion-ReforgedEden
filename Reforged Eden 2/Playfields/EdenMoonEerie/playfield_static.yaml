@@ -230,7 +230,7 @@ POIs:
           # Large Nest
         - GroupName: Eden_NestLarge
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Ooze, Boneyard ]
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True
@@ -247,7 +247,7 @@ POIs:
           # Small Nests
         - GroupName: Eden_Nest
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ Ooze, Boneyard ]
           CountMinMax: [ 3, 5 ]
           # IsScalingCount: True
@@ -308,7 +308,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -326,7 +326,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           DroneProb: 0.5

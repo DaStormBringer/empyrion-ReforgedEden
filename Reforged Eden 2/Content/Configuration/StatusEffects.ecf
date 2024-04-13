@@ -1366,7 +1366,7 @@
   # Stack: extend
   Description: Eden_DisorientLonginfo
   Icon: TmpEff_Hangover
-  Actions: "screen(poison_v2);screen(underWaterFog)"
+  Actions: "screen(poison_v2);screen(underWaterFog);screen(underWaterFog)"
   # Actions: "screen(underWaterFog)"
   # Actions: screen(underWaterFog)
 

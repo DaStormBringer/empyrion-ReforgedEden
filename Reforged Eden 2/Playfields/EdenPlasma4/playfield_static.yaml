@@ -211,7 +211,7 @@ POIs:
               Value: 720 
 
               # Auxiliary POIs for Drone Base
-        - GroupName: KrielMain
+        - GroupName: R2KrielMain
           Faction: Kriel
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 2 ]
@@ -227,7 +227,7 @@ POIs:
               Value: 720
 
               # Defense POIs for Drone Base
-        - GroupName: KrielDefenseT1
+        - GroupName: R2KrielDefenseT1
           Faction: Kriel
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 2 ]
@@ -247,7 +247,7 @@ POIs:
        # ======================================================================================================
         - GroupName: Eden_TE_TheAnomaly 
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plasma, HotPlasma, BurningPlasma ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -265,7 +265,7 @@ POIs:
               Value: 720
 
               # Kriel main POI cluster - needs more Kriel POIs!
-        - GroupName: KrielMain
+        - GroupName: R2KrielMain
           Faction: Kriel
           Territory: False
           Biome: [ HotPlasma, BurningPlasma, Plasma ]
@@ -334,7 +334,7 @@ POIs:
               Value: 720
 
               # Floating Defense for Plasma Research Lab. Turret on top.
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel
           Territory: False
           CountMinMax: [ 8, 8 ]
@@ -343,7 +343,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [KrielDefenseT1] 
+          SpawnPOIAvoid: [R2KrielDefenseT1] 
           SpawnPOIAvoidDistance: 350 
           SpawnPOINear: [Eden_TE_TheAnomaly]
           SpawnPOINearRange: [450, 550]
@@ -360,9 +360,9 @@ POIs:
 
 
         # Random Rados outposts scattered around planet
-        - GroupName: KrielMain
+        - GroupName: R2KrielMain
           Faction: Kriel
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains, PlasmaMountains, MetalVeins, Plasma, BurningPlasma, HotPlasma ]
           CountMinMax: [ 8, 10 ]
           IsScalingCount: True

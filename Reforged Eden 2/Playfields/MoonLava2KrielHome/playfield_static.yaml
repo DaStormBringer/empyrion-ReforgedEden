@@ -115,9 +115,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG     #CommandCenter
+        - GroupName: R2DroneBase     #CommandCenter
           Faction: Kriel 
-          NoShieldReload: True 
+          # NoShieldReload: True 
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
@@ -157,9 +157,9 @@ POIs:
               Value: 720
 
 # Kriel
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties: 
             - Key: Music
@@ -167,9 +167,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 10, 20 ]
           Properties: 
             - Key: Music

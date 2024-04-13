@@ -290,9 +290,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG                           #CommandCenter
+        - GroupName: R2DroneBase                           #CommandCenter
           Faction: Zirax 
-          NoShieldReload: True 
+          # NoShieldReload: True 
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -307,7 +307,7 @@ POIs:
 
         - GroupName: PlanetVesselBase
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           PlanetVesselBaseSetup: PlanetVesselBaseSetup
           CountMinMax: [ 1, 1 ] 
           DroneProb: 1.0
@@ -323,7 +323,7 @@ POIs:
        # Military Xenu Large Bunker in fog with ruins around
         - GroupName: XenuBunkerRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ Hotspot, RadiatedFog ]
           CountMinMax: [ 1, 1 ]
@@ -348,9 +348,9 @@ POIs:
        # ================================
        # Defense of PlanetVesselBase
        # Auxiliary Buildings
-        - GroupName: XenuAuxT1RG
+        - GroupName: R2XenuAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 4, 5 ]
@@ -363,9 +363,9 @@ POIs:
               Value: 720
 
        # Defense Buildings
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 3, 4 ]
@@ -381,30 +381,30 @@ POIs:
        # Defense of Drone Base
        # Military Xenu Compound
        # Main Building
-        - GroupName: XenuMainRG
+        - GroupName: R2XenuMain
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]  
           DroneProb: 1.0
           DronesMinMax: [ 5, 8 ]
           ReserveCount: 3
           TroopTransport: False 
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
               Value: 720
        # Defense Buildings
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
@@ -450,9 +450,9 @@ POIs:
               Value: 720
        # ================================
        # Military Xenu POIs scattered around planet 
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 5, 7 ]
           IsScalingCount: True
           DroneProb: 1.0
@@ -463,10 +463,10 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax
           Biome: [ Mountains ]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 12, 15 ]
           IsScalingCount: True
           DroneProb: 1.0
@@ -548,7 +548,7 @@ POIs:
        # Lava Tubes
         - GroupName: Eden_LavaTubes
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LowMountains, Mountains ] 
           IsScalingCount: True 
           CountMinMax: [ 12, 16 ]
@@ -564,7 +564,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -582,7 +582,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -709,7 +709,7 @@ DroneSpawning:
 # ==============================================================
  
 SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]
+   # - SpawnAt: [R2PolarisTradePlanet]
      # Radius: 1000
      # RadiusRandom: 50
      # RateMultiplyerCenter: 0.0
@@ -758,7 +758,7 @@ SpawnZones:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [DroneBaseT1RG, PlanetVesselBase, XenuBunkerRG] 
+   # - SpawnAt: [R2DroneBase, PlanetVesselBase, XenuBunkerRG] 
      # BiomesExcluded: [ LowMountains, Mountains ] 
      # Radius: 1000
      # RadiusRandom: 100
@@ -772,7 +772,7 @@ SpawnZones:
          # Amount: 250
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [XenuAuxT2RG]
+   # - SpawnAt: [R2XenuAuxT2]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 25

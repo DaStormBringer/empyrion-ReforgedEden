@@ -3,6 +3,28 @@ GenerationParams:
 # ======================================================================================================================================================================================================== * * * Planets
   PlanetTypes:
 
+# -------------------------------------------------------------------------- Test Planet
+      - Name: TestPlanet
+        Color: [0.50, 0.32, 0.04]
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:0.5, 1:0.2, 2:0.2, 3:0.1'
+        MoonType: [EdenMoonBarren]
+        OrbitType: [DefaultOrbit]
+        Climate: Desert
+        PlayfieldLevel: [4,7]
+        Playfields:
+            # - DesertBurnt, 0.2
+            # - Desert, 0.2
+            - EdenDesertKharak, 0.25
+            - EdenDesertPummeled, 0.25
+            - EdenDesertRock_V2, 0.25
+            - EdenDesertStorm, 0.25
+            # - EdenDesertWhite, 0.2
 # Mission planets
 
 # Gas Giant
@@ -476,11 +498,12 @@ GenerationParams:
         Climate: Desert
         PlayfieldLevel: [4,7]
         Playfields:
-            - Desert, 0.3
-            - EdenDesertPummeled, 0.3
-            - EdenDesertRock_V2, 0.3
-            - EdenDesertStorm, 0.3
-            - EdenDesertWhite, 0.3
+            - Desert, 0.2
+            - EdenDesertPummeled, 0.2
+            - EdenDesertRock_V2, 0.2
+            - EdenDesertStorm, 0.2
+            - EdenDesertWhite, 0.2
+            - EdenDesertKharak, 0.2
 
 # -------------------------------------------------------------------------- Desert Oasis
       - Name: DesertOasis
@@ -497,7 +520,7 @@ GenerationParams:
             - EdenDesertOasis_V2
 
 # -------------------------------------------------------------------------- DesertBlack
-      - Name: DesertBlack 
+      - Name: DesertHot
         Color: [0.4, 0.16, 0]
         Placement:
             - InnerSystem
@@ -536,7 +559,7 @@ GenerationParams:
         Climate: Arid
         PlayfieldLevel: [4,8]
         Playfields:
-            - Arid, 0.6
+            - Arid_V2, 0.6
             - EdenAridMesa, 0.4
 
 
@@ -1386,7 +1409,25 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [6,10]
         Playfields:
-            - EdenSpaceK_Asteroid
+            - EdenSpaceK_AsteroidT1
+
+      - Name: AsteroidFieldKT1
+        Faction: [Colonists, None]
+        Color: [0.7, 0.7, 0.7]
+        Icon: AsteroidField
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [6,10]
+        Playfields:
+            - EdenSpaceK_AsteroidT1
 
 # -------------------------------------------------------------------------- AsteroidFieldIce
       - Name: AsteroidFieldIce
@@ -1632,7 +1673,8 @@ GenerationParams:
             - EdenSpaceK_AsteroidZirax
 # =================================================================================================================================================== The Legacy
 # -------------------------------------------------------------------------- AsteroidFieldLegacy
-      - Name: AsteroidFieldLegacy
+      - Name: AsteroidFieldLegacyT1
+        Faction: [TheLegacy, None]
         Color: [1, 0, 1]
         Icon: AsteroidFieldAttention
         Placement:
@@ -1647,7 +1689,7 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpaceD_AsteroidLegacy
+            - EdenSpaceD_AsteroidLegacyT1
 
 # -------------------------------------------------------------------------- AsteroidFieldLegacy
       - Name: AsteroidFieldLegacyHome
@@ -2171,12 +2213,9 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [4,6]
         Playfields:
-            - EdenSpace_POI_CombatT2_1, 0.2
-            - EdenSpace_POI_CombatT2_2, 0.2
-            - EdenSpace_POI_CombatT2_3, 0.2
-            - EdenSpaceD_POI_CombatLostShipT1_1, 0.2
-            - EdenSpaceG_POI_CombatBanditT1_1, 0.2
-            - EdenSpaceG_POI_CombatBanditT1_2, 0.2
+            - EdenSpace_POI_CombatT2_1, 0.35
+            - EdenSpace_POI_CombatT2_2, 0.35
+            - EdenSpace_POI_CombatT2_3, 0.35
 
       - Name: POICombatT3
         Faction: [None]
@@ -2192,12 +2231,8 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [6,8]
         Playfields:
-            - EdenSpace_POI_CombatT3_1, 0.2
-            - EdenSpace_POI_CombatT3_2, 0.2
-            - EdenSpaceG_POI_CombatBanditT1_1, 0.2
-            - EdenSpaceG_POI_CombatBanditT1_2, 0.2
-            - EdenSpaceK_POI_CombatZiraxT4_1, 0.2
-            - EdenSpaceK_POI_CombatRaiderT3_1, 0.2
+            - EdenSpace_POI_CombatT3_1, 0.5
+            - EdenSpace_POI_CombatT3_2, 0.5
 
       - Name: POICombatT4
         Faction: [None]
@@ -2213,10 +2248,8 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpace_POI_CombatT3_1, 0.2
-            - EdenSpace_POI_CombatT3_2, 0.2
-            - EdenSpaceK_POI_CombatZiraxT4_1, 0.4
-            - EdenSpaceK_POI_CombatRaiderT3_1, 0.45
+            - EdenSpace_POI_CombatT3_1, 0.5
+            - EdenSpace_POI_CombatT3_2, 0.5
 
       - Name: POICombatT4Drone
         Faction: [Eden_DroneHome]
@@ -2251,9 +2284,6 @@ GenerationParams:
         Playfields:
             - EdenSpace_POI_ExploreT1_1, 0.25
             - EdenSpace_POI_ExploreT1_2, 0.25
-            - EdenSpaceG_POI_ExploreT1_1, 0.25
-            - EdenSpaceG_POI_ExploreSalvageT1_1, 0.25
-            - EdenSpaceG_POI_ExploreSalvageT1_2, 0.25
 
       - Name: POIExploreT2
         Faction: [None]
@@ -2273,9 +2303,6 @@ GenerationParams:
             - EdenSpace_POI_ExploreT3_2, 0.15
             - EdenSpace_POI_ExploreT1_1, 0.25
             - EdenSpace_POI_ExploreT1_2, 0.25
-            - EdenSpaceG_POI_ExploreT1_1, 0.25
-            - EdenSpaceG_POI_ExploreSalvageT1_1, 0.25
-            - EdenSpaceG_POI_ExploreSalvageT1_2, 0.25
 
       - Name: POIExploreT3
         Faction: [None]
@@ -2291,14 +2318,8 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [6,8]
         Playfields:
-            - EdenSpaceK_POI_Explore_C3_1, 0.25
-            - EdenSpaceK_POI_ExploreSalvageT1_1, 0.25
             - EdenSpace_POI_ExploreT3_1, 0.25
             - EdenSpace_POI_ExploreT3_2, 0.25
-            - EdenSpaceK_POI_ExploreT1_1, 0.2
-            - EdenSpaceK_POI_ExploreT3_1, 0.2
-            - EdenSpaceK_POI_ExploreT3_2, 0.2
-            - EdenSpaceK_POI_ExploreT3_3, 0.2
 
       - Name: POIExploreT4
         Faction: [None]
@@ -2316,9 +2337,8 @@ GenerationParams:
         Playfields:
             - EdenSpace_POI_ExploreT3_1, 0.25
             - EdenSpace_POI_ExploreT3_2, 0.25
-            - EdenSpaceD_POI_ExploreHackT1_1, 0.25
-            - EdenSpaceD_POI_ExploreHackT2_1, 0.25
 
+# Hacking sites POIs
       - Name: POIExploreHackT1
         Faction: [None]
         Color: [0, 1, 0.7]
@@ -2333,8 +2353,6 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpaceD_POI_ExploreHackT1_1, 0.7
-            - EdenSpaceD_POI_ExploreHackT2_1, 0.2
             - EdenSpace_POI_HackT3_1, 0.1
 
       - Name: POIExploreHackT2
@@ -2351,8 +2369,6 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpaceD_POI_ExploreHackT1_1, 0.35
-            - EdenSpaceD_POI_ExploreHackT2_1, 0.35
             - EdenSpace_POI_HackT3_1, 0.35
 
       - Name: POIExploreHackRogueT2
@@ -2369,9 +2385,7 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpaceD_POI_ExploreHackT1_1, 0.5
-            - EdenSpaceD_POI_ExploreHackT2_1, 0.5
-            - EdenSpaceR_POI_ExploreHack1, 0.2
+            - EdenSpace_POI_HackT3_1, 0.5
 
 # Mining POIs
       - Name: POIMiningT1
@@ -2388,13 +2402,8 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [2,4]
         Playfields:
-            - EdenSpace_POI_MiningT1_1, 0.3
-            - EdenSpace_POI_MiningT1_2, 0.3
-            - EdenSpaceG_POI_MiningT1_1, 0.2
-            - EdenSpaceG_POI_MiningT1_2, 0.2
-            - EdenSpaceG_POI_MiningT2_1, 0.2
-            - EdenSpaceG_POI_MiningT2_2, 0.2
-            - EdenSpaceG_POI_MiningT3_1, 0.2
+            - EdenSpace_POI_MiningT1_1, 0.5
+            - EdenSpace_POI_MiningT1_2, 0.5
 
       - Name: POIMiningT2
         Faction: [None]
@@ -2410,11 +2419,8 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [4,6]
         Playfields:
-            - EdenSpaceG_POI_MiningT1_1, 0.25
-            - EdenSpaceG_POI_MiningT1_2, 0.25
-            - EdenSpaceG_POI_MiningT2_1, 0.2
-            - EdenSpaceG_POI_MiningT2_2, 0.2
-            - EdenSpaceG_POI_MiningT3_1, 0.2
+            - EdenSpace_POI_MiningT1_1, 0.5
+            - EdenSpace_POI_MiningT1_2, 0.5
 
       - Name: POIMiningT2Polaris
         Faction: [None, Polaris]
@@ -2447,10 +2453,6 @@ GenerationParams:
         PlayfieldLevel: [6,8]
         Playfields:
             - EdenSpace_POI_MiningT4_1, 0.25
-            - EdenSpaceG_POI_MiningT3_1, 0.25
-            - EdenSpaceK_POI_MiningT4_1, 0.25
-            - EdenSpaceG_POI_MiningT2_1, 0.2
-            - EdenSpaceG_POI_MiningT2_2, 0.2
 
       - Name: POIMiningT4
         Faction: [None]
@@ -2466,11 +2468,7 @@ GenerationParams:
         HasTerrain: false
         PlayfieldLevel: [8,10]
         Playfields:
-            - EdenSpace_POI_MiningT4_1, 0.25
-            - EdenSpaceG_POI_MiningT3_1, 0.25
-            - EdenSpaceK_POI_MiningT4_1, 0.25
-            - EdenSpaceG_POI_MiningT2_1, 0.2
-            - EdenSpaceG_POI_MiningT2_2, 0.2
+            - EdenSpace_POI_MiningT4_1, 1
 
       - Name: POIMiningT4Drone
         Faction: [None, Eden_DroneHome]
@@ -2504,59 +2502,6 @@ GenerationParams:
         PlayfieldLevel: [2,6]
         Playfields:
             - SpaceEmpty
-
-# -------------------------------------------------------------------------- POI_Combat
-      - Name: POI_Combat
-        Icon: Triangle
-        Color: [1, 0, 0]
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [2,6]
-        Playfields:
-            - EdenSpaceG_POI_CombatDistress1
-
-# -------------------------------------------------------------------------- POI_Exploration
-      - Name: POI_Exploration
-        Icon: Triangle
-        Color: [0, 1, 0.7]
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [2,6]
-        Playfields:
-            - EdenSpaceG_POI_ExploreEpsilon, 0.4
-            - EdenSpaceG_POI_ExploreWreck1, 0.6
-
-# -------------------------------------------------------------------------- POI_Mining
-      - Name: POI_Mining
-        Icon: Triangle
-        Color: [0.62, 0.32, 0.17]
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [2,6]
-        Playfields:
-            - EdenSpaceG_POI_MiningCommon1, 0.25
-            - EdenSpaceG_POI_MiningCommon2, 0.25
-            - EdenSpaceG_POI_MiningCommon3, 0.25
-            - EdenSpaceG_POI_MiningCommon4, 0.25
-
 
 # =================================================================================================================================================================================
 #                                                                                                                Orbits

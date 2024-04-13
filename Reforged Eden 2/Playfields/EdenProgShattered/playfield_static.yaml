@@ -405,7 +405,7 @@ POIs:
 # Progenitor drone base
         - GroupName: Eden_ProgenitorMain 
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           IsImportant: True
@@ -709,7 +709,7 @@ POIs:
 # # Asteroid Fields
         # - Type: AsteroidFieldBoxExclude
           # Faction: None
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Prefab: AsteroidFieldBoxExclude
           # Mode: Survival
           # Name: AsteroidFieldBoxExclude
@@ -852,7 +852,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
      # # Zirax spawing
-   - SpawnAt: [DroneBaseCommandRG]
+   - SpawnAt: [R2DroneBaseT5]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 100

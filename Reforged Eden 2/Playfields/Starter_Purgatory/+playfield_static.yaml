@@ -209,7 +209,7 @@ POIs:
 # Bike
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           InitPower: True
@@ -228,7 +228,7 @@ POIs:
 # Portable Constructor
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           InitPower: True
@@ -247,7 +247,7 @@ POIs:
 # Survival Equipment
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           InitPower: True
@@ -264,7 +264,7 @@ POIs:
 # Base Equipment
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           InitPower: True
@@ -281,7 +281,7 @@ POIs:
 # Base Equipment 2
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           InitPower: True
@@ -432,7 +432,7 @@ POIs:
 # SV Thrusters
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -451,7 +451,7 @@ POIs:
 # SV RCS
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -470,7 +470,7 @@ POIs:
 # SV Generators
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -489,7 +489,7 @@ POIs:
 # Bike
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -508,7 +508,7 @@ POIs:
 # Portable Constructor
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -527,7 +527,7 @@ POIs:
 # Survival Equipment
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -546,7 +546,7 @@ POIs:
 # Base Equipment
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -565,7 +565,7 @@ POIs:
 # Base Equipment 2
         - GroupName: Eden_SupplyCacheAdm
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -768,7 +768,7 @@ POIs:
 # Random Claimable Bases =================================================================
         - GroupName: Eden_RuinsPlayerBase
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LargeCrater, SmallCrater ]
           # BiomesExcluded: [ RadiatedMountains, LowMountains, Mountains, GlacierSnow, PolarSnow ]
           # IsImportant: True

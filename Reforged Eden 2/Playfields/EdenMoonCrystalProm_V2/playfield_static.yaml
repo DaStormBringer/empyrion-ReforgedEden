@@ -215,10 +215,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True    
-#          NoShieldReload: True
+          # NoShieldReload: True    
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -234,14 +234,14 @@ POIs:
         # POI complex with several structures around
         - GroupName: GhystMainRG
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["PromethiumResource:1-2"]
           SpawnResourceRange: [200,300]
@@ -249,9 +249,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
@@ -265,9 +265,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
@@ -279,29 +279,29 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [100, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT2RG
+        - GroupName: R2GhystDefenseT2
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 7, 12 ]
           DroneProb: 0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOIAvoid: [GhystDefenseT1RG]
+          SpawnPOIAvoid: [R2GhystDefenseT1]
           SpawnPOIAvoidDistance: 600
           SpawnPOINear: [GhystMainRG]
           SpawnPOINearRange: [750, 850]
@@ -311,7 +311,7 @@ POIs:
 
         - GroupName: FactoryZiraxRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 2, 4 ]
@@ -323,15 +323,15 @@ POIs:
 
        # ================================
         # Defense for drone base
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300] 
           Properties: 
             - Key: RegenAfter
@@ -352,7 +352,7 @@ POIs:
        # Unknown Alien Towers
         - GroupName: Eden_UnknownTowerArmed
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 0, 1 ]
           Properties: 
             - Key: RegenAfter
@@ -360,7 +360,7 @@ POIs:
 
         - GroupName: Eden_UnknownTower
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_UnknownTowerArmed]
           SpawnPOINearRange: [150, 400]
@@ -370,7 +370,7 @@ POIs:
 
         - GroupName: Eden_UnknownTower
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 0, 1 ]
           # IsScalingCount: True 
           Properties: 
@@ -380,9 +380,9 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random military outposts scattered around planet
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 1, 2 ]
           # IsScalingCount: True 
           DroneProb: 0.8
@@ -393,16 +393,16 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT2RG
+        - GroupName: R2GhystDefenseT2
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 3, 5 ]
           # IsScalingCount: True 
           DroneProb: 0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOIAvoid: [GhystDefenseT1RG]
+          SpawnPOIAvoid: [R2GhystDefenseT1]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["CopperResource:0-1"]
           SpawnResourceRange: [200,300]
@@ -414,7 +414,7 @@ POIs:
         - GroupName: Eden_CaveCrystalBlue 
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal ]
           CountMinMax: [ 1, 2 ]
           IsImportant: True
@@ -616,7 +616,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [GhystAuxT2RG, GhystAuxT1RG]
+   - SpawnAt: [R2GhystAuxT2, R2GhystAuxT1]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 600
      RadiusRandom: 25
@@ -630,7 +630,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+   - SpawnAt: [R2DroneBase, GhystMainRG, R2GhystMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 100

@@ -300,7 +300,7 @@ POIs:
        # ======================= TALON SETTLEMENT in forest area ======================= 
         - GroupName: Eden_TropicalVillage                      # Main Building
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ DeepForest, Forest, CoconutForest ]
           IsImportant: True
           IsCommandCenter: True
@@ -327,7 +327,7 @@ POIs:
 
         - GroupName: Eden_TropicalTribalAuxT1
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           LevelMod: +1
           SpawnPOINear: [Eden_TropicalVillage]
@@ -338,7 +338,7 @@ POIs:
 
         # - GroupName: TribalRecreation
           # Faction: Talon
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # Territory: False  
           # CountMinMax: [ 1, 1 ]
           # SpawnPOINear: [TribalBazar]
@@ -347,9 +347,9 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        # - GroupName: TribalField
+        # - GroupName: TalonFarm
           # Faction: Talon
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Territory: False
           # CountMinMax: [ 5, 6 ]
           # SpawnPOINear: [TribalBazar]
@@ -362,9 +362,9 @@ POIs:
             # - Key: RegenAfter
               # Value: 720  
  
-        # - GroupName: TribalDefence
+        # - GroupName: TalonDefense
           # Faction: Talon
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # # Territory: False        
           # CountMinMax: [ 4, 5 ]
           # SpawnPOINear: [TribalBazar]
@@ -380,7 +380,7 @@ POIs:
        # ======================= TALON SETTLEMENT in sandy area ======================= 
         - GroupName: TribalBazarArid                      # Main Building
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Sand, PalmForest ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -388,9 +388,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TribalVillageAridMain
+        - GroupName: TalonStoneMain
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [TribalBazarArid]
@@ -405,11 +405,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalVillageAridAux
+        - GroupName: TalonAuxSand
           Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TribalVillageAridMain]
+          SpawnPOINear: [TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -421,20 +421,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalRecreation
+        - GroupName: TalonDefenseSand
           Faction: Talon
-          NoShieldReload: True  
-          Territory: False  
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TribalBazarArid]
-          SpawnPOINearRange: [80, 200]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: TribalAridDefence
-          Faction: Talon
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 6 ]
           SpawnPOINear: [TribalBazarArid]
           SpawnPOINearRange: [300, 400] 
@@ -445,7 +434,7 @@ POIs:
        # ======================= TALON Stilt Village in shallow water ======================= 
         - GroupName: VillageStilt
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ ShallowWater_2 ]
           PlaceAt: OnWater
@@ -465,7 +454,7 @@ POIs:
 
         - GroupName: VillageStiltHut 
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ ShallowWater_2 ]
           PlaceAt: OnWater
@@ -499,63 +488,20 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-# Massive Old Mine
-        - GroupName: Eden_OldMine
-          Faction: None
-          # Biome: [ MountainsForest, Mountains, LowMountains_2, LowMountains ]
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
-          LevelMod: +5
-          Properties: 
-            - Key: SI
-              Value: Off
-            - Key: RegenAfter
-              Value: 720
-
-
-       # # ================================
-        # # Random Akua resorts in the water
-        # - GroupName: Eden_AkuaAuxT2Water
-          # Faction: Polaris
-          # NoShieldReload: True  
-          # Biome: [ ShallowWater_2, Water, DeepWater ]
-          # CountMinMax: [ 2, 3 ]
-          # IsScalingCount: True
-          # PlaceAt: OnWater
-          # Properties: 
-            # # - Key: MapDistance
-              # # Value: 0  
-            # - Key: RegenAfter
-              # Value: 720
-
-        # - GroupName: Eden_AkuaAuxT1Water
-          # Faction: Polaris
-          # NoShieldReload: True
-          # Territory: False
-          # Biome: [ ShallowWater_2, Water, DeepWater ]
-          # CountMinMax: [ 4, 6 ]
-          # PlaceAt: OnWater
-          # IsScalingCount: True
-          # Properties: 
-            # # - Key: MapDistance
-              # # Value: 0  
-            # - Key: RegenAfter
-              # Value: 720
-
        # ================================
         # Random tribal villages scattered around planet
         - GroupName: Eden_TropicalVillage
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Forest, DeepForest, CoconutForest, Grove ]
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
-          # AuxiliaryPOIs: [RuinsTribal]
+          # AuxiliaryPOIs: [TalonWoodRuin]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 3 ]
           Properties:  
@@ -568,9 +514,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        # - GroupName: TribalDefence
+        # - GroupName: TalonDefense
           # Faction: Talon
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsAuxPOI: True
           # CountMinMax: [ 4, 5 ]
           # # SpawnPOINear: [TribalBazar]
@@ -582,7 +528,7 @@ POIs:
               # Random Tribal POIs
         - GroupName: Eden_TropicalTribalAuxT1
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
@@ -595,7 +541,7 @@ POIs:
           Faction: Talon
           PlaceAt: OnWater
           Biome: [Deepwater, Water, OpenSea]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.0
           DronesMinMax: [ 1, 1 ]
@@ -604,61 +550,6 @@ POIs:
           Properties:
             - Key: RegenAfter
               Value: 720
-
-        # # Random civil outposts scattered around planet
-        # - GroupName: CivilSettlementO2
-          # Faction: Polaris
-          # NoShieldReload: True
-          # CountMinMax: [ 4, 5 ]
-          # IsScalingCount: True
-          # DroneProb: 0
-          # DronesMinMax: [ 1, 3 ]
-          # ReserveCount: 3
-          # TroopTransport: False 
-          # Properties: 
-            # - Key: RegenAfter
-              # Value: 720
-
-        # # Different POIs scattered around planet
-        # - GroupName: CrashedShip      # Do not use regeneration with buried POIs
-          # Faction: None
-          # CountMinMax: [ 2, 3 ]
-          # IsScalingCount: True 
-          # PlaceAt: UnderWater, Terrain
-          # DroneProb: 0
-          # DronesMinMax: [ 1, 2 ]
-          # ReserveCount: 4
-          # TroopTransport: False
-          # Properties:
-            # - Key: MapMarker
-              # Value: Neutral
-            # - Key: RegenAfter
-              # Value: 720 
-
-        # - GroupName: Wreckage
-          # Faction: None
-          # CountMinMax: [ 1, 3 ]
-          # IsScalingCount: True 
-          # DroneProb: 0
-          # DronesMinMax: [ 1, 3 ]
-          # ReserveCount: 2
-          # TroopTransport: True
-          # Properties: 
-            # - Key: RegenAfter
-              # Value: 720
-
-        # - GroupName: Ruins
-          # Faction: None
-          # Biome: [ WaterSwamp, Swamp, Forest ]
-          # CountMinMax: [ 2, 3 ]
-          # IsScalingCount: True
-          # DroneProb: 0
-          # DronesMinMax: [ 1, 3 ]
-          # ReserveCount: 2
-          # TroopTransport: False
-          # Properties: 
-            # - Key: RegenAfter
-              # Value: 720
 
         # Strange Flower Formations
         - GroupName: Eden_CircleBlue
@@ -726,7 +617,7 @@ POIs:
 # Ancient Walker mission statue
         - GroupName: Eden_AncientWalker
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Territory: False
           Properties: 
@@ -741,7 +632,7 @@ POIs:
         - GroupName: Eden_CaveTemperate
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Forest, DeepForest, Oasis ]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -763,7 +654,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -777,18 +668,6 @@ POIs:
               Value: Off
             - Key: RegenAfter
               Value: 4320
-
-# Aurora
-        - GroupName: Eden_TR_SpireProm
-          Type: Eden_AuroraGreen
-          CountMinMax: [ 0, 1 ]
-
-        - GroupName: Eden_TR_SpireProm
-          Type: Eden_AuroraGreen
-          CountMinMax: [ 0, 1 ]
-          IsScalingCount: True
-          SpawnPOINear: [Eden_TR_SpireProm]
-          SpawnPOINearRange: [2500, 15000]
 
     FixedPlayerStart:
         - Mode: Debug
@@ -965,7 +844,7 @@ SpawnZones:
          Amount: 150
          Period: Always
          DelayMinMax: [48, 72]
-   # - SpawnAt: [DroneBaseT1RG, EpsilonBunkerRG]
+   # - SpawnAt: [R2DroneBase, R2EpsilonMain]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 1000
      # RadiusRandom: 25
@@ -978,7 +857,7 @@ SpawnZones:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
+   # - SpawnAt: [R2EpsilonAuxT2, R2AbandonedPOI, ErestrumResource, ZascosiumResource]
      # BiomesExcluded: [ LowMountains, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 25

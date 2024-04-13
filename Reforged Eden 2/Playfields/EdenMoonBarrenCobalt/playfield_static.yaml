@@ -162,10 +162,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
           DroneProb: 1.0
@@ -190,9 +190,9 @@ POIs:
               Value: 720 
 
               #Ghyst POI Cluster
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           IsImportant: True
           DroneProb: 1
@@ -205,9 +205,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
@@ -215,21 +215,21 @@ POIs:
           TroopTransport: False
           SpawnResource: ["CobaltResource:1-1"]
           SpawnResourceRange: [100,150]
-          SpawnPOINear: [GhystAuxT2RG]
+          SpawnPOINear: [R2GhystAuxT2]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.3
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [GhystAuxT2RG]
+          SpawnPOINear: [R2GhystAuxT2]
           SpawnPOINearRange: [350, 500]
           Properties: 
             - Key: RegenAfter
@@ -239,10 +239,10 @@ POIs:
         # PentaCorp Station with some nearby trader settlements. Doesn't always show up. Sells Pentaxid.
         - GroupName: Eden_PolPentaCorp
           Faction: Trader
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: Music
@@ -252,9 +252,9 @@ POIs:
             - Key: StationInterface
               Value: "Warp:2,IfNeutral:1.5,IfHonored:-0.10"
 
-        - GroupName: TraderSettlementRG 
+        - GroupName: R2TraderAuxT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           SpawnPOINear: [Eden_PolPentaCorp]
           SpawnPOINearRange: [100, 250] 
@@ -264,9 +264,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderDefenseB 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_PolPentaCorp]
           SpawnPOINearRange: [100,250]
@@ -276,11 +276,11 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderDefenseA 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
-          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINear: [R2TraderAuxT1]
           SpawnPOINearRange: [100,250]
           Properties: 
             - Key: Music
@@ -292,7 +292,7 @@ POIs:
         # Mining Station
         - GroupName: PolarisMiningMainRG                      # Main Building
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           # Biome: [ LargeCrater ]
           CountMinMax: [ 0, 1 ]
@@ -305,7 +305,7 @@ POIs:
               # Cobalt Mine
         - GroupName: Eden_PolMineCobalt
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [150, 250]
@@ -315,7 +315,7 @@ POIs:
 
         - GroupName: PolarisMiningAuxRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [150, 250] 
@@ -329,9 +329,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [PolarisMiningMainRG]
           SpawnPOINearRange: [300, 400] 
@@ -341,7 +341,7 @@ POIs:
 
         - GroupName: FactoryPolarisRG2
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -350,16 +350,16 @@ POIs:
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
           FactionTerritory: [Eden_PolarisTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720
 
               #Random Ghyst POIs
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           IsScalingCount: True 
           DroneProb: 0.7
@@ -372,41 +372,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-       # Unknown Alien Towers
-        - GroupName: Eden_UnknownTowerArmed
-          Faction: Alien
-          NoShieldReload: True  
-          Biome: [ LargeCrater ]
-          CountMinMax: [ 0, 1 ]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_UnknownTower
-          Faction: Alien
-          NoShieldReload: True  
-          Biome: [ LargeCrater ]
-          CountMinMax: [ 2, 3 ]
-          SpawnPOINear: [Eden_UnknownTowerArmed]
-          SpawnPOINearRange: [150, 400]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_UnknownTower
-          Faction: Alien
-          NoShieldReload: True  
-          CountMinMax: [ 0, 1 ]
-          IsScalingCount: True 
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
 # Tungsten
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -424,7 +394,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -532,7 +502,7 @@ DroneSpawning:
           Radius: 2500
 
 SpawnZones:
-   - SpawnAt: [GhystAuxT1RG]    # Main Xenu Buildings
+   - SpawnAt: [R2GhystAuxT1]    # Main Xenu Buildings
      # BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 250
      RadiusRandom: 25
@@ -544,20 +514,6 @@ SpawnZones:
        - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
          Biomes: [Any]
          Amount: 100
-         Period: Always
-         DelayMinMax: [-1, -1]
-   - SpawnAt: [ Eden_UnknownTowerArmed, Eden_UnknownTower ]
-     # BiomesExcluded: [ HighMountains ]
-     Radius: 75
-     RadiusRandom: 10
-     RateMultiplyerCenter: 1.0
-     RateMultiplyerEdge: 1.0
-     Color: "1.0, 1.0, 1.0, 1.0"
-     SpawnOnlyIfPoiIsAlien: false
-     Entities:
-       - Names: [Overseers]
-         Biomes: [Any]
-         Amount: 500
          Period: Always
          DelayMinMax: [-1, -1]
 

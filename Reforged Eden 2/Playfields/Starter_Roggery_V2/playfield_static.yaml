@@ -42,7 +42,7 @@ A swamp planet, which is a fertile breeding ground for dangerous creatures.\nInt
 
 
 PlanetClass: Swamp Starter
-PlanetType: TemperateStarter
+PlanetType: SwampStarter
 PlayfieldType: Planet
 Difficulty: 11
 
@@ -324,7 +324,6 @@ RandomResources:
       DroneProb: 0.2
       MaxDroneCount: 1
 
-
     - Name: CopperResource
       Biome: [ LowMountains, LowMountains_2, LowMountains_1, Plateau, Mountains, TallTrees, LargeCrater ]
       CountMinMax: [ 3, 3 ]
@@ -337,11 +336,9 @@ RandomResources:
       Biome: [ Plains, Heath, LowMountains, LowMountains_2, LowMountains_1, Plateau, Mountains, TallTrees ]
       CountMinMax: [ 1, 2 ]
       IsScalingCount: True
-      SizeMinMax: [ 2, 6 ]
+      SizeMinMax: [ 3, 6 ]
       DepthMinMax: [ 6, 15 ]
       DroneProb: 0.3
-
-
 
       # ! Note: Multiple entries of the same resources will _not_ add up !
       # Instead, the entry with the highest count will define the total number of deposits on the planet. (Which can be scaled by game settings)
@@ -370,16 +367,6 @@ RandomResources:
         # #MaxRadius: 13
         # #YVariance: 10
 
-
-    - Name: IronResource  # Rich - Will be grabbed by POI
-      Biome: [ Plains, LowMountains, LowMountains_2, LowMountains_1, Plateau, Mountains, LargeCrater ]
-      CountMinMax: [ 1, 1 ]     # Number of large-sized deposits
-      IsScalingCount: True
-      SizeMinMax: [ 8, 9 ] 
-      DepthMinMax: [ 6, 15 ]
-      DroneProb: 0.2 
-      MaxDroneCount: 1
-      
     - Name: IronResource
       Biome: [ Plains, Heath, LowMountains, LowMountains_2, LowMountains_1, Plateau, Mountains, TallTrees, LargeCrater ]
       CountMinMax: [ 3, 4 ]     # Total number of deposits
@@ -644,6 +631,54 @@ POIs:
               Value: 360
 
 
+# =============================================== Smuggler Barge and Sunken Village side mission
+# Smuggler Barge
+        - GroupName: RE2_RoggeryBarge
+          Faction: Pirates
+          Biome: [ DeepWater, Water, Fungus, Marsh ]
+          PlaceAt: OnWater
+          IsImportant: True
+          CountMinMax: [ 1, 1 ] # 50% chance
+          # IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2TradeStory, NullPOI]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: HudDistance
+              Value: 3000
+            - Key: MapDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 720
+
+# Talon Sunken Village
+        - GroupName: RE2_RoggerySunkenRuin
+          Faction: None
+          PlaceAt: UnderWater
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_RoggeryBarge]
+          SpawnPOINearRange: [125, 200]
+          Properties:
+            - Key: MapDistance
+              Value: 50
+            - Key: HudDistance
+              Value: 50
+            - Key: RegenAfter
+              Value: 4320
+
 # =============================================== Faction Zirax
 # Drone Base
         # - GroupName: DroneBaseStarterRG
@@ -781,13 +816,13 @@ POIs:
               Value: 720
 
 # =============================================== Faction Alien
+# In radiated zones
         - GroupName: R2AbandonedStarter
           Faction: Alien
           AvoidFactionTerritory: True
           Biome: [ DeadMire, DeadMire2, Fungus, Marsh ]
-          IsScalingCount: True
           IsImportant: True
-          CountMinMax: [ 1, 1 ]
+          CountMinMax: [ 3, 3 ]
           AuxiliaryPOIs: [RE2_NestStarterT1]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -796,6 +831,26 @@ POIs:
           SpawnPOIAvoid: [NullPOI, R2AbandonedStarter]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["PromethiumResource:1-1"]
+          SpawnResourceRange: [175,200]
+          Properties:
+            - Key: Music
+              Value: DarkSoundscape
+            - Key: RegenAfter
+              Value: 360
+
+# Outside radiated zones
+        - GroupName: R2AbandonedStarter
+          Faction: Alien
+          AvoidFactionTerritory: True
+          BiomesExcluded: [ PolarSnow, DeadMire, DeadMire2, Fungus, Marsh ]
+          CountMinMax: [ 3, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [NullPOI, R2AbandonedStarter]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [175,200]
           Properties:
             - Key: Music
@@ -877,29 +932,6 @@ POIs:
               Value: Neutral
             - Key: RegenAfter
               Value: 360
-
-# # Dummy POIs for radiated zones.
-        # - GroupName: Eden_DummyPOI
-          # Faction: None
-          # Biome: [ RadiatedFog, Radiated ]
-          # CountMinMax: [ 1, 1 ]
-          # DroneProb: 0
-          # DronesMinMax: [ 1, 1 ]
-          # ReserveCount: 0
-          # TroopTransport: False
-          # # SpawnPOIAvoid: [NullPOI]
-          # # SpawnPOIAvoidDistance: 3000
-          # SpawnResource: ["PromethiumResource:1-1"]
-          # SpawnResourceRange: [80,100]
-          # Properties:
-            # - Key: HudDistance
-              # Value: 0
-            # - Key: MapDistance
-              # Value: 0
-            # - Key: RegenAfter
-              # Value: 360
-
-
 
 # =================================================
 # =================================================

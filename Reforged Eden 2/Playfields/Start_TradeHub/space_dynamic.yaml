@@ -271,7 +271,7 @@ POIs:
     - Type: BA_Alien
       GroupName: BAOPolarisRG
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -287,7 +287,7 @@ POIs:
     - Type: BA_Alien
       GroupName: BAOPolarisRG
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -304,7 +304,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_TSOPolRefinery
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0
@@ -325,7 +325,7 @@ POIs:
     - Type: BA_Alien
       GroupName: FactoryPolarisSpaceRG
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5

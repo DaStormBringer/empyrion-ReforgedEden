@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.57.0 | 29.3.2024 - 15:12:38  */
+/*  Created with eWCCT 3.57.0 | 12.4.2024 - 22:46:59  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -11253,7 +11253,7 @@
   Option_1: dialogue_W4qKSGO
   OptionIf_1: "HasItem('Leather', 50)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('Leather', 50); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 25000); MoneyCounter = 25000"
+  OptionExecute_1: "RemoveItem('Leather', 50); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 25000); MoneyCounter = 25000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_WGSuW8a
   OptionNext_2: End
 }
@@ -11262,16 +11262,16 @@
   Option_1: dialogue_OqW642a
   OptionIf_1: "HasItem('RawDiamond', 75)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('RawDiamond', 75); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 60000); MoneyCounter = 60000"
+  OptionExecute_1: "RemoveItem('RawDiamond', 75); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 60000); MoneyCounter = 60000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_WKqO08B
   OptionNext_2: End
 }
 { +Dialogue Name: TD_Settlement_Mission03
   Output: dialogue_S4qeCaG
   Option_1: dialogue_CSOuaSq
-  OptionIf_1: "HasItem('LuxuryGoods', 15)"
+  OptionIf_1: "HasItem('LuxuryClothing', 40)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('LuxuryGoods', 15); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 37500); MoneyCounter = 37500"
+  OptionExecute_1: "RemoveItem('LuxuryClothing', 40); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 35200); MoneyCounter = 35200; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_oe08eCC
   OptionNext_2: End
 }
@@ -11280,7 +11280,7 @@
   Option_1: dialogue_au3Q6eS
   OptionIf_1: "HasItem('SolarCell', 42)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('SolarCell', 42); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 72240); MoneyCounter = 72240"
+  OptionExecute_1: "RemoveItem('SolarCell', 42); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 72240); MoneyCounter = 72240; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_aiiyu0n
   OptionNext_2: End
 }
@@ -11289,7 +11289,7 @@
   Option_1: dialogue_HuFeau4
   OptionIf_1: "HasItem('Filters', 100)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('Filters', 100); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 21200); MoneyCounter = 21200"
+  OptionExecute_1: "RemoveItem('Filters', 100); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 21200); MoneyCounter = 21200; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_WSGK8ia
   OptionNext_2: End
 }
@@ -11298,7 +11298,7 @@
   Option_1: dialogue_8GemOA0
   OptionIf_1: "HasItem('WorkClothing', 50)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('WorkClothing', 50); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 26000); MoneyCounter = 26000"
+  OptionExecute_1: "RemoveItem('WorkClothing', 50); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 26000); MoneyCounter = 26000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_iuauOKK
   OptionNext_2: End
 }
@@ -11307,7 +11307,7 @@
   Option_1: dialogue_Bma4Ge8
   OptionIf_1: "HasItem('CivilianClothing', 80)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('CivilianClothing', 80); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 32000); MoneyCounter = 32000"
+  OptionExecute_1: "RemoveItem('CivilianClothing', 80); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 32000); MoneyCounter = 32000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_AOiqDS0
   OptionNext_2: End
 }
@@ -11316,7 +11316,7 @@
   Option_1: dialogue_80WqOui
   OptionIf_1: "HasItem('LuxuryFurniture', 10) && HasItem('Jewellery', 25)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('LuxuryFurniture', 10); RemoveItem('Jewellery', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 70000); MoneyCounter = 70000"
+  OptionExecute_1: "RemoveItem('LuxuryFurniture', 10); RemoveItem('Jewellery', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 70000); MoneyCounter = 70000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_SSqoSWW
   OptionNext_2: End
 }
@@ -11325,7 +11325,7 @@
   Option_1: dialogue_K8i4UOR
   OptionIf_1: "HasItem('CivilianFurniture', 25)"
   OptionNext_1: TD_Settlement_MissionComplete
-  OptionExecute_1: "RemoveItem('CivilianFurniture', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 34000); MoneyCounter = 34000"
+  OptionExecute_1: "RemoveItem('CivilianFurniture', 25); CanTrade = CanTrade + 1; SettlementMission = 0; AddItem('MoneyCard', 34000); MoneyCounter = 34000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_qmL0Kiu
   OptionNext_2: End
 }
@@ -11419,7 +11419,7 @@
   Option_1: dialogue_mG8qK80
   OptionIf_1: "HasItem('SteelPlateArmored', 250) && HasItem('SpareParts', 3)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('SteelPlateArmored', 250); RemoveItem('SpareParts', 3); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 200); AddItem('MoneyCard', 18000); RepCounter = 200; MoneyCounter = 18000"
+  OptionExecute_1: "RemoveItem('SteelPlateArmored', 250); RemoveItem('SpareParts', 3); CanTrade = CanTrade + 1; SpaceportMission = 0; AddItem('MoneyCard', 25000); RepCounter = 250; MoneyCounter = 25000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_KGuISS4
   OptionNext_2: End
 }
@@ -11428,7 +11428,7 @@
   Option_1: dialogue_aqq40a8
   OptionIf_1: "HasItem('ThrusterSVRoundLargeT2', 5)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('ThrusterSVRoundLargeT2', 5); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 150); Player.Credit += 125000; RepCounter = 150; MoneyCounter = 125000"
+  OptionExecute_1: "RemoveItem('ThrusterSVRoundLargeT2', 5); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 150); Player.Credit += 150000; RepCounter = 250; MoneyCounter = 150000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_oe4m8Ce
   OptionNext_2: End
 }
@@ -11437,7 +11437,7 @@
   Option_1: dialogue_WWC0CiW
   OptionIf_1: "HasItem('Robotics', 4)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('Robotics', 4); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 250); Player.Credit += 150000; RepCounter = 250; MoneyCounter = 150000"
+  OptionExecute_1: "RemoveItem('Robotics', 4); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 250); Player.Credit += 175000; RepCounter = 250; MoneyCounter = 175000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_088W2mS
   OptionNext_2: End
 }
@@ -11446,7 +11446,7 @@
   Option_1: dialogue_USCOZ4e
   OptionIf_1: "HasItem('ShieldGeneratorSV', 1)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('ShieldGeneratorSV', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 300); AddItem('MoneyCard', 20000); RepCounter = 300; MoneyCounter = 20000"
+  OptionExecute_1: "RemoveItem('ShieldGeneratorSV', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 300); AddItem('MoneyCard', 20000); RepCounter = 300; MoneyCounter = 20000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 300); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 300); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 300); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 300)"
   Option_2: dialogue_IwKKuSa
   OptionNext_2: End
 }
@@ -11455,7 +11455,7 @@
   Option_1: dialogue_m4i2XeO
   OptionIf_1: "HasItem('WeaponSVLaserT2', 2)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('WeaponSVLaserT2', 2); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 150); Player.Credit += 300000; RepCounter = 300; MoneyCounter = 300000"
+  OptionExecute_1: "RemoveItem('WeaponSVLaserT2', 2); CanTrade = CanTrade + 1; SpaceportMission = 0; Player.Credit += 300000; RepCounter = 150; MoneyCounter = 300000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 150)"
   Option_2: dialogue_mu4e48K
   OptionNext_2: End
 }
@@ -11531,7 +11531,7 @@
   Option_1: dialogue_iWoWu44
   OptionIf_1: "HasItem('Salt', 750)"
   OptionNext_1: TD_SpaceportLarge_MissionComplete
-  OptionExecute_1: "RemoveItem('Salt', 750); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 0); AddItem('MoneyCard', 60000); RepCounter = 200; MoneyCounter = 60000"
+  OptionExecute_1: "RemoveItem('Salt', 750); CanTrade = CanTrade + 1; SpaceportMission = 0; AddItem('MoneyCard', 60000); RepCounter = 150; MoneyCounter = 60000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 150)"
   Option_2: dialogue_Geq3uSW
   OptionNext_2: End
 }
@@ -11540,7 +11540,7 @@
   Option_1: dialogue_eCG0OOI
   OptionIf_1: "HasItem('ReportWarpSignatures', 1)"
   OptionNext_1: TD_SpaceportLarge_MissionComplete
-  OptionExecute_1: "RemoveItem('ReportWarpSignatures', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 0); AddItem('MoneyCard', 80000); RepCounter = 150; MoneyCounter = 80000"
+  OptionExecute_1: "RemoveItem('ReportWarpSignatures', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; AddItem('MoneyCard', 80000); RepCounter = 150; MoneyCounter = 80000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 150); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 150)"
   Option_2: dialogue_8baIq08
   OptionNext_2: End
 }
@@ -11549,7 +11549,7 @@
   Option_1: dialogue_e0q8W0C
   OptionIf_1: "HasItem('LargeUpgradeKit', 1)"
   OptionNext_1: TD_SpaceportLarge_MissionComplete
-  OptionExecute_1: "RemoveItem('LargeUpgradeKit', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 0); Player.Credit += 75000; RepCounter = 250; MoneyCounter = 75000"
+  OptionExecute_1: "RemoveItem('LargeUpgradeKit', 1); CanTrade = CanTrade + 1; SpaceportMission = 0; Player.Credit += 75000; RepCounter = 200; MoneyCounter = 75000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200)"
   Option_2: dialogue_aI0GGmS
   OptionNext_2: End
 }
@@ -11558,7 +11558,7 @@
   Option_1: dialogue_qWeKeWK
   OptionIf_1: "HasItem('ThrusterComponents', 25) && HasItem('HeatExchanger', 25)"
   OptionNext_1: TD_SpaceportLarge_MissionComplete
-  OptionExecute_1: "RemoveItem('ThrusterComponents', 25); RemoveItem('HeatExchanger', 25); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 0); Player.Credit += 300000; RepCounter = 300; MoneyCounter = 300000"
+  OptionExecute_1: "RemoveItem('ThrusterComponents', 25); RemoveItem('HeatExchanger', 25); CanTrade = CanTrade + 1; SpaceportMission = 0; Player.Credit += 300000; RepCounter = 250; MoneyCounter = 300000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_eCiirmG
   OptionNext_2: End
 }
@@ -11567,7 +11567,7 @@
   Option_1: dialogue_S8u0qGq
   OptionIf_1: "HasItem('MultitoolSV', 2) && HasItem('Robotics', 2)"
   OptionNext_1: TD_SpaceportLarge_MissionComplete
-  OptionExecute_1: "RemoveItem('MultitoolSV', 2); RemoveItem('Robotics', 2); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 0); Player.Credit += 170000; RepCounter = 300; MoneyCounter = 170000"
+  OptionExecute_1: "RemoveItem('MultitoolSV', 2); RemoveItem('Robotics', 2); CanTrade = CanTrade + 1; SpaceportMission = 0; Player.Credit += 170000; RepCounter = 250; MoneyCounter = 170000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_8SLiEi6
   OptionNext_2: End
 }
@@ -11785,7 +11785,7 @@
   Output: dialogue_meqaeOW
   Option_1: dialogue_uMi0dqe
   OptionNext_1: End
-  OptionExecute_1: "AddItem('IronOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('IronOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningIron_Mission01
   Output: dialogue_i4qiCie
@@ -11984,7 +11984,7 @@
   Output: dialogue_CuOWaOa
   Option_1: dialogue_K0SCW0W
   OptionNext_1: End
-  OptionExecute_1: "AddItem('CopperOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('CopperOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningCopper_Mission01
   Output: dialogue_Auuciqe
@@ -12183,7 +12183,7 @@
   Output: dialogue_CWCGC4E
   Option_1: dialogue_Gaeq0eK
   OptionNext_1: End
-  OptionExecute_1: "AddItem('SiliconOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('SiliconOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningSilicon_Mission01
   Output: dialogue_44qiK88
@@ -12382,7 +12382,7 @@
   Output: dialogue_G4umeO8
   Option_1: dialogue_ieCemmC
   OptionNext_1: End
-  OptionExecute_1: "AddItem('CobaltOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('CobaltOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningCobalt_Mission01
   Output: dialogue_qeo4m40
@@ -12581,7 +12581,7 @@
   Output: dialogue_WeGkCCm
   Option_1: dialogue_ieiS8uS
   OptionNext_1: End
-  OptionExecute_1: "AddItem('MagnesiumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('MagnesiumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningMagnesium_Mission01
   Output: dialogue_iOeCKee
@@ -12780,7 +12780,7 @@
   Output: dialogue_0eGmKeS
   Option_1: dialogue_GiS444a
   OptionNext_1: End
-  OptionExecute_1: "AddItem('TitanOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('TitanOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningTitanium_Mission01
   Output: dialogue_C8OiW0e
@@ -12969,7 +12969,7 @@
   Output: dialogue_0e8e2WC
   Option_1: dialogue_86W8WWC
   OptionNext_1: End
-  OptionExecute_1: "AddItem('AluminiumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('AluminiumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningAluminium_Mission01
   Output: dialogue_WGGeCWq
@@ -13257,7 +13257,7 @@
   Output: dialogue_0i0UWai
   Option_1: dialogue_Ya04iWu
   OptionNext_1: End
-  OptionExecute_1: "AddItem('NeodymiumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('NeodymiumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningNeodymium_Mission01
   Output: dialogue_mSi3uka
@@ -13401,7 +13401,7 @@
   Output: dialogue_uouqYWG
   Option_1: dialogue_W4b8uSG
   OptionNext_1: End
-  OptionExecute_1: "AddItem('SathiumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('SathiumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningSathium_Mission01
   Output: dialogue_OeiKSIG
@@ -13545,7 +13545,7 @@
   Output: dialogue_aaFKqGq
   Option_1: dialogue_4OGei4a
   OptionNext_1: End
-  OptionExecute_1: "AddItem('ZascosiumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('ZascosiumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningZascosium_Mission01
   Output: dialogue_0GWG8qS
@@ -13689,7 +13689,7 @@
   Output: dialogue_m4GGSqu
   Option_1: dialogue_O08mWSa
   OptionNext_1: End
-  OptionExecute_1: "AddItem('ErestrumOre', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('ErestrumOre', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningErestrum_Mission01
   Output: dialogue_Ci4Cewq
@@ -13833,7 +13833,7 @@
   Output: dialogue_SuiuSWi
   Option_1: dialogue_a88ii98
   OptionNext_1: End
-  OptionExecute_1: "AddItem('GoldOre', 50); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('GoldOre', 50); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningGold_Mission01
   Output: dialogue_uiquKqd
@@ -13977,7 +13977,7 @@
   Output: dialogue_WOSmSGC
   Option_1: dialogue_WCqeqCq
   OptionNext_1: End
-  OptionExecute_1: "AddItem('PlatinOre', 20); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('PlatinOre', 20); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningPlatinum_Mission01
   Output: dialogue_0a0eC6e
@@ -14121,7 +14121,7 @@
   Output: dialogue_84Gqq80
   Option_1: dialogue_WOCOasG
   OptionNext_1: End
-  OptionExecute_1: "AddItem('Salt', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('Salt', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningSalt_Mission01
   Output: dialogue_SWMqe0S
@@ -14265,7 +14265,7 @@
   Output: dialogue_OaCGuam
   Option_1: dialogue_YWqSmMq
   OptionNext_1: End
-  OptionExecute_1: "AddItem('Sulfur', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('Sulfur', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningSulfur_Mission01
   Output: dialogue_8WW0C8h
@@ -14409,7 +14409,7 @@
   Output: dialogue_CSnma0G
   Option_1: dialogue_umO4meK
   OptionNext_1: End
-  OptionExecute_1: "AddItem('Graphite', 100); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('Graphite', 100); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningGraphite_Mission01
   Output: dialogue_4Saamuu
@@ -14553,7 +14553,7 @@
   Output: dialogue_nXii84C
   Option_1: dialogue_WCGW8GK
   OptionNext_1: End
-  OptionExecute_1: "AddItem('PromethiumOre', 50); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('PromethiumOre', 50); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningPromethium_Mission01
   Output: dialogue_2maaSqG
@@ -14697,7 +14697,7 @@
   Output: dialogue_uOS4POa
   Option_1: dialogue_rWCWWWO
   OptionNext_1: End
-  OptionExecute_1: "AddItem('PentaxidOre', 50); MiningCount = MiningCount + 1"
+  OptionExecute_1: "AddItem('PentaxidOre', 50); MiningCount = MiningCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 100); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 100)"
 }
 { +Dialogue Name: MN_MiningPentaxid_Mission01
   Output: dialogue_emH84WK
@@ -14841,7 +14841,7 @@
   Output: dialogue_GCaaA80
   Option_1: dialogue_ES4ASai
   OptionNext_1: End
-  OptionExecute_1: "MissionCount = MissionCount + 1"
+  OptionExecute_1: "MissionCount = MissionCount + 1; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Zirax') AddReputation(Faction.Zirax, 200); if (GetFaction(LocalStructure.Entity.Id) == 'Rados') AddReputation(Faction.Rados, 200)"
 }
 { +Dialogue Name: TD_ShipyardMain_Mission01
   Output: dialogue_S4uCiKO
@@ -15737,7 +15737,7 @@
   Output: dialogue_4iiqiC0
   Option_1: dialogue_qKaNu8G
   OptionNext_1: TD_MarketCafe_Start
-  OptionExecute_1: "AddItem('Soup', 2)"
+  OptionExecute_1: "AddItem('Salad', 2)"
 }
 { +Dialogue Name: TD_MarketCafe_NoWork
   Output: dialogue_qCWOWGa
@@ -19825,7 +19825,7 @@
   Option_1: dialogue_aW4GC4M
   OptionNext_1: End
 }
-/*  Created with eWCCT 3.57.0 | 6.4.2024 - 12:26:10  */
+/*  Created with eWCCT 3.57.0 | 8.4.2024 - 23:49:55  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -22934,6 +22934,22 @@
   OptionIf_3: "SystemLockdownScience == 0"
   OptionNext_3: End
   OptionExecute_3: "CloseHtmlWindow()"
+}
+{ +Dialogue Name: Eden_StartSwampBarge_Init
+  Next_1: Eden_StartSwampBarge_Roggery
+  NextIf_1: "Player.PlayfieldName == 'Roggery'"
+  Next_2: Eden_StartSwampBarge_Greet
+  NPCName: eden_dialogue_qGi00mS
+}
+{ +Dialogue Name: Eden_StartSwampBarge_Greet
+  Output: eden_dialogue_S8mueSK
+  Option_1: eden_dialogue_m00DOWu
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_StartSwampBarge_Roggery
+  Output: eden_dialogue_4mmCuG0
+  Option_1: eden_dialogue_aqamImD
+  OptionNext_1: End
 }
 { +Dialogue Name: Eden_StartJungleSpanj_Init
   NPCName: eden_dialogue_uj04K8U

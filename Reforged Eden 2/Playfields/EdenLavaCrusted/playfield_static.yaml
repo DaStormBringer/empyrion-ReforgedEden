@@ -206,9 +206,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseCommandRG
+        - GroupName: R2DroneBaseT5
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           # Biome: [ Mountains, LowMountains ]
           IsImportant: True
@@ -225,13 +225,13 @@ POIs:
  
         - GroupName: XenuComArray
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINear: [R2DroneBaseT5]
           SpawnPOINearRange: [150, 200]
           Properties: 
             - Key: RegenAfter
@@ -241,20 +241,20 @@ POIs:
         # Defense for drone base
         - GroupName: XenuDefenceT3RocketRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINear: [R2DroneBaseT5]
           SpawnPOINearRange: [200, 350]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: DroneBaseCommandRG
+        - GroupName: R2DroneBaseT5
           Faction: Zirax
           FactionTerritory: [Rados]
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
@@ -264,37 +264,37 @@ POIs:
           DronesMinMax: [ 8, 12 ]
           ReserveCount: 15
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 3000
           Properties: 
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: XenuRadarTurretRocketRG
+        - GroupName: R2XenuDefenseT3
           Faction: Zirax
           FactionTerritory: [Rados]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 9, 12 ]
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           TroopTransport: False
-          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINear: [R2DroneBaseT5]
           SpawnPOINearRange: [250, 350]
           Properties: 
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [XenuMainRG]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [150, 300]
           Properties: 
             - Key: RegenAfter
@@ -302,9 +302,9 @@ POIs:
 
        # ================================
         # Xenu POI complex with several structures around
-        - GroupName: XenuMainRG 
+        - GroupName: R2XenuMain 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -312,7 +312,7 @@ POIs:
           DronesMinMax: [ 3, 4 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseCommandRG]
+          SpawnPOIAvoid: [R2DroneBaseT5]
           SpawnPOIAvoidDistance: 3000  
           SpawnResource: ["GoldResource:2-3"]
           SpawnResourceRange: [225,400]
@@ -320,16 +320,16 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [XenuMainRG]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [150, 300]
           Properties: 
             - Key: RegenAfter
@@ -337,13 +337,13 @@ POIs:
 
         - GroupName: XenuComArray
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [XenuMainRG]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [150, 200]
           Properties: 
             - Key: RegenAfter
@@ -351,14 +351,14 @@ POIs:
 
         - GroupName: XenuDefenceT3RocketRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [XenuMainRG]
+          SpawnPOINear: [R2XenuMain]
           SpawnPOINearRange: [350, 500]
           Properties: 
             - Key: RegenAfter
@@ -366,7 +366,7 @@ POIs:
 
         - GroupName: FactoryZiraxRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 2, 4 ]
@@ -380,7 +380,7 @@ POIs:
         # Ghyst POI complex with several structures around
         - GroupName: GhystMainRG 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -388,7 +388,7 @@ POIs:
           DronesMinMax: [ 3, 4 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseCommandRG, XenuMainRG]
+          SpawnPOIAvoid: [R2DroneBaseT5, R2XenuMain]
           SpawnPOIAvoidDistance: 3000  
           SpawnResource: ["ZascosiumResource:2-3"]
           SpawnResourceRange: [150,225]
@@ -396,9 +396,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -411,9 +411,9 @@ POIs:
             - Key: RegenAfter
               Value: 720   
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
@@ -426,9 +426,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT2RG
+        - GroupName: R2GhystDefenseT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -443,9 +443,9 @@ POIs:
 
        # ================================
         # Large Bunker
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -459,31 +459,31 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [200, 350]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [200, 350]
           Properties: 
             - Key: RegenAfter
@@ -492,7 +492,7 @@ POIs:
               # Polaris Lava Mining Outposts
         - GroupName: PolarisLavaMiningAux
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
         #  Biomes: [ LavaLake ]  
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.2
@@ -505,7 +505,7 @@ POIs:
 
         - GroupName: PolarisLavaMiningAux
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
         #  Biomes: [ LavaLake ]  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -520,7 +520,7 @@ POIs:
 
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisLavaMiningAux]
           SpawnPOINearRange: [500, 1000]
@@ -532,9 +532,9 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random military outposts scattered around planet
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -548,21 +548,21 @@ POIs:
 
         - GroupName: XenuComArray
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [XenuAuxT2RG]
+          SpawnPOINear: [R2XenuAuxT2]
           SpawnPOINearRange: [150, 200]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -576,7 +576,7 @@ POIs:
 
         - GroupName: Eden_RadosT0Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0
@@ -589,7 +589,7 @@ POIs:
 
         - GroupName: Eden_RadosT1Lava
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -605,7 +605,7 @@ POIs:
         # Random Rados survey sites guarding ore deposits.
         - GroupName: Eden_RadosSurveyLava
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats, Crusted ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -613,7 +613,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseCommandRG, GhystMainRG, XenuMainRG] 
+          SpawnPOIAvoid: [R2DroneBaseT5, GhystMainRG, R2XenuMain] 
           SpawnPOIAvoidDistance: 3000 
           AuxiliaryPOIs: [Eden_RadosDefenseLavaT1]
           SpawnResource: ["GoldResource:0-1","PromethiumResource:0-1","ZascosiumResource:0-1"]
@@ -625,7 +625,7 @@ POIs:
               # Defense for survey sites.
         - GroupName: Eden_RadosDefenseLavaT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False         
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           IsAuxPOI: True
@@ -643,9 +643,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 4, 5 ]
           IsScalingCount: True
@@ -661,9 +661,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 4, 5 ]
           IsScalingCount: True
@@ -679,7 +679,7 @@ POIs:
 
         - GroupName: Eden_RadosDefenseLavaT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 4, 5 ]
           IsScalingCount: True
@@ -697,7 +697,7 @@ POIs:
               # Polaris Lava Mining Outposts
         - GroupName: PolarisLavaMiningAux
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
         #  Biomes: [ LavaLake ]  
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
@@ -741,7 +741,7 @@ POIs:
 
         - GroupName: Eden_HarvestMagmacite
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Hotspot ]
           PlaceAt: OnWater
           CountMinMax: [ 0, 2 ]
@@ -964,7 +964,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseCommandRG, GhystMainRG, GhystBunker, XenuMainRG, Eden_RadosSurveyLava]
+   - SpawnAt: [R2DroneBaseT5, GhystMainRG, R2GhystMain, R2XenuMain, Eden_RadosSurveyLava]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 400
      RadiusRandom: 100
@@ -978,7 +978,7 @@ SpawnZones:
          Amount: 250
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [GhystAuxT2RG]
+   - SpawnAt: [R2GhystAuxT2]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

@@ -1655,19 +1655,15 @@
   Material: resourcesoft
   Shape: Terrain
   Mesh: terrain
-  Texture: 219   
-  XpFactor: 2.0
+  Texture: 219
+  AutoMinerFactor: 0.5
+  XpFactor: 1.75
   ShowUser: No
   Group: resource
-  { Child DropOnDestroy_1
+  { Child DropOnDestroy
     Item: Graphite
     Count: "1,4"
     Prob: 0.6
-  }
-  { Child DropOnDestroy_2
-    Item: CrushedStone
-    Count: "1,2"
-    Prob: 0.1
   }
 }
 
@@ -4867,7 +4863,7 @@
   IsOxygenTight: true, display: true
   IsActivateable: true
   IsIgnoreLC: true
-  HitPoints: 500, type: int, display: true
+  HitPoints: 1000, type: int, display: true
   EnergyOut: 1750, type: int, display: true, formatter: Watt
   CPUIn: 1000, type: int, display: true
   Category: Devices
@@ -5885,7 +5881,7 @@
   AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "3,3,1", display: true
   Mass: 183, type: float, display: true, formatter: Kilogram
-  HitPoints: 400, type: int, display: true
+  HitPoints: 600, type: int, display: true
   BlockColor: "110,110,110"
   IsAccessible: true, type: bool
   IsLockable: true
@@ -6203,7 +6199,7 @@
   IsOxygenTight: true, display: true
   IsActivateable: true
   IsIgnoreLC: true
-  HitPoints: 750, type: int, display: true
+  HitPoints: 500, type: int, display: true
   EnergyOut: 750, type: int, display: true, formatter: Watt
   CPUIn: 500, type: int, display: true
   Category: Devices
@@ -10479,7 +10475,7 @@
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 200, type: int, display: true, formatter: Watt
   CPUIn: 350, type: int, display: true 
   EnergyInIdle: 1, type: int, display: true, formatter: Watt
   HitPoints: 3750, type: int, display: true
@@ -11429,7 +11425,7 @@
   Info: bkiWarpDrive, display: true
   EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 15000, type: int, display: true
-  HitPoints: 1500, type: int, display: true
+  HitPoints: 7500, type: int, display: true
 
   BlastParticleName: @rg_projectiles/RG_BlastWarp
   BlastParticleIndex: 0
@@ -13243,7 +13239,7 @@
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
-  EnergyIn: 600, type: int, display: true, formatter: Watt
+  EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 700, type: int, display: true 
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 3000, type: int, display: true
@@ -14799,6 +14795,7 @@
   IsActivateableInCP: true
   IsLockable: true
   IsOxygenTight: false, display: true
+  OccupySizeInBlocks: true
   # IsGPUInstance: true
   Info: bkiConstructorLarge, display: true
   StackSize: 500
@@ -18467,7 +18464,7 @@
   AllowPlacingAt: GV, display: true
   CPUIn: 500, type: int, display: true 
 
-  EnergyIn: 600, type: int, display: true, formatter: Watt  
+  EnergyIn: 500, type: int, display: true, formatter: Watt  
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   
   UnlockCost: 25, display: true
@@ -20897,14 +20894,14 @@
 { +Block Id: 1429, Name: DoorInterior01SlimSV, Ref: DoorSS01
   Model: @models/Blocks/Spaceship/DoorInteriorSlimSVPrefab
   Mass: 48, type: float, display: true, formatter: Kilogram
-  HitPoints: 300, type: int, display: true
+  HitPoints: 400, type: int, display: true
   IsOxygenTight: false, display: true
   SizeInBlocks: "2,3,1", display: true
 }
 { +Block Id: 1430, Name: DoorSS01Slim, Ref: DoorSS01
   Model: @models/Blocks/Spaceship/DoorNewSlimSSPrefab
   Mass: 48, type: float, display: true, formatter: Kilogram
-  HitPoints: 300, type: int, display: true
+  HitPoints: 500, type: int, display: true
   IsOxygenTight: true, display: true
   SizeInBlocks: "2,3,1", display: true
 }
@@ -20974,7 +20971,7 @@
   Mass: 2500, type: float, display: true, formatter: Kilogram
   Volume: 937.5, type: float, display: true, formatter: Liter
   CPUIn: 750, type: int, display: true
-  HitPoints: 750, type: int, display: true
+  HitPoints: 1250, type: int, display: true
   IsDuplicateable: false
   MaxCount: 1, type: int, display: true
   ForceMaxCount: true
@@ -21239,7 +21236,7 @@
   StackSize: 1000
   Category: Devices
   EnergyDynamicGroup: Constructor
-  Mass: 250, type: float, display: true, formatter: Kilogram
+  Mass: 150, type: float, display: true, formatter: Kilogram
   CPUIn: 300, type: int, display: true
   HitPoints: 1125, type: int, display: true
   Volume: 93.75, type: float, display: true, formatter: Liter
@@ -25262,7 +25259,11 @@
 { +Block Id: 1740, Name: TribalBarrels, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
+  IsLockable: true
   LootList: 201
   VolumeCapacity: 750, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBarrelsPrefab
@@ -25278,7 +25279,10 @@
 { +Block Id: 1742, Name: TribalBaskets, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 203
   VolumeCapacity: 500, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBasketsPrefab
@@ -25310,7 +25314,10 @@
 { +Block Id: 1745, Name: TribalBookcase1, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 54
   VolumeCapacity: 800, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBookcase1Prefab
@@ -25320,7 +25327,10 @@
 { +Block Id: 1746, Name: TribalBookcase2, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 54
   VolumeCapacity: 400, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBookcase2Prefab
@@ -25330,7 +25340,10 @@
 { +Block Id: 1747, Name: TribalBuckets, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 202
   VolumeCapacity: 350, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBucketsPrefab
@@ -25340,7 +25353,11 @@
 { +Block Id: 1748, Name: TribalCabinet1, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
+  IsLockable: true
   LootList: 204
   VolumeCapacity: 500, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalCabinet1Prefab
@@ -25350,7 +25367,10 @@
 { +Block Id: 1749, Name: TribalCabinet2, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 203
   VolumeCapacity: 500, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalCabinet2Prefab
@@ -25359,6 +25379,9 @@
 }
 { +Block Id: 1750, Name: TribalCauldron, Ref: DecoTemplate
   Material: Device
+  IndexName: Container
+  Group: cpgEquipment  
+  IsAccessible: true, type: bool
   LootList: 200
   Model: @models2/Entities/Decorations/TribalAssets/TribalCauldronPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -25385,7 +25408,10 @@
 { +Block Id: 1754, Name: TribalSacks, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
   LootList: 202
   VolumeCapacity: 500, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalSacksPrefab
@@ -25476,15 +25502,23 @@
 }
 { +Block Id: 1767, Name: TribalTub, Ref: DecoTemplate
   Material: Wood
+  Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   Model: @models2/Entities/Decorations/TribalAssets/TribalTubPrefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: DecoTribalBlocks
+  IsAccessible: true, type: bool
   LootList: 201
 }
 { +Block Id: 1768, Name: TribalBox, Ref: DecoTemplate
   Material: Wood
   Class: Container
+  IndexName: Container
+  Group: cpgEquipment  
   DropInventoryEntity: DropContainer
+  IsAccessible: true, type: bool
+  IsLockable: true
   LootList: 204
   VolumeCapacity: 100, type: float, display: true, formatter: Liter  
   Model: @models2/Entities/Decorations/TribalAssets/TribalBoxPrefab
@@ -26430,7 +26464,7 @@
   Mass: 2600, type: float, display: true, formatter: Kilogram
   Volume: 843.75, type: float, display: true, formatter: Liter
   AllowPlacingAt: GV, display: true
-  EnergyIn: 1000, type: int, display: true, formatter: Watt
+  EnergyIn: 800, type: int, display: true, formatter: Watt
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 7500, type: int, display: true
   StackSize: 500
@@ -27437,7 +27471,7 @@
 }
 { +Block Id: 2027, Name: CPUExtenderSVT3
   Group: cpgCore
-  MarketPrice: 55764, display: true
+  MarketPrice: 57234, display: true
   IndexName: Computer
   Material: Device
   Shape: ModelEntity
@@ -35417,7 +35451,7 @@
   IsOxygenTight: false, display: true
   IsActivateable: true
   IsIgnoreLC: true
-  HitPoints: 260, type: int, display: true
+  HitPoints: 1500, type: int, display: true
   EnergyOut: 4000, type: int, display: true, formatter: Watt
   CPUIn: 2000, type: int, display: true
   Category: Devices
@@ -35461,7 +35495,7 @@
   IsIgnoreLC: true
   Info: bkiFusionReactorSV, display: true
   Category: Devices
-  HitPoints: 1500, type: int, display: true
+  HitPoints: 2000, type: int, display: true
   IsActivateable: true
   RepFac: 4.0
   OccupySizeInBlocks: true
@@ -35627,7 +35661,7 @@
   SizeInBlocksLocked: "Base,MS"
   Volume: 4800, type: float, display: true, formatter: Liter
   Mass: 72000, type: float, display: true, formatter: Kilogram
-  HitPoints: 3000, type: int, display: true
+  HitPoints: 15000, type: int, display: true
   PickupTarget: WarpDriveT2
   IsDuplicateable: false
   MaxCount: 1, type: int, display: true
@@ -35684,7 +35718,7 @@
   SizeInBlocksLocked: "Base,MS"
   Volume: 937.5, type: float, display: true, formatter: Liter
   Mass: 5000, type: float, display: true, formatter: Kilogram
-  HitPoints: 1500, type: int, display: true
+  HitPoints: 2500, type: int, display: true
   PickupTarget: WarpDriveSVT2
   IsDuplicateable: false
   MaxCount: 1, type: int, display: true
@@ -39722,7 +39756,7 @@
   HitPoints: 1500, type: int, display: true
   ThrusterForce: 400, type: int, display: true, formatter: Newton
   EnergyIn: 180, type: int, display: true, formatter: Watt
-  CPUIn: 150, type: int, display: true
+  CPUIn: 112, type: int, display: true
 
   UnlockCost: 10, display: true
   UnlockLevel: 7, display: true
@@ -42419,7 +42453,7 @@
   IndexName: WeaponShip
   Group: cpgHarvest
   Material: WeaponSmall
-  MarketPrice: 1108, display: true
+  MarketPrice: 980, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: DrillAttachmentSVT1Weapon
@@ -42442,7 +42476,7 @@
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 200, type: int, display: true, formatter: Watt
   CPUIn: 350, type: int, display: true 
   EnergyInIdle: 1, type: int, display: true, formatter: Watt
   HitPoints: 3750, type: int, display: true
@@ -43903,7 +43937,7 @@
   HitPoints: 1250, type: int, display: true
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 125, type: int, display: true, formatter: Watt
   CPUIn: 500, type: int, display: true  
   EnergyInIdle: 10, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: 1250, type: int, display: true
@@ -43942,7 +43976,7 @@
   HitPoints: 750, type: int, display: true
   Mass: 800, type: float, display: true, formatter: Kilogram
   Volume: 320, type: float, display: true, formatter: Liter
-  EnergyIn: 500, type: int, display: true, formatter: Watt
+  EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 750, type: int, display: true  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: 2500, type: int, display: true
@@ -43983,7 +44017,7 @@
   HitPoints: 2250, type: int, display: true
   Mass: 3200, type: float, display: true, formatter: Kilogram
   Volume: 640, type: float, display: true, formatter: Liter
-  EnergyIn: 1000, type: int, display: true, formatter: Watt
+  EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 1250, type: int, display: true  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: 5000, type: int, display: true
@@ -44026,7 +44060,7 @@
   HitPoints: 1250, type: int, display: true
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 125, type: int, display: true, formatter: Watt
   CPUIn: 500, type: int, display: true  
   EnergyInIdle: 10, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: -625, type: int, display: true
@@ -44065,7 +44099,7 @@
   HitPoints: 750, type: int, display: true
   Mass: 800, type: float, display: true, formatter: Kilogram
   Volume: 320, type: float, display: true, formatter: Liter
-  EnergyIn: 500, type: int, display: true, formatter: Watt
+  EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 750, type: int, display: true  
   EnergyInIdle: 5, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: -1250, type: int, display: true
@@ -44106,7 +44140,7 @@
   HitPoints: 2250, type: int, display: true
   Mass: 3200, type: float, display: true, formatter: Kilogram
   Volume: 640, type: float, display: true, formatter: Liter
-  EnergyIn: 1000, type: int, display: true, formatter: Watt
+  EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 1250, type: int, display: true  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: -2500, type: int, display: true
@@ -44148,7 +44182,7 @@
   HitPoints: 1000, type: int, display: true
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 125, type: int, display: true, formatter: Watt
   CPUIn: 500, type: int, display: true
 
   UnlockCost: 8, display: true
@@ -44178,7 +44212,7 @@
   HitPoints: 750, type: int, display: true
   Mass: 800, type: float, display: true, formatter: Kilogram
   Volume: 320, type: float, display: true, formatter: Liter
-  EnergyIn: 500, type: int, display: true, formatter: Watt
+  EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 750, type: int, display: true
 
   UnlockCost: 30, display: true
@@ -44208,7 +44242,7 @@
   HitPoints: 1200, type: int, display: true
   Mass: 3200, type: float, display: true, formatter: Kilogram
   Volume: 640, type: float, display: true, formatter: Liter
-  EnergyIn: 750, type: int, display: true, formatter: Watt
+  EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 1250, type: int, display: true
 
   UnlockCost: 50, display: true
@@ -44864,7 +44898,7 @@
 { +Block Name: Eden_ShuttleDockPlanet, Ref: Eden_ShuttleDockOutgoing
   Model: @eden_blockmodels/Eden_ShuttleDockPlanet
 }
-# Deco Dishes
+# Deco Dishes and Blocks
 { Block Name: DecoDishBlocks
   Material: Device
   Shape: Invisible
@@ -44905,7 +44939,7 @@
   BlockColor: "110,110,110"
   SymType: 4
   StackSize: 500
-  BlastParticleIndex: 11
+  BlastParticleIndex: 1
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 2, type: int, display: true, formatter: Watt
@@ -44929,6 +44963,98 @@
   CustomIcon: DecoDish5x5V2
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 10000, type: int, display: true
+}
+# Deco Autominers
+{ Block Name: DecoAutominerBlocks
+  Material: Device
+  Shape: Invisible
+  MarketPrice: 15728, display: true
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocksLocked: "Base,MS"    
+  Volume: 800, type: float, display: true, formatter: Liter  
+  Info: bkiDecoAutominer, display: true
+  CustomIcon: AutoMiningDeviceT1
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  StackSize: 1000
+  IsAccessible: true, type: bool
+  IsOxygenTight: false, display: true
+  Category: Deco Blocks
+  ChildBlocks: "DecoAutominerT1, DecoAutominerT2, DecoAutominerT3"
+  
+  UnlockCost: 0
+  UnlockLevel: 1 
+  TechTreeNames: ""
+}
+{ Block Name: DecoAutominerT1
+  Material: Device
+  Shape: ModelEntity
+  Model: @models/Blocks/Devices/AutoMinerT1FWNPrefab
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Class: NPCDialogue
+  NPCModelRotation: false
+  Group: cpgConsoles
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "5,5,5", display: true
+  ModelOffset: "0,-0.05,0"
+  Mass: 5000, type: float, display: true, formatter: Kilogram 
+  Volume: 800, type: float, display: true, formatter: Liter
+  Info: bkiDecoAutominer, display: true
+  CustomIcon: AutoMiningDeviceT1
+  IsAccessible: true, type: bool
+  IsActivateable: true
+  IsOxygenTight: false, display: true 
+  TemplateRoot: DecoAutominerBlocks
+  BlockColor: "110,110,110"
+  SymType: 4
+  StackSize: 500
+  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleIndex: 0
+  BlastRadius: 3
+  BlastDamage: 80
+  EnergyIn: 10, type: int, display: true, formatter: Watt
+  HitPoints: 5000, type: int, display: true
+  CPUIn: 0, type: int, display: false
+}
+{ Block Name: DecoAutominerT2, Ref: DecoAutominerT1
+  Model: @models/Blocks/Devices/AutoMinerT2FWNPrefab
+  CustomIcon: AutoMiningDeviceT2
+}
+{ Block Name: DecoAutominerT3, Ref: DecoAutominerT1
+  Model: @models/Blocks/Devices/AutoMinerT3FWNPrefab
+  CustomIcon: AutoMiningDeviceT3
+}
+# Decorative Box for mission POIs
+{ Block Name: ContainerDeco01, Ref: DecoTemplate
+  Material: Device
+  Shape: ModelEntity
+  Info: bkiMissionBox, display: true
+  Model: @models/Blocks/Mothership/CargoBoxPrefab
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab  
+  Class: NPCDialogue
+  CustomIcon: ContainerMS01
+  Category: Deco Blocks
+  AllowedInBlueprint: false, display: true
+  NPCModelRotation: false
+  Group: cpgConsoles
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  IsAccessible: true, type: bool
+  IsOxygenTight: false, display: true
+  Volume: 80, type: float, display: true, formatter: Liter
+  Mass: 20, type: float, display: true, formatter: Kilogram  
+  HitPoints: 5000, type: int, display: true
+  EnergyIn: 0, type: int, display: false, formatter: Watt
+  BlastParticleIndex: 5
+  BlastRadius: 0
+  BlastDamage: 0
+  TemplateRoot: ContainerLargeBlocks 
+  ShowUser: Yes
 }
 # Junk Thrusters
 { Block Name: ThrusterMSJunk2x2
@@ -45246,7 +45372,6 @@
   Radiation: 4, display: RadiationLevel 
   Temperature: -27, display: true
 }
-
 
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Blocks
@@ -45609,7 +45734,7 @@
   Class: AutoMiner
   Material: Device
   Shape: ModelEntity
-  MarketPrice: 500000, display: true
+  MarketPrice: 226109, display: true
   # Model: @models/Blocks/Terrain/AutoMiningDeviceT1Prefab
   Model: @eden_blockmodels/Eden_ModelAutominerT4
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
@@ -45655,7 +45780,7 @@
 # ----------------------------------------- Hydroponic bays
 # Hydroponics Bay
 { +Block Name: Eden_HydroponicsEmpty
-  MarketPrice: 5000, display: true
+  MarketPrice: 12989, display: true
   Material: Device
   Shape: ModelEntity
   Model: @eden_blockmodels/Eden_Hydroponics2Empty
@@ -45684,7 +45809,7 @@
 # Hydroponics Bay (Grain)
 { +Block Name: Eden_HydroponicsGrain
   Class: PlantGrowing
-  MarketPrice: 10000, display: true
+  MarketPrice: 16724, display: true
   AllowedInBlueprint: false, display: true 
   IndexName: Plant
   Material: Device
@@ -46168,7 +46293,7 @@
   Material: Device
   Shape: Invisible
   CustomIcon: Eden_WarningLight
-  MarketPrice: 2000, display: true
+  MarketPrice: 80, display: true
   ShowBlockName: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -46274,7 +46399,7 @@
   Material: Device
   IndexName: EdenEffects
   Shape: Invisible
-  MarketPrice: 2000, display: true
+  MarketPrice: 80, display: true
   ShowBlockName: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   Place: Free
@@ -46474,7 +46599,6 @@
   Info: Eden_EffectsBlock_DockGuideCyan2info, display: true
   Model: @eden_blockmodels/Eden_EffectsBlock_DockGuideYelAn
 }
-
 
 { Block Name: Eden_PosterEdenMining
   Model: @eden_blockmodels/Eden_ModelPosterEdenMining
@@ -53084,5 +53208,33 @@
   # SpawnClass: Eden_GuardAndroidSoldier
   # SpawnCount: 1
   # Info: Eden_GuardSpawnerAssaultCyborginfo, display: true
+# }
+
+
+
+# { +Block Name: Eden_TestAutominerBase, Ref: Eden_EffectsBlocksFire
+  # Info: Eden_EffectsBlock_DockGuideCyan2info, display: true
+  # Model: @models/Blocks/Devices/AutoMinerT1FWNPrefab
+  # SizeInBlocks: "5,5,5", display: true
+  # SizeInBlocksLocked: "Base,MS"
+  # ModelOffset: "0,-0.05,0"
+# }
+
+
+# { +Block Name: Eden_TestAutominerBase2, Ref: Eden_EffectsBlocksFire
+  # Info: Eden_EffectsBlock_DockGuideCyan2info, display: true
+  # Model: @models/Blocks/Devices/AutoMinerT2FWNPrefab
+  # SizeInBlocks: "5,5,5", display: true
+  # SizeInBlocksLocked: "Base,MS"
+  # ModelOffset: "0,-0.05,0"
+# }
+
+
+# { +Block Name: Eden_TestAutominerBase3, Ref: Eden_EffectsBlocksFire
+  # Info: Eden_EffectsBlock_DockGuideCyan2info, display: true
+  # Model: @models/Blocks/Devices/AutoMinerT3FWNPrefab
+  # SizeInBlocks: "5,5,5", display: true
+  # SizeInBlocksLocked: "Base,MS"
+  # ModelOffset: "0,-0.05,0"
 # }
 

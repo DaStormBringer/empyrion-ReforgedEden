@@ -253,7 +253,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: SmugglerHideout
+        - GroupName: R2PirateAuxT1
           Faction: None
           IsScalingCount: True
           CountMinMax: [ 0, 1 ]
@@ -261,7 +261,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 1
           TroopTransport: False   
-          SpawnPOIAvoid: [SmugglerHideout, RadosAuxT2RG, PolarisLogisticsMainRG]
+          SpawnPOIAvoid: [R2PirateAuxT1, RadosAuxT2RG, PolarisLogisticsMainRG]
           POIDistance: 2000
           Properties: 
             - Key: MapMarker

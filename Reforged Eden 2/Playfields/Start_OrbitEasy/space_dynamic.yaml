@@ -644,7 +644,7 @@ POIs:
     # - Type: BA_Alien
       # GroupName: TSOColonists
       # Faction: Colonists
-      # NoShieldReload: True
+      # # NoShieldReload: True
       # Mode: Survival
       # CountMinMax: [ 1, 1 ]
       # Probability: 0.1
@@ -677,7 +677,7 @@ POIs:
     # - Type: BA_Alien
       # GroupName: Eden_ColSpaceMainT2
       # Faction: Colonists
-      # NoShieldReload: True
+      # # NoShieldReload: True
       # Mode: Survival
       # CountMinMax: [ 1, 1 ]
       # Probability: 0.1

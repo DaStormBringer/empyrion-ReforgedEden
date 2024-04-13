@@ -207,7 +207,7 @@ POIs:
               # Deep Core Mining Station
         - GroupName: Eden_DeepCoreMine
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnResource: ["PentaxidResource:1-2"]
@@ -236,7 +236,7 @@ POIs:
 
         - GroupName: Eden_DeepCoreDefense
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 6, 8 ]
           SpawnPOINear: [Eden_DeepCoreMine]
           SpawnPOINearRange: [125, 250]
@@ -262,7 +262,7 @@ POIs:
               # Polaris Research Crawler
         - GroupName: Eden_PolCrawler
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           Properties:
@@ -290,7 +290,7 @@ POIs:
 
         - GroupName: Eden_BuriedPod
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # IsImportant: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True

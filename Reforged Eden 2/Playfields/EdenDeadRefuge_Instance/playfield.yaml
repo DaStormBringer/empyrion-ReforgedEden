@@ -1225,9 +1225,9 @@ Biome:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG  #CommandCenter
+        - GroupName: R2DroneBase  #CommandCenter
           Faction: Alien  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -1241,7 +1241,7 @@ POIs:
               # Entries into the planet
         # - GroupName: Eden_ProgenitorEntry
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # CountMinMax: [ 1, 1 ]
           # IsImportant: True
           # Properties:
@@ -1311,7 +1311,7 @@ POIs:
 # Lab where the player wakes up.
         - Type: BA_Admin
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeLab
           Mode: Survival
           Name: Lab
@@ -1328,7 +1328,7 @@ POIs:
 # Bridge
         - Type: BA_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeBridge1
           Mode: Survival
           Name: Bridge
@@ -1345,7 +1345,7 @@ POIs:
 # Artillery Station
         - Type: BA_Admin
           Faction: Public
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeArtillery
           Mode: Survival
           Name: Artillery Station
@@ -1361,7 +1361,7 @@ POIs:
 # First defensive line
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDef2
           Mode: Survival
           Name: Defense
@@ -1377,7 +1377,7 @@ POIs:
 
         - Type: BA_Admin
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDefBase
           Mode: Survival
           Name: Defense Base
@@ -1395,7 +1395,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDef2
           Mode: Survival
           Name: Defense
@@ -1411,7 +1411,7 @@ POIs:
 
         - Type: BA_Admin
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDefBase
           Mode: Survival
           Name: Defense Base
@@ -1428,7 +1428,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDef1
           Mode: Survival
           Name: Defense
@@ -1444,7 +1444,7 @@ POIs:
 
         - Type: BA_Admin
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDefBase
           Mode: Survival
           Name: Defense Base
@@ -1461,7 +1461,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDef1
           Mode: Survival
           Name: Defense
@@ -1477,7 +1477,7 @@ POIs:
 
         - Type: BA_Admin
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeDefBase
           Mode: Survival
           Name: Defense Base
@@ -1494,7 +1494,7 @@ POIs:
 # First defensive line tanks
         - Type: HV_Player
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeTank1
           Mode: Survival
           Name: Tank
@@ -1510,7 +1510,7 @@ POIs:
 
         - Type: HV_Player
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeTank1
           Mode: Survival
           Name: Tank
@@ -1526,7 +1526,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeTank1
           Mode: Survival
           Name: Tank
@@ -1542,7 +1542,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeTank1
           Mode: Survival
           Name: Tank
@@ -1560,7 +1560,7 @@ POIs:
 # Speeders
         - Type: HV_Player
           Faction: Public
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeSpeeder
           Mode: Survival
           Name: Speeder
@@ -1570,7 +1570,7 @@ POIs:
 
         - Type: HV_Player
           Faction: Public
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeSpeeder
           Mode: Survival
           Name: Speeder
@@ -1580,7 +1580,7 @@ POIs:
 
         - Type: HV_Player
           Faction: Public
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeSpeeder
           Mode: Survival
           Name: Speeder
@@ -1590,7 +1590,7 @@ POIs:
 
         - Type: HV_Player
           Faction: Public
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_HV_RefugeSpeeder
           Mode: Survival
           Name: Speeder
@@ -1601,7 +1601,7 @@ POIs:
 # First Progenitor attack force
         - Type: CV_Alien
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeAttack1
           Mode: Survival
           Name: Alien Attack Force
@@ -1621,7 +1621,7 @@ POIs:
 
         - Type: CV_Alien
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeAttack1
           Mode: Survival
           Name: Alien Attack Force
@@ -1642,7 +1642,7 @@ POIs:
 # Alien Spheres to blow up for mission
         - Type: BA_Alien
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeSphere
           Mode: Survival
           Name: Alien Attack Force
@@ -1658,7 +1658,7 @@ POIs:
 
         - Type: BA_Alien
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeSphere
           Mode: Survival
           Name: Alien Attack Force
@@ -1679,7 +1679,7 @@ POIs:
 # Outpost near devastation
         - Type: BA_Admin
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugePost1
           Mode: Survival
           Name: Watchpost 7
@@ -1694,7 +1694,7 @@ POIs:
 # Second outpost
         - Type: BA_Alien
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugePost2
           Mode: Survival
           Name: Eastern Outpost
@@ -1715,7 +1715,7 @@ POIs:
 # Last Progenitor attack force
         - Type: BA_Alien
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeAttack2
           Mode: Survival
           Name: Alien Attack Force
@@ -1735,7 +1735,7 @@ POIs:
 
         - Type: BA_Alien
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_CV_RefugeAttack2
           Mode: Survival
           Name: Alien Attack Force
@@ -1756,7 +1756,7 @@ POIs:
 # Final objective
         - Type: BA_Admin
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeArk
           Mode: Survival
           Name: The Ark
@@ -1773,7 +1773,7 @@ POIs:
 
         # - Type: BA_Alien
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Prefab: BA_PiratesDefense2Desert
           # Mode: Survival
           # Name: Defense
@@ -1790,7 +1790,7 @@ POIs:
 
         # - Type: CV_Alien
           # Faction: Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Prefab: OPV_LegacyInfectorG
           # Mode: Survival
           # Name: Infector
@@ -1802,7 +1802,7 @@ POIs:
 
         # - Type: BA_Alien
           # Faction: Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Prefab: OPV_LegacyInfectorG
           # Mode: Survival
           # Name: Infector2

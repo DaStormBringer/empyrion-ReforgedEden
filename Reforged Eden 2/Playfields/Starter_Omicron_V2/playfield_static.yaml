@@ -243,7 +243,7 @@ RandomResources:
 # Starting deposit
     - Name: IronResource
       CountMinMax: [ 1, 1 ]
-      SizeMinMax: [ 3, 3 ]
+      SizeMinMax: [ 4, 4 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0
       MaxDroneCount: 1
@@ -273,7 +273,7 @@ RandomResources:
 # Starting deposit
     - Name: CopperResource
       CountMinMax: [ 1, 1 ]
-      SizeMinMax: [ 3, 3 ]
+      SizeMinMax: [ 4, 4 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0
       MaxDroneCount: 1
@@ -299,7 +299,7 @@ RandomResources:
 # Starting deposit
     - Name: SiliconResource
       CountMinMax: [ 1, 1 ]
-      SizeMinMax: [ 3, 3 ]
+      SizeMinMax: [ 4, 4 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0
       MaxDroneCount: 1
@@ -761,13 +761,13 @@ POIs:
               Value: 720
 
 # =============================================== Faction Alien
+# In radiated zones
         - GroupName: R2AbandonedStarter
           Faction: Alien
           AvoidFactionTerritory: True
           Biome: [ RadiatedFog, Radiated ]
-          IsScalingCount: True
           IsImportant: True
-          CountMinMax: [ 1, 1 ]
+          CountMinMax: [ 3, 3 ]
           AuxiliaryPOIs: [RE2_NestStarterT1]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -776,6 +776,26 @@ POIs:
           SpawnPOIAvoid: [NullPOI, R2AbandonedStarter]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["PromethiumResource:1-1"]
+          SpawnResourceRange: [175,200]
+          Properties:
+            - Key: Music
+              Value: DarkSoundscape
+            - Key: RegenAfter
+              Value: 360
+
+# Outside radiated zones
+        - GroupName: R2AbandonedStarter
+          Faction: Alien
+          AvoidFactionTerritory: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 3, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [NullPOI, R2AbandonedStarter]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [175,200]
           Properties:
             - Key: Music

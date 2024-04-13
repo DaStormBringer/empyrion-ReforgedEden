@@ -12,7 +12,7 @@ Description: "Difficulty: [c][ffff00]Medium[-][/c]
 The Hiigarans have landed a colony here from their journey to the Centaurus Cluster, and called it 'New Kharak', based on some distant planet similar to this one. The Zirax have setup some pretty stern defenses here, if somewhat green, guarding the ship graveyards which serve as valuable salvage.
 
 
-The Hiigarans tried to have peaceful contact, but has slowly devolved into violence, with much infighting to control the salvage here. Many ships still litter the surface, and most of them could be returned to service, with the right repairs...
+The Hiigarans tried to have peaceful contact, but has slowly devolved into violence, with much infighting to control the salvage here. Many ships still litter the surface...
 
 
 [c][DAA520][i]Tied first place for the November 2019 Custom Planet Challenge.[/i][-][/c]
@@ -140,6 +140,15 @@ RandomResources:
    #DistTypeCylinder:
       #MaxRadius: 13
       #YVariance: 5
+-  Name: NeodymiumResource
+   Biome: [Sand, Dunes]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [5, 9]
+   SizeMinMax: [5, 8]
+   DepthMinMax: [20, 38]
+   DroneProb: 0.80000000000000004
+   MaxDroneCount: 4
 -  Name: SathiumResource
    Biome: [Sand, Dunes]
    IsScalingCount: True
@@ -179,486 +188,2357 @@ AsteroidResources:
 -  Name: PromethiumResource
    Threshold: 0.20000000000000001
    Amount: 0.20000000000000001
+
+
+### POIs
 POIs:
-   Random:
-   -  GroupName: DroneBaseT1RG
-      Faction: Zirax
-      NoShieldReload: True
-      LevelMod: +2
-      Biome: [Plateau, LowMountains, LowMountains_1, Mountains, SandDrift]
-      DroneBaseSetup: DroneBaseSetup
-      CountMinMax: [1, 1]
-      IsImportant: True
-      DroneProb: 1
-      DronesMinMax: [3, 5]
-      ReserveCount: 5
-      SpawnResource: ['IronResource:0-1', 'PromethiumResource:0-1', 'CopperResource:0-1']
-      SpawnResourceRange: [150, 400]
-      Properties:
-      -  Key: RegenAfter
-         Value: 1440
-   -  GroupName: RadosDefenceT1Sand
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [2, 2]
-      DroneProb: 1
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      TroopTransport: True
-      SpawnPOINear: [DroneBaseT1RG]
-      SpawnPOINearRange: [200, 300]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: JunkT1
-      Faction: None
-      CountMinMax: [4, 7]
-      SpawnPOINear: [DroneBaseT1RG]
-      SpawnPOINearRange: [150, 600]
-      Properties:
-      -  Key: MapDistance
-         Value: 25
-      -  Key: HudDistance
-         Value: 50
-      -  Key: MapMarker
-         Value: Neutral
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: Ruins
-      Faction: None
-      Biome: [SandDrift, Dunes, Sand]
-      CountMinMax: [3, 5]
-      NoShieldReload: True
-      Properties:
-      -  Key: MapDistance
-         Value: 0
-      -  Key: HudDistance
-         Value: 50
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: Wreckage
-      Faction: None
-      Biome: [SandDrift, Sand, Dunes]
-      CountMinMax: [2, 5]
-      NoShieldReload: True
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: CrashedShipGreen
-      Faction: None
-      Biome: [LargeCrater, Oasis]
-      CountMinMax: [1, 1]
-      IsImportant: True
-      DroneProb: 0.20000000000000001
-      DronesMinMax: [1, 2]
-      ReserveCount: 1
-      TroopTransport: False
-      Properties:
-      -  Key: MapDistance
-         Value: 275
-   -  GroupName: ShipGrave
-      Faction: None
-      Biome: [Sand, Dunes, Plains, LargeCrater, SandDrift, DustBowl]
-      CountMinMax: [12, 20]
-      IsImportant: True
-      DroneProb: 0.10000000000000001
-      DronesMinMax: [1, 1]
-      ReserveCount: 1
-      TroopTransport: False
-      Properties:
-      -  Key: HudDistance
-         Value: 100
-      -  Key: RegenAfter
-         Value: 1440
-   -  GroupName: ShipWrecks
-      Faction: None
-      Biome: [DustBowl, SandDrift, Dunes, Sand, Plains]
-      CountMinMax: [14, 20]
-      IsImportant: True
-      DroneProb: 0.20000000000000001
-      DronesMinMax: [1, 1]
-      ReserveCount: 1
-      TroopTransport: False
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-      -  Key: MapDistance
-         Value: 275
-   -  GroupName: ShipWrecks
-      Faction: None
-      CountMinMax: [5, 8]
-      IsImportant: False
-      DroneProb: 0.20000000000000001
-      DronesMinMax: [1, 1]
-      ReserveCount: 1
-      TroopTransport: False
-      SpawnPOINear: [CrashedShipGreen]
-      SpawnPOINearDistance: 750
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-      -  Key: MapDistance
-         Value: 275
-   -  GroupName: FighterWreck
-      Faction: None
-      Biome: [DustBowl, SandDrift, Dunes, Sand, Plains, LargeCrater]
-      Type: SV_Player
-      CountMinMax: [16, 20]
-      IsImportant: True
-      DroneProb: 0.10000000000000001
-      DronesMinMax: [1, 1]
-      ReserveCount: 1
-      TroopTransport: False
-      Properties:
-      -  Key: MapDistance
-         Value: 50
-   -  GroupName: PlanetVesselBase
-      Faction: Zirax
-      NoShieldReload: True
-      BiomesExcluded: [Plains]
-      PlanetVesselBaseSetup: PlanetVesselBaseSetup
-      CountMinMax: [1, 1]
-      IsImportant: True
-      DroneProb: 1
-      DronesMinMax: [2, 3]
-      ReserveCount: 3
-      NoShieldReload: True
-      TroopTransport: True
-      SpawnResourceRange: [80, 100]
-      Properties:
-      -  Key: RegenAfter
-         Value: 1440
-   -  GroupName: RadosAuxT1SandRG
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [1, 1]
-      DroneProb: 0.90000000000000002
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: False
-      SpawnPOINear: [PlanetVesselBase]
-      SpawnPOINearRange: [100, 250]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosDefenseT1
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [2, 4]
-      DroneProb: 0.69999999999999996
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: False
-      SpawnPOINear: [PlanetVesselBase]
-      SpawnPOINearRange: [250, 400]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: CrashedShip
-      Faction: None
-      CountMinMax: [0, 1]
-      DroneProb: 0.29999999999999999
-      DronesMinMax: [1, 1]
-      TroopTransport: False
-      SpawnPOINear: [PlanetVesselBase]
-      SpawnPOINearRange: [500, 700]
-      Properties:
-      -  Key: MapMarker
-         Value: Neutral
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosMainSandRG
-      Faction: Zirax
-      NoShieldReload: True
-      BiomesExcluded: [Plains]
-      CountMinMax: [1, 1]
-      IsImportant: True
-      DroneProb: 1
-      DronesMinMax: [2, 3]
-      ReserveCount: 2
-      TroopTransport: True
-      SpawnResource: ['PromethiumResource:1-2']
-      SpawnResourceRange: [80, 100]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosAuxT1SandRG
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [1, 1]
-      DroneProb: 1
-      DronesMinMax: [3, 3]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: False
-      SpawnPOINear: [RadosMainSandRG]
-      SpawnPOINearRange: [100, 250]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosDefenceT1Sand
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [1, 2]
-      DroneProb: 0.69999999999999996
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: False
-      SpawnPOINear: [RadosMainSandRG]
-      SpawnPOINearRange: [250, 400]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosBunkerRG
-      Faction: Zirax
-      NoShieldReload: True
-      BiomesExcluded: [Plains]
-      CountMinMax: [1, 1]
-      IsImportant: True
-      DroneProb: 1
-      DronesMinMax: [2, 3]
-      ReserveCount: 5
-      TroopTransport: True
-      SpawnPOINear: [PlanetVesselBase]
-      SpawnPOINearRange: [1500, 2000]
-      SpawnResource: ['SathiumResource:1-2']
-      SpawnResourceRange: [80, 100]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosMainSandRG
-      Faction: Zirax
-      NoShieldReload: True
-      BiomesExcluded: [Plains]
-      CountMinMax: [1, 1]
-      DroneProb: 1
-      DronesMinMax: [2, 3]
-      ReserveCount: 2
-      TroopTransport: True
-      SpawnPOINear: [RadosBunkerRG]
-      SpawnPOINearRange: [200, 250]
-      SpawnResource: ['PromethiumResource:1']
-      SpawnResourceRange: [80, 100]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosAuxT1SandRG
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [1, 1]
-      DroneProb: 1
-      DronesMinMax: [1, 3]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: True
-      SpawnPOINear: [RadosBunkerRG]
-      SpawnPOINearRange: [150, 400]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: RadosDefenceT1Sand
-      Faction: Zirax
-      NoShieldReload: True
-      CountMinMax: [1, 1]
-      DroneProb: 0.69999999999999996
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: False
-      SpawnPOINear: [RadosBunkerRG]
-      SpawnPOINearRange: [300, 550]
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: JunkT1
-      Faction: None
-      CountMinMax: [2, 5]
-      SpawnPOINear: [RadosBunkerRG]
-      SpawnPOINearRange: [300, 650]
-      Properties:
-      -  Key: MapDistance
-         Value: 25
-      -  Key: HudDistance
-         Value: 50
-      -  Key: MapMarker
-         Value: Neutral
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: JunkT2
-      Faction: None
-      CountMinMax: [5, 15]
-      DronesMinMax: [1, 1]
-      ReserveCount: 1
-      TroopTransport: False
-      SpawnPOINear: [ShipWrecks, ShipGrave]
-      SpawnPOINearDistance: 650
-      Properties:
-      -  Key: HudDistance
-         Value: 80
-      -  Key: MapDistance
-         Value: 50
-   -  GroupName: RadosAuxT1SandRG
-      Faction: Zirax
-      NoShieldReload: True
-      BiomesExcluded: [Plains]
-      CountMinMax: [5, 7]
-      IsScalingCount: True
-      DroneProb: 0.29999999999999999
-      DronesMinMax: [1, 2]
-      ReserveCount: 2
-      NoShieldReload: True
-      TroopTransport: True
-      Properties:
-      -  Key: RegenAfter
-         Value: 720
-   -  GroupName: Artifacts
-      Faction: Alien
-      BiomesExcluded: [Plains, LowMountains, LowMountains_1, Mountains]
-      CountMinMax: [1, 1]
-      IsScalingCount: False
-      IsImportant: True
-      Properties:
-      -  Key: Music
-         Value: EvilWhispering
-      -  Key: RegenAfter
-         Value: 720
-   FixedPlayerStart:
-   -  Mode: Creative
-      SubMode: Empty
-      Pos: [0, 147, 0]
-      RotY: 160
-      Items: [CrushedStone, CrushedStone, CrushedStone]
-      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
-      Armor: ArmorLight
-   -  Mode: Creative
-      SubMode: Normal
-      Pos: [0, 52, 0]
-      RotY: 30
-      Items: [CrushedStone, CrushedStone, CrushedStone]
-      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
-      Armor: ArmorLight
-   -  Mode: Debug
-      Pos: [0, 147, 0]
-      RotY: 160
-      Items: [CrushedStone, CrushedStone, CrushedStone]
-      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
-   -  Mode: Survival
-      Spawn: EscapePod
-      Pos: [0, 0, 0]
-      Items: ['SurvivalTent, Flashlight, AntibioticOintment:2, Bandages:2, StomachPills:2, PowerBar:2, EnergyDrink', 'SurvivalTent, Flashlight, AntibioticOintment, Bandages, PowerBar', 'SurvivalTent, Flashlight, Bandages', '#FreshStart: SurvivalTent, Flashlight, Bandages, WaterBottle']
-      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
-      Armor: ArmorLight
+    Random:
+
+# =================================================================================================
+# Main POIs. Important or larger POIs and POI compounds.
+# =================================================================================================
+
+# =============================================== Faction Zirax Main
+# ====================== Drone Base
+# Zirax Drone base
+# # Forced to spawn on mountains. Allows different attack vectors
+        - GroupName: R2DroneBase
+          Faction: Zirax
+          IsCommandCenter: True
+          DroneBaseSetup: DroneBaseSetup
+          Biome: [ Plateau, LowMountains, LowMountains_1, Mountains, SandDrift ]
+          IsImportant: True
+          CountMinMax: [ 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          SpawnResource: ["IronResource:0-1","PromethiumResource:0-1","CopperResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+# Defenses for Drone Base
+        - GroupName: R2XenuDefenseT2
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2XenuDefenseT2]
+          SpawnPOIAvoidDistance: 250
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [300, 400]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2XenuDefenseT1
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 5, 7 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2XenuDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [700, 800]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2XenuDeco
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# Crashed ship that was shot down near drone base
+        - GroupName: CrashedShip
+          Faction: None
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2RadosDefenseT1Desert]
+          SpawnPOINearRange: [250, 350]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Rados Missile Bunker
+        - GroupName: R2RadosMainT3Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [3000, 6000]
+          SpawnResource: ["PromethiumResource:1-2"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2RadosAuxT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2RadosMainT3Desert]
+          SpawnPOINearRange: [350, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2RadosDefenseT2Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2RadosMainT3Desert]
+          SpawnPOINearRange: [500, 650]
+          Properties:
+            - Key: RegenAfter
+              Value: 720 
+
+# Deco
+        - GroupName: R2RadosDeco
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2RadosMainT3Desert]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Rados Salvage Operation.
+# Dummy POI
+        - GroupName: Eden_DummyRados
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase]
+          SpawnPOIAvoidDistance: 3500
+          SpawnPOINear: [R2RadosMainT3Desert]
+          SpawnPOINearRange: [3000, 8000]
+          SpawnResource: ["CopperResource:1-2","CobaltResource:1-2","NeodymiumResource:1-2"]
+          SpawnResourceRange: [100,600]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2RadosAuxT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOINear: [Eden_DummyRados]
+          SpawnPOINearRange: [150, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2RadosDefenseT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2RadosDefenseT1Desert]
+          SpawnPOIAvoidDistance: 250
+          SpawnPOINear: [Eden_DummyRados]
+          SpawnPOINearRange: [400, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720 
+
+# Crashed ships
+        - GroupName: CrashedShip
+          Faction: None
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyRados]
+          SpawnPOINearRange: [150, 400]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2RadosDeco
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyRados]
+          SpawnPOINearRange: [25, 150]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Trader Main
+# ====================== Main Compound only in Trader territory
+        - GroupName: R2TraderMain
+          Faction: Trader
+          FactionTerritory: [Eden_TraderTerritory]
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnResource: ["PromethiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2TraderAuxT2
+          Faction: Trader
+          FactionTerritory: [Eden_TraderTerritory]
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2TraderMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2TraderAuxT1
+          Faction: Trader
+          FactionTerritory: [Eden_TraderTerritory]
+          CountMinMax: [ 5, 10 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2TraderMain]
+          SpawnPOINearRange: [1500, 3000]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2TraderDefenseT1
+          Faction: Trader
+          FactionTerritory: [Eden_TraderTerritory]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2TraderMain]
+          SpawnPOINearRange: [400, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Main Compound
+        - GroupName: R2PolarisMain
+          Faction: Polaris
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["PromethiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: FactoryPolarisRG3
+          Faction: Polaris
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT2
+          Faction: Polaris
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [200, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisDefenseT2
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [250, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PolarisDeco
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Polaris Salvage Operation. Won't show up if there's already a Rados salvage operation.
+# Dummy POI
+        - GroupName: Eden_DummyPolaris
+          Faction: Polaris
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_DummyRados]
+          SpawnPOIAvoidDistance: 8000
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          CountMinMax: [ 2, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [75, 150]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisDefenseT1
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [250, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Crashed ships
+        - GroupName: CrashedShip
+          Faction: None
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [150, 400]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PolarisDeco
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [25, 150]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Second Polaris Mining Operation.
+# Dummy POI
+        - GroupName: Eden_DummyPolaris3
+          Faction: Polaris
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 0, 1 ] # 50% chance
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [1500, 4500]
+          SpawnResource: ["CopperResource:1-2","CobaltResource:1-2","NeodymiumResource:1-2"]
+          SpawnResourceRange: [100,600]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          CountMinMax: [ 0, 2 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris3]
+          SpawnPOINearRange: [75, 150]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisDefenseT1
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris3]
+          SpawnPOINearRange: [250, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Crashed ships
+        - GroupName: CrashedShip
+          Faction: None
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris]
+          SpawnPOINearRange: [150, 400]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PolarisDeco
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris3]
+          SpawnPOINearRange: [25, 150]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Factory Compound in Polaris Territory
+        - GroupName: Eden_DummyPolaris2
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 0, 1 ] # 50% chance
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2PolarisMain]
+          SpawnPOIAvoidDistance: 1500
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+# Factory
+        - GroupName: FactoryPolarisRG1
+          Faction: Polaris
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT2
+          Faction: Polaris
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisDefenseT1
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PolarisDefenseT1]
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [Eden_DummyPolaris2]
+          SpawnPOINearRange: [500, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PolarisDeco
+          Faction: Polaris
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyPolaris2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Farr Main
+# Farr setup. Needs to be redone for RE2.
+
+# Main Single
+        - GroupName: FarrMainSingleRG
+          Faction: Farr
+          # NoShieldReload: True
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: FarrDefenseT1RG
+          Faction: Farr
+          Territory: False
+          # NoShieldReload: True
+          IsImportant: True
+          IsScalingCount: True
+          CountMinMax: [ 2, 3 ]
+          SpawnPOINear: [FarrMainSingleRG]
+          SpawnPOINearRange: [250, 400]
+          DroneProb: 0.25
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Main HQ
+        - GroupName: FarrMainRG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: FarrDefenseT1RG
+          Faction: Farr
+          Territory: False
+          # NoShieldReload: True
+          IsImportant: True
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [FarrMainRG]
+          SpawnPOINearRange: [250, 400]
+          DroneProb: 0.25
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Trading Compound
+        - GroupName: FarrTradingT3RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.25
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 3
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrDefenseT1RG
+          Faction: Farr
+          Territory: False
+          # NoShieldReload: True
+          IsImportant: True
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [FarrTradingT3RG]
+          SpawnPOINearRange: [250, 400]
+          DroneProb: 0.25
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT3RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [FarrTradingT3RG]
+          SpawnPOINearRange: [200, 350]
+          DroneProb: 0.1
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT2RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [FarrTradingT3RG]
+          SpawnPOINearRange: [250, 500]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT1RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 4, 6 ]
+          SpawnPOINear: [FarrTradingT3RG]
+          SpawnPOINearRange: [250, 500]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Settlement around Farr Monument
+
+        - GroupName: R2FarrMonument
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
+          SpawnPOIAvoidDistance: 3000
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT1RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [R2FarrMonument]
+          SpawnPOINearRange: [200, 350]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT0RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 3, 6 ]
+          SpawnPOINear: [R2FarrMonument]
+          SpawnPOINearRange: [250, 800]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+# More settlements
+        - GroupName: R2FarrMonument
+          Faction: Farr
+          # NoShieldReload: True
+          IsScalingCount: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 4 ]
+          ReserveCount: 3
+          AuxiliaryPOIs: [FarrAuxT1RG, FarrAuxT0RG]
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT2RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, R2FarrMonument, FarrAuxT2RG]
+          SpawnPOIAvoidDistance: 1500
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          AuxiliaryPOIs: [FarrAuxT1RG, FarrAuxT0RG]
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT1RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 2 ]
+          IsAuxPOI: True
+          SpawnPOINearRange: [100, 250]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT0RG
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 2, 4 ]
+          IsAuxPOI: True
+          SpawnPOINearRange: [300, 500]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+# Alternative Village Hubs
+
+        - GroupName: FarrAuxT3bRG
+          Faction: Farr
+          # NoShieldReload: True
+        #  IsImportant: True
+          CountMinMax: [ 0, 1 ]
+       #   SpawnPOIAvoid: [FarrMainSingleRG]
+       #   SpawnPOIAvoidDistance: 3000
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 5 ]
+          ReserveCount: 5
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT2bRG
+          BiomesExcluded: [ Radiated ]
+          Faction: Farr
+          # NoShieldReload: True
+       #   IsImportant: True
+          CountMinMax: [ 2, 4 ]
+          SpawnPOINear: [FarrAuxT3bRG]
+          SpawnPOINearRange: [200, 500]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT1b
+          BiomesExcluded: [ Radiated ]
+          Faction: Farr
+          # NoShieldReload: True
+       #   IsImportant: True
+          CountMinMax: [ 2, 4 ]
+          SpawnPOINear: [FarrAuxT1b]
+          SpawnPOINearRange: [200, 500]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+# Random structures
+        - GroupName: FarrAuxT2RG
+          Faction: Farr
+          # NoShieldReload: True
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.35
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT1RG
+          Faction: Farr
+          # NoShieldReload: True
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: FarrAuxT0RG
+          Faction: Farr
+          # NoShieldReload: True
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+#Defenses 
+
+        - GroupName: FarrDefenseT1RG
+          Faction: Farr
+          Territory: False
+          # NoShieldReload: True
+          IsScalingCount: True
+          CountMinMax: [ 2, 4 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 3 ]
+          ReserveCount: 2
+          Properties:
+            - Key: Music
+              Value: moonstone
+            - Key: RegenAfter
+              Value: 720
+              
+
+        - GroupName: FactoryPolarisRG2
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [FarrTradingT1RG]
+          SpawnPOINearRange: [200, 500] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT3PolarisRG 
+          Territory: False
+          Faction: Farr
+          # NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [FarrTradingT1RG]
+          SpawnPOINearRange: [400, 600] 
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+
+# =============================================== Faction Pirates Main
+# ====================== Aux Main Compound
+        - GroupName: R2PirateMain
+          Faction: Pirates
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_DummyRados]
+          SpawnPOIAvoidDistance: 8000 # Won't show up if there's a Rados mining operation on the planet
+          SpawnResource: ["CopperResource:0-1","CobaltResource:0-1"]
+          SpawnResourceRange: [100,600]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2PirateAuxT1
+          Faction: Pirates
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PirateMain]
+          SpawnPOINearRange: [100, 400]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PirateDefenseT2
+          Faction: Pirates
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PirateDefenseT2]
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [R2PirateMain]
+          SpawnPOINearRange: [500, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PirateDeco
+          Faction: Pirates
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PirateMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Aux T2 Compound
+        - GroupName: R2PirateAuxT2
+          Faction: Pirates
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 0, 1 ] # 50% chance
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PirateMain]
+          SpawnPOIAvoidDistance: 6000
+          SpawnResource: ["PromethiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2PirateAuxT1
+          Faction: Pirates
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PirateAuxT2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PirateDefenseT1
+          Faction: Pirates
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2PirateDefenseT1]
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [R2PirateAuxT2]
+          SpawnPOINearRange: [500, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PirateDeco
+          Faction: Pirates
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PirateAuxT2]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Colonists Main
+# ====================== Main Compound
+        - GroupName: R2ColonistMain
+          Faction: Colonists
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["PromethiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          SpawnPOIAvoid: [Eden_DummyPolaris]
+          SpawnPOIAvoidDistance: 100000 # Won't show up if there's a Polaris mining operation
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2ColonistAux
+          Faction: Colonists
+          IsImportant: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2ColonistDefense
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2ColonistDefense]
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [500, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2ColonistDeco
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Colony mission
+        - GroupName: R2ColonistMission
+          Faction: Colonists
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["PromethiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          SpawnPOIAvoid: [R2TradeTower]
+          SpawnPOIAvoidDistance: 100000 # Won't show up if there's a Trader tower
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: R2ColonistAux
+          Faction: Colonists
+          IsImportant: True
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMission]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2ColonistDefense
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2ColonistDefense]
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [R2ColonistMission]
+          SpawnPOINearRange: [500, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Talon Main
+# ====================== Main Village. 50% chance. It's a harsh place.
+        - GroupName: TalonStoneMain
+          Faction: Talon
+          IsCommandCenter: True
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnResource: ["CobaltResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: TalonAuxSand
+          Faction: Talon
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINearRange: [100, 200]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: TalonStoneFarm
+          Faction: Talon
+          CountMinMax: [ 3, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: TalonDefenseSand
+          Faction: Talon
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Far reaching guard towers
+        - GroupName: TalonDefenseSand
+          Faction: Talon
+          Territory: False
+          CountMinMax: [ 0, 4 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [TalonDefenseSand]
+          SpawnPOIAvoidDistance: 500
+          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINearRange: [750, 1000]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Oasis Village. 50% chance.
+        - GroupName: TalonMain
+          Faction: Talon
+          Biome: [ Forest, DeepForest, Oasis ]
+          IsCommandCenter: True
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: TalonAux
+          Faction: Talon
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonMain]
+          SpawnPOINearRange: [100, 200]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: TalonFarmhouse
+          Faction: Talon
+          Biome: [ Forest, DeepForest, Oasis ]
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: TalonFarm
+          Faction: Talon
+          Biome: [ Forest, DeepForest, Oasis ]
+          CountMinMax: [ 6, 8 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [TalonMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Talon mining operation. Only if both Rados and Polaris mines are not present and if Talon is present.
+        - GroupName: Eden_DummyTalon
+          Faction: Talon
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [Eden_DummyRados, Eden_DummyPolaris]
+          SpawnPOIAvoidDistance: 8000 # Won't show up if there's a Rados or Polaris mining operation on the planet
+          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINearRange: [1500, 100000]
+          SpawnResource: ["CopperResource:1-2","CobaltResource:1-2","NeodymiumResource:1-2"]
+          SpawnResourceRange: [100,450]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: TalonAuxSand
+          Faction: Talon
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyTalon]
+          SpawnPOINearRange: [25, 75]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineBasicTalonRG
+          Faction: Talon
+          CountMinMax: [ 5, 7 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyTalon]
+          SpawnPOINearRange: [50, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Alien
+# Abandoned complex. Only present if no Rados or Polaris mining operation and still rare.
+        - GroupName: Eden_DummyPOI
+          Faction: Alien
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2DroneBaseT5, R2XenuMain, R2XenuAuxT2, R2EpsilonMain, R2EpsilonAuxT2, R2RadosMainT3, R2RadosAuxT2, R2RadosMainT3Snow, R2RadosAuxT2Snow, R2RadosMainT3Desert, R2RadosAuxT2Desert, R2TradeTower, R2TraderMain, R2PolarisTradePlanet, R2PolarisMain, R2PolarisAuxT2]
+          SpawnPOIAvoidDistance: 2500
+          SpawnResource: ["NeodymiumResource:1-2"]
+          SpawnResourceRange: [300,600]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+# Abandoned complex. Only present if no Rados or Polaris mining operation and still rare.
+        - GroupName: R2AbandonedPOI
+          Faction: Alien
+          AvoidFactionTerritory: True
+          CountMinMax: [ 3, 4 ]
+          IsScalingCount: True
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2DroneBaseT5, R2XenuMain, R2XenuAuxT2, R2EpsilonMain, R2EpsilonAuxT2, R2RadosMainT3, R2RadosAuxT2, R2RadosMainT3Snow, R2RadosAuxT2Snow, R2RadosMainT3Desert, R2RadosAuxT2Desert, R2TradeTower, R2TraderMain, R2PolarisTradePlanet, R2PolarisMain, R2PolarisAuxT2]
+          SpawnPOIAvoidDistance: 750
+          SpawnPOINear: [Eden_DummyPOI]
+          SpawnPOINearRange: [250, 500]
+          Properties:
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 4320
+
+# Abandoned POIs
+        - GroupName: R2AbandonedPOI
+          Faction: Alien
+          AvoidFactionTerritory: True
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2DroneBaseT5, R2XenuMain, R2XenuAuxT2, R2EpsilonMain, R2EpsilonAuxT2, R2RadosMainT3, R2RadosAuxT2, R2RadosMainT3Snow, R2RadosAuxT2Snow, R2RadosMainT3Desert, R2RadosAuxT2Desert, R2TradeTower, R2TraderMain, R2PolarisTradePlanet, R2PolarisMain, R2PolarisAuxT2]
+          SpawnPOIAvoidDistance: 750
+          Properties:
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 4320
+
+# =================================================================================================
+# Random POIs. Low tier or less important POIs that spawn after the main ones to fill up the rest of the planet.
+# =================================================================================================
+
+# =============================================== Faction Zirax Random
+# ====================== Rados random ship graveyards
+# T2 aux
+        - GroupName: R2RadosAuxT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          AuxiliaryPOIs: [CrashedShip, R2RadosDefenseT1Desert]
+          DroneProb: 1
+          DronesMinMax: [ 3, 4 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2DroneBase, R2RadosMainT3Desert]
+          SpawnPOIAvoidDistance: 1500
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Defense
+        - GroupName: R2RadosDefenseT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          IsAuxPOI: True
+          CountMinMax: [ 4, 5 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINearRange: [250, 350]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Crashed ships
+        - GroupName: CrashedShip
+          Faction: None
+          IsAuxPOI: True
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINearRange: [100, 200]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Rados Random POIs
+# T2 aux
+        - GroupName: R2RadosAuxT2Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2DroneBase, R2RadosMainT3Desert]
+          SpawnPOIAvoidDistance: 1500
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# T1 aux
+        - GroupName: R2RadosAuxT1Desert
+          Faction: Rados
+          FactionTerritory: [Zirax]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2RadosMainT3Desert]
+          SpawnPOIAvoidDistance: 1500
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Rados Random POIs home territory
+# T2 aux
+        - GroupName: R2RadosAuxT2Desert
+          Faction: Rados
+          FactionTerritory: [Rados]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain, R2RadosMainT3Desert]
+          SpawnPOIAvoidDistance: 1000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# T1 aux
+        - GroupName: R2RadosAuxT1Desert
+          Faction: Rados
+          FactionTerritory: [Rados]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain, R2RadosMainT3Desert]
+          SpawnPOIAvoidDistance: 1000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Polaris Random
+# ====================== Random POIs
+        - GroupName: R2PolarisAuxT2
+          Faction: Polaris
+          IsScalingCount: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          IsScalingCount: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT3PolarisRG
+          Faction: Polaris
+          IsScalingCount: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Random POIs in Polaris Territory
+        - GroupName: R2PolarisAuxT2
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          IsScalingCount: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: MineT3PolarisRG
+          Faction: Polaris
+          FactionTerritory: [Eden_PolarisTerritory]
+          IsScalingCount: True
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.2
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Pirates Random
+        - GroupName: R2PirateAuxT2
+          Faction: Pirates
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PirateAuxT1
+          Faction: Pirates
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Colonists Random
+        - GroupName: R2ColonistAux
+          Faction: Colonists
+          Territory: False
+          IsScalingCount: True
+          CountMinMax: [ 0, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# In mountains
+        - GroupName: R2ColonistAux
+          Faction: Colonists
+          Territory: False
+          Biome: [ Mountains, Plateau, LowMountains, LowMountains_1,  ]
+          IsScalingCount: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Talon Buried Village Compound
+        - GroupName: Eden_TalonStoneRuinBuried
+          Faction: None
+          Territory: False
+          IsImportant: True
+          Biome: [ Dunes ]
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["NeodymiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: TalonStoneRuin
+          Faction: None
+          CountMinMax: [ 8, 12 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_TalonStoneRuinBuried]
+          SpawnPOINearRange: [25, 75]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# ====================== Talon Ruined Village Compound
+        - GroupName: Eden_DummyTalon2
+          Faction: None
+          Territory: False
+          IsImportant: True
+          Biome: [ Dunes ]
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [TalonMain, TalonAux, Eden_TalonStoneRuinBuried]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["NeodymiumResource:0-1"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: TalonStoneRuin
+          Faction: None
+          CountMinMax: [ 8, 12 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [Eden_DummyTalon2]
+          SpawnPOINearRange: [25, 75]
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Other
+
+# Crashed ships
+        - GroupName: CrashedShip
+          Faction: None
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+# Crashed ships in Zirax territory
+        - GroupName: CrashedShip
+          Faction: None
+          FactionTerritory: [Xenu]
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+
+   # FixedPlayerStart:
+   # -  Mode: Creative
+      # SubMode: Empty
+      # Pos: [0, 147, 0]
+      # RotY: 160
+      # Items: [CrushedStone, CrushedStone, CrushedStone]
+      # Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      # Armor: ArmorLight
+   # -  Mode: Creative
+      # SubMode: Normal
+      # Pos: [0, 52, 0]
+      # RotY: 30
+      # Items: [CrushedStone, CrushedStone, CrushedStone]
+      # Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      # Armor: ArmorLight
+   # -  Mode: Debug
+      # Pos: [0, 147, 0]
+      # RotY: 160
+      # Items: [CrushedStone, CrushedStone, CrushedStone]
+      # Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+   # -  Mode: Survival
+      # Spawn: EscapePod
+      # Pos: [0, 0, 0]
+      # Items: ['SurvivalTent, Flashlight, AntibioticOintment:2, Bandages:2, StomachPills:2, PowerBar:2, EnergyDrink', 'SurvivalTent, Flashlight, AntibioticOintment, Bandages, PowerBar', 'SurvivalTent, Flashlight, Bandages', '#FreshStart: SurvivalTent, Flashlight, Bandages, WaterBottle']
+      # Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      # Armor: ArmorLight
+
+
+# Drones
+# ------------ Aerodrones with propellers.
+# DroneSmallZiraxEMP
+# DroneAeroZiraxMinigun
+# DroneAeroZiraxCannon
+# DroneAeroZiraxRocket
+
+# ------------ Small hoverdrones
+# DroneHoverZiraxMinigun
+# DroneHoverZiraxLaser
+# DroneHoverZiraxRocket
+
+# ------------ Large gunships
+# DroneLargeZiraxMinigun
+# DroneLargeZiraxRocket
+# DroneLargeZiraxPlasma
+
 DroneBaseSetup:
-   Random:
-   -  GroupName: DroneBaseSetup
-      DronesMinMax: [4, 5]
-      ReserveCount: 5
-      DroneProb: 1
-      Difficulty: 6
-      PresetStyle: 2
-      Stock:
-      -  Name: DroneSmallFast01Minigun
-         Amount: 300
-         Extra: 0
-      -  Name: DroneSmallFast01Rocket
-         Amount: 100
-         Extra: 0
-      -  Name: DroneSmallFast01Minigun
-         Amount: Infinite
-         Extra: 1
-      -  Name: DroneSmallFast01Plasma
-         Amount: Infinite
-         Extra: 1
-      -  Name: DroneSmallAttackBase
-         Amount: Infinite
-         Extra: 1
-      -  Name: DroneTroopsTransport
-         Amount: Infinite
-         Extra: 2
-      -  Name: ZiraxMinigun
-         Amount: 500
-         Extra: 3
-      -  Name: ZiraxRocket
-         Amount: 500
-         Extra: 3
-      -  Name: RipperDog
-         Amount: 150
-         Extra: 3
-      -  Name: TurretRobotV2
-         Amount: 300
-         Extra: 3
-      PlanetVesselBase:
-         Name: PlanetVesselBaseSetup
-         Faction: Zirax
-         Position3D: [0, 102, 0]
-         BaseType: PlanetVesselBase
-         KeyId: 0
-         PlanetVessel:
-         -  Name: PV_RadosPatrolVessel2
-            Faction: Zirax
-            Mission: PlanetPatrol
-            FixedMaxSpeed: 5
-            RespawnDelay: 12
-            RangePatrolTask:
-               Position3D: [1500, 80, 0]
-               Radius: 800
-               DistToGround: 60
-            AttackCVCircleAround:
-               DistToTarget: 210
-            RangePatrolAvoidArea: []
+    Random:
+        - GroupName: DroneBaseSetup
+          Difficulty: 6
+          PresetStyle: 3
+          Stock:
+
+              - Name: DroneAeroZiraxMinigun
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneAeroZiraxCannon
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneAeroZiraxRocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeZiraxMinigun
+                Amount: 50
+                Extra: 0
+
+              - Name: DroneBomberAttackBase
+                Amount: Infinite
+                Extra: 1
+
+              - Name: EnemyDroneV2Plasma
+                Amount: Infinite
+                Extra: 1
+
+              - Name: DroneTroopsTransport
+                Amount: Infinite
+                Extra: 2
+
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: ZiraxRocket
+                Amount: 500
+                Extra: 3
+
+              - Name: RipperDog
+                Amount: 150
+                Extra: 3
+
+              - Name: Mechanoid
+                Amount: 300
+                Extra: 3
+
+    PlanetVessels:
+# Guarding drone base
+              - Name: R2OPVZiraxT1
+                Faction: Zirax
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 20
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 300
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [R2DroneBase]
+                  Radius: 1000
+                  DistToGround: 200
+             #   Properties:
+              #    - Key: AIManPatrolFactions
+             #       Value: "Farr"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 4
+                    Type: FighterDrone
+
+# Patrolling Rados salvage operation in a large radius
+              - Name: R2OPVZiraxT1
+                Faction: Zirax
+                CountMinMax: [2, 2]
+                LevelMod: 2
+                FixedMaxSpeed: 10
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 1200
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [Eden_DummyRados]
+                  Radius: 5000
+                  DistToGround: 200
+                Properties:
+                  - Key: AIManPatrolFactions
+                    Value: "Zirax, Epsilon, Rados, Ghyst, Xenu"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 2
+                    Type: FighterDrone
+
+# Patrolling whole planet. Only in Zirax territory.
+              - Name: R2OPVZiraxT1
+                Faction: Xenu
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 50
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 1200
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [R2DroneBase]
+                  DistToGround: 200
+                Properties:
+                  - Key: AIManPatrolFactions
+                    Value: "Zirax, Epsilon, Rados, Ghyst, Xenu"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 4
+                    Type: FighterDrone
+
+# Patrolling Polaris salvage operation
+              - Name: R2OPVPolarisT1
+                Faction: Zirax
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 10
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 1200
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [Eden_DummyPolaris]
+                  Radius: 1000
+                  DistToGround: 200
+                Properties:
+                  - Key: AIManPatrolFactions
+                    Value: "Polaris"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneSmallPolarisLaser
+                    Amount: 2
+                    Type: FighterDrone
+
 DroneSpawning:
-   Random:
-   -  DronesMinMax: [5, 10]
-      CenterX: -5000
-      Radius: 3000
-   -  DronesMinMax: [5, 10]
-      CenterX: -5000
-      Radius: 3000
+    Random:
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 5000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -5000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 2500
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -2500
+          Radius: 3000
+
+
+SpawnRateZones:
+   - SpawnAt: [R2PolarisTradePlanet]
+     Radius: 1000
+     RadiusRandom: 50
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 0.7
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7"
+
+# Clears out hostile spawns next to abandoned POIs.
+   - SpawnAt: [R2AbandonedPOI]
+     Radius: 150
+     RadiusRandom: 25
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 0
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7"
+
 SpawnZones:
--  SpawnAt: [DroneBaseT1RG, RadosBunkerRG]
-   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
-   Radius: 500
-   RadiusRandom: 50
-   RateMultiplyerCenter: 1
-   RateMultiplyerEdge: 0.59999999999999998
-   Color: 1.0, 1.0, 1.0, 1.0
-   SpawnOnlyIfPoiIsAlien: True
-   Entities:
-   -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol]
-      Biomes: [Any]
-      Amount: 200
-      Period: Always
-      DelayMinMax: [8, 12]
--  SpawnAt: [PlanetVesselBase, RadosMainSandRG]
-   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
-   Radius: 500
-   RadiusRandom: 25
-   RateMultiplyerCenter: 1
-   RateMultiplyerEdge: 0.59999999999999998
-   Color: 1.0, 1.0, 1.0, 1.0
-   SpawnOnlyIfPoiIsAlien: True
-   Entities:
-   -  Names: [ZiraxMinigunPatrol, ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
-      Biomes: [Any]
-      Amount: 50
-      Period: Always
-      DelayMinMax: [5, 10]
--  SpawnAt: [RadosAuxT1SandRG]
-   BiomesExcluded: [LowMountains, LowMountains_1, Mountains]
-   Radius: 100
-   RadiusRandom: 25
-   RateMultiplyerCenter: 0.29999999999999999
-   Color: 1.0, 1.0, 1.0, 1.0
-   SpawnOnlyIfPoiIsAlien: True
-   Entities:
-   -  Names: [ZiraxShotgunPatrol, ZiraxCrawlerPatrol]
-      Biomes: [Any]
-      Amount: 10
-      Period: Always
-      DelayMinMax: [-1, -1]
+# ====================== Spawn Zones Resources and crashed ships. Dependent on planet.
+   - SpawnAt: [CrashedShip, PromethiumResource]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [AlienBugs03, Spiders01]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# ====================== Spawn Zones Zirax
+# Drone Base and Main POIs
+   - SpawnAt: [R2DroneBase, R2XenuMain, R2EpsilonMain, R2GhystMain, R2RadosMainT3, R2RadosMainT3Snow, R2RadosMainT3Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 1000
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [Eden_ZiraxSalvageDronesGuarded]
+         Biomes: [Any]
+         Amount: 100
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T2 POIs
+   - SpawnAt: [R2XenuAuxT2, R2EpsilonAuxT2, R2GhystAuxT2, R2RadosAuxT2, R2RadosAuxT2Snow, R2RadosAuxT2Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 800
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [Eden_ZiraxSalvageDronesGuarded]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T1 POIs
+   - SpawnAt: [R2XenuAuxT1, R2EpsilonAuxT1, R2GhystAuxT1, R2RadosAuxT1, R2RadosAuxT1Snow, R2RadosAuxT1Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [Eden_ZiraxSalvageDronesGuarded]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# Salvage Operation
+   - SpawnAt: [Eden_DummyRados]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [Eden_ZiraxSalvageDronesGuarded]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# ====================== Spawn Zones Polaris
+# Salvage Drones
+   - SpawnAt: [R2PirateMain, R2PolarisAuxT2, R2PolarisAuxT1]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 300
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [Eden_PolarisSalvageDronesGuarded]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# ====================== Spawn Zones Talon
+# Main village spawns closer to the village.
+   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 125
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Main village spawns further from the villages. Long distance hunters.
+   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 1500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.1
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Talon near aux POIs.
+   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 250
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.1
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [200, 240]
+       - Names: [TalonGuardians]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Talon farmers.
+   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 100
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.5
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardians]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# ====================== Spawn Zones Alien
+# Hostile infected creatures near abandoned POIs
+   - SpawnAt: [R2AbandonedPOI]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 0.5
+     RateMultiplyerEdge: 1
+     Color: "1.0, 0.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+# Infected creatures
+       - Names: [AlienAssassinGreysInfected]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [AlienAssassinsInfectedHerd]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+# Desert Golems
+       - Names: [GolemsDesert]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+# Infected Zirax. Remove if no Zirax presence on the planet.
+       - Names: [ZiraxInfectedHerd]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+
 CreatureSpawning:
 -  Biomes: [LargeCrater]
    Entities:

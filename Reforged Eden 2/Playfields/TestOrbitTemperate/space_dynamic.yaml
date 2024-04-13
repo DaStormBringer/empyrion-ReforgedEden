@@ -494,7 +494,7 @@ POIs:
     - Type: BA_Alien
       GroupName: R2PolarisSpaceColony
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 1
@@ -510,7 +510,7 @@ POIs:
       GroupName: Eden_BAOPolarisCivT2
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.45
@@ -525,7 +525,7 @@ POIs:
       GroupName: Eden_BAOPolarisIndT2
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.25
@@ -540,7 +540,7 @@ POIs:
       GroupName: Eden_BAOPolarisSupT2
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.3
@@ -663,7 +663,7 @@ POIs:
     - Type: BA_Alien
       GroupName: R2TraderSpaceColony
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 1
@@ -678,7 +678,7 @@ POIs:
       GroupName: Eden_BAOTraderCivT2
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 3 ]
       Probability: 0.65
@@ -693,7 +693,7 @@ POIs:
       GroupName: Eden_BAOTraderIndT2
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -708,7 +708,7 @@ POIs:
       GroupName: Eden_BAOTraderSupT2
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.3
@@ -1100,7 +1100,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_BAOColonistsCivT1
       Faction: Colonists
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.25
@@ -1113,7 +1113,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.4
@@ -1126,7 +1126,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT2
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.4
@@ -1140,7 +1140,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_BAOColonistsIndT1
       Faction: Colonists
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -1153,7 +1153,7 @@ POIs:
       GroupName: Eden_BAOColonistsIndT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.2
@@ -1166,7 +1166,7 @@ POIs:
       GroupName: Eden_BAOColonistsIndT2
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.2
@@ -1181,7 +1181,7 @@ POIs:
       GroupName: Eden_BAOColonistsSupT2
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.35
@@ -1196,7 +1196,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_BAOColonistsGasT1
       Faction: Colonists
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 3 ]
       Probability: 0
@@ -1212,7 +1212,7 @@ POIs:
       GroupName: Eden_BAOColonistsGasT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0
@@ -1367,7 +1367,7 @@ POIs:
       Name: [CompoundColonistsMiners]
       GroupName: Eden_ColSpaceMinerT1
       Faction: Colonists
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.8
@@ -1439,7 +1439,7 @@ POIs:
       GroupName: R2TraderSpaceDeco
       Faction: Main
       FactionTerritory: [Eden_PolarisTerritory, Eden_TraderTerritory, Eden_ColonistsTerritory] # Faction Territory
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 4 ]
       Probability: 0.5
@@ -3469,28 +3469,6 @@ POIs:
         - Key: RegenAfter
           Value: 720
 
-# Smaller guarded Pentaxid asteroids. Zirax Territory.
-    - Type: AsteroidVoxel01Pentaxid
-      GroupName: EdenAsteroidPentaxidT1
-      Faction: None
-      FactionTerritory: [Rados]
-      Mode: Survival
-      CountMinMax: [ 1, 3 ]
-      Probability: 0.3
-      Compound:
-        CountMinMax: [1, 3]
-        Probability: 1
-        Name: [CompoundZiraxSentryT1Rados, CompoundZiraxSentryT1Rados, CompoundZiraxSentryT1Rados]
-        DistanceMinMax: [75, 100] 
-        Rotate: true
-      Properties:
-        - Key: MapDistance
-          Value: 6500
-        - Key: HudDistance
-          Value: 6500
-        - Key: RegenAfter
-          Value: 720
-
 # Smaller unguarded Gold asteroids
     - Type: AsteroidVoxel01Gold
       # Name: [Eden_Asteroid_PentT1_1, Eden_Asteroid_PentT1_2, Eden_Asteroid_PentT1_3, Eden_Asteroid_PentT1_4]
@@ -3502,24 +3480,6 @@ POIs:
       Properties:
         - Key: RegenAfter
           Value: 720
-
-# Smaller guarded Gold asteroids. Zirax Territory.
-    # - Type: BA_Alien
-      # GroupName: EdenAsteroidGoldT1
-      # Faction: Rados
-      # FactionTerritory: [Rados]
-      # Mode: Survival
-      # CountMinMax: [ 1, 2 ]
-      # Probability: 0.05
-      # Compound:
-        # CountMinMax: [1, 3]
-        # Probability: 1
-        # Name: [CompoundZiraxSentryT1Rados, CompoundZiraxSentryT1Rados, CompoundZiraxSentryT1Rados]
-        # DistanceMinMax: [125, 175] 
-        # Rotate: true
-      # Properties:
-        # - Key: RegenAfter
-          # Value: 720
 
 # Faction claimed asteroids.
     - Type: BA_Alien
@@ -3783,7 +3743,7 @@ POIs:
       GroupName: Eden_BAO_AsteroidBlank
       Faction: None
       FactionTerritory: [Polaris, Trader, Colonists]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.2

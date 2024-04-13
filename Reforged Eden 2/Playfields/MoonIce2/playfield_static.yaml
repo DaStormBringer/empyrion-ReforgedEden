@@ -321,7 +321,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: PolarisLogisticsAuxRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
           Territory: False
           CountMinMax: [ 2, 4 ]
@@ -415,7 +415,7 @@ POIs:
               Value: 10000
 
 
-        - GroupName: SmugglerHideout
+        - GroupName: R2PirateAuxT1
           Faction: None
           IsScalingCount: True
           CountMinMax: [ 0, 1 ]
@@ -423,7 +423,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 1
           TroopTransport: False   
-          SpawnPOIAvoid: [SmugglerHideout, RadosAuxT2RG, PolarisLogisticsMainRG]
+          SpawnPOIAvoid: [R2PirateAuxT1, RadosAuxT2RG, PolarisLogisticsMainRG]
           POIDistance: 2000
           Properties: 
             - Key: MapMarker
@@ -433,10 +433,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -445,9 +445,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 500] 
           Properties:  
             - Key: RegenAfter
@@ -456,9 +456,9 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [300, 1000] 
           Properties:  
             - Key: RegenAfter
@@ -467,9 +467,9 @@ POIs:
         - GroupName: PolBiolabRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [2000, 2500] 
           Properties:
             - Key: RegenAfter

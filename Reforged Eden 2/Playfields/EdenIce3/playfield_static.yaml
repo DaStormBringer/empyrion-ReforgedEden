@@ -218,9 +218,9 @@ POIs:
     Random:
         - GroupName: Eden_ArgentTS
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
-#          NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -243,7 +243,7 @@ POIs:
 # Auxillary POIs for Random Argent Spires
         - GroupName: Eden_ArgentWarehouse
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           IsAuxPOI: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINearRange: [125, 200]
@@ -257,7 +257,7 @@ POIs:
 
         - GroupName: Eden_ArgentRefinery
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           IsAuxPOI: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINearRange: [125, 200]
@@ -271,7 +271,7 @@ POIs:
 
         - GroupName: Eden_ArgentDefense
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           IsAuxPOI: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINearRange: [200, 250]
@@ -285,7 +285,7 @@ POIs:
           # Faction: Polaris  
           # IsImportant: True
           # CountMinMax: [ 1, 1 ]
-          # SpawnPOIAvoid: [DroneBaseT1RG]
+          # SpawnPOIAvoid: [R2DroneBase]
           # SpawnPOIAvoidDistance: 2000
           # SpawnResource: ["CobaltResource:0-1","TitanResource:1-2","CopperResource:0-1"]
           # SpawnResourceRange: [150,400]
@@ -321,10 +321,10 @@ POIs:
         # Research North Compound
         - GroupName: Eden_ArgentHQ
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LowMountains, LowMountains_2]
           IsImportant: True
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
@@ -340,7 +340,7 @@ POIs:
  
         - GroupName: Eden_ArgentDefense
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 6, 9 ]
           SpawnPOIAvoid: [Eden_ArgentDefense]
           SpawnPOIAvoidDistance: 100
@@ -352,7 +352,7 @@ POIs:
  
         - GroupName: Eden_ArgentStarport
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -370,7 +370,7 @@ POIs:
 
         - GroupName: Eden_ArgentWarehouse
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           CountMinMax: [ 1, 2 ]
           SpawnPOIAvoid: [Eden_ArgentWarehouse]
@@ -387,7 +387,7 @@ POIs:
 
         - GroupName: Eden_ArgentRefinery
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ Mountainstop, LowMountains, LowMountains_2]
           CountMinMax: [ 2, 3 ]
           SpawnPOIAvoid: [Eden_ArgentWarehouse, Eden_ArgentRefinery]
@@ -417,7 +417,7 @@ POIs:
 
         - GroupName: Eden_ArgentDefense
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           SpawnPOIAvoid: [Eden_ArgentWarehouse, Eden_ArgentRefinery, Eden_ArgentDefense]
           SpawnPOIAvoidDistance: 50
@@ -431,7 +431,7 @@ POIs:
         # Research North Colony (rare)
         - GroupName: Eden_NorthColony
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           IsImportant: True
           CountMinMax: [ 0, 1 ]
@@ -449,7 +449,7 @@ POIs:
 
         - GroupName: Eden_NorthAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [Eden_NorthColony]
@@ -464,7 +464,7 @@ POIs:
  
         - GroupName: CivilSettlementSnowRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_NorthColony]
           SpawnPOINearRange: [100, 250] 
@@ -478,7 +478,7 @@ POIs:
  
         - GroupName: Eden_NorthDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 3, 4 ]
           SpawnPOINear: [Eden_NorthColony]
@@ -491,7 +491,7 @@ POIs:
         # Mining Station
         - GroupName: PolarisIndustrialMainRG                      # Main Building
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -507,7 +507,7 @@ POIs:
 
         - GroupName: PolarisLogisticsMainRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -521,27 +521,25 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TS_PlanetRG
+        - GroupName: R2PolarisTradePlanet
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [PolarisIndustrialMainRG]
           SpawnPOINearRange: [100, 200] 
           Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 300 
+            - Key: Discovery
+              Value: False
             - Key: Music
-              Value: SunnySkies
+              Value: AlteredPhase
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: PolarisIndustrialAuxRG
+        - GroupName: R2PolarisAuxT2
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [PolarisIndustrialMainRG]
@@ -556,7 +554,7 @@ POIs:
  
         - GroupName: CivilSettlementSnowRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisLogisticsMainRG]
@@ -569,9 +567,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: PolarisLogisticsAuxRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 1, 3 ]
           SpawnPOINear: [PolarisLogisticsMainRG]
@@ -586,7 +584,7 @@ POIs:
  
         - GroupName: Eden_NorthDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # Territory: False        
           Biome: [ Ice, GlacierSnow, Glacier, IceShelf ]
           CountMinMax: [ 5, 6 ]
@@ -604,7 +602,7 @@ POIs:
         # POI complex with several structures around
         - GroupName: RadosMainSnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0
@@ -621,7 +619,7 @@ POIs:
 
         - GroupName: RadosAuxT1SnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -636,7 +634,7 @@ POIs:
 
         - GroupName: RadosDefenseT3Snow
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 1 ]
@@ -650,7 +648,7 @@ POIs:
 
         - GroupName: RadosDefenseT2Snow
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 7 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 1 ]
@@ -665,7 +663,7 @@ POIs:
        # ================================
         - GroupName: RadosMissileBaseSnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
@@ -706,7 +704,7 @@ POIs:
         - GroupName: Eden_NorthCV
           Type: CV_Alien
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Ice, Ice_2, GlacierSnow, Glacier, IceShelf ]
           IsImportant: True
           Territory: False
@@ -726,7 +724,7 @@ POIs:
 # Random Argent Spires
         - GroupName: Eden_ArgentStarport
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           DroneProb: 1
@@ -742,7 +740,7 @@ POIs:
 
         - GroupName: Eden_ArgentSpire
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0.8 
@@ -759,7 +757,7 @@ POIs:
         # Random civil outposts scattered around planet
         - GroupName: CivilSettlementSnowRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -772,7 +770,7 @@ POIs:
 
         - GroupName: Eden_NorthMain
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 1 
@@ -785,7 +783,7 @@ POIs:
 
         - GroupName: Eden_NorthAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0.3 
@@ -798,7 +796,7 @@ POIs:
 
         - GroupName: Eden_NorthTower
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ Mountaintop ]
           CountMinMax: [ 2, 3 ]
@@ -813,7 +811,7 @@ POIs:
 
         - GroupName: Eden_PolarisAntenna
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Territory: False
           Biome: [ Mountaintop ]
@@ -834,7 +832,7 @@ POIs:
         # Random Zirax military outposts scattered around planet
         - GroupName: RadosMainSnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -851,7 +849,7 @@ POIs:
 
         - GroupName: RadosAuxT2SnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0
@@ -866,7 +864,7 @@ POIs:
 
         - GroupName: RadosAuxT1SnowRG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 4, 6 ]
           IsScalingCount: True
           DroneProb: 0
@@ -954,7 +952,7 @@ POIs:
         - GroupName: Eden_CaveIceL
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Ice, Ice_2 ]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True

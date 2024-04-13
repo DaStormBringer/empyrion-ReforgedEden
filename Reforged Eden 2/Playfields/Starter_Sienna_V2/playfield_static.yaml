@@ -314,8 +314,8 @@ POIs:
     Random:
         - GroupName: R2DroneBaseStarter
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           BiomesExcluded: [ Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge, HotSprings ] 
           IsImportant: True
@@ -333,7 +333,7 @@ POIs:
 # Lost UCH Colony
         - GroupName: Eden_LostColonySnow
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # InitPower: True
           Biome: [ Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge ] 
           IsImportant: True
@@ -409,7 +409,7 @@ POIs:
 # Strange Alien Artifacs.
         - GroupName: Eden_LostArtifact
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           # InitPower: True
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
@@ -429,7 +429,7 @@ POIs:
 # Ice Cave.
         - GroupName: Eden_CaveIce
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge ] 
           IsImportant: True
           CountMinMax: [ 1, 2 ]
@@ -474,9 +474,9 @@ POIs:
           "Food: 350, Health: 500", 
           "#FreshStart:Food: 350, Health: 350" ]
           Items: [ 
-          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, HotBeverage:4, PowerBar:2, Medikit04:3, Bandages:2, Flashlight, AntibioticOintment:2, SurvivalTent, MobileAirCon", 
-          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, HotBeverage:4, PowerBar:1, Bandages:2, Flashlight, AntibioticOintment:1", 
-          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, HotBeverage:3, PowerBar:1, Bandages:1", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:10, HotBeverage:4, PowerBar:2, Medikit04:3, Bandages:2, AntibioticOintment:2, SurvivalTent, MobileAirCon", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:8, HotBeverage:4, PowerBar:1, Bandages:2, AntibioticOintment:1", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:6, HotBeverage:3, PowerBar:1, Bandages:1", 
           "#FreshStart: Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight" ]
 
 

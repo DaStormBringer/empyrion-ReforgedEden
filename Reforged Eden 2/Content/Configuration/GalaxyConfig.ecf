@@ -1424,8 +1424,7 @@
     Other_5: Colonists, param1: "0.01, 0.1"
     Other_6: Eden_PolarisTerritory, param1: "1, 1"
     Other_7: Eden_PolarisDefense, param1: "1, 0.25"
-    Other_8: Farr, param1: "0, 0.5"
-    Other_9: Civilian, param1: "1, 1"
+    Other_8: Civilian, param1: "1, 1"
   }
   { Child Territory_3
     Faction: Kriel
@@ -2188,6 +2187,7 @@
   ModelNoiseTiling: 140 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
+  # ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "5500, 6000" 
   Mass: 1
@@ -2195,11 +2195,17 @@
   Luminosity: 1
   ColorName: Yellow
   Age: 10
-  InnerSystem: "5, 35"
-  HabitableHot: "36, 63"
-  HabitableTemperate: "64, 89"
-  HabitableCold: "90, 104"
-  OuterSystem: "105, 132"
+  # InnerSystem: "5, 35"
+  # HabitableHot: "36, 63"
+  # HabitableTemperate: "64, 89"
+  # HabitableCold: "90, 104"
+  # OuterSystem: "105, 132"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
   Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
 }
 
@@ -2226,11 +2232,17 @@
   Luminosity: 1.2
   ColorName: Yellow
   Age: 8
-  InnerSystem: "5, 35"
-  HabitableHot: "36, 63"
-  HabitableTemperate: "64, 89"
-  HabitableCold: "90, 104"
-  OuterSystem: "105, 132"
+  # InnerSystem: "5, 35"
+  # HabitableHot: "36, 63"
+  # HabitableTemperate: "64, 89"
+  # HabitableCold: "90, 104"
+  # OuterSystem: "105, 132"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
   Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
 }
 
@@ -2256,11 +2268,17 @@
   Luminosity: 1.2
   ColorName: Yellow
   Age: 8
-  InnerSystem: "5, 35"
-  HabitableHot: "36, 63"
-  HabitableTemperate: "64, 89"
-  HabitableCold: "90, 104"
-  OuterSystem: "105, 132"
+  # InnerSystem: "5, 35"
+  # HabitableHot: "36, 63"
+  # HabitableTemperate: "64, 89"
+  # HabitableCold: "90, 104"
+  # OuterSystem: "105, 132"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
   Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
 }
 
@@ -4357,11 +4375,17 @@
   Luminosity: 1
   ColorName: Yellow
   Age: 10
-  InnerSystem: "5, 56" 
-  HabitableHot: "57, 63" 
-  HabitableTemperate: "64, 69" 
-  HabitableCold: "70, 75" 
-  OuterSystem: "76, 132"
+  # InnerSystem: "5, 56" 
+  # HabitableHot: "57, 63" 
+  # HabitableTemperate: "64, 69" 
+  # HabitableCold: "70, 75" 
+  # OuterSystem: "76, 132"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
   Description: "[c][ffff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
   GalaxySpawnAmount: 0
 }
@@ -4393,11 +4417,17 @@
   Luminosity: 4.9
   ColorName: Blue-White
   Age: 0.7
-  InnerSystem: "5, 29" 
-  HabitableHot: "30, 44" 
-  HabitableTemperate: "45, 69" 
-  HabitableCold: "70, 99" 
-  OuterSystem: "100, 149"
+  # InnerSystem: "5, 29" 
+  # HabitableHot: "30, 44" 
+  # HabitableTemperate: "45, 69" 
+  # HabitableCold: "70, 99" 
+  # OuterSystem: "100, 149"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
   Description: "[c][ffff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
   GalaxySpawnAmount: 0
 }
@@ -4884,69 +4914,6 @@
 }
 
 
-# Test star
-{ GalaxyConfig, Name: Test Star
-  StarClass: Test
-  SolarSystemConfigSuffix: _Test
-  # Model: SunRedGiant  # better: yellow orange?
-  Model: SunGeneric  # better: yellow orange?
-  Probability: 0
-  SizeClass: 12
-  Color: "1,0.85,0.44"
-  LightColor: "1,0.65,0.35"
-  ModelColor: "0.8,0.1,0.05" # (can be used if you want a different color apart from Color or LightColor)
-  ModelColor2: "1,0.6,0.1" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
-  ModelBrightness: 0.60 # (overall brightness)
-  ModelNoiseTiling: 25 # (default is 40, set to higher values for bigger stars)
-  ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
-  ModelPlasmaArcsSize: 0.8 # (default is 0.5)
-  ModelFlareBrightness: 1.5 # (values < 1 will make the flare smaller)
-  SurfaceTemperature: "4000, 5500" 
-  Mass: 0.7
-  Radius: 0.8 
-  Luminosity: 0.3
-  ColorName: Yellow-Orange
-  Age: 30
-  InnerSystem: "5, 48"
-  HabitableHot: "49, 69"
-  HabitableTemperate: "70, 89"
-  HabitableCold: "90, 109"
-  OuterSystem: "110, 140"
-  Description: "K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
-}
-
-# Test2 star
-{ GalaxyConfig, Name: Test2 Star
-  StarClass: Test2
-  # Model: SunRedGiant
-  Model: SunGeneric
-  # CompanionStarClass: FarrHomeC
-  Probability: 0
-  SizeClass: 10
-  Color: "0.4,0,0.8"
-  LightColor: "0.5,0.5,0.7"
-  # ModelColor: "2, 0, 0" # (can be used if you want a different color apart from Color or LightColor)
-  # ModelColor2: "0.2, 0.0, 0.3" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
-  # ModelBrightness: 0.5 # (overall brightness)
-  # ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
-  ModelCoronaSpikesSize: 0.7
-  # ModelPlasmaArcsSize: 1
-  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
-  SurfaceTemperature: "5500, 6000" 
-  Mass: 100
-  Radius: 100
-  Luminosity: 100000
-  ColorName: Red
-  Age: 10
-  InnerSystem: "4, 25"  # GENERATION: RANGE (start-end) for very hot playfields. Example: Lava planets
-  HabitableZone: "450, 900" # GENERATION; AU; Defines the Start-End RANGE of usual habitable zone, split in 3 sub-zones. Note: each playfield can be put in any zone of the system via setup in a random or unique solarsystemconfg!
-  HabitableHot: "26, 49"  # GENERATION: RANGE (start-end) for warm/hot playfields. Example: Arid or deserts
-  HabitableTemperate: "50, 99"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
-  HabitableCold: "100, 189"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
-  OuterSystem: "190, 350"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
-}
-
 
 
 # ===================================================================================================================================================
@@ -4985,3 +4952,42 @@
   GalaxySpawnAmount: 0
 }
 
+
+# Test star
+{ GalaxyConfig, Name: Test Star
+  StarClass: Test
+  SolarSystemConfigSuffix: _Test
+  # Model: SunYellow
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 10
+  Color: "1,0.95,0.63"
+  LightColor: "1,0.96,0.85"
+  ModelColor: "1,0.90,0.45" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "1,0.8,0.4" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 0.70 # (overall brightness)
+  ModelNoiseTiling: 140 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.35 # (default is 0.5)
+  # ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "5500, 6000" 
+  Mass: 1
+  Radius: 1
+  Luminosity: 1
+  ColorName: Yellow
+  Age: 10
+  # InnerSystem: "5, 35"
+  # HabitableHot: "36, 63"
+  # HabitableTemperate: "64, 89"
+  # HabitableCold: "90, 104"
+  # OuterSystem: "105, 132"
+  # Size 10 Habitable
+  InnerSystem: "8, 19"
+  HabitableHot: "20, 39"
+  HabitableTemperate: "40, 59"
+  HabitableCold: "60, 89"
+  OuterSystem: "90, 130"
+  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  GalaxySpawnAmount: 0
+}

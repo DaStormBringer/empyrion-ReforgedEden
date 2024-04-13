@@ -30,7 +30,8 @@ AtmoBreathableProb: 1
 WaterProb: 1
 PvPProb: 0 #Normal
 Water: [WaterBlue]
-Music: [desert]
+# Desert Music
+Music: [AnAridPlace, desert, desert2, Tempest, Voyage]
 PlayfieldLevelOverride: [1,3]
 # ==============================================================
 

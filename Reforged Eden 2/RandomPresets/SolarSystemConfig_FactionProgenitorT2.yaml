@@ -59,7 +59,7 @@ GenerationParams:
     # - 'StarM:1'                                                                                                   # 1 M type Red Dwarf
 # -------------------------------------------------------------------------------------------------------------- Rocky Planets
     - 'LavaProgenitor:1.0'                                                                       # 1 Hot
-    - 'DesertProgenitor:1.0, Arid:0.0, DesertOasis:0.0, DesertBlack:0.0'                                                    # 2 Desert
+    - 'DesertProgenitor:1.0, Arid:0.0, DesertOasis:0.0, DesertHot:0.0'                                                    # 2 Desert
     - 'Dead:1'                                                                                                    # 3 Dead
     - 'Temperate:0.8, Tropical:0.0, Swamp:0.2, Irradiated:0.0, Jungle:0.0'                                        # 4 Temperate
     - 'Ocean:1'                                                                                                   # 5 Ocean
@@ -73,7 +73,7 @@ GenerationParams:
 # -------------------------------------------------------------------------------------------------------------- UCH and Admin
     - 'UCHResearchShip:1.0'                                                                                       # 1 UCH Research Vessel
 # -------------------------------------------------------------------------------------------------------------- Asteroid Fields
-    - 'AsteroidFieldDT1:1.0, AsteroidFieldPirate:0.0, AsteroidFieldPolaris:0.0, AsteroidFieldZirax:0.0, AsteroidFieldLegacy:0.0'              # 1 Asteroid Fields
+    - 'AsteroidFieldDT1:1.0, AsteroidFieldPirate:0.0, AsteroidFieldPolaris:0.0, AsteroidFieldZirax:0.0, AsteroidFieldLegacyT1:0.0'              # 1 Asteroid Fields
     - 'AsteroidFieldIce:0.70, AsteroidFieldIceRich:0.30'                                                          # 2 Ice Fields
     - 'AsteroidFieldRichGeneric:1'                                                                                  # 3 Rich Asteroid Fields
 # -------------------------------------------------------------------------------------------------------------- Stations

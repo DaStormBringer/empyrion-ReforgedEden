@@ -262,9 +262,9 @@ POIs:
     Random:
 
 # Zirax drone base & perimeter defenses ====
-        - GroupName: DroneBaseT1RG                # CommandCenter
+        - GroupName: R2DroneBase                # CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           Biome: [ LowMountains, LowMountains_1, Moss, Mountains, HighMountains ]
           DroneBaseSetup: DroneBaseSetup
@@ -281,13 +281,13 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           DroneProb: 1.0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: RegenAfter
@@ -295,19 +295,19 @@ POIs:
 
 # Pirates
 
-        - GroupName: PiratesAuxRG 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
           Properties:  
             - Key: RegenAfter
               Value: 720 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -316,7 +316,7 @@ POIs:
 # Zirax Bridgehead & Spaceport ===
         - GroupName: PlanetVesselBase 
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           BiomesExcluded: [ Plains, Rocks, HighMountains ]
           PlanetVesselBaseSetup: PlanetVesselBaseSetup
@@ -333,7 +333,7 @@ POIs:
           # Storage
         - GroupName: RadosAuxT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 1, 2 ]
@@ -348,7 +348,7 @@ POIs:
           # Defence
         - GroupName: RadosDefenceT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
@@ -365,7 +365,7 @@ POIs:
 
         - GroupName: RadosSurveyBR        # Evacuated Base
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           # PlanetVesselBaseSetup: PlanetLensSetup
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -382,7 +382,7 @@ POIs:
           # Beachhead
         - GroupName: RadosAuxT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains ]
           CountMinMax: [ 1, 3 ]
           DroneProb: 1
@@ -395,7 +395,7 @@ POIs:
 
         - GroupName: RadosAuxT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
           BiomesExcluded: [ Plains ]
           DroneProb: 1
@@ -411,7 +411,7 @@ POIs:
           # Resource Surveys  ================ # Most resources are claimed by Zirax
         - GroupName: RadosSurvey
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 5, 5 ]
           IsScalingCount: True
           Biome: [ Mountains, LowMountains, LowMountains_1, Moss ]
@@ -427,7 +427,7 @@ POIs:
 
         - GroupName: RadosSurvey
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           Biome: [ Mountains, LowMountains, LowMountains_1, Moss ]
@@ -443,7 +443,7 @@ POIs:
 
         - GroupName: RadosSurvey
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains, SandDrift ]
           CountMinMax: [ 5, 7 ]
           IsScalingCount: True
@@ -459,7 +459,7 @@ POIs:
 
         - GroupName: RadosSurvey
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           BiomesExcluded: [ Plains, SandDrift, HighMountains ]
           IsScalingCount: True
@@ -475,7 +475,7 @@ POIs:
 
         - GroupName: RadosSurvey
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           Biome: [ SandDrift, Plateau, LowMountains, LowMountains_1, Mountains, HighMountains ]
           IsScalingCount: True
@@ -495,7 +495,7 @@ POIs:
           # === Power station / Refinery cluster ===
         - GroupName: RadosMainRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Biome: [ SandDrift, Regolith, RegolithEdge, Rocks, Plateau, LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 1 ]
@@ -512,7 +512,7 @@ POIs:
 
         - GroupName: RadosAuxT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains ]
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
@@ -528,7 +528,7 @@ POIs:
           # Defence
         - GroupName: RadosDefenceT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.7
@@ -545,7 +545,7 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -562,7 +562,7 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Plains]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -780,7 +780,7 @@ SpawnRateZones:
 
 
 SpawnZones:
-   - SpawnAt: [DroneBaseT1RG]
+   - SpawnAt: [R2DroneBase]
      BiomesExcluded: [ HighMountains ]
      Radius: 1000
      RadiusRandom: 25

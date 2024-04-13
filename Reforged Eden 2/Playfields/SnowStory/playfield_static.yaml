@@ -207,9 +207,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG            # CommandCenter
+        - GroupName: R2DroneBase            # CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -233,7 +233,7 @@ POIs:
           DronesMinMax: [ 2, 4 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [DroneBaseT1RG, XenuMainframe, XenuRadarMain]
+          SpawnPOIAvoid: [R2DroneBase, XenuMainframe, XenuRadarMain]
           SpawnPOIAvoidDistance: 2000
           SpawnResource: ["PromethiumResource:1-1"]
           SpawnResourceRange: [250,400]
@@ -288,7 +288,7 @@ POIs:
           # Endboss Main  - Floating
         - GroupName: XenuMainframe                             #Story relevant: OFFWORLD GRAVE
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
     #      Biome: [ RadiatedFog ]
           IsImportant: True
           LevelMod: +3
@@ -302,7 +302,7 @@ POIs:
           # Endboss Main
         - GroupName: XenuRadarMain                       # Main Building
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
      #     Biome: [ RadiatedFog ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -318,7 +318,7 @@ POIs:
           # Endboss  Teleporter Access
         - GroupName: XenuRadarAddition
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
      #     Biome: [ RadiatedFog ] 
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -337,9 +337,9 @@ POIs:
           # Endboss Main Defense Turrets
 
           # Anti-Aircraft turret
-        - GroupName: XenuRadarTurretRocketRG
+        - GroupName: R2XenuDefenseT3
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           # IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0
@@ -356,7 +356,7 @@ POIs:
 
         - GroupName: XenuRadarTurret
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           # IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -373,7 +373,7 @@ POIs:
 
         - GroupName: PiratesAmbushSnow 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
      #     IsImportant: True
           Properties:  
@@ -383,10 +383,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -395,7 +395,7 @@ POIs:
         # - GroupName: CivilSettlementSnowRG 
           # Territory: False
           # Faction: Main                    #fill up territories when CIV faction is not placed
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 4 ]
           # Properties:  
             # - Key: RegenAfter
@@ -422,7 +422,7 @@ POIs:
 
         - GroupName: PolarisSettlementSnowRG
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.8 
@@ -577,7 +577,7 @@ DroneSpawning:
 # ==============================================================
 
 SpawnRateZones:
-   - SpawnAt: [TS_PlanetRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 1000
      RadiusRandom: 50
      RateMultiplyerCenter: 0.0
@@ -613,7 +613,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, RadosMainSnowRG, RadosAuxT2SnowRG, RadosMissileBaseSnowRG]
+   - SpawnAt: [R2DroneBase, RadosMainSnowRG, RadosAuxT2SnowRG, RadosMissileBaseSnowRG]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 800
      RadiusRandom: 100

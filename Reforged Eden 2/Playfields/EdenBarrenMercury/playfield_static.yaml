@@ -110,10 +110,10 @@ AsteroidResources:
 POIs:
     Random:
 # Command Center
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           IsImportant: True
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -127,10 +127,10 @@ POIs:
               Value: 720
 
 # Extra Drone Bases
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           IsImportant: True
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -143,10 +143,10 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           IsImportant: True
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -158,10 +158,10 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           IsImportant: True
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -174,39 +174,39 @@ POIs:
               Value: 720
 
 # Defense for Drone Base
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 6, 8 ]
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [600, 700]
-          SpawnPOIAvoid: [XenuDefenceT2RG]
+          SpawnPOIAvoid: [R2XenuDefenseT2]
           SpawnPOIAvoidDistance: 200
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 12, 14 ]
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [1500, 1600]
-          SpawnPOIAvoid: [XenuDefenceT1RG]
+          SpawnPOIAvoid: [R2XenuDefenseT1]
           SpawnPOIAvoidDistance: 400
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: DroneBaseCommandRG
+        - GroupName: R2DroneBaseT5
           Faction: Zirax
           FactionTerritory: [Rados]
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
@@ -216,22 +216,22 @@ POIs:
           DronesMinMax: [ 8, 12 ]
           ReserveCount: 15
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 3000
           Properties: 
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: XenuRadarTurretRocketRG
+        - GroupName: R2XenuDefenseT3
           Faction: Zirax
           FactionTerritory: [Rados]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 9, 12 ]
           DroneProb: 1
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           TroopTransport: False
-          SpawnPOINear: [DroneBaseCommandRG]
+          SpawnPOINear: [R2DroneBaseT5]
           SpawnPOINearRange: [250, 350]
           Properties: 
             - Key: RegenAfter
@@ -240,7 +240,7 @@ POIs:
 # Xenu compound
         - GroupName: XenuBunkerRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           LevelMod: +3
@@ -248,7 +248,7 @@ POIs:
           DronesMinMax: [ 5, 5 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 2000
           SpawnResource: ["SathiumResource:3-4","GoldResource:2-3"]
           SpawnResourceRange: [125,300]
@@ -256,9 +256,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuAuxT2RG
+        - GroupName: R2XenuAuxT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           LevelMod: +1
           DroneProb: 1
@@ -271,9 +271,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT2RG
+        - GroupName: R2XenuDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 6, 8 ]
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
@@ -281,15 +281,15 @@ POIs:
           TroopTransport: False
           SpawnPOINear: [XenuBunkerRG]
           SpawnPOINearRange: [600, 700]
-          SpawnPOIAvoid: [XenuDefenceT2RG]
+          SpawnPOIAvoid: [R2XenuDefenseT2]
           SpawnPOIAvoidDistance: 200
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuDefenceT1RG
+        - GroupName: R2XenuDefenseT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 12, 14 ]
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
@@ -297,7 +297,7 @@ POIs:
           TroopTransport: False
           SpawnPOINear: [XenuBunkerRG]
           SpawnPOINearRange: [1500, 1600]
-          SpawnPOIAvoid: [XenuDefenceT1RG]
+          SpawnPOIAvoid: [R2XenuDefenseT1]
           SpawnPOIAvoidDistance: 400
           Properties: 
             - Key: RegenAfter
@@ -317,16 +317,16 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: XenuAuxT1RG
+        - GroupName: R2XenuAuxT1
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [DroneBaseT1RG, XenuBunkerRG]
+          SpawnPOIAvoid: [R2DroneBase, XenuBunkerRG]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: RegenAfter
@@ -336,7 +336,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -354,7 +354,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           DroneProb: 0.5

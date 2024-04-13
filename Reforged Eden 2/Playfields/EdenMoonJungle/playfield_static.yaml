@@ -346,10 +346,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:   
-        - GroupName: Eden_ZetaDroneBase
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -357,17 +357,17 @@ POIs:
           ReserveCount: 5
           Properties:
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: Eden_ZetaAuxT1
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [Eden_ZetaDroneBase]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [150, 250]
           Properties: 
             - Key: RegenAfter
@@ -375,9 +375,9 @@ POIs:
 
        # ================================
         # POI complex with several structures around
-        - GroupName: Eden_ZetaMain
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2EpsilonMain
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Biome: [ Mountains ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -385,40 +385,45 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOIAvoid: [Eden_ZetaDroneBase]
+          SpawnPOIAvoid: [R2DroneBase]
           POIDistance: 1000
           SpawnResource: ["CopperResource:1-1"]
           SpawnResourceRange: [175,300]
           Properties: 
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: Eden_ZetaDish
-          Faction: Zirax
-          NoShieldReload: True  
-          Biome: [ Mountains ]
+# Deco
+        - GroupName: R2EpsilonDeco
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Territory: False
           CountMinMax: [ 2, 3 ]
-          DroneProb: 0.2
-          DronesMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [Eden_ZetaMain]
-          SpawnPOINearRange: [150, 250]
-          Properties: 
+          SpawnPOINear: [R2EpsilonMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
        # Second Zeta POI Complex. 50% chance ================================
-        - GroupName: Eden_ZetaAuxT2
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2EpsilonAuxT2
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
           DronesMinMax: [ 1, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [Eden_ZetaDroneBase, Eden_ZetaMain]
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain]
           POIDistance: 1000
           SpawnResource: ["CopperResource:0-1","CobaltResource:1-2"]
           SpawnResourceRange: [150,300]
@@ -426,15 +431,15 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: Eden_ZetaAuxT1
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.3
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           TroopTransport: False
-          SpawnPOINear: [Eden_ZetaAuxT2]
+          SpawnPOINear: [R2EpsilonAuxT2]
           SpawnPOINearRange: [150, 250]
           Properties: 
             - Key: RegenAfter
@@ -442,7 +447,7 @@ POIs:
 
        # ================================
         - GroupName: R2AbandonedPOI
-          Faction: Alien  
+          Faction: Alien
           Biome: [ Forest ]
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
@@ -458,16 +463,16 @@ POIs:
               Value: 720
 
         # Random military outposts scattered around planet
-        - GroupName: Eden_ZetaAuxT1
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [Eden_ZetaDroneBase, Eden_ZetaMain]
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain]
           POIDistance: 1000
           SpawnResource: ["CopperResource:0-1","CobaltResource:0-1","CopperResource:0-1"]
           SpawnResourceRange: [250,600]
@@ -479,7 +484,7 @@ POIs:
         - GroupName: Eden_NecroAuxT1
           Faction: Alien
           FactionTerritory: [Warlord, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -494,7 +499,7 @@ POIs:
         - GroupName: Eden_NecroAuxT2
           Faction: Alien
           FactionTerritory: [Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -507,35 +512,37 @@ POIs:
 
        # ================================
         # Trading Station with some settlements
-        - GroupName: TS_PlanetRG
+        - GroupName: R2PolarisTradePlanet
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           Biome: [ Sand, Clearing ]
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [Eden_ZetaDroneBase]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 2000
           Properties: 
+            - Key: Discovery
+              Value: False
             - Key: Music
-              Value: SunnySkies
+              Value: AlteredPhase
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [100, 250] 
           Properties: 
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             - Key: RegenAfter
@@ -543,9 +550,9 @@ POIs:
  
        # ================================
         # Random civil outposts scattered around planet
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Sand, Clearing, Mountains ] 
           # BiomesExcluded: [ Radiated ]
           CountMinMax: [ 0, 2 ]
@@ -573,7 +580,7 @@ POIs:
 # Ancient Walker mission statue
         - GroupName: Eden_AncientWalker
           Faction: Talon
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           CountMinMax: [ 1, 1 ]
           Properties: 
@@ -588,7 +595,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -711,7 +718,7 @@ DroneSpawning:
 # ==============================================================
 
 SpawnRateZones:
-   - SpawnAt: [TS_PlanetRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 1000
      RadiusRandom: 50
      RateMultiplyerCenter: 0.0

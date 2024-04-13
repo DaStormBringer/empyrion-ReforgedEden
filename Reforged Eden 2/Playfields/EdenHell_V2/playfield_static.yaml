@@ -298,10 +298,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           # Biome: [ Mountains, LowMountains ]
           IsImportant: True
@@ -319,7 +319,7 @@ POIs:
               # Random Nether POIs =======================================================
         # - GroupName: Eden_NetherAuxT1 
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # Biome: [ LavaLake ]
           # PlaceAt: OnWater
           # CountMinMax: [ 3, 4 ]
@@ -334,7 +334,7 @@ POIs:
         # POI complex with several structures around
         - GroupName: GhystMainRG 
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -346,9 +346,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -361,9 +361,9 @@ POIs:
             - Key: RegenAfter
               Value: 720   
 
-        - GroupName: GhystDefenseT1RG
+        - GroupName: R2GhystDefenseT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
@@ -378,16 +378,16 @@ POIs:
 
        # ================================
         # Defense for drone base
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [200, 500]
           Properties: 
             - Key: RegenAfter
@@ -395,9 +395,9 @@ POIs:
 
        # ================================
         # Large Bunker
-        - GroupName: GhystBunker
+        - GroupName: R2GhystMain
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -415,7 +415,7 @@ POIs:
         # R2AbandonedPOI with some ruins around
         - GroupName: R2AbandonedPOI
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
@@ -450,7 +450,7 @@ POIs:
 # Rogue Drone Harvesters 
         - GroupName: Eden_RogueHarvestAnchor
           Faction: Eden_Drone
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           # IsImportant: True
           IsScalingCount: True
@@ -469,7 +469,7 @@ POIs:
 
         - GroupName: Eden_RogueHarvest
           Faction: Eden_Drone
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           IsAuxPOI: True
           SpawnPOINearRange: [100, 200]
@@ -478,7 +478,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          # SpawnPOIAvoid: [GhystAuxT1RG] 
+          # SpawnPOIAvoid: [R2GhystAuxT1] 
           # SpawnPOIAvoidDistance: 150 
           TroopTransport: False
           Properties: 
@@ -490,7 +490,7 @@ POIs:
 # Rogue Drone Harvesters Drone space
         - GroupName: Eden_RogueHarvestAnchor
           Faction: Eden_DroneHome
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           # IsImportant: True
           IsScalingCount: True
@@ -509,7 +509,7 @@ POIs:
 
         - GroupName: Eden_RogueHarvest
           Faction: Eden_DroneHome
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           IsAuxPOI: True
           SpawnPOINearRange: [100, 200]
@@ -518,7 +518,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          # SpawnPOIAvoid: [GhystAuxT1RG] 
+          # SpawnPOIAvoid: [R2GhystAuxT1] 
           # SpawnPOIAvoidDistance: 150 
           TroopTransport: False
           Properties: 
@@ -531,9 +531,9 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random military outposts scattered around planet
-        - GroupName: GhystAuxT2RG
+        - GroupName: R2GhystAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -629,7 +629,7 @@ POIs:
 
         - GroupName: R2AbandonedPOI
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True 
@@ -661,7 +661,7 @@ POIs:
        # Alien Artifacts - Floating
         - GroupName: ArtifactsFloating
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           PlaceAt: OnWater
           IsScalingCount: True
@@ -676,7 +676,7 @@ POIs:
 # Harvestable Magmacite
         - GroupName: Eden_HarvestMagmacite
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LavaLake ]
           PlaceAt: OnWater
           CountMinMax: [ 2, 3 ]
@@ -696,7 +696,7 @@ POIs:
        # Nether Obelisks on lava
         # - GroupName: Eden_NetherObelisk
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # CountMinMax: [ 4, 6 ]
           # PlaceAt: OnWater
           # IsScalingCount: True
@@ -713,7 +713,7 @@ POIs:
 # Fire Tornados!!!
         - GroupName: Eden_FireTornado
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LavaLake ]
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]
@@ -729,7 +729,7 @@ POIs:
 # Achors for lava plumes
         - GroupName: Eden_DummyPOI
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ DriedFlowBlack ]
           # IsScalingCount: True
           CountMinMax: [ 4, 4 ]
@@ -746,7 +746,7 @@ POIs:
 
         - GroupName: Eden_DummyPOI
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ DriedFlowBlack ]
           IsScalingCount: True
           CountMinMax: [ 2, 2 ]
@@ -908,7 +908,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+   - SpawnAt: [R2DroneBase, GhystMainRG, R2GhystMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 100
@@ -922,7 +922,7 @@ SpawnZones:
          Amount: 250
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [GhystAuxT2RG]
+   - SpawnAt: [R2GhystAuxT2]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 25

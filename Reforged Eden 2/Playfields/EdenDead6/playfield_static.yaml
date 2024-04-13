@@ -132,7 +132,7 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:   
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
@@ -162,7 +162,7 @@ POIs:
          # Launch Site =================================================================
         - GroupName: Eden_EscapeRocketPad
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LowMountains, Mountains, Tundra, PolarSnow ]
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True 
@@ -182,7 +182,7 @@ POIs:
 # Auxillary POIs for Launch Site
         - GroupName: Eden_RuinsLaunchAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 3, 5 ]
           # IsScalingCount: True 
@@ -208,7 +208,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 6, 9 ]
           # IsScalingCount: True 
@@ -233,7 +233,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 3, 4 ]
           # IsScalingCount: True 
@@ -282,7 +282,7 @@ POIs:
 # Ruined Spaceport ==============================================================================
         - GroupName: Eden_RuinsSpaceportMain
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LowMountains, Mountains, Tundra, PolarSnow ]
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True 
@@ -304,7 +304,7 @@ POIs:
 # Auxillary POIs for Spaceport
         - GroupName: Eden_RuinsLaunchAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 4, 6 ]
           # IsScalingCount: True 
@@ -330,7 +330,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 6, 9 ]
           # IsScalingCount: True 
@@ -380,7 +380,7 @@ POIs:
          # Skyhook =================================================================
         - GroupName: Eden_RuinsSkyhookBase
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -407,7 +407,7 @@ POIs:
          # Fallen Skyhook Carriage
         - GroupName: Eden_RuinsSkyhookCarriage
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           DroneProb: 0
@@ -434,7 +434,7 @@ POIs:
          # Space Tether =================================================================
         - GroupName: Eden_RuinsSpaceTether
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
           IsImportant: True
           DroneProb: 0
@@ -485,7 +485,7 @@ POIs:
          # Deep Space Radar Ruins =================================================================
         - GroupName: Eden_RuinsSpaceRadar
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -507,7 +507,7 @@ POIs:
               # Auxillary POIs for Deep Space Radar
         - GroupName: Eden_RuinsRadarDish
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -529,7 +529,7 @@ POIs:
 
         - GroupName: Eden_RuinsSpaceRadarAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -550,7 +550,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow, Craters ]
           CountMinMax: [ 2, 6 ]
           DroneProb: 0
@@ -672,7 +672,7 @@ DroneSpawning:
 # ==============================================================
 
 # SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]
+   # - SpawnAt: [R2PolarisTradePlanet]
      # Radius: 1000
      # RadiusRandom: 50
      # RateMultiplyerCenter: 0.0

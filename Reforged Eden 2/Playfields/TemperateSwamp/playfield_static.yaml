@@ -603,7 +603,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -707,7 +708,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -799,7 +801,8 @@ POIs:
 
 # Deco
         - GroupName: R2EpsilonDeco
-          Faction: Zirax
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           Territory: False
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -1350,7 +1353,7 @@ POIs:
         - GroupName: FarrTradingT2RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrAbandonedRG]
@@ -1367,7 +1370,7 @@ POIs:
         - GroupName: FarrAuxT2RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1382,7 +1385,7 @@ POIs:
         - GroupName: FarrAuxT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 6 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1397,7 +1400,7 @@ POIs:
         - GroupName: FarrDefenseT1RG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrTradingT2RG]
@@ -1412,7 +1415,7 @@ POIs:
         - GroupName: MineT2PolarisRG
           Territory: False
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [FarrTradingT2RG]
           SpawnPOINearRange: [100, 400]
@@ -1423,7 +1426,7 @@ POIs:
         - GroupName: MineGraphitePolarisRG
           Territory: False
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           SpawnPOINear: [FarrTradingT2RG]
           SpawnPOINearRange: [100, 500]
@@ -1435,7 +1438,7 @@ POIs:
         - GroupName: FarrAbandonedRG
           Faction: Alien
           FactionTerritory: [Farr]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -1486,7 +1489,6 @@ POIs:
 
         - GroupName: R2PirateAuxT1
           Faction: Pirates
-          IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
@@ -1582,6 +1584,25 @@ POIs:
           SpawnPOINear: [R2ColonistMain]
           SpawnPOINearRange: [500, 600]
           Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2ColonistDeco
+          Faction: Colonists
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2ColonistMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
@@ -1792,7 +1813,7 @@ POIs:
         - GroupName: Eden_NecroAuxT1
           Faction: Alien
           FactionTerritory: [Warlord, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -1806,7 +1827,7 @@ POIs:
         - GroupName: Eden_NecroAuxT1
           Faction: Alien
           FactionTerritory: [Warlord, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -1821,7 +1842,7 @@ POIs:
         - GroupName: Eden_NecroDefenseT1
           Faction: Alien
           FactionTerritory: [Warlord, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -1836,7 +1857,7 @@ POIs:
         - GroupName: Eden_NecroAuxT2
           Faction: Alien
           FactionTerritory: [Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -1920,7 +1941,7 @@ POIs:
 
 # ---------------------- Zirax Random POIs home territory
 # T2 aux
-        - GroupName: R2EpsilonAuxT2
+        - GroupName: R2XenuAuxT2
           Faction: Zirax
           FactionTerritory: [Xenu]
           CountMinMax: [ 1, 2 ]
@@ -1934,7 +1955,7 @@ POIs:
               Value: 720
 
 # T1 aux
-        - GroupName: R2EpsilonAuxT1
+        - GroupName: R2XenuAuxT1
           Faction: Zirax
           FactionTerritory: [Xenu]
           CountMinMax: [ 2, 3 ]
@@ -2054,10 +2075,8 @@ POIs:
               Value: 720
 
 # =============================================== Faction Pirates Random
-
         - GroupName: R2PirateAuxT1
           Faction: Pirates
-          IsImportant: True
           CountMinMax: [ 0, 1 ] # 50% chance
           IsScalingCount: True
           DroneProb: 0.5
@@ -2067,6 +2086,27 @@ POIs:
           SpawnPOIAvoid: [R2TradeTower]
           SpawnPOIAvoidDistance: 100000 # Won't show up if there's a Trader tower
           Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_SmugBargeWater
+          Faction: Pirates
+          PlaceAt: OnWater
+          CountMinMax: [ 0, 1 ] # 50% chance
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2TradeTower]
+          SpawnPOIAvoidDistance: 100000 # Won't show up if there's a Trader tower
+          Properties:
+            - Key: SI
+              Value: Off
+            - Key: HudDistance
+              Value: 500
+            - Key: MapDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
@@ -2196,6 +2236,27 @@ POIs:
               Value: Neutral
             - Key: RegenAfter
               Value: 720
+
+# ---------------------- Talon Sunken Village
+        - GroupName: RE2_RuinTribalWaterMain
+          Faction: None
+          PlaceAt: UnderWater
+          Territory: False
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: False
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapDistance
+              Value: 3000
+            - Key: HudDistance
+              Value: 3000
+            - Key: RegenAfter
+              Value: 4320
 
 # ---------------------- Random Ruins
         - GroupName: TalonWoodRuin

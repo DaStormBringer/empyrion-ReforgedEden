@@ -193,10 +193,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]     
           DroneProb: 1.0
@@ -222,7 +222,7 @@ POIs:
 
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7

@@ -188,10 +188,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -208,14 +208,14 @@ POIs:
 # XCorp POIs
         - GroupName: Eden_XCorpAuxT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains ]
           CountMinMax: [ 1, 2 ]
           # IsScalingCount: True 
           DroneProb: 1
           DronesMinMax: [ 8, 8 ]
           ReserveCount: 8
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           SpawnResource: ["SathiumResource:0-1"]
           SpawnResourceRange: [105,125]
@@ -228,14 +228,14 @@ POIs:
 
         - GroupName: Eden_XCorpAuxT1
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains ]
           CountMinMax: [ 2, 4 ]
           # IsScalingCount: True 
           DroneProb: 1
           DronesMinMax: [ 4, 4 ]
           ReserveCount: 4
-          # NoShieldReload: True
+          # # NoShieldReload: True
           TroopTransport: False
           SpawnResource: ["SathiumResource:0-1"]
           SpawnResourceRange: [105,125]
@@ -248,7 +248,7 @@ POIs:
 
         - GroupName: FactoryZiraxRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
           DronesMinMax: [ 2, 4 ]
@@ -260,7 +260,7 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 4, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 2 ]
@@ -279,7 +279,7 @@ POIs:
 # Random defense outposts
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True    
+          # NoShieldReload: True    
           CountMinMax: [ 8, 12 ]
           # IsScalingCount: True 
           DroneProb: 0
@@ -310,7 +310,7 @@ POIs:
         - GroupName: Eden_CavernPurple 
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal ]
           CountMinMax: [ 1, 2 ]
           IsImportant: True
@@ -328,7 +328,7 @@ POIs:
         - GroupName: Eden_CaveXCorp
           Faction: Eden_Wreck
           FactionTerritory: [Zirax]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal ]
           CountMinMax: [ 0, 1 ]
           IsImportant: True
@@ -349,7 +349,7 @@ POIs:
         - GroupName: Eden_CaveCrystalPurple 
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal ]
           CountMinMax: [ 3, 4 ]
           # IsScalingCount: True
@@ -371,7 +371,7 @@ POIs:
         - GroupName: Eden_SpireWhite 
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ Crystal, Plains ]
           CountMinMax: [ 30, 36 ]
           # IsScalingCount: True
@@ -390,7 +390,7 @@ POIs:
         - GroupName: Eden_SpireWhite 
           Faction: Eden_Wreck
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ ShallowWater, Water, DeepWater ]
           CountMinMax: [ 13, 16 ]
           # IsScalingCount: True
@@ -411,7 +411,7 @@ POIs:
         - GroupName: Eden_CrystalsMulti
           Faction: None
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal, HardenedCrystal ]
           CountMinMax: [ 70, 80 ]
           # IsScalingCount: True
@@ -431,7 +431,7 @@ POIs:
         - GroupName: Eden_CrystalsMulti
           Faction: None
           FactionTerritory: [All]
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Crystal, HardenedCrystal ]
           CountMinMax: [ 20, 25 ]
           # IsScalingCount: True

@@ -1148,9 +1148,9 @@ Biome:
 ### POIs
 POIs:
     Random:
-        # - GroupName: DroneBaseT1RG  #CommandCenter
+        # - GroupName: R2DroneBase  #CommandCenter
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsCommandCenter: True
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 0, 1 ]
@@ -1164,7 +1164,7 @@ POIs:
               # Entries into the planet
         # - GroupName: Eden_ProgenitorEntry
           # Faction: Alien
-          # NoShieldReload: True  
+          # # NoShieldReload: True  
           # CountMinMax: [ 1, 1 ]
           # IsImportant: True
           # Properties:
@@ -1234,7 +1234,7 @@ POIs:
 # The Ark
         - Type: BA_Admin
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeArkOld
           Mode: Survival
           Name: The Ark
@@ -1251,7 +1251,7 @@ POIs:
 # Grave of Korvas
         - Type: BA_Admin
           Faction: Admin
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: Eden_BA_RefugeGrave
           Mode: Survival
           Name: Grave

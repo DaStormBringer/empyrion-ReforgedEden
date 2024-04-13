@@ -198,7 +198,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_BeaconSpacePolarisMining
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -212,7 +212,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_BeaconSpacePolarisMining
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -227,7 +227,7 @@ POIs:
     - Type: BA_Alien
       GroupName: Eden_PolSpaceForeman
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -249,7 +249,7 @@ POIs:
       Name: [CompoundPolarisMiners]
       GroupName: Eden_PolSpaceMiner
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.8

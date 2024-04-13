@@ -319,11 +319,19 @@ AsteroidResources:
 
 ### POIs
 POIs:
-    Random:   
-        - GroupName: DroneBaseT1RG
+    Random:
+
+# =================================================================================================
+# Main POIs. Important or larger POIs and POI compounds.
+# =================================================================================================
+
+# =============================================== Faction Zirax Main
+# ====================== Drone Base
+# Zirax Drone base
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -336,11 +344,205 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-       # ================================
-              # Giant Abandoned POI
-        - GroupName: Eden_AbandonedMain
+# ====================== Epsilon Main Compound
+        - GroupName: R2EpsilonMain
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          IsImportant: True
+          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2DroneBase]
+          SpawnPOIAvoidDistance: 2500
+          SpawnResource: ["PromethiumResource:1-2"]
+          SpawnResourceRange: [80,100]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        # - GroupName: R2EpsilonAuxT2
+          # Faction: Epsilon
+          # FactionTerritory: [Zirax]
+          # CountMinMax: [ 1, 1 ]
+          # DroneProb: 1
+          # DronesMinMax: [ 1, 1 ]
+          # ReserveCount: 2
+          # TroopTransport: False
+          # SpawnPOINear: [R2EpsilonMain]
+          # SpawnPOINearRange: [300, 400]
+          # Properties:
+            # - Key: RegenAfter
+              # Value: 720
+
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2EpsilonMain]
+          SpawnPOINearRange: [350, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2EpsilonAuxT0
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2EpsilonMain]
+          SpawnPOINearRange: [350, 600]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2EpsilonDefenseT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Territory: False
+          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.7
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2EpsilonMain]
+          SpawnPOINearRange: [500, 650]
+          Properties:
+            - Key: RegenAfter
+              Value: 720 
+
+# Deco
+        - GroupName: R2EpsilonDeco
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2EpsilonMain]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+# =============================================== Faction Polaris Main
+# ====================== Main Compound
+        - GroupName: R2PolarisMain
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          IsImportant: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: FactoryPolarisRG2
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          IsImportant: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT2
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 250]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisAuxT1
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [200, 300]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2PolarisDefenseT2
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [250, 500]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2PolarisDeco
+          Faction: Polaris
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2PolarisMain]
+          SpawnPOINearRange: [100, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+
+# =============================================== Faction Alien Main
+# Giant Abandoned POI
+        # - GroupName: Eden_AbandonedMain # needs to be updated or replaced for RE2
+        - GroupName: R2AbandonedPOI
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ BlastZone, DeadForest ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -352,22 +554,22 @@ POIs:
           SpawnResourceRange: [150,300]
           Properties:
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
         - GroupName: R2AbandonedPOI
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [Eden_AbandonedMain]
-          SpawnPOINearRange: [300, 450] 
+          SpawnPOINear: [R2AbandonedPOI]
+          SpawnPOINearRange: [300, 450]
           Properties: 
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
         - GroupName: Eden_RuinsCity
           Faction: None
@@ -377,15 +579,15 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [Eden_AbandonedMain]
-          SpawnPOINearRange: [125, 300] 
+          SpawnPOINear: [R2AbandonedPOI]
+          SpawnPOINearRange: [125, 300]
           Properties: 
             - Key: MapDistance
               Value: 0
             - Key: MapMarker
               Value: Neutral
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
         - GroupName: Ruins
           Faction: None
@@ -395,149 +597,48 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [Eden_AbandonedMain]
-          SpawnPOINearRange: [400, 800] 
+          SpawnPOINear: [R2AbandonedPOI]
+          SpawnPOINearRange: [400, 800]
           Properties: 
             - Key: MapMarker
               Value: Neutral
             - Key: RegenAfter
               Value: 720
 
-       # ======================= POLARIS SETTLEMENT ======================= 
-        # Mining Station
-        - GroupName: PolarisIndustrialMainRG                      # Main Building
-          Faction: Polaris
-          NoShieldReload: True  
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
-          Properties:  
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: PolarisLogisticsMainRG
-          Faction: Polaris
-          NoShieldReload: True  
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [PolarisIndustrialMainRG]
-          SpawnPOINearRange: [150, 300] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 100 
-            - Key: RegenAfter
-              Value: 720
- 
-        - GroupName: TS_PlanetRG
-          Faction: Polaris
-          NoShieldReload: True  
-          IsImportant: True
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [PolarisIndustrialMainRG]
-          SpawnPOINearRange: [100, 200] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 300 
-            - Key: Music
-              Value: SunnySkies
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: PolarisIndustrialAuxRG
-          Faction: Polaris
-          NoShieldReload: True  
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
+# Deco
+        - GroupName: R2LegacyDeco
+          Faction: Alien
+          Territory: False
+          Biome: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge ]
           CountMinMax: [ 2, 3 ]
-          SpawnPOINear: [PolarisIndustrialMainRG]
-          SpawnPOINearRange: [100, 200] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 100 
-            - Key: RegenAfter
-              Value: 720
- 
-        - GroupName: CivilSettlementRG
-          Faction: Polaris
-          NoShieldReload: True  
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [PolarisLogisticsMainRG]
-          SpawnPOINearRange: [100, 200] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 100 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: PolarisLogisticsAuxRG
-          Faction: Polaris
-          NoShieldReload: True  
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          CountMinMax: [ 1, 3 ]
-          SpawnPOINear: [PolarisLogisticsMainRG]
-          SpawnPOINearRange: [100, 200] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 100 
-            - Key: RegenAfter
-              Value: 720
- 
-        - GroupName: PolarisDefenceRG
-          Faction: Polaris
-          NoShieldReload: True  
-          # Territory: False        
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
-          CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [PolarisLogisticsMainRG]
-          SpawnPOINearRange: [300, 400] 
-          Properties: 
-            # - Key: MapDistance
-              # Value: 0  
-            # - Key: HudDistance
-              # Value: 500  
-            - Key: RegenAfter
-              Value: 720
-
-
-        - GroupName: FactoryPolarisRG1
-          Faction: Polaris
-          NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TS_PlanetRG]
-          SpawnPOINearRange: [350, 700]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2AbandonedPOI]
+          SpawnPOINearRange: [150, 300]
           Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: FactoryPolarisRG2
-          Faction: Polaris
-          NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TS_PlanetRG]
-          SpawnPOINearRange: [350, 700]
-          Properties:
-            - Key: RegenAfter
-              Value: 720
 
+
+
+# =============================================== Faction Polaris Random
+# ====================== Mines
         - GroupName: MineT1PolarisRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
           Properties:
             - Key: RegenAfter
               Value: 720
@@ -545,81 +646,19 @@ POIs:
         - GroupName: MineT2PolarisRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
-          Properties:
-            - Key: RegenAfter
-              Value: 720
-
-
-
-       # ================================
-        # POI complex with several structures around
-        - GroupName: EpsilonBunkerRG
-          Faction: Zirax
-          NoShieldReload: True
-          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
-          IsImportant: True
-          CountMinMax: [ 1, 1 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
-          TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
-          POIDistance: 2000
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: EpsilonAuxT1RG
-          Faction: Zirax
-          NoShieldReload: True
-          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [EpsilonBunkerRG]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: EpsilonDefenceT1RG
-          Faction: Zirax
-          NoShieldReload: True
-          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
-          CountMinMax: [ 4, 5 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [EpsilonBunkerRG]
-          SpawnPOINearRange: [200, 350]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-       # ================================
-        # Defense for drone base
-        - GroupName: EpsilonAuxT1RG
-          Faction: Zirax
-          NoShieldReload: True
-          Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 1
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
-          SpawnPOINearRange: [350, 600]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-       # ================================
-              # Ruined City Buildings
+
+# =============================================== Faction Other
+# Ruined City Buildings
         - GroupName: Eden_RuinsCityLarge
           Faction: None
           BiomesExcluded: [ RadiatedMountains, LowMountains, Mountains, PolarSnow ]
@@ -682,12 +721,16 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
+# =================================================================================================
+# Random POIs. Low tier or less important POIs that spawn after the main ones to fill up the rest of the planet.
+# =================================================================================================
+
        # ================================
         # POI amount scales with planet size 
         # Random civil outposts scattered around planet
-        - GroupName: CivilSettlementO2
-          Faction: Polaris
-          NoShieldReload: True
+        - GroupName: R2ColonistAux
+          Faction: Colonists
+          # NoShieldReload: True
           BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge, RadiatedMountains, PolarSnow ]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -701,10 +744,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        # Random military outposts scattered around planet
-        - GroupName: EpsilonAuxT2RG
-          Faction: Zirax
-          NoShieldReload: True
+# Random Epsilon military outposts scattered around planet
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          # NoShieldReload: True
           Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
@@ -712,13 +756,78 @@ POIs:
           DronesMinMax: [ 4, 6 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG] 
-          POIDistance: 2000
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        # Different POIs scattered around planet
+# ====================== Epsilon Random POIs home territory
+# T2 aux
+        - GroupName: R2EpsilonAuxT2
+          Faction: Epsilon
+          FactionTerritory: [Epsilon]
+          CountMinMax: [ 1, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain, R2EpsilonAuxT2]
+          SpawnPOIAvoidDistance: 1000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# T1 aux
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Epsilon]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2EpsilonMain, R2EpsilonAuxT1]
+          SpawnPOIAvoidDistance: 1000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2AbandonedPOI
+          Faction: Alien
+          # NoShieldReload: True
+          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge ]
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 3
+          TroopTransport: True
+          Properties: 
+            - Key: Music
+              Value: lava
+            - Key: RegenAfter
+              Value: 4320
+
+# Deco
+        - GroupName: R2LegacyDeco
+          Faction: Alien
+          Territory: False
+          Biome: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge ]
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+
         - GroupName: CrashedShip
           Faction: None
           Biome: [ BlastZone, DeadForest, BlastZoneEdge, BlastZoneForestEdge ]
@@ -735,23 +844,7 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: R2AbandonedPOI
-          Faction: Alien
-          NoShieldReload: True
-          BiomesExcluded: [ BlastZone, BlastZoneEdge, DeadForest, BlastZoneForestEdge ]
-          CountMinMax: [ 0, 1 ]
-          IsScalingCount: True
-          DroneProb: 1.0
-          DronesMinMax: [ 2, 3 ]
-          ReserveCount: 3
-          TroopTransport: True
-          Properties: 
-            - Key: Music
-              Value: lava
-            - Key: RegenAfter
-              Value: 720
-
-              #Forgotten Tower
+# Forgotten Tower
         - GroupName: Eden_ForgottenTower
           Faction: None
           BiomesExcluded: [ RadiatedMountains, LowMountains, Mountains, GlacierSnow, PolarSnow ]
@@ -765,7 +858,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-              #Forgotten Bridge
+# Forgotten Bridge
         - GroupName: Eden_ForgottenBridge
           Faction: None
           Biome: [ DeepWater ]
@@ -788,27 +881,6 @@ POIs:
               Value: Off
             - Key: RegenAfter
               Value: 720
-
-# Kriel
-        - GroupName: KrielMain 
-          Faction: Kriel    
-          NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          Properties: 
-            - Key: Music
-              Value: AlteredPhase
-            - Key: RegenAfter
-              Value: 720 
-
-        - GroupName: KrielDefenseT1 
-          Faction: Kriel    
-          NoShieldReload: True
-          CountMinMax: [ 3, 7 ]
-          Properties: 
-            - Key: Music
-              Value: AlteredPhase
-            - Key: RegenAfter
-              Value: 720 
 
 # Random City ruin hubs =================================================================
         - GroupName: Eden_RuinsCity
@@ -880,23 +952,6 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-       # Alien Artifacts
-        - GroupName: Artifacts
-          Faction: Alien
-          NoShieldReload: True
-          Biome: [ BlastZone ]
-          CountMinMax: [ 1, 1 ]
-          IsScalingCount: True
-          DroneProb: 0
-          DronesMinMax: [ 0, 0 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties: 
-            - Key: MapMarker
-              Value: Neutral
-            - Key: Music
-              Value: EvilWhispering
-
 # Harvestable Voidium
         - GroupName: Eden_HarvestVoidiumT2
           Faction: None
@@ -932,7 +987,7 @@ POIs:
 
         - GroupName: Eden_HarvestVoidiumT2
           Faction: None
-          FactionTerritory: [Kriel, Eden_DroneHome, TheLegacy, Tesch]
+          FactionTerritory: [Kriel, Eden_DroneHome, TheLegacy]
           CountMinMax: [ 0, 1 ]
           SpawnPOINear: [Eden_HarvestVoidiumT2]
           SpawnPOINearRange: [35, 250]
@@ -967,7 +1022,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -988,22 +1043,25 @@ POIs:
           Pos: [ -596, 104, -1063 ]
           RotY: 125
 
-### Drones
-DroneBaseSetup: 
+DroneBaseSetup:
     Random:
         - GroupName: DroneBaseSetup
           Difficulty: 6
           PresetStyle: 3
           Stock:
 
-              - Name: DroneSmallFast01Minigun
-                Amount: 300
+              - Name: DroneHoverZiraxMinigun
+                Amount: 200
                 Extra: 0
 
-              - Name: DroneSmallFast01Rocket
-                Amount: 100
-                Extra: 0  
-    
+              - Name: DroneHoverZiraxRocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeZiraxMinigun
+                Amount: 50
+                Extra: 0
+
               - Name: DroneBomberAttackBase
                 Amount: Infinite
                 Extra: 1
@@ -1028,73 +1086,253 @@ DroneBaseSetup:
                 Amount: 150
                 Extra: 3
 
-              - Name: AlienAssassinGrey
+              - Name: Mechanoid
                 Amount: 300
                 Extra: 3
-   
 
+    PlanetVessels:
+# Guarding drone base
+              - Name: R2OPVZiraxT1
+                Faction: Zirax
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 20
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 300
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [R2DroneBase]
+                  Radius: 1000
+                  DistToGround: 200
+             #   Properties:
+              #    - Key: AIManPatrolFactions
+             #       Value: "Farr"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 4
+                    Type: FighterDrone
 
-# Drones that patrol on whole planet 
-DroneSpawning:    
-    Random:
-        - DronesMinMax: [ 3, 6 ]
-          CenterX: -1000
-
-        - DronesMinMax: [ 3, 6 ]
-          CenterX: 1000
+# Guarding drone base
+              - Name: R2OPVZiraxT0
+                Faction: Zirax
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 30
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 300
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [R2DroneBase]
+                  Radius: 1500
+                  DistToGround: 200
+             #   Properties:
+              #    - Key: AIManPatrolFactions
+             #       Value: "Farr"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 2
+                    Type: FighterDrone
 
 # ==============================================================
 # ==============================================================
 
 SpawnRateZones:
-   - SpawnAt: [TS_PlanetRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 1000
      RadiusRandom: 50
      RateMultiplyerCenter: 0.0
      RateMultiplyerEdge: 0.7
      AffectEnemies: true
-     Color: "0.0, 1.0, 0.0, 0.7"  
-      
+     Color: "0.0, 1.0, 0.0, 0.7"
+
+# Clears out hostile spawns next to abandoned POIs.
+   - SpawnAt: [R2AbandonedPOI]
+     Radius: 150
+     RadiusRandom: 25
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 0
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7"
+
 SpawnZones:
-   - SpawnAt: [CrashedShip, PromethiumResource, Ruins, Wreckage, R2AbandonedPOI]
+# ---------------------- Spawn Zones Resources and crashed ships. Dependent on planet.
+   - SpawnAt: [CrashedShip, PromethiumResource]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 50
      RateMultiplyerCenter: 1.0
      RateMultiplyerEdge: 0.5
      Color: "1.0, 1.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
      Entities:
        - Names: [AlienBugs03, Spiders01]
          Biomes: [Any]
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, EpsilonBunkerRG]
+
+
+# ---------------------- Spawn Zones Zirax
+# Drone Base and Main POIs
+   - SpawnAt: [R2DroneBase, R2XenuMain, R2EpsilonMain, R2GhystMain, R2RadosMainT3, R2RadosMainT3Snow, R2RadosMainT3Desert]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
-     RadiusRandom: 25
+     RadiusRandom: 100
      RateMultiplyerCenter: 1.0
-     RateMultiplyerEdge: 0.6
-     Color: "1.0, 1.0, 1.0, 1.0"
-     SpawnOnlyIfPoiIsAlien: true
-     Entities:
-       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol, ZiraxOverseerPatrol]
-         Biomes: [Any]
-         Amount: 200
-         Period: Always
-         DelayMinMax: [-1, -1]
-   - SpawnAt: [EpsilonAuxT2RG, R2AbandonedPOI]
-     BiomesExcluded: [ LowMountains, Mountains ]
-     Radius: 500
-     RadiusRandom: 25
-     RateMultiplyerCenter: 1.0
-     RateMultiplyerEdge: 0.6
-     Color: "1.0, 1.0, 1.0, 1.0"
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
      SpawnOnlyIfPoiIsAlien: true
      Entities:
        - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
          Biomes: [Any]
-         Amount: 200
+         Amount: 100
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T2 POIs
+   - SpawnAt: [R2XenuAuxT2, R2EpsilonAuxT2, R2GhystAuxT2, R2RadosAuxT2, R2RadosAuxT2Snow, R2RadosAuxT2Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 800
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T1 POIs
+   - SpawnAt: [R2XenuAuxT1, R2EpsilonAuxT1, R2GhystAuxT1, R2RadosAuxT1, R2RadosAuxT1Snow, R2RadosAuxT1Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+
+# ---------------------- Spawn Zones Talon
+# Main village spawns closer to the village.
+   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 250
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Main village spawns further from the villages. Long distance hunters.
+   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 1500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.1
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Talon near aux POIs.
+   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 250
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.1
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardianHerd]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [200, 240]
+       - Names: [TalonGuardians]
+         Biomes: [Any]
+         Amount: 100
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# Talon farmers.
+   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+     BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
+     Radius: 100
+     RadiusRandom: 25
+     RateMultiplyerCenter: 1
+     RateMultiplyerEdge: 0.5
+     Color: "0.0, 1.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [TalonGuardians]
+         Biomes: [Any]
+         Amount: 100
+         Period: Always
+         DelayMinMax: [200, 240]
+
+# ---------------------- Spawn Zones Alien
+# Hostile infected creatures near abandoned POIs
+   - SpawnAt: [R2AbandonedPOI]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 300
+     RadiusRandom: 50
+     RateMultiplyerCenter: 0.1
+     RateMultiplyerEdge: 1
+     Color: "1.0, 0.0, 1.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+# Infected creatures
+       - Names: [Alien02_03_BattleGroup]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [HexapodsInfected, AlienAssassinGreysInfected]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+       - Names: [HexapodsInfectedHerd, AlienAssassinsInfectedHerd]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+# Infected Talon. Remove if no Talon presence on the planet.
+       - Names: [TalonGuardiansCrossbowInfected, TalonGuardiansGreenInfected, TalonGuardiansBlueInfected, TalonGuardiansRedInfected]
+         Biomes: [Any]
+         Amount: 25
+         Period: Always
+         DelayMinMax: [-1, -1]
+# Infected Zirax. Remove if no Zirax presence on the planet.
+       - Names: [ZiraxInfectedHerd]
+         Biomes: [Any]
+         Amount: 25
          Period: Always
          DelayMinMax: [-1, -1]
 
@@ -1209,9 +1447,14 @@ CreatureSpawning:
           Color: "1.0, 0, 0"
     - Biomes: [BlastZone, BlastZoneEdge]
       Entities:
-        - Name: AlienAssassinGreys
+        - Name: AlienAssassinGreysInfected
           Period: Always
-          Amount: 20
+          Amount: 30
+          DelayMinMax: [20, 24]
+          Color: "0, 0, 0"
+        - Name: AlienAssassinsInfectedHerd
+          Period: Always
+          Amount: 10
           DelayMinMax: [20, 24]
           Color: "0, 0, 0"
         - Name: AlienBugs03
@@ -1221,6 +1464,11 @@ CreatureSpawning:
           Color: "0, 0, 0"
     - Biomes: [DeadForest, BlastZoneForestEdge]
       Entities:
+        - Name: Alien02_03_BattleGroup
+          Period: Always
+          Amount: 5
+          DelayMinMax: [20, 24]
+          Color: "0, 0, 0"
         - Name: Spiders03
           Period: Always
           Amount: 10

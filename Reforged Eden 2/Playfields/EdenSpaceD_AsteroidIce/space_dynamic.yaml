@@ -308,7 +308,7 @@ POIs:
       GroupName: Eden_BAOPolarisGasT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 3 ]
       Probability: 0.75
@@ -322,7 +322,7 @@ POIs:
       GroupName: Eden_BAOPolarisGasT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisDefense]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 0.5

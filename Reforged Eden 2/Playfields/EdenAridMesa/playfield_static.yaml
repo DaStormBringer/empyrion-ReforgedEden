@@ -275,25 +275,77 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG           # CommandCenter
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2DroneBase
+          Faction: Zirax
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
-          CountMinMax: [ 1, 1 ]
+          IsImportant: True
+          CountMinMax: [ 1 ]
           DroneProb: 1.0
-          DronesMinMax: [ 3, 5 ] 
+          DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
-          Properties: 
-            - Key: Music
-              Value: moonstone 
+          SpawnResource: ["IronResource:0-1","PromethiumResource:0-1","NeodymiumResource:0-1"]
+          SpawnResourceRange: [150,400]
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+# Defenses for Drone Base
+        - GroupName: R2XenuDefenseT2
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2XenuDefenseT2]
+          SpawnPOIAvoidDistance: 250
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [300, 400]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: R2XenuDefenseT1
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 5, 7 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 2
+          TroopTransport: True
+          SpawnPOIAvoid: [R2XenuDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [700, 800]
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Deco
+        - GroupName: R2XenuDeco
+          Faction: Zirax
+          Territory: False
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [R2DroneBase]
+          SpawnPOINearRange: [150, 300]
+          Properties:
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 500
             - Key: RegenAfter
               Value: 720
 
           # Warlord's Fortress
         - GroupName: Eden_WarlordFortress
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
       #    Biome: [ RadiatedFog ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -305,12 +357,12 @@ POIs:
           SpawnResourceRange: [150,250]
           Properties: 
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
           # Warlord's Fortress
         - GroupName: Eden_WarlordVillage
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
       #    Biome: [ RadiatedFog ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
@@ -327,14 +379,14 @@ POIs:
         - GroupName: Eden_FrontierMain
           Faction: Civilian
           FactionTerritory: [Polaris, Colonists, Civilian]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [DroneBaseT1RG, Eden_WarlordFortress]
+          SpawnPOIAvoid: [R2DroneBase, Eden_WarlordFortress]
           SpawnPOIAvoidDistance: 2000
           Properties:  
             - Key: RegenAfter
@@ -343,7 +395,7 @@ POIs:
         - GroupName: Eden_FrontierAuxT1
           Faction: Civilian
           FactionTerritory: [Polaris, Colonists, Civilian]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -362,7 +414,7 @@ POIs:
         - GroupName: Eden_FrontierComArray
           Faction: Civilian
           FactionTerritory: [Polaris, Colonists, Civilian]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           Territory: False
           Biome: [ Mountains, LowMountains ]
@@ -382,11 +434,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        # - GroupName: PolarisDefenceRG
+        # - GroupName: R2PolarisDefenseT1
           # Faction: Polaris  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 5, 6 ]
-          # SpawnPOINear: [TS_PlanetRG]
+          # SpawnPOINear: [R2PolarisTradePlanet]
           # SpawnPOINearRange: [300, 400] 
           # Properties: 
             # - Key: RegenAfter
@@ -397,10 +449,9 @@ POIs:
         # Epsilon Faction Main Complex
 
           # Main
-        - GroupName: Eden_EpsilonRadarMain
-          Faction: Zirax    
-          NoShieldReload: True
-      #    Biome: [ RadiatedFog ]
+        - GroupName: R2EpsilonAuxT2
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.9
@@ -412,81 +463,55 @@ POIs:
               Value: 720
 
           # Main Aux 
-        - GroupName: EpsilonRadarAdditionRG
-          Faction: Zirax    
-          NoShieldReload: True
-      #    Biome: [ RadiatedFog ] 
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.9
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True 
-          SpawnPOINear: [Eden_EpsilonRadarMain]
+          SpawnPOINear: [R2EpsilonAuxT2]
           SpawnPOINearRange: [300, 500]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
           # Main Defense Turrets
-        - GroupName: EpsilonRadarTurretRG
-          Faction: Zirax    
-          NoShieldReload: True
-          # IsImportant: True
+        - GroupName: R2EpsilonDefenseT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Territory: False
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.9
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [Eden_EpsilonRadarMain]
-          SpawnPOINearRange: [100, 350] 
+          SpawnPOINear: [R2EpsilonAuxT2]
+          SpawnPOINearRange: [100, 350]
           Properties: 
             - Key: RegenAfter
               Value: 720
  
        # ======================= TALON  SETTLEMENT ======================= 
-         
-        - GroupName: TribalBazarArid                      # CommandCenter
-          Faction: Talon  
-          IsImportant: True
+        - GroupName: TalonStoneMain
+          Faction: Talon
           IsCommandCenter: True
-          CountMinMax: [ 1, 1 ]
-          Properties:  
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: TribalVillageAridMain
-          Faction: Talon  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TribalBazarArid]
-          SpawnPOINearRange: [150, 300] 
-          Properties: 
-            - Key: MapDistance
-              Value: 0  
-            - Key: HudDistance
-              Value: 100 
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
             - Key: RegenAfter
-              Value: 720
- 
-        # - GroupName: TribalAridReservoir    # cannot use due to cutout terrain not visible in distance
-          # Faction: Talon  
-          # IsImportant: True
-          # CountMinMax: [ 1, 1 ]
-          # SpawnPOINear: [TribalBazarArid]
-          # SpawnPOINearRange: [100, 200] 
-          # Properties: 
-            # - Key: MapDistance
-              # Value: 0  
-            # - Key: HudDistance
-              # Value: 300 
-            # - Key: RegenAfter
-              # Value: 720
+              Value: 4320
 
-        - GroupName: TribalVillageAridAux
-          Faction: Talon  
+        - GroupName: TalonAuxSand
+          Faction: Talon
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TribalVillageAridMain]
+          SpawnPOINear: [TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -496,54 +521,56 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TribalAridDefence
-          Faction: Talon  
+        - GroupName: TalonDefenseSand
+          Faction: Talon
           CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [TribalBazarArid]
+          SpawnPOINear: [TalonStoneMain]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             - Key: RegenAfter
               Value: 720
        # ================================
         # Zirax complex with several structures around
-        - GroupName: EpsilonMainRG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonMain
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 3, 4 ]
           ReserveCount: 4
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
-        - GroupName: EpsilonAuxT1RG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOINear: [EpsilonMainRG]
+          SpawnPOINear: [R2EpsilonMain]
           SpawnPOINearRange: [100, 250]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: EpsilonDefenceT1RG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonDefenseT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
+          Territory: False
+          # NoShieldReload: True
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [EpsilonMainRG]
+          SpawnPOINear: [R2EpsilonMain]
           SpawnPOINearRange: [200, 350]
           Properties: 
             - Key: RegenAfter
@@ -551,15 +578,15 @@ POIs:
 
        # ================================
         # Defense for drone base
-        - GroupName: EpsilonAuxT1RG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonAuxT1
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [350, 600] 
           Properties: 
             - Key: RegenAfter
@@ -572,7 +599,7 @@ POIs:
         - GroupName: Eden_FrontierAuxT1
           Faction: Civilian
           FactionTerritory: [Polaris, Colonists, Civilian]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True 
           DroneProb: 0
@@ -586,7 +613,7 @@ POIs:
  # Random Neodymium Mine
         - GroupName: Eden_PolMineNeodymium
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 0, 1 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -599,42 +626,42 @@ POIs:
               Value: 720
 
         # Random military outposts scattered around planet
-        - GroupName: EpsilonAuxT2RG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonAuxT2
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True 
           DroneProb: 0.8
           DronesMinMax: [ 4, 6 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: EpsilonBunkerRG
-          Faction: Zirax    
-          NoShieldReload: True
+        - GroupName: R2EpsilonMain
+          Faction: Epsilon
+          FactionTerritory: [Zirax]
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True 
           DroneProb: 0.8
           DronesMinMax: [ 4, 6 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: RegenAfter
-              Value: 720
+              Value: 4320
 
 # ================================================================================================= Brotherhood of Farr
 # Main Planet
 # Main Single
         - GroupName: FarrMainSingleRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -648,7 +675,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -666,7 +693,7 @@ POIs:
 # Main HQ
         - GroupName: FarrMainRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 1.0
           DronesMinMax: [ 3, 5 ]
@@ -679,7 +706,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -697,7 +724,7 @@ POIs:
 # Trading Compound
         - GroupName: FarrTradingT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.25
           DronesMinMax: [ 1, 2 ]
@@ -710,7 +737,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -727,7 +754,7 @@ POIs:
 
         - GroupName: FarrAuxT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [200, 350]
@@ -742,7 +769,7 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -757,7 +784,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -772,9 +799,9 @@ POIs:
 
 # Settlement around Farr Monument
 
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
           SpawnPOIAvoidDistance: 3000
@@ -789,9 +816,9 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [200, 350]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -804,9 +831,9 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 6 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [250, 800]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
@@ -818,9 +845,9 @@ POIs:
               Value: 720
 
 # More settlements
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 1.0
@@ -835,9 +862,9 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, FarrMonument, FarrAuxT2RG]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, R2FarrMonument, FarrAuxT2RG]
           SpawnPOIAvoidDistance: 1500
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
@@ -851,7 +878,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsAuxPOI: True
           SpawnPOINearRange: [100, 250]
@@ -866,7 +893,7 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           IsAuxPOI: True
           SpawnPOINearRange: [300, 500]
@@ -883,7 +910,7 @@ POIs:
 
         - GroupName: FarrAuxT3bRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
         #  IsImportant: True
           CountMinMax: [ 0, 1 ]
        #   SpawnPOIAvoid: [FarrMainSingleRG]
@@ -900,7 +927,7 @@ POIs:
         - GroupName: FarrAuxT2bRG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT3bRG]
@@ -917,7 +944,7 @@ POIs:
         - GroupName: FarrAuxT1b
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT1b]
@@ -934,7 +961,7 @@ POIs:
 # Random structures
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.35
@@ -948,7 +975,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.2
@@ -960,7 +987,7 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -974,7 +1001,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0.5
@@ -1000,22 +1027,6 @@ POIs:
           Properties: 
             - Key: MapMarker
               Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_OldMine
-          Faction: Alien    
-          CountMinMax: [ 1, 1 ]
-          IsImportant: True
-          DroneProb: 1.0
-          DronesMinMax: [ 2, 3 ]
-          ReserveCount: 3
-          TroopTransport: True
-          Properties: 
-            - Key: SI
-              Value: Off
-            - Key: Music
-              Value: barren
             - Key: RegenAfter
               Value: 720
 
@@ -1047,52 +1058,50 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        # Flowers
-        - GroupName: Eden_TreeAlien1
-          Faction: None
-          Biome: [ Forest, Oasis ]
-          IsImportant: True
-          CountMinMax: [ 10, 12 ]
-          IsScalingCount: True 
-          DroneProb: 0
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties:
-            - Key: SI
-              Value: Off
-            - Key: MapDistance
-              Value: 0
-            - Key: MapMarker
-              Value: Neutral
-
 
     FixedPlayerStart:
         - Mode: Debug
           Pos: [ -3400, 100, -720 ]
           RotY: 125
 
-### Drones
+# Drones
+# ------------ Aerodrones with propellers.
+# DroneSmallZiraxEMP
+# DroneAeroZiraxMinigun
+# DroneAeroZiraxCannon
+# DroneAeroZiraxRocket
+
+# ------------ Small hoverdrones
+# DroneHoverZiraxMinigun
+# DroneHoverZiraxLaser
+# DroneHoverZiraxRocket
+
+# ------------ Large gunships
+# DroneLargeZiraxMinigun
+# DroneLargeZiraxRocket
+# DroneLargeZiraxPlasma
+
 DroneBaseSetup:
     Random:
         - GroupName: DroneBaseSetup
           Difficulty: 6
           PresetStyle: 3
           Stock:
-              - Name: DroneSmallFast01Plasma
-                Amount: 200
-                Extra: 0  
 
-              - Name: EnemyDroneV2Minigun
-                Amount: 300
+              - Name: DroneAeroZiraxMinigun
+                Amount: 200
                 Extra: 0
 
-              - Name: EnemyDroneV2Plasma
-                Amount: 300
+              - Name: DroneAeroZiraxCannon
+                Amount: 200
                 Extra: 0
 
-              - Name: DroneLargeSlow02Cannon
+              - Name: DroneAeroZiraxRocket
                 Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeZiraxMinigun
+                Amount: 50
                 Extra: 0
 
               - Name: DroneBomberAttackBase
@@ -1107,47 +1116,69 @@ DroneBaseSetup:
                 Amount: Infinite
                 Extra: 2
 
-              - Name: ZiraxLaser
+              - Name: ZiraxMinigun
+                Amount: 500
+                Extra: 3
+
+              - Name: ZiraxRocket
                 Amount: 500
                 Extra: 3
 
               - Name: RipperDog
-                Amount: 400
+                Amount: 150
                 Extra: 3
 
-          PlanetVesselBase:
-              Name: PlanetVesselBaseSetup
-              Position3D: [ 0, 102, 0]
-              BaseType: PlanetVesselBase
-              KeyId: 0
-              PlanetVessel:
-                - Name: Patrol-M-Easy
-                  Mission: PlanetPatrol
-                  FixedMaxSpeed: 10
-               
-                  RangePatrolTask:
-                    Position3D: [ 1500, 80, 0 ]
-                    Radius: 800
-                    DistToGround: 80
+              - Name: Mechanoid
+                Amount: 300
+                Extra: 3
 
-                  AttackCVCircleAround:
-                    DistToTarget: 249
+    PlanetVessels:
+# Guarding drone base
+              - Name: R2OPVZiraxT1
+                Faction: Zirax
+                CountMinMax: [1, 1]
+                LevelMod: 2
+                FixedMaxSpeed: 20
+                DelayBetweenRespawn: 600
+                DelayBeforeSelfDestruction: 300
+                IsRespawnAfterDestruction: False
+                RangePatrolTask:
+                  POINameAsPositionRef: [R2DroneBase]
+                  Radius: 1000
+                  DistToGround: 200
+             #   Properties:
+              #    - Key: AIManPatrolFactions
+             #       Value: "Farr"
+             #     # - Key: AIManPatrolGroups
+                    # Value: " "
+                Stock:
+                  - Name: DroneHoverZiraxLaser
+                    Amount: 4
+                    Type: FighterDrone
 
 DroneSpawning:
     Random:
-        - DronesMinMax: [ 5, 10 ]
-          CenterX: -2500
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 5000
           Radius: 3000
 
-        - DronesMinMax: [ 5, 10 ]
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -5000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
           CenterX: 2500
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -2500
           Radius: 3000
 
 # ==============================================================
 # ==============================================================
  
 SpawnRateZones:
-   - SpawnAt: [TS_PlanetRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 1000
      RadiusRandom: 50
      RateMultiplyerCenter: 0.0
@@ -1156,7 +1187,57 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7"  
 
 SpawnZones:
-   - SpawnAt: [TribalBazarArid ]
+
+# ====================== Spawn Zones Zirax
+# Drone Base and Main POIs
+   - SpawnAt: [R2DroneBase, R2XenuMain, R2EpsilonMain, R2GhystMain, R2RadosMainT3, R2RadosMainT3Snow, R2RadosMainT3Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 1000
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 100
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T2 POIs
+   - SpawnAt: [R2XenuAuxT2, R2EpsilonAuxT2, R2GhystAuxT2, R2RadosAuxT2, R2RadosAuxT2Snow, R2RadosAuxT2Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 800
+     RadiusRandom: 100
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 75
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+# T1 POIs
+   - SpawnAt: [R2XenuAuxT1, R2EpsilonAuxT1, R2GhystAuxT1, R2RadosAuxT1, R2RadosAuxT1Snow, R2RadosAuxT1Desert]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 500
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.1
+     Color: "1.0, 0.0, 0.0, 1.0"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol]
+         Biomes: [Any]
+         Amount: 50
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+   - SpawnAt: [TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1200
      RadiusRandom: 50

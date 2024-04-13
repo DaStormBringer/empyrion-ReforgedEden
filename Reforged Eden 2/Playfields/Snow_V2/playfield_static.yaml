@@ -228,9 +228,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG            # CommandCenter
+        - GroupName: R2DroneBase            # CommandCenter
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsCommandCenter: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
@@ -246,7 +246,7 @@ POIs:
 
         - GroupName: PiratesAmbushSnow 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 3 ]
      #     IsImportant: True
           Properties:  
@@ -255,7 +255,7 @@ POIs:
 
         - GroupName: PiratesAuxSnowRG 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
      #     IsImportant: True
           Properties:  
@@ -264,7 +264,7 @@ POIs:
 
         - GroupName: PiratesDefenseT2Snow 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
      #     IsImportant: True
           Properties:  
@@ -273,7 +273,7 @@ POIs:
 
         - GroupName: PiratesDefenseT1Snow 
           Faction: Pirates    
-          NoShieldReload: True 
+          # NoShieldReload: True 
           SpawnPOINear: [PiratesAuxSnowRG]
           SpawnPOINearRange: [100,250]
           CountMinMax: [ 1, 3 ]
@@ -283,9 +283,9 @@ POIs:
               Value: 720 
 # Trader
 
-        - GroupName: TraderMainRG 
+        - GroupName: R2TraderMain 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties: 
             - Key: Music
@@ -295,7 +295,7 @@ POIs:
 
         - GroupName: TraderSettlementSnow 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           Properties: 
             - Key: Music
@@ -303,21 +303,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderDefenseHQ 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
-          CountMinMax: [ 1, 3 ]
-          SpawnPOINear: [TraderMainRG]
-          SpawnPOINearRange: [100,250]
-          Properties: 
-            - Key: Music
-              Value: AlteredPhase
-            - Key: RegenAfter
-              Value: 720 
-
-        - GroupName: TraderDefenseB 
-          Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [TraderSettlementSnow]
           SpawnPOINearRange: [100,250]
@@ -329,19 +317,19 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilMainRG
+        - GroupName: R2ColonistMain
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           Properties:  
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: CivilSettlementRG 
+        - GroupName: R2PolarisAuxT1 
           Territory: False
           Faction: Colonists                    #primarily for outside the territories
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           Properties:  
             - Key: RegenAfter
@@ -350,9 +338,9 @@ POIs:
         - GroupName: MineGraphitePolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [TraderMainRG]
+          SpawnPOINear: [R2TraderMain]
           SpawnPOINearRange: [300, 700] 
           Properties:  
             - Key: RegenAfter
@@ -361,9 +349,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [200, 400] 
           Properties:  
             - Key: RegenAfter
@@ -372,9 +360,9 @@ POIs:
         - GroupName: MineT3PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 200] 
           Properties:  
             - Key: RegenAfter
@@ -383,16 +371,16 @@ POIs:
         # - GroupName: CivilSettlementSnowRG 
           # Territory: False
           # Faction: Main                    #fill up territories when CIV faction is not placed
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 4 ]
           # Properties:  
             # - Key: RegenAfter
               # Value: 720 
 # Kriel
 
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: Music
@@ -400,9 +388,9 @@ POIs:
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 4 ]
           Properties: 
             - Key: Music
@@ -412,22 +400,26 @@ POIs:
 
        # ================================
         # Trading Station with some settlements
-        - GroupName: TS_PlanetRG
+        - GroupName: R2PolarisTradePlanet
           Faction: Polaris   
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 2000
           Properties: 
+            - Key: Discovery
+              Value: False
             - Key: Music
-              Value: SunnySkies
+              Value: AlteredPhase
+            - Key: RegenAfter
+              Value: 4320
 
         - GroupName: PolarisSettlementSnowRG
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [100, 250] 
           Properties: 
             - Key: RegenAfter
@@ -435,9 +427,9 @@ POIs:
  
         - GroupName: PolarisDefenceSnowRG
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             - Key: RegenAfter
@@ -445,9 +437,9 @@ POIs:
 
         - GroupName: FactoryPolarisRG2
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [300, 600] 
           Properties:  
             - Key: RegenAfter
@@ -455,9 +447,9 @@ POIs:
 
         - GroupName: FactoryPolarisRG1
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TS_PlanetRG]
+          SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [300, 600]
           Properties:  
             - Key: RegenAfter
@@ -466,7 +458,7 @@ POIs:
         - GroupName: MineT2PolarisRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisSettlementSnowRG]
           SpawnPOINearRange: [200, 400] 
@@ -477,7 +469,7 @@ POIs:
         - GroupName: MineT3PolarisRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           SpawnPOINear: [PolarisSettlementSnowRG]
           SpawnPOINearRange: [100, 200] 
@@ -489,14 +481,14 @@ POIs:
         # POI complex with several structures around
         - GroupName: RadosMainSnowRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
           DronesMinMax: [ 3, 4 ]
           ReserveCount: 4
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: RegenAfter
@@ -504,7 +496,7 @@ POIs:
 
         - GroupName: RadosAuxT1SnowRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -519,7 +511,7 @@ POIs:
 
         - GroupName: RadosDefenseT1Snow
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 5 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -535,13 +527,13 @@ POIs:
         # Defense for drone base
         - GroupName: RadosAuxT1SnowRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: False
-          SpawnPOINear: [DroneBaseT1RG]
+          SpawnPOINear: [R2DroneBase]
           SpawnPOINearRange: [350, 600]
           Properties:
             - Key: RegenAfter
@@ -550,7 +542,7 @@ POIs:
        # ================================
         - GroupName: RadosMissileBaseSnowRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
@@ -558,7 +550,7 @@ POIs:
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: Music
@@ -568,7 +560,7 @@ POIs:
 
         - GroupName: RadosMiscSnow
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
@@ -576,7 +568,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 2000
           Properties: 
             - Key: Music
@@ -604,7 +596,7 @@ POIs:
         # Random civil outposts scattered around planet
         - GroupName: PolarisSettlementSnowRG
           Faction: Polaris  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.8 
@@ -618,14 +610,14 @@ POIs:
         # Random Zirax military outposts scattered around planet
         - GroupName: RadosAuxT2SnowRG
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 4, 6 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: RegenAfter
@@ -633,14 +625,14 @@ POIs:
 
         - GroupName: RadosDefenseT2Snow
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: RegenAfter
@@ -648,14 +640,14 @@ POIs:
 
         - GroupName: RadosDefenseT3Snow
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [TS_PlanetRG]
+          SpawnPOIAvoid: [R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: RegenAfter
@@ -817,7 +809,7 @@ DroneSpawning:
 # ==============================================================
 
 SpawnRateZones:
-   - SpawnAt: [TS_PlanetRG]
+   - SpawnAt: [R2PolarisTradePlanet]
      Radius: 1000
      RadiusRandom: 50
      RateMultiplyerCenter: 0.0
@@ -853,7 +845,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [DroneBaseT1RG, RadosMainSnowRG, RadosAuxT2SnowRG, RadosMissileBaseSnowRG]
+   - SpawnAt: [R2DroneBase, RadosMainSnowRG, RadosAuxT2SnowRG, RadosMissileBaseSnowRG]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 800
      RadiusRandom: 100

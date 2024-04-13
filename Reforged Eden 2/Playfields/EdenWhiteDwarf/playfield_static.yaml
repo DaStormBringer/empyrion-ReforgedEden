@@ -196,7 +196,7 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           # # Biome: [ Mountains, LowMountains ]
@@ -257,7 +257,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        # - GroupName: GhystAuxT1RG
+        # - GroupName: R2GhystAuxT1
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           # CountMinMax: [ 2, 3 ]
@@ -271,7 +271,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720   
 
-        # - GroupName: GhystDefenseT1RG
+        # - GroupName: R2GhystDefenseT1
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           # CountMinMax: [ 4, 5 ]
@@ -287,7 +287,7 @@ POIs:
 
        # # ================================
         # # Defense for drone base
-        # - GroupName: GhystAuxT2RG
+        # - GroupName: R2GhystAuxT2
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]
           # CountMinMax: [ 2, 3 ]
@@ -295,7 +295,7 @@ POIs:
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 3
           # TroopTransport: False
-          # SpawnPOINear: [DroneBaseT1RG]
+          # SpawnPOINear: [R2DroneBase]
           # SpawnPOINearRange: [200, 500]
           # Properties: 
             # - Key: RegenAfter
@@ -303,7 +303,7 @@ POIs:
 
        # # ================================
         # # Large Bunker
-        # - GroupName: GhystBunker
+        # - GroupName: R2GhystMain
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot ]  
           # CountMinMax: [ 1, 1 ]
@@ -357,7 +357,7 @@ POIs:
        # # ================================
         # # POI amount scales with planet size 
         # # Random military outposts scattered around planet
-        # - GroupName: GhystAuxT2RG
+        # - GroupName: R2GhystAuxT2
           # Faction: Zirax  
           # BiomesExcluded: [ LavaFolds, LavaEdge, Hotspot, Plains ] 
           # CountMinMax: [ 2, 3 ]
@@ -562,7 +562,7 @@ DroneSpawning:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [DroneBaseT1RG, GhystMainRG, GhystBunker]
+   # - SpawnAt: [R2DroneBase, GhystMainRG, R2GhystMain]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 1000
      # RadiusRandom: 100
@@ -576,7 +576,7 @@ DroneSpawning:
          # Amount: 250
          # Period: Always
          # DelayMinMax: [-1, -1]
-   # - SpawnAt: [GhystAuxT2RG]
+   # - SpawnAt: [R2GhystAuxT2]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 500
      # RadiusRandom: 25

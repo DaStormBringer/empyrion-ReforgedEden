@@ -10880,8 +10880,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SurfaceCategory: human
 }
 { Entity Name: ZiraxSentinel, Ref: ZiraxCommander
-  MaxHealth: 380
-  XpFactor: 2.0
+  MaxHealth: 400
+  XpFactor: 2.5
   LootListOnDeath: 100
   Mesh: Enemies/Zirax/ZiraxBluePrefab
   MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
@@ -10908,6 +10908,97 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/Zirax/Zirax_SfxDeath
   
   SurfaceCategory: human
+}
+
+{ +Entity Name: ZiraxSentinelLaser, Ref: ZiraxSentinel
+  MaxHealth: 400
+  XpFactor: 2.75
+  LootListOnDeath: 101
+  Mesh: Enemies/Zirax/ZiraxYellowPrefab
+  MeshDead: Enemies/Zirax/ZiraxYellowDeadPrefab
+  ItemsOnEnterGame: ZiraxLaserWeapon
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 90
+  }
+  {	Child VisionSensor
+	VisibleDistance: 125
+  }
+}
+
+{ +Entity Name: ZiraxSentinelShotgun, Ref: ZiraxSentinel
+  MaxHealth: 450
+  XpFactor: 3.25
+  LootListOnDeath: 102
+  Mesh: Enemies/Zirax/ZiraxGreenPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenDeadPrefab
+  ItemsOnEnterGame: ZiraxShotgunWeapon
+
+  { Child VariableOverride
+    SpeedAlerted: 1.70
+	SpeedAttack: 1.85
+  }  
+  { Child Hints
+	AttackApproachTarget: 90
+	AttackOptimalDistance: 10
+	SearchAdvanceTime: 3.0
+	SearchWaitTime: 0.5
+	SearchRandomDistanceMult: 3.8
+	FireWeaponDurationMultiplier: 0.5	
+  }
+}
+
+{ +Entity Name: ZiraxSentinelRocket, Ref: ZiraxSentinel
+  MaxHealth: 450
+  XpFactor: 4.5
+  LootListOnDeath: 103
+  Mesh: Enemies/Zirax/ZiraxRedPrefab
+  MeshDead: Enemies/Zirax/ZiraxRedDeadPrefab
+  ItemsOnEnterGame: ZiraxRocketWeapon
+  ParticleOnDeath: drone_explosion
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 1.25
+	SpeedAttack: 1.25
+  }
+  
+  { Child Hints
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.7
+	AttackOptimalDistance: 100
+  }
+  {	Child VisionSensor
+	VisibleDistance: 130
+  }
+
+}
+
+{ +Entity Name: ZiraxSentinelSniper, Ref: ZiraxSentinel
+  MaxHealth: 350
+  XpFactor: 3.0
+  LootListOnDeath: 104
+  Mesh: Enemies/Zirax/ZiraxPurplePrefab
+  MeshDead: Enemies/Zirax/ZiraxPurpleDeadPrefab
+  ItemsOnEnterGame: ZiraxSniperWeapon
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 100
+  }
+  { Child VariableOverride
+    SpeedCalm: 0.1
+    SpeedAlerted: 1.5
+	SpeedAttack: 1.5
+  }
+  {	Child VisionSensor
+	VisibleDistance: 130
+	ViewAngle: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
 }
 # ======
 { +Entity Name: FastTransport
@@ -13453,6 +13544,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 }
 
+# ========================================================================================================================== Zirax
+{ +Entity Name: Eden_ZiraxSalvageDrone, Ref: ScraperDrone_Army
+  Mesh: Enemies/ScraperDrone/ScraperDrone_TintBluePrefab
+  MeshDead: Enemies/ScraperDrone/ScraperDrone_TintBlueDeadPrefab
+  Faction: Zirax
+  MaxHealth: 500
+}
+
 # ========================================================================================================================== Abyssal Zirax
 { +Entity Name: Eden_AbyssalPlasma, Ref: ZiraxMinigun
   MaxHealth: 2000
@@ -13742,6 +13841,24 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   StepHeight: 0.25
 }
 
+
+# ========================================================================================================================== Polaris NPCs
+
+# { +Entity Name: ScraperDrone_Blue, Ref: ScraperDrone_Army
+{ +Entity Name: Eden_PolarisMiningDrone, Ref: ScraperDrone_Army
+  Mesh: Enemies/ScraperDrone/ScraperDrone_ArmyPrefab
+  MeshDead: Enemies/ScraperDrone/ScraperDrone_ArmyDeadPrefab
+  Faction: Polaris
+  LootListOnDeath: 48
+  MaxHealth: 500
+}
+
+{ +Entity Name: Eden_PolarisSalvageDrone, Ref: ScraperDrone_Army
+  Mesh: Enemies/ScraperDrone/ScraperDrone_ArmyPrefab
+  MeshDead: Enemies/ScraperDrone/ScraperDrone_ArmyDeadPrefab
+  Faction: Polaris
+  MaxHealth: 500
+}
 
 # ========================================================================================================================== Unique mission NPCs
 { +Entity Name: Eden_SyndicateTarget1, Ref: Eden_SyndicateMinigun
@@ -16239,6 +16356,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Eden_AsteroidFieldL_Black, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Black
 }
+{ +Entity Name: Eden_AsteroidFieldL_Black2, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Black2
+}
 { +Entity Name: Eden_AsteroidFieldL_BlackThick, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_BlackThick
 }
@@ -16346,6 +16466,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 }
 { +Entity Name: Eden_AsteroidFieldL_Orange, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Orange
+}
+{ +Entity Name: Eden_AsteroidFieldL_Red, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Red
+}
+{ +Entity Name: Eden_AsteroidFieldL_RedThick, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_RedThick
 }
 
 # Planetary asteroid fields (spawn at 0,10000,0)
@@ -16495,6 +16621,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 }
 { +Entity Name: Eden_AsteroidFieldL_LavaRing, Ref: Eden_NebulaTemplate
   Prefab: @eden_blockmodels/Eden_AsteroidFieldL_LavaRing
+}
+{ +Entity Name: Eden_AsteroidFieldL_Molten, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_Molten
+}
+{ +Entity Name: Eden_AsteroidFieldL_MoltenThick, Ref: Eden_NebulaTemplate
+  Prefab: @eden_blockmodels/Eden_AsteroidFieldL_MoltenThick
 }
 
 # Unique fields
@@ -16859,4 +16991,3 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 # { +Entity Name: Eden_AsteroidFieldXL_TestRendering4, Ref: Eden_NebulaTemplate
   # Prefab: @eden_blockmodels/Eden_AsteroidFieldXL_TestRendering4
 # }
-

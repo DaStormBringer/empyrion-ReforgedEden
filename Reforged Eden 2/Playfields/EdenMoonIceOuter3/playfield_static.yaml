@@ -144,8 +144,8 @@ POIs:
 # Drone Base POI Complex
         - GroupName: Eden_ZetaDroneBase
           Faction: Zirax
-          NoShieldReload: True
-#          NoShieldReload: True
+          # NoShieldReload: True
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -157,7 +157,7 @@ POIs:
 
         - GroupName: Eden_ZetaAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 2 ]
@@ -173,7 +173,7 @@ POIs:
         # POI complex with several structures around
         - GroupName: Eden_ZetaMain
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
@@ -190,7 +190,7 @@ POIs:
 
         - GroupName: Eden_ZetaDish
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 2 ]
@@ -205,7 +205,7 @@ POIs:
        # Second Zeta POI Complex. 50% chance ================================
         - GroupName: Eden_ZetaAuxT2
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
@@ -222,7 +222,7 @@ POIs:
 
         - GroupName: Eden_ZetaAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.3
           DronesMinMax: [ 1, 2 ]
@@ -237,7 +237,7 @@ POIs:
         # Random military outposts scattered around planet
         - GroupName: Eden_ZetaAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.8
@@ -256,10 +256,10 @@ POIs:
         # PentaCorp Station with some nearby trader settlements. Doesn't always show up. Sells Pentaxid.
         - GroupName: Eden_PolPentaCorp
           Faction: Trader
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
-          SpawnPOIAvoid: [DroneBaseT1RG]
+          SpawnPOIAvoid: [R2DroneBase]
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: Music
@@ -269,9 +269,9 @@ POIs:
             - Key: StationInterface
               Value: "Warp:2,IfNeutral:1.5,IfHonored:-0.10"
 
-        - GroupName: TraderDefenseB 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_PolPentaCorp]
           SpawnPOINearRange: [100,250]
@@ -283,10 +283,10 @@ POIs:
 
 # Civilians
 
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties:  
             - Key: RegenAfter
@@ -295,9 +295,9 @@ POIs:
         - GroupName: MineT2PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [100, 500] 
           Properties:  
             - Key: RegenAfter
@@ -306,9 +306,9 @@ POIs:
         - GroupName: MineT1PolarisRG 
           Territory: False
           Faction: Colonists
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [300, 1000] 
           Properties:  
             - Key: RegenAfter
@@ -317,9 +317,9 @@ POIs:
         - GroupName: PolBiolabRG
           Territory: False
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [CivilSettlementRG]
+          SpawnPOINear: [R2PolarisAuxT1]
           SpawnPOINearRange: [2000, 2500] 
           Properties:
             - Key: RegenAfter

@@ -228,7 +228,7 @@ POIs:
     Random:  
         - GroupName: Eden_PrisonDroneBase
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 0, 1 ]
           DroneProb: 1.0
@@ -254,7 +254,7 @@ POIs:
 
         - GroupName: Eden_PrisonDefenseT2
           Faction: Zirax  
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
           DroneProb: 0.7

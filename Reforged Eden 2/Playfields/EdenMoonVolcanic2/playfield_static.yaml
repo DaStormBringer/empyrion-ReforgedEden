@@ -225,9 +225,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
@@ -255,7 +255,7 @@ POIs:
        # Lava Tubes
         - GroupName: Eden_LavaTubes
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ DriedFlowBlack ] 
           IsScalingCount: True 
           CountMinMax: [ 2, 4 ]
@@ -355,7 +355,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.75
           DronesMinMax: [ 2, 4 ]
@@ -372,7 +372,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 3 ]

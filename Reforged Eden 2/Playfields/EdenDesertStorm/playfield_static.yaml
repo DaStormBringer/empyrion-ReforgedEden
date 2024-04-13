@@ -100,7 +100,7 @@ SpecialEffectsGlobal:
 
 # Atmosphere and Sky
 AtmosphereEnabled: True
-AtmosphereColor: "0.4, 0.3, 0.15"  
+AtmosphereColor: "0.9, 0.75, 0.45"  
 SkyColor: "0.64, 0.4, 0.4"
 SkyHorizonColor: "1, 0.2, 0"
 # AtmosphereParams: [5, 1.5]       
@@ -242,9 +242,9 @@ POIs:
     Random:
 
 # Zirax drone base & perimeter defenses ====            # Forced to spawn on mountains. Allows different attack vectors
-        # - GroupName: DroneBaseT1RG 
+        # - GroupName: R2DroneBase 
           # Faction: Zirax  
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # DroneBaseSetup: DroneBaseSetup
           # Biome: [ Plateau, LowMountains, LowMountains_1, Mountains, SandDrift ]
           # IsImportant: True
@@ -261,9 +261,9 @@ POIs:
               # Value: 720
 
               # Ghyst Bunker =====================================================
-        - GroupName: GhystBunker
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystMain
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0
@@ -274,92 +274,92 @@ POIs:
           SpawnResourceRange: [300,400]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
               # Aux POIs for Ghyst Bunker
-        - GroupName: GhystAuxT1RG
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystAuxT1
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [350, 500]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
               # Defense for Ghyst Bunker
-        - GroupName: GhystDefenseT1RG
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystDefenseT1
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [GhystBunker]
+          SpawnPOINear: [R2GhystMain]
           SpawnPOINearRange: [200, 300]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
           # Polaris Sanctuary. Has special traders to buy water + supplies and decent loot. Well defended. ==========================================
         - GroupName: Eden_PolSanctuary
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 1 ]
-          SpawnPOIAvoid: [GhystBunker]
+          SpawnPOIAvoid: [R2GhystMain]
           SpawnPOIAvoidDistance: 1000
           Properties:
               # Hidden personal locker
             - Key: PersonalContainer
               Value: "MoneyCard:10000"
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             # - Key: Music
               # Value: EvilWhispering
             - Key: RegenAfter
               Value: 720
 
               # Defense for Sanctuary
-        - GroupName: PolarisDefenceSandRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True    
+          # NoShieldReload: True    
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_PolSanctuary]
           SpawnPOINearRange: [150, 300] 
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
               # Random POIs near the Sanctuary
         - GroupName: Eden_PolHabitat
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 3, 5 ]
@@ -367,40 +367,52 @@ POIs:
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
         - GroupName: FactoryPolarisRG2
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [Eden_PolSanctuary]
           SpawnPOINearRange: [350, 750] 
-          Properties:  
+          Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
         - GroupName: FactoryPolarisRG3
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [Eden_PolSanctuary]
           SpawnPOINearRange: [350, 750] 
-          Properties:  
+          Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
         - GroupName: FactoryPolarisRG1
           Faction: Polaris
           FactionTerritory: [Eden_PolarisTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [Eden_PolSanctuary]
           SpawnPOINearRange: [350, 750]
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
@@ -412,9 +424,9 @@ POIs:
           SpawnPOINearRange: [150, 450]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: MapMarker
               Value: Neutral
             - Key: RegenAfter
@@ -422,38 +434,38 @@ POIs:
 
         - GroupName: Eden_PolarisCondenser
           Faction: Polaris
-          NoShieldReload: True    
+          # NoShieldReload: True    
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [Eden_PolSanctuary]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
         - GroupName: Eden_PolarisCondenser
           Faction: Polaris
-          NoShieldReload: True    
+          # NoShieldReload: True    
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [Eden_PolarisCondenser]
           SpawnPOINearRange: [25, 50] 
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
 # Scattered Polaris Settlements around planet  ================================================================
-        - GroupName: CivilSettlementRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Biome: [ Plantation, Oasis ]
           IsScalingCount: True
           CountMinMax: [ 3, 4 ]        # Higher number of possible spawns than biomes available, to fill up all spots
@@ -464,31 +476,31 @@ POIs:
           AuxiliaryPOIs: [Eden_PolarisCondenser]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
         - GroupName: Eden_PolarisCondenser
           Faction: Polaris
-          NoShieldReload: True    
+          # NoShieldReload: True    
           BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
           CountMinMax: [ 1, 2 ]
           IsAuxPOI: True
           SpawnPOINearRange: [200, 400]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
               # Ghyst POI Cluster ===============================================
-        - GroupName: GhystAuxT2RG 
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystAuxT2 
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           IsImportant: True
           BiomesExcluded: [ Plains ] 
           CountMinMax: [ 1, 1 ]
@@ -496,22 +508,22 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOINear: [GhystBunker] 
+          SpawnPOINear: [R2GhystMain] 
           SpawnPOINearRange: [1500, 2000]
           SpawnResource: ["CopperResource:1-2"]
           SpawnResourceRange: [150,300]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
-              Value: 720 
+              Value: 720
 
               # Aux POIs for Ghyst Cluser
-        - GroupName: GhystAuxT1RG 
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystAuxT1 
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           IsImportant: True
           BiomesExcluded: [ Plains ] 
           CountMinMax: [ 2, 3 ]
@@ -519,17 +531,17 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 5
           TroopTransport: True
-          SpawnPOINear: [GhystAuxT2RG] 
+          SpawnPOINear: [R2GhystAuxT2] 
           SpawnPOINearRange: [500, 800]
           SpawnResource: ["PromethiumResource:1-2"]
           SpawnResourceRange: [80,100]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
-              Value: 720 
+              Value: 720
 
         - GroupName: CrashedShip
           Faction: None  
@@ -538,13 +550,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [GhystAuxT2RG] 
+          SpawnPOINear: [R2GhystAuxT2] 
           SpawnPOINearRange: [500, 700]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: MapMarker
               Value: Neutral
             - Key: RegenAfter
@@ -572,9 +584,9 @@ POIs:
               # Value: 720 
 
 # === Random Ghyst POIs =========================================================
-        - GroupName: GhystAuxT1RG
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystAuxT1
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           BiomesExcluded: [Plains]
           CountMinMax: [ 5, 8 ]
           IsScalingCount: True
@@ -586,16 +598,16 @@ POIs:
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
-              Value: 720 
+              Value: 720
 
               # Defense structures guarding Neodymium deposits.
-        - GroupName: GhystDefenseT1RG
-          Faction: Zirax
-          NoShieldReload: True  
+        - GroupName: R2GhystDefenseT1
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
           Territory: False         
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
@@ -608,68 +620,68 @@ POIs:
           SpawnResourceRange: [100,150]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720
 
 # Trader
-        - GroupName: TraderMainRG 
+        - GroupName: R2TraderMain 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 0, 1 ]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderSettlementRG 
+        - GroupName: R2TraderAuxT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           Properties:
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderDefenseB 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
-          SpawnPOINear: [TraderMainRG]
+          SpawnPOINear: [R2TraderMain]
           SpawnPOINearRange: [100,250]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: TraderDefenseA 
+        - GroupName: R2TraderDefenseT1 
           Faction: Trader    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [TraderSettlementRG]
+          SpawnPOINear: [R2TraderAuxT1]
           SpawnPOINearRange: [100,250]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
@@ -678,13 +690,17 @@ POIs:
 # Main Single
         - GroupName: FarrMainSingleRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -692,7 +708,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 2, 3 ]
@@ -702,6 +718,10 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -710,12 +730,16 @@ POIs:
 # Main HQ
         - GroupName: FarrMainRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 1.0
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -723,7 +747,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -733,6 +757,10 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -741,12 +769,16 @@ POIs:
 # Trading Compound
         - GroupName: FarrTradingT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.25
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -754,7 +786,7 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
@@ -764,6 +796,10 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -771,7 +807,7 @@ POIs:
 
         - GroupName: FarrAuxT3RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [200, 350]
@@ -779,6 +815,10 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -786,7 +826,7 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -794,6 +834,10 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -801,7 +845,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 4, 6 ]
           SpawnPOINear: [FarrTradingT3RG]
           SpawnPOINearRange: [250, 500]
@@ -809,6 +853,10 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -816,9 +864,9 @@ POIs:
 
 # Settlement around Farr Monument
 
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG]
           SpawnPOIAvoidDistance: 3000
@@ -826,6 +874,10 @@ POIs:
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -833,14 +885,18 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [200, 350]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -848,23 +904,27 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 6 ]
-          SpawnPOINear: [FarrMonument]
+          SpawnPOINear: [R2FarrMonument]
           SpawnPOINearRange: [250, 800]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
               Value: 720
 
 # More settlements
-        - GroupName: FarrMonument
+        - GroupName: R2FarrMonument
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 1.0
@@ -872,6 +932,10 @@ POIs:
           ReserveCount: 3
           AuxiliaryPOIs: [FarrAuxT1RG, FarrAuxT0RG]
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -879,15 +943,19 @@ POIs:
 
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
-          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, FarrMonument, FarrAuxT2RG]
+          SpawnPOIAvoid: [FarrDroneBaseRG, FarrTemplePrimeRG, FarrMainSingleRG, FarrMainRG, R2FarrMonument, FarrAuxT2RG]
           SpawnPOIAvoidDistance: 1500
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 2
           AuxiliaryPOIs: [FarrAuxT1RG, FarrAuxT0RG]
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -895,7 +963,7 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsAuxPOI: True
           SpawnPOINearRange: [100, 250]
@@ -903,6 +971,10 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -910,7 +982,7 @@ POIs:
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           IsAuxPOI: True
           SpawnPOINearRange: [300, 500]
@@ -918,6 +990,10 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -927,7 +1003,7 @@ POIs:
 
         - GroupName: FarrAuxT3bRG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
         #  IsImportant: True
           CountMinMax: [ 0, 1 ]
        #   SpawnPOIAvoid: [FarrMainSingleRG]
@@ -936,6 +1012,10 @@ POIs:
           DronesMinMax: [ 3, 5 ]
           ReserveCount: 5
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -944,7 +1024,7 @@ POIs:
         - GroupName: FarrAuxT2bRG
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT3bRG]
@@ -953,6 +1033,10 @@ POIs:
           DronesMinMax: [ 1, 3 ]
           ReserveCount: 2
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -961,7 +1045,7 @@ POIs:
         - GroupName: FarrAuxT1b
           BiomesExcluded: [ Radiated ]
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
        #   IsImportant: True
           CountMinMax: [ 2, 4 ]
           SpawnPOINear: [FarrAuxT1b]
@@ -970,6 +1054,10 @@ POIs:
           DronesMinMax: [ 1, 3 ]
           ReserveCount: 2
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -978,13 +1066,17 @@ POIs:
 # Random structures
         - GroupName: FarrAuxT2RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.35
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 2
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
@@ -992,25 +1084,37 @@ POIs:
 
         - GroupName: FarrAuxT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.2
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
+            - Key: Music
+              Value: moonstone
             - Key: RegenAfter
               Value: 720
 
         - GroupName: FarrAuxT0RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
+            - Key: Music
+              Value: moonstone
             - Key: RegenAfter
               Value: 720
 
@@ -1018,77 +1122,82 @@ POIs:
 
         - GroupName: FarrDefenseT1RG
           Faction: Farr
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True
           CountMinMax: [ 2, 4 ]
           DroneProb: 0.5
           DronesMinMax: [ 1, 3 ]
           ReserveCount: 2
           Properties:
+            - Key: MapDistance
+              Value: 1200
+            - Key: HudDistance
+              Value: 1200
             - Key: Music
               Value: moonstone
             - Key: RegenAfter
               Value: 720
+
 # -------------------------------------------------------------------------------------------------
 
 # Kriel
-        - GroupName: KrielMain 
+        - GroupName: R2KrielMain 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: KrielDefenseT1 
+        - GroupName: R2KrielDefenseT1 
           Faction: Kriel    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 4 ]
           Properties: 
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: AlteredPhase
             - Key: RegenAfter
               Value: 720 
 
 # Pirates
-        - GroupName: PiratesAmbush 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           Properties:  
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720 
 
-        - GroupName: PiratesAuxDesertRG 
+        - GroupName: R2PirateAuxT1 
           Faction: Pirates    
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           Properties:  
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720 
 
 # Random Smuggler Hideouts =====================================================
         - GroupName: Eden_SmugglerHideout
           Faction: Pirates
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Territory: False         
           # AvoidFactionTerritory: True
           BiomesExcluded: [Plantation]
@@ -1104,9 +1213,9 @@ POIs:
             - Key: PersonalContainer
               Value: "MoneyCard:3000"
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: RegenAfter
               Value: 720 
 
@@ -1114,15 +1223,15 @@ POIs:
 
         - GroupName: Artifacts
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           BiomesExcluded: [ Plains]
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           Properties:  
             - Key: MapDistance
-              Value: 250
+              Value: 1200
             - Key: HudDistance
-              Value: 250
+              Value: 1200
             - Key: Music
               Value: EvilWhispering  
             - Key: RegenAfter
@@ -1153,30 +1262,52 @@ POIs:
           Items: [ "SurvivalTent, Flashlight, AntibioticOintment:2, Bandages:2, StomachPills:2, PowerBar:2, EnergyDrink:1", "SurvivalTent, Flashlight, AntibioticOintment:1, Bandages:1, PowerBar:1", "SurvivalTent, Flashlight, Bandages:1", "#FreshStart: SurvivalTent, Flashlight, Bandages:1, WaterBottle: 1" ]
 
 # ==============================================================
-### Drones
-DroneBaseSetup: 
+
+# Drones
+# ------------ Aerodrones with propellers.
+# DroneSmallZiraxEMP
+# DroneAeroZiraxMinigun
+# DroneAeroZiraxCannon
+# DroneAeroZiraxRocket
+
+# ------------ Small hoverdrones
+# DroneHoverZiraxMinigun
+# DroneHoverZiraxLaser
+# DroneHoverZiraxRocket
+
+# ------------ Large gunships
+# DroneLargeZiraxMinigun
+# DroneLargeZiraxRocket
+# DroneLargeZiraxPlasma
+
+DroneBaseSetup:
     Random:
         - GroupName: DroneBaseSetup
-          DronesMinMax: [ 3, 5 ]
-          ReserveCount: 5
-          DroneProb: 1.0
-          Difficulty: 5
-          PresetStyle: 2
-
+          Difficulty: 6
+          PresetStyle: 3
           Stock:
-              - Name: DroneSmallFast01Minigun
-                Amount: 300
+
+              - Name: DroneAeroZiraxMinigun
+                Amount: 200
                 Extra: 0
 
-              - Name: DroneSmallFast01Rocket  
-                Amount: 100
-                Extra: 0  
+              - Name: DroneAeroZiraxCannon
+                Amount: 200
+                Extra: 0
 
-              - Name: DroneSmallFast01Minigun    # Base attack drones  
+              - Name: DroneAeroZiraxRocket
+                Amount: 200
+                Extra: 0
+
+              - Name: DroneLargeZiraxMinigun
+                Amount: 50
+                Extra: 0
+
+              - Name: DroneBomberAttackBase
                 Amount: Infinite
                 Extra: 1
 
-              - Name: DroneSmallAttackBase
+              - Name: EnemyDroneV2Plasma
                 Amount: Infinite
                 Extra: 1
 
@@ -1184,7 +1315,7 @@ DroneBaseSetup:
                 Amount: Infinite
                 Extra: 2
 
-              - Name: ZiraxMale
+              - Name: ZiraxMinigun
                 Amount: 500
                 Extra: 3
 
@@ -1200,44 +1331,29 @@ DroneBaseSetup:
                 Amount: 300
                 Extra: 3
 
-                
-          # PlanetVesselBase:
-              # Name: PlanetVesselBaseSetup
-              # Position3D: [ 0, 102, 0]
-              # BaseType: PlanetVesselBase
-              # KeyId: 0
-              # PlanetVessel:
-                # - Name: Patrol-S-Medium
-                  # Mission: PlanetPatrol
-                  # FixedMaxSpeed: 5
-                  # RespawnDelay: 12
-
-                  # RangePatrolTask:
-                    # Position3D: [ 1500, 80, 0 ]
-                    # Radius: 800
-                    # DistToGround: 60
-
-                  # AttackCVCircleAround:
-                    # DistToTarget: 210
-                
-                
-# Drones that patrol on whole planet 
-# Type determined by stock of drone base (default drone - type = 0)
 DroneSpawning:
     Random:
-        - DronesMinMax: [ 0, 0 ]
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 5000
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
           CenterX: -5000
           Radius: 3000
 
-        - DronesMinMax: [ 0, 0 ]
-          CenterX: -5000
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: 2500
+          Radius: 3000
+
+        - DronesMinMax: [ 3, 5 ]
+          CenterX: -2500
           Radius: 3000
 
 
 # ==============================================================
 
 # SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]    #'Peaceful' zone
+   # - SpawnAt: [R2PolarisTradePlanet]    #'Peaceful' zone
      # Radius: 400
      # RadiusRandom: 100
      # RateMultiplyerCenter: 0.0
@@ -1246,7 +1362,7 @@ DroneSpawning:
      # Color: "0.0, 1.0, 0.0, 0.7"
 
 SpawnZones:
-   - SpawnAt: [ GhystBunker ]
+   - SpawnAt: [ R2GhystMain ]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 200
      RadiusRandom: 50
@@ -1261,7 +1377,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [ GhystAuxT2RG ]
+   - SpawnAt: [ R2GhystAuxT2 ]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 200
      RadiusRandom: 25
@@ -1276,7 +1392,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [ GhystAuxT1RG ]
+   - SpawnAt: [ R2GhystAuxT1 ]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 100
      RadiusRandom: 25

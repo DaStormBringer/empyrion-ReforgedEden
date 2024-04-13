@@ -423,7 +423,7 @@ POIs:
           # Biome: [ Plains, Forest, Dunes, LowMountains, TacticalStrike, BarrenRocks, AtomicWeaponry]
           # Faction: Zirax
           # Type: CV_Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # InitPower: True
           # DroneProb: 1
@@ -446,7 +446,7 @@ POIs:
           # Biome: [ Plains, Forest, Organized, Proximity ]
           # Faction: Zirax
           # Type: CV_Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 10, 10 ]
           # InitPower: True
           # DroneProb: 1
@@ -466,7 +466,7 @@ POIs:
           # Biome: [ FlowersEdge, Plains, Forest, Organized, TacticalStrike ]
           # Faction: Zirax
           # Type: CV_Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 30, 30 ]
           # InitPower: True
           # DroneProb: 0
@@ -515,13 +515,13 @@ POIs:
           # # == Alien DroneBases
           
           # # DroneBase 1 - - MAIN DRONEBASE
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # IsImportant: True
           # Faction: Zirax
           # IsCommandCenter: True
           # Territory: False
           # DroneBaseSetup: DroneBaseSetup
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # BiomesExcluded: [ Remnant, FlowersEdge]
           # CountMinMax: [ 1, 1 ]
           # TroopTransport: True
@@ -536,18 +536,18 @@ POIs:
               # Value: 720
 
           # # DroneBase 2
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # IsImportant: True
           # Faction: Zirax
           # Territory: False
           # DroneBaseSetup: DroneBaseSetup
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # BiomesExcluded: [ Remnant, FlowersEdge]
           # CountMinMax: [ 1, 1 ]
           # TroopTransport: True
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
-          # SpawnPOIAvoid: [ DroneBaseT1RG ]
+          # SpawnPOIAvoid: [ R2DroneBase ]
           # SpawnPOIAvoidDistance: 1000
           # SpawnPOINear: [START]
           # SpawnPOINearRange: [2000, 3500]
@@ -558,18 +558,18 @@ POIs:
               # Value: 720
 
           # # DroneBase 3
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # IsImportant: True
           # Faction: Zirax
           # Territory: False
           # DroneBaseSetup: DroneBaseSetup
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # BiomesExcluded: [ Remnant, FlowersEdge]
           # CountMinMax: [ 1, 1 ]
           # TroopTransport: True
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
-          # SpawnPOIAvoid: [ DroneBaseT1RG ]
+          # SpawnPOIAvoid: [ R2DroneBase ]
           # SpawnPOIAvoidDistance: 1000
           # SpawnPOINear: [START]
           # SpawnPOINearRange: [2000, 3500]
@@ -748,11 +748,11 @@ POIs:
           # (Placed first, since they have POISpawnAvoids)
 
           # # Military HQ - Ghyst
-        # - GroupName: GhystBunker
+        # - GroupName: R2GhystMain
           # IsImportant: True
           # Biome: [ Remnant, FlowersEdge]
           # Faction: Zirax
-          # NoShieldReload: True 
+          # # NoShieldReload: True 
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ] 
@@ -768,11 +768,11 @@ POIs:
               # Value: 720
 
          # #  Cluster 1 - Xenu Bridgehead
-        # - GroupName: DroneBaseCommandRG   # Very large (Xenu) P1 Dronebase
+        # - GroupName: R2DroneBaseT5   # Very large (Xenu) P1 Dronebase
           # Biome: [ Plains, Forest, BarrenRocks, TacticalStrike, LowMountains, Mountains]
           # Faction: Zirax  
           # Territory: False
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
@@ -830,13 +830,13 @@ POIs:
           # Biome: [ FlowersEdge, Plains, Forest, Organized, TacticalStrike ]
           # Faction: Zirax
           # Type: CV_Alien
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # InitPower: True
           # DroneProb: 0
           # DronesMinMax: [ 1, 1 ]
           # ReserveCount: 0
-          # SpawnPOINear: [ GhystBunker ]
+          # SpawnPOINear: [ R2GhystMain ]
           # SpawnPOINearRange: [400, 600]
           # Properties: 
             # - Key: RegenAfter
@@ -850,7 +850,7 @@ POIs:
           # DronesMinMax: [ 2, 4 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOINear: [ GhystBunker ]
+          # SpawnPOINear: [ R2GhystMain ]
           # SpawnPOINearRange: [300, 450]
           # Properties: 
             # - Key: HudDistance
@@ -859,14 +859,14 @@ POIs:
               # Value: 720
 
           # # Ground Bases
-        # - GroupName: GhystAuxT2RG
+        # - GroupName: R2GhystAuxT2
           # Faction: Zirax  
           # CountMinMax: [ 2, 2 ]
           # DroneProb: 0.8
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOINear: [ GhystBunker ]
+          # SpawnPOINear: [ R2GhystMain ]
           # SpawnPOINearRange: [300, 500]
           # Properties: 
             # - Key: HudDistance
@@ -875,7 +875,7 @@ POIs:
               # Value: 720
 
           # # Defense Buildings
-        # - GroupName: GhystDefenseT2RG
+        # - GroupName: R2GhystDefenseT2
           # Faction: Zirax
           # Territory: False
           # CountMinMax: [ 2, 2 ]
@@ -912,25 +912,25 @@ POIs:
           # TroopTransport: True 
           # # SpawnPOIAvoid: [RadarArray]
           # # SpawnPOIAvoidDistance: 1500
-          # SpawnPOINear: [ DroneBaseCommandRG]
+          # SpawnPOINear: [ R2DroneBaseT5]
           # SpawnPOINearRange: [150, 200]
           # Properties: 
             # - Key: RegenAfter
               # Value: 720
 
           # # Cluster 2
-        # - GroupName: DroneBaseCommandRG
+        # - GroupName: R2DroneBaseT5
           # Biome: [ Plains, Forest, BarrenRocks, TacticalStrike, LowMountains, Mountains]
           # IsImportant: True
           # Faction: Zirax  
           # Territory: False
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOIAvoid: [DroneBaseCommandRG]
+          # SpawnPOIAvoid: [R2DroneBaseT5]
           # SpawnPOIAvoidDistance: 2000
           # SpawnPOINear: [ START]
           # SpawnPOINearRange: [2000, 3200]
@@ -948,7 +948,7 @@ POIs:
           # ReserveCount: 0
           # # SpawnPOIAvoid: [PVF_XenuPatrolVessel1]
           # # SpawnPOIAvoidDistance: 1000
-          # SpawnPOINear: [ DroneBaseCommandRG ]
+          # SpawnPOINear: [ R2DroneBaseT5 ]
           # SpawnPOINearRange: [200, 300]
           # Properties: 
             # - Key: RegenAfter
@@ -959,13 +959,13 @@ POIs:
           # Biome: [ Plains, Forest, LowMountains, Mountains, TacticalStrike ]
           # Faction: Zirax  
           # Territory: False
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 4, 6 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOIAvoid: [DroneBaseCommandRG]
+          # SpawnPOIAvoid: [R2DroneBaseT5]
           # SpawnPOIAvoidDistance: 1500
           # SpawnPOINear: [ START]
           # SpawnPOINearRange: [4000, 8000]
@@ -989,7 +989,7 @@ POIs:
 
 
           # # Cluster 4
-        # - GroupName: EpsilonAuxT2RG
+        # - GroupName: R2EpsilonAuxT2
           # Biome: [ Plains, Forest, LowMountains, Mountains ]
           # Faction: Zirax
           # CountMinMax: [ 1, 1 ]
@@ -1009,7 +1009,7 @@ POIs:
           # Biome: [ Plains, Forest, LowMountains, Mountains ]
           # Faction: Zirax  
           # Territory: False
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 4, 6 ]
@@ -1017,7 +1017,7 @@ POIs:
           # TroopTransport: True 
           # SpawnPOIAvoid: [Eden_EpsilonRadarMain]
           # SpawnPOIAvoidDistance: 2000
-          # SpawnPOINear: [ EpsilonAuxT2RG]
+          # SpawnPOINear: [ R2EpsilonAuxT2]
           # SpawnPOINearRange: [150, 300]
           # Properties: 
             # - Key: RegenAfter
@@ -1031,7 +1031,7 @@ POIs:
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOINear: [EpsilonAuxT2RG]
+          # SpawnPOINear: [R2EpsilonAuxT2]
           # SpawnPOINearRange: [150, 200]
           # Properties:
             # - Key: RegenAfter
@@ -1044,14 +1044,14 @@ POIs:
         # - GroupName: XenuBunkerRG
           # IsImportant: True
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Biome: [ Forest, Plains, LowMountains, BarrenRocks, TacticalStrike]
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True
-          # SpawnPOIAvoid: [GhystBunker, DroneBaseCommandRG]
+          # SpawnPOIAvoid: [R2GhystMain, R2DroneBaseT5]
           # SpawnPOIAvoidDistance: 1500
           # SpawnPOINear: [ START ]
           # SpawnPOINearRange: [3000, 7000]
@@ -1075,17 +1075,17 @@ POIs:
 
 
           # # Cluster Anchor 2 ========
-        # - GroupName: XenuDefenceT2RG # PLACEHOLDER
+        # - GroupName: R2XenuDefenseT2 # PLACEHOLDER
           # Faction: Zirax
           # IsImportant: True
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # Biome: [ Forest, Plains, LowMountains ]
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True
-          # SpawnPOIAvoid: [GhystBunker, XenuBunkerRG, DroneBaseCommandRG]
+          # SpawnPOIAvoid: [R2GhystMain, XenuBunkerRG, R2DroneBaseT5]
           # SpawnPOIAvoidDistance: 1500
           # SpawnPOINear: [ START ]
           # SpawnPOINearRange: [3000, 7000]
@@ -1095,13 +1095,13 @@ POIs:
 
         # - GroupName: XenuBunkerRG
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True
-          # SpawnPOINear: [ XenuDefenceT2RG ]
+          # SpawnPOINear: [ R2XenuDefenseT2 ]
           # SpawnPOINearRange: [100, 300]
           # Properties:
             # - Key: RegenAfter
@@ -1116,7 +1116,7 @@ POIs:
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOINear: [ XenuDefenceT2RG ]
+          # SpawnPOINear: [ R2XenuDefenseT2 ]
           # SpawnPOINearRange: [100, 200]
           # Properties:
             # - Key: RegenAfter
@@ -1125,7 +1125,7 @@ POIs:
 
        # # ================================
        # # Military Xenu POIs scattered around the planet - Legacy monitoring stations
-        # - GroupName: EpsilonAuxT2RG
+        # - GroupName: R2EpsilonAuxT2
           # Biome: [Plains, Forest, Dunes ]
           # Faction: Zirax
           # CountMinMax: [ 5, 5 ]
@@ -1133,7 +1133,7 @@ POIs:
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOIAvoid: [EpsilonAuxT2RG]
+          # SpawnPOIAvoid: [R2EpsilonAuxT2]
           # SpawnPOIAvoidDistance: 1500
           # SpawnPOINear: [ START ]
           # SpawnPOINearRange: [4000, 10000]
@@ -1151,14 +1151,14 @@ POIs:
           # TroopTransport: True 
           # # SpawnPOIAvoid: [RadarArray]
           # # SpawnPOIAvoidDistance: 1500
-          # SpawnPOINear: [ EpsilonAuxT2RG]
+          # SpawnPOINear: [ R2EpsilonAuxT2]
           # SpawnPOINearRange: [150, 200]
           # Properties: 
             # - Key: RegenAfter
               # Value: 720
 
 
-        # - GroupName: GhystAuxT2RG
+        # - GroupName: R2GhystAuxT2
           # Biome: [BarrenRocks, TacticalStrike, GeoBuster ]
           # Faction: Zirax  
           # CountMinMax: [ 2, 2 ]
@@ -1166,7 +1166,7 @@ POIs:
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 3
           # TroopTransport: True 
-          # SpawnPOIAvoid: [GhystAuxT2RG]
+          # SpawnPOIAvoid: [R2GhystAuxT2]
           # SpawnPOIAvoidDistance: 1000
           # SpawnPOINear: [ START ]
           # SpawnPOINearRange: [4000, 10000]
@@ -1187,7 +1187,7 @@ POIs:
           # DronesMinMax: [ 1, 1 ]
           # ReserveCount: 3
           # TroopTransport: False  # They don't need (or want) no stinkin' help!
-          # SpawnPOIAvoid: [XenuBunkerRG, GhystAuxT2RG, EpsilonAuxT2RG, DroneBaseCommandRG, GhystBunker]
+          # SpawnPOIAvoid: [XenuBunkerRG, R2GhystAuxT2, R2EpsilonAuxT2, R2DroneBaseT5, R2GhystMain]
           # SpawnPOIAvoidDistance: 1000
           # # SpawnPOINear: [ START ]
           # # SpawnPOINearRange: [3000, 10000]
@@ -1248,7 +1248,7 @@ POIs:
 
 
           # Ruins of fromer civilization. Some stranded Zirax camp out here, and hope for extraction
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           AvoidFactionTerritory: True
           Territory: False
@@ -1264,7 +1264,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: RuinsTribal
+        - GroupName: TalonWoodRuin
           Faction: None
           AvoidFactionTerritory: True
           Territory: False
@@ -1272,9 +1272,9 @@ POIs:
           CountMinMax: [ 5, 5 ]
           DroneProb: 1.0
           DronesMinMax: [ 0, 2 ]
-          SpawnPOIAvoid: [RuinsTribal]
+          SpawnPOIAvoid: [TalonWoodRuin]
           SpawnPOIAvoidDistance: 1000
-          SpawnPOINear: [RuinsTribal]
+          SpawnPOINear: [TalonWoodRuin]
           SpawnPOINearRange: [1000, 2000]
           Properties: 
             - Key: MapMarker
@@ -1290,7 +1290,7 @@ POIs:
           # DroneProb: 1
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 0
-          # SpawnPOINear: [RuinsTribal]
+          # SpawnPOINear: [TalonWoodRuin]
           # SpawnPOINearRange: [100, 250]
           # Properties: 
             # - Key: RegenAfter
@@ -1302,9 +1302,9 @@ POIs:
           Territory: False
           Biome: [ Remnant]
           CountMinMax: [ 1, 1 ]
-          SpawnPOIAvoid: [XenuBunkerRG, GhystAuxT2RG, EpsilonAuxT2RG, DroneBaseCommandRG, GhystBunker]
+          SpawnPOIAvoid: [XenuBunkerRG, R2GhystAuxT2, R2EpsilonAuxT2, R2DroneBaseT5, R2GhystMain]
           SpawnPOIAvoidDistance: 800
-          # SpawnPOINear: [RuinsTribal]
+          # SpawnPOINear: [TalonWoodRuin]
           # SpawnPOINearRange: [1000, 2000]
           Properties: 
             - Key: RegenAfter
@@ -1321,7 +1321,7 @@ POIs:
 
         - Type: BA_Alien             # THIS IS THE KEYSTONE POI (Centrally placed on Legacy hub stamp)
           Faction: TheLegacy             
-          NoShieldReload: True
+          # NoShieldReload: True
           Prefab: BAF_LegacyCorruptor  # <= (Use the blueprint save name to spawn it!)
           Mode: Survival
           Name: The Corruptor
@@ -1461,7 +1461,7 @@ SpawnRateZones:
 
 
      # Zones in which Zirax already shot anything that moves (or that are 'safe', for whatever reason)
-   - SpawnAt: [ GhystBunker, XenuBunkerRG, DroneBaseCommandRG, DroneBaseT1RG, Eden_EpsilonRadarMain, TribalVillageAridAux]
+   - SpawnAt: [ R2GhystMain, XenuBunkerRG, R2DroneBaseT5, R2DroneBase, Eden_EpsilonRadarMain, TalonAuxSand]
      Radius: 400
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1469,7 +1469,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "0.0, 1.0, 0.0, 1"
 
-   - SpawnAt: [ GhystBunker, DroneBaseCommandRG, DroneBaseT1RG, Eden_EpsilonRadarMain, TribalVillageAridAux]
+   - SpawnAt: [ R2GhystMain, R2DroneBaseT5, R2DroneBase, Eden_EpsilonRadarMain, TalonAuxSand]
      Radius: 400
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1702,7 +1702,7 @@ SpawnZones:
     # - Scout troops carry long range weapons, short range near the POI.
     
     
-   - SpawnAt: [GhystBunker, DroneBaseCommandRG] 
+   - SpawnAt: [R2GhystMain, R2DroneBaseT5] 
      Radius: 2000
      RadiusRandom: 0
      RateMultiplyerCenter: 1.0
@@ -1716,7 +1716,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
     
-   - SpawnAt: [GhystBunker, DroneBaseCommandRG, DroneBaseT1RG] 
+   - SpawnAt: [R2GhystMain, R2DroneBaseT5, R2DroneBase] 
      Radius: 1000
      RadiusRandom: 0
      RateMultiplyerCenter: 1.0
@@ -1745,7 +1745,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
          
 
-   - SpawnAt: [XenuAuxT2RG, EpsilonAuxT2RG, DroneBaseCommandRG, Eden_EpsilonRadarMain, DroneBaseT1RG]
+   - SpawnAt: [R2XenuAuxT2, R2EpsilonAuxT2, R2DroneBaseT5, Eden_EpsilonRadarMain, R2DroneBase]
      Radius: 500
      RadiusRandom: 0
      RateMultiplyerCenter: 1.0
@@ -1759,7 +1759,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
          
-   - SpawnAt: [RadarArray, GhystAuxT2RG, GhystBunker, XenuBunkerRG, DroneBaseCommandRG, DroneBaseT1RG, Eden_EpsilonRadarMain, XenuAuxT2RG, EpsilonAuxT2RG]
+   - SpawnAt: [RadarArray, R2GhystAuxT2, R2GhystMain, XenuBunkerRG, R2DroneBaseT5, R2DroneBase, Eden_EpsilonRadarMain, R2XenuAuxT2, R2EpsilonAuxT2]
      BiomesExcluded: [ Mountains, Structure, Organized, Proximity, Active, GlassedTerrain, AtomicWeaponry, BarrenRocks ]
      Radius: 200
      RadiusRandom: 0
@@ -1774,7 +1774,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [PVF_XenuPatrolVessel1, RuinsTribal ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
+   - SpawnAt: [PVF_XenuPatrolVessel1, TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
      BiomesExcluded: [ Organized, Proximity, Active ]
      Radius: 200
      RadiusRandom: 0
@@ -1790,7 +1790,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
 
-   - SpawnAt: [RuinsTribal ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
+   - SpawnAt: [TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
      BiomesExcluded: [ Organized, Proximity, Active ]
      Radius: 150
      RadiusRandom: 0

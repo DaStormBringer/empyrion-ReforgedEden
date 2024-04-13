@@ -307,9 +307,9 @@ POIs:
 
 # =========== Placing the main POI spawn anchors ===========
          
-        # - GroupName: DroneBaseT1RG # MAIN ANCHOR
+        # - GroupName: R2DroneBase # MAIN ANCHOR
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsImportant: True
           # BiomesExcluded: [ IceSheet, PolarSnow, Rocks, Glacier, Tundra, ColdPlains ]
           # CountMinMax: [ 1, 1 ]
@@ -327,9 +327,9 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        # - GroupName: TS_PlanetRG
+        # - GroupName: R2PolarisTradePlanet
           # Faction: Polaris
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsImportant: True
           # BiomesExcluded: [ PolarSnow, Glacier, IceSheet, Tundra, ColdPlains, Rocks, Hills, Cliffs ] 
           # CountMinMax: [ 1, 1 ]
@@ -337,7 +337,7 @@ POIs:
           # DronesMinMax: [ 1 ]
           # ReserveCount: 0
           # TroopTransport: False 
-          # SpawnPOIAvoid: [DroneBaseT1RG]
+          # SpawnPOIAvoid: [R2DroneBase]
           # SpawnPOIAvoidDistance: 2000
           # Properties: 
             # - Key: MapMarker
@@ -349,7 +349,7 @@ POIs:
 
         # - GroupName: PlanetVesselBase
           # Faction: Zirax
-          # NoShieldReload: True
+          # # NoShieldReload: True
           # IsImportant: True
           # BiomesExcluded: [ IceSheet, PolarSnow, Rocks, Glacier]
           # # PlanetVesselBaseSetup: PlanetVesselBaseSetup
@@ -358,9 +358,9 @@ POIs:
           # DronesMinMax: [ 2, 3 ]
           # ReserveCount: 6
           # TroopTransport: True
-          # SpawnPOIAvoid: [TS_PlanetRG]
+          # SpawnPOIAvoid: [R2PolarisTradePlanet]
           # POIDistance: 2000
-          # SpawnPOINear: [DroneBaseT1RG]
+          # SpawnPOINear: [R2DroneBase]
           # SpawnPOINearRange: [1000, 6000]
           # Properties: 
             # - Key: RegenAfter
@@ -440,9 +440,9 @@ POIs:
         # Floating UCH Outposts
         - GroupName: Eden_UCHOceanAuxT2
           Faction: UCH
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Abyss, DeepSea, BlackSmoker, ColdDark ]
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           PlaceAt: OnWater
@@ -458,9 +458,9 @@ POIs:
 
         - GroupName: Eden_UCHOceanAuxT1
           Faction: UCH
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Abyss, DeepSea, BlackSmoker, ColdDark ]
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           PlaceAt: OnWater
           DroneProb: 0
@@ -477,9 +477,9 @@ POIs:
 
         - GroupName: Eden_UCHOceanAuxT1
           Faction: UCH
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Abyss, DeepSea, BlackSmoker, ColdDark ]
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           PlaceAt: OnWater
@@ -496,7 +496,7 @@ POIs:
 # UCH Underwater Mission Labs =====================================================
         - GroupName: Eden_UCHUnderwaterLab1
           Faction: UCH
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Territory: False         
           PlaceAt: UnderWater
           CountMinMax: [ 2, 3 ]
@@ -511,7 +511,7 @@ POIs:
 
         - GroupName: Eden_UCHUnderwaterLab2
           Faction: UCH
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Territory: False         
           PlaceAt: UnderWater
           CountMinMax: [ 2, 3 ]
@@ -526,7 +526,7 @@ POIs:
 
         - GroupName: Eden_UCHUnderwaterLab3
           Faction: UCH
-          NoShieldReload: True  
+          # NoShieldReload: True  
           Territory: False         
           PlaceAt: UnderWater
           CountMinMax: [ 2, 3 ]
@@ -543,9 +543,9 @@ POIs:
         # Helios Hydro Plant
         - GroupName: Eden_HeliosMainWater
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ Abyss, DeepSea, Shelf, KelpForest, CoralReefs, OpenSea ]
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
           PlaceAt: OnWater
@@ -563,9 +563,9 @@ POIs:
         # Random Polaris Water Outposts
         - GroupName: Eden_PolarisWaterAuxT1
           Faction: Polaris
-          NoShieldReload: True
+          # NoShieldReload: True
           # Biome: [ Abyss, DeepSea, Shelf, KelpForest, CoralReefs, OpenSea ]
-#          NoShieldReload: True
+#          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
           PlaceAt: OnWater

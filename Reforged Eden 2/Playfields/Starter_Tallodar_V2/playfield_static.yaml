@@ -293,7 +293,7 @@ RandomResources:
     - Name: CopperResource
       Biome: [ Forest, RedwoodForest, DeepForest, LowMountains, HighMountains ]
       IsScalingCount: True   # Medium Planet: 4-8 Deposits, Large planet 6-12
-      CountMinMax: [ 3, 3 ]  # (was [ 4, 7 ] unscaled)
+      CountMinMax: [ 4, 4 ]  # (was [ 4, 7 ] unscaled)
       SizeMinMax: [ 4, 6 ]
       DepthMinMax: [ 5, 10 ]
       DroneProb: 0.3
@@ -326,9 +326,9 @@ RandomResources:
     # =======  Nice find -
     - Name: GoldResource  # Useful, if you miss the Oasis biome.
       Biome: [ LowMountains, Mountains, HighMountains, Glacier, GlacierSnow ]
-      CountMinMax: [ 0, 1 ]
+      CountMinMax: [ 1, 1 ]
       SizeMinMax: [ 2, 2 ]      # 2 => 20 ore
-      DroneProb: 0.0
+      DroneProb: 1
       DepthMinMax: [ 5, 10 ]
       # #DistTypeCylinder:
         # #MaxRadius: 13
@@ -643,6 +643,26 @@ POIs:
           SpawnPOIAvoid: [NullPOI, R2AbandonedStarter, R2AbandonedPOI]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["PromethiumResource:1-1"]
+          SpawnResourceRange: [175,200]
+          Properties:
+            - Key: Music
+              Value: DarkSoundscape
+            - Key: RegenAfter
+              Value: 360
+
+        - GroupName: R2AbandonedStarter
+          Faction: Alien
+          AvoidFactionTerritory: True
+          BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
+          IsScalingCount: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [NullPOI, R2AbandonedStarter, R2AbandonedPOI]
+          SpawnPOIAvoidDistance: 1500
+          SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [175,200]
           Properties:
             - Key: Music

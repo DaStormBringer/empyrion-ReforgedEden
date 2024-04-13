@@ -22,7 +22,7 @@
 }
 
 # You can change and configure the following traders 
-
+# Dialog = TD_QuantumStar_Start
 { Trader Name: QuantumSTAR
   SellingText: "Welcome to QuantumSTAR! We've got the best deals on high-end electronics and computer systems this side of the galaxy!\n<DISCOUNTTEXT>"
   SellingGoods: "trwSpecial"
@@ -44,101 +44,7 @@
   Item15: "CPUExtenderCVT2, mf=1.0-1.25, 3-10, 0, 0"
   Item16: "CPUExtenderBAT2, mf=1.0-1.25, 3-10, 0, 0"
 }
-
-{ Trader Name: Talon
-  SellingText: "I welcome you Traveller. As a friend of the tribe, I am proud to offer my wares for you to purchase. \n<DISCOUNTTEXT>"
-  SellingGoods: "trwSeeds"
-  Discount: 0.08
-  Item1: "Bandages, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-20"  
-  Item2: "AlienTooth, mf=1.0-1.25, 5-50, mf=0.5-0.75, 100-500"
-  Item3: "AlienThorn, mf=1.0-1.25, 5-50, mf=0.5-0.75, 100-500"
-  Item4: "WaterBottle, mf=1.0-1.25, 0-12, mf=0.5-0.75, 20-50"    
-  Item5: "FruitJuice, mf=1.0-1.25, 0-15, mf=0.5-0.75, 20-50"
-  Item6: "VegetableJuice, mf=1.0-1.25, 0-15, mf=0.5-0.75, 10-50" 
-  Item7: "Milk, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-50"
-  Item8: "AkuaWine, mf=1.0-1.25, 10-50, mf=0.5-0.75, 10-100"
-  Item9: "HotBeverage, mf=1.0-1.25, 100-500, mf=0.5-0.75, 100-500"  
-  Item10: "Beer, 0, 0, mf=1.25-2.0, 100-500"  
-  Item11: "Bread, mf=1.0-1.25, 0-20, mf=0.5-0.75, 20-120"
-  Item12: "Cheese, mf=1.0-1.25, 0-20, mf=0.5-0.75, 10-80"
-  Item13: "Stew, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-50"
-  Item14: "RawDiamond, mf=1.0-1.5, 0-10, 0, 0"
-  Item15: "Varonroot, mf=1.0-1.25, 0-50, 0, 0"
-  Item16: "PhoenixFernFonds, mf=1.0-1.25, 0-170, 0, 0"
-  Item17: "AlienSpikeLemon, mf=1.0-1.25, 0-150, 0, 0"
-  Item18: "Cereals, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-80"  
-  Item19: "DurianRoot, mf=1.0-1.25, 100-500, 0, 0"
-  Item20: "CornStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item21: "PumpkinStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item22: "TomatoStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item23: "WheatStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item24: "PearthingStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item25: "AlienPlantTube2Stage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item26: "DesertPlant20Stage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item27: "ElderberryStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item28: "AlienPalmTreeStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item29: "AlienplantWormStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item30: "BulbShroomYoungStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item31: "SnakeweedStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item32: "MushroomBellBrown01Stage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item33: "CobraLeavesPlantStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item34: "CoffeePlantStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item35: "InsanityPepperStage1, mf=1.0-1.25, 100-500, 0, 0"
-  Item36: "BigFlowerStage1, mf=1.0-1.25, 100-500, 0, 0"  
-  Item37: "GrowingPotConcrete, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-40"
-  Item38: "GrowingPotWood, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-40"
-  Item39: "Leather, mf=1.0-1.5, 5-10, 0, 0"
-  Item40: "AlienParts02, mf=1.0-1.25, 1-20, mf=0.5-0.75, 10-500"
-  Item41: "DecoTribalBlocks, mf=1.25-2.5, 5-10, 0, 0"
-}
-
-{ Trader Name: TalonShaman
-  SellingText: "Greetings, outsider. I am Tahl'Vahr the shaman of this tribe. I have many restoratives you will not find elsewhere at an affordable price. \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.08
-  Item1: "Bandages, mf=1.0-1.25, 0-26, 0, 0"  
-  Item2: "MushroomSpiky, mf=1.0-1.25, 5-30, 0, 0"
-  Item3: "AntibioticOintment, mf=1.0-1.25, 5-70, 0, 0"
-  Item4: "AntiRadiationOintment, mf=1.0-1.25, 5-50, 0, 0"
-  Item5: "Varonroot, mf=1.0-1.25, 0-90, 0, 0"
-  Item6: "PhoenixFernFonds, mf=1.0-1.25, 0-100, 0, 0"
-  Item7: "AlienSpikeLemon, mf=1.0-1.25, 0-50, 0, 0"
-  Item8: "PlantProtein, 0, 0, mf=1.0-1.0, 50-180"
-  Item9: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-180"
-  Item10: "AlienParts03, 0, 0, mf=1.0-1.0, 10-150"
-}
-{ Trader Name: TalonBasicsAndCommodities
-  SellingText: "Welcome traveler! How may we serve you? \n<DISCOUNTTEXT>"
-  SellingGoods: "trwSeeds"
-  Discount: 0.08
-  Item1: "Curry, mf=1.0-1.25, 5-10, 0, 0"
-  Item2: "CannedVegetables, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-90"
-  Item3: "CannedMeat, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-90"
-  Item4: "EnergyDrink, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
-  Item5: "EmergencyRations, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
-  Item6: "Medikit02, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
-  Item7: "Bandages, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
-  Item8: "StomachPills, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-50"
-  Item9: "AlienTooth, mf=1.0-1.25, 5-10, mf=0.5-0.75, 100-250"  
-  Item10: "HerbalLeaves, mf=1.0-1.25, 10-30, mf=0.5-0.75, 10-150"
-  Item11: "PlantProtein, mf=1.0-1.25, 20-30, mf=0.5-0.75, 10-150"
-  Item12: "CrossbowBoltPlayer, mf=1.0-1.25, 120-230, mf=0.5-0.75, 120-250"
-}
-{ Trader Name: TalonBasicsResources
-  SellingText: "Welcome traveler! How may we serve you? \n<DISCOUNTTEXT>"
-  SellingGoods: "trwSeeds"
-  Discount: 0.08  
-#SELLING to player
-  Item1: "IronOre, mf=1.0-1.25, 100-200, 0, 0"
-  Item2: "SiliconOre, mf=1.0-1.25, 100-200, 0, 0"
-  Item3: "CopperOre, mf=1.0-1.25, 100-200, 0, 0"
-  Item4: "CobaltOre, mf=1.0-1.25, 100-200, 0, 0"
-  Item5: "TitanOre, mf=1.0-1.25, 100-200, 0, 0"
-  Item6: "PromethiumOre, mf=1.0-1.25, 50-100, 0, 0"
-#BUYING from player
-  Item7: "RadiationBoost, 0, 0 , mf=0.5-0.75, 10-15"
-}
-
+# Dialog = TD_TotallyOP_Start
 { Trader Name: Totally Overpowered
   SellingText: "Welcome to TOP Distributors! We've got drinks, snacks and worker contracts. If you've got the goods, we also have some patrons that'll be interested in some high-end merchandise. So what'll it be?\n<DISCOUNTTEXT>"
   SellingGoods: "trwFood"
@@ -163,7 +69,7 @@
   Item1: "AutoMinerCore, mf=1.0-1.25, 1-5, mf=0.5-0.75, 5-10"
   Item2: "FluxCoil, mf=1.0-1.25, 50-75, mf=0.5-0.75, 50-500"
 }
-
+# Dialog = TD_Bertram_Start
 { Trader Name: Bertrams
   SellingText: "Welcome to Bertram's. I'm not the man himself, but I am his cousin! I can get you a pretty sweet deal on weapons and commodities if that's your jam!\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo,trwWeaponsBasic,trwFood,trwMedical"
@@ -196,7 +102,7 @@
   Item26: "InsulationBoost, mf=1.0-1.25, 1-12, 0, 0"
   Item27: "HoverbikeHunter, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
 }
-
+# Dialog = TD_OkyMedical_Start
 { Trader Name: OkYMedical
   SellingText: "Welcome to Ok'Y Medical Care! I am doctor Su'oul and I am licensed to offer you medicines and injectors compatible with Terran physiology.\n<DISCOUNTTEXT>"
   SellingGoods: "trwMedical"
@@ -216,7 +122,7 @@
   Item13: "AntibioticInjection, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
   Item14: "AntiToxicInjection, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
 }
-
+# Dialog = TD_Grimgar_Start
 { Trader Name: AuntMarys
   SellingText: "Welcome to Grimgar's Garden. I am Aunt Mary, the proprietor. My name is not actually Mary and I have no idea where the name came from.\n<DISCOUNTTEXT>"
   SellingGoods: "trwSeeds"
@@ -247,7 +153,7 @@
   Item24: "TrumpetGreens, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
   Item25: "Fertilizer, mf=1.5-2.0, 50-100, 0, 0"
 }
-
+# Dialog = TD_Interweap_Start
 { Trader Name: InterWeap
   SellingText: "Welcome to Inter-Weapon! I'm Barj, I handle all new customers. So what are you lookin' for there, buddy?\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo,trwWeaponsAdvanced,trwArmorBoost"
@@ -291,7 +197,7 @@
   Item37: "FlameThrower, mf=1.0-1.25, 5-10, mf=0.5-0.75, 5-15"  
   Item38: "FlameThrowerCanister, mf=1.0-1.25, 10-50, mf=0.5-0.75, 20-80"  
 }
-
+# Dialog = TD_ServantCorp_Start
 { Trader Name: ServantCorp
   SellingText: "Welcome to SERVANT CORP Hardware and Utilities. We sell the latest in suit enhancements and attachments. So if you need anything, I am you servant.\n<DISCOUNTTEXT>"
   SellingGoods: "trwComponents,trwArmorBoost"
@@ -318,7 +224,7 @@
   Item20: "BioFuel, mf=1.0-1.25, 50-200, mf=0.5-0.75, 100-300"
   Item21: "OreScanner, mf=1.0-1.25, 10-50, mf=0.5-0.75, 5-55"
 }
-
+# Dialog = TD_MACorp_Start
 { Trader Name: MACorp
   SellingText: "Welcome to M.A Corp. We are a subsidiary of Polaris Megacorp, but don't hold that against us!\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -347,7 +253,7 @@
   Item22: "PlasticMaterial, mf=1.0-1.25, 500-5000, mf=0.5-0.75, 1000-5500"
   Item23: "NCPowder, mf=1.0-1.25, 50-500, mf=0.5-0.75, 100-2750"
 }
-
+# Dialog = TD_MarketCafe_Start
 { Trader Name: MarketCafe
   SellingText: "Welcome to Market Cafe bar and grill. We have everything from burgers to salads. But if another one of you Terrans asks for ketchup, you're going out on your ass!\n<DISCOUNTTEXT>"
   SellingGoods: "trwFood"
@@ -378,9 +284,8 @@
   Item24: "Fruit, 0, 0, mf=0.5-0.75, 100-300"
   Item25: "Spice, 0, 0, mf=0.5-0.75, 100-200"
   Item26: "Salt, 0, 0, mf=0.75-1.0, 300-2500"
-
 }
-
+# Dialog = TD_Pax_Start
 { Trader Name: PaxPurgatory
   SellingText: "This is Pax-Purgatory. We have a bit of everything, from energy boosters and drinks, to crew contracts.!\n<DISCOUNTTEXT>"
   SellingGoods: "trwFood"
@@ -474,7 +379,7 @@
   Item13: "AntibioticInjection, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
   Item14: "AntiToxicInjection, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
 }
-
+# Dialog = TD_MedicalPolaris_Start
 { Trader Name: MedicalIngredients
   SellingText: "Welcome to Agrinex Incorporated! We supply many of the leading pharmaceutical companies, labs and factories with high-quality ingredients not found anywhere else!"
   SellingGoods: "trwArmorBoost"
@@ -497,7 +402,7 @@
   Item16: "AlienParts02, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
   Item17: "Buds, mf=1.0-1.25, 250-500, 0, 0"
 }
-
+# Outdated Vanilla Trader. Do not use.
 { Trader Name: Seeds
   SellingText: "Searching for a particular seed?\n<DISCOUNTTEXT>"
   SellingGoods: "trwSeeds"
@@ -537,7 +442,7 @@
   Item8: "Nanotubes, mf=1.0-1.25, 500-10000, mf=0.5-0.75, 1000-25000"
   Item9: "Computer, mf=1.0-1.25, 250-1000, mf=0.5-0.75, 500-1500"
 }
-
+# Do not use
 { Trader Name: BasicWeaponTools
   SellingText: "We are serving your basic weaponry needs.\n<DISCOUNTTEXT>"
   SellingGoods: "trwWeaponsBasic"
@@ -560,7 +465,7 @@
   Item16: "Chainsaw, mf=1.0-1.25, 1-5, mf=0.5-0.75, 5-15"
   Item17: "SubmachineGunT1, mf=1.0-1.25, 5-10, mf=0.5-0.75, 5-50"
 }
-
+# Do not use
 { Trader Name: AdvancedWeaponToolsKits
   SellingText: "Want to upgrade your weapons? You're at the right place!\n<DISCOUNTTEXT>"
   SellingGoods: "trwWeaponsAdvanced"
@@ -592,7 +497,7 @@
   Item25: "SmallUpgradeKit, mf=0.75-1.0, 1-7, mf=0.25-0.5, 0-8"
   Item26: "AdvancedUpgradeKit, mf=0.75-1.0, 1-5, mf=0.25-0.5, 0-7"
 }
-
+# Do not use
 { Trader Name: ArmorAndBoosts
   SellingText: "Want to upgrade your suit? We offer a selection of boosters!\n<DISCOUNTTEXT>"
   SellingGoods: "trwArmorBoost"
@@ -614,7 +519,7 @@
 }
 
 ###== COMMODITY TRADES ==== ###
-
+# DO NOT USE ANY OF THESE !! (Except for ones with a listed dialog)
 { Trader Name: CommoditiesDefault
   SellingText: "Welcome, Valued customer! I'm a supplier of industrial supplies for spacestations and habitats if you're interested!\n<DISCOUNTTEXT>"
   SellingGoods: "trwArmorBoost"
@@ -837,7 +742,7 @@
   Item17: "AlphaVirus, 0, 0, mf=4.0-8.0, 5-10"
   Item18: "QuantumProcessor, 0, 0, mf=1.0-1.25, 50-100"
 }
-
+# Dialog = TD_SpaceportSmall_Start
 { Trader Name: Spaceport
   SellingText: "We are always in demand of supplies. Those strangers strolling around here might look for jobs, though.\n<DISCOUNTTEXT>"
   SellingGoods: "trwArmorBoost"
@@ -864,7 +769,7 @@
   #SELLING  
   Item1: "ContainerLargeBlocks, mf=1.0-1.25, 50-100, 0, 0"
 }
-
+# Dialog = TD_Settlement_Start
 { Trader Name: Settlement
   SellingText: "Welcome to our settlement. We're always in need of fresh supplies and some of the youths are looking for jobs."
   SellingGoods: "trwArmorBoost"
@@ -874,7 +779,7 @@
   Item2: "HumanNPCBlocks, mf=0.5-0.75, 5-10, 0, 0"
   #BUYING 
   Item3: "WaterJug, 0, 0, mf=1.0-1.25, 50-200"
-  Item4: "EmergencyRations, 0, 0, mf=1.0-1.25, 50-100"
+  Item4: "PrefabHousing, 0, 0, mf=1.5-2.0, 10-20"
   Item5: "ConsoleBlocks, 0, 0, mf=1.0-1.25, 50-100"
   Item6: "IndoorPlants, 0, 0, mf=1.0-1.25, 50-100"
   Item7: "DecoBlocks, 0, 0, mf=1.0-1.25, 50-100"
@@ -890,7 +795,7 @@
   Item17: "ToxicWaste, mf=0.5-1.0, 100-300, 0, 0"
   Item18: "Liquors, 0, 0 , mf=1.5-1.75, 10-24"
 }
-
+# Any standalone powerplant POI (Uses TD_Powerplant_Start dialog)
 { Trader Name: Powerplant
   SellingText: "Finally! A freighter! We've been low on supplies for a while now and we'd been getting worried."
   SellingGoods: "trwResources"
@@ -935,7 +840,7 @@
   Item14: "ReportArcheologicalData, 0, 0, mf=5.0-6.0, 100-150"
   Item15: "ReportAnomalousData, 0, 0, mf=3.0-4.0, 100-150"
 }
-
+# Dialog = TD_WastePolaris_Start
 { Trader Name: Recycling
   SellingText: "Wow, you came all the way out here to this place? Most people just contact me through my comms than come to me in person.\nSo what can Com-Hazard Processing do for you today?"
   SellingGoods: "trwResources"
@@ -1069,7 +974,8 @@
   Item9: "ReportMilitarySurveillance, 0, 0, mf=5.5-9.5, 100-150"
   Item10: "AntennaBlocks, 0, 0, mf=1.0-1.25, 50-100"
   Item11: "CommunicationEquipment, 0, 0, mf=1.5-2.0, 10-50"
-} 
+}
+# Dialog = TD_LuxuryGoods_Start
 { Trader Name: LuxuryTrader
   SellingText: "Welcome honorable customer! Would you like to see our showroom or our catalogue? We have many great deals here, yes?\nIf you've ordered one of the limited edition Boyband posters, I'm afraid we're not allowed to sell them officially."
   SellingGoods: "trwArmorBoost"
@@ -1182,135 +1088,8 @@
 # Factories (which use raw materials and basic components for high level devices, and Merchants (Which sell finished products at Trade Stations)
 # ============================================================================================================================================================================
 
-# Talon Traders
-{ Trader Name: Talon Medicineman
-  SellingText: "Greetings, outsider. I am Shal'Tham a traveling medicineman. I have many restoratives you will not find elsewhere at an affordable price. \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.08
-#SELLING to player
-  Item1: "Bandages, mf=1.0-1.25, 0-26, 0, 0"  
-  Item2: "MushroomSpiky, mf=1.0-1.25, 5-30, 0, 0"
-  Item3: "AntibioticOintment, mf=1.0-1.25, 5-50, 0, 0"
-  Item4: "AntiToxicPills, mf=1.2-1.45, 5-20, 0, 0"
-  Item5: "AntiRadiationOintment, mf=1.0-1.25, 5-50, 0, 0"
-  Item6: "Varonroot, mf=1.0-1.25, 0-30, 0, 0"
-  Item7: "PhoenixFernFonds, mf=1.0-1.25, 0-70, 0, 0"
-  Item8: "AlienSpikeLemon, mf=1.0-1.25, 0-50, 0, 0"
-  Item9: "OpuntiaCactusSpears, mf=1.0-1.25, 0-145, 0, 0"
-#BUYING from player
-  Item10: "PlantProtein, 0, 0, mf=1.0-1.0, 50-80"
-  Item11: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-80"
-  Item12: "AlienParts03, 0, 0, mf=1.0-1.0, 10-20"
-}
-
-{ Trader Name: Talon Tanner
-  SellingText: "Greetings Traveller. I am Ab'thar and I run this tannery where I produce only the highest quality leather that's in great demand, even beyond this world. \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.06
-#SELLING to player
-  Item1: "Leather, mf=1.0-1.25, 100-150, 0, 0"
-#BUYING from player
-  Item2: "Salt, 0, 0, mf=0.5-0.75, 250-500"
-  Item3: "Sulfur, 0, 0, mf=0.5-0.75, 250-500"
-  Item4: "Meat, 0, 0, mf=0.5-0.75, 70-100"
-  Item5: "NutrientSolution, 0, 0, mf=0.5-0.75, 60-150"
-}
-
-{ Trader Name: Talon Trapper
-  SellingText: "Hail, Stranger! Come to see my kills or my skills? I will pay you well for the spoils of your hunt too, my friend. \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.10
-#SELLING to player
-  Item1: "Meat, mf=1.0-1.25, 20-80, 0, 0"  
-  Item2: "Egg, mf=1.0-1.25, 5-30, 0, 0"
-  Item3: "AlienThorn, mf=1.0-1.25, 5-30, 0, 0"
-  Item4: "Leather, mf=1.0-1.25, 1-8, 0, 0"
-  Item5: "Jerky, mf=1.25-1.75, 5-10, 0, 0"
-  Item6: "FishMeat, mf=1.0-1.25, 20-40, 0, 0"
-#BUYING from player
-  Item7: "Beer, 0, 0, mf=2.0-2.5, 1-3"
-  Item8: "AlienParts02, 0, 0, mf=1.0-1.0, 50-80"
-  Item9: "AlienTooth, 0, 0, mf=1.0-1.0, 70-100"
-  Item10: "AlienParts04, 0, 0, mf=1.0-1.0, 50-100"
-  Item11: "Bone, 0, 0, mf=1.0-1.0, 70-100"
-  Item12: "CrossbowBoltPlayer, mf=1.0-1.25, 60-130, mf=0.5-0.75, 60-150"
-  Item13: "TalonCrossbowTribalPlayer, mf=1.0-1.25, 0-5, mf=0.5-0.75, 1-7"
-}
-
-{ Trader Name: Talon Bushman
-  SellingText: "There's plenty of rare finds out in the bush... if you know where to look that is. I'll be heading back out there shortly. \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.10
-#SELLING to player
-  Item1: "OpuntiaCactusSpears, mf=1.0-1.25, 0-145, 0, 0"
-  Item2: "RawDiamond, mf=1.0-1.25, 0-6, 0, 0"
-  Item3: "AkuaFruit, mf=1.0-1.25, 0-35, 0, 0"
-  Item4: "AlienParts01, mf=1.0-1.25, 10-48, 0, 0"
-  Item5: "ConfettiMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
-  Item6: "FireMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
-  Item7: "SpaceDurian, mf=1.0-1.25, 0-6, 0, 0"
-#BUYING from player
-  Item8: "PowerBar, 0, 0, mf=1.0-1.0, 10-20"
-  Item9: "BerryJuice, 0, 0, mf=1.0-1.0, 10-40"
-  Item10: "Jerky, 0, 0, mf=1.0-1.0, 10-30"
-  Item11: "CrossbowBoltPlayer, mf=1.0-1.25, 60-130, mf=0.5-0.75, 60-150"
-}
-
-{ Trader Name: Mushroom Farmer
-  SellingText: "Friend! Look at what my farms have produced! Have you not seen anything as glorious? \n<DISCOUNTTEXT>"
-  SellingGoods: ""
-  Discount: 0.10
-#SELLING to player
-  Item1: "MushroomBrown, mf=1.0-1.25, 20-70, 0, 0"  
-  Item2: "MushroomSpiky, mf=1.0-1.25, 5-40, 0, 0"
-  Item3: "BrafusFungi, mf=1.0-1.25, 15-45, 0, 0"
-  Item4: "MushroomBellBrown01Stage1, mf=1.0-1.25, 4-18, 0, 0"
-  Item5: "PlantProtein, mf=1.0-1.25, 15-100, 0, 0"
-  Item6: "NaturalStimulant, mf=1.0-1.25, 10-60, 0, 0"
-#BUYING from player
-  Item7: "RottenFood, 0, 0, mf=1.0-1.0, 90-180"
-  Item8: "NutrientSolution, 0, 0, mf=1.0-1.0, 20-90"
-}
-
-{ Trader Name: Talon Carpenter
-  SellingText: "Greetings and welcome to my workshop. As you can see, I work primarily in wood to turn out furniture better than any constructor."
-  SellingGoods: "trwResources"
-#SELLING to player
-  Item1: "DecoTribalBlocks, mf=1.25-1.5, 40-80, 0, 0"
-  Item2: "LuxuryGoods, mf=1.25-1.5, 15-50, 0, 0"
-  Item3: "TalonCrossbowTribalPlayer, mf=1.0-1.25, 10-15, 0, 0"
-  Item4: "CrossbowBoltPlayer, mf=1.0-1.5, 240-480, 0, 0"
-  Item5: "WoodBlocks, mf=0.75-1.0, 200-400, 0, 0"
-  Item6: "CivilianFurniture, mf=1.0-1.25, 10-30, 0, 0"
-#BUYING from player
-  Item7: "WoodLogs, 0, 0 , mf=0.5-0.75, 400-600"
-  Item8: "WoodPlanks, 0, 0 , mf=0.75-1.25, 1000-2000"
-  Item9: "Fiber, 0, 0 , mf=0.75-1.25, 1200-1800"  
-  Item10: "GoldIngot, 0, 0 , mf=0.95-1.0, 100-180"
-  Item11: "IronIngot, 0, 0 , mf=0.85-1.0, 250-500"
-  Item12: "MetalPieces, 0, 0 , mf=0.85-1.0, 400-800"
-}
-
-{ Trader Name: Talon Quarryman
-  SellingText: "Hail, Traveller! What brings you to the quarry? We mine whatever we can pull from the ground and sell what we cannot use to the Trade Station."
-  SellingGoods: "trwResources"
-#SELLING to player
-  Item1: "DecoStoneBlocks, mf=1.25-1.5, 40-80, 0, 0"
-  Item2: "RawDiamond, mf=1.25-1.5, 15-30, 0, 0"
-  Item3: "RockDust, mf=0.75-1.0, 750-1550, 0, 0"
-  Item4: "CrushedStone, mf=0.75-1.0, 1240-2480, 0, 0"
-  Item5: "Cement, mf=0.75-1.0, 600-1200, 0, 0"
-  Item6: "Graphite, mf=1.25-1.5, 20-120, 0, 0"
-  Item7: "IronOre, mf=1.0-1.25, 100-800, 0, 0"
-  Item8: "SiliconOre, mf=1.0-1.25, 100-600, 0, 0"
-  Item9: "CopperOre, mf=1.0-1.25, 100-400, 0, 0"
-#BUYING from player
-  Item10: "Sandwich, 0, 0 , mf=0.75-1.0, 20-120"
-  Item11: "Bandages, 0, 0 , mf=0.75-1.0, 100-300"
-  Item12: "WoodPlanks, 0, 0 , mf=0.75-1.0, 200-600"
-}
-
 # Polaris Traders
+# Dialog = TD_Bertram_Start
 { Trader Name: Bertram's Arms
   SellingText: "Welcome to Bertram's Arms! We deal in civilian armaments and outdoors equipment. If it can fit in your pocket, we'll hane it.\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo,trwWeaponsBasic"
@@ -1334,7 +1113,7 @@
   Item17: "InsulationBoost, mf=1.0-1.25, 2-5, mf=0.5-0.75, 0-6"
   Item18: "HoverbikeHunter, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
 }
-
+# Dialog = TD_ServantCorp_Start
 { Trader Name: ServantCorp Outfitters
   SellingText: "Welcome to SERVANT CORP Clothing and Utilities. We sell the latest in clothing, suit enhancements and attachments. So if you need anything, I am your servant.\n<DISCOUNTTEXT>"
   SellingGoods: "trwComponents,trwArmorBoost"
@@ -1360,7 +1139,7 @@
   Item19: "TextureColorTool, mf=1.0-1.25, 5-10, 0, 0"
   Item20: "MultiCharge, mf=1.0-1.25, 50-100, 0, 0"
 }
-
+# Dialog = TD_ServantCorp_Start
 { Trader Name: ServantCorp Outfitters II
   SellingText: "Welcome to SERVANT CORP Hardware and Utilities. We sell the latest in suit enhancements and attachments. So if you need anything, I am your servant.\n<DISCOUNTTEXT>"
   SellingGoods: "trwComponents,trwArmorBoost"
@@ -1387,7 +1166,7 @@
   Item20: "MultiCharge, mf=1.0-1.25, 50-100, 0, 0"
   Item21: "HoverbikeSpeedstar, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
 }
-
+# Dialog = TD_Interweap_Start
 { Trader Name: InterWeapon Armaments
   SellingText: "Welcome to Inter-Wep! I'm Barj, I handle all new customers. So what are you lookin' for there, buddy?\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo,trwWeaponsAdvanced"
@@ -1419,7 +1198,7 @@
   Item25: "ZiraxShotgunPlayer, 0, 0, mf=0.75-0.75, 0-50"
   Item26: "SmallUpgradeKit, mf=0.75-1.0, 2-5, mf=0.25-0.5, 0-6"
 }
-
+# Dialog = TD_Interweap_Start
 { Trader Name: InterWeapon Heavy
   SellingText: "Welcome to Inter-Weapon Heavy. We specialize in weapons and ammunition for ships here, with a bit aside for the big gun enthusiasts. \n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo,trwWeaponsAdvanced"
@@ -1450,7 +1229,7 @@
   Item24: "ArmorHeavy, mf=1.0-1.25, 1-5, mf=0.5-0.75, 0-10"
   Item25: "SmallUpgradeKit, mf=0.75-1.0, 2-7, mf=0.25-0.5, 0-8"
 }
-
+# Dialog = TD_OkyMedical_Start
 { Trader Name: Ok'Y Medical
   SellingText: "Welcome to Ok'Y Medical Care! I am doctor Su'oul and I am licensed to offer you medicines and injectors compatible with Terran physiology.\n<DISCOUNTTEXT>"
   SellingGoods: "trwMedical"
@@ -1466,7 +1245,7 @@
   Item9: "AdrenalineShot, mf=1.0-1.25, 10-20, mf=0.5-0.75, 10-80"
   Item10: "RadiationPills, mf=1.0-1.25, 0-20, mf=0.5-0.75, 10-90"
 }
-
+# Dialog = TD_Andromedical_Start
 { Trader Name: AndroMedical
   SellingText: "I welcome you to Andromedical! The leading producer of medical supplies in the galaxy! Not even Ok'y can compete!\n<DISCOUNTTEXT>"
   SellingGoods: "trwMedical"
@@ -1481,7 +1260,7 @@
   Item8: "AntiToxicPills, mf=1.0-1.25, 10-30, mf=0.5-0.75, 10-100"
   Item9: "RadiationPills, mf=1.0-1.25, 10-30, mf=0.5-0.75, 10-100"
 }
-
+# Dialog = TD_Grocer_Start
 { Trader Name: Grocer's Grove
   SellingText: "Welcome to Grocer's Grove. We supply nothing but the freshest produce!.\n<DISCOUNTTEXT>"
   SellingGoods: "trwSeeds"
@@ -1500,7 +1279,7 @@
   Item12: "Cheese, mf=1.0-1.25, 20-70, 0, 0"
   Item13: "WaterBottle, mf=1.0-1.25, 20-500, 0, 0"
 }
-
+# Dialog = TD_Grimgar_Start
 { Trader Name: Grimgar's Garden
   SellingText: "We're currently having a sale on seedlings, saplings and hydroponics units! Get yours today!\n<DISCOUNTTEXT>"
   SellingGoods: "trwSeeds"
@@ -1529,7 +1308,7 @@
   Item22: "LightPlant01, mf=1.0-1.25, 1-20, mf=0.5-0.75, 5-60"
   Item23: "Fertilizer, mf=1.5-2.0, 20-80"
 }
-
+# Dialog = TD_MACorp_Start
 { Trader Name: M.A Corp Basics
   SellingText: "Welcome to M.A Corp. We are a subsidiary of Polaris Megacorp, but don't hold that against us! We currently have deals on mining equipment and refined metals.\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -1552,7 +1331,7 @@
   Item16: "OreScanner, mf=1.0-1.25, 1-15, mf=0.5-0.75, 5-30"
   Item17: "MiningEquipment, mf=4.0-5.0, 3-6, 0, 0"
 }
-
+# Dialog = TD_MACorp_Start
 { Trader Name: M.A Corp Advanced
   SellingText: "Welcome to M.A Corp. We are a subsidiary of Polaris Megacorp, but don't hold that against us! We currently have deals on mining equipment and refined metals.\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -1787,6 +1566,7 @@
 # Traders will be fully localized so they display an immersive name
 # =======================================================================
 # Colony Traders. These are for very specific colonist POIs, not general use.
+# Expandable Colony Food (Uses TD_ColonyFoodBasic_Init dialog)
 { Trader Name: ColonySmallFood
   SellingText: "We're out on the frontier so it's hard to get supplies this far from civilization. We're welcome to any support you can offer, though we can't store too much ourselves."
   SellingGoods: "trwFood"
@@ -1801,12 +1581,13 @@
   Item7: "Cheese, 0, 0 , mf=1.25-1.5, 50-80"
   Item8: "Flour, 0, 0 , mf=1.25-2.0, 100-150"
   Item9: "Meat, 0, 0 , mf=1.0-1.25, 80-110"  
-  Item10: "Vegetables, 0, 0 , mf=1.0-1.25, 100-200"
-  Item11: "Fruit, 0, 0 , mf=1.25-1.5, 100-150"
+  Item10: "NaturalSweetener, 0, 0 , mf=1.0-1.25, 100-200"
+  Item11: "Spice, 0, 0 , mf=1.25-1.5, 100-150"
   Item12: "AkuaWine, 0, 0 , mf=1.5-1.75, 60-100"
   Item13: "Salt, 0, 0 , mf=1.5-1.75, 100-200"
   Item14: "FishMeat, 0, 0 , mf=1.5-1.75, 100-200"
 }
+# Complete Colony Food (Uses TD_ColonyFood_Init dialog)
 { Trader Name: ColonyLargeFood
   SellingText: "We're out on the frontier so it's hard to get supplies this far from civilization. We're welcome to any support you can offer, though we can't pay much we have a lot of mouths to feed."
   SellingGoods: "trwFood"
@@ -1822,15 +1603,141 @@
   Item8: "Cheese, 0, 0 , mf=1.25-1.5, 100-200"
   Item9: "Flour, 0, 0 , mf=1.0-1.75, 200-300"
   Item10: "Meat, 0, 0 , mf=0.8-1.1, 150-300"  
-  Item11: "Vegetables, 0, 0 , mf=0.75-1.0, 200-600"
-  Item12: "Fruit, 0, 0 , mf=0.75-1.0, 200-450"
+  Item11: "NaturalSweetener, 0, 0 , mf=0.75-1.0, 200-600"
+  Item12: "Spice, 0, 0 , mf=0.75-1.0, 200-450"
   Item13: "Berries, 0, 0 , mf=0.75-1.0, 200-350"
   Item14: "AkuaWine, 0, 0 , mf=1.5-1.75, 100-180"
   Item15: "Beer, 0, 0 , mf=1.25-1.75, 100-180"
   Item16: "Liquors, 0, 0 , mf=1.5-1.75, 100-240"
   Item17: "FishMeat, 0, 0 , mf=1.5-1.75, 100-200"
 }
+# Colony Farm (Uses TD_ColonyFarm_Init) Cyborg Model
+{ Trader Name: ColonyGreenhouse
+  SellingText: "We grow most of our own food here. It ain't much, but it's honest work."
+  SellingGoods: "trwSeeds"
+  Discount: 0.08
+  Item1: "PlantProtein, mf=1.0-1.25, 120-250, 0, 0"
+  Item2: "Fruit, mf=1.0-1.25, 120-250, 0, 0"
+  Item3: "Vegetables, mf=1.0-1.25, 120-250, 0, 0"
+  Item4: "Sugarcane, mf=1.0-1.25, 120-250, 0, 0"
+  Item5: "HerbalLeaves, mf=1.0-1.25, 120-250, 0, 0"
+  Item6: "NaturalStimulant, mf=1.0-1.25, 120-250, 0, 0"
+  Item7: "MushroomBrown, mf=1.0-1.25, 120-250, 0, 0"
+  Item8: "Roots, mf=1.0-1.25, 120-180, 0, 0"
+  Item9: "WaterBottle, mf=1.0-1.25, 20-500, 0, 0"
+}
+# Colony Spaceport (Uses TD_ColonySpaceport_Init)
+{ Trader Name: ColonySpaceport
+  SellingText: "This is only a small spaceport, not much need for anything more than some maintenance equipment and replacement parts"
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "SmallUpgradeKit, mf=1.25-1.5, 5-10, 0, 0"
+  Item2: "PlasmaConverter, mf=1.25-1.5, 5-10, 0, 0"
+  Item3: "EnergyCellLarge, mf=0.75-1.0, 250-500, 0, 0"
+  Item4: "HullSmallBlocks, mf=1.0-1.25, 200-300, 0, 0"
+  Item5: "HullArmoredSmallBlocks, mf=1.0-1.25, 140-280, 0, 0"
+  Item6: "HullCombatSmallBlocks, mf=1.0-1.25, 100-200, 0, 0"
+  Item7: "ThrusterSVRoundT2Blocks, mf=1.0-1.25, 20-60, 0, 0"
+  Item8: "ThrusterSVRoundLargeT2, mf=1.0-1.25, 20-40, 0, 0"
+  Item9: "HydrogenBottle, mf=1.0-1.25, 80-160, 0, 0"
+#BUYING from player
+  Item10: "CockpitBlocksSV, 0, 0 , mf=0.75-1.0, 10-30"
+  Item11: "ThrusterSVRoundBlocks, 0, 0 , mf=0.5-0.75, 50-80"
+  Item12: "ThrusterSVRoundLarge, 0, 0 , mf=0.5-0.75, 30-60"
+  Item13: "ThrusterJetRound1x3x1, 0, 0 , mf=0.5-0.75, 10-30"
+  Item14: "ThrusterJetRound2x5x2, 0, 0 , mf=0.5-0.75, 8-24"
+  Item15: "ThrusterJetRound3x7x3, 0, 0 , mf=0.5-0.75, 6-12"
+  Item16: "ThrusterJetRound3x10x3, 0, 0 , mf=0.5-0.75, 4-8"
+  Item17: "ThrusterJetRound3x13x3, 0, 0 , mf=0.5-0.75, 3-6"
+  Item18: "ReportSpaceWeather, 0, 0 , mf=4.0-6.5, 10-25"
+  Item19: "AntimatterConverter, 0, 0 , mf=0.75-1.0, 10-20"
+}
+# Colony Doctor (Uses TD_ColonyDoctor_Init)
+{ Trader Name: ColonyDoctor
+  SellingText: "I'm limited to only minor treatments that occur to this colony's residents. Supplies are limited, so anything serious will need to be seen to at a major hospital."
+  SellingGoods: "trwMedical"
+  Discount: 0.05
+  Item1: "Bandages, mf=1.0-1.25, 10-30, mf=0.5-0.75, 10-35"
+  Item2: "Medikit04, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-20"
+  Item3: "AdrenalineShot, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-150"
+  Item4: "StomachPills, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-150"
+  Item5: "AntibioticOintment, mf=1.0-1.25, 5-30, mf=0.5-0.75, 10-150"
+  Item6: "AntiRadiationOintment, mf=1.0-1.25, 5-30, mf=0.5-0.75, 10-150"
+  Item7: "AntibioticPills, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
+  Item8: "AntiToxicPills, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
+  Item9: "RadiationPills, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
+  Item10: "AntibioticInjection, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
+  Item11: "AntiToxicInjection, mf=1.0-1.25, 5-20, mf=0.5-0.75, 10-150"
+}
+# Colonist Powerplant (Uses TD_ColonyPower_Init dialog)
+{ Trader Name: ColonyPowerplant
+  SellingText: "We don't get a lot of freighters out here besides the regular supply runs. If you've got parts to spare, I could use all the help I can get to keep this tub running."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "ToxicWaste, mf=0.5-0.75, 150-250, 0, 0"
+  Item2: "HeliumBottle, mf=1.0-1.25, 75-150, 0, 0"
+  Item3: "EnergyCell, mf=0.75-1.25, 800-1500, 0, 0"
+  Item4: "EnergyCellLarge, mf=0.75-1.25, 500-1000, 0, 0"
+  Item5: "FusionCell, mf=0.75-1.25, 250-500, 0, 0"
+  Item6: "PowerCoil, mf=1.0-1.25, 80-160, 0, 0"
+#BUYING from player
+  Item7: "NeodymiumIngot, 0, 0 , mf=0.75-1.0, 800-1600"
+  Item8: "ZascosiumAlloy, 0, 0 , mf=0.75-1.0, 400-800"
+  Item9: "PromethiumPellets, 0, 0 , mf=0.75-1.0, 500-2000"  
+  Item10: "CapacitorComponent, 0, 0 , mf=0.5-1.0, 240-540"
+  Item11: "HydrogenBottle, 0, 0 , mf=0.5-0.75, 500-1000"
+  Item12: "RadiationShielding, 0, 0 , mf=1.25-1.75, 50-100"
+  Item13: "Coolant, 0, 0 , mf=1.5-2.5, 500-800"
+}
+# Colonist Security (Uses TD_ColonySecurity_Init dialog)
+{ Trader Name: ColonySecurity
+  SellingText: "If you're in here, you keep your weapons holstered at all times. We have enough problems with local wildlife and local thugs, so we make all our own weapons and ammunition."
+  SellingGoods: "trwAmmo,trwWeaponsBasic"
+  Discount: 0.05
+  Item1: "Pistol, mf=1.0-1.25, 10-15, mf=0.5-0.75, 2-50"
+  Item2: "Shotgun, mf=1.0-1.25, 10-15, mf=0.5-0.75, 3-25"
+  Item3: "FlameThrower, mf=1.0-1.25, 8-10, mf=0.5-0.75, 2-30"
+  Item4: "Sniper, mf=1.0-1.25, 8-15, mf=0.5-0.75, 2-25"
+  Item5: "SubmachineGunT1, mf=1.0-1.25, 10-15, mf=0.5-0.75, 2-35"
+  Item6: "MultiTool, mf=1.0-1.25, 5-25, mf=0.5-0.75, 1-29"
+  Item7: "9mmBullet, mf=1.0-1.25, 300-600, mf=0.5-0.75, 100-2500"
+  Item8: "ShotgunShells, mf=1.0-1.25, 250-400, mf=0.5-0.75, 50-500"
+  Item9: "5.56mmBullet, mf=1.0-1.25, 800-1600, mf=0.5-0.75, 1000-5000"
+  Item10: "7.62mmBullet, mf=1.0-1.25, 150-300, mf=0.5-0.75, 100-400"
+  Item11: "MultiCharge, mf=1.0-1.25, 50-100, 0, 0"
+  Item12: "FlameThrowerCanister, mf=1.0-1.25, 1-20, mf=0.5-0.75, 10-50"
+  Item13: "NCPowder, 0, 0, mf=0.5-0.75, 700-1100"
+  Item14: "MagnesiumPowder, 0, 0, mf=0.5-0.75, 150-950"
+  Item15: "InsulationBoost, mf=1.0-1.25, 2-5, mf=0.5-0.75, 0-6"
+  Item16: "HoverbikeHunter, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
+}
+# Colonist Salvager (Uses TD_ColonySalvage_Init)
+{ Trader Name: ColonySalvager
+  SellingText: "There's plenty of old wrecks we can break down for parts to expand the colony, and what we can't use we can always sell."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "PlasmaConverter, mf=1.25-1.5, 8-16, 0, 0"
+  Item2: "ThrusterMSJunk2x2, mf=1.25-1.5, 4-8, 0, 0"
+  Item3: "ThrusterMSJunk3x3, mf=1.25-1.5, 2-6, 0, 0"
+  Item4: "AdvancedUpgradeKit, mf=1.25-1.5, 4-8, 0, 0"
+  Item5: "HeatExchanger, mf=2.0-1.5, 50-100, 0, 0"
+  Item6: "SteelPlate, mf=0.85-1.0, 1000-4000, mf=0.333-0.666, 1100-5000"
+  Item7: "TitanPlates, mf=0.85-1.0, 1000-3000, mf=0.333-0.666, 1100-3500"
+  Item8: "SteelPlateArmored, mf=0.85-1.0, 1000-2000, mf=0.333-0.666, 1100-3000"
+  Item9: "PlatinOunce, mf=1.0-1.25, 150-400, 0, 0"
+  Item10: "BrokenDomeGenerator, mf=2.0-2.5, 0-1, mf=0.5-0.75, 1-4"
+  Item11: "BrokenTurretDome, mf=1.0-1.5, 2-3, mf=0.5-0.75, 2-9"
+  Item12: "BrokenTurretAlien, mf=1.0-1.5, 3-5, mf=0.5-0.75, 4-9"
+#BUYING from player
+  Item13: "SpareParts, 0, 0 , mf=1.75-2.0, 20-50"
+  Item14: "EmergencyRations, 0, 0 , mf=0.75-1.0, 10-30"
+  Item15: "CivilianFurniture, 0, 0 , mf=1.5-1.75, 25-50"
+  Item16: "ReportMaintenanceData, 0, 0 , mf=3.75-4.5, 5-15"
+  Item17: "AntimatterConverter, 0, 0 , mf=0.75-1.0, 10-20"
+}
+
 # ===== Manufacturing Traders
+# P3 Civilian Factory (Uses TD_IndustrialSmall_Start dialog)
 { Trader Name: PolarisManufacturingPlanet
   SellingText: "Welcome to P3: Polaris Planetside Production. We're always happy to have customers down here on our little planet. We're a low-priority site so we're behind on raw materials."
   SellingGoods: "trwResources"
@@ -1852,6 +1759,7 @@
   Item14: "Electronics, 0, 0 , mf=0.75-1.0, 1400-4800"
   Item15: "MechanicalComponents, 0, 0 , mf=0.75-1.0, 2450-4900"
 }
+# Zero Horizons Space Factory (Uses TD_IndustrialSpacePolaris_Start dialog)
 { Trader Name: PolarisManufacturingSpace
   SellingText: "Welcome to Zero Horizons Manufacturing, a subsidiary of Polaris Megacorp. We mostly handle Zero-G construction and cold welding here, so you're sure to find more complex devices here than planetside."
   SellingGoods: "trwResources"
@@ -1874,6 +1782,7 @@
   Item15: "Graphite, 0, 0 , mf=0.75-1.0, 400-3200"
   Item16: "PlasticMaterial, 0, 0 , mf=0.75-1.0, 4500-19000"
 }
+# NLP Industrial Factory (Uses TD_IndustrialPolaris_Start dialog)
 { Trader Name: ManufacturingIndustrial
   SellingText: "Hey there, pal! Welcome to Non-Linear Productions. We're the best at top-of-the-line industrial manufacturing and supply."
   SellingGoods: "trwResources"
@@ -1897,6 +1806,7 @@
   Item16: "Nanotubes, 0, 0 , mf=0.75-1.0, 450-3900"
   Item17: "ReportMaintenanceData, 0, 0 , mf=3.0-4.0, 10-25"
 }
+# Arriake Electronics Factory (Uses TD_ElectronicsPolaris_Start dialog)
 { Trader Name: ManufacturingElectronics
   SellingText: "Ah, a customer! What can I do for you today? Here at Arriake Technology we manufacture only the finest optronics and advanced electronics for your ship."
   SellingGoods: "trwResources"
@@ -1919,6 +1829,7 @@
   Item15: "CopperIngot, 0, 0 , mf=0.75-1.0, 1000-6000"
   Item16: "NitrogenBottle, 0, 0 , mf=1.25-1.5, 450-900"
 }
+# Chromium-Sierra Factory (Uses TD_SciencePolaris_Start dialog)
 { Trader Name: ManufacturingScience
   SellingText: "Welcome to Chromium-Sierra Sciences! We're producers of the finest scientific and medical equipment this side of the galaxy!"
   SellingGoods: "trwResources"
@@ -1945,6 +1856,7 @@
   Item19: "XenonBottle, 0, 0 , mf=1.5-2.0, 450-900"
   Item20: "CrewMedical01, 0, 0 , mf=1.0-1.5, 3-7"
 }
+# Thermal Interactions Factory (Uses TD_ThermalPolaris_Start dialog)
 { Trader Name: ManufacturingThermal
   SellingText: "Hello there, valued customer! Welcome to Thermal Interactions Ltd! We currently have a sale on heat exchangers and coolant!"
   SellingGoods: "trwResources"
@@ -1968,6 +1880,7 @@
   Item16: "Graphite, 0, 0 , mf=0.75-1.0, 1400-2800"
   Item17: "NitrogenBottle, 0, 0 , mf=1.5-2.0, 450-900"
 }
+# Hostile Apparatus Robotics Factory (Uses TD_RoboticsPolaris_Start dialog)
 { Trader Name: PolarisManufacturingRobotics
   SellingText: "Welcome to Hostile Apparatus. We're the leaders in robotics manufacturing and one of Polaris' top contributors. Buy one of our Mechanoids today!"
   SellingGoods: "trwResources"
@@ -1988,6 +1901,7 @@
   Item13: "NightVision, 0, 0 , mf=0.75-1.0, 20-40"
   Item14: "MechanicalComponents, 0, 0 , mf=0.75-1.0, 4500-9000"
 }
+# Solaris-AMP Electronics Factory (Uses TD_PowerSolaris_Start dialog)
 { Trader Name: ManufacturingPower
   SellingText: "Business has been slow recently. You have no idea how glad I am to see a customer! Welcome to Solaris AMP, the premier supplier of generators, solars and electrical devices!"
   SellingGoods: "trwResources"
@@ -2011,7 +1925,7 @@
   Item16: "HydrogenBottle, 0, 0 , mf=0.5-0.75, 150-400"
   Item17: "Computer, 0, 0 , mf=0.5-0.75, 450-1900"
 }
-
+# Pentaxid Factory (Uses TD_PentaxidPolaris_Start dialog)
 { Trader Name: RefiningPentaxid
   SellingText: "Welcome to PentMaxIt! The number one provider of Pentaxid-based fuel services in the entire Galaxy!\nWe operate here as a major production hub for the company here, so we have our share of logistics problems."
   SellingGoods: "trwResources"
@@ -2034,6 +1948,7 @@
   Item15: "RadiationBoost, 0, 0 , mf=0.75-1.0, 20-40"
   Item16: "RadiationBoostEpic, 0, 0 , mf=1.0-1.25, 20-40"
 }
+# Space Gas Miner (Uses TD_CloudMiner_Start dialog)
 { Trader Name: ManufacturingGases
   SellingText: "I don't know what you need here, but this is a WORK SITE! If you don't have any business with me, then stay out of my way!\nWe deal in gas extraction from that Gas Giant and not much else."
   SellingGoods: "trwResources"
@@ -2055,7 +1970,7 @@
   Item14: "InsulationBoostEpic, 0, 0 , mf=1.25-1.5, 10-20"
   Item15: "WorkClothing, 0, 0 , mf=1.5-2.0, 15-30"
 }
-
+# InterWeap Factory (Uses TD_AmmoPolaris_Start dialog)
 { Trader Name: ManufacturingInterweap
   SellingText: "Welcome to InterWeapon Manufacturing. This is the factory floor where we produce our ammunition and weapons."
   SellingGoods: "trwResources"
@@ -2085,7 +2000,7 @@
   Item22: "MagnesiumPowder, 0, 0 , mf=0.75-1.0, 2000-8000"
   Item23: "ErestrumGel, 0, 0 , mf=0.75-1.0, 750-2400"
 }
-
+# Chemmix Factory (Uses TD_ChemicalPolaris_Start dialog)
 { Trader Name: RefiningChemicals
   SellingText: "Look, I'm busy enough as it is. Tell me what chemicals you're after and i'll put in a shipping order and get your order out there now."
   SellingGoods: "trwResources"
@@ -2107,7 +2022,7 @@
   Item14: "FluxCoil, 0, 0 , mf=0.75-1.0, 120-240"
   Item15: "Computer, 0, 0 , mf=0.75-1.0, 200-800"
 }
-
+# Vitalife Factory (Uses TD_MedicalPolaris_Start dialog)
 { Trader Name: ManufacturingMedical
   SellingText: "Welcome to Vitalife Pharmaceuticals. We supply many of the leading pharmaceutical companies, labs and factories with high-quality ingredients not found anywhere else!"
   SellingGoods: "trwResources"
@@ -2138,7 +2053,7 @@
   Item23: "AlienParts04, 0, 0 , mf=0.75-1.0, 4000-8000"
   Item24: "Bone, 0, 0 , mf=0.75-1.0, 4000-8000"
 }
-
+# Gold Standard Factory (Uses TD_LuxuryPolaris_Start dialog)
 { Trader Name: ManufacturingLuxuryGoods
   SellingText: "We produce and manage the stuff we sell at our showrooms here. We don't usually handle sales, so anything in the crates is staying in the crates."
   SellingGoods: "trwResources"
@@ -2162,7 +2077,25 @@
   Item16: "GlassPlate, 0, 0 , mf=0.5-0.75, 420-840"
   Item17: "Leather, 0, 0 , mf=1.5-2.0, 100-300"
 }
-
+# Factory Brewery (Uses TD_TOPPolaris_Start dialog)
+{ Trader Name: Totally Overpowered Brewery
+  SellingText: "Welcome to the factory floor of our brewery. I assure you we are NOT a distillery and I can't tell you how much I hate it when people call us one.\nThat's not to say we don't have a distillery, because we do. But this isn't it. We stock their products though."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "Beer, mf=0.75-1.0, 500-1500, 0, 0"
+  Item2: "Liquors, mf=0.5-0.75, 250-650, 0, 0"
+  Item3: "PromethiumBlue, mf=1.25-1.5, 15-30, 0, 0"
+  Item4: "DirtyLegacy, mf=1.25-1.5, 15-25, 0, 0"
+#BUYING from player
+  Item5: "Grain, 0, 0 , mf=0.75-0.85, 500-1000"
+  Item6: "Buds, 0, 0 , mf=1.0-1.25, 300-600"
+  Item7: "HerbalLeaves, 0, 0 , mf=0.5-0.75, 125-350"
+  Item8: "NaturalStimulant, 0, 0 , mf=0.5-0.75, 150-500"
+  Item9: "Roots, 0, 0, mf=2.0-4.0, 100-350"
+  Item10: "Spice, 0, 0, mf=0.5-0.75, 200-550"
+  Item11: "NaturalSweetener, 0, 0, mf=0.5-0.75, 100-250"
+}
+# Dialog = TD_Pumpstation_Start
 { Trader Name: ManufacturingPumpstation
   SellingText: "This is a Hydroflux Pumpstation. I don't know what you need here, we mostly pump, treat and package water for colonies."
   SellingGoods: "trwResources"
@@ -2177,7 +2110,7 @@
   Item7: "EnergyCellLarge, 0, 0 , mf=0.5-0.75, 250-500"
   Item8: "WaterGenerator, 0, 0 , mf=0.75-1.0, 100-250"
 }
-
+# Dialog = TD_SpaceportSmall_Start
 { Trader Name: SpaceportSmall
   SellingText: "This is only a small spaceport, not much need for anything more than some maintenance equipment and replacement parts"
   SellingGoods: "trwResources"
@@ -2202,7 +2135,7 @@
   Item17: "ThrusterJetRound3x13x3, 0, 0 , mf=0.5-0.75, 3-6"
   Item18: "ReportSpaceWeather, 0, 0 , mf=4.0-6.5, 10-25"
 }
-
+# Dialog = TD_SpaceportLarge_Start
 { Trader Name: SpaceportLarge
   SellingText: "Woah there, watch your step or you'll end up toasted by a freighter's backblast. You here for maintenance or to unload cargo?"
   SellingGoods: "trwResources"
@@ -2230,7 +2163,7 @@
   Item20: "ReportNavigationData, 0, 0 , mf=5.0-7.5, 10-25"
   Item21: "CrewPilot01, 0, 0 , mf=1.0-1.25, 2-5"
 }
-
+# Dialog = TD_LighthalzenLabs_Start
 { Trader Name: Biolabs
   SellingText: "Welcome to Lighthalzen Biolabs. We do cutting edge experiments here in the hopes of improving lives across the galaxy."
   SellingGoods: "trwResources"
@@ -2255,7 +2188,7 @@
   Item17: "ReportAnomalousData, 0, 0, mf=4.0-5.0, 100-150"
   Item18: "BrokenTurretLegacy, 0, 0, mf=1.0-1.5, 10-20"
 }
-
+# Dialog = TD_ImperialArms_Start
 { Trader Name: Imperial Arms
   SellingText: "Ah, A Customer! Welcome to Imperial Arms. We don't discriminate here, we provide standardized Imperial weapons at discount prices!"
   SellingGoods: "trwResources"
@@ -2274,47 +2207,7 @@
   Item12: "HeatExchanger, mf=1.5-2.5, 10-18, 0, 0"
   Item13: "HoverbikeWasp, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
 }
-
-{ Trader Name: Talon Brewery
-  SellingText: "Hail, Traveller! You must be thirsty! Although Polaris has tried to compete, no one can beat the authentic products of us Tal'on.\nStay awhile, try some of our brews and talk to us of the galaxy."
-  SellingGoods: "trwResources"
-#SELLING to player
-  Item1: "AkuaWine, mf=1.0-1.25, 100-200, 0, 0"
-  Item2: "Liquors, mf=0.5-0.75, 50-100, 0, 0"
-  Item3: "HotBeverage, mf=0.75-1.0, 250-500, 0, 0"
-  Item4: "BloodyZirax, mf=1.25-1.5, 15-25, 0, 0"
-  Item5: "VegetableJuice, mf=0.75-1.0, 250-500, 0, 0"
-  Item6: "BerryJuice, mf=0.75-1.0, 50-150, 0, 0"
-  Item7: "FruitJuice, mf=0.75-1.0, 50-150, 0, 0"
-#BUYING from player
-  Item8: "Berries, 0, 0 , mf=1.0-1.25, 200-600"
-  Item9: "Fruit, 0, 0 , mf=1.0-1.25, 300-500"
-  Item10: "HerbalLeaves, 0, 0 , mf=1.0-1.25, 125-350"
-  Item11: "NaturalStimulant, 0, 0 , mf=1.0-1.25, 150-300"
-  Item12: "Roots, 0, 0, mf=2.0-3.0, 100-150"
-  Item13: "Spice, 0, 0, mf=1.0-1.25, 200-350"
-  Item14: "NaturalSweetener, 0, 0, mf=1.0-1.25, 100-150"
-  Item15: "Sugarcane, 0, 0, mf=2.0-2.25, 100-250"
-}
-
-{ Trader Name: Totally Overpowered Brewery
-  SellingText: "Welcome to the factory floor of our brewery. I assure you we are NOT a distillery and I can't tell you how much I hate it when people call us one.\nThat's not to say we don't have a distillery, because we do. But this isn't it. We stock their products though."
-  SellingGoods: "trwResources"
-#SELLING to player
-  Item1: "Beer, mf=0.75-1.0, 500-1500, 0, 0"
-  Item2: "Liquors, mf=0.5-0.75, 250-650, 0, 0"
-  Item3: "PromethiumBlue, mf=1.25-1.5, 15-30, 0, 0"
-  Item4: "DirtyLegacy, mf=1.25-1.5, 15-25, 0, 0"
-#BUYING from player
-  Item5: "Grain, 0, 0 , mf=0.75-0.85, 500-1000"
-  Item6: "Buds, 0, 0 , mf=1.0-1.25, 300-600"
-  Item7: "HerbalLeaves, 0, 0 , mf=0.5-0.75, 125-350"
-  Item8: "NaturalStimulant, 0, 0 , mf=0.5-0.75, 150-500"
-  Item9: "Roots, 0, 0, mf=2.0-4.0, 100-350"
-  Item10: "Spice, 0, 0, mf=0.5-0.75, 200-550"
-  Item11: "NaturalSweetener, 0, 0, mf=0.5-0.75, 100-250"
-}
-
+# Dialog = TD_ShipyardMain_Start
 { Trader Name: Shipyard
   SellingText: "We're at half-speed at the moment. You here to resupply us so we can finish the current job?"
   SellingGoods: "trwResources"
@@ -2344,7 +2237,7 @@
   Item22: "AlienNPCBlocks, 0, 0 , mf=0.25-0.5, 20-50"
   Item23: "ThrusterComponents, 0, 0 , mf=1.25-1.5, 20-50"
 }
-
+# Dialog = TD_SmelterT1_Start
 { Trader Name: Smeltery (Basic)
   SellingText: "We handle metal processing here. I know, not very special but what did you expect? We buy ore and sell raw ingots, alloys and pure components at a discount.\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -2365,7 +2258,7 @@
   Item12: "Graphite, 0, 0 , mf=0.5-0.75, 1000-2000"
   Item13: "Furnace, 0, 0 , mf=0.5-0.75, 5-10"
 }
-
+# Dialog = TD_SmelterT2_Start
 { Trader Name: Smeltery (Advanced)
   SellingText: "We handle metal processing here. I know, not very special but what did you expect? We buy ore and sell raw ingots, alloys and pure components at a discount.\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -2385,7 +2278,7 @@
   Item11: "MetalPieces, 0, 0 , mf=1.0-1.05, 1000-2000"
   Item12: "Furnace, 0, 0 , mf=0.5-0.75, 5-10"
 }
-
+# Dialog = TD_SmelterT3_Start
 { Trader Name: Smeltery (Quality)
   SellingText: "We handle metal processing here. I know, not very special but what did you expect? We buy ore and sell raw ingots, alloys and pure components at a discount.\n<DISCOUNTTEXT>"
   SellingGoods: "trwResources"
@@ -2409,6 +2302,7 @@
 # ======================================================================================
 # ==== Miner NPCs ====
 # ======================================================================================
+# Dialog = MN_MiningIron_Start
 { Trader Name: Mining Foreman (Hematite)
   SellingText: "Alright, so what is it you need? Iron mining is the backbone of the galactic economy. We've got a quota to meet and our backers don't like us slacking."
   SellingGoods: "trwResources"
@@ -2426,7 +2320,7 @@
   Item10: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningCopper_Start
 { Trader Name: Mining Foreman (Copper)
   SellingText: "Alright, so what is it you need? Copper's used in pretty much everything, so we've always got a big quota to meet and our backers don't like us slacking."
   SellingGoods: "trwResources"
@@ -2444,7 +2338,7 @@
   Item10: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningSilicon_Start
 { Trader Name: Mining Foreman (Quartz)
   SellingText: "Alright, so what is it you need? What? Why are we mining quartz? Don't you know that almost all silicon comes from quartz?"
   SellingGoods: "trwResources"
@@ -2462,7 +2356,7 @@
   Item10: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningCobalt_Start
 { Trader Name: Mining Foreman (Cobaltite)
   SellingText: "Alright, so what is it you need? Aye. We mine Cobalt here. We have buyers in Polaris, the Trade Guild and even the Zirax Empire."
   SellingGoods: "trwResources"
@@ -2480,7 +2374,7 @@
   Item10: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningMagnesium_Start
 { Trader Name: Mining Foreman (Magnesite)
   SellingText: "You're not one of our regular buyers. What brings you out here to our mine?"
   SellingGoods: "trwResources"
@@ -2497,7 +2391,7 @@
   Item9: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item10: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningTitanium_Start
 { Trader Name: Mining Foreman (Rutile)
   SellingText: "You're not one of our regular buyers. What brings you out here to our mine? We supply Titanium ore to most of the refineries in this quadrant."
   SellingGoods: "trwResources"
@@ -2515,7 +2409,7 @@
   Item10: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningAluminium_Start
 { Trader Name: Mining Foreman (Bauxite)
   SellingText: "This is about as boring as mining can get. Bauxite isn't hard to mine, but it's usually spread wide and thin."
   SellingGoods: "trwResources"
@@ -2534,7 +2428,7 @@
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item12: "ReportGeologicalData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningNeodymium_Start
 { Trader Name: Mining Foreman (Neodymium)
   SellingText: "We're still trying to clear out this deposit, but it's a big bugger and is fighting us the whole time."
   SellingGoods: "trwResources"
@@ -2553,7 +2447,7 @@
   Item11: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item12: "ReportGeologicalData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningZascosium_Start
 { Trader Name: Mining Foreman (Zascovite)
   SellingText: "We're going through drill heads every few hours trying to crack this damn vein. We can't even use laser drills on the damn stuff since it's so reflective."
   SellingGoods: "trwResources"
@@ -2573,7 +2467,7 @@
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item13: "ReportPlanetaryResourceData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningErestrum_Start
 { Trader Name: Mining Foreman (Pyrestrum)
   SellingText: "We've hit paydirt, but the toxicity of this deposit is making me worried for my men."
   SellingGoods: "trwResources"
@@ -2593,7 +2487,7 @@
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item13: "ReportGeologicalData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningPentaxid_Start
 { Trader Name: Mining Foreman (Pentaxid)
   SellingText: "It's a slow day today. Most days are slow like this one when you're dealing with Pentaxid. This crap will cook you from the inside out if you're not careful."
   SellingGoods: "trwResources"
@@ -2612,7 +2506,7 @@
   Item11: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningPromethium_Start
 { Trader Name: Mining Foreman (Promethium)
   SellingText: "We've cleared nodes in grid A-23, A-24 and B-11 today. Surveys of grid B-12 came back as Neodymium decay. So that one's a bust."
   SellingGoods: "trwResources"
@@ -2631,7 +2525,7 @@
   Item11: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningGold_Start
 { Trader Name: Mining Foreman (Gold)
   SellingText: "We've not had much success this quarter. I know there's gold here, but we may have to move the dig site to the west and risk rougher terrain. All we're finding out here is Copper."
   SellingGoods: "trwResources"
@@ -2651,7 +2545,7 @@
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item13: "ReportPlanetaryResourceData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningSathium_Start
 { Trader Name: Mining Foreman (Sathylite)
   SellingText: "We've burned out a dozen heatsinks on our mining lasers getting through this latest deposit. Must be very pure to put this much strain on our drills."
   SellingGoods: "trwResources"
@@ -2670,7 +2564,7 @@
   Item11: "AutoMinerCore, 0, 0 , mf=0.75-0.9, 10-30"
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
 }
-
+# Dialog = MN_MiningPlatinum_Start
 { Trader Name: Mining Foreman (Sperrylite)
   SellingText: "We've hit the jackpot here, but we don't have the equipment to dig it out any faster until we can sell what we've got and buy better infrastructure."
   SellingGoods: "trwResources"
@@ -2690,7 +2584,7 @@
   Item12: "Coffee, 0, 0 , mf=0.85-1.0, 100-250"
   Item13: "ReportPlanetaryResourceData, 0, 0 , mf=3.0-4.0, 10-25"
 }
-
+# Dialog = MN_MiningGraphite_Start
 { Trader Name: Mining Foreman (Graphite)
   SellingText: "We've had an uneventful job this time around. 'Eventful' in this line is never a good thing. Graphite is always in high demand in refineries and factories."
   SellingGoods: "trwResources"
@@ -2706,7 +2600,7 @@
   Item8: "BioFuel, 0, 0 , mf=0.5-0.75, 150-300"
   Item9: "Drill, 0, 0 , mf=0.75-1.25, 40-80"
 }
-
+# Dialog = MN_MiningSalt_Start
 { Trader Name: Mining Foreman (Salt)
   SellingText: "Salt maybe low in value, but we can always sell it so the price is stable. Not like metal-extraction that can put people out of business with shifting prices."
   SellingGoods: "trwResources"
@@ -2722,7 +2616,7 @@
   Item8: "BioFuel, 0, 0 , mf=0.5-0.75, 150-300"
   Item9: "Drill, 0, 0 , mf=0.75-1.25, 40-80"
 }
-
+# Dialog = MN_MiningSulfur_Start
 { Trader Name: Mining Foreman (Sulfur)
   SellingText: "We're always hoping for rare ores, but Sulfur is what we're really here for. There's a big market, even though the stuff is easy to get. I guess the locale isn't for everyone."
   SellingGoods: "trwResources"
@@ -2740,9 +2634,9 @@
   Item10: "WaterJug, 0, 0 , mf=0.5-0.75, 100-200"
 }
 
-# ====================== RG2 Traders ====================
+# ====================== Pirate Traders =======================
 
-# Ice Asteroid Miner
+# Ice Asteroid Miner (Uses TD_PirateIce_Init dialog)
 { Trader Name: IceMiningPirates
   SellingText: "Welcome to Plumas Ice Mining! Sounds like a real company, don't it? We supply water and reaction mass to any friend of the clans!"
   SellingGoods: "trwResources"
@@ -2760,27 +2654,31 @@
   Item10: "WorkClothing, 0, 0 , mf=1.75-2.0, 30-75"
   Item11: "AutoMinerCore, 0, 0, mf=0.5-0.75, 2-8"
 }
-# Salvager
+# Salvager (Uses TD_PirateSalvage_Init dialog)
 { Trader Name: SalvagerPirates
   SellingText: "It might seem strange to you, but we make quite a living selling what we can salvage from the wreckage around here. Just the parts stripped from a Mk.33 Hull will have us set for a month."
   SellingGoods: "trwResources"
 #SELLING to player
   Item1: "PlasmaConverter, mf=1.25-1.5, 8-16, 0, 0"
   Item2: "ReactorCore, mf=1.25-1.5, 0-1, 0, 0"
-  Item3: "AdvancedUpgradeKit, mf=1.25-1.5, 4-8, 0, 0"
-  Item4: "HeatExchanger, mf=1.0-1.5, 50-100, 0, 0"
-  Item5: "SteelPlate, mf=0.85-1.0, 1000-4000"
-  Item6: "TitanPlates, mf=0.85-1.0, 1000-3000"
-  Item7: "SteelPlateArmored, mf=0.85-1.0, 1000-2000"
-  Item8: "PlatinOunce, mf=1.0-1.25, 150-400, 0, 0"
+  Item3: "ThrusterMSJunk2x2, mf=1.25-1.5, 4-8, 0, 0"
+  Item4: "ThrusterMSJunk3x3, mf=1.25-1.5, 2-6, 0, 0"
+  Item5: "AdvancedUpgradeKit, mf=1.25-1.5, 4-8, 0, 0"
+  Item6: "HeatExchanger, mf=1.0-1.5, 50-100, 0, 0"
+  Item7: "SteelPlate, mf=0.85-1.0, 1000-4000"
+  Item8: "TitanPlates, mf=0.85-1.0, 1000-3000"
+  Item9: "SteelPlateArmored, mf=0.85-1.0, 1000-2000"
+  Item10: "PlatinOunce, mf=1.0-1.25, 150-400, 0, 0"
+  Item11: "BrokenDomeGenerator, mf=2.0-2.5, 0-1, mf=0.5-0.75, 1-4"
 #BUYING from player
-  Item9: "PrefabHousing, 0, 0 , mf=1.75-2.0, 20-50"
-  Item10: "EmergencyRations, 0, 0 , mf=0.75-1.0, 10-30"
-  Item11: "CivilianFurniture, 0, 0 , mf=1.5-1.75, 25-50"
-  Item12: "ReportMaintenanceData, 0, 0 , mf=3.75-4.5, 5-15"
-  Item13: "EnergyCellLarge, 0, 0 , mf=0.75-1.0, 50-150"
+  Item12: "PrefabHousing, 0, 0 , mf=1.75-2.0, 20-50"
+  Item13: "EmergencyRations, 0, 0 , mf=0.75-1.0, 10-30"
+  Item14: "CivilianFurniture, 0, 0 , mf=1.5-1.75, 25-50"
+  Item15: "ReportMaintenanceData, 0, 0 , mf=3.75-4.5, 5-15"
+  Item16: "EnergyCellLarge, 0, 0 , mf=0.75-1.0, 50-150"
+  Item17: "AntimatterConverter, 0, 0 , mf=0.75-1.0, 10-20"
 }
-# Food Trader (Pirates)
+# Food Trader (Pirates) (Uses TD_PirateBar_Init dialog)
 { Trader Name: The Rusty Barrel
   SellingText: "Welcome to the Rusty Barrel. We're not ALL pirates here. Some of us have to work for a living, just like the folks in the Empire."
   SellingGoods: "trwFood"
@@ -2805,7 +2703,7 @@
   Item17: "Liquors, 0, 0 , mf=1.5-1.75, 180-240"
   Item18: "FishMeat, 0, 0 , mf=1.5-1.75, 100-200"
 }
-# Medical Trader (Pirates)
+# Medical Trader (Pirates) (Uses TD_FreeRadicals_Start dialog)
 { Trader Name: Free-Radicals
   SellingText: "Yes, I know we don't have much. No, we don't stock Zyme. I can't believe I went to medical school for this...\n<DISCOUNTTEXT>"
   SellingGoods: "trwMedical"
@@ -2822,7 +2720,7 @@
   Item10: "AdrenalineShot, mf=1.0-1.25, 3-10, mf=0.5-0.75, 10-100"
   Item11: "RadiationPills, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-150"
 }
-# Pirate Weapon Dealer
+# Pirate Weapon Dealer (Uses TD_AmmoBandit_Start dialog)
 { Trader Name: The Ammo Bandit
   SellingText: "Bienvenido al Ammo Bandito!\nWe have the widest range of ammunition this side of darkspace!\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo"
@@ -2857,6 +2755,7 @@
   Item28: "SmallUpgradeKit, mf=0.75-1.0, 2-5, mf=0.25-0.5, 0-6"
   Item29: "HoverbikeHowler, mf=1.25-1.5, 1-4, mf=0.5-0.75, 0-7"
 }
+# Drug Dealer (Uses TD_DrugDealer_Init dialog)
 { Trader Name: DrugDealer
   SellingText: "I got all the stuff, if you've got coin. What's your poison? Wire? Zyme? Black Ice?"
   SellingGoods: "trwResources"
@@ -2868,6 +2767,7 @@
   Item5: "Token:4024, 2350-2500, 3-10, 0, 0" #Zyme
   Item6: "Token:4025, 4400-4750, 3-10, 0, 0" #BlackIce
 }
+# Drug Lab (Uses TD_DrugLab_Init dialog)
 { Trader Name: DrugLabPirates
   SellingText: "We're running a smooth operation here. Some of the more unique components are harder to come by than others, but the Syndicate is more than willing to pay for good supplies."
   SellingGoods: "trwResources"
@@ -2885,7 +2785,8 @@
   Item10: "ToxicLiquid, 0, 0, mf=1.5-1.75, 200-400"
   Item11: "NutrientSolution, 0, 0, mf=1.0-1.25, 100-450"
 }
-# ============== Card Dealers
+# ============== Card Dealers (Anime Stores) ==================
+# Pulsar MAX (Uses TD_PulsarMax_Start dialog)
 { Trader Name: CardDealer01
   SellingText: "Welcome to Pulsar MAX! We have the greatest collection of video games, anime, comics and trading cards this side of the galaxy! We're selling some common cards and can always find a buyer for the rarer cards if you have any!"
   SellingGoods: "trwResources"
@@ -2912,6 +2813,7 @@
   Item19: "Token:141, 0, 0 , 5000-6000, 0-25"
   Item20: "Token:168, 0, 0 , 5000-6000, 0-25"
 }
+# Grinning Studios (Uses TD_GStudios_Start dialog)
 { Trader Name: CardDealer02
   SellingText: "Welcome to GS-Entertainment! We're a leading retailer of video games, anime and card games. We also broker deals with collectors and hold TCG Tournaments!"
   SellingGoods: "trwResources"
@@ -2938,6 +2840,7 @@
   Item19: "Token:136, 0, 0 , 5000-6000, 0-25"
   Item20: "Token:158, 0, 0 , 5000-6000, 0-25"
 }
+# Lowerdeck (Uses TD_Lowerdeck_Start dialog)
 { Trader Name: CardDealer03
   SellingText: "Uhh... Hey, how can I help you? We've got a new line of manga in and the new Empyrion TCG Booster Packs are out if you're into that sort of thing."
   SellingGoods: "trwResources"
@@ -2965,6 +2868,7 @@
   Item20: "Token:162, 0, 0 , 5000-6000, 0-25"
 }
 # ========= Bank Teller (ArkBank) ==========
+# ARK Bank Teller (Uses TD_ArkBank_Init)
 { Trader Name: ArkBank
   SellingText: "Welcome to ArkBank! Most of our services are automated by ATMs these days, but there's always a need for a physical presence for some exchanges.\nWould you like to exchange any valid currency or bullion in the vault?"
   SellingGoods: "trwResources"
@@ -2974,7 +2878,252 @@
   Item3: "GoldIngot, 100, 1000-1250, 100, 1100-1500"
   Item4: "PlatinBar, 150, 250-500, 150, 251-750"
 }
+# ============================ Talon Traders (ALL) =============================
+# Outdated Vanilla Trader (Do not use)
+{ Trader Name: Talon
+  SellingText: "I welcome you Traveller. As a friend of the tribe, I am proud to offer my wares for you to purchase. \n<DISCOUNTTEXT>"
+  SellingGoods: "trwSeeds"
+  Discount: 0.08
+  Item1: "Bandages, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-20"  
+  Item2: "AlienTooth, mf=1.0-1.25, 5-50, mf=0.5-0.75, 100-500"
+  Item3: "AlienThorn, mf=1.0-1.25, 5-50, mf=0.5-0.75, 100-500"
+  Item4: "WaterBottle, mf=1.0-1.25, 0-12, mf=0.5-0.75, 20-50"    
+  Item5: "FruitJuice, mf=1.0-1.25, 0-15, mf=0.5-0.75, 20-50"
+  Item6: "VegetableJuice, mf=1.0-1.25, 0-15, mf=0.5-0.75, 10-50" 
+  Item7: "Milk, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-50"
+  Item8: "AkuaWine, mf=1.0-1.25, 10-50, mf=0.5-0.75, 10-100"
+  Item9: "HotBeverage, mf=1.0-1.25, 100-500, mf=0.5-0.75, 100-500"  
+  Item10: "Beer, 0, 0, mf=1.25-2.0, 100-500"  
+  Item11: "Bread, mf=1.0-1.25, 0-20, mf=0.5-0.75, 20-120"
+  Item12: "Cheese, mf=1.0-1.25, 0-20, mf=0.5-0.75, 10-80"
+  Item13: "Stew, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-50"
+  Item14: "RawDiamond, mf=1.0-1.5, 0-10, 0, 0"
+  Item15: "Varonroot, mf=1.0-1.25, 0-50, 0, 0"
+  Item16: "PhoenixFernFonds, mf=1.0-1.25, 0-170, 0, 0"
+  Item17: "AlienSpikeLemon, mf=1.0-1.25, 0-150, 0, 0"
+  Item18: "Cereals, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-80"  
+  Item19: "DurianRoot, mf=1.0-1.25, 100-500, 0, 0"
+  Item20: "CornStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item21: "PumpkinStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item22: "TomatoStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item23: "WheatStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item24: "PearthingStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item25: "AlienPlantTube2Stage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item26: "DesertPlant20Stage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item27: "ElderberryStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item28: "AlienPalmTreeStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item29: "AlienplantWormStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item30: "BulbShroomYoungStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item31: "SnakeweedStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item32: "MushroomBellBrown01Stage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item33: "CobraLeavesPlantStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item34: "CoffeePlantStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item35: "InsanityPepperStage1, mf=1.0-1.25, 100-500, 0, 0"
+  Item36: "BigFlowerStage1, mf=1.0-1.25, 100-500, 0, 0"  
+  Item37: "GrowingPotConcrete, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-40"
+  Item38: "GrowingPotWood, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-40"
+  Item39: "Leather, mf=1.0-1.5, 5-10, 0, 0"
+  Item40: "AlienParts02, mf=1.0-1.25, 1-20, mf=0.5-0.75, 10-500"
+  Item41: "DecoTribalBlocks, mf=1.25-2.5, 5-10, 0, 0"
+}
+# Outdated Vanilla Trader (Do not use)
+{ Trader Name: TalonBasicsAndCommodities
+  SellingText: "Welcome traveler! How may we serve you? \n<DISCOUNTTEXT>"
+  SellingGoods: "trwSeeds"
+  Discount: 0.08
+  Item1: "Curry, mf=1.0-1.25, 5-10, 0, 0"
+  Item2: "CannedVegetables, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-90"
+  Item3: "CannedMeat, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-90"
+  Item4: "EnergyDrink, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
+  Item5: "EmergencyRations, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
+  Item6: "Medikit02, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
+  Item7: "Bandages, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
+  Item8: "StomachPills, mf=1.0-1.25, 5-10, mf=0.5-0.75, 10-50"
+  Item9: "AlienTooth, mf=1.0-1.25, 5-10, mf=0.5-0.75, 100-250"  
+  Item10: "HerbalLeaves, mf=1.0-1.25, 10-30, mf=0.5-0.75, 10-150"
+  Item11: "PlantProtein, mf=1.0-1.25, 20-30, mf=0.5-0.75, 10-150"
+  Item12: "CrossbowBoltPlayer, mf=1.0-1.25, 120-230, mf=0.5-0.75, 120-250"
+}
+# Outdated Vanilla Trader (Do not use)
+{ Trader Name: TalonBasicsResources
+  SellingText: "Welcome traveler! How may we serve you? \n<DISCOUNTTEXT>"
+  SellingGoods: "trwSeeds"
+  Discount: 0.08  
+#SELLING to player
+  Item1: "IronOre, mf=1.0-1.25, 100-200, 0, 0"
+  Item2: "SiliconOre, mf=1.0-1.25, 100-200, 0, 0"
+  Item3: "CopperOre, mf=1.0-1.25, 100-200, 0, 0"
+  Item4: "CobaltOre, mf=1.0-1.25, 100-200, 0, 0"
+  Item5: "TitanOre, mf=1.0-1.25, 100-200, 0, 0"
+  Item6: "PromethiumOre, mf=1.0-1.25, 50-100, 0, 0"
+#BUYING from player
+  Item7: "RadiationBoost, 0, 0 , mf=0.5-0.75, 10-15"
+}
+# Village Shaman
+{ Trader Name: TalonShaman
+  SellingText: "Greetings, outsider. I am Tahl'Vahr the shaman of this tribe. I have many restoratives you will not find elsewhere at an affordable price. \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.08
+  Item1: "Bandages, mf=1.0-1.25, 0-26, 0, 0"  
+  Item2: "MushroomSpiky, mf=1.0-1.25, 5-30, 0, 0"
+  Item3: "AntibioticOintment, mf=1.0-1.25, 5-70, 0, 0"
+  Item4: "AntiRadiationOintment, mf=1.0-1.25, 5-50, 0, 0"
+  Item5: "Varonroot, mf=1.0-1.25, 0-90, 0, 0"
+  Item6: "PhoenixFernFonds, mf=1.0-1.25, 0-100, 0, 0"
+  Item7: "AlienSpikeLemon, mf=1.0-1.25, 0-50, 0, 0"
+  Item8: "PlantProtein, 0, 0, mf=1.0-1.0, 50-180"
+  Item9: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-180"
+  Item10: "AlienParts03, 0, 0, mf=1.0-1.0, 10-150"
+}
+# Usable Talon Traders
+{ Trader Name: Talon Medicineman
+  SellingText: "Greetings, outsider. I am Shal'Tham a traveling medicineman. I have many restoratives you will not find elsewhere at an affordable price. \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.08
+#SELLING to player
+  Item1: "Bandages, mf=1.0-1.25, 0-26, 0, 0"  
+  Item2: "MushroomSpiky, mf=1.0-1.25, 5-30, 0, 0"
+  Item3: "AntibioticOintment, mf=1.0-1.25, 5-50, 0, 0"
+  Item4: "AntiToxicPills, mf=1.2-1.45, 5-20, 0, 0"
+  Item5: "AntiRadiationOintment, mf=1.0-1.25, 5-50, 0, 0"
+  Item6: "Varonroot, mf=1.0-1.25, 0-30, 0, 0"
+  Item7: "PhoenixFernFonds, mf=1.0-1.25, 0-70, 0, 0"
+  Item8: "AlienSpikeLemon, mf=1.0-1.25, 0-50, 0, 0"
+  Item9: "OpuntiaCactusSpears, mf=1.0-1.25, 0-145, 0, 0"
+#BUYING from player
+  Item10: "PlantProtein, 0, 0, mf=1.0-1.0, 50-80"
+  Item11: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-80"
+  Item12: "AlienParts03, 0, 0, mf=1.0-1.0, 10-20"
+}
+# For Talon Tannery (Uses TD_LeatherTalon_Start dialog)
+{ Trader Name: Talon Tanner
+  SellingText: "Greetings Traveller. I am Ab'thar and I run this tannery where I produce only the highest quality leather that's in great demand, even beyond this world. \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.06
+#SELLING to player
+  Item1: "Leather, mf=1.0-1.25, 100-150, 0, 0"
+#BUYING from player
+  Item2: "Salt, 0, 0, mf=0.5-0.75, 250-500"
+  Item3: "Sulfur, 0, 0, mf=0.5-0.75, 250-500"
+  Item4: "Meat, 0, 0, mf=0.5-0.75, 70-100"
+  Item5: "NutrientSolution, 0, 0, mf=0.5-0.75, 60-150"
+}
 
+{ Trader Name: Talon Trapper
+  SellingText: "Hail, Stranger! Come to see my kills or my skills? I will pay you well for the spoils of your hunt too, my friend. \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.10
+#SELLING to player
+  Item1: "Meat, mf=1.0-1.25, 20-80, 0, 0"  
+  Item2: "Egg, mf=1.0-1.25, 5-30, 0, 0"
+  Item3: "AlienThorn, mf=1.0-1.25, 5-30, 0, 0"
+  Item4: "Leather, mf=1.0-1.25, 1-8, 0, 0"
+  Item5: "Jerky, mf=1.25-1.75, 5-10, 0, 0"
+  Item6: "FishMeat, mf=1.0-1.25, 20-40, 0, 0"
+#BUYING from player
+  Item7: "Beer, 0, 0, mf=2.0-2.5, 1-3"
+  Item8: "AlienParts02, 0, 0, mf=1.0-1.0, 50-80"
+  Item9: "AlienTooth, 0, 0, mf=1.0-1.0, 70-100"
+  Item10: "AlienParts04, 0, 0, mf=1.0-1.0, 50-100"
+  Item11: "Bone, 0, 0, mf=1.0-1.0, 70-100"
+  Item12: "CrossbowBoltPlayer, mf=1.0-1.25, 60-130, mf=0.5-0.75, 60-150"
+  Item13: "TalonCrossbowTribalPlayer, mf=1.0-1.25, 0-5, mf=0.5-0.75, 1-7"
+}
+
+{ Trader Name: Talon Bushman
+  SellingText: "There's plenty of rare finds out in the bush... if you know where to look that is. I'll be heading back out there shortly. \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.10
+#SELLING to player
+  Item1: "OpuntiaCactusSpears, mf=1.0-1.25, 0-145, 0, 0"
+  Item2: "RawDiamond, mf=1.0-1.25, 0-6, 0, 0"
+  Item3: "AkuaFruit, mf=1.0-1.25, 0-35, 0, 0"
+  Item4: "AlienParts01, mf=1.0-1.25, 10-48, 0, 0"
+  Item5: "ConfettiMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
+  Item6: "FireMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
+  Item7: "SpaceDurian, mf=1.0-1.25, 0-6, 0, 0"
+#BUYING from player
+  Item8: "PowerBar, 0, 0, mf=1.0-1.0, 10-20"
+  Item9: "BerryJuice, 0, 0, mf=1.0-1.0, 10-40"
+  Item10: "Jerky, 0, 0, mf=1.0-1.0, 10-30"
+  Item11: "CrossbowBoltPlayer, mf=1.0-1.25, 60-130, mf=0.5-0.75, 60-150"
+}
+# Use in standalone mushroom farm and villages (Uses TD_MushroomFarmer_Start dialog)
+{ Trader Name: Mushroom Farmer
+  SellingText: "Friend! Look at what my farms have produced! Have you not seen anything as glorious? \n<DISCOUNTTEXT>"
+  SellingGoods: ""
+  Discount: 0.10
+#SELLING to player
+  Item1: "MushroomBrown, mf=1.0-1.25, 20-70, 0, 0"  
+  Item2: "MushroomSpiky, mf=1.0-1.25, 5-40, 0, 0"
+  Item3: "BrafusFungi, mf=1.0-1.25, 15-45, 0, 0"
+  Item4: "MushroomBellBrown01Stage1, mf=1.0-1.25, 4-18, 0, 0"
+  Item5: "PlantProtein, mf=1.0-1.25, 15-100, 0, 0"
+  Item6: "NaturalStimulant, mf=1.0-1.25, 10-60, 0, 0"
+#BUYING from player
+  Item7: "RottenFood, 0, 0, mf=1.0-1.0, 90-180"
+  Item8: "NutrientSolution, 0, 0, mf=1.0-1.0, 20-90"
+}
+# Talon Carpenter (Uses TD_CarpenterTalon_Init dialog)
+{ Trader Name: Talon Carpenter
+  SellingText: "Greetings and welcome to my workshop. As you can see, I work primarily in wood to turn out furniture better than any constructor."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "DecoTribalBlocks, mf=1.25-1.5, 40-80, 0, 0"
+  Item2: "LuxuryFurniture, mf=1.25-1.5, 15-50, 0, 0"
+  Item3: "TalonCrossbowTribalPlayer, mf=1.0-1.25, 10-15, 0, 0"
+  Item4: "CrossbowBoltPlayer, mf=1.0-1.5, 240-480, 0, 0"
+  Item5: "WoodBlocks, mf=0.75-1.0, 200-400, 0, 0"
+  Item6: "CivilianFurniture, mf=1.0-1.25, 10-30, 0, 0"
+#BUYING from player
+  Item7: "WoodLogs, 0, 0 , mf=0.5-0.75, 400-600"
+  Item8: "WoodPlanks, 0, 0 , mf=0.75-1.25, 1000-2000"
+  Item9: "Fiber, 0, 0 , mf=0.75-1.25, 1200-1800"  
+  Item10: "GoldIngot, 0, 0 , mf=0.95-1.0, 100-180"
+  Item11: "IronIngot, 0, 0 , mf=0.85-1.0, 250-500"
+  Item12: "MetalPieces, 0, 0 , mf=0.85-1.0, 400-800"
+}
+# For Talon Quarry (Uses TD_QuarryTalon_Init dialog)
+{ Trader Name: Talon Quarryman
+  SellingText: "Hail, Traveller! What brings you to the quarry? We mine whatever we can pull from the ground and sell what we cannot use to the Trade Station."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "DecoStoneBlocks, mf=1.25-1.5, 40-80, 0, 0"
+  Item2: "RawDiamond, mf=1.25-1.5, 15-30, 0, 0"
+  Item3: "RockDust, mf=0.75-1.0, 750-1550, 0, 0"
+  Item4: "CrushedStone, mf=0.75-1.0, 1240-2480, 0, 0"
+  Item5: "Cement, mf=0.75-1.0, 600-1200, 0, 0"
+  Item6: "Graphite, mf=1.25-1.5, 20-120, 0, 0"
+  Item7: "IronOre, mf=1.0-1.25, 100-800, 0, 0"
+  Item8: "SiliconOre, mf=1.0-1.25, 100-600, 0, 0"
+  Item9: "CopperOre, mf=1.0-1.25, 100-400, 0, 0"
+#BUYING from player
+  Item10: "Sandwich, 0, 0 , mf=0.75-1.0, 20-120"
+  Item11: "Bandages, 0, 0 , mf=0.75-1.0, 100-300"
+  Item12: "WoodPlanks, 0, 0 , mf=0.75-1.0, 200-600"
+}
+# Talon Brewery POI (Uses TD_BreweryTalon_Start dialog)
+{ Trader Name: Talon Brewery
+  SellingText: "Hail, Traveller! You must be thirsty! Although Polaris has tried to compete, no one can beat the authentic products of us Tal'on.\nStay awhile, try some of our brews and talk to us of the galaxy."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "AkuaWine, mf=1.0-1.25, 100-200, 0, 0"
+  Item2: "Liquors, mf=0.5-0.75, 50-100, 0, 0"
+  Item3: "HotBeverage, mf=0.75-1.0, 250-500, 0, 0"
+  Item4: "BloodyZirax, mf=1.25-1.5, 15-25, 0, 0"
+  Item5: "VegetableJuice, mf=0.75-1.0, 250-500, 0, 0"
+  Item6: "BerryJuice, mf=0.75-1.0, 50-150, 0, 0"
+  Item7: "FruitJuice, mf=0.75-1.0, 50-150, 0, 0"
+#BUYING from player
+  Item8: "Berries, 0, 0 , mf=1.0-1.25, 200-600"
+  Item9: "Fruit, 0, 0 , mf=1.0-1.25, 300-500"
+  Item10: "HerbalLeaves, 0, 0 , mf=1.0-1.25, 125-350"
+  Item11: "NaturalStimulant, 0, 0 , mf=1.0-1.25, 150-300"
+  Item12: "Roots, 0, 0, mf=2.0-3.0, 100-150"
+  Item13: "Spice, 0, 0, mf=1.0-1.25, 200-350"
+  Item14: "NaturalSweetener, 0, 0, mf=1.0-1.25, 100-150"
+  Item15: "Sugarcane, 0, 0, mf=2.0-2.25, 100-250"
+}
 
 # ============================================================================================================================================================================
 # =================================================================================================================================================== Project Eden Custom Traders

@@ -430,7 +430,7 @@ POIs:
 # Rogue Drone Harvesters 
         - GroupName: Eden_RogueHarvestAnchor
           Faction: Eden_Drone
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           # IsImportant: True
           IsScalingCount: True
@@ -449,7 +449,7 @@ POIs:
 
         - GroupName: Eden_RogueHarvest
           Faction: Eden_Drone
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           IsAuxPOI: True
           SpawnPOINearRange: [100, 200]
@@ -467,7 +467,7 @@ POIs:
 # Rogue Drone Harvesters Drone territory
         - GroupName: Eden_RogueHarvestAnchor
           Faction: Eden_DroneHome
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           IsScalingCount: True
           DroneProb: 0
@@ -485,7 +485,7 @@ POIs:
 
         - GroupName: Eden_RogueHarvest
           Faction: Eden_DroneHome
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           IsAuxPOI: True
           SpawnPOINearRange: [100, 200]
@@ -600,7 +600,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Kriel, Tesch, TheLegacy, Eden_DroneHome, Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.75
@@ -618,7 +618,7 @@ POIs:
         - GroupName: Eden_HarvestPalladium
           Faction: None
           FactionTerritory: [Wastelanders]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           DroneProb: 0.5

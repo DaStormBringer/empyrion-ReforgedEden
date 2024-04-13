@@ -465,7 +465,7 @@ POIs:
         - GroupName: Eden_PrisonDroneBase
           IsImportant: True
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           BiomesExcluded: [ PoleEdge, ColdPlains ] 
           CountMinMax: [ 3, 5 ]
@@ -489,7 +489,7 @@ POIs:
           IsImportant: True
           IsScalingCount: True 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           # Territory: False
           Biome: [ CanyonEdge, ShallowCanyon, Rifts, Rifts_1 ]
           CountMinMax: [ 10, 10 ]
@@ -534,7 +534,7 @@ POIs:
           # IsImportant: True
           IsScalingCount: True 
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           # Biome: [ CanyonEdge, ShallowCanyon, Rifts, Rifts_1 ]
           CountMinMax: [ 10, 15 ]
@@ -561,7 +561,7 @@ POIs:
           # IsImportant: True
           IsScalingCount: True 
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           # Biome: [ CanyonEdge, ShallowCanyon, Rifts, Rifts_1 ]
           CountMinMax: [ 4, 6 ]
@@ -586,7 +586,7 @@ POIs:
         - GroupName: XenuComArray
           IsImportant: True 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ SmallCrater, Dunes, DustBowl, LavaFolds, Mountains ]
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0 
@@ -603,7 +603,7 @@ POIs:
 
         - GroupName: Eden_PrisonDefenseT2
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8 
           DronesMinMax: [ 1, 2 ]
@@ -648,7 +648,7 @@ POIs:
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 6
           # TroopTransport: True
-          # SpawnPOIAvoid: [ TS_Metal_Waypoint, DroneBaseCommandRG, XenuArtilleryBase ]
+          # SpawnPOIAvoid: [ TS_Metal_Waypoint, R2DroneBaseT5, XenuArtilleryBase ]
           # SpawnPOIAvoidDistance: 650
           # Properties: 
             # - Key: MapMarker

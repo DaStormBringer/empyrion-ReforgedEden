@@ -599,6 +599,38 @@
   RipperDog: "2, 4"
 }
 
+{ EGroup Name: Eden_ZiraxSalvageDrones
+  Eden_ZiraxSalvageDrone: "2, 4"
+}
+
+{ EGroup Name: Eden_ZiraxSalvageDronesGuarded
+  Eden_ZiraxSalvageDrone: "2, 4"
+  Mechanoid: "2, 3"
+  SpawnInSameDirection:true
+}
+
+# =============================================== Polaris
+
+{ EGroup Name: Eden_PolarisMiningDrones
+  Eden_PolarisMiningDrone: "2, 4"
+}
+
+{ EGroup Name: Eden_PolarisMiningDronesGuarded
+  Eden_PolarisMiningDrone: "2, 4"
+  AssaultCyborg: "2, 3"
+  SpawnInSameDirection:true
+}
+
+{ EGroup Name: Eden_PolarisSalvageDrones
+  Eden_PolarisSalvageDrone: "2, 4"
+}
+
+{ EGroup Name: Eden_PolarisSalvageDronesGuarded
+  Eden_PolarisSalvageDrone: "2, 4"
+  AssaultCyborg: "2, 3"
+  SpawnInSameDirection:true
+}
+
 # =============================================== Talon
 { EGroup Name: Eden_TalonGuardianHerdMega
   TalonGuardianGroup: "4, 7"

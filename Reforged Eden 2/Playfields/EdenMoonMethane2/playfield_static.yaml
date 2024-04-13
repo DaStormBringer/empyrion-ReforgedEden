@@ -204,9 +204,9 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:  
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -220,7 +220,7 @@ POIs:
 
         - GroupName: PlanetVesselBase
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           PlanetVesselBaseSetup: PlanetVesselBaseSetup
           CountMinMax: [ 1, 1 ] 
           DroneProb: 1.0
@@ -236,7 +236,7 @@ POIs:
         # POI complex with several structures around and ore silos
         - GroupName: RadosBunkerRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
           DroneProb: 1
@@ -249,7 +249,7 @@ POIs:
 
         - GroupName: Eden_RadosSiloNeodymium
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 1
           DronesMinMax: [ 2, 5 ]
@@ -262,7 +262,7 @@ POIs:
 
         - GroupName: Eden_RadosSiloSathium
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 1
           DronesMinMax: [ 2, 5 ]
@@ -275,7 +275,7 @@ POIs:
 
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -289,7 +289,7 @@ POIs:
 
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
@@ -305,7 +305,7 @@ POIs:
         # Random silos
         - GroupName: Eden_RadosSiloNeodymium
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True 
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
@@ -317,7 +317,7 @@ POIs:
 
         - GroupName: Eden_RadosSiloSathium
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True 
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
@@ -329,7 +329,7 @@ POIs:
 
         - GroupName: Eden_RadosSiloPromethium
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True 
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -343,7 +343,7 @@ POIs:
         - GroupName: Eden_RadosSiloNeodymium
           Faction: Zirax
           FactionTerritory: [Xenu]
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True 
           CountMinMax: [ 2, 3 ]
           DroneProb: 1
@@ -354,7 +354,7 @@ POIs:
           #Random Rados POIs
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           IsScalingCount: True 
           CountMinMax: [ 2, 3 ]
           DroneProb: 0.8
@@ -368,7 +368,7 @@ POIs:
        # Alien Artifacts - Floating
         - GroupName: ArtifactsFloating
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 0, 1 ]
           PlaceAt: OnWater
           Properties: 
@@ -382,7 +382,7 @@ POIs:
        # Alien Artifacts - Floating
         - GroupName: ArtifactsFloating
           Faction: Alien
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           PlaceAt: OnWater, Terrain
           SpawnPOINear: [ArtifactsFloating]

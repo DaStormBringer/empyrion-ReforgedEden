@@ -28,8 +28,9 @@ AtmosphereO2MinMax: [0.1, 0.2]
 AtmoBreathableProb: 0.3
 WaterProb: 0.7
 PvPProb: 0 #Normal
-Water: [WaterGreen]
-Music: [desert]
+Water: [WaterGreen, WaterBlue]
+# Desert Music
+Music: [AnAridPlace, desert, desert2, Tempest, Voyage]
 PlayfieldLevelOverride: [1,3]
 # ==============================================================
 

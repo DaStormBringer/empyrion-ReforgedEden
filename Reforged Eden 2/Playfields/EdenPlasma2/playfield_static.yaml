@@ -314,7 +314,7 @@ POIs:
        # ======================================================================================================
         - GroupName: Eden_TE_TheAnomaly 
           Faction: None
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plasma, HotPlasma, BurningPlasma ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -332,7 +332,7 @@ POIs:
               Value: 720
 
               # Abyssal Plasma Research Lab. Abyssal Zirax are Alien faction to be always hostile.
-        - GroupName: Eden_AbyssEnergyLab
+        - GroupName: RE2_AbyssEnergyLab
           Faction: Zirax
           Territory: False
           Biome: [ HotPlasma, BurningPlasma, Plasma ]
@@ -476,7 +476,7 @@ POIs:
        # Placeholder POI. Needs to be replaced with a custom Rados Promethium Refinery.
         - GroupName: Eden_RadosPromethiumMain 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -494,7 +494,7 @@ POIs:
               # Bunker nearby Promethium Refinery
         - GroupName: RadosBunkerRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -514,7 +514,7 @@ POIs:
          
         - GroupName: RadosMainRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -536,7 +536,7 @@ POIs:
               # T2 Aux POI for RadosMainRG
         - GroupName: RadosAuxT2RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 3, 3 ]
           # IsImportant: True
@@ -556,7 +556,7 @@ POIs:
               # T1 Aux POI for RadosMainRG
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 3, 4 ]
           IsAuxPOI: True
@@ -575,7 +575,7 @@ POIs:
         # Large Bunker
         - GroupName: RadosBunkerRG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -642,7 +642,7 @@ POIs:
         # Random Rados survey sites guarding ore deposits.
         - GroupName: Eden_RadosSurvey 
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           CountMinMax: [ 4, 5 ]
           # IsImportant: True
@@ -665,7 +665,7 @@ POIs:
               # Defense for survey sites.
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False         
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats ]
           IsAuxPOI: True
@@ -686,7 +686,7 @@ POIs:
               # Defense for Promethium Refinery
         - GroupName: RadosDefenceT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Pole ] 
           # Biome: [ Plains, Dunes, CrystallizedRocks, Flats, LowMountains, Mountains, MetalVeins, PlasmaMountains, Plasma, HotPlasma, BurningPlasma ]
           CountMinMax: [ 6, 9 ]
@@ -710,7 +710,7 @@ POIs:
         # Random Rados outposts scattered around planet
         - GroupName: RadosAuxT1RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains, PlasmaMountains, MetalVeins, Plasma, BurningPlasma, HotPlasma ]
           CountMinMax: [ 4, 6 ]
           IsScalingCount: True
@@ -728,7 +728,7 @@ POIs:
 
         - GroupName: RadosAuxT2RG
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains, PlasmaMountains, MetalVeins, Plasma, BurningPlasma, HotPlasma ]
           CountMinMax: [ 3, 5 ]
           IsScalingCount: True
@@ -747,7 +747,7 @@ POIs:
 # Broken Zirax bases
         - GroupName: Eden_BrokenRados
           Faction: Zirax
-          NoShieldReload: True
+          # NoShieldReload: True
           Territory: False
           BiomesExcluded: [ Dunes, CrystallizedRocks, Flats, Rocks ]
           CountMinMax: [ 3, 4 ]
@@ -1071,7 +1071,7 @@ DroneSpawning:
          # Amount: 200
          # Period: Always
          # DelayMinMax: [48, 72]
-   # - SpawnAt: [DroneBaseT1RG, RadosMainRG, RadosBunkerRG]
+   # - SpawnAt: [R2DroneBase, RadosMainRG, RadosBunkerRG]
      # BiomesExcluded: [ LowMountains, Mountains ]
      # Radius: 1000
      # RadiusRandom: 100

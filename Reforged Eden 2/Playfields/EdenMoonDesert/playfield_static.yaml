@@ -148,10 +148,10 @@ AsteroidResources:
 ### POIs
 POIs:
     Random:
-        - GroupName: DroneBaseT1RG
+        - GroupName: R2DroneBase
           Faction: Zirax
-          NoShieldReload: True  
-#          NoShieldReload: True
+          # NoShieldReload: True  
+#          # NoShieldReload: True
           DroneBaseSetup: DroneBaseSetup
           CountMinMax: [ 1, 1 ]
           DroneProb: 1.0
@@ -164,16 +164,16 @@ POIs:
 # Polaris Logistics Center. Random chance of spawning.
         - GroupName: PolarisLogisticsMainRG
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           Properties: 
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: PolarisLogisticsAuxRG
+        - GroupName: R2PolarisAuxT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisLogisticsMainRG]
           SpawnPOINearRange: [100, 200] 
@@ -185,9 +185,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: PolarisDefenceRG
+        - GroupName: R2PolarisDefenseT1
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 2, 3 ]
           SpawnPOINear: [PolarisLogisticsMainRG]
           SpawnPOINearRange: [300, 400] 
@@ -198,7 +198,7 @@ POIs:
               # Copper Mines
         - GroupName: Eden_PolMineCopper
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           SpawnPOINear: [PolarisLogisticsMainRG]
           SpawnPOINearRange: [250, 350]
@@ -211,7 +211,7 @@ POIs:
  # Random Copper Mines
         - GroupName: Eden_PolMineCopper
           Faction: Polaris
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
           SpawnResource: ["CopperResource:0-1"]
@@ -233,9 +233,9 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: GhystAuxT1RG
+        - GroupName: R2GhystAuxT1
           Faction: Zirax
-          NoShieldReload: True  
+          # NoShieldReload: True  
           CountMinMax: [ 3, 4 ]
           DroneProb: 0.7
           DronesMinMax: [ 1, 2 ]
@@ -251,7 +251,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Warlord]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           IsScalingCount: True
           DroneProb: 0.5
@@ -269,7 +269,7 @@ POIs:
         - GroupName: Eden_HarvestTungsten
           Faction: None
           FactionTerritory: [Wastelanders, Eden_SolitudeTerritory, Eden_ColonistsTerritory]
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
           IsScalingCount: True
           DroneProb: 0.5

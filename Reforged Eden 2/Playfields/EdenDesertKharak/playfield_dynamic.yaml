@@ -30,8 +30,9 @@ PvPProb: 0 #Normal
 GroundFogIntensityRange: [0.04, 0.06]
 GroundFogHeightRange: [60, 60]
 
-Water: [WaterGreen]
-Music: [desert]
+Water: [WaterGreen, WaterBlue]
+# Desert Music
+Music: [AnAridPlace, desert, desert2, Tempest, Voyage]
 PlayfieldLevelOverride: [1,3]
 BiomeStampTries: 220
 

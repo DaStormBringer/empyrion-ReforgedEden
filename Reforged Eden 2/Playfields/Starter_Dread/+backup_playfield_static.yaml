@@ -227,7 +227,7 @@ POIs:
     
     
     
-        # - GroupName: DroneBaseT1RG
+        # - GroupName: R2DroneBase
           # DroneBaseSetup: DroneBaseSetup
           # CountMinMax: [ 1, 1 ]
           # DroneProb: 1.0
@@ -242,7 +242,7 @@ POIs:
          # Launch Site =================================================================
         - GroupName: Eden_EscapeRocketPad
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ LowMountains, Mountains, Tundra, PolarSnow ]
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True 
@@ -262,7 +262,7 @@ POIs:
 # Auxillary POIs for Launch Site
         - GroupName: Eden_RuinsLaunchAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 3, 5 ]
           # IsScalingCount: True 
@@ -288,7 +288,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 6, 9 ]
           # IsScalingCount: True 
@@ -313,7 +313,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 3, 4 ]
           # IsScalingCount: True 
@@ -468,7 +468,7 @@ POIs:
          # Skyhook =================================================================
         - GroupName: Eden_RuinsSkyhookBase
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -495,7 +495,7 @@ POIs:
          # Fallen Skyhook Carriage
         - GroupName: Eden_RuinsSkyhookCarriage
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
           IsImportant: True
           DroneProb: 0
@@ -522,7 +522,7 @@ POIs:
          # Space Tether =================================================================
         - GroupName: Eden_RuinsSpaceTether
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 1, 3 ]
           IsImportant: True
           DroneProb: 0
@@ -573,7 +573,7 @@ POIs:
          # Deep Space Radar Ruins =================================================================
         - GroupName: Eden_RuinsSpaceRadar
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -595,7 +595,7 @@ POIs:
               # Auxillary POIs for Deep Space Radar
         - GroupName: Eden_RuinsRadarDish
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -617,7 +617,7 @@ POIs:
 
         - GroupName: Eden_RuinsSpaceRadarAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -638,7 +638,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 2, 6 ]
           DroneProb: 0
@@ -660,7 +660,7 @@ POIs:
          # Civilian Ruins Hub =================================================================
         - GroupName: Eden_RuinsCivilianMain
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Tundra, PolarSnow, Mountains, LowMountains, Shore ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -680,7 +680,7 @@ POIs:
               # Auxillary POIs for Civilian Ruins Hub
         - GroupName: Eden_RuinsCivilianAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Tundra, PolarSnow, Mountains, LowMountains, Shore ]
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
@@ -702,7 +702,7 @@ POIs:
 
         - GroupName: Eden_RuinsCivilianAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Tundra, PolarSnow, Mountains, LowMountains, Shore ]
           CountMinMax: [ 7, 10 ]
           DroneProb: 0
@@ -724,7 +724,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Tundra, PolarSnow, Mountains, LowMountains, Shore ]
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
@@ -746,7 +746,7 @@ POIs:
          # Fallen Station =================================================================
         - GroupName: Eden_RuinsRingWreck
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 1, 1 ]
           IsImportant: True
@@ -846,7 +846,7 @@ POIs:
 # Mining Pit ==============================================================================
         - GroupName: Eden_RuinsMiningPit
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ LowMountains, Mountains ]
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True 
@@ -874,7 +874,7 @@ POIs:
 # Auxillary POIs for Mining Pit
         - GroupName: Eden_RuinsIndustryAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 2, 3 ]
           # IsScalingCount: True 
@@ -901,7 +901,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 4, 6 ]
           # IsScalingCount: True 
@@ -928,7 +928,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           CountMinMax: [ 2, 3 ]
           # IsScalingCount: True 
@@ -956,7 +956,7 @@ POIs:
 # Random Industrial ruin hubs =================================================================
         - GroupName: Eden_RuinsIndustryAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # IsImportant: True
           IsScalingCount: True 
           CountMinMax: [ 3, 5 ]
@@ -976,7 +976,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1      # Do not use regeneration with buried POIs
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 3, 5 ]
           IsAuxPOI: True
           SpawnPOINearRange: [50, 100]
@@ -999,7 +999,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1      # Do not use regeneration with buried POIs
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 2, 4 ]
           IsAuxPOI: True
           SpawnPOINearRange: [100, 150]
@@ -1023,7 +1023,7 @@ POIs:
 # Random Civilian ruin hubs =================================================================
         - GroupName: Eden_RuinsCivilianAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           Biome: [ Sand, DeadForest, Wasteland ]
           # IsImportant: True
           IsScalingCount: True 
@@ -1043,7 +1043,7 @@ POIs:
 
         - GroupName: Eden_RuinsCivilianAuxT1      # Do not use regeneration with buried POIs
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           CountMinMax: [ 6, 9 ]
           IsAuxPOI: True
           SpawnPOINearRange: [75, 150]
@@ -1083,7 +1083,7 @@ POIs:
 # Random ruins =============================================================
         - GroupName: Eden_RuinsIndustryAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Mountains, LowMountains ]
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True 
@@ -1104,7 +1104,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           Biome: [ Mountains, LowMountains ]
           CountMinMax: [ 4, 8 ]
@@ -1126,7 +1126,7 @@ POIs:
 
         - GroupName: Eden_RuinsIndustryAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Mountains, LowMountains ]
           # Biome: [ Mountains, LowMountains ]
           CountMinMax: [ 4, 8 ]
@@ -1148,7 +1148,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           # BiomesExcluded: [ DriedLakeBed ]
           Biome: [ Sand, Wasteland ]
           CountMinMax: [ 8, 12 ]
@@ -1170,7 +1170,7 @@ POIs:
 
         - GroupName: Eden_RuinsLogisticsAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ Sand, Wasteland ]
           CountMinMax: [ 4, 6 ]
           IsScalingCount: True 
@@ -1192,7 +1192,7 @@ POIs:
          # Civilian Ruins
         - GroupName: Eden_RuinsCivilianAuxT2
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 2, 4 ]
           IsScalingCount: True 
@@ -1212,7 +1212,7 @@ POIs:
          # Civilian Ruins
         - GroupName: Eden_RuinsCivilianAuxT1
           Faction: Alien
-          NoShieldReload: True
+          # NoShieldReload: True
           BiomesExcluded: [ DriedLakeBed, Tundra, PolarSnow ]
           CountMinMax: [ 8, 12 ]
           IsScalingCount: True 
@@ -1346,7 +1346,7 @@ DroneSpawning:
 # ==============================================================
 
 # SpawnRateZones:
-   # - SpawnAt: [TS_PlanetRG]
+   # - SpawnAt: [R2PolarisTradePlanet]
      # Radius: 1000
      # RadiusRandom: 50
      # RateMultiplyerCenter: 0.0

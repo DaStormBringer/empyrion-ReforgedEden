@@ -320,7 +320,7 @@ POIs:
       GroupName: Eden_BountySpaceZirax
       Faction: Zirax
       FactionTerritory: [Rados]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -342,7 +342,7 @@ POIs:
       GroupName: Eden_TSOZiraxBulk
       Faction: Zirax
       FactionTerritory: [Rados]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -367,7 +367,7 @@ POIs:
       DisplayName: Imerat-Class Destroyer
       Faction: Zirax
       FactionTerritory: [Rados]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.65
@@ -382,7 +382,7 @@ POIs:
       GroupName: Eden_ZiraxHackCacheSpace
       Faction: Zirax
       FactionTerritory: [Xenu]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -399,7 +399,7 @@ POIs:
       GroupName: Eden_ZiraxHackCacheSpace
       Faction: Zirax
       FactionTerritory: [Xenu]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -416,7 +416,7 @@ POIs:
       GroupName: Eden_ZiraxHackCacheSpace
       Faction: Zirax
       FactionTerritory: [Xenu]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -433,7 +433,7 @@ POIs:
       GroupName: Eden_ZiraxHackCacheSpace
       Faction: Zirax
       FactionTerritory: [Xenu]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -450,7 +450,7 @@ POIs:
       GroupName: Eden_ZiraxHackCacheSpace
       Faction: Zirax
       FactionTerritory: [Xenu]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -530,7 +530,7 @@ POIs:
       GroupName: Eden_BountySpacePolaris
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -551,7 +551,7 @@ POIs:
       GroupName: Eden_TSOPolarisBulk
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -574,7 +574,7 @@ POIs:
       DisplayName: PolSec Officer
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -589,7 +589,7 @@ POIs:
       GroupName: Eden_TSOPolRefinery
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -610,7 +610,7 @@ POIs:
     - Type: BA_Alien
       GroupName: FactoryPolarisSpaceRG
       Faction: Polaris
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -628,7 +628,7 @@ POIs:
       GroupName: Eden_PolHackCacheSpace
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -645,7 +645,7 @@ POIs:
       GroupName: Eden_PolHackCacheSpace
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -662,7 +662,7 @@ POIs:
       GroupName: Eden_PolHackCacheSpace
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.25
@@ -679,7 +679,7 @@ POIs:
       GroupName: Eden_PolHackCacheSpace
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 1
@@ -781,7 +781,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -802,7 +802,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -823,7 +823,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -844,7 +844,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -865,7 +865,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -886,7 +886,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -999,7 +999,7 @@ POIs:
       GroupName: Eden_BountySpaceTrader
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1022,7 +1022,7 @@ POIs:
       GroupName: Eden_TSOTraderBulk
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1047,7 +1047,7 @@ POIs:
       DisplayName: Customs Enforcer
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1062,7 +1062,7 @@ POIs:
       GroupName: Eden_TraderHackCacheSpace
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1081,7 +1081,7 @@ POIs:
       GroupName: Eden_TraderHackCacheSpace
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -1100,7 +1100,7 @@ POIs:
       GroupName: Eden_TraderHackCacheSpace
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.25
@@ -1120,7 +1120,7 @@ POIs:
       GroupName: Eden_BAOTraderFuelT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1139,7 +1139,7 @@ POIs:
       GroupName: Eden_BAOTraderFuelT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1160,7 +1160,7 @@ POIs:
       DisplayName: Merchant
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1175,7 +1175,7 @@ POIs:
       DisplayName: Tug Boat
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1190,7 +1190,7 @@ POIs:
       DisplayName: Automated Cargo Drone
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1205,7 +1205,7 @@ POIs:
       DisplayName: Shuttle
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1220,7 +1220,7 @@ POIs:
       GroupName: Eden_BAOTraderCivT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -1237,7 +1237,7 @@ POIs:
       GroupName: Eden_BAOTraderCivT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -1254,7 +1254,7 @@ POIs:
       GroupName: Eden_BAOTraderCivT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -1272,7 +1272,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1293,7 +1293,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1314,7 +1314,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1335,7 +1335,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1356,7 +1356,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1377,7 +1377,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.15
@@ -1543,7 +1543,7 @@ POIs:
       GroupName: Eden_BountySpacePirates
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1566,7 +1566,7 @@ POIs:
       GroupName: Eden_TSOPiratesBulk
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1589,7 +1589,7 @@ POIs:
       GroupName: Eden_PirHackCacheSpace
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -1608,7 +1608,7 @@ POIs:
       GroupName: Eden_PirHackCacheSpace
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.75
@@ -1627,7 +1627,7 @@ POIs:
       GroupName: Eden_PirHackCacheSpace
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -1646,7 +1646,7 @@ POIs:
       GroupName: Eden_RavHackCacheSpace
       Faction: Pirates
       FactionTerritory: [Eden_PiratesTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -1800,7 +1800,7 @@ POIs:
       GroupName: R2ColonistSpaceMain
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1844,7 +1844,7 @@ POIs:
       GroupName: Eden_BountySpaceColonists
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1867,7 +1867,7 @@ POIs:
       GroupName: Eden_TSOColBulk
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
@@ -1972,7 +1972,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -1993,7 +1993,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -2014,7 +2014,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -2035,7 +2035,7 @@ POIs:
       GroupName: Eden_BAOTraderAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -2056,7 +2056,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -2077,7 +2077,7 @@ POIs:
       GroupName: Eden_BAOPolarisAdT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.1
@@ -2098,7 +2098,7 @@ POIs:
       GroupName: Eden_ColHackCacheSpace
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 2 ]
       Probability: 1
@@ -2117,7 +2117,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -2134,7 +2134,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -2151,7 +2151,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT1
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.5
@@ -2169,7 +2169,7 @@ POIs:
       GroupName: Eden_BAOColonistsCivT2
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.25
@@ -2187,7 +2187,7 @@ POIs:
       GroupName: Eden_BAOColonistsSupT2
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 0.35
@@ -2205,7 +2205,7 @@ POIs:
       GroupName: Eden_ColHackCacheSpace
       Faction: Colonists
       FactionTerritory: [Eden_ColonistsTerritory]
-      NoShieldReload: True
+      # NoShieldReload: True
       Mode: Survival
       CountMinMax: [ 1, 1 ]
       Probability: 1
